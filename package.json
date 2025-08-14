@@ -1,0 +1,40 @@
+{
+  "name": "retire-analyzer",
+  "version": "1.0.0",
+  "description": "Enhanced wrapper for RetireJS vulnerability scanner with organized reporting",
+  "main": "retire-analyzer.js",
+  "scripts": {
+    "analyze": "node retire-analyzer.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-deps": "npm install -g retire"
+  },
+  "keywords": [
+    "security",
+    "vulnerabilities",
+    "javascript",
+    "retire",
+    "analysis",
+    "scanning",
+    "audit"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "bin": {
+    "retire-analyzer": "./retire-analyzer.js"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "retire": ">=5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/retire-analyzer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/retire-analyzer/issues"
+  },
+  "homepage": "https://github.com/yourusername/retire-analyzer#readme"
+}
