@@ -11,7 +11,7 @@ An enhanced wrapper around the [RetireJS](https://retirejs.github.io/retire.js/)
 npm install
 
 # Run analysis on current directory
-node retire-analyzer.js
+node path/to/js/analyzer/retire-analyzer.js
 
 # Analyze specific directory
 node retire-analyzer.js /path/to/your/js/files
