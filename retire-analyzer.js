@@ -35,9 +35,17 @@ class RetireAnalyzer {
                 fs.mkdirSync(this.options.outputDir, { recursive: true });
             }
 
+            // Count actual JS files in the target directory
+            this.countJSFiles(targetPath);
+
             // Run retire.js and capture output
             console.log(`📁 Analyzing: ${path.resolve(targetPath)}`);
             const retireOutput = this.runRetire(targetPath);
+            
+            console.log('🔍 RetireJS Raw Output:');
+            console.log('========================');
+            console.log(retireOutput || '(No output from RetireJS)');
+            console.log('========================\n');
             
             // Parse the output
             this.parseRetireOutput(retireOutput);
@@ -52,6 +60,75 @@ class RetireAnalyzer {
             console.error('❌ Error during analysis:', error.message);
             process.exit(1);
         }
+    }
+
+    countJSFiles(targetPath) {
+        try {
+            const stats = fs.statSync(targetPath);
+            
+            if (stats.isDirectory()) {
+                console.log(`🔍 Recursively scanning directory: ${targetPath}`);
+                const scanResult = this.findJSFilesRecursively(targetPath);
+                this.results.summary.totalFiles = scanResult.jsFiles.length;
+                
+                console.log(`📊 Scan Statistics:`);
+                console.log(`   - Directories scanned: ${scanResult.directoriesScanned}`);
+                console.log(`   - Directories skipped: ${scanResult.directoriesSkipped}`);
+                console.log(`   - Total files found: ${scanResult.totalFiles}`);
+                console.log(`   - JavaScript files: ${scanResult.jsFiles.length}`);
+                console.log('');
+                
+                if (scanResult.jsFiles.length > 0) {
+                    console.log(`📄 JavaScript files found:`);
+                    scanResult.jsFiles.forEach(file => {
+                        // Show relative path from target directory
+                        const relativePath = path.relative(targetPath, file);
+                        console.log(`  - ${relativePath}`);
+                    });
+                    console.log('');
+                } else {
+                    console.log(`⚠️  No JavaScript files found in directory tree.\n`);
+                }
+            } else if (stats.isFile() && targetPath.endsWith('.js')) {
+                this.results.summary.totalFiles = 1;
+                console.log(`📄 Analyzing single file: ${path.basename(targetPath)}\n`);
+            }
+        } catch (error) {
+            console.warn(`⚠️  Could not count JS files: ${error.message}`);
+            this.results.summary.totalFiles = 0;
+        }
+    }
+
+    findJSFilesRecursively(dirPath, result = { jsFiles: [], directoriesScanned: 0, directoriesSkipped: 0, totalFiles: 0 }) {
+        try {
+            const items = fs.readdirSync(dirPath);
+            result.directoriesScanned++;
+            
+            for (const item of items) {
+                const fullPath = path.join(dirPath, item);
+                const stats = fs.statSync(fullPath);
+                
+                if (stats.isDirectory()) {
+                    // Skip common directories that typically don't contain relevant JS files
+                    const skipDirs = ['node_modules', '.git', '.svn', '.hg', 'coverage', 'dist', 'build', '.nyc_output', 'tmp', 'temp'];
+                    if (skipDirs.includes(item)) {
+                        result.directoriesSkipped++;
+                        console.log(`   ⏭️  Skipping: ${path.relative(process.cwd(), fullPath)}`);
+                    } else {
+                        this.findJSFilesRecursively(fullPath, result);
+                    }
+                } else if (stats.isFile()) {
+                    result.totalFiles++;
+                    if (item.endsWith('.js')) {
+                        result.jsFiles.push(fullPath);
+                    }
+                }
+            }
+        } catch (error) {
+            console.warn(`⚠️  Could not read directory ${dirPath}: ${error.message}`);
+        }
+        
+        return result;
     }
 
     runRetire(targetPath) {
@@ -74,30 +151,39 @@ class RetireAnalyzer {
         const lines = output.split('\n').filter(line => line.trim());
         let currentFile = null;
         
+        console.log(`🔍 Parsing ${lines.length} lines of RetireJS output...`);
+        
         for (const line of lines) {
+            console.log(`Parsing line: "${line}"`);
+            
             // Skip header lines
-            if (line.includes('retire.js v') || line.includes('Downloading')) {
+            if (line.includes('retire.js v') || line.includes('Downloading') || line.includes('Loading from cache')) {
+                console.log('  → Skipping header line');
                 continue;
             }
             
             // File path line (doesn't start with space or arrow)
             if (!line.startsWith(' ') && !line.startsWith('↳') && line.includes('.js')) {
                 currentFile = line.trim();
-                this.results.summary.totalFiles++;
+                console.log(`  → Found file: ${currentFile}`);
                 continue;
             }
             
             // Library detection line (starts with ↳)
             if (line.startsWith(' ↳')) {
                 const libraryInfo = line.replace(' ↳ ', '').trim();
+                console.log(`  → Found library: ${libraryInfo}`);
                 continue;
             }
             
             // Vulnerability details line
             if (line.includes('has known vulnerabilities:') && currentFile) {
+                console.log(`  → Found vulnerability in ${currentFile}`);
                 this.parseVulnerabilityLine(line, currentFile);
             }
         }
+        
+        console.log(`🔍 Parsing complete. Found ${this.results.vulnerabilities.length} vulnerabilities.\n`);
     }
 
     parseVulnerabilityLine(line, filePath) {
@@ -254,6 +340,7 @@ class RetireAnalyzer {
         .cve-link { color: #007bff; text-decoration: none; }
         .cve-link:hover { text-decoration: underline; }
         .section-title { font-size: 1.5em; margin: 30px 0 15px 0; color: #333; border-bottom: 2px solid #e9ecef; padding-bottom: 10px; }
+        .no-vulns { background: #d4edda; border: 1px solid #c3e6cb; color: #155724; padding: 15px; border-radius: 5px; margin: 20px 0; }
     </style>
 </head>
 <body>
@@ -289,7 +376,24 @@ class RetireAnalyzer {
             </div>
 
             <h2 class="section-title">🚨 Vulnerabilities</h2>
-            ${vulnerabilities.length === 0 ? '<p>🎉 No vulnerabilities found matching your criteria!</p>' : `
+            ${vulnerabilities.length === 0 ? `
+            <div class="no-vulns">
+                <h3>🎉 No Known Vulnerabilities Found!</h3>
+                <p><strong>This is good news!</strong> RetireJS scanned your ${summary.totalFiles} JavaScript file(s) and found no known vulnerable libraries.</p>
+                <p><strong>What this means:</strong></p>
+                <ul>
+                    <li>Your JavaScript files don't contain any libraries that RetireJS recognizes as having known security vulnerabilities</li>
+                    <li>This could mean your files contain custom code, newer libraries not in RetireJS's database, or secure versions of known libraries</li>
+                    <li>Note: RetireJS only checks for known vulnerabilities in popular JavaScript libraries - it doesn't analyze custom code for security issues</li>
+                </ul>
+                <p><strong>Recommendations:</strong></p>
+                <ul>
+                    <li>Continue monitoring for new vulnerabilities as libraries are updated</li>
+                    <li>Consider additional security tools for custom code analysis</li>
+                    <li>Keep your libraries up to date</li>
+                </ul>
+            </div>
+            ` : `
             <table class="vulnerabilities-table">
                 <thead>
                     <tr>
@@ -342,6 +446,10 @@ class RetireAnalyzer {
             sortedLibraries.forEach(([lib, count]) => {
                 console.log(`  📦 ${lib}: ${count} vulnerabilities`);
             });
+        } else {
+            console.log(`\n✅ No vulnerable libraries detected in your JavaScript files.`);
+            console.log(`   This means RetireJS didn't find any known vulnerable libraries.`);
+            console.log(`   Your files likely contain custom code or secure library versions.`);
         }
         
         console.log(`\n📁 Reports saved to: ${path.resolve(this.options.outputDir)}`);
@@ -389,10 +497,22 @@ OPTIONS:
     -h, --help          Show this help message
 
 EXAMPLES:
-    node retire-analyzer.js                           # Analyze current directory
-    node retire-analyzer.js /path/to/js/files         # Analyze specific path
+    node retire-analyzer.js                           # Analyze current directory recursively
+    node retire-analyzer.js /path/to/js/files         # Analyze specific path recursively
     node retire-analyzer.js --format html             # Generate only HTML report
     node retire-analyzer.js --severity high           # Show only high severity
+
+RECURSIVE SCANNING:
+    The tool automatically scans all subdirectories for .js files
+    Skips: node_modules, .git, .svn, .hg, coverage, dist, build directories
+
+WHAT RETIREJS DETECTS:
+    RetireJS only detects known vulnerable JavaScript libraries (jQuery, Angular, etc.)
+    It does NOT analyze custom JavaScript code for vulnerabilities.
+    If no vulnerabilities are found, your files likely contain:
+    - Custom/proprietary JavaScript code
+    - Secure versions of known libraries
+    - Libraries not in RetireJS's vulnerability database
 `);
                 process.exit(0);
                 break;
