@@ -2,7 +2,7 @@
 
 An enhanced wrapper around the [RetireJS](https://retirejs.github.io/retire.js/) vulnerability scanner that provides organized, detailed reporting for large-scale JavaScript security analysis.
 
-> **Built on top of RetireJS by [Erlend Oftedal](https://github.com/erlend-oftedal)**
+> **Built on top of RetireJS by [Erlend Oftedal](https://github.com/eoftedal)**
 
 ## Quick Start
 
