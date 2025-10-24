@@ -1,0 +1,35 @@
+# Core dependencies
+PyYAML>=6.0
+SQLAlchemy>=2.0.0
+psycopg2-binary>=2.9.0
+
+# Data analysis and visualization
+pandas>=2.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Logging
+colorlog>=6.7.0
+
+# Web crawling and requests
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# Dynamic crawling (Pyppeteer for headless Chrome)
+pyppeteer>=1.0.2
+
+# HTML parsing and processing
+html5lib>=1.1
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-asyncio>=0.21.0  # For async crawler tests
+
+# Development tools
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.5.0

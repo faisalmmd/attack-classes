@@ -1,0 +1,35 @@
+{
+  "total_records": 457826,
+  "date_range": {
+    "start": "2025-06-28 22:44:56",
+    "end": "2025-06-29 00:09:49"
+  },
+  "countries": [
+    "AE",
+    "BA",
+    "BO",
+    "CL",
+    "DE",
+    "EG",
+    "GE",
+    "ID",
+    "JP",
+    "MA",
+    "NG",
+    "PK",
+    "RO",
+    "SG",
+    "UA",
+    "ZA"
+  ],
+  "rules": [
+    "DE3_1",
+    "DM3",
+    "FB2",
+    "HF1",
+    "HF4"
+  ],
+  "years": [
+    2025
+  ]
+}

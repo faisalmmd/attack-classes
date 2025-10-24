@@ -1,0 +1,50 @@
+# Citation file for HTML Violation Analyzer (Enhanced Version)
+cff-version: 1.2.0
+message: "If you use this software, please cite both the original work and this enhanced version as below."
+
+title: "HTML Violation Analyzer - Enhanced Version"
+abstract: "A comprehensive web compliance analysis system with advanced analytics and visualization capabilities, built upon the foundational HTML violations analyzer."
+
+authors:
+  - family-names: "Mahmud"
+    given-names: "Faisal"
+    affiliation: "NYUAD/HavenLab]"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"  # Add if available
+
+repository-code: "https://github.com/skymasterfm/html-violation-analyzer"
+url: "https://github.com/skymasterfm/html-violation-analyzer"
+
+keywords:
+  - "HTML validation"
+  - "web compliance"
+  - "Common Crawl"
+  - "specification violations"
+  - "web analytics"
+  - "longitudinal analysis"
+
+license: MIT
+date-released: "2024-08-14"  # Update to actual release date
+
+preferred-citation:
+  type: software
+  title: "HTML Violation Analyzer - Enhanced Version"
+  authors:
+    - family-names: "[Your Last Name]"
+      given-names: "[Your First Name]"
+  repository-code: "https://github.com/skymasterfm/html-violation-analyzer"
+  year: 2024
+
+references:
+  - type: article
+    title: "HTML Violations and Where to Find Them: A Longitudinal Analysis of Specification Violations in HTML"
+    authors:
+      - family-names: "Hantke"
+        given-names: "Florian"
+        affiliation: "CISPA Helmholtz Center for Information Security"
+    conference:
+      name: "Proceedings of the 22nd ACM Internet Measurement Conference"
+    year: 2022
+    publisher:
+      name: "ACM"
+    url: "https://swag.cispa.saarland/papers/hantke2022violations.pdf"
+    repository-code: "https://github.com/cispa/html-violations-analyzer"

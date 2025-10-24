@@ -1,0 +1,39 @@
+general:
+  # Log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+  log_level: DEBUG
+
+  # Output directory for logs
+  output: ./log_output/
+
+  # Mode of operation (DEBUG, PROD)
+  mode: PROD
+
+  # Number of parallel processes for crawling and checking
+  number_crawler_processes: 1
+  number_checker_processes: 1
+
+# Directory containing local HTML files to analyze
+input_dir: ../regional-longitudinal-study/subset_collected_data/snapshot_data
+
+# Use SQLite for simplicity and local testing
+database:
+  type: sqlite
+  name: results.db
+
+# Local file-based crawler settings (you are using local HTML files)
+crawler:
+  files:
+    # This section is required, but can be empty for file crawling
+    # Just keep the key so the parser doesn't break
+  urls: 
+    # This is unused in file-based crawling
+  db_path: postgresql://athena:f1h89f90u1@localhost/cc_index_database_200_2
+
+# List of validation rules to apply (MUST match the exact class names in checker/rules.py)
+checker:
+  rules:
+    - FB2
+    - DM3
+    - DE3_1
+    - HF1
+    - HF4

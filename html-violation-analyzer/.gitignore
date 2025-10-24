@@ -1,0 +1,115 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Log files
+*.log
+data/output/logs/
+log_output/
+
+# Configuration files with sensitive data
+config.yml
+config_local.yml
+.env
+.env.local
+
+# Output directories
+data/output/plots/
+data/output/reports/
+results/
+plots/
+reports/
+
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Large data files
+*.tar.gz
+*.zip
+*.rar
+data/input/large_datasets/
+data/raw/
+
+# Common Crawl data
+cc-*.txt
+crawl-*.warc
+*.warc.gz
+
+# Selenium
+chromedriver
+geckodriver
+*.driver
+
+# OS generated files
+.DS_Store?
+ehthumbs.db
+Icon?
+
+# Keep example files but ignore actual config
+!config/example.yml
+!data/sample/
