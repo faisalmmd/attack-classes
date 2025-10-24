@@ -24,7 +24,7 @@ node retire-analyzer.js --format html --severity high
 
 - Node.js (v12 or higher)
 - **RetireJS** installed globally: `npm install -g retire`
-  - *Credit: RetireJS is created and maintained by [Erlend Oftedal](https://github.com/erlend-oftedal)*
+  - *Credit: RetireJS is created and maintained by [Erlend Oftedal](https://github.com/eoftedal)*
 
 ## Installation
 
