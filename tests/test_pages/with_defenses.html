@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Defended Page - Frame-Busting JavaScript</title>
+    <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self';">
+    <script>
+        // Frame-busting code to prevent clickjacking
+        if (top !== self) {
+            top.location.replace(self.location.href);
+        }
+
+        // Additional protection
+        if (window.top !== window.self) {
+            document.body.style.display = 'none';
+            window.top.location = window.self.location;
+        }
+
+        // Check for frames
+        if (parent.frames.length > 0) {
+            top.location = self.location;
+        }
+    </script>
+</head>
+<body onload="if(self!=top){top.location=self.location}">
+    <h1>Secure Government Portal</h1>
+
+    <p>This page has frame-busting protection.</p>
+
+    <form action="/login" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+
+        <button type="submit">Login</button>
+    </form>
+
+    <a href="/forgot-password">Forgot Password?</a>
+    <a href="/register">Create Account</a>
+</body>
+</html>
