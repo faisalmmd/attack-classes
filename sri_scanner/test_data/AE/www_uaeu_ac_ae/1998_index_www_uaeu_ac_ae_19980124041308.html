@@ -1,0 +1,166 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.0b3 [en] (WinNT; I) [Netscape]">
+   <TITLE>UAE University Home PageUAE University Home Page</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- Beginning of JavaScript Applet -------------------
+
+/* Copied with admiration
+
+Copyright (C)1996 Web Integration Systems, Inc. DBA Websys, Inc.
+   All Rights Reserved.
+
+   This applet can be re-used or modified, if credit is given in 
+   the source code.
+
+   We will not be held responsible for any unwanted effects due to the 
+   usage of this applet or any derivative.  No warrantees for usability 
+   for any specific application are given or implied.
+
+   Chris Skinner, January 30th, 1996.
+   
+   Hacked for CNNfn by RD, Jan. 31, 1996
+
+   Hacked for the UAEU by MF, Mar 11, 1996
+*/
+function makearray( n )
+{
+   this.length = n;
+   for( var i = 1;i <= n; i++)
+	this[ i ] = 0;
+   return this;
+}
+
+function other( img, len )
+{
+   this.img = img;
+   this.len = len;
+   this.top = top;
+   }
+
+function listing( url, dot, top )
+{
+   this.url = url;
+   this.dot = dot;
+   this.top = top;
+  }
+
+var loades = 0;
+function scrollit_r2l(seed)
+{
+        var m1  = " Welcome to the Computer Center at the United Arab Emirates University, ";
+        var m2  = " Here you will find links to our country, educational institutions and University information, ";
+        var m3  = " For employment opportunities, See our recruitment page, ";
+        var m4  = " Check out the internet help icon for what's available on the UAEU FTP server  ";
+        
+        var msg=m1+m2+m3+m4;
+        var out = " ";
+        var c   = 1;
+
+        if (seed > 100) {
+                seed--;
+                var cmd="scrollit_r2l(" + seed + ")";
+                timerTwo=window.setTimeout(cmd,100);
+        }
+        else if (seed <= 100 && seed > 0) {
+                for (c=0 ; c < seed ; c++) {
+                        out+=" ";
+                }
+                out+=msg;
+                seed--;
+                var cmd="scrollit_r2l(" + seed + ")";
+                    window.status=out;
+                timerTwo=window.setTimeout(cmd,100);
+        }
+        else if (seed <= 0) {
+                if (-seed < msg.length) {
+                        out+=msg.substring(-seed,msg.length);
+                        seed--;
+                        var cmd="scrollit_r2l(" + seed + ")";
+                        window.status=out;
+                        timerTwo=window.setTimeout(cmd,100);
+                }
+                else {
+                        window.status=" ";
+                        timerTwo=window.setTimeout("scrollit_r2l(100)",75);
+                }
+        }
+}
+//   End of JavaScript code 
+//  BEGIN FRAME MENU SCRIPT
+
+
+//-->
+</SCRIPT>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#68228B" // onLoad="timerONE=window.setTimeout('scrollit_r2l(100)',500);">
+
+
+<CENTER><TABLE>
+<TR>
+<TD><CENTER><IMG SRC="/jpg/campus.jpg" ALT="" HEIGHT=120 WIDTH=200></CENTER>
+</TD>
+
+<TD><CENTER><IMG SRC="/arabic/images/uni-logo.jpg" HEIGHT=63 WIDTH=56></CENTER>
+<CENTER><B><FONT SIZE=+1>Welcome to the&nbsp;</FONT></B></CENTER>
+<CENTER><B><FONT SIZE=+1>United Arab Emirates</FONT></B></CENTER>
+<CENTER><B><FONT SIZE=+1>University!</FONT></B></CENTER>
+</TD>
+
+<TD><CENTER><IMG SRC="/jpg/maqam.jpg" ALT="" HEIGHT=120 WIDTH=200></CENTER>
+</TD>
+</TR>
+</TABLE></CENTER>
+<B><A HREF="http://www.uaeu.ac.ae/home2.html">Enable Frames</A></B>&nbsp;
+
+<CENTER><TABLE>
+<TR>
+<TD>&nbsp;<IMG SRC="/gif/greensq.gif" HEIGHT=12 WIDTH=12> <B><A HREF="http://www.uaeu.ac.ae/ahalan.html">Ahalan
+Wasahalan</A>&nbsp;</B>&nbsp;
+</TD>
+</TR>
+
+<TR>
+<TD>&nbsp;<IMG SRC="/gif/greensq.gif" HEIGHT=12 WIDTH=12> <B><FONT SIZE=+1><A HREF="http://www.uaeu.ac.ae/uaeuniv.html">UAE
+UNIVERSITY</A>&nbsp;</FONT></B>&nbsp;
+</TD>
+</TR>
+
+<TR>
+<TD>&nbsp;<IMG SRC="/gif/greensq.gif" HEIGHT=12 WIDTH=12> <B><A HREF="http://www.uaeu.ac.ae/about/whatnew.html">What's
+New At Our WWW Site</A>&nbsp;</B>&nbsp;
+</TD>
+</TR>
+
+<TR>
+<TD>&nbsp;<IMG SRC="/gif/greensq.gif" HEIGHT=12 WIDTH=12> <B><A HREF="http://www.uaeu.ac.ae/resources/help.html">Internet
+Resources&nbsp;</A></B>&nbsp;
+</TD>
+</TR>
+
+<TR>
+<TD>&nbsp;<IMG SRC="/gif/greensq.gif" HEIGHT=12 WIDTH=12> <B><A HREF="http://www.uaeu.ac.ae/about/uae.html">About
+The United Arab Emirates</A></B>&nbsp;
+</TD>
+</TR>
+
+<TR>
+<TD>&nbsp;<IMG SRC="/gif/greensq.gif" HEIGHT=12 WIDTH=12> <B><A HREF="http://www.uaeu.ac.ae/ftp/">UAEU
+FTP Server</A></B>&nbsp;<IMG SRC="/gif/new2.gif" HEIGHT=21 WIDTH=26 ALIGN=ABSBOTTOM>&nbsp;
+</TD>
+</TR>
+</TABLE></CENTER>
+<CENTER>
+<HR WIDTH="100%"></CENTER>
+<CENTER><B>&nbsp;<A HREF="http://www.uaeu.ac.ae/internet/usage/index.html">Usage
+Statistics</A> * * * * * <A HREF="mailto:webmaster@taraq.uaeu.ac.ae">Mail
+to Webmaster</A> &nbsp;</B></CENTER>
+<CENTER><A HREF="http://www.microsoft.com/ie/ie.htm"><IMG SRC="/gif/ie_animated.gif" ALT=""  ALIGN=LEFT></A><B>&nbsp;<A HREF="http://home.netscape.com/comprod/mirror/index.html"><IMG SRC="/gif/now30_button.gif" ALT=""  ALIGN=RIGHT></A>
+<FONT SIZE=-1>This site is best viewed with Netscape Navigator 3.0.</FONT></B></CENTER>
+<CENTER><B><FONT SIZE=-1>Download Netscape Now!</FONT></B></CENTER>
+
+</BODY>
+</NOFRAME>
+</HTML>

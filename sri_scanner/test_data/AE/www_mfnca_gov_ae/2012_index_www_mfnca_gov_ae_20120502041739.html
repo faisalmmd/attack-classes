@@ -1,0 +1,1146 @@
+<html  dir="rtl"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="rtl" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>وزارة الدولة لشؤون المجلس الوطني</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
+<script src="js/validater.js" type="text/javascript"></script>
+<script src="js/prototype.js" type="text/javascript"></script>
+<script src="js/scriptaculous.js?load=effects,builder" type="text/javascript"></script>
+<script src="js/lightbox.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+var i=0;
+function zoom(id) {
+	var str;
+
+	if (id == "1")  {
+		i++;
+		document.body.style.zoom=1+i/10;
+	}
+	if (id == "2") {
+		i--;
+		document.body.style.zoom=1+i/10;
+	}
+	if (id == "3") {
+	document.body.style.zoom=1;
+	i=1;
+	}
+}
+</script>
+
+
+<script language="JavaScript">
+function setVisibility(id, visibility) {
+document.getElementById(id).style.display = visibility;
+}
+ var min=8;
+var max=18;
+function increaseFontSize() {
+   var p = document.getElementsByTagName('font');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 12;
+      }
+      if(s!=max) {
+         s += 1;
+      }
+      p[i].style.fontSize = s+"px"
+   }
+}
+function decreaseFontSize() {
+   var p = document.getElementsByTagName('font');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 12;
+      }
+      if(s!=min) {
+         s -= 1;
+      }
+      p[i].style.fontSize = s+"px"
+   }   
+}
+
+
+function bookmark_us(url, title){
+
+if (window.sidebar) // firefox
+    window.sidebar.addPanel(title, url, "");
+else if(window.opera && window.print){ // opera
+    var elem = document.createElement('a');
+    elem.setAttribute('href',url);
+    elem.setAttribute('title',title);
+    elem.setAttribute('rel','sidebar');
+    elem.click();
+} 
+else if(document.all)// ie
+    window.external.AddFavorite(url, title);
+}
+
+</script>
+
+
+<script language="javascript">
+
+function DateTime(lang){
+
+	var monthsen = new Array(12);	
+	monthsen[0]  = "January";
+  	monthsen[1]  = "February";
+   	monthsen[2]  = "March";
+   	monthsen[3]  = "April";
+   	monthsen[4]  = "May";
+   	monthsen[5]  = "June";
+   	monthsen[6]  = "July";
+   	monthsen[7]  = "August";
+   	monthsen[8]  = "September";
+   	monthsen[9]  = "October";
+   	monthsen[10] = "November";
+   	monthsen[11] = "December";
+	
+	var monthsar = new Array(12);	
+   	monthsar[0]  = "يناير";
+   	monthsar[1]  = "فبراير";
+   	monthsar[2]  = "مارس";
+   	monthsar[3]  = "أبريل";
+   	monthsar[4]  = "مايو";
+   	monthsar[5]  = "يونيو";
+   	monthsar[6]  = "يوليو";
+   	monthsar[7]  = "أغسطس";
+   	monthsar[8]  = "سبتمبر";
+   	monthsar[9]  = "أكتوبر";
+   	monthsar[10] = "نوفمبر";
+   	monthsar[11] = "ديسمبر";
+
+      
+var today=new Date();
+var date=today.getDate();
+var month=today.getMonth();
+var monthnameen= monthsen[month];
+var monthnamear= monthsar[month];
+var year=today.getYear();
+var hours=today.getHours();
+var minutes=today.getMinutes();
+var seconds=today.getSeconds();
+
+minutes=checkTime(minutes);
+seconds=checkTime(seconds);
+
+if(lang=="ar"){
+document.getElementById('txtDate').innerHTML=""+date+" "+monthnamear+" "+year+" - "+hours+":"+minutes+":"+seconds+" (GMT +4) ";
+}else{
+document.getElementById('txtDate').innerHTML=""+date+" "+monthnameen+" "+year+" - "+hours+":"+minutes+":"+seconds+" (GMT +4) ";	
+}
+
+time=setTimeout('DateTime("ar")',500);}
+
+function checkTime(count){
+if (count<10){  
+count="0" + count;  }
+return count;
+}
+</script>
+<style type="text/css">
+<!--
+.style9 {font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; font-size: 12px; color: #8469AE; }
+body {
+	background-color: #FDF9F0;
+}
+.style4 {color: #253e57; 
+font-family: 
+Verdana, Arial, Helvetica, sans-serif; 
+font-size: 10px; 
+font-weight: bold; 
+}
+-->
+</style>
+<script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<link rel="shortcut icon" href="http://protentia.sc103.info/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen" />
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Tahoma;
+}
+-->
+</style></head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="DateTime('ar');">
+<table width="64%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td>
+   
+    <div align="center"  class="main_header">
+        <div class="lang_headerarabic"><u><a href="?lang=en">English</a></u></span></div>
+        <div class="logo_headerarabic"><a href="index.php"><img src="images/header_2tra.gif" width="610px" height="118px" border="0px" /></a></div>
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+
+<div align="Left"  class="timeDate" id="txtDate"></div>
+
+     
+    </td>
+  </tr>
+  <tr>
+    <td background="images/topmenu.jpg">
+    
+ <form action="index.php?lang=en&m=search&act=search" method="get">   
+    <table class="arial black twelve" width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+
+        <td width="40px" height="34">&nbsp;</td>
+        <td width="" >
+          <div align="right">
+            <div style="margin-left:70px;">
+<ul id="mainlevel-nav">
+<li><a href="?lang=ar&m=options&act=index&page=اتصل بنا&category=24"><strong>اتصل بنا</strong></a><a href="" class="mainlevel-nav" ></a></li>
+
+<li><a href="?lang=ar&m=news&amp;act=newsletter&amp;lang=ar"><strong>نشرة التمكين الالكترونية</strong></a><a href="" class="mainlevel-nav" ></a></li>
+
+<li><a href="?lang=ar&m=sitemap&amp;act=index"><strong>خريطة الموقع</strong></a><a href="" class="mainlevel-nav" ></a></li>
+<!--
+<li><a href="http://mail.mfnca.gov.ae:8100/" target="_blank" class="mainlevel-nav" ><strong>البريد الإلكتروني</strong></a></li>
+<li>
+-->
+<li><a href="?lang=ar&m=options&act=content_detail&content_id=439" class="mainlevel-nav" ><strong>الدستور</strong></a></li>
+
+<!--
+<li><a href="?lang=ar&m=options&act=enquiry&page=الاقتراحات والشكاوي" class="mainlevel-nav" ><strong>الاقتراحات والشكاوي</strong></a></li>
+-->
+
+<li><a href="http://www.mygov.ae" target="_blank" class="mainlevel-nav" ><strong>الاقتراحات والشكاوي</strong></a></li>
+
+
+<li><a href="?lang=ar&m=options&act=content_detail&content_id=112" class="mainlevel-nav" ><strong>من نحن</strong></a></li>
+
+<li><a href="index.php?lang=ar" class="mainlevel-nav" ><strong>الرئيسة</strong></a></li>
+
+</ul>
+</div>   
+          </div></td>
+        <td width="11%"><div align="right">
+            
+              <div class="search">
+                <input name="searchword" id="mod_search_searchword" maxlength="20" alt="search" class="txtBoxlogin" type="text" size="20" value="بحث..."  onblur="if(this.value=='') this.value='بحث...';" onfocus="if(this.value=='بحث...') this.value='';" />
+              </div>
+              
+        </div></td>
+        <td width="7%"><label>
+          <input name="button" type="submit" class="search_button" id="button" value="بحث" />
+          <input type="hidden" name="m" value="search" />
+          <input type="hidden" name="act" value="search" />
+        </label></td>
+      </tr>
+    </table>
+    
+   </form> 
+    
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+    
+      <div style="padding-left:5px; padding-right:5px;" align="center"><strong>
+        <link href="/css/style.css" rel="stylesheet" type="text/css" />
+
+<SCRIPT src="jquery/jquery-1.2.6.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT src="jquery/jquery.marquee.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT type=text/javascript>
+    <!--
+    $(function () {
+        // basic version is: $('div.demo marquee').marquee() - but we're doing some sexy extras
+        
+        $('div.newsTicker marquee').marquee('pointer').mouseover(function () {
+            $(this).trigger('stop');
+        }).mouseout(function () {
+            $(this).trigger('start');
+        }).mousemove(function (event) {
+            if ($(this).data('drag') == true) {
+                this.scrollLeft = $(this).data('scrollX') + ($(this).data('x') - event.clientX);
+            }
+        }).mousedown(function (event) {
+            $(this).data('drag', true).data('x', event.clientX).data('scrollX', this.scrollLeft);
+        }).mouseup(function () {
+            $(this).data('drag', false);
+        });
+    });
+    //-->
+    </SCRIPT>
+
+<div class=newsTickerarabic>
+<marquee  class="newsTickerarabic" onmouseout="this.scrollAmount=2" onmouseover="this.scrollAmount=0" scrolldelay="6" vspace="0" hspace="0" dir="rtl"  direction="Right" scrollamount="2">
+	<img src="images/logo_news_ticker.gif" width="10" height="13" />
+       <a href="?m=options&lang=ar&act=content_detail&content_id=622">&nbsp; في اطار تبادل التجارب والاطلاع على افضل الممارسات  وفد مكتب وزير الدولة لشؤون مجلس الامة بدولة الكويت الشقيقة يطلع على تجربة الامارات في تنظيم العلاقة بين الحكومة �</a>
+  	<img src="images/logo_news_ticker.gif" width="10" height="13" />
+       <a href="?m=options&lang=ar&act=content_detail&content_id=620">&nbsp;وزارة الدولة لشؤون المجلس الوطني الاتحادي محاضرة حول المشاركة السياسية</a>
+  	<img src="images/logo_news_ticker.gif" width="10" height="13" />
+       <a href="?m=options&lang=ar&act=content_detail&content_id=618">&nbsp;وزارة الدولة لشؤون المجلس الوطني الاتحادي تنظم محاضرة في كليات التقنية</a>
+  	<img src="images/logo_news_ticker.gif" width="10" height="13" />
+       <a href="?m=options&lang=ar&act=content_detail&content_id=617">&nbsp;وزارة الدولة لشؤون المجلس الوطني الاتحادي محاضرة حول المشاركة السياسية</a>
+  	<img src="images/logo_news_ticker.gif" width="10" height="13" />
+       <a href="?m=options&lang=ar&act=content_detail&content_id=614">&nbsp;اللجنة الوطنية للانتخابات تصدر تقرير انتخابات المجلس الوطني الاتحادي </a>
+  	<img src="images/logo_news_ticker.gif" width="10" height="13" />
+       <a href="?m=options&lang=ar&act=content_detail&content_id=611">&nbsp; وفد وزارة الشؤون البلدية والقروية بالمملكة السعودية يطلع على تجربة الامارات في تنظيم انتخابات المجلس الوطني الاتحادي 2011  </a>
+  	<img src="images/logo_news_ticker.gif" width="10" height="13" />
+       <a href="?m=options&lang=ar&act=content_detail&content_id=609">&nbsp;كملة معالي د انور قرقاش بمناسبة الذكرى الاربعين لتأسيس المجلس </a>
+  	<img src="images/logo_news_ticker.gif" width="10" height="13" />
+       <a href="?m=options&lang=ar&act=content_detail&content_id=597">&nbsp;وزارة الدولة لشؤون المجلس الوطني الاتحادي تعقد الورشة التدريبية الثالثة لمنسقي الاتصال بين الحكومة والمجلس </a>
+  	<img src="images/logo_news_ticker.gif" width="10" height="13" />
+       <a href="?m=options&lang=ar&act=content_detail&content_id=596">&nbsp;وزارة الدولة لشؤون المجلس الوطني الاتحادي تضع خطة تنفيذية شاملة لنقاط التحسين لدعم رحلتها نحو التميز</a>
+     <a href="?m=options&lang=ar&act=content_detail&content_id=590">&nbsp;</a>
+  </marquee>
+</div>        
+    </strong>  </div></td>
+  </tr>
+  
+  <tr>
+    <td><table class="arial" width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="23%" rowspan="2" valign="top">
+        
+          <div id="menu_tbl">
+            <table width="224" border="0" cellpadding="0" cellspacing="0">
+              <tr align="left">
+                <td>
+                  <link href="css/style.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.style5 {color: #b89207}
+-->
+</style>
+<FORM method=post enctype="multipart/form-data" action="http://mail.mfnca.gov.ae:8100/">
+
+<div class="login_divarabic">
+<div class=" div_headarabic" >البريد الإلكتروني</a></div>
+<TABLE WIDTH="187" border="0" align="center" cellpadding="1" cellspacing="1" class="email_form">
+<TR>
+<TD class="login_content" width="98" align="Right" ><strong>الإســم</strong><span class="style5">*</span></TD>
+<TD width="82">
+	
+	  <div align="Right">
+	    <INPUT NAME="Username" Type=text class="txtBoxlogin" size=20 MaxLength=255 ALT="Login Name">
+	    </div></TD>
+</TR>
+<TR>
+<TD class="login_content" ALIGN="Right"><strong>
+	كلمة الســر</strong><span class="style5">*</span></TD>
+<TD ALIGN="Right">
+	
+	  <div align="Right">
+	    <INPUT NAME="Password" Type=password class="txtBoxlogin" size=20 MaxLength=99 ALT="Password">
+	    </div></TD>	  
+</TR>
+<TR>
+  <TD class="login_content" ALIGN="Right"><strong>طريقة العرض</strong><span class="style5">*</span></TD>
+  <TD ALIGN="Right">
+    <div align="Right">
+      <select name="SessionSkin" class="txtBoxlogin">
+        <option value="*" selected="selected"></option>
+        <option value="">Basic</option>
+        <option value="Aquinox">Aquinox</option>
+        <option value="Classic">Classic</option>
+        <option value="GoldenFleece">GoldenFleece</option>
+        <option value="mnfca">mnfca</option>
+        <option value="Overview">Overview</option>
+        <option value="Pronto">Pronto</option>
+        <option value="Simplex">Simplex</option>
+        <option value="Viewpoint">Viewpoint</option>
+        <option value="XChange">XChange</option>
+      </select>
+      </div></TD>
+</TR>
+<TR>
+<TD COLSPAN="2" ALIGN="CENTER">
+	<div align="Left">
+	  <input type=hidden name="FormCharset" value="ISO-8859-1">
+	  <input type=hidden name="Language" value="">
+	  <input type=hidden name="Skin" value="Viewpoint">
+	  <INPUT NAME="login" class="enter_button" Type=submit VALUE="الدخول" ALT="Login" COLOR="BLUE">
+	  </div></TD>
+</TR>
+</TABLE>
+</div>
+</form>                  </td>
+            </tr>
+
+             <!--VISION-->
+              <tr align="center">
+                <td><table width="4%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><a href="index.php"><img src="images/homeicon.gif" alt="الرئيسة" width="24" height="28" /></a></td>
+                    <td><a href="javascript:;" onclick="zoom(1)"><img src="images/increaseicon.gif" alt="Font Increse" width="24" height="28" /></a></td>
+                    <td><a href="javascript:;" onclick="zoom(2)"><img src="images/reduceicon.gif" alt="Font Decrease" width="24" height="28" /></a></td>
+                    <td><a href="javascript:;" onclick="bookmark_us('http://www.mfnca.gov.ae','وزارة الدولة لشؤون المجلس الوطني')"><img src="images/bookmarkicon.gif" alt="Bookmark This Page" width="24" height="28" /></a></td>
+                    <td><a href="?lang=ar&m=options&act=enquiry&page=الاقتراحات والشكاوي" ><img src="images/mailicon.gif" alt="الاقتراحات والشكاوي & Complaints" width="24" height="28" /></a></td>
+                  </tr>
+                </table>                  
+</td>
+              </tr>
+              <!--Vision-->  
+               
+               
+               
+              <!--who we are-->
+              <tr align="left">
+                <td><a href="" onMouseOver="setVisibility('submenu2', 'inline');" onMouseOut="setVisibility('submenu2','none');"  class="mainlevelarabic" >من نحن&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&raquo;</a></td>
+              </tr>
+              <!--who we are-->       
+              
+              <!--Ministry News-->
+              <tr align="left">
+                <td><a href="" onMouseOver="setVisibility('submenu', 'inline');" onMouseOut="setVisibility('submenu','none');"  class="mainlevelarabic" >المركز الإعلامي&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&raquo;</a></td>
+              </tr>
+              <!--Ministry News-->               
+              
+              
+              
+              
+              <!--Conferences and Workshops-->
+              <tr align="left">
+                <td><a href="?lang=ar&m=options&act=events_list&page=الفعاليات&category=19"  class="mainlevelarabic" >الفعاليات</a></td>
+              </tr>
+              <!--Conferences and Workshops-->
+              
+              <!--Publications-->
+              <tr align="left">
+                <td><a href="?lang=ar&m=options&act=publications_list&page=إصدارات"  class="mainlevelarabic" >إصدارات</a></td>
+              </tr>
+              <!--Publications-->  
+			  
+			  <!--New link
+              <tr align="left">
+                <td><a href="?lang=ar&m=options&act=content_detail&content_id=590"  class="mainlevelarabic" >الحكومة في جلسات المجلس الوطني الاتحادي</a></td>
+              </tr>
+			  <!--New link-->
+              
+              <!--internship_program-->           
+              <tr align="left">
+                <td><a href="?lang=ar&m=options&act=index&page=برنامج التدريب الداخلي&category=29" class="mainlevelarabic" >برنامج التدريب الداخلي</a></td>
+              </tr>      
+              <!--internship_program-->              
+              
+              <!--Career Opportunity-->    
+              <tr align="left">
+                <td><a href="?lang=ar&m=options&act=careers&page=فرص وظيفية&category=15" class="mainlevelarabic" >فرص وظيفية </a></td>
+              </tr>     
+              <!--Career Opportunity-->     
+              
+              <!--national_committees-->  
+              <tr align="left">
+                <td><a class="mainlevelarabic" href="?lang=ar&m=options&amp;act=index&amp;page=اللجان الوطنية&amp;category=43">اللجان الوطنية</a></td>
+              </tr>                   
+              <!--national_committees-->     
+              
+              <!--FNC Election-->    
+              <tr align="left">
+                <td><a href="?lang=ar&m=options&act=index&page=انتخابات المجلس الوطني الاتحادي&category=37" class="mainlevelarabic" >انتخابات المجلس الوطني الاتحادي</a></td>
+              </tr>
+              <!--FNC Election-->  
+              
+              
+              <!--useful_links-->          
+              <tr align="left">
+                <td><a href="?lang=ar&m=options&act=web_links&page=مواقع مفيدة" class="mainlevelarabic" >مواقع مفيدة</a></td>
+              </tr>                           
+              <!--useful_links-->   
+              
+              
+              <!--complaints_suggestions                       
+              <tr align="left">
+                <td><a href="?lang=ar&m=options&act=enquiry&page=الاقتراحات والشكاوي"  class="mainlevelarabic" >الاقتراحات والشكاوي</a></td>
+              </tr>
+              complaints_suggestions  -->
+              
+              <!--uae_country_report-->
+              <tr align="left">
+                <td><a  href="http://www.uaeinteract.com/uaeint_misc/pdf_2008/index.asp" target="_blank" class="mainlevelarabic" >التقرير السنوي للإمارات العربية المتحدة</a></td>
+              </tr>
+              <!--uae_country_report-->
+              
+              <!--latest_news
+          <tr align="left">
+            <td><a href="?lang=ar&m=options&act=latest_news&page=آخر الأخبار&category=25" class="mainlevelarabic" >آخر الأخبار</a></td>
+          </tr>
+          latest_news-->
+              
+              <!--U P R Report -->
+              <tr align="left">
+                <td><a href="?m=options&lang=ar&act=upr_report&content_id=315" class="mainlevelarabic" >الاستعراض الدورى الشامل لتقرير الامارات</a></td>
+              </tr>
+              <!--U P R Report-->     
+              
+              
+              <!--Ministry Archive-->
+              <tr align="left">
+                <td><a href="http://archiving.mfnca.gov.ae/SAPERIONWEB/SACLIENT.HTM" target="_blank" class="mainlevelarabic" >أرشيف</a></td>
+              </tr>
+              <!--Ministry Archive-->           
+              
+         
+		       <!--FNC -->
+              <tr align="left">
+                <td><a href="?lang=ar&m=options&act=index&page=المجلس الوطني الاتحادي&category=49" class="mainlevelarabic" >المجلس الوطني الاتحادي</a></td>
+              </tr>
+              <!--U P R Report-->         
+
+
+
+		       <!--FNC -->
+              <tr align="left">
+                <td><a href="?lang=ar&m=news&amp;act=newsletter&amp;lang=ar" class="mainlevelarabic" >نشرة التمكين الالكترونية</a></td>
+              </tr>
+              <!--U P R Report-->  
+                            
+              
+              <!--training
+          <tr align="left">
+            <td><a href="?lang=ar&m=options&act=index&page=فرص التدريب&category=23"  class="mainlevelarabic" >فرص التدريب</a></td>
+          </tr>
+          <tr align="left">
+            <td><a href="?lang=ar&m=options&act=index&page=الشركاء&category=28" class="mainlevelarabic">الشركاء</a></td>
+          </tr>
+          strategic_partners-->
+              
+              
+              
+              
+              <tr align="left">
+                <td><div align="center"><a href="http://www.nccht.gov.ae" target="_blank"><img src="images/mfnnca_25.jpg"  width="216" height="39" border="0" /></a></div></td>
+              </tr>
+              
+              <tr align="left">
+                <td><div align="center"><a href="http://www.simplycheck.ae/ar/index.html" target="_blank"><img src="images/simply-check3.jpg"  width="216" height="130" border="0" /></a></div></td>
+              </tr>
+              
+              <tr align="left">
+                <td>&nbsp;<div align="center"><a href="?lang=ar&m=news&amp;act=newsletter&amp;lang=ar"><img src="images/banner_newsletter.jpg"  width="216" height="76" border="0" /></a></div></td>
+              </tr>
+              
+              
+			  <tr align="left">
+                <td>&nbsp;<div align="center"><a href="http://government.ae"><img src="images/gov_banner.jpg"  width="216" height="76" border="0" /></a></div></td>
+              </tr>
+	 <!--<tr align="left">
+                <td><div align="center"><a href="http://www.uaecabinet.ae/Arabic/index.aspx" target="_blank">
+                  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="216" height="60">
+                    <param name="movie" value="swf/1.swf" />
+                    <param name="quality" value="high" />
+                    <param name="wmode" value="transparent" />
+                    <embed src="swf/1.swf" width="216" height="60" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent"></embed>
+                  </object>
+                </a></div></td>
+              </tr>
+			  
+			  
+              <tr align="left">
+                <td><div align="center"><a href="http://www.uaecabinet.ae/Arabic/index.aspx" target="_blank"><img src="images/cabinet_arabic.jpg" width="216" height="107" border="0" /></a></div></td>
+              </tr>-->
+              </table>
+          </div></td>
+        <td valign="top"><div align="center">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td><script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<div align="center">
+              
+          
+
+             
+<div  dir="ltr" align="center">
+
+<script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','726','height','166','src','images/bannerfl','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','images/bannerfl' ); //end AC code
+</script><noscript><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="726" height="166">
+  <param name="movie" value="images/bannerfl.swf">
+  <param name="quality" value="high">
+  <embed src="images/bannerfl.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="726" height="166"></embed>
+</object>
+</noscript>
+
+
+<!--
+<img src="images/banner2.png" width="726" height="130" border="0" />
+-->
+<!--
+<script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','726','height','130','src','swf/arabic_banner_3','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','swf/arabic_banner_3' ); //end AC code
+</script>
+<noscript>
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="726" height="130">
+<param name="movie" value="swf/arabic_banner_3.swf" />
+<param name="quality" value="high" />
+<embed src="swf/arabic_banner_3.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="726" height="130"></embed>
+</object>
+</noscript>
+-->
+
+
+
+</div>
+</td>
+            </tr>
+            <tr>
+              <td>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+
+  <style type="text/css">
+<!--
+a:visited {
+	color: #C64934;
+}
+a:hover {
+	color: #C64934;
+}
+a:active {
+	color: #C64934;
+}
+-->
+</style><table width="717" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td valign="top"><table width="370" border="0" align="right" cellpadding="2" cellspacing="2">
+        <tr>
+          <td width="374" valign="top"><div  class="div_stylearabic"  align="center">
+              <div class="div_headarabic" >من نحن</a></div>
+            <div class="div_content">
+				<span dir="ltr" style="FONT-SIZE: 10pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: "></span><span lang="AR-SA" style="FONT-SIZE: 10pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: "><o:p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: justify"><span lang="AR-SA" style="FONT-SIZE: 10pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: "></span></p>
+<span dir="ltr" style="FONT-SIZE: 10pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: "></span><span lang="AR-SA" style="FONT-SIZE: 10pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: "><o:p><span dir="ltr" style="FONT-SIZE: 10pt; LINE-HEIGHT: 150%; FONT-FAMILY: "><o:p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: justify; tab-stops: 353.25pt"><span lang="AR-SA" style="FONT-SIZE: 10pt; LINE-HEIGHT: 150%; FONT-FAMILY: &quot;Tahoma&quot;,&quot;sans-serif&quot;">تأسست وزارة الدولة لشؤون المجلس الوطني</span><span dir="ltr"></span><span lang="AR-SA" dir="ltr" style="FONT-SIZE: 10pt; LINE-HEIGHT: 150%; FONT-FAMILY: &quot;Tahoma&quot;,&quot;sans-serif&quot;"><span dir="ltr"></span> </span><span lang="AR-SA" style="FONT-SIZE: 10pt; LINE-HEIGHT: 150%; FONT-FAMILY: &quot;Tahoma&quot;,&quot;sans-serif&quot;">بموجب المرسوم&nbsp;الاتحادي رقم 10 لسنة2006</span><span dir="ltr"></span><span dir="ltr" style="FONT-SIZE: 10pt; LINE-HEIGHT: 150%; FONT-FAMILY: &quot;Tahoma&quot;,&quot;sans-serif&quot;"><span dir="ltr"></span><span style="mso-spacerun: yes">&nbsp; </span></span><span lang="AR-SA" style="FONT-SIZE: 10pt; LINE-HEIGHT: 150%; FONT-FAMILY: &quot;Tahoma&quot;,&quot;sans-serif&quot;">وتأخذ الوزارة على عاتقها</span><span dir="ltr"></span><span lang="AR-SA" dir="ltr" style="FONT-SIZE: 10pt; LINE-HEIGHT: 150%; FONT-FAMILY: &quot;Tahoma&quot;,&quot;sans-serif&quot;"><span dir="ltr"></span> </span><span lang="AR-SA" style="FONT-SIZE: 10pt; LINE-HEIGHT: 150%; FONT-FAMILY: &quot;Tahoma&quot;,&quot;sans-serif&quot;">مسؤولية تعزيز المشاركة السياسية وتطوير الحياة النيابية في المجتمع</span><span dir="ltr"></span><span lang="AR-SA" dir="ltr" style="FONT-SIZE: 10pt; LINE-HEIGHT: 150%; FONT-FAMILY: &quot;Tahoma&quot;,&quot;sans-serif&quot;"><span dir="ltr"></span> </span><span lang="AR-SA" style="FONT-SIZE: 10pt; LINE-HEIGHT: 150%; FONT-FAMILY: &quot;Tahoma&quot;,&quot;sans-serif&quot;">وعهدت إلى الوزارة عدة مهام تشكل الإطار العام الذي تعمل من خلاله&nbsp;لتحقيق</span><span dir="ltr"></span><span lang="AR-SA" dir="ltr" style="FONT-SIZE: 10pt; LINE-HEIGHT: 150%; FONT-FAMILY: &quot;Tahoma&quot;,&quot;sans-serif&quot;"><span dir="ltr"></span> </span><span lang="AR-SA" style="FONT-SIZE: 10pt; LINE-HEIGHT: 150%; FONT-FAMILY: &quot;Tahoma&quot;,&quot;sans-serif&quot;">أهدافها.</span><span dir="ltr"></span><span dir="ltr" style="FONT-SIZE: 10pt; LINE-HEIGHT: 150%; FONT-FAMILY: &quot;Tahoma&quot;,&quot;sans-serif&quot;"><span dir="ltr"></span>&nbsp;<o:p></o:p></span></p>
+</o:p></span></o:p></span></o:p></span>
+<p align="right">&nbsp;</p>				<br /><a href="?lang=ar&m=options&act=content_detail&content_id=112">إقرأ المزيد</a>
+            </div>
+          </div></td>
+        </tr>
+        <tr>
+          <td valign="top">
+          
+                <div  align="center"  class="div_stylearabic" >
+                <div class="div_headarabic" > التنسيق بين الحكومة والمجلس</div>
+                <div class="div_content">
+                <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+<table width="324" border="0" align="center" cellpadding="0" cellspacing="0" class="inner_content">
+  <tr>
+    <td colspan="2"><b></b></td>
+  </tr>
+  <tr>
+    <td width="99%" height="20"><font face="Tahoma" size="2"><font size="3"><strong><span dir="ltr" style="COLOR: #b89207; FONT-FAMILY: "><o:p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 10pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: justify"><strong><span lang="AR-SA" style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: &quot;Tahoma&quot;,&quot;sans-serif&quot;">ان طبيعة التنسيق بين الحكومة والمجلس الوطني الاتحادي</span></strong><span dir="ltr"><span></span><strong><span lang="AR-SA" dir="ltr" style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: &quot;Tahoma&quot;,&quot;sans-serif&quot;"><span dir="ltr"></span> </span></strong><strong><span lang="AR-SA" style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: &quot;Tahoma&quot;,&quot;sans-serif&quot;">تحتوي على العديد من التفاصيل تنصب حول قضايا المتابعة والتنسيق والتواصل وتوجيه</span></strong><span dir="ltr"><span></span><strong><span lang="AR-SA" dir="ltr" style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: &quot;Tahoma&quot;,&quot;sans-serif&quot;"><span dir="ltr"></span> </span></strong><strong><span lang="AR-SA" style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: &quot;Tahoma&quot;,&quot;sans-serif&quot;">الجهود البرلمانية لما فيه مصلحة الوطن والمواطن</span></strong><span dir="ltr"><span></span><strong><span lang="AR-SA" dir="ltr" style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: &quot;Tahoma&quot;,&quot;sans-serif&quot;"><span dir="ltr"></span> </span></strong><strong><span dir="ltr" style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: &quot;Tahoma&quot;,&quot;sans-serif&quot;">.<u2:p></u2:p></span></strong><strong><span dir="ltr" style="FONT-SIZE: 10pt; LINE-HEIGHT: 150%; FONT-FAMILY: &quot;Tahoma&quot;,&quot;sans-serif&quot;"><u1:p></u1:p></span><o:p></o:p></strong></span></span></span></p>
+<span></span></o:p></span></strong></font></font></td>
+    <!--<td width="1%" rowspan="2" valign="top"><div align="center" style="width:120px"></div></td>-->
+  </tr>
+  <tr>
+    <td height="20"><a href="?lang=ar&m=options&act=content_detail&content_id=519">إقرأ المزيد</a></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    <div style="height:5px;" >
+    </div>    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <div style="height:5px;"align="Left"><a href="?lang=ar&m=options&act=content&cat=62&page=الحكومة في جلسات المجلس الوطني الاتحادي" >المزيــــــد</a></div>
+ </td>
+  </tr>
+</table>
+
+                
+                </div></div>
+          
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">
+          
+                <div  align="center"  class="div_stylearabic" >
+                <div class="div_headarabic" > أخبار الوزارة</div>
+                <div class="div_content">
+                <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+<table width="324" border="0" align="center" cellpadding="0" cellspacing="0" class="inner_content">
+  <tr>
+    <td colspan="2"><b></b></td>
+  </tr>
+  <!--<tr>
+  <td><b> في اطار تبادل التجارب والاطلاع على افضل الممارسات  وفد مكتب وزير الدولة لشؤون مجلس الامة بدولة الكويت الشقيقة يطلع على تجربة الامارات في تنظيم العلاقة بين الحكومة �</b></td>
+  </tr>
+  <tr>
+  <td><b>2012-04-22</b></td>
+  </tr>-->
+  <tr>
+    <td width="99%" height="20">دبي ، 22 ابريل 2012م : اطلع وفد مكتب وزير الدولة لشؤون مجلس الامة في دولة الكويت الشقيقة على تجربة الامارات العربية المتحدة في مجال التعاون والتنسيق بين الحكومة والبرلمان ، وذلك خلال زيارته لوزارة الدولة لشؤون المجلس الوطني الاتحادي .</td>
+    <td width="1%" rowspan="2" valign="top"><div style="height:15px"></div><div align="center" style="width:120px"><img src="images/content/WedApr2595556GST2012file_thumb.JPG" hspace="5" width="112" height="74" /></div></td>
+  </tr>
+  <tr>
+    <td height="20"><a href="?lang=ar&m=options&act=content_detail&content_id=622">إقرأ المزيد</a></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    <div style="height:5px;" >
+    </div>    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><b></b></td>
+  </tr>
+  <!--<tr>
+  <td><b>وزارة الدولة لشؤون المجلس الوطني الاتحادي محاضرة حول المشاركة السياسية</b></td>
+  </tr>
+  <tr>
+  <td><b>2012-04-02</b></td>
+  </tr>-->
+  <tr>
+    <td width="99%" height="20">أبوظبي ، 02 أبريل 2012م : عقدت وزارة الدولة لشؤون المجلس الوطني الاتحادي لقاءً اجتماعياً لجميع موظفيها وذلك في رحلة ترفيهية على ضفاف شواطئ العاصمة أبوظبي على متن قارب شجاع .    
+</td>
+    <td width="1%" rowspan="2" valign="top"><div style="height:15px"></div><div align="center" style="width:120px"><img src="images/content/TueApr395157GST2012file_thumb.JPG" hspace="5" width="112" height="74" /></div></td>
+  </tr>
+  <tr>
+    <td height="20"><a href="?lang=ar&m=options&act=content_detail&content_id=620">إقرأ المزيد</a></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    <div style="height:5px;" >
+    </div>    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <div style="height:5px;"align="Left"><a href="?lang=ar&m=options&act=content&cat=17&page=أخبار الوزارة" >المزيد من الأخبار</a></div>
+ </td>
+  </tr>
+</table>
+
+                
+                </div></div>
+          
+          </td>
+        </tr>
+        
+        
+        
+        
+        		<tr>
+          <td>
+          <div align="center"><a href="http://www.mygov.ae/" target="_blank"><img src="images/mygov.gif" width="356" height="157" border="0" /></a></div>
+          </td>
+        </tr>
+		        
+        
+        
+        
+        <!--<tr>
+          <td>
+          
+          
+          
+          <div  align="center"  class="div_stylearabic" >
+              <div class="div_headarabic" >
+			  الأحداث الماضية</div>
+               <div class="div_content">
+                <div class="inner_content">
+  
+   <b><font size="2">ورشة :</b> الورشة الخامسة حول تغطية الصحافة المحلية لانتخابات المجلس الوطني الاتحادي</b><br /><br />
+   <b><font size="2">تنظمها :</b> وزاة الدولة لشؤون المجلس الوطني الاتحادي بالتعاون مع مركز التعليم المستمر في جامعة الشارقة</b><br /><br />
+   <b><font size="2">المكان : </b> جامعة الشارقة</b><br />
+   <a href="?lang=ar&m=options&act=events_details&page=الفعاليات&event_id=16">إقرأ المزيد</a>
+     
+
+
+</div>
+<div style="height:5px;"align="Left"><a href="?lang=ar&m=options&act=events_list&page=الفعاليات&category=19">المزيد من الفعاليات</a></div>
+ 
+               </div>
+          </div>
+          
+          
+          </td>
+        </tr>-->
+        
+      </table></td>
+      <td valign="top"><table class="arial twelve" width="347" border="0" cellspacing="2" cellpadding="2">
+      <!--
+        <tr>
+          <td height="30" colspan="3"><div  align="center"  class="div_stylearabic" >
+              <div class="div_ministerarabic div_headarabic " > مجلس الوزير<br />
+              </div>
+            <table>
+                <tr>
+                  <td width="117" height="25"><div class="twelve" align="center"><strong>
+                  <a  href="?lang=ar&m=options&act=index&page=السيرة الذاتية&category=39" > السيرة الذاتية</a></strong></div></td>
+                  <td width="118"><div class="twelve" align="center"><strong>
+                  
+                  <a href="?lang=ar&m=options&act=speeches&cat=36&page=خطابات"  class="" > خطابات</a>
+                  
+                  
+                  </strong></div></td>
+                  <td width="112"><div class="twelve" align="center"><strong><a href="?lang=ar&m=options&act=ask_the_minister&page=اسأل الوزير" class="">اسأل الوزير</a></strong></div></td>
+                </tr>
+              </table>
+          </div></td>
+        </tr>
+      -->
+            <tr>
+          <td><a href="?lang=ar&amp;m=options&amp;act=banner"><img src="images/bannerNew.jpg" width="355" height="145" border="0" /></a></td>
+      </tr>
+          				<tr>
+          <td><div  align="center"  class="div_stylearabic" >
+              <div class="div_headarabic" > الحكومة في جلسات المجلس الوطني الاتحادي</div>
+              <div class="div_content">
+                <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+<table width="324" border="0" align="center" cellpadding="0" cellspacing="0" class="inner_content">
+  <tr>
+    <td colspan="2"><b></b></td>
+  </tr>
+  <tr>
+    <td width="99%" height="20">   يناقش المجلس الوطني الاتحادي في جلسته التاسعة  من دور الانعقاد العادي الأول من الفصل التشريعي الخامس عشر والتي ستعقد يوم الثلاثاء الموافق 10-04- 2012 م موضوع " المشكلات البيئية في الدولة "  وذلك بحضور معالي / د. راشد أحمد بن فهد – وزير البيئة والمياه .</td>
+    <!--<td width="1%" rowspan="2" valign="top"><div align="center" style="width:120px"><img src="images/content/TueApr395157GST2012file_thumb.JPG" hspace="5" width="112" height="74" /></div></td>-->
+  </tr>
+  <tr>
+    <td height="20"><a href="?lang=ar&m=options&act=content_detail&content_id=621">إقرأ المزيد</a></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    <div style="height:5px;" >
+    </div>    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <div style="height:5px;"align="Left"><a href="?lang=ar&m=options&act=content&cat=56&page=الحكومة في جلسات المجلس الوطني الاتحادي" >المزيــــــد</a></div>
+ </td>
+  </tr>
+</table>
+
+              </div>
+          </div></td>
+        </tr>
+				
+        <tr>
+          <td><div  align="center"  class="div_stylearabic" >
+              <div class="div_headarabic" > قول وفعل</div>
+              <div class="div_content">
+                <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+<table width="324" border="0" align="center" cellpadding="0" cellspacing="0" class="inner_content">
+  <tr>
+    <td colspan="2"><b></b></td>
+  </tr>
+  <tr>
+    <td width="99%" height="20"><p align="right"><span style="FONT-WEIGHT: bold; COLOR: rgb(184,146,7); FONT-FAMILY: Tahoma"></span></p>
+<span style="FONT-WEIGHT: bold; COLOR: rgb(184,146,7); FONT-FAMILY: Tahoma">
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; unicode-bidi: embed; TEXT-ALIGN: justify"><font face="Times New Roman"><strong><span lang="AR-SA" style="FONT-SIZE: 11pt; COLOR: #b89207"></span></strong></font></p>
+<p class="MsoNormal" dir="rtl" style="MARGIN: 0cm 0cm 0pt; DIRECTION: rtl; LINE-HEIGHT: 150%; unicode-bidi: embed; TEXT-ALIGN: justify"><strong><span lang="AR-SA" style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: ">أطلقت</span></strong><span dir="ltr"></span><strong><span lang="AR-SA" dir="ltr" style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: "><span dir="ltr"></span> </span></strong><strong><span lang="AR-SA" style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: ">الوزارة برنامج </span></strong><strong><span lang="AR-AE" style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: ">( قول وفعل )</span></strong><strong><span lang="AR-SA" style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: ">سعياً وراء تعزيز مستويات <u2:p></u2:p>الأداء وتوظيف</span></strong><span dir="ltr"></span><strong><span lang="AR-SA" dir="ltr" style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: "><span dir="ltr"></span> </span></strong><strong><span lang="AR-SA" style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: ">معايير برنامج الشيخ <u1:p></u1:p><u2:p></u2:p>خليفة للتميز الحكومي لزيادة الفاعلية</span></strong><strong><span dir="ltr" style="FONT-SIZE: 10pt; COLOR: black; LINE-HEIGHT: 150%; FONT-FAMILY: "><o:p></o:p></span></strong></p>
+</span></td>
+    <td width="1%" rowspan="2" valign="top"><div align="center" style="width:120px"><img src="images/content/SunJun14100626GST2009file_thumb.jpg" hspace="5" width="112" height="74" /></div></td>
+  </tr>
+  <tr>
+    <td height="20"><a href="?lang=ar&m=options&act=content_detail&content_id=286">إقرأ المزيد</a></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    <div style="height:5px;" >
+    </div>    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+       </td>
+  </tr>
+</table>
+
+              </div>
+          </div></td>
+        </tr>
+        <tr>
+          <td><div  align="center"  class="div_stylearabic" >
+              <div class="div_headarabic" > استطلاع الرأى</div>
+                <div class="div_content">
+                  ﻿<table width="200" border="0" cellspacing="0" cellpadding="2" bgcolor="#ffffff">
+  <tr>
+    <td align="center">
+     <style type="text/css">
+       <!--
+        .input { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9pt}
+       -->
+      </style> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="3" bgcolor="#ffffff">
+        <tr align="center"> 
+          <td colspan="2" height="40"><font face="Verdana, Arial, Helvetica, sans-serif" color="#000000" size="1"><b>&#1605;&#1575; &#1607;&#1608; &#1585;&#1575;&#1610;&#1603; &#1601;&#1610; &#1575;&#1604;&#1605;&#1608;&#1602;&#1593; &#1575;&#1604;&#1575;&#1604;&#1603;&#1578;&#1585;&#1608;&#1606;&#1610; &#1575;&#1604;&#1580;&#1583;&#1610;&#1583; &#1604;&#1608;&#1586;&#1575;&#1585;&#1577; &#1575;&#1604;&#1583;&#1608;&#1604;&#1577; &#1604;&#1588;&#1572;&#1608;&#1606; &#1575;&#1604;&#1605;&#1580;&#1604;&#1587; &#1575;&#1604;&#1608;&#1591;&#1606;&#1610;</b></font></td>
+        </tr>
+        <tr align="center"> 
+          <td colspan="2"> 
+            <form method="post" action="index.php">
+              <table width="100%" border="0" cellspacing="0" cellpadding="1"> <tr> 
+   <td width="11%" align="center"><input type="radio" name="option_id" value="1"></td>
+   <td width="89%"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000">&#1605;&#1602;&#1576;&#1608;&#1604;</font></td>
+ </tr> <tr> 
+   <td width="11%" align="center"><input type="radio" name="option_id" value="2"></td>
+   <td width="89%"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000">&#1580;&#1610;&#1583;</font></td>
+ </tr> <tr> 
+   <td width="11%" align="center"><input type="radio" name="option_id" value="3"></td>
+   <td width="89%"><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#000000">&#1605;&#1605;&#1578;&#1575;&#1586;</font></td>
+ </tr>                <tr align="center" valign="bottom"> 
+                  <td colspan="2"> 
+                    <input type="submit" value="vote" class="input" name="submit">
+                    <input type="hidden" name="action" value="vote">
+                    <input type="hidden" name="poll_ident" value="5">
+                  </td>
+                </tr>
+                <tr valign="bottom"> 
+                  <td colspan="2" height="30" align="center"><font face="Verdana, Arial, Helvetica, sans-serif" color="#000000" size="1">[<a href="index.php?action=results&amp;poll_ident=5">View results</a>]</font></td>
+                </tr>
+              </table>
+            </form>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+                </div>
+               
+          </div></td>
+        </tr>
+        <tr><td>
+        
+        <div align="center"><a href="http://www.uaenec.ae/"><img src="images/banneruaenec.gif" width="356" height="80" border="0" /></a></div>
+        
+        </td></tr>
+        
+        
+                
+        
+      </table></td>
+    </tr>
+  </table>
+  </td>
+            </tr>
+          </table>
+          </div></td>
+        </tr>
+      <tr>
+        <td valign="top">				</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+    
+    <!-- Hide below links 11th feb 2009
+      <tr>
+        <td colspan="2">
+        <div align="center" class="style4"> 
+        
+        
+        <a href="?lang=ar&m=options&act=content_detail&content_id=112" >من نحن</a> l 
+        
+        <a href="http://www.almajles.gov.ae/English/Subjects_Details.asp?Subject_ID=5E&amp;Section_ID=5E" target="_blank">المجلس الوطني الاتحادي</a> l 
+        
+        <a href="http://mail.mfnca.gov.ae:8100/" target="_blank" >البريد الإلكتروني</a> l 
+        
+        <a href="?lang=ar&m=options&act=index&page=رؤيتنا&category=4">رؤيتنا</a> l 
+        
+        <a href="?lang=ar&m=options&act=index&page=رسالتنا&category=7">رسالتنا</a> l 
+        
+         <a href="?lang=ar&m=options&amp;act=index&amp;page=قيمنا&amp;category=41">قيمنا</a>  l  
+         
+               
+        <a href="?lang=ar&m=options&act=index&page=أهدافنا&category=9">أهدافنا</a> l 
+        
+        <a href="?lang=ar&m=options&act=index&page=فرص التدريب&category=23">فرص التدريب</a> l 
+        
+        <a href="?lang=ar&m=options&act=gallery&page=معرض الصور">معرض الصور </a>
+        l 
+         
+       <a href="?lang=ar&m=options&amp;act=index&amp;page=خريطة الموقع&amp;category=47">خريطة الموقع</a></a>  l 
+         
+         <a href="?lang=ar&m=options&amp;act=index&amp;page=اتصل بنا&amp;category=24">اتصل بنا</a> l
+         
+         <a href="?lang=ar&m=options&amp;act=index&amp;page=نهج الخصوصية&amp;category=">نهج الخصوصية</a></div>
+         
+        </td>
+      </tr>
+      
+      <tr>
+        <td width="100%"><div align="center"><span class="style4">
+<a href="index.php">الرئيسة</a> l 
+<a  href="?lang=ar&m=options&act=index&page=المهام&category=20">المهام</a> l
+<a href="?lang=ar&m=options&act=content&cat=17&page=أخبار الوزارة" > أخبار الوزارة</a> l
+<a href="?lang=ar&m=options&act=ministry_inthe_media&cat=33&page=أخبارنا في الاعلام"> أخبارنا في الاعلام</a> l 
+<a href="?lang=ar&m=options&act=events&page=الفعاليات&category=19">الفعاليات</a> l 
+<a href="?lang=ar&m=options&act=publications_list&page=إصدارات">إصدارات</a> l 
+<a  href="http://www.uaeinteract.com/uaeint_misc/pdf_2008/index.asp" target="_blank">التقرير السنوي للإمارات العربية المتحدة</a> l 
+<a href="?lang=ar&m=options&act=latest_news&page=آخر الأخبار&category=25">آخر الأخبار</a> l
+<a href="?lang=ar&m=options&act=index&page=الشركاء&category=28">الشركاء</a> l
+<a href="?lang=ar&m=options&act=index&page=برنامج التدريب الداخلي&category=29"> برنامج التدريب الداخلي</a> l 
+<a href="?lang=ar&m=options&act=web_links&page=مواقع مفيدة">مواقع مفيدة</a> </span></div></td>
+      </tr>
+    -->  
+    	<tr><td>
+        
+        <table width="950" border="0" cellspacing="0" cellpadding="0">
+         <tr><td colspan="4"><div style="height:5px;" align="center">
+		 
+		 </div></td></tr>
+            <tr>
+              <td width="237"><div class="uaeMainbanner uaeGoldColor"></div></td>
+              <td width="237"><div class="uaeMainbanner uaeRedColor"></div></td>
+              <td width="237"><div class="uaeMainbanner uaeGreenColor"></div></td>
+              <td width="239"><div class="uaeMainbanner uaeBlackColor"></div></td>
+            </tr>
+          </table></td></tr>
+    
+      <tr>
+        <td colspan="4">
+		
+		<div align="center" class="createdate" >
+		
+		  		 <a href="index.php?lang=ar">لرئيسة</a>&nbsp;|&nbsp;<a href="?lang=ar&m=options&act=content_detail&content_id=112">من نحن
+		 
+		 
+		 </a>&nbsp;|&nbsp;<a href="?lang=ar&m=options&act=enquiry&page=الاقتراحات والشكاوي">لاقتراحات والشكاوي</a>&nbsp;|&nbsp;<a href="?lang=ar&m=options&act=content_detail&content_id=439">لدستور.</a>&nbsp;|&nbsp;
+		 <a href="?lang=ar&m=sitemap&amp;act=index">خريطة الموقع</a>&nbsp;|&nbsp;<a href="?lang=ar&m=options&act=index&page=اتصل%20بنا&category=24">اتصل بنا</a>&nbsp;|&nbsp;<a href="?lang=ar&m=options&act=index&page=رؤيتنا&category=4">رؤيتنا</a>&nbsp;|&nbsp;<a href="?lang=ar&m=options&act=index&page=رسالتنا&category=7">رسالتنا</a>&nbsp;|&nbsp;<a href="?lang=ar&m=options&act=index&page=قيمنا&category=41">قيمنا</a>
+		&nbsp;|&nbsp; <a href="?lang=ar&m=options&act=index&page=أهدافنا&category=9">أهدافنا</a>
+		 &nbsp;|&nbsp;<a href="?lang=ar&m=options&act=index&page=المهام&category=20">المهام</a>
+		 &nbsp;|&nbsp;<a href="?lang=ar&m=options&act=org_chart_ar&page=الهيكل%20التنظيمي&category=45">الهيكل التنظيمي</a>
+		 &nbsp;|&nbsp;<a href="?lang=ar&m=options&act=meet_the_teams&cat=52&page=فريق%20العمل">فريق العمل</a>
+		 &nbsp;|&nbsp;<a href="?lang=ar&m=options&act=content&cat=17&page=أخبار%20الوزارة">أخبار الوزارة</a>
+		 &nbsp;|&nbsp;<a href="?lang=ar&m=options&act=ministry_inthe_media&cat=33&page=اخبارنا%20في%20الإعلام">اخبارنا في الإعلام</a>
+		 &nbsp;|&nbsp;<a href="?lang=ar&m=options&act=gallery&page=معرض%20الصور">معرض الصور</a>
+		 &nbsp;|&nbsp;<a href="?lang=ar&m=options&act=speeches&cat=36&page=خطابات">خطابات</a>
+		 &nbsp;|&nbsp;<a href="?lang=ar&m=options&act=events_list&page=الفعاليات&category=19">الفعاليات</a>
+		 &nbsp;|&nbsp;<a href="?lang=ar&m=options&act=publications_list&page=إصدارات">إصدارات</a>
+		 &nbsp;|&nbsp;<a href="?lang=ar&m=options&act=index&page=برنامج%20التدريب%20الداخلي&category=29">برنامج التدريب الداخلي</a>
+		 &nbsp;|&nbsp;<a href="?lang=ar&m=options&act=careers&page=فرص%20وظيفية&category=15">فرص وظيفية</a>
+		 &nbsp;|&nbsp;<a href="?lang=ar&m=options&act=index&page=اللجان الوطنية&category=43">الوطنيةاللجان </a>
+		 &nbsp;|&nbsp;<a href="?lang=ar&m=options&act=index&page=انتخابات المجلس الوطني الاتحادي&category=37">انتخابات المجلس الوطني الاتحادي</a>
+		 &nbsp;|&nbsp;<a href="?lang=ar&m=options&act=web_links&page=مواقع مفيدة">مواقع مفيد</a>
+		 &nbsp;|&nbsp;<a href="http://www.uaeinteract.com/uaeint_misc/pdf_2008/index.asp" target="_blank">التقرير السنوي للإماراتالعربية المتحد</a>
+		 &nbsp;|&nbsp;<a href="?m=options&lang=ar&act=upr_report&content_id=315">الاستعراض الدورى الشامل لتقرير الامارات</a>
+		 &nbsp;|&nbsp;<a href="http://archiving.mfnca.gov.ae/SAPERIONWEB/SACLIENT.HTM" target="_blank" >أرشيف</a>
+		 &nbsp;|&nbsp;<a href="?lang=ar&m=options&act=index&page=المجلس الوطني الاتحادي&category=49">الاتحادي الوطني الاتحاد</a>
+		 <br /><br /><a href="?lang=ar&amp;m=options&amp;act=privacya" style="color:#999999">سياسة الخصوصية</a>
+		 &nbsp;|&nbsp;<a href="?lang=ar&amp;m=options&amp;act=term_conditiona" style="color:#999999">شروط وأحكام</a>
+		          <br />
+		حقوق النسخ © 2010 وزارة الدولة لشؤون المجلس الوطني الاتحادي ، جميع الحقوق محفوظة.<br />
+        Last Update : 2012-04-25&nbsp;&nbsp;&nbsp;10:45:45        
+        
+        </div></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10139984-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
+
+<div align="justify" class="divstylesubmenu2arabic" id="submenu2">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<table width="224" border="0" cellpadding="0" cellspacing="0">
+
+
+
+              
+                             <!--VISION-->
+              <tr align="left">
+                <td><a onMouseOver="setVisibility('submenu2', 'inline');" onMouseOut="setVisibility('submenu2','none');" href="?lang=ar&m=options&act=index&page=رؤيتنا&category=4"  class="mainlevelarabic" >رؤيتنا</a></td>
+              </tr>
+              <!--Vision-->             
+              <!--MESSAGE-->
+              <tr align="left">
+                <td><a onMouseOver="setVisibility('submenu2', 'inline');" onMouseOut="setVisibility('submenu2','none');" href="?lang=ar&m=options&act=index&page=رسالتنا&category=7"  class="mainlevelarabic" >رسالتنا</a></td>
+              </tr>
+              <!--MESSAGE-->    
+              
+              
+              <!--our values-->     
+              <tr align="left">
+                <td><a onMouseOver="setVisibility('submenu2', 'inline');" onMouseOut="setVisibility('submenu2','none');" class="mainlevelarabic" href="?lang=ar&m=options&amp;act=index&amp;page=قيمنا&amp;category=41">قيمنا</a> </td>
+              </tr>
+              <!--our values-->   
+              
+              
+              <!--objectives-->
+              <tr align="left">
+                <td><a onMouseOver="setVisibility('submenu2', 'inline');" onMouseOut="setVisibility('submenu2','none');" href="?lang=ar&m=options&act=index&page=أهدافنا&category=9"  class="mainlevelarabic" >أهدافنا</a></td>
+              </tr>
+              <!--objectives-->    
+              
+              <!--task-->
+              <tr align="left">
+                <td><a  onMouseOver="setVisibility('submenu2', 'inline');" onMouseOut="setVisibility('submenu2','none');" href="?lang=ar&m=options&act=index&page=المهام&category=20"  class="mainlevelarabic" >المهام</a></td>
+              </tr>
+              <!--task-->            
+              
+              <!--organizational_chart-->      
+              <tr align="left">
+                <td><a  onMouseOver="setVisibility('submenu2', 'inline');" onMouseOut="setVisibility('submenu2','none');" class="mainlevelarabic" href="?lang=ar&m=options&amp;act=org_chart_ar&amp;page=الهيكل التنظيمي&amp;category=45">الهيكل التنظيمي</a></td>
+              </tr>
+              <!--organizational_chart-->          
+              
+              <!--meet_the_team-->             
+              <tr align="left">
+                <td><a onMouseOver="setVisibility('submenu2', 'inline');" onMouseOut="setVisibility('submenu2','none');" href="?lang=ar&m=options&act=meet_the_teams&cat=52&page=فريق العمل" class="mainlevelarabic" >فريق العمل</a></td>
+              </tr>        
+              <!--meet_the_team-->  
+          
+          
+</table>
+</div>
+
+<div align="justify" class="divstylesubmenuarabic" id="submenu">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<table width="224" border="0" cellpadding="0" cellspacing="0">
+
+
+          <!--Ministry News-->
+          <tr align="left">
+            <td><a onMouseOver="setVisibility('submenu', 'inline');" onMouseOut="setVisibility('submenu','none');" href="?lang=ar&m=options&act=content&cat=17&page=أخبار الوزارة"  class="mainlevelarabic" >أخبار الوزارة</a></td>
+          </tr>
+          <!--Ministry News-->    
+
+
+            <!--Ministry In The Media-->
+          <tr align="left">
+            <td><a onMouseOver="setVisibility('submenu', 'inline');" onMouseOut="setVisibility('submenu','none');" href="?lang=ar&m=options&act=ministry_inthe_media&cat=33&page=اخبارنا في الإعلام"  class="mainlevelarabic" >اخبارنا في الإعلام</a></td>
+          </tr>
+          <!--Ministry In The Media--> 
+          
+
+          <!--photo_gallery-->           
+            <tr align="left">
+            <td><a onMouseOver="setVisibility('submenu', 'inline');" onMouseOut="setVisibility('submenu','none');" href="?lang=ar&m=options&act=gallery&page=معرض الصور" class="mainlevelarabic" >معرض الصور</a></td>
+          </tr>        
+          <!--photo_gallery  -->
+          
+           <!--photo_gallery-->           
+            <tr align="left">
+            <td><a onMouseOver="setVisibility('submenu', 'inline');" onMouseOut="setVisibility('submenu','none');" href="?lang=ar&m=options&act=speeches&cat=36&page=خطابات"   class="mainlevelarabic" >خطابات</a></td>
+          </tr>        
+          <!--photo_gallery  -->
+          
+          
+</table>
+</div>
+

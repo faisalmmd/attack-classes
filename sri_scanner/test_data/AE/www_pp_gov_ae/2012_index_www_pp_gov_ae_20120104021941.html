@@ -1,0 +1,28 @@
+
+
+<form name="f_home_page" method="post" action="http://www.pp.gov.ae/portal/pls/portal/PORTAL.wwctx_app_language.set_language?p_http_language=ar-eg&p_nls_language=ar&p_nls_territory=EGYPT&p_requested_url=http://www.pp.gov.ae/pls/portal">
+</form>
+
+
+<script language="javascript">
+
+var fullURL="http://www.pp.gov.ae/portal/pls/portal/PORTAL.wwctx_app_language.set_language?p_http_language=ar-eg&p_nls_language=ar&p_nls_territory=EGYPT&p_requested_url=http://www.pp.gov.ae/pls/portal"
+
+if(navigator.userAgent.indexOf("Firefox") != -1)
+{
+   window.location = fullURL;
+}
+else if(navigator.userAgent.indexOf("MSIE") != -1)
+{
+  document.f_home_page.submit();
+}
+else if(navigator.userAgent.indexOf("Netscape") != -1)
+{
+   window.location = fullURL;
+}
+else
+{
+  document.f_home_page.submit();
+}
+
+</script>

@@ -1,0 +1,389 @@
+<HTML>
+
+<HEAD>
+
+<SCRIPT LANGUAGE = "JavaScript1.2">
+
+var IE = 0, NN = 0
+var s = navigator.userAgent
+var user = ''
+var nouserpass=false
+
+if (s == '')
+  IE = 3
+else if (s.indexOf('MSIE') != -1)
+  IE = parseFloat(s.substring(s.indexOf('MSIE') + 5, s.length))
+else if (s.indexOf('Mozilla') != -1)
+  NN = parseFloat(s.substring(s.indexOf('Mozilla') + 8, s.length))
+
+if (window.location.search) {
+  if (window.location.search.substring(0,12) == '?nouserpass=') {
+    nouserpass = true;
+    user = window.location.search.substring(12, window.location.search.length);
+  }
+  else
+    user = window.location.search.substring(6, window.location.search.length);
+}
+
+function login() {
+var form
+  if (document.forms[0].elements[0].value == '' || document.forms[1].elements[0].value == '') {
+    nouserpass = true;
+    user = document.forms[0].elements[0].value;
+    document.location = "http://"+document.domain+'/?nouserpass='+user;
+    return;
+  }
+form = document.forms[2]
+form.target = ''
+form.user.value = document.forms[0].elements[0].value
+  form.password.value = document.forms[1].elements[0].value
+  document.forms[0].elements[0].value = ''
+  document.forms[1].elements[0].value = ''
+  form.submit()
+}
+
+function post() {
+  login()
+  return false
+}
+
+// which keeps track of the currently selected tab
+var which="none";
+
+// Function to 'turn-off' all imx.
+        function imageoff() {
+                        //document.documentation.src = documentationoff.src;
+                        //document.support.src = supportoff.src;
+                          document.bannerlinkone.src = bannerlinkoneoff.src;
+ 
+        }
+
+// Function to 'turn-on' the target image.
+        function imageon(imgName) {
+                        document[imgName].src = eval(imgName + "on.src");
+        }
+
+// Function to 'load the content page and swap tab imx'.
+        function loadandswap(imgName, contentName) {
+                imageoff();
+                imageon(imgName);
+        which=imgName;
+                }
+                
+// Function to handle mouse overs
+     function over(imgName) {
+        if (which!=imgName) 
+          document[imgName].src= eval(imgName + "over.src");
+          
+        else return false;
+        }
+
+// Function to handle mouse outs
+     function out(imgName) {
+        if (which!=imgName) 
+          document[imgName].src= eval(imgName + "off.src");
+          
+        else return false;
+        }
+
+</SCRIPT>
+
+<TITLE>UAE University WebMail</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; ">
+<LINK REL="stylesheet" HREF="master-style.css" TYPE="text/css">
+<META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+<META NAME="ProgId" CONTENT="FrontPage.Editor.Document">
+</HEAD>
+
+<BODY TOPMARGIN="0" LEFTMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0"
+BGCOLOR="#ffffff" LINK="#0066cc" VLINK="#346da2">
+
+<TABLE CELLPADDING="0" CELLSPACING="0" WIDTH="100%" BORDER="0">
+  <TBODY>
+    <TR>
+      <TD VALIGN="top" HEIGHT="42" BACKGROUND="imx/tile.gif" COLSPAN="3"><A
+        HREF="http://www.uaeu.ac.ae"><IMG SRC="imx/t_uaeu1.gif" VSPACE="0"
+        HSPACE="0" BORDER="0" ALT="UAEU" WIDTH="144" HEIGHT="42"></A><IMG
+        SRC="imx/t_myuaeu.gif" HEIGHT="35" BORDER="0" ALT="My UAEU" WIDTH="76"><A
+        HREF="http://webmail.uaeu.ac.ae"><IMG SRC="imx/t_webmail_on.gif"
+        WIDTH="77" HEIGHT="35" BORDER="0"></A><A HREF="http://webcal.uaeu.ac.ae"><IMG
+        SRC="imx/t_calendar.gif" WIDTH="104" HEIGHT="35" BORDER="0"></A><A
+        HREF="http://marshal.uaeu.ac.ae:8080/nda/default/en/login.htm"><IMG
+        SRC="imx/t_account.gif" WIDTH="104" HEIGHT="35" BORDER="0"></A><A
+        HREF="http://www.uaeu.ac.ae"><IMG SRC="imx/t_uaeuhome.gif" WIDTH="104"
+        HEIGHT="35" BORDER="0"></A><IMG SRC="imx/t_fill.gif" WIDTH="4"
+        HEIGHT="35"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<TABLE WIDTH="100%" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+  <TBODY>
+    <TR BGCOLOR="#335600">
+      <TD><FONT FACE="Verdana,Arial,Helvetica" SIZE="2" COLOR="#FFFF00"><B>Welcome
+        to UAE University WebMail</B></FONT></TD>
+    </TR>
+    <TR>
+      <TD>
+        <TABLE WIDTH="610" BORDER="0">
+          <TBODY>
+            <TR>
+              <TD WIDTH="20"></TD>
+              <TD WIDTH="590">
+                <TABLE WIDTH="590" BORDER="0" CELLSPACING="0" CELLPADDING="1">
+                  <TBODY>
+                    <TR>
+                      <TD VALIGN="top" COLSPAN="3"><IMG SRC="imx/spacer.gif"
+                        WIDTH="10" HEIGHT="7"></TD>
+                      <TD><IMG SRC="imx/spacer.gif" WIDTH="10" HEIGHT="7"></TD>
+                      <TD><IMG SRC="imx/spacer.gif" WIDTH="10" HEIGHT="7"></TD>
+                    </TR>
+                    <TR>
+                      <TD VALIGN="top" NOWRAP="nowrap">
+                        <TABLE WIDTH="280" BORDER="0" CELLSPACING="0"
+                        CELLPADDING="1">
+                          <TBODY>
+                            <TR BGCOLOR="#bdd7ee">
+                              <TD HEIGHT="20" BGCOLOR="#FFFF99"><B><FONT
+                                FACE="Verdana,Arial,Helvetica" SIZE="2">&nbsp;UAEU
+                                members Sign in here:</FONT></B></TD>
+                              <TD HEIGHT="21" BGCOLOR="#FFFF99">&nbsp;</TD>
+                            </TR>
+                            <TR BGCOLOR="#bdd7ee">
+                              <TD ALIGN="center" COLSPAN="2">
+                                <TABLE WIDTH="278" BORDER="0" CELLSPACING="0"
+                                BGCOLOR="#ffffff" CELLPADDING="0">
+                                  <TBODY>
+                                    <TR>
+                                      <TD><FONT FACE="Verdana,Arial,Helvetica"
+                                        SIZE="2"><IMG SRC="imx/spacer.gif"
+                                        WIDTH="10" HEIGHT="2"></FONT></TD>
+                                      <TD COLSPAN="2"><FONT
+                                        FACE="Verdana,Arial,Helvetica" SIZE="2"><IMG
+                                        SRC="imx/spacer.gif" WIDTH="10"
+                                        HEIGHT="2"></FONT></TD>
+                                    </TR>
+                                    <TR>
+                                      <TD HEIGHT="44" COLSPAN="3"><IMG
+                                        SRC="imx/spacer.gif" WIDTH="1"
+                                        HEIGHT="14" ALT=" "></TD>
+                                    </TR>
+                                <SCRIPT>
+    if (user && !nouserpass) {
+        if (NN >= 3 && NN < 4)
+                alert('Invalid username or password')
+       else
+        document.write('<tr><td>&nbsp;</td><td>&nbsp;</td><td  bgcolor="FFFFFF">\n' +
+                '<font face="PrimaSans BT,Verdana,sans-serif" color="336FF" size="-1">' +
+                '<b>Invalid username or password</font></b><br></td><td>&nbsp;</td></tr>\n')
+        }
+      if (nouserpass) {
+        if (NN >= 3 && NN < 4)
+                alert('Blank username/password')
+        else
+                document.write('<tr><td>&nbsp;</td><td>&nbsp;</td><td  bgcolor="FFFFFF">\n' +
+                '<font face="PrimaSans BT,Verdana,sans-serif" color="336FF" size="-1">' +
+                '<b>Blank username/password</font></b><br></td><td>&nbsp;</td></tr>\n')
+        }  
+    </SCRIPT>
+                                    <TR>
+                                      <TD HEIGHT="44" NOWRAP="nowrap"><FONT
+                                        FACE="Verdana,Arial,Helvetica" SIZE="2"><SPAN>&nbsp;UAEU
+                                        E-mail address</SPAN>:</FONT></TD>
+                                      <form name="userform" onSubmit="return post()">
+                                      <TD HEIGHT="44"><FONT
+                                        FACE="Verdana,Arial,Helvetica" SIZE="2"><INPUT
+                                        TYPE="text" SIZE="14"></FONT></TD>
+                                      </form>
+                                      <TD HEIGHT="44"><FONT
+                                        FACE="Verdana,Arial,Helvetica" SIZE="2"><B>@uaeu.ac.ae</B></FONT></TD>
+                                    </TR>
+                                    <TR>
+                                      <TD HEIGHT="28" ALIGN="right"><FONT
+                                        FACE="Verdana,Arial,Helvetica" SIZE="2"><SPAN>Password:</SPAN></FONT></TD>
+                                      <form name="passwordform" onSubmit="return post()">
+                                      <TD HEIGHT="28"><FONT
+                                        FACE="Verdana,Arial,Helvetica" SIZE="2"><INPUT
+                                        TYPE="password" SIZE="14"
+                                        ONFOCUS="this.select()" VALUE></FONT></TD>
+                                      </form>
+                                      <TD HEIGHT="28">&nbsp;</TD>
+                                    </TR>
+                                    <TR>
+                                      <TD><FONT FACE="Verdana,Arial,Helvetica"
+                                        SIZE="2"><IMG SRC="imx/spacer.gif"
+                                        WIDTH="10" HEIGHT="7"></FONT></TD>
+                                      <TD COLSPAN="2"><FONT
+                                        FACE="Verdana,Arial,Helvetica" SIZE="2"><IMG
+                                        SRC="imx/spacer.gif" WIDTH="10"
+                                        HEIGHT="7"></FONT></TD>
+                                    </TR>
+                                    <TR>
+                                      <TD HEIGHT="42">&nbsp;</TD>
+                                      <TD COLSPAN="2" HEIGHT="42">
+                                        <TABLE WIDTH="100%" BORDER="0"
+                                        CELLSPACING="0" CELLPADDING="0">
+                                          <TBODY>
+                                            <TR>
+                                              <TD WIDTH="35%" NOWRAP="nowrap"
+                                              ALIGN="left" VALIGN="top"><FONT
+                                                FACE="Verdana,Arial,Helvetica"
+                                                SIZE="2"><A
+                                                HREF="javascript:post()"
+                                                TARGET="_top"><IMG
+                                                SRC="imx/b_login.gif" WIDTH="47"
+                                                HEIGHT="21" BORDER="0"
+                                                ALT="Log in"></A></FONT></TD>
+                                              <TD WIDTH="65%"></TD>
+                                            </TR>
+                                          </TBODY>
+                                        </TABLE>
+                                      </TD>
+                                    </TR>
+                                    <TR>
+                                      <TD HEIGHT="42">&nbsp;</TD>
+                                      <TD COLSPAN="2" HEIGHT="42">&nbsp;</TD>
+                                    </TR>
+                                    <TR>
+                                      <TD HEIGHT="42">
+                                        <P ALIGN="right"><IMG BORDER="0"
+                                        SRC="imx/icon_tour.gif"
+                                        WIDTH="37" HEIGHT="37"></TD>
+                                      <TD COLSPAN="2" HEIGHT="42"><FONT
+                                        FACE="Verdana,Arial,Helvetica" SIZE="2"><B>New
+                                        to UAEU WebMail<BR>
+                                        <A
+                                        HREF="http://webmail.uaeu.ac.ae/tour/index.html"
+                                        TARGET="_blank">Take our Guided Tour</A></B></FONT></TD>
+                                    </TR>
+                                  </TBODY>
+                                </TABLE>
+                              </TD>
+                            </TR>
+                          </TBODY>
+                        </TABLE>
+                      </TD>
+                      <TD VALIGN="top"><FONT FACE="Verdana,Arial,Helvetica"
+                        SIZE="2"></FONT></TD>
+                      <TD VALIGN="top">
+                        <TABLE WIDTH="345" BORDER="0" CELLSPACING="0"
+                        CELLPADDING="0">
+                          <TBODY>
+                            <TR>
+                              <TD BGCOLOR="#FFFF99" HEIGHT="24"><FONT
+                                FACE="Verdana,Arial,Helvetica" SIZE="2"><B>UAEU
+                                WebMail User Information</B></FONT></TD>
+                            </TR>
+                            <TR>
+                              <TD HEIGHT="24"><SPAN><FONT
+                                FACE="Verdana,Arial,Helvetica" SIZE="2"><B><FONT
+                                COLOR="#0066CC">Communicate.</FONT></B><BR>
+                                Send and receive e-mail from anywhere online.</FONT></SPAN></TD>
+                            </TR>
+                            <TR>
+                              <TD><SPAN><FONT FACE="Verdana,Arial,Helvetica"
+                                SIZE="2"><B><FONT COLOR="#0066CC">Personal
+                                Address Book.</FONT></B><BR>
+                                Store and maintain information about individuals
+                                and create your personal mailing lists.</FONT></SPAN></TD>
+                            </TR>
+                            <TR>
+                              <TD><SPAN><FONT FACE="Verdana,Arial,Helvetica"
+                                SIZE="2"><B><FONT COLOR="#0066CC">Vacation
+                                Message.</FONT></B><BR>
+                                Setup automatic replies when you have no access
+                                to e-mail.</FONT></SPAN></TD>
+                            </TR>
+                            <TR>
+                              <TD HEIGHT="24"><SPAN><FONT
+                                FACE="Verdana,Arial,Helvetica" SIZE="2"><B><FONT
+                                COLOR="#0066CC">E-mail Filters.</FONT></B><BR>
+                                Setup your personal e-mail filters to accept or
+                                reject unwanted e-mail.</FONT></SPAN></TD>
+                            </TR>
+                            <TR>
+                              <TD><SPAN><FONT FACE="Verdana,Arial,Helvetica"
+                                SIZE="2"><B><FONT COLOR="#0066CC">Stylize.</FONT></B><BR>
+                                Customize outgoing mail with your personal
+                                signature and look.</FONT></SPAN></TD>
+                            </TR>
+                            <TR>
+                              <TD><SPAN><FONT FACE="Verdana,Arial,Helvetica"
+                                SIZE="2"><B><FONT COLOR="#0066CC">Spell Check.</FONT></B><BR>
+                                Check the spelling of messages you compose with
+                                the spell checker..</FONT></SPAN></TD>
+                            </TR>
+                          </TBODY>
+                        </TABLE>
+                      </TD>
+                    </TR>
+                  </TBODY>
+                </TABLE>
+              </TD>
+            </TR>
+          </TBODY>
+        </TABLE>
+      </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<TABLE CELLPADDING="0" CELLSPACING="0" WIDTH="100%" BORDER="0">
+  <TBODY>
+    <TR>
+      <TD ALIGN="right" VALIGN="middle"><FONT FACE="verdana,arial,helvetica"
+        SIZE="1" COLOR="#335600"><B>WebMail @ UAEU is maintained by Information
+        Technology Center</B></FONT></TD>
+      <TD ALIGN="left" VALIGN="middle"><FONT FACE="verdana,arial,helvetica"
+        SIZE="1"><IMG BORDER="0" SRC="imx/itclogo.gif" WIDTH="47" HEIGHT="42"></FONT></TD>
+    </TR>
+    <TR>
+      <TD BGCOLOR="#c3c3c3" VALIGN="top" HEIGHT="1" COLSPAN="2"><IMG
+        SRC="imx/clr.gif" HEIGHT="1" WIDTH="1"></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%" ALIGN="left">
+  <TBODY>
+    <TR>
+      <TD BGCOLOR="#FFFF00" HEIGHT="2"><IMG HEIGHT="2" SRC="imx/clr.gif"
+        WIDTH="1"></TD>
+    </TR>
+    <TR>
+      <TD BGCOLOR="#335600" HEIGHT="1"><IMG HEIGHT="1" SRC="imx/clr.gif"
+        WIDTH="1"></TD>
+    </TR>
+    <TR>
+      <TD ALIGN="center" BGCOLOR="#335600" VALIGN="top" WIDTH="100%"><FONT
+        FACE="Verdana,Arial,Helvetica" SIZE="2" COLOR="#FFFF00"><B>&copy;2002
+        Information Technology Center - United Arab Emirates University</B></FONT><BR>
+        <BR>
+      </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<FORM ACTION="login.msc" METHOD="post" NAME="loginform">
+  <INPUT TYPE="hidden" NAME="user"><INPUT TYPE="hidden" NAME="password">
+</FORM>
+<FORM ACTION="login.msc" METHOD="post" NAME="newwinform">
+  <INPUT TYPE="hidden" NAME="user"><INPUT TYPE="hidden" NAME="password">
+</FORM>
+
+</BODY>
+<script>
+
+var userform = document.forms[0]
+var passwordform = document.forms[1]
+var loginform = document.forms[2]
+var newwinform = document.forms[3];//AK
+
+
+document.forms[0].elements[0].focus()
+if (document.forms[1].elements[0].value.length > 0)
+  document.forms[1].elements[0].value = ''
+if (user) {
+  document.forms[0].elements[0].value = user
+  document.forms[0].elements[0].select()
+}
+</script>
+
+</HTML>
+

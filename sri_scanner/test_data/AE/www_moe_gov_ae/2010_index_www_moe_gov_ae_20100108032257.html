@@ -1,0 +1,70 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+	<title>Ministry of Education</title>
+
+	<script type="text/javascript" src="/_LAYOUTS/LandingJS/landingSilverlight.js"></script>
+	<script type="text/javascript" src="/_LAYOUTS/LandingJS/landing.html.js"></script>
+	<script type="text/javascript" src="/_LAYOUTS/LandingJS/landing.xaml.js"></script>
+	<style type="text/css">
+body {
+	background-color: #000000;
+	background-image:url('/_LAYOUTS/LandingImages/bg.jpg');
+	margin: 0px;
+	text-align: center;
+}
+.landingHost {
+	height: 480px;
+	width: 640px;
+	margin:auto;
+	margin-top: 30px;
+}
+#notifcation, #notifcation a{
+	color:#ffff00;
+	font-family:tahoma;
+	font-size:11px;
+}
+</style>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:PublishingContactPicture msdt:dt="string"></mso:PublishingContactPicture>
+<mso:PublishingRollupImage msdt:dt="string"></mso:PublishingRollupImage>
+<mso:Audience msdt:dt="string"></mso:Audience>
+<mso:PublishingContactName msdt:dt="string"></mso:PublishingContactName>
+<mso:ContentType msdt:dt="string">Page</mso:ContentType>
+<mso:Comments msdt:dt="string"></mso:Comments>
+<mso:PublishingContactEmail msdt:dt="string"></mso:PublishingContactEmail>
+<mso:Ordinal msdt:dt="string">1</mso:Ordinal>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+
+<div id="LandingHost" class="landingHost">
+	
+	</div>
+<div style="width: 652px; margin:auto" >
+	
+<map name="FPMap0" id="FPMap0">
+<area href="/Pages/VariationRoot.aspx" shape="rect" coords="533, 17, 636, 43">
+</map>
+	
+<img alt="Skip Intro" src="/_LAYOUTS/LandingImages/footer.jpg" border="0" width="647" height="62" usemap="#FPMap0"></div>
+<div id="notifcation" style="display:none">
+	You need to install Silverlight plug-in to view the interactive intro.  To install the plug-in click 
+	<a href="http://www.microsoft.com/silverlight/install.aspx">here</a>
+	<br>
+	<span dir="rtl">تحتاج لمشغل Silverlight لعرض المقدمة التفاعلية. لتحميل المشغل اضغط 
+	<a href="http://www.microsoft.com/silverlight/install.aspx">هنا</a></span>
+</div>
+<script type="text/javascript">	
+	if(Silverlight.isInstalled("1.0"))
+               createLanding();
+else
+	createLandingHTML();
+	</script>
+</body>
+
+</html>

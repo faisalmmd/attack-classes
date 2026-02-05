@@ -1,0 +1,215 @@
+<html>
+
+<head>
+
+
+
+
+
+
+<style>
+<!--
+
+.menuskin{
+position:absolute;
+width:165px;
+background-color:menu;
+border:2px solid black;
+font:normal 12px Verdana;
+line-height:18px;
+z-index:100;
+visibility:hidden;
+}
+
+.menuskin a{
+text-decoration:none;
+color:black;
+padding-left:10px;
+padding-right:10px;
+}
+
+#mouseoverstyle{
+background-color:highlight;
+}
+
+#mouseoverstyle a{
+color:white;
+}
+-->
+</style>
+
+<script language="JavaScript1.2">
+
+//Pop-it menu- By Dynamic Drive
+//For full source code and more DHTML scripts, visit http://www.dynamicdrive.com
+//This credit MUST stay intact for use
+
+var linkset=new Array()
+//SPECIFY MENU SETS AND THEIR LINKS. FOLLOW SYNTAX LAID OUT
+
+linkset[0]='<div class="menuitems"><a href="http://www2.uaeu.ac.ae/reference_Forms.htm">Reference Forms</a></div>'
+linkset[0]+='<div class="menuitems"><a href="http://www2.uaeu.ac.ae/reference_Procedures.htm">Reference Procedures</a></div>'
+linkset[0]+='<div class="menuitems"><a href="http://www2.uaeu.ac.ae/TechServ_Procedures.htm">Tech.Serv. Procedures</a></div>'
+
+linkset[1]='<div class="menuitems"><a href="http://msnbc.com">MSNBC</a></div>'
+linkset[1]+='<div class="menuitems"><a href="http://cnn.com">CNN</a></div>'
+linkset[1]+='<div class="menuitems"><a href="http://abcnews.com">ABC News</a></div>'
+linkset[1]+='<div class="menuitems"><a href="http://www.washingtonpost.com">Washington Post</a></div>'
+
+
+linkset[2]='<div class="menuitems"><a href="http://helpdesk.uaeu.ac.ae/download.html">UAEU Help Desk</a></div>'
+linkset[2]+='<div class="menuitems"><a href="http://lib_folder.uaeu.ac.ae">Software Library</a></div>'
+linkset[2]+='<div class="menuitems"><a href="http://download.com.com">Download - Net</a></div>'
+linkset[2]+='<div class="menuitems"><a href="http://www.&#1603;&#1584;&#1575;.com">Under Construction</a></div>'
+
+////No need to edit beyond here
+
+var ie4=document.all&&navigator.userAgent.indexOf("Opera")==-1
+var ns6=document.getElementById&&!document.all
+var ns4=document.layers
+
+function showmenu(e,which){
+
+if (!document.all&&!document.getElementById&&!document.layers)
+return
+
+clearhidemenu()
+
+menuobj=ie4? document.all.popmenu : ns6? document.getElementById("popmenu") : ns4? document.popmenu : ""
+menuobj.thestyle=(ie4||ns6)? menuobj.style : menuobj
+
+if (ie4||ns6)
+menuobj.innerHTML=which
+else{
+menuobj.document.write('<layer name=gui bgColor=#E6E6E6 width=165 onmouseover="clearhidemenu()" onmouseout="hidemenu()">'+which+'</layer>')
+menuobj.document.close()
+}
+
+menuobj.contentwidth=(ie4||ns6)? menuobj.offsetWidth : menuobj.document.gui.document.width
+menuobj.contentheight=(ie4||ns6)? menuobj.offsetHeight : menuobj.document.gui.document.height
+eventX=ie4? event.clientX : ns6? e.clientX : e.x
+eventY=ie4? event.clientY : ns6? e.clientY : e.y
+
+//Find out how close the mouse is to the corner of the window
+var rightedge=ie4? document.body.clientWidth-eventX : window.innerWidth-eventX
+var bottomedge=ie4? document.body.clientHeight-eventY : window.innerHeight-eventY
+
+//if the horizontal distance isn't enough to accomodate the width of the context menu
+if (rightedge<menuobj.contentwidth)
+//move the horizontal position of the menu to the left by it's width
+menuobj.thestyle.left=ie4? document.body.scrollLeft+eventX-menuobj.contentwidth : ns6? window.pageXOffset+eventX-menuobj.contentwidth : eventX-menuobj.contentwidth
+else
+//position the horizontal position of the menu where the mouse was clicked
+menuobj.thestyle.left=ie4? document.body.scrollLeft+eventX : ns6? window.pageXOffset+eventX : eventX
+
+//same concept with the vertical position
+if (bottomedge<menuobj.contentheight)
+menuobj.thestyle.top=ie4? document.body.scrollTop+eventY-menuobj.contentheight : ns6? window.pageYOffset+eventY-menuobj.contentheight : eventY-menuobj.contentheight
+else
+menuobj.thestyle.top=ie4? document.body.scrollTop+event.clientY : ns6? window.pageYOffset+eventY : eventY
+menuobj.thestyle.visibility="visible"
+return false
+}
+
+function contains_ns6(a, b) {
+//Determines if 1 element in contained in another- by Brainjar.com
+while (b.parentNode)
+if ((b = b.parentNode) == a)
+return true;
+return false;
+}
+
+function hidemenu(){
+if (window.menuobj)
+menuobj.thestyle.visibility=(ie4||ns6)? "hidden" : "hide"
+}
+
+function dynamichide(e){
+if (ie4&&!menuobj.contains(e.toElement))
+hidemenu()
+else if (ns6&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+hidemenu()
+}
+
+function delayhidemenu(){
+if (ie4||ns6||ns4)
+delayhide=setTimeout("hidemenu()",500)
+}
+
+function clearhidemenu(){
+if (window.delayhide)
+clearTimeout(delayhide)
+}
+
+function highlightmenu(e,state){
+if (document.all)
+source_el=event.srcElement
+else if (document.getElementById)
+source_el=e.target
+if (source_el.className=="menuitems"){
+source_el.id=(state=="on")? "mouseoverstyle" : ""
+}
+else{
+while(source_el.id!="popmenu"){
+source_el=document.getElementById? source_el.parentNode : source_el.parentElement
+if (source_el.className=="menuitems"){
+source_el.id=(state=="on")? "mouseoverstyle" : ""
+}
+}
+}
+}
+
+if (ie4||ns6)
+document.onclick=hidemenu
+
+</script>
+
+
+
+
+
+
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Home</title>
+</head>
+
+<body topmargin="0" leftmargin="0">
+
+<div style="position: absolute; left: 363; top: 186; width: 298; height: 19">
+  <b>
+  <font color="#FFFFFF">
+  <a href="http://www.uaeu.ac.ae/lib" style="text-decoration: none">
+    <font size="2" color="#000066">Home</font></a></font><font size="2"><font color="#000066"> |</font></font><a href="#" onMouseover="showmenu(event,linkset[0])" onMouseout="delayhidemenu()" style="text-decoration: none"><font size="2" color="#0A246A">Reference Tools</font></a><font size="2"><font color="#000066"> |
+  </font>
+  </font>
+<a href="#" onMouseover="showmenu(event,linkset[1])" onMouseout="delayhidemenu()" style="text-decoration: none">
+  <font size="2" color="#0A246A">Administration</font></a><font size="2" color="#0A246A">
+  </font><font color="#FFFFFF"> 
+  <font color="#000066" size="2">&nbsp;| </font>
+  </font>
+<a href="#" onMouseover="showmenu(event,linkset[2])" onMouseout="delayhidemenu()" style="text-decoration: none">
+  <font size="2" color="#0A246A">Download</font></a><font size="2" color="#0A246A">
+  </font></b></div>
+
+
+
+
+
+
+
+
+<div id="popmenu" class="menuskin" onMouseover="clearhidemenu();highlightmenu(event,'on')" onMouseout="highlightmenu(event,'off');dynamichide(event)">
+</div>
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" background="WEB_TOOLS2_bg.jpg">
+  <tr>
+    <td width="33%"><img border="0" src="WEB_TOOLS2_L.jpg" width="564" height="412"></td>
+    <td width="33%">&nbsp;</td>
+    <td width="34%"><img border="0" src="WEB_TOOLS2_R.jpg" align="right" width="173" height="412"></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+
+</body></html>

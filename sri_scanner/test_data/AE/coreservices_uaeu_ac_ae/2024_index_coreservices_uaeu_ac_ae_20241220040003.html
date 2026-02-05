@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="CME Accrediation">
+    <meta name="author" content="DoIT, Web Services">
+   
+    <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+    <link rel="stylesheet" href="/css/vendor.css?v=OqwYjeIdFMC73Uqw9pn-MeNf5lEPA7HbAKsRmQAqCng" />
+
+     
+    <link href="/vendors/coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+    <link href="/vendors/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <link href="/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/vendors/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+   
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+
+    
+
+    <script src="/vendors/popper.js/js/popper.min.js?v=Jst-sPRrW3EhlgWJ2UdibRdPJOC45nDIfa3CiZif7Lw"></script>
+
+    <script src="/js/vendor.js?v=qcnKRzSupVXQwAF-c1WSE0q-eBCwHox5MX8Cwv8Vh-E"></script>
+
+    <script src="/js/Helper.js?v=WBYaS27GgnkOYqiovJCOvQxhL2fxv2Q1sUYCluc96yo"></script>
+    
+        
+    
+</head>
+<body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">    
+    <div class="app-body">        
+        <main class="main">
+           
+            <div class="container-fluid">
+                <div class="animated fadeIn noeffect" id="app">
+           
+                    <script src="https://www.uaeu.ac.ae/en/eservices/js/jquery.barrating.min.js"></script> 
+<link rel="stylesheet" href="https://www.uaeu.ac.ae/en/eservices/js/themes/fontawesome-stars.css">
+
+<h4>Service Rating:</h4>
+
+<div style="margin-top: 9px">
+    <select class="ratingCont" id="rating1">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+
+
+     <select class="ratingCont" id="rating2">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+
+     <select class="ratingCont" id="rating2">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+
+
+</div>
+
+<script type="text/javascript">
+   //$(function() {
+   //   $('#ratingCont').barrating({
+   //       theme: 'fontawesome-stars',
+   //               triggerChange:true,
+   //       onSelect: function (value, text, event) {
+   //           if (typeof (event) !== 'undefined') {
+   //               // rating was selected by a user
+   //               console.log(value);
+   //             document.getElementById("ratingCont").disabled = true;
+   //            //   $('#example').attr('disabled','disabled');
+   //           } else {
+   //               // rating was selected programmatically
+   //               // by calling `set` method
+   //           }
+   //       }
+
+   //   });
+   //});
+
+    $(function () {
+        var star = localStorage.getItem('rating1');
+        console.log("localStorage " + JSON.stringify(localStorage));
+        console.log("rating1 " + star);
+
+        document.getElementById("rating1").selectedIndex = star - 1;
+        //$('#rating1').prop("selectedIndex", star);
+
+        $('.ratingCont').each(function () {
+            $(this).barrating('show',{
+                theme: 'fontawesome-stars',
+                triggerChange: true,
+                onSelect: function (value, text, event) {
+                    if (typeof (event) !== 'undefined') {
+                        // rating was selected by a user
+                        console.log(value);
+                        localStorage.setItem('rating1', value);
+                        console.log("localStorage " + JSON.stringify(localStorage));
+                        //document.getElementById("ratingCont").disabled = true;
+                        //document.getElementsByClassName("ratingCont").disabled = true;
+                        //   $('#example').attr('disabled','disabled');
+                    } else {
+                        // rating was selected programmatically
+                        // by calling `set` method
+                    }
+                }
+
+            });
+        });
+   });
+</script>
+
+
+                </div>
+            </div>
+        </main>        
+
+    </div>    
+
+
+    <script src="/vendors/pace-progress/js/pace.min.js"></script>
+    <script src="/vendors/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="/vendors/coreui/coreui-pro/js/coreui.min.js"></script>
+    <script src="/vendors/coreui/coreui-plugin-chartjs-custom-tooltips/js/custom-tooltips.min.js"></script>
+    <script src="/js/jquery.gray.min.js"></script>
+    <script src="/js/GAnalytics.js"></script>
+</body>
+</html>

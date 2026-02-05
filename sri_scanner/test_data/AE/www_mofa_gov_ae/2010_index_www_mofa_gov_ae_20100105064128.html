@@ -1,0 +1,1750 @@
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="rtl" >
+<head id="ctl00_Head1"><title>
+	وزارة الخارجيـة لدولة الإمارات العربية المتحدة
+</title><link href="../App_Themes/site/mofacss.css" rel="stylesheet" type="text/css" /><link href="../javascript/Lightbox/lightbox.css" rel="stylesheet" type="text/css" />
+    <script language="javascript" type="text/javascript" src="../javascript/global.js"></script>
+    <script language="javascript" type="text/javascript" src="../javascript/ajax.js"></script>
+    <script language="javascript" type="text/javascript" src="../javascript/General-gallery.js"></script>
+    <script language="javascript" type="text/javascript" src="../javascript/Lightbox/lightbox.js"></script>
+    
+   
+    <script type="text/javascript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function ChangeImage(objectid,imgUrl)
+{
+  
+  
+    var i= document.getElementById(objectid);
+    i.src=imgUrl;
+}
+
+function ChangeImageBack(objectid,imgUrl, lastClicked)
+{
+ if (objectid != lastClicked)
+ {
+        var i= document.getElementById(objectid); 
+        i.src=imgUrl;
+ }
+}
+//-->
+
+
+function preloadImages()
+{
+MM_preloadImages('../App_Themes/site/images/header/emailbutton-over.jpg','../App_Themes/site/images/header/newsbutton-over.jpg','../App_Themes/site/images/header/homebutton-over.jpg','../App_Themes/site/images/header/contactbutton-over.jpg','../App_Themes/site/images/header/sitemapbutton-over.jpg','../App_Themes/site/images/buttons/greybutton-over.gif','../App_Themes/site/images/buttons/greenbutton-over.gif','../App_Themes/site/images/buttons/greenbutton-back-over.gif','../App_Themes/site/images/buttons/greenbutton-pause-over.gif','../App_Themes/site/images/buttons/greenbutton-over.jpg','../App_Themes/site/images/buttons/blackbutton-over.jpg','../App_Themes/site/images/buttons/redbutton-over.jpg','../App_Themes/site/images/bannerbuttons/shiekhzayed-link-over.jpg','../App_Themes/site/images/bannerbuttons/electronic-mag-over.jpg','../App_Themes/site/images/picturegallery/picgallery-prevbt-over.jpg','../App_Themes/site/images/picturegallery/picgallery-largebt-over.jpg','../App_Themes/site/images/picturegallery/picgallery-nextbt-over.jpg','../App_Themes/site/images/buttons/more_over.gif')
+}
+
+
+function SelectMe(e)
+{
+    var ans = document.getElementById('ctl00_hfd_selected');
+    ans.value = e;
+}
+function SetVote()
+{   
+
+    var btn = document.getElementById('ctl00_btn_Submit');
+    var answer = document.getElementById('ctl00_hfd_selected');
+    var ifrmeee = document.getElementById('ctl00_ifrm');
+    var vote = document.getElementById('ctl00_hfd_VoteID');
+    
+    var mpop = $find('ctl00_mpop1');
+    ifrmeee.src = '../pages/setpoll.aspx?poll=' + vote.value + '&ans=' + answer.value
+    btn.disabled= true;
+    mpop.show();
+    
+    
+    
+    return false;
+    
+}
+
+registerEventHandler(window,'load',preloadImages);
+
+</script>
+<style type="text/css">
+<!--
+.style3 {color: #FFFFFF}
+.style3:hover{color: #11BE55;
+	text-decoration: none;
+}
+.style4 {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.style5 {font-size: 11px}
+-->
+</style>
+    <bgsound id="alert" loop="5">
+</head>
+<body id="ctl00_PageLoad" leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0">
+    <form name="aspnetForm" method="post" action="default.aspx?id=24" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNzk4MDE3NTk2D2QWAmYPZBYCAgQPZBYCAgEPZBYSAgUPFgIeC18hSXRlbUNvdW50AgQWCGYPZBYCZg8VAhRodHRwOi8vZ292ZXJubWVudC5hZSTZhdmI2YLYuSDYrdmD2YjZhdipINin2YTYpdmF2KfYsdin2KpkAgEPZBYCZg8VAkhodHRwOi8vbW9mYS5nb3YuYWUvTW9mYS9wb3J0YWwvNGYxNzg0ZjktYmQzNC00YjJjLWE2M2MtOWY2N2ExY2ZlNDk1LmFzcHgQ2YTZhNmF2LPYp9i52K/YqWQCAg9kFgJmDxUCSGh0dHA6Ly9tb2ZhLmdvdi5hZS9tb2ZhL3BvcnRhbC83ZmJkOGM4MC1jODIzLTQ3ZTEtODZiNC1mODUxNmZmNDAxNDQuYXNweBfYrtix2YrYt9ipINin2YTZhdmI2YLYuWQCAw9kFgJmDxUCSGh0dHA6Ly9tb2ZhLmdvdi5hZS9tb2ZhL3BvcnRhbC81MTY4OGYyNC05ZGE1LTRiYmUtYTUyNC1hMWQ5MWVmZGVmNjYuYXNweBDYp9iq2LXZhCAg2KjZhtinZAIJD2QWAgIDDw9kFgQeC29ubW91c2VvdmVyBWNqYXZhc2NyaXB0OkNoYW5nZUltYWdlKCdjdGwwMF9pYnRuX1NlYXJjaCcsJy4uL0FwcF9UaGVtZXMvc2l0ZS9pbWFnZXMvYnV0dG9ucy9ncmV5YnV0dG9uLW92ZXIuZ2lmJykeCm9ubW91c2VvdXQFY2phdmFzY3JpcHQ6Q2hhbmdlSW1hZ2UoJ2N0bDAwX2lidG5fU2VhcmNoJywnLi4vQXBwX1RoZW1lcy9zaXRlL2ltYWdlcy9idXR0b25zL2dyZXlidXR0b24taWRsZS5naWYnKWQCCw9kFgICAQ8WAh8AAgsWFmYPZBYCZg8VAhJtZW51X21haW5fc2VsZWN0ZWQqPGE+2KfZhNi12YHZgNit2YDYqSDYp9mE2LHYptmK2LPZitmA2Kk8L2E+ZAIBD2QWAmYPFQIJbWVudV9tYWluZTxhIGhyZWY9Ii4uL3BvcnRhbC80NjQ2NGJkMS01OWFhLTQ3MmEtODU5YS1kYTc0MjY1MjY4OWYuYXNweCI+2K3Zg9mI2YXZgNmA2Kkg2KfZhNil2YXZgNmA2KfYsdin2Ko8L2E+ZAICD2QWAmYPFQIJbWVudV9tYWluXjxhIGhyZWY9Ii4uL3BvcnRhbC80Y2EyZjcyOC1mYTY0LTQyODUtODlkMy0wZDQ1MWNlNzRlNmMuYXNweCI+2YbYqNiw2Ycg2LnZhiDYp9mE2YjYstin2LHYqTwvYT5kAgMPZBYCZg8VAgltZW51X21haW5xPGEgaHJlZj0iLi4vcG9ydGFsL2M5ZGRjNGJhLWE0ODktNDQ0YS1hMDA1LWY0MWIyYWI0NTNmZC5hc3B4Ij7Yp9mE2LPZitmA2YDYp9iz2YDZgNipINin2YTYrtmA2YDYp9ix2KzZitmA2YDYqTwvYT5kAgQPZBYCZg8VAgltZW51X21haW5jPGEgaHJlZj0iLi4vcG9ydGFsL2ZhYjE2NWI4LWEzNmEtNDRlOS04ZWU5LTkxOTBhMWEwMmQ3Mi5hc3B4Ij7Zg9mE2YXZgNmA2KfYqiDZiNiq2LXZgNmA2KfYsdmK2K08L2E+ZAIFD2QWAmYPFQIJbWVudV9tYWluXzxhIGhyZWY9Ii4uL3BvcnRhbC9mOGEwMTBmMi03NzAxLTQwODAtYWJmNS1kZjUxNmFkOTcyYjAuYXNweCI+2K7Yr9mF2YDZgNin2Kog2KfZhNmI2LLYp9ix2Kk8L2E+ZAIGD2QWAmYPFQIJbWVudV9tYWluajxhIGhyZWY9Ii4uL3BvcnRhbC9hNWEwOTdlYS0wOWMzLTQ4YTMtOWIwZS1hYjQ2Y2FjOGFlN2QuYXNweCI+2KjZitmGINin2YTYo9mF2YDZgNizINmI2KfZhNmK2YDZgNmA2YjZhTwvYT5kAgcPZBYCZg8VAgltZW51X21haW5tPGEgaHJlZj0iLi4vcG9ydGFsLzUxMmQ1MThlLTRjNDQtNDE3Yy05ZTUxLWVhNmMyMzc2ZmYwNy5hc3B4Ij7Yp9mE2KXZhdin2LHYp9iqINmIINit2YLZiNmCINin2YTYpdmG2LPYp9mGPC9hPmQCCA9kFgJmDxUCCW1lbnVfbWFpbkw8YSBocmVmPSIuLi9wb3J0YWwvNGU1MDc4YTEtNmVmMS00ZTIzLWE0NzUtNGM5YzkxN2NjNzQzLmFzcHgiPtmI2LjYp9im2YE8L2E+ZAIJD2QWAmYPFQIJbWVudV9tYWluTDxhIGhyZWY9Ii4uL3BvcnRhbC8wNDRmM2I5MS0xOGE3LTQ2MmMtYTZlZC05YjZkZjgzYmMwYTYuYXNweCI+2LHZiNin2KjYtzwvYT5kAgoPZBYCZg8VAgltZW51X21haW5OPGEgaHJlZj0iLi4vcG9ydGFsLzQxYjk1Y2E5LTk4NWYtNDdmNy04MGNjLTY2NDEyMmM2MmFlYS5hc3B4Ij7YqtmI2KfYrNiv2Yo8L2E+ZAIND2QWAgIBDxYCHwACBhYMZg9kFgJmDxUGBV9zZWxmSGh0dHA6Ly9tb2ZhLmdvdi5hZS9Nb2ZhL3BvcnRhbC9lYWRlMmVkYy1iY2ViLTQzYjUtYTQ3My0wM2ZjM2JjNGIzMmQuYXNweAE3HS4uL1VwbG9hZHMvQmFubmVycy83X292ZXIuanBnHS4uL1VwbG9hZHMvQmFubmVycy83X2lkbGUuanBnATdkAgEPZBYCZg8VBgVfc2VsZkhodHRwOi8vbW9mYS5nb3YuYWUvTW9mYS9wb3J0YWwvYTY3NjA0YzctOWQzNy00MzMxLWE2ZWYtMTZlOGZlYWMyYTZkLmFzcHgBOB0uLi9VcGxvYWRzL0Jhbm5lcnMvOF9vdmVyLmpwZx0uLi9VcGxvYWRzL0Jhbm5lcnMvOF9pZGxlLmpwZwE4ZAICD2QWAmYPFQYGX2JsYW5rHC4uL1VwbG9hZHMvQmFubmVycy85X3BkZi5wZGYBOR0uLi9VcGxvYWRzL0Jhbm5lcnMvOV9vdmVyLmpwZx0uLi9VcGxvYWRzL0Jhbm5lcnMvOV9pZGxlLmpwZwE5ZAIDD2QWAmYPFQYFX3NlbGZIaHR0cDovL21vZmEuZ292LmFlL01vZmEvcG9ydGFsLzgzZTgzYTI0LTczYmMtNDQzZS04NDYzLWY5YmZhYjhhMTU5MC5hc3B4AjEwHi4uL1VwbG9hZHMvQmFubmVycy8xMF9vdmVyLmpwZx4uLi9VcGxvYWRzL0Jhbm5lcnMvMTBfaWRsZS5qcGcCMTBkAgQPZBYCZg8VBgZfYmxhbmtIaHR0cDovL21vZmEuZ292LmFlL01vZmEvcG9ydGFsLzY0MTllZTRiLTI2ZDYtNGY2YS04NWIwLTAzOGZmNmRiYWFmOC5hc3B4AjExHi4uL1VwbG9hZHMvQmFubmVycy8xMV9vdmVyLmpwZx4uLi9VcGxvYWRzL0Jhbm5lcnMvMTFfaWRsZS5qcGcCMTFkAgUPZBYCZg8VBgZfYmxhbmsZaHR0cDovL3d3dy5tb2guZ292LmFlL2FyLwIxMh4uLi9VcGxvYWRzL0Jhbm5lcnMvMTJfb3Zlci5qcGceLi4vVXBsb2Fkcy9CYW5uZXJzLzEyX2lkbGUuanBnAjEyZAIPDxYCHgVzdHlsZQUOZGlzcGxheTpibG9jazsWAmYPZBYIAgEPDxYCHgRUZXh0BTfZhdinINix2KPZitmDINio2YXZiNmC2Lkg2YjYstin2LHYqSDYp9mE2K7Yp9ix2KzZitipINifZGQCAw8QDxYGHg1EYXRhVGV4dEZpZWxkBQhvcF9UaXRsZR4ORGF0YVZhbHVlRmllbGQFBW9wX0lEHgtfIURhdGFCb3VuZGdkEBUECtmF2YXYqtin2LIP2KzZitivINis2K/Yp9mLBtis2YrYrwrZhdmC2KjZiNmEFQQCMjQCMjUCMjYCMjcUKwMEZ2dnZ2RkAg8PFgIeDlBvc3RCYWNrU2NyaXB0BSRfX2RvUG9zdEJhY2soJ2N0bDAwJGJ0bl9SZXN1bHRzJywnJylkAhMPZBYGAgEPDxYCHwQFN9mF2Kcg2LHYo9mK2YMg2KjZhdmI2YLYuSDZiNiy2KfYsdipINin2YTYrtin2LHYrNmK2Kkg2J9kZAIDDxYCHwACBBYIZg9kFgICAQ8PFgIfBAUK2YXZhdiq2KfYsmRkAgEPZBYCAgEPDxYCHwQFD9is2YrYryDYrNiv2KfZi2RkAgIPZBYCAgEPDxYCHwQFBtis2YrYr2RkAgMPZBYCAgEPDxYCHwQFCtmF2YLYqNmI2YRkZAIFDxYCHwACBBYIZg9kFgJmDxUBBjcxLjQzJWQCAQ9kFgJmDxUBBTkuNTIlZAICD2QWAmYPFQEGMTQuMjklZAIDD2QWAmYPFQEFNC43NiVkAhEPFgIfAwUOZGlzcGxheTpibG9jaztkAhMPDxYCHgdWaXNpYmxlZ2QWAgIBDw8WAh4ISW1hZ2VVcmwFIC4uL3VwbG9hZHMvem9uZS9nYWxsZXJ5LzEzXzEuanBnZGQCFQ9kFgoCAQ8PFgIfCgUVfi9VcGxvYWRzL3pvbmUvMjUuanBnZGQCAw8PFgIfBAWIB9mK2LfZitioINmE2YogINio2YXZhtin2LPYqNipINit2YTZiNmEINin2YTYsNmD2LHZiSDYp9mE2KvYp9mF2YbYqSDZiNin2YTYq9mE2KfYq9mK2YYg2YTZgtmK2KfZhSDYp9mE2KfYqtit2KfYryDYo9mGINij2LLZgSDYo9iz2YXZiSDYotmK2KfYqiDYp9mE2KrZh9in2YbZiiDZiNin2YTYqtio2LHZitmD2KfYqiDYpdmE2Ykg2YXZgtin2YUg2LXYp9it2Kgg2KfZhNiz2YXZiCDYp9mE2LTZitiuINiu2YTZitmB2Kkg2KjZhiDYstin2YrYryDYotmEINmG2YfZitin2YYgLSDYrdmB2LjZhyDYp9mE2YTZhyAt2Iwg2YjYpdmE2Ykg2YXZgtin2YUg2LXYp9it2Kgg2KfZhNiz2YXZiCDYp9mE2LTZitiuINmF2K3ZhdivINio2YYg2LHYp9i02K8g2KLZhCDZhdmD2KrZiNmFINmG2KfYptioINix2KbZitizINin2YTYr9mI2YTYqSDYsdim2YrYsyDZhdis2YTYsyDYp9mE2YjYstix2KfYoSDYrdin2YPZhSDYr9io2YogLSDYsdi52KfZhyDYp9mE2YTZhyAt2Iwg2YjYpdmE2Ykg2KXYrtmI2KfZhtmH2YUg2KPYtdit2KfYqCDYp9mE2LPZhdmIINij2LnYttin2KEg2KfZhNmF2KzZhNizINin2YTYo9i52YTZiSDZhNmE2KfYqtit2KfYryDYrdmD2KfZhSDYp9mE2KXZhdin2LHYp9iq2Iwg2YjYpdmE2Ykg2KfZhNmB2LHZitmCINij2YjZhCDYs9mF2Ygg2KfZhNi02YrYriDZhdit2YXYryDYqNmGINiy2KfZitivINii2YQg2YbZh9mK2KfZhiDZiNmE2Yog2LnZh9ivINij2KjZiNi42KjZiiDZhtin2KbYqCDYp9mE2YLYp9im2K8g2KfZhNij2LnZhNmJINmE2YTZgtmI2KfYqiDYp9mE2YXYs9mE2K3YqdiMINmI2KXZhNmJINi02LnYqCDYp9mE2KXZhdin2LHYp9iqINin2YTZg9ix2YrZhSDYqNmH2LDZhyDYp9mE2YXZhtin2LPYqNipINin2YTYudiy2YrYstipINi52YTZiSDZgtmE2YjYqNmG2Kcg2KzZhdmK2LnYpy5kZAIFDxYCHgRocmVmBTMuLi9wb3J0YWwvMmQyMjdhNDYtZWE5Ni00NDkwLTk2ODMtMzBiZDBkNDYyMmNhLmFzcHhkAgcP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" />
+
+
+<script src="/Mofa/ScriptResource.axd?d=eObGtfGL4l0bRQcJPhtvb3hwUmdaea3zbn40ls_J5mcNfG6zAkMpk1CSKp6FAqEmAy5GAJ0tdoV4plXTRp1XQtA3eCbFdqeTynFk3CS696s1&amp;t=633702976010156250" type="text/javascript"></script>
+<script src="/Mofa/ScriptResource.axd?d=8kU4SjtdXJRHjSwC3DvDAbg-3Wxx1evt-hMnIGc4sAJob8gp08MuYjwnqgkh5ngYWaLh4oX21ml599Y8O6oawl374_5xHV8Pp8ZBTEpy7tw1&amp;t=633832585761562500" type="text/javascript"></script>
+<script src="/Mofa/ScriptResource.axd?d=8kU4SjtdXJRHjSwC3DvDAbg-3Wxx1evt-hMnIGc4sAJV2DcCzhZCKSJVbm2_sKNDGZahMSVEya4ZOSq6IArTIrYJGMw75iaXBSwbsTEOubY1&amp;t=633832585761562500" type="text/javascript"></script>
+<script src="/Mofa/ScriptResource.axd?d=8kU4SjtdXJRHjSwC3DvDAbg-3Wxx1evt-hMnIGc4sAI8QuZR3jpRR_PAKgfmuezLhTUsNnsHYVMVknDlmd2s2Q2&amp;t=633832585761562500" type="text/javascript"></script>
+<script src="/Mofa/ScriptResource.axd?d=8kU4SjtdXJRHjSwC3DvDAbg-3Wxx1evt-hMnIGc4sAIPHhzLew84p00MT10Q_TGdMM4U6p-tVeAJp10gQc1KUg2&amp;t=633832585761562500" type="text/javascript"></script>
+<script src="/Mofa/ScriptResource.axd?d=8kU4SjtdXJRHjSwC3DvDAbg-3Wxx1evt-hMnIGc4sAI4N3bnyPdkrV2yWg0sdkACgIbIojH74PYPeQOaz6k6bcWRpqzEygTbzKyHNRoWrX01&amp;t=633832585761562500" type="text/javascript"></script>
+<script src="/Mofa/ScriptResource.axd?d=8kU4SjtdXJRHjSwC3DvDAbg-3Wxx1evt-hMnIGc4sAKcn6z4fMUBw_7AWsFyxjtI4KVaRsm0E29GBzTjY0F6jQ3sCKgiCcKD3hsw5bodUKA1&amp;t=633832585761562500" type="text/javascript"></script>
+<script src="/Mofa/ScriptResource.axd?d=8kU4SjtdXJRHjSwC3DvDAbg-3Wxx1evt-hMnIGc4sAJusfbbrNRfrvZT2sthSYKQEQi7kZZIEOA2Pt873NbJqUUn6AaS8wz2z4l_9zoJqjcMLudg-5zT-27vkiC91kPS0&amp;t=633832585761562500" type="text/javascript"></script>
+<script src="/Mofa/ScriptResource.axd?d=8kU4SjtdXJRHjSwC3DvDAbg-3Wxx1evt-hMnIGc4sAIGAsKoKJ5ltZd6SHMaWGniz6g53BPRbUUw67JEASeMeVOO4MiO_LVyFeNIXth5mrVlBNz_rjliKYJKZhK9NjQA0&amp;t=633832585761562500" type="text/javascript"></script>
+<script src="/Mofa/ScriptResource.axd?d=8kU4SjtdXJRHjSwC3DvDAbg-3Wxx1evt-hMnIGc4sAJoPc_hYilytKfXjyG3cZHcoAVsUELWuhVaUZ2410-bo8bl6DEtpJDMZVJenIT5-9I1&amp;t=633832585761562500" type="text/javascript"></script>
+<script src="/Mofa/ScriptResource.axd?d=8kU4SjtdXJRHjSwC3DvDAbg-3Wxx1evt-hMnIGc4sALipbrbrY-Kt0ZRBXUkcuHgk_HGPxa_3bO4hdQTQx-zpEOZNWLx6UKcVamYnP47mlE1&amp;t=633832585761562500" type="text/javascript"></script>
+    
+    <input type="hidden" name="ctl00$hfd_selected" id="ctl00_hfd_selected" value="24" />
+        <div align="center">
+            <table border="0" width="961" id="table1" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td width="9">
+                        <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+                    <td>
+                        <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+                    <td width="9">
+                        <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+                </tr>
+                <tr>
+		  <td align="left">&nbsp;</td>
+		  <td align="left" valign="bottom"><table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <th width="8" scope="col"><img src="../App_Themes/site/images/header/headerlinkcorner2.jpg" width="8" height="26"></th>
+              <th align="left" valign="middle" bgcolor="#ECECEC" class="header_link" scope="col">
+              <a href="http://government.ae/" target="_blank">&nbsp;•&nbsp;موقع حكومة الإمارات &nbsp;</a><a href="../portal/4f1784f9-bd34-4b2c-a63c-9f67a1cfe495.aspx">&nbsp;&nbsp;•&nbsp;للمساعدة &nbsp;</a><a href="../portal/7fbd8c80-c823-47e1-86b4-f8516ff40144.aspx">&nbsp;&nbsp;•&nbsp;خريطة الموقع  &nbsp;</a><a href="../portal/51688f24-9da5-4bbe-a524-a1d91efdef66.aspx">&nbsp;&nbsp;•&nbsp;اتصل بنا &nbsp;</a>
+              </th>
+            </tr>
+          </table></td>
+		  <td align="right" valign="bottom"><img src="../App_Themes/site/images/header/headerlinkcorner1.jpg" width="8" height="26"></td>
+	  </tr>
+                <tr>
+                    <td width="9" align="left">
+                        <img border="0" src="../App_Themes/site/images/header/corner1.jpg" width="8" height="99"></td>
+                    <td valign="top">
+                        <table border="0" width="100%" id="table2" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td width="267">
+                                    <img border="0" src="../App_Themes/site/images/header/logo-header.jpg" width="267"
+                                        height="99"></td>
+                                <td valign="top">
+                                    <img border="0" src="../App_Themes/site/images/header/header-pic.jpg" width="678"
+                                        height="99"></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td align="right" width="9">
+                        <img border="0" src="../App_Themes/site/images/header/corner2.jpg" width="8" height="99"></td>
+                </tr>
+                <tr>
+                    <td width="9" align="left">
+                        <img border="0" src="../App_Themes/site/images/header/headerbar-corner1.jpg" width="8"
+                            height="42"></td>
+                    <td valign="top">
+                        <table border="0" width="100%" id="table3" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td valign="top" width="200">
+                                      
+                                       <div id="ctl00_plsearch">
+	
+                                                                          <table border="0" width="100%" id="table7" cellspacing="0" cellpadding="0">
+						<tr>
+							<td width="6"><img src="../App_Themes/site/images/header/headerbar-red-corner1b.jpg" width="6" height="42"></td>
+						  <td align="center" background="../App_Themes/site/images/header/headerbar-red-bg.jpg" align="left"><SPAN class="content_text style3 style5" id="tP"><SPAN class="style3" id="SPAN1"><SCRIPT language=JavaScript>
+function tS(){ x=new Date(); x.setTime(x.getTime()); return x; } 
+function lZ(x){ return (x>9)?x:'0'+x; } 
+function tH(x){ if(x==0){ x=12; } return (x>12)?x-=12:x; } 
+function dT(){ if(fr==0){ fr=1; document.write('<span id="tP">'+eval(oT)+'</span>'); } tP.innerText=eval(oT); setTimeout('dT()',1000); } 
+function aP(x){ return (x>11)?'pm':'am'; } 
+function y4(x){ return (x<500)?x+1900:x; } 
+var dN=new Array('Sun','Mon','Tue','Wed','Thu','Fri','Sat'),mN=new Array('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'),fr=0,oT="dN[tS().getDay()]+' '+tS().getDate()+' '+mN[tS().getMonth()]+' '+y4(tS().getYear())+' '+'|'+' '+tH(tS().getHours())+':'+lZ(tS().getMinutes())+':'+lZ(tS().getSeconds())+' '+aP(tS().getHours())";
+</SCRIPT>
+<SCRIPT language=JavaScript>dT();</SCRIPT></SPAN></SPAN></td>
+						  <td align="right" width="6">
+							<img border="0" src="../App_Themes/site/images/header/headerbar-red-corner2.jpg" width="6" height="42"></td>
+					  </tr>
+				  </table> 
+                                      
+</div>
+                                </td>
+                                <td valign="top" width="9">
+                                    <img border="0" src="../App_Themes/site/images/header/hearder-bar-seprator.jpg" width="9"
+                                        height="42"></td>
+                                <td valign="top">
+                                    <table border="0" width="100%" id="table4" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td width="14">
+                                                <img border="0" src="../App_Themes/site/images/header/hearder-bar-black-corner1.jpg"
+                                                    width="14" height="42"></td>
+                                            <td background="../App_Themes/site/images/header/headerbar-black-bg.jpg">
+                                                <table border="0" width="100%" id="table6" cellpadding="0">
+                                                    <tr>
+                                                        <td width="94">
+                                                            <a onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image73','','../App_Themes/site/images/header/newsbutton-over.jpg',1)"
+                                                                href="../portal/63502e94-42dd-45fe-a9ab-dd8a30c10b0d.aspx">
+                                                                <img src="../App_Themes/site/images/header/newsbutton-idle.jpg" alt="الأخبـار" name="Image73"
+                                                                    width="94" height="32" border="0"></a></td>
+                                                        <td width="179">
+                                                            <a target="_blank" href="https://mail.mofa.gov.ae" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image72','','../App_Themes/site/images/header/emailbutton-over.jpg',1)">
+                                                                <img src="../App_Themes/site/images/header/emailbutton-idle.jpg" alt="البريد الإلكتروني للموظفين"
+                                                                    name="Image72" width="179" height="32" border="0"></a></td>
+                                                          <td>&nbsp;</td>
+									<td width="330" align="left"><div id="ctl00_pnl_Search">
+	
+									
+									<table width="85%" border="0" cellspacing="0" cellpadding="0">
+                                      <tr>
+                                        <td align="left" class="mofacss"><span class="style4">بحـث</span></td>
+                                        <td align="center"><input name="ctl00$txt_Search" type="text" id="ctl00_txt_Search" class="field_style" size="21" /></td>
+                                        <td width="26" align="right"><input type="image" name="ctl00$ibtn_Search" id="ctl00_ibtn_Search" onmouseover="javascript:ChangeImage('ctl00_ibtn_Search','../App_Themes/site/images/buttons/greybutton-over.gif')" onmouseout="javascript:ChangeImage('ctl00_ibtn_Search','../App_Themes/site/images/buttons/greybutton-idle.gif')" src="../App_Themes/site/images/buttons/greybutton-idle.gif" border="0" /></td>
+                                        <td align="left" class="content_text"><a href="../portal/0c5c1a90-c6a6-434b-9a37-f5b30044c8d9.aspx" class="content_text style3">بحث متقدم</a></td>
+                                      </tr>
+                                    </table>
+                                    
+                                    
+</div></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td width="14">
+                                                <img border="0" src="../App_Themes/site/images/header/headerbar-black-corner2.jpg"
+                                                    width="14" height="42"></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td width="9" align="right">
+                        <img border="0" src="../App_Themes/site/images/header/headerbar-corner2.jpg" width="8"
+                            height="42"></td>
+                </tr>
+                <tr>
+                    <td width="9" align="left">
+                        <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+                    <td valign="top">
+                        <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+                    <td width="9" align="right">
+                        <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+                </tr>
+                <tr>
+                    <td width="9" align="left">
+                        <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+                    <td valign="top" background="../App_Themes/site/images/bars/repeatingbar.jpg">
+                        <img border="0" src="../App_Themes/site/images/bars/repeatingbar.jpg" width="9" height="9"></td>
+                    <td width="9" align="right">
+                        <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+                </tr>
+                <tr>
+                    <td width="9" align="left">
+                        <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+                    <td valign="top">
+                        <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+                    <td width="9" align="right">
+                        <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+                </tr>
+                <tr>
+                    <td width="9" align="left">
+                        &nbsp;</td>
+                    <td valign="top">
+                        <table border="0" width="100%" id="table8" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td width="200" valign="top">
+                                    <table border="0" width="100%" id="table9" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td valign="top" class="section_seprator">
+                                                
+<link href="../Css/mofacss.css" rel="stylesheet" rev="stylesheet" type="text/css" />
+<table cellpadding="0" cellspacing="0" border="0">
+
+        <tr><td width="200px" class='menu_main_selected'>
+            <a>الصفـحـة الرئيسيـة</a>
+            
+        </td></tr>
+    
+        <tr><td width="200px" class='menu_main'>
+            <a href="../portal/46464bd1-59aa-472a-859a-da742652689f.aspx">حكومــة الإمــارات</a>
+            
+        </td></tr>
+    
+        <tr><td width="200px" class='menu_main'>
+            <a href="../portal/4ca2f728-fa64-4285-89d3-0d451ce74e6c.aspx">نبذه عن الوزارة</a>
+            
+        </td></tr>
+    
+        <tr><td width="200px" class='menu_main'>
+            <a href="../portal/c9ddc4ba-a489-444a-a005-f41b2ab453fd.aspx">السيــاســة الخــارجيــة</a>
+            
+        </td></tr>
+    
+        <tr><td width="200px" class='menu_main'>
+            <a href="../portal/fab165b8-a36a-44e9-8ee9-9190a1a02d72.aspx">كلمــات وتصــاريح</a>
+            
+        </td></tr>
+    
+        <tr><td width="200px" class='menu_main'>
+            <a href="../portal/f8a010f2-7701-4080-abf5-df516ad972b0.aspx">خدمــات الوزارة</a>
+            
+        </td></tr>
+    
+        <tr><td width="200px" class='menu_main'>
+            <a href="../portal/a5a097ea-09c3-48a3-9b0e-ab46cac8ae7d.aspx">بين الأمــس واليـــوم</a>
+            
+        </td></tr>
+    
+        <tr><td width="200px" class='menu_main'>
+            <a href="../portal/512d518e-4c44-417c-9e51-ea6c2376ff07.aspx">الإمارات و حقوق الإنسان</a>
+            
+        </td></tr>
+    
+        <tr><td width="200px" class='menu_main'>
+            <a href="../portal/4e5078a1-6ef1-4e23-a475-4c9c917cc743.aspx">وظائف</a>
+            
+        </td></tr>
+    
+        <tr><td width="200px" class='menu_main'>
+            <a href="../portal/044f3b91-18a7-462c-a6ed-9b6df83bc0a6.aspx">روابط</a>
+            
+        </td></tr>
+    
+        <tr><td width="200px" class='menu_main'>
+            <a href="../portal/41b95ca9-985f-47f7-80cc-664122c62aea.aspx">تواجدي</a>
+            
+        </td></tr>
+    
+</table>
+<input type="hidden" name="ctl00$cc_sidebar$hfd_selectedPageID" id="ctl00_cc_sidebar_hfd_selectedPageID" value="24" />
+                                            </td>
+                                        </tr>
+                                        <tr><td>
+                                       
+<table cellpadding="0" cellspacing="0" border="0">
+
+<tr>
+                                            <td>
+                                                <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a target="_self" href="http://mofa.gov.ae/Mofa/portal/eade2edc-bceb-43b5-a473-03fc3bc4b32d.aspx" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','../Uploads/Banners/7_over.jpg',1)">
+                                                    <img src='../Uploads/Banners/7_idle.jpg' name="Image7"
+                                                        width="200" height="77" border="0"></a></td>
+                                        </tr>
+                                        
+<tr>
+                                            <td>
+                                                <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a target="_self" href="http://mofa.gov.ae/Mofa/portal/a67604c7-9d37-4331-a6ef-16e8feac2a6d.aspx" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image8','','../Uploads/Banners/8_over.jpg',1)">
+                                                    <img src='../Uploads/Banners/8_idle.jpg' name="Image8"
+                                                        width="200" height="77" border="0"></a></td>
+                                        </tr>
+                                        
+<tr>
+                                            <td>
+                                                <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a target="_blank" href="../Uploads/Banners/9_pdf.pdf" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image9','','../Uploads/Banners/9_over.jpg',1)">
+                                                    <img src='../Uploads/Banners/9_idle.jpg' name="Image9"
+                                                        width="200" height="77" border="0"></a></td>
+                                        </tr>
+                                        
+<tr>
+                                            <td>
+                                                <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a target="_self" href="http://mofa.gov.ae/Mofa/portal/83e83a24-73bc-443e-8463-f9bfab8a1590.aspx" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image10','','../Uploads/Banners/10_over.jpg',1)">
+                                                    <img src='../Uploads/Banners/10_idle.jpg' name="Image10"
+                                                        width="200" height="77" border="0"></a></td>
+                                        </tr>
+                                        
+<tr>
+                                            <td>
+                                                <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a target="_blank" href="http://mofa.gov.ae/Mofa/portal/6419ee4b-26d6-4f6a-85b0-038ff6dbaaf8.aspx" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image11','','../Uploads/Banners/11_over.jpg',1)">
+                                                    <img src='../Uploads/Banners/11_idle.jpg' name="Image11"
+                                                        width="200" height="77" border="0"></a></td>
+                                        </tr>
+                                        
+<tr>
+                                            <td>
+                                                <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a target="_blank" href="http://www.moh.gov.ae/ar/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image12','','../Uploads/Banners/12_over.jpg',1)">
+                                                    <img src='../Uploads/Banners/12_idle.jpg' name="Image12"
+                                                        width="200" height="77" border="0"></a></td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>
+                                                <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+                                        </tr>
+                                        
+</table>
+                                       </td></tr>
+                                        <tr id="ctl00_trpoll" style="display:block;">
+	<td align="right" valign="top" bgcolor="#FFFFFF">
+                                            <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" id="poll">
+                                                <tr>
+                                                    <th valign="top" scope="col">
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="heading_section"
+                                                            id="headingstyle3">
+                                                            <tr>
+                                                                <th align="right" valign="top" scope="col">
+                                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="heading_section" id="Table5">
+                                  <tr>
+                                    <th align="right" valign="top" background="../App_Themes/site/images/bars/heading-bar-bg.jpg" scope="col"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                          <th width="8" scope="col"><img src="../App_Themes/site/images/NewImages/heading_bullet_right.jpg" width="6" height="33" /></th>
+                                          <th align="right" class="heading_box" scope="col">التصويت للموقع</th>
+                                        </tr>
+                                    </table></th>
+                                  </tr>
+                              </table>
+                                                                </th>
+                                                            </tr>
+                                                        </table>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" valign="top" bgcolor="#F8F8F8">
+                                                        <table width="90%" border="0" cellspacing="2" cellpadding="0">
+                                                            <tr>
+                                                                <th align="right" class="news_heading" scope="col">
+                                                                    <span id="ctl00_lbl_PollQuestion">ما رأيك بموقع وزارة الخارجية ؟</span></th>
+                                                            </tr>
+                                                        </table>
+                                                        <a href="#"></a>
+                                                    </td>
+                                                </tr>
+                                                <tr><td align="center" valign="top" bgcolor="#F8F8F8">
+                                                
+                                                <table cellpadding="0" cellspacing="0" width="100%">
+                                                <tr>
+                                                    <td align="center" valign="top" bgcolor="#F8F8F8">
+                                                        <table width="90%" border="0" cellspacing="6" cellpadding="0">
+                                                            <tr>
+                                                                <th width="24" align="right" scope="col">
+                                                                    <span id="ctl00_rdo_listPoll" class="content_text" style="display:inline-block;"><input id="ctl00_rdo_listPoll_0" type="radio" name="ctl00$rdo_listPoll" value="24" checked="checked" onclick="javascript:SelectMe('24');" /><label for="ctl00_rdo_listPoll_0">ممتاز</label><br /><input id="ctl00_rdo_listPoll_1" type="radio" name="ctl00$rdo_listPoll" value="25" onclick="javascript:SelectMe('25');" /><label for="ctl00_rdo_listPoll_1">جيد جداً</label><br /><input id="ctl00_rdo_listPoll_2" type="radio" name="ctl00$rdo_listPoll" value="26" onclick="javascript:SelectMe('26');" /><label for="ctl00_rdo_listPoll_2">جيد</label><br /><input id="ctl00_rdo_listPoll_3" type="radio" name="ctl00$rdo_listPoll" value="27" onclick="javascript:SelectMe('27');" /><label for="ctl00_rdo_listPoll_3">مقبول</label></span>
+                                                                </th>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" valign="top" bgcolor="#F8F8F8">
+                                                        <table width="90%" border="0" cellspacing="6" cellpadding="0">
+                                                            <tr>
+                                                                <th align="right" scope="col">
+                                                                    <input type="submit" name="ctl00$btn_Submit" value="تصويـت" onclick="return SetVote();" id="ctl00_btn_Submit" class="button_green" />
+                                                        
+                                                                </th>
+                                                                <th align="left" scope="col">
+                                                                    <input type="submit" name="ctl00$btn_Results" value="النتائج" id="ctl00_btn_Results" class="button_red" />
+                                                                </th>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                </table>
+                                                
+                                                <input type="hidden" name="ctl00$hfd_GalleryIndex" id="ctl00_hfd_GalleryIndex" />
+        <input type="hidden" name="ctl00$hfd_Gallery" id="ctl00_hfd_Gallery" />
+        
+         <input type="hidden" name="ctl00$hfd_VoteID" id="ctl00_hfd_VoteID" value="7" />
+        <input type="submit" name="ctl00$cc1_CBE_MPE_Placeholder" value="" id="ctl00_cc1_CBE_MPE_Placeholder" style="display:none;" />
+        
+        <div id="ctl00_pnl_results">
+		
+            <table width="500" border="0" align="center" cellpadding="0" cellspacing="0" dir="rtl">
+                <tr>
+                    <td height="41" background="../App_Themes/site/Magazineimages/boximages/topimage.gif">
+                        <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td class="heading_box">
+                                    النتائج</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td>
+                                    <img src="../App_Themes/site/Magazineimages/boximages/topcor.gif" width="500" height="21" /></td>
+                            </tr>
+                            <tr>
+                                <td valign="top" background="../App_Themes/site/Magazineimages/boximages/innerbg.gif">
+                                    <table width="90%" height="150" border="0" align="center" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td valign="top" class="innergreen">
+                                                <span id="ctl00_lbl_Question">ما رأيك بموقع وزارة الخارجية ؟</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" valign="top" style="background-repeat: no-repeat;">
+                                                <table width="443" height="39" border="0" cellpadding="0" cellspacing="0">
+                                                    <tr>
+                                                        <td background="../App_Themes/site/Magazineimages/boximages/border.gif" style="background-repeat: no-repeat;">
+                                                            <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    
+                                                                            <td width="25%" align="right" class="innerbold">
+                                                                                <span id="ctl00_rpt_Answers_ctl00_lbl_Answer">ممتاز</span></td>
+                                                                        
+                                                                            <td width="25%" align="right" class="innerbold">
+                                                                                <span id="ctl00_rpt_Answers_ctl01_lbl_Answer">جيد جداً</span></td>
+                                                                        
+                                                                            <td width="25%" align="right" class="innerbold">
+                                                                                <span id="ctl00_rpt_Answers_ctl02_lbl_Answer">جيد</span></td>
+                                                                        
+                                                                            <td width="25%" align="right" class="innerbold">
+                                                                                <span id="ctl00_rpt_Answers_ctl03_lbl_Answer">مقبول</span></td>
+                                                                        
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                    <tr>
+                                                        
+                                                                <td width="145" align="right" class="innerred">
+                                                                    71.43%
+                                                                </td>
+                                                            
+                                                                <td width="145" align="right" class="innerred">
+                                                                    9.52%
+                                                                </td>
+                                                            
+                                                                <td width="145" align="right" class="innerred">
+                                                                    14.29%
+                                                                </td>
+                                                            
+                                                                <td width="145" align="right" class="innerred">
+                                                                    4.76%
+                                                                </td>
+                                                            
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../App_Themes/site/Magazineimages/boximages/botcor.gif" width="500" height="47" /></td>
+                            </tr>
+                            <tr>
+                                <td align="left" style="cursor: pointer; background-color: White;">
+                                    <span id="ctl00_lbl_cross"><b><font face="Arial">X</font></b></span></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        
+	</div>
+        <input type="hidden" name="ctl00$hfd_TotalCount" id="ctl00_hfd_TotalCount" value="21" />
+        
+                                                  
+                                                </td></tr>
+                                                
+                                            </table>
+                                        
+                                        </td>
+</tr>
+
+                                        <tr id="ctl00_trpoll2" style="display:block;">
+	<td>
+                                                <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+</tr>
+
+                                        <tr>
+                                            <td valign="top">
+                                               
+                                                    <table border="0" width="100%" id="table44" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td>
+                                                                <img border="0" src="../App_Themes/site/images/bannerbuttons/picturegallery.jpg"
+                                                                    width="200" height="44"></td>
+                                                        </tr>
+	<tr class="picturegallery_box">
+								  <td valign="top">
+                                      <div id="ctl00_PLgallery">
+	
+                                     
+									<div align="center">
+									  <table width="197" border="0" cellpadding="0" cellspacing="6" id="table45">
+                                        <tr>
+                                          <td align="center"><a href="javascript:Gallery.Elrage();">
+                                              <img id="ctl00_imgsmall" class="image_border" src="../uploads/zone/gallery/13_1.jpg" border="0" height="138" width="197" />
+                                          </a>
+                                              <img id="ImgLoader" style="display:none" src="../App_Themes/site/images/icons/loading_anim.gif" /></td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" valign="top"><table border="0" width="100%" id="table46" cellpadding="0">
+                                              <tr>
+                                                <td style="height: 17px"><a href="javascript:Gallery.Prev()" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image86','','../App_Themes/site/images/picturegallery/picgallery-prevbt-over.jpg',1)"><img id="ImgPrev" src="../App_Themes/site/images/picturegallery/picgallery-prevbt-idle.jpg" alt="Previous Pic" name="Image86" width="51" height="17" border="0"></a></td>
+                                                <td align="center" style="height: 17px"><a href="javascript:Gallery.Elrage();" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image87','','../App_Themes/site/images/picturegallery/picgallery-largebt-over.jpg',1)"><img id="ImgElarg" src="../App_Themes/site/images/picturegallery/picgallery-largebt-idle.jpg" alt="enlarge picture" name="Image87" width="51" height="17" border="0"></a></td>
+                                                <td align="left" style="height: 17px"><a href="javascript:Gallery.Next()" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image85','','../App_Themes/site/images/picturegallery/picgallery-nextbt-over.jpg',1)"><img id="ImgNext" src="../App_Themes/site/images/picturegallery/picgallery-nextbt-idle.jpg" alt="next pic" name="Image85" width="51" height="17" border="0"></a></td>
+                                              </tr>
+                                          </table></td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center" valign="top"><p align="right" class="content_text"><span id="ImgGalleryTitle"></span></td>
+                                        </tr>
+                                      </table>
+									</div>
+									 
+</div>
+								  </td>
+								</tr>
+                        </table>
+                        
+                    </td>
+                </tr>
+            </table>
+            </td>
+            <td width="9">
+                <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+            <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      
+                      <tr>
+                        <td valign="top">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" id="table48">
+                          <tr>
+                            <td align="center" valign="top">
+                
+<script language="javascript" type="text/javascript" src="../javascript/MainNews.js"></script>
+<script language="javascript" type="text/javascript">
+      function popupw(strURL,intWinW,intWinH)
+{	
+
+		var strProperties = "menubar=no, resizable=no,  "; 
+
+
+		var intScreenW = parseInt(screen.width, 10); 
+		var intScreenH = parseInt(screen.Height, 10); 
+		var intWinT = (intScreenH - intWinH)/2; 
+		var intWinL = (intScreenW - intWinW)/2;
+		strProperties += 'height=' + intWinH + ', width=' + intWinW + ', top=' + intWinT + ', left=' + intWinL + ', status=no,scrollbars=no,toolbar=no,location=no'; 
+		var winObject = window.open(strURL, 'PageServices', strProperties, false); 
+//		var winObject=window.open("../services/postFeedbackAction.aspx","","height="+intWinH+",width="+intWinW+",status=no,toolbar=no,menubar=no,location=no,scrollbars=yes");
+		winObject.focus(); 
+	
+}
+
+
+</script>
+					<table border="0" width="100%" id="table11" cellspacing="0" cellpadding="0">
+						<tr style="display:none;">
+							<td valign="top">
+							<table width="100%" cellpadding="0" cellspacing="0" class="section_box_white" id="table12" style="border-collapse: collapse">
+	  <tr>
+									<td valign="top" class="section_box_white" align="right"><table border="0" width="100%" id="table13" cellspacing="0" cellpadding="0">
+                                      <tr>
+                                        <td width="114"><img id="ctl00_ContentPlaceHolderEmpty_img_Minister" src="../Uploads/zone/25.jpg" height="114" width="114" border="0" /></td>
+                                        <td valign="top"><table border="0" width="100%" id="table14" cellpadding="0" cellspacing="0">
+                                          <tr>
+                                              <td><img border="0" src="../App_Themes/site/images/general/ministerwords-heading.jpg" width="127" height="30"></td>
+                                          </tr>
+                                            <tr>
+                                              <td class="content_text" style="text-align:justify;"><span dir="RTL"> </span><span dir="RTL"><span dir="RTL"> </span>&quot<span id="ctl00_ContentPlaceHolderEmpty_lbl_MinisterSummary">يطيب لي  بمناسبة حلول الذكرى الثامنة والثلاثين لقيام الاتحاد أن أزف أسمى آيات التهاني والتبريكات إلى مقام صاحب السمو الشيخ خليفة بن زايد آل نهيان - حفظه الله -، وإلى مقام صاحب السمو الشيخ محمد بن راشد آل مكتوم نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي - رعاه الله -، وإلى إخوانهم أصحاب السمو أعضاء المجلس الأعلى للاتحاد حكام الإمارات، وإلى الفريق أول سمو الشيخ محمد بن زايد آل نهيان ولي عهد أبوظبي نائب القائد الأعلى للقوات المسلحة، وإلى شعب الإمارات الكريم بهذه المناسبة العزيزة على قلوبنا جميعا.</span> </span></td>
+                                          </tr>
+                                            <tr>
+                                              <td class="content_text"><a href="../portal/2d227a46-ea96-4490-9683-30bd0d4622ca.aspx" id="ctl00_ContentPlaceHolderEmpty_anc_MinisterWord"><img onMouseOut="javascript:ChangeImage('Image90','../App_Themes/site/images/buttons/more.gif')" onMouseOver="javascript:ChangeImage('Image90','../App_Themes/site/images/buttons/more_over.gif')" src="../App_Themes/site/images/buttons/more.gif" alt="Minister's word" name="Image90" width="76" height="21" border="0"></a></td>
+                                            </tr>
+                                        </table></td>
+                                      </tr>
+                                    </table>
+                                    
+                                  
+                                    </td>
+							  </tr>
+							</table>
+						  </td>
+						</tr>
+						<tr style="display:none;">
+							<td>
+							<img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+						</tr>
+						<tr>
+							<td valign="top">
+							<table border="0" width="100%" id="table15" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top">
+									<table border="0" width="100%" id="table16" cellspacing="0" cellpadding="0">
+										<tr>
+											<td valign="top" background="../App_Themes/site/images/bars/heading-bar-bg.jpg" width="7">
+											
+											<img border="0" src="../App_Themes/site/images/bars/heading-bar-corner1.jpg" width="7" height="33"></td>
+											
+											</td>
+											<td valign="top" background="../App_Themes/site/images/bars/heading-bar-bg.jpg">
+											<table border="0" width="100%" id="table22" cellspacing="0" cellpadding="0">
+												<tr>
+													<td align="right">
+													<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td align="right"><img border="0" src="../App_Themes/site/images/bars/news-heading.jpg" width="116" height="33"></td><td><table cellpadding="0" cellspacing="0" border="0" width="100%">
+											<tr><td class="bullet" align="left"><a style="color:#99FF00; font-size:11.5pt;" id="a1"  href="javascript:MainNews.Selected(0)">1</a>&nbsp;&bull;
+											<a id="a2" href="javascript:MainNews.Selected(1)">2</a>&nbsp;&bull;
+											<a id="a3" href="javascript:MainNews.Selected(2)">3</a>&nbsp;&bull;
+											<a id="a4" href="javascript:MainNews.Selected(3)">4</a>&nbsp;&bull;
+											<a id="a5" href="javascript:MainNews.Selected(4)">5</a></td>
+											</tr></table></td></tr></table>
+													</td>
+													<td width="150">
+													<table border="0" width="100%" id="table23" cellspacing="0" cellpadding="0">
+														<tr>
+															<td align="center" style="height: 22px"><a href="javascript:MainNews.Prev();" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image78','','../App_Themes/site/images/buttons/greenbutton-over.gif',1)"><img src="../App_Themes/site/images/buttons/greenbutton-idle.gif" alt="السابق" name="Image78" width="22" height="22" border="0"></a></td>
+														  <td align="center" style="height: 22px"><a href="javascript:MainNews.AutoStatus();"  onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('ImgAuto','','../App_Themes/site/images/buttons/greenbutton-pause-over.gif',1)" ><img id="ImgAuto" src="../App_Themes/site/images/buttons/greenbutton-pause-idle.gif" title='توقف'  width="22" height="22" border="0"></a></td>
+															<td align="center" style="height: 22px"><a href="javascript:MainNews.Next();" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image79','','../App_Themes/site/images/buttons/greenbutton-back-over.gif',1)"><img src="../App_Themes/site/images/buttons/greenbutton-back-idle.gif" alt="التالي" name="Image79" width="22" height="22" border="0"></a></td>
+													  </tr>
+													</table>
+													</td>
+												</tr>
+											</table>
+											</td>
+											<td valign="top" background="../App_Themes/site/images/bars/heading-bar-bg.jpg" width="7">
+											<img border="0" src="../App_Themes/site/images/bars/heading-bar-corner2.jpg" width="7" height="33"></td>
+										</tr>
+									</table>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									<img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+								</tr>
+								<tr>
+									<td valign="top">
+									<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#F8F8F8" id="table17" style="border-collapse: collapse">
+					    <tr>
+										  <td valign="top" class="section_box_grey"><table border="0" id="table18" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                              <td valign="top" width="251"><table border="0" width="100%" id="table19" cellspacing="0" cellpadding="0">
+                                                  <tr>
+                                                    <td><img style="display:none" id="ImgMainNews" src="../App_Themes/site/images/news/pic-size-big.jpg" width="251" height="179" border="0" class="image_border">
+                                                    <IMG id="LoaderMainNews" src="../App_Themes/site/images/icons/loading_anim.gif" />
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td id="ImgCommMainNews" class="news_pic_text"></td>
+                                                  </tr>
+                                              </table></td>
+                                              <td valign="top"><table border="0" width="100%" id="table20" cellspacing="0" cellpadding="0">
+                                                  <tr>
+                                                    <td id="HeadMainNews" class="news_heading"> </td>
+                                                  </tr>
+                                                  
+                                                  <tr>
+                                                    <td id="SumarryMainNews" class="news_text"></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td valign="top"><table border="0" width="100%" id="table21" cellspacing="2" cellpadding="0">
+                                                      <tr>
+                                                          <td><a  href="javascript:MainNews.AutoStatus();"  id="UrlMainNews" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image81','','../App_Themes/site/images/buttons/more_over.gif',1)"><img src="../App_Themes/site/images/buttons/more.gif" alt="المزيــد" name="Image81" width="76" height="21" border="0"></a></td>
+                                                      <td align="left" class="news_date">
+															<p style="text-align: left"><span id="UpdateMainNews"></span></p></td>
+                                                        </tr>
+                                                    </table></td>
+                                                  </tr>
+                                              </table></td>
+                                            </tr>
+                                          </table>
+                                             
+                                          
+                                          </td>
+									  </tr>
+									</table>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									<img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+								</tr>
+								<tr>
+									<td valign="top">
+									<table border="1" width="100%" id="table24" cellspacing="0" cellpadding="0" style="border-collapse: collapse" bordercolor="#EDEDED">
+										<tr>
+											<td valign="top">
+											<div align="center">
+												<table border="0" width="100%" id="table25" cellspacing="0" cellpadding="0">
+													
+													<tr>
+													  <td valign="top" align="right" class="news_heading"><table border="0" width="100%" id="table27" cellspacing="3" cellpadding="0">
+                                                        <tr>
+                                                          <td width="118" valign="top"><img src="../Uploads/Files/2010/01/05/15528.gif" width="118" height="89" border="0" class="image_border"></td>
+                                                          <td valign="top"><table border="0" width="100%" id="table28" cellpadding="0">
+                                                              <tr>
+                                                                <td class="news_heading_woborder"><span id="ctl00_ContentPlaceHolderEmpty_rpt_News_ctl00_lbl_heading">خليفة يصدر قانون مؤسسة -الرعاية الاجتماعية والقصَّر- في أبوظبي</span></td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td class="news_text"><span id="ctl00_ContentPlaceHolderEmpty_rpt_News_ctl00_lbl_summary">أصدر صاحب السمو الشيخ خليفة بن زايد آل نهيان رئيس الدولة، حفظه الله، بصفته حاكماً لإمارة أبوظبي القانون رقم 19 لسنة 2009 لإنشاء مؤسسة الرعاية الاجتماعية وشؤون القُصّر.</span></td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td><table border="0" width="100%" id="table29" cellspacing="2" cellpadding="0">
+                                                                    <tr>
+                                                                      <td><a href="4cee82d3-97b7-466c-a64f-b276df7e43a0.aspx"><img onMouseOut="javascript:ChangeImage('11611','../App_Themes/site/images/buttons/more.gif')" onMouseOver="javascript:ChangeImage('11611','../App_Themes/site/images/buttons/more_over.gif')" src="../App_Themes/site/images/buttons/more.gif" alt="المزيــد" name="11611" width="76" height="21" border="0"></a></td>
+                                                                      <td align="left" class="news_date">
+																		<p style="text-align: left"><span id="ctl00_ContentPlaceHolderEmpty_rpt_News_ctl00_lbl_NewsDate">أخر تحديث : 05/01/2010   م الساعة 08:03 صباحاً</span></td>
+                                                                    </tr>
+                                                                </table></td>
+                                                              </tr>
+                                                          </table></td>
+                                                        </tr>
+                                                      </table></td>
+												  </tr>
+													
+													<tr>
+													  <td valign="top" align="right" class="news_heading"><table border="0" width="100%" id="table27" cellspacing="3" cellpadding="0">
+                                                        <tr>
+                                                          <td width="118" valign="top"><img src="../Uploads/Files/2010/01/04/15494.gif" width="118" height="89" border="0" class="image_border"></td>
+                                                          <td valign="top"><table border="0" width="100%" id="table28" cellpadding="0">
+                                                              <tr>
+                                                                <td class="news_heading_woborder"><span id="ctl00_ContentPlaceHolderEmpty_rpt_News_ctl01_lbl_heading">محمد بن راشد يلتقي مسيرة كرنفالية بمناسبة الذكرى الرابعة لتوليه مقاليد الحكم في دبي</span></td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td class="news_text"><span id="ctl00_ContentPlaceHolderEmpty_rpt_News_ctl01_lbl_summary">التقى صاحب السمو الشيخ محمد بن راشد آل مكتوم نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي رعاه الله أمس المسيرة الكرنفالية الحاشدة التي انطلقت عند شاطئ الممزر بمناسبة الذكرى الرابعة لتولي سموه مقاليد الحكم في إمارة دبي التي تصادف اليوم الاثنين الرابع من يناير.</span></td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td><table border="0" width="100%" id="table29" cellspacing="2" cellpadding="0">
+                                                                    <tr>
+                                                                      <td><a href="878a2682-641e-4ca2-aac8-bfd43294a3f6.aspx"><img onMouseOut="javascript:ChangeImage('11594','../App_Themes/site/images/buttons/more.gif')" onMouseOver="javascript:ChangeImage('11594','../App_Themes/site/images/buttons/more_over.gif')" src="../App_Themes/site/images/buttons/more.gif" alt="المزيــد" name="11594" width="76" height="21" border="0"></a></td>
+                                                                      <td align="left" class="news_date">
+																		<p style="text-align: left"><span id="ctl00_ContentPlaceHolderEmpty_rpt_News_ctl01_lbl_NewsDate">أخر تحديث : 04/01/2010   م الساعة 07:24 صباحاً</span></td>
+                                                                    </tr>
+                                                                </table></td>
+                                                              </tr>
+                                                          </table></td>
+                                                        </tr>
+                                                      </table></td>
+												  </tr>
+													
+													<tr>
+													  <td valign="top" align="right" class="news_heading"><table border="0" width="100%" id="table27" cellspacing="3" cellpadding="0">
+                                                        <tr>
+                                                          <td width="118" valign="top"><img src="../Uploads/Files/2010/01/04/15492.gif" width="118" height="89" border="0" class="image_border"></td>
+                                                          <td valign="top"><table border="0" width="100%" id="table28" cellpadding="0">
+                                                              <tr>
+                                                                <td class="news_heading_woborder"><span id="ctl00_ContentPlaceHolderEmpty_rpt_News_ctl02_lbl_heading">رئيس الدولة يهنئ البشير بعيد استقلال السودان</span></td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td class="news_text"><span id="ctl00_ContentPlaceHolderEmpty_rpt_News_ctl02_lbl_summary">بعث صاحب السمو الشيخ خليفة بن زايد آل نهيان رئيس الدولة حفظه الله برقية تهنئة إلى الرئيس عمر حسن أحمد البشير رئيس جمهورية السودان، وذلك بمناسبة عيد استقلال بلاده.</span></td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td><table border="0" width="100%" id="table29" cellspacing="2" cellpadding="0">
+                                                                    <tr>
+                                                                      <td><a href="ff8b4326-e650-4b23-b05a-b2dbf8e57ed5.aspx"><img onMouseOut="javascript:ChangeImage('11593','../App_Themes/site/images/buttons/more.gif')" onMouseOver="javascript:ChangeImage('11593','../App_Themes/site/images/buttons/more_over.gif')" src="../App_Themes/site/images/buttons/more.gif" alt="المزيــد" name="11593" width="76" height="21" border="0"></a></td>
+                                                                      <td align="left" class="news_date">
+																		<p style="text-align: left"><span id="ctl00_ContentPlaceHolderEmpty_rpt_News_ctl02_lbl_NewsDate">أخر تحديث : 04/01/2010   م الساعة 07:21 صباحاً</span></td>
+                                                                    </tr>
+                                                                </table></td>
+                                                              </tr>
+                                                          </table></td>
+                                                        </tr>
+                                                      </table></td>
+												  </tr>
+													
+													<tr>
+													  <td valign="top" align="right" class="news_heading"><table border="0" width="100%" id="table27" cellspacing="3" cellpadding="0">
+                                                        <tr>
+                                                          <td width="118" valign="top"><img src="../Uploads/Files/2010/01/03/15472.gif" width="118" height="89" border="0" class="image_border"></td>
+                                                          <td valign="top"><table border="0" width="100%" id="table28" cellpadding="0">
+                                                              <tr>
+                                                                <td class="news_heading_woborder"><span id="ctl00_ContentPlaceHolderEmpty_rpt_News_ctl03_lbl_heading">محمد بن راشد يهدي العالم معلماً حضارياً جديداً</span></td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td class="news_text"><span id="ctl00_ContentPlaceHolderEmpty_rpt_News_ctl03_lbl_summary">يفتتح صاحب السمو الشيخ محمد بن راشد آل مكتوم نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي، رعاه الله، غداً الاثنين -برج دبي- أطول بناء في العالم بارتفاع يتجاوز 800 متر مدشناً بذلك إنجازاً حضارياً فريداً هو الأبرز ليس فقط في سجل إنجازات دبي بل في تاريخ البشرية الحديث ومضيفاً إلى دبي علامة فارقة ومعلماً جديداً يرسخ من مكانتها كمدينة إماراتية الهوية عربية الانتماء عالمية الطابع والطموحات.</span></td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td><table border="0" width="100%" id="table29" cellspacing="2" cellpadding="0">
+                                                                    <tr>
+                                                                      <td><a href="e7b9210c-21e2-4db8-9f12-380d94286c74.aspx"><img onMouseOut="javascript:ChangeImage('11575','../App_Themes/site/images/buttons/more.gif')" onMouseOver="javascript:ChangeImage('11575','../App_Themes/site/images/buttons/more_over.gif')" src="../App_Themes/site/images/buttons/more.gif" alt="المزيــد" name="11575" width="76" height="21" border="0"></a></td>
+                                                                      <td align="left" class="news_date">
+																		<p style="text-align: left"><span id="ctl00_ContentPlaceHolderEmpty_rpt_News_ctl03_lbl_NewsDate">أخر تحديث : 03/01/2010   م الساعة 07:39 صباحاً</span></td>
+                                                                    </tr>
+                                                                </table></td>
+                                                              </tr>
+                                                          </table></td>
+                                                        </tr>
+                                                      </table></td>
+												  </tr>
+													
+													<tr>
+													  <td valign="top" align="right" class="news_heading"><table border="0" width="100%" id="table27" cellspacing="3" cellpadding="0">
+                                                        <tr>
+                                                          <td width="118" valign="top"><img src="../Uploads/Files/2010/01/03/15474.gif" width="118" height="89" border="0" class="image_border"></td>
+                                                          <td valign="top"><table border="0" width="100%" id="table28" cellpadding="0">
+                                                              <tr>
+                                                                <td class="news_heading_woborder"><span id="ctl00_ContentPlaceHolderEmpty_rpt_News_ctl04_lbl_heading">محمد بن راشد يثني على تنظيم مؤتمر الاحتراف</span></td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td class="news_text"><span id="ctl00_ContentPlaceHolderEmpty_rpt_News_ctl04_lbl_summary">شهد صاحب السمو الشيخ محمد بن راشد آل مكتوم نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي، رعاه الله، صباح أمس فعاليات مؤتمر دبي الرياضي الدولي الرابع حول تحديات الاحتراف، برعاية سمو الشيخ حمدان بن محمد بن راشد آل مكتوم ولي عهد دبي رئيس المجلس التنفيذي رئيس مجلس دبي الرياضي، وبحضور سمو الشيخ منصور بن محمد بن راشد آل مكتوم ممثل راعي المؤتمر.</span></td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td><table border="0" width="100%" id="table29" cellspacing="2" cellpadding="0">
+                                                                    <tr>
+                                                                      <td><a href="80bf2543-c320-47e6-8c71-d8a4703c1ec6.aspx"><img onMouseOut="javascript:ChangeImage('11574','../App_Themes/site/images/buttons/more.gif')" onMouseOver="javascript:ChangeImage('11574','../App_Themes/site/images/buttons/more_over.gif')" src="../App_Themes/site/images/buttons/more.gif" alt="المزيــد" name="11574" width="76" height="21" border="0"></a></td>
+                                                                      <td align="left" class="news_date">
+																		<p style="text-align: left"><span id="ctl00_ContentPlaceHolderEmpty_rpt_News_ctl04_lbl_NewsDate">أخر تحديث : 03/01/2010   م الساعة 07:25 صباحاً</span></td>
+                                                                    </tr>
+                                                                </table></td>
+                                                              </tr>
+                                                          </table></td>
+                                                        </tr>
+                                                      </table></td>
+												  </tr>
+													
+													<tr>
+													  <td valign="top" align="right" class="news_heading"><table border="0" width="100%" id="table27" cellspacing="3" cellpadding="0">
+                                                        <tr>
+                                                          <td width="118" valign="top"><img src="../Uploads/Files/2010/01/01/15444.jpg" width="118" height="89" border="0" class="image_border"></td>
+                                                          <td valign="top"><table border="0" width="100%" id="table28" cellpadding="0">
+                                                              <tr>
+                                                                <td class="news_heading_woborder"><span id="ctl00_ContentPlaceHolderEmpty_rpt_News_ctl05_lbl_heading">القرطاسي يستقبل سفير كندا والقائم بأعمال سفارة إريتريا</span></td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td class="news_text"><span id="ctl00_ContentPlaceHolderEmpty_rpt_News_ctl05_lbl_summary">استقبل السفير سلطان محمد القرطاسي مدير إدارة الشؤون القنصلية في وزارة الخارجية في مكتبه كنيث لويس سفير كندا المعين لدى الدولة بمناسبة تسلمه مهام منصبه الجديد .كما استقبل القرطاسي الأمين نافع يوسف القائم بأعمال سفارة أريتريا لدى الدولة واستعرضا العلاقات الثنائية بين بلديهما وإمكانات تعزيزها وبحثا القضايا ذات الاهتمام المشترك .</span></td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td><table border="0" width="100%" id="table29" cellspacing="2" cellpadding="0">
+                                                                    <tr>
+                                                                      <td><a href="33b3f27c-e00a-433a-8c64-f30b4e7e6033.aspx"><img onMouseOut="javascript:ChangeImage('11545','../App_Themes/site/images/buttons/more.gif')" onMouseOver="javascript:ChangeImage('11545','../App_Themes/site/images/buttons/more_over.gif')" src="../App_Themes/site/images/buttons/more.gif" alt="المزيــد" name="11545" width="76" height="21" border="0"></a></td>
+                                                                      <td align="left" class="news_date">
+																		<p style="text-align: left"><span id="ctl00_ContentPlaceHolderEmpty_rpt_News_ctl05_lbl_NewsDate">أخر تحديث : 01/01/2010   م الساعة 03:41 مساءً</span></td>
+                                                                    </tr>
+                                                                </table></td>
+                                                              </tr>
+                                                          </table></td>
+                                                        </tr>
+                                                      </table></td>
+												  </tr>
+													
+													<tr>
+													  <td valign="top" align="right" class="news_heading"><table border="0" width="100%" id="table27" cellspacing="3" cellpadding="0">
+                                                        <tr>
+                                                          <td width="118" valign="top"><img src="../Uploads/Files/2010/01/01/15442.jpg" width="118" height="89" border="0" class="image_border"></td>
+                                                          <td valign="top"><table border="0" width="100%" id="table28" cellpadding="0">
+                                                              <tr>
+                                                                <td class="news_heading_woborder"><span id="ctl00_ContentPlaceHolderEmpty_rpt_News_ctl06_lbl_heading">صحيفة باكستانية تشيد بكلمة رئيس الدولة في اليوم الوطني 38</span></td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td class="news_text"><span id="ctl00_ContentPlaceHolderEmpty_rpt_News_ctl06_lbl_summary">نشرت صحيفة -جرأت- الباكستانية في عددها الاسبوعي الصادر أمس، قراءة في كلمة صاحب السمو الشيخ خليفة بن زايد آل نهيان رئيس الدولة، حفظه الله، أعدها الصحافي الباكستاني والمحلل الدفاعي محمود الحسن خان، واستهلها بقوله: إن كلمة صاحب السمو الشيخ خليفة بن زايد آل نهيان بمناسبة اليوم الوطني الثامن والثلاثين لدولة الإمارات التي وجهها الى شعب الإمارات كانت رائعة ومدروسة .</span></td>
+                                                              </tr>
+                                                              <tr>
+                                                                <td><table border="0" width="100%" id="table29" cellspacing="2" cellpadding="0">
+                                                                    <tr>
+                                                                      <td><a href="bfb4a155-4dcb-42cf-abe4-d3529d25ba2e.aspx"><img onMouseOut="javascript:ChangeImage('11544','../App_Themes/site/images/buttons/more.gif')" onMouseOver="javascript:ChangeImage('11544','../App_Themes/site/images/buttons/more_over.gif')" src="../App_Themes/site/images/buttons/more.gif" alt="المزيــد" name="11544" width="76" height="21" border="0"></a></td>
+                                                                      <td align="left" class="news_date">
+																		<p style="text-align: left"><span id="ctl00_ContentPlaceHolderEmpty_rpt_News_ctl06_lbl_NewsDate">أخر تحديث : 01/01/2010   م الساعة 03:36 مساءً</span></td>
+                                                                    </tr>
+                                                                </table></td>
+                                                              </tr>
+                                                          </table></td>
+                                                        </tr>
+                                                      </table></td>
+												  </tr>
+													
+												</table>
+											</div>
+											</td>
+										</tr>
+									</table>
+									</td>
+								</tr>
+							</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+							<img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+						</tr>
+					
+					
+					
+									<tr>
+							<td valign="top">
+							<table border="0" width="100%" id="table1" cellspacing="0" cellpadding="0">
+								<tr>
+									<td bgcolor="#F7F7F7" valign="top">
+									<div align="center">
+										<table border="0" width="185" id="table2" cellspacing="6" cellpadding="0">
+											<tr>
+												<td>
+												<img border="0" src="../App_Themes/site/images/bannerbuttons/embassies.jpg" width="185" height="53"></td>
+											</tr>
+											<tr>
+												<td align="right" valign="top"><a  href="javascript:popupw('../pages/Map/index.html',1003,700)"  onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image82','','../App_Themes/site/images/buttons/button_g_idle.jpg',1)"><img src="../App_Themes/site/images/buttons/button_g_idel.jpg" alt="اضغط هنا" name="Image82" width="110" height="21" border="0"></a></td>
+										  </tr>
+										</table>
+									</div>
+									</td>
+									<td width="9">
+									<img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+									<td bgcolor="#F7F7F7" valign="top"><table border="0" width="185" id="table3" cellspacing="6" cellpadding="0">
+                                      <tr>
+                                        <td><img border="0" src="../App_Themes/site/images/bannerbuttons/aboutuae.jpg" width="184" height="52"></td>
+                                      </tr>
+                                      <tr>
+                                        <td align="right" valign="top"><a href="../portal/4cd46486-d16e-4e66-8f90-7c13e5d9620b.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image71','','../App_Themes/site/images/buttons/button_r_over.jpg',1)"><img src="../App_Themes/site/images/buttons/button_r_idle.jpg" alt="اضغط هنا" name="Image71" width="110" height="21" border="0"></a></td>
+                                      </tr>
+                                    </table></td>
+								  <td width="9">
+									<img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+									<td bgcolor="#F7F7F7" valign="top">
+									<div align="center" >
+										<table border="0" width="200" id="table4" cellspacing="4" cellpadding="0">
+                                          <tr>
+                                            <td><img border="0" src="../App_Themes/site/images/bannerbuttons/dilopmatoffices.jpg" width="184" height="52"></td>
+                                          </tr>
+                                          <tr>
+                                            <td valign="top" align="right"><table border="0" width="100%" id="table5" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                  <td valign="top">
+                                                  <select id="DP_dilopmatoffices" class="field_style"  style="width:180px;height:21px;">
+                                                      
+                                                      <option value="328">سفارة- أثيوبيا</option>
+                                                      
+                                                      <option value="329">قنصلية -  أثيوبيا</option>
+                                                      
+                                                      <option value="330">سفارة -أذربيجان</option>
+                                                      
+                                                      <option value="331">قنصلية -أذربيجان</option>
+                                                      
+                                                      <option value="332">سفارة -أرتريا</option>
+                                                      
+                                                      <option value="333">قنصلية أرتريا</option>
+                                                      
+                                                      <option value="334">سفارة -الارجنتين</option>
+                                                      
+                                                      <option value="335">السفارة -  الاردنية</option>
+                                                      
+                                                      <option value="336">القنصلية الاردنية</option>
+                                                      
+                                                      <option value="339">سفارة -أرمينيا</option>
+                                                      
+                                                      <option value="340">سفارة - اسبانيا</option>
+                                                      
+                                                      <option value="341">سفارة أستراليا</option>
+                                                      
+                                                      <option value="343">قنصلية - استراليا</option>
+                                                      
+                                                      <option value="344">سفارة - أفغانستان</option>
+                                                      
+                                                      <option value="345">قنصلية -  أفغانستان</option>
+                                                      
+                                                      <option value="347">سفارة -ألبانيا</option>
+                                                      
+                                                      <option value="348">سفارة-ألمانيا</option>
+                                                      
+                                                      <option value="349">القنصلية الالمانية الاتحادية</option>
+                                                      
+                                                      <option value="351">قنصلية انجولا</option>
+                                                      
+                                                      <option value="352">سفارة -أندونيسيا</option>
+                                                      
+                                                      <option value="354">قنصلية  أندونيسيا</option>
+                                                      
+                                                      <option value="355">سفارة -الاوروجواي</option>
+                                                      
+                                                      <option value="356">قنصلية الاوروجواي</option>
+                                                      
+                                                      <option value="357">سفارة -أوزبكستان</option>
+                                                      
+                                                      <option value="358">قنصلية أوزبكستان</option>
+                                                      
+                                                      <option value="360">سفارة -أوغندا</option>
+                                                      
+                                                      <option value="361">سفارة أوكرانيا</option>
+                                                      
+                                                      <option value="363">السفارة -  الايرانية</option>
+                                                      
+                                                      <option value="364">القنصلية الايرانية</option>
+                                                      
+                                                      <option value="366">سفارة ايرلندا</option>
+                                                      
+                                                      <option value="368">السفارة -  الايطالية</option>
+                                                      
+                                                      <option value="370">الوكالة القنصلية الايطالية</option>
+                                                      
+                                                      <option value="373">سفارة -باكستان</option>
+                                                      
+                                                      <option value="374">قنصلية باكستان</option>
+                                                      
+                                                      <option value="375">سفارة -البحرين</option>
+                                                      
+                                                      <option value="377">سفارة-البرازيل</option>
+                                                      
+                                                      <option value="378">سفارة -البرتغال</option>
+                                                      
+                                                      <option value="380">سفارة -  بروناي</option>
+                                                      
+                                                      <option value="381">السفارة - البلجيكية</option>
+                                                      
+                                                      <option value="382">قنصلية بلغاريا</option>
+                                                      
+                                                      <option value="383">سفارة - بنجلاديش</option>
+                                                      
+                                                      <option value="385">قنصلية بنجلاديش</option>
+                                                      
+                                                      <option value="386">قنصلية بنما</option>
+                                                      
+                                                      <option value="389">سفارة -بنين</option>
+                                                      
+                                                      <option value="390">سفارة بوركينا فاسو</option>
+                                                      
+                                                      <option value="392">سفارة البوسنة والهرسك</option>
+                                                      
+                                                      <option value="393">سفارة -بولندا</option>
+                                                      
+                                                      <option value="394">سفارة -بيلاروس (روسيا البيضاء)</option>
+                                                      
+                                                      <option value="396">سفارة -تايلاند</option>
+                                                      
+                                                      <option value="397">قنصلية  تايلاند</option>
+                                                      
+                                                      <option value="398">سفارة  -  تركمانستان</option>
+                                                      
+                                                      <option value="400">السفارة -  التركية</option>
+                                                      
+                                                      <option value="401">القنصلية  التركية</option>
+                                                      
+                                                      <option value="402">سفارة -تشاد</option>
+                                                      
+                                                      <option value="403">قنصلية -  تشاد</option>
+                                                      
+                                                      <option value="404">سفارة -التشيك</option>
+                                                      
+                                                      <option value="406">سفارة - تنزانيا</option>
+                                                      
+                                                      <option value="407">قنصلية -  تنزانيا</option>
+                                                      
+                                                      <option value="408">سفارة الجمهورية التونسية</option>
+                                                      
+                                                      <option value="409">القنصلية العامة للجمهورية التونسية</option>
+                                                      
+                                                      <option value="410">سفارة -الجابون</option>
+                                                      
+                                                      <option value="411">سفارة -جامبيا</option>
+                                                      
+                                                      <option value="412">سفارة - الجزائر</option>
+                                                      
+                                                      <option value="414">سفارة - جنوب افريقيا</option>
+                                                      
+                                                      <option value="434">قنصلية افريقيا</option>
+                                                      
+                                                      <option value="435">سفارة -جيبوتي</option>
+                                                      
+                                                      <option value="436">قنصلية - جيبوتي</option>
+                                                      
+                                                      <option value="437">سفارة -الدانمارك</option>
+                                                      
+                                                      <option value="438">القنصلية الدانماركية</option>
+                                                      
+                                                      <option value="439">سفارة روسيا</option>
+                                                      
+                                                      <option value="440">القنصليةالروسية</option>
+                                                      
+                                                      <option value="441">سفارة رومانيا</option>
+                                                      
+                                                      <option value="442">القنصلية الرومانية</option>
+                                                      
+                                                      <option value="444">سفارة - ساحل العاج (كوت دي فوار )</option>
+                                                      
+                                                      <option value="445">سفارة -سري لانكا</option>
+                                                      
+                                                      <option value="446">قنصلية -  سري لانكا</option>
+                                                      
+                                                      <option value="447">السفارة -  السعودية</option>
+                                                      
+                                                      <option value="448">القنصلية  السعودية</option>
+                                                      
+                                                      <option value="449">سفارة الجمهورية السلوفاكية</option>
+                                                      
+                                                      <option value="450">سفارة جمهورية سلوفانيا</option>
+                                                      
+                                                      <option value="451">سفارة جمهورية سنغافورة</option>
+                                                      
+                                                      <option value="452">قنصلية  - سنغافورة</option>
+                                                      
+                                                      <option value="453">سفارة -السنغال</option>
+                                                      
+                                                      <option value="454">سفارة -السودان</option>
+                                                      
+                                                      <option value="455">قنصلية السودان</option>
+                                                      
+                                                      <option value="456">سفارة - سوريا</option>
+                                                      
+                                                      <option value="457">القنصلية -السورية</option>
+                                                      
+                                                      <option value="458">سفارة -السويد</option>
+                                                      
+                                                      <option value="459">سفارة سويسرا</option>
+                                                      
+                                                      <option value="460">القنصليةالسويسرية</option>
+                                                      
+                                                      <option value="461">سفارة -سيراليون</option>
+                                                      
+                                                      <option value="462">سفارة - الصومال</option>
+                                                      
+                                                      <option value="463">القنصلية - الصومالية</option>
+                                                      
+                                                      <option value="464">سفارة - الصين</option>
+                                                      
+                                                      <option value="465">القنصلية - الصينية</option>
+                                                      
+                                                      <option value="466">قنصلية - طاجكستان</option>
+                                                      
+                                                      <option value="467">سفارة جمهورية العراق</option>
+                                                      
+                                                      <option value="469">القنصلية - العراقية</option>
+                                                      
+                                                      <option value="470">سفارة -عمان</option>
+                                                      
+                                                      <option value="472">سفارة -غينا</option>
+                                                      
+                                                      <option value="473">القنصلية العامة غينا</option>
+                                                      
+                                                      <option value="474">سفارة - فرنسا</option>
+                                                      
+                                                      <option value="475">القنصلية - الفرنسية</option>
+                                                      
+                                                      <option value="476">سفارة -الفلبين</option>
+                                                      
+                                                      <option value="477">القنصلية - الفلبينية</option>
+                                                      
+                                                      <option value="478">سفارة - فلسطين</option>
+                                                      
+                                                      <option value="479">القنصلية -الفلسطينية</option>
+                                                      
+                                                      <option value="480">سفارة الجمهورية البوليفاريانا الفنزويلية</option>
+                                                      
+                                                      <option value="481">سفارة - فنلندا</option>
+                                                      
+                                                      <option value="483">القنصلية - الفيتنامية</option>
+                                                      
+                                                      <option value="484">سفارة -قطر</option>
+                                                      
+                                                      <option value="485">القنصلية - القطرية</option>
+                                                      
+                                                      <option value="486">سفارة  القمر المتحدة</option>
+                                                      
+                                                      <option value="487">قنصلية  القمر المتحدة</option>
+                                                      
+                                                      <option value="488">قنصلية - قيرغستان</option>
+                                                      
+                                                      <option value="489">سفارة -كازاخستان</option>
+                                                      
+                                                      <option value="490">قنصلية - كازاخستان</option>
+                                                      
+                                                      <option value="491">سفارة -الكاميرون</option>
+                                                      
+                                                      <option value="492">سفارة جمهورية كرواتيا</option>
+                                                      
+                                                      <option value="494">قنصلية كندا</option>
+                                                      
+                                                      <option value="495">سفارة جمهورية كوبا</option>
+                                                      
+                                                      <option value="496">سفارة - كوريا</option>
+                                                      
+                                                      <option value="497">سفارة -الكويت</option>
+                                                      
+                                                      <option value="498">القنصلية - الكويتية</option>
+                                                      
+                                                      <option value="500">سفارة - كينيا</option>
+                                                      
+                                                      <option value="502">القنصلية - الكينية</option>
+                                                      
+                                                      <option value="503">سفارة - لبنان</option>
+                                                      
+                                                      <option value="505">القنصلية - اللبنانية</option>
+                                                      
+                                                      <option value="507">سفارة - ليبيا</option>
+                                                      
+                                                      <option value="508">القنصلية العامة الليبية</option>
+                                                      
+                                                      <option value="509">سفارة جمهورية ليتوانيا</option>
+                                                      
+                                                      <option value="511">سفارة - مالطا</option>
+                                                      
+                                                      <option value="512">القنصلية العامة لجمهورية مالطا</option>
+                                                      
+                                                      <option value="513">سفارة  -   مالي</option>
+                                                      
+                                                      <option value="514">سفارة ماليزيا</option>
+                                                      
+                                                      <option value="515">القنصلية العامة الماليزية</option>
+                                                      
+                                                      <option value="516">سفارة  -  المجر</option>
+                                                      
+                                                      <option value="517">سفارة - مصر</option>
+                                                      
+                                                      <option value="518">القنصلية العامة - مصر</option>
+                                                      
+                                                      <option value="519">سفارة - المغرب</option>
+                                                      
+                                                      <option value="521">سفارة -  ملاوي</option>
+                                                      
+                                                      <option value="522">سفارة المملكة المتحدة</option>
+                                                      
+                                                      <option value="523">مكتب سفارة المملكة المتحدة</option>
+                                                      
+                                                      <option value="525">سفارة موريتانيا</option>
+                                                      
+                                                      <option value="526">سفارة جمهورية موريشيوس</option>
+                                                      
+                                                      <option value="527">القنصلية العامة موزمبيق</option>
+                                                      
+                                                      <option value="528">سفارة جمهورية مولدوفا</option>
+                                                      
+                                                      <option value="529">سفارة  -  النرويج</option>
+                                                      
+                                                      <option value="530">القنصلية المملكية النرويجية</option>
+                                                      
+                                                      <option value="531">سفارة -  النمسا</option>
+                                                      
+                                                      <option value="532">سفارة -  نيبال</option>
+                                                      
+                                                      <option value="533">سفارة  -  النيجر</option>
+                                                      
+                                                      <option value="534">القنصلية العامة - النيجر</option>
+                                                      
+                                                      <option value="535">سفارة  -  نيجيريا</option>
+                                                      
+                                                      <option value="536">سفارة نيوزيلندا</option>
+                                                      
+                                                      <option value="537">القنصلية العامة لنيوزيلندا</option>
+                                                      
+                                                      <option value="538">سفارة جمهورية الهند</option>
+                                                      
+                                                      <option value="539">القنصلية العامة - الهند</option>
+                                                      
+                                                      <option value="541">السفارة الهولندية</option>
+                                                      
+                                                      <option value="542">القنصلية العامة - هولندا</option>
+                                                      
+                                                      <option value="543">السفارة الامريكية</option>
+                                                      
+                                                      <option value="544">القنصلية العامة - امريكيا</option>
+                                                      
+                                                      <option value="545">سفارة اليابان</option>
+                                                      
+                                                      <option value="546">القنصلية العامة لليابان</option>
+                                                      
+                                                      <option value="558">سفارة - اليمن</option>
+                                                      
+                                                      <option value="560">القنصلية العامة - اليمن</option>
+                                                      
+                                                      <option value="561">سفارة - اليونان</option>
+                                                      
+                                                      <option value="563">برنامج الامم المتحدة الانمائي</option>
+                                                      
+                                                      <option value="564">صندوق النقد العربي</option>
+                                                      
+                                                      <option value="565">الهيئة العربية للاستثمار والانماء الزراعي</option>
+                                                      
+                                                      <option value="566">برنامج تمويل التجارة العربية</option>
+                                                      
+                                                      <option value="567">منظمة الامم المتحدة للطفولة (اليونيسيف )</option>
+                                                      
+                                                      <option value="569">المركز الدولي للزراعة الملحية</option>
+                                                      
+                                                      <option value="570">الاتحاد الدولي لجمعيات الصليب والهلال الاحمر</option>
+                                                      
+                                                      <option value="571">برنامج الامم المتحدة للغذاء العالمي</option>
+                                                      
+                                                      <option value="572">المنظمة الاسلامية للتربية والعلوم والثقافة ( ايسيسكو )</option>
+                                                      
+                                                      <option value="573">منظمة الاغذية والزراعة للامم المتحدة ( FAO )</option>
+                                                      
+                                                      <option value="574">مؤسسة التمويل الدولية - مجموعة البنك الدولي</option>
+                                                      
+                                                      <option value="575">المركز الاسلامي الدولي للمصالحة والتحكيم</option>
+                                                      
+                                                     
+                                                     
+                                                  </select>
+                                                  </td>
+                                                  <td width="22" valign="bottom"><a href="javascript:Get_dilopmat();" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image83','','../App_Themes/site/images/buttons/blackbutton-over.jpg',1)"><img src="../App_Themes/site/images/buttons/blackbutton.jpg" alt="find now" name="Image83" width="21" height="21" border="0"></a></td>
+                                                </tr>
+                                            </table></td>
+                                          </tr>
+                                        </table>
+									  </div>
+								  </td>
+								</tr>
+							</table>
+							</td>
+						</tr>
+					</table>
+					
+					<script>
+				 function Get_dilopmat()
+				 {
+				  funexecute=Show_dilopmat;
+                  funload=amf_loading;
+				  execute_ajax('../services/ajax.aspx?flag_no=1&ID='+$('DP_dilopmatoffices').value)
+				 }
+				function Show_dilopmat()
+				{
+				
+				  var doc = ajax_xml();
+                  var T1 = doc.getElementsByTagName('dilopmat');
+                  
+				  hideLightbox();
+				  popupdiv('dilopmatoffices',150,150);
+				  
+				  $('dilopmat_name').innerHTML=amf_firstChild_node(T1,0,'headline');
+				  $('TDPhone').innerHTML=amf_firstChild_node(T1,0,'sub_headline');
+				  $('TDFax').innerHTML=amf_firstChild_node(T1,0,'third_headline');
+				  $('Emaildilopmat').href="mailto:"+amf_firstChild_node(T1,0,'email');
+				  $('Emaildilopmat').innerHTML=amf_firstChild_node(T1,0,'email');
+				  $('HRdilopmat').href=amf_firstChild_node(T1,0,'url');
+				  $('HRdilopmat').innerHTML=amf_firstChild_node(T1,0,'url');
+				  $('ImgFlag').src=amf_firstChild_node(T1,0,'Filename1');
+				  $('TDPOBOX').innerHTML=amf_firstChild_node(T1,0,'summary');
+				  $('TDADDRESS').innerHTML=amf_firstChild_node(T1,0,'source');
+				  
+				  if (amf_firstChild_node(T1,0,'Filename1').length == 0)
+				    $('ImgFlag').style.display = 'none'
+				  
+				  if (amf_firstChild_node(T1,0,'url').length == 0)
+    			    $('TRURL').style.display = 'none'
+    			    
+    			  
+    			  if (amf_firstChild_node(T1,0,'email').length == 0)
+    			    $('TREMAIL').style.display = 'none'
+    			    
+    			  if (amf_firstChild_node(T1,0,'third_headline').length == 0)
+    			    $('TRFAX').style.display = 'none'
+    			    
+    			    if (amf_firstChild_node(T1,0,'sub_headline').length == 0)
+    			    $('TRPHONE').style.display = 'none'
+				  
+
+				}
+				</script>	
+					
+ <div id="dilopmatoffices" class="lightbox" style="position: absolute; z-index: 100;width: 150; height: 150;display:none">
+ <img id="closeButton" title="إغلاق" onclick="hs('dilopmatoffices','none');hs('overlay','none');" src="../javascript/Lightbox/close.gif" style="position: absolute; z-index: 200;cursor:pointer" />				
+<table width="100" border="1" cellpadding="5" cellspacing="5" bordercolor="#666666" bgcolor="f7f7f7">
+  <tr>
+    <th align="right" valign="top" bgcolor="f7f7f7" scope="col"><table width="100%" border="0" cellspacing="6" cellpadding="0">
+      <tr>
+        <th colspan="2" align="center" valign="middle" class="news_heading" scope="col"><img id="ImgFlag" src="../App_Themes/site/images/flags/flag2.jpg" width="18" height="12" /> <span id="dilopmat_name"></span></th>
+        </tr>
+       <tr>
+        <td align="right" valign="middle" class="news_text">العنوان</td>
+        <td id="TDADDRESS" align="right" valign="middle" class="news_pic_text"></td>
+      </tr>
+      <tr>
+        <td align="right" valign="middle" class="news_text">صندوق البريد</td>
+        <td id="TDPOBOX" align="right" valign="middle" class="news_pic_text"></td>
+      </tr>
+      <tr id="TRPHONE">
+        <td  align="right" valign="middle" class="news_text">هاتف</td>
+        <td id="TDPhone" align="right" valign="middle" class="news_pic_text"></td>
+      </tr>
+      <tr id="TRFAX">
+        <td align="right" valign="middle" class="news_text">فاكس</td>
+        <td id="TDFax" align="right" valign="middle" class="news_pic_text"></td>
+      </tr>
+      <tr id="TREMAIL">
+        <td align="right" valign="middle" class="news_text">البريـد</td>
+        <td  align="right" valign="middle" class="news_pic_text"><a id="Emaildilopmat" href="" class="news_pic_text"></a></td>
+      </tr>
+      <tr id="TRURL">
+        <td align="right" valign="middle" class="news_text">الموقع</td>
+        <td  align="right" valign="middle" class="news_pic_text"><a id="HRdilopmat" href="" target="_blank" class="news_pic_text"></a></td>
+      </tr>
+    </table></th>
+  </tr>
+</table>
+</div>
+
+                </td>
+                </tr>
+                </table>
+                </td>
+                </tr>
+                </table>
+            </td>
+            </tr> </table> </td>
+            <td width="9" align="right">
+                &nbsp;</td>
+            </tr>
+            <tr>
+                <td width="9" align="left">
+                    <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+                <td valign="top">
+                    <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+                <td width="9" align="right">
+                    <img border="0" src="../App_Themes/site/images/header/topspace.jpg" width="9" height="9"></td>
+            </tr>
+            <tr>
+                <td width="9" align="left">
+                    &nbsp;</td>
+                <td valign="top">
+                    <table border="0" width="100%" id="table43" cellspacing="0" cellpadding="0" bgcolor="#3B3B3B">
+                        <tr>
+                            <td width="6">
+                                <img border="0" src="../App_Themes/site/images/footercorner/footercorner1.jpg" width="6"
+                                    height="43"></td>
+                            <td align="center">
+                                
+                                
+                                <a class="footer">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;جميع حقوق النسخ محفوظــة 2009، وزارة الخارجيـة - الإمارات العربية المتحدة.&nbsp;</a>
+                                <a class="footer" href="../portal/9f0b79c4-d80d-40a3-b18b-41ee320b1546.aspx">  شروط وأحكام </a>
+                                </td>
+                            <td width="6">
+                                <img border="0" src="../App_Themes/site/images/footercorner/footercorner2.jpg" width="6"
+                                    height="43"></td>
+                        </tr>
+                    </table>
+                </td>
+                <td width="9" align="right">
+                    &nbsp;</td>
+            </tr>
+            </table>
+        </div>
+        <div id="ctl00_upf2">
+	
+        
+        
+        
+        
+</div>
+       <input type="hidden" name="ctl00$hfd_Totaled" id="ctl00_hfd_Totaled" />
+       
+     <iframe id="ctl00_ifrm" height="0" width="0" frameborder="0"></iframe>
+        
+    
+<script>
+MainNews.Headline[0]='محمد بن راشد يدشِّن برج خليفة';
+MainNews.Summary[0]='دشّن صاحب السمو الشيخ محمد بن راشد آل مكتوم نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي، رعاه الله، مساء أمس أعلى ناطحة سحاب على وجه الأرض.';
+MainNews.ImgPath[0]='../Uploads/Files/2010/01/05/15543.gif';
+MainNews.ImgComment[0]='-';
+MainNews.UrlPath[0]='../portal/cef0daa1-a3f0-41a6-bfff-001bc80d7d34.aspx';
+MainNews.LastUpdate[0]='05/01/2010   م الساعة 08:44 صباحاً';
+MainNews.Headline[1]='محمد بن راشد يضيء خارطة العالم بـ -برج خليفة-';
+MainNews.Summary[1]='-نبني القمم العالية بالهمم العالية، ونستثمر في الإنسان للإنسان. واليوم الإمارات ترسم نقطة ضوء على خارطة العالم الجديد، وكل أعلى نقطة في العالم من صنع البشر لا بد أن تقترن بالأسماء الكبيرة. وأنا أعلن عن افتتاح برج خليفة بن زايد-. بهذه الكلمات دشّن صاحب السمو الشيخ محمد بن راشد آل مكتوم نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي، رعاه الله، مساء أمس أعلى ناطحة سحاب على وجه الأرض.';
+MainNews.ImgPath[1]='../Uploads/Files/2010/01/05/15539.gif';
+MainNews.ImgComment[1]='-';
+MainNews.UrlPath[1]='../portal/af3a2d0c-84cc-4cb9-9dcc-f05ac2c86094.aspx';
+MainNews.LastUpdate[1]='05/01/2010   م الساعة 08:24 صباحاً';
+MainNews.Headline[2]='وزيرة الخارجية الأميركية تهنئ محمد بن راشد بمناسبة افتتاح  -برج خليفة-';
+MainNews.Summary[2]='هنأت هيلاري كلينتون وزيرة الخارجية الأميركية صاحب السمو الشيخ محمد بن راشد آل مكتوم نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي، رعاه الله، بمناسبة افتتاح -برج خليفة- أطول مبنى في العالم وإطلاق -ملتقى دبي-.';
+MainNews.ImgPath[2]='../Uploads/Files/2010/01/05/15535.gif';
+MainNews.ImgComment[2]='-';
+MainNews.UrlPath[2]='../portal/c4aeabad-a6d9-42b2-8b50-71de2b5addc0.aspx';
+MainNews.LastUpdate[2]='05/01/2010   م الساعة 08:20 صباحاً';
+MainNews.Headline[3]='سلطان عُمان يستقبل محمد بن زايد';
+MainNews.Summary[3]='استقبل جلالة السلطان قابوس بن سعيد سلطان عمان الشقيقة في بيت البركة أمس الفريق أول سمو الشيخ محمد بن زايد آل نهيان ولي عهد أبوظبي نائب القائد الأعلى للقوات المسلحة الذي يقوم بزيارة أخوية لسلطنة عمان، تلبية لدعوة خاصة من جلالته.';
+MainNews.ImgPath[3]='../Uploads/Files/2010/01/05/15531.gif';
+MainNews.ImgComment[3]='-';
+MainNews.UrlPath[3]='../portal/dc0acf55-9962-449c-8789-791a99e23022.aspx';
+MainNews.LastUpdate[3]='05/01/2010   م الساعة 08:14 صباحاً';
+MainNews.Headline[4]='محمد بن راشد أنجز تجربة كونية أدهشت العالم';
+MainNews.Summary[4]='صدر أمس كتاب بعنوان -الشيخ محمد ذكريات وإنجازات من خلال عدسة المصور نور علي راشد - بمناسبة مرور أربع سنوات على تولي صاحب السمو الشيخ محمد بن راشد آل مكتوم نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي الحكم في إمارة دبي .';
+MainNews.ImgPath[4]='../Uploads/Files/2010/01/05/15565.gif';
+MainNews.ImgComment[4]='-';
+MainNews.UrlPath[4]='../portal/2a869788-b984-4b35-857f-0cb19a95218b.aspx';
+MainNews.LastUpdate[4]='05/01/2010   م الساعة 08:06 صباحاً';
+MainNews.Show();
+</script><script>
+Gallery.ImgSmall[0]='../uploads/zone/gallery/13_1.jpg';
+Gallery.ImgBig[0]='../uploads/zone/gallery/13_2.jpg';
+Gallery.Title[0]='.';
+Gallery.ImgSmall[1]='../uploads/zone/gallery/48_1.jpg';
+Gallery.ImgBig[1]='../uploads/zone/gallery/48_2.jpg';
+Gallery.Title[1]='.';
+Gallery.ImgSmall[2]='../uploads/zone/gallery/49_1.jpg';
+Gallery.ImgBig[2]='../uploads/zone/gallery/49_2.JPG';
+Gallery.Title[2]='.';
+Gallery.ImgSmall[3]='../uploads/zone/gallery/50_1.jpg';
+Gallery.ImgBig[3]='../uploads/zone/gallery/50_2.jpg';
+Gallery.Title[3]='.';
+Gallery.ImgSmall[4]='../uploads/zone/gallery/51_1.jpg';
+Gallery.ImgBig[4]='../uploads/zone/gallery/51_2.JPG';
+Gallery.Title[4]='.';
+Gallery.ImgSmall[5]='../uploads/zone/gallery/52_1.jpg';
+Gallery.ImgBig[5]='../uploads/zone/gallery/52_2.JPG';
+Gallery.Title[5]='.';
+Gallery.ImgSmall[6]='../uploads/zone/gallery/53_1.jpg';
+Gallery.ImgBig[6]='../uploads/zone/gallery/53_2.jpg';
+Gallery.Title[6]='.';
+Gallery.ImgSmall[7]='../uploads/zone/gallery/54_1.jpg';
+Gallery.ImgBig[7]='../uploads/zone/gallery/54_2.jpg';
+Gallery.Title[7]='.';
+Gallery.ImgSmall[8]='../uploads/zone/gallery/55_1.jpg';
+Gallery.ImgBig[8]='../uploads/zone/gallery/55_2.jpg';
+Gallery.Title[8]='.';
+Gallery.ImgSmall[9]='../uploads/zone/gallery/56_1.jpg';
+Gallery.ImgBig[9]='../uploads/zone/gallery/56_2.jpg';
+Gallery.Title[9]='.';
+Gallery.ImgSmall[10]='../uploads/zone/gallery/57_1.jpg';
+Gallery.ImgBig[10]='../uploads/zone/gallery/57_2.JPG';
+Gallery.Title[10]='.';
+Gallery.ImgSmall[11]='../uploads/zone/gallery/58_1.jpg';
+Gallery.ImgBig[11]='../uploads/zone/gallery/58_2.JPG';
+Gallery.Title[11]='.';
+Gallery.ImgSmall[12]='../uploads/zone/gallery/59_1.jpg';
+Gallery.ImgBig[12]='../uploads/zone/gallery/59_2.JPG';
+Gallery.Title[12]='.';
+Gallery.ImgSmall[13]='../uploads/zone/gallery/60_1.jpg';
+Gallery.ImgBig[13]='../uploads/zone/gallery/60_2.JPG';
+Gallery.Title[13]='.';
+Gallery.ImgSmall[14]='../uploads/zone/gallery/83_1.jpg';
+Gallery.ImgBig[14]='../uploads/zone/gallery/83_2.jpg';
+Gallery.Title[14]='.';
+Gallery.ImgSmall[15]='../uploads/zone/gallery/84_1.jpg';
+Gallery.ImgBig[15]='../uploads/zone/gallery/84_2.jpg';
+Gallery.Title[15]='.';
+Gallery.ImgSmall[16]='../uploads/zone/gallery/85_1.jpg';
+Gallery.ImgBig[16]='../uploads/zone/gallery/85_2.jpg';
+Gallery.Title[16]='.';
+Gallery.ImgSmall[17]='../uploads/zone/gallery/86_1.jpg';
+Gallery.ImgBig[17]='../uploads/zone/gallery/86_2.jpg';
+Gallery.Title[17]='.';
+Gallery.ImgSmall[18]='../uploads/zone/gallery/87_1.jpg';
+Gallery.ImgBig[18]='../uploads/zone/gallery/87_2.jpg';
+Gallery.Title[18]='.';
+Gallery.ImgSmall[19]='../uploads/zone/gallery/88_1.jpg';
+Gallery.ImgBig[19]='../uploads/zone/gallery/88_2.jpg';
+Gallery.Title[19]='.';
+Gallery.ImgSmall[20]='../uploads/zone/gallery/89_1.jpg';
+Gallery.ImgBig[20]='../uploads/zone/gallery/89_2.jpg';
+Gallery.Title[20]='.';
+Gallery.ImgSmall[21]='../uploads/zone/gallery/90_1.jpg';
+Gallery.ImgBig[21]='../uploads/zone/gallery/90_2.jpg';
+Gallery.Title[21]='.';
+Gallery.ImgSmall[22]='../uploads/zone/gallery/91_1.jpg';
+Gallery.ImgBig[22]='../uploads/zone/gallery/91_2.jpg';
+Gallery.Title[22]='.';
+Gallery.ImgSmall[23]='../uploads/zone/gallery/92_1.jpg';
+Gallery.ImgBig[23]='../uploads/zone/gallery/92_2.jpg';
+Gallery.Title[23]='.';
+Gallery.ImgSmall[24]='../uploads/zone/gallery/93_1.jpg';
+Gallery.ImgBig[24]='../uploads/zone/gallery/93_2.jpg';
+Gallery.Title[24]='.';
+Gallery.ImgSmall[25]='../uploads/zone/gallery/94_1.jpg';
+Gallery.ImgBig[25]='../uploads/zone/gallery/94_2.jpg';
+Gallery.Title[25]='.';
+Gallery.ImgSmall[26]='../uploads/zone/gallery/96_1.jpg';
+Gallery.ImgBig[26]='../uploads/zone/gallery/96_2.jpg';
+Gallery.Title[26]='.';
+Gallery.ImgSmall[27]='../uploads/zone/gallery/97_1.jpg';
+Gallery.ImgBig[27]='../uploads/zone/gallery/97_2.jpg';
+Gallery.Title[27]='.';
+Gallery.ImgSmall[28]='../uploads/zone/gallery/99_1.jpg';
+Gallery.ImgBig[28]='../uploads/zone/gallery/99_2.jpg';
+Gallery.Title[28]='.';
+Gallery.ImgSmall[29]='../uploads/zone/gallery/100_1.jpg';
+Gallery.ImgBig[29]='../uploads/zone/gallery/100_2.jpg';
+Gallery.Title[29]='.';
+Gallery.ImgSmall[30]='../uploads/zone/gallery/101_1.jpg';
+Gallery.ImgBig[30]='../uploads/zone/gallery/101_2.jpg';
+Gallery.Title[30]='.';
+Gallery.ImgSmall[31]='../uploads/zone/gallery/102_1.jpg';
+Gallery.ImgBig[31]='../uploads/zone/gallery/102_2.jpg';
+Gallery.Title[31]='.';
+Gallery.ImgSmall[32]='../uploads/zone/gallery/103_1.jpg';
+Gallery.ImgBig[32]='../uploads/zone/gallery/103_2.jpg';
+Gallery.Title[32]='.';
+Gallery.ImgSmall[33]='../uploads/zone/gallery/104_1.jpg';
+Gallery.ImgBig[33]='../uploads/zone/gallery/104_2.jpg';
+Gallery.Title[33]='.';
+Gallery.ImgSmall[34]='../uploads/zone/gallery/105_1.jpg';
+Gallery.ImgBig[34]='../uploads/zone/gallery/105_2.jpg';
+Gallery.Title[34]='.';
+Gallery.ImgSmall[35]='../uploads/zone/gallery/106_1.jpg';
+Gallery.ImgBig[35]='../uploads/zone/gallery/106_2.jpg';
+Gallery.Title[35]='.';
+Gallery.ImgSmall[36]='../uploads/zone/gallery/107_1.jpg';
+Gallery.ImgBig[36]='../uploads/zone/gallery/107_2.jpg';
+Gallery.Title[36]='.';
+Gallery.ImgSmall[37]='../uploads/zone/gallery/109_1.jpg';
+Gallery.ImgBig[37]='../uploads/zone/gallery/109_2.jpg';
+Gallery.Title[37]='.';
+Gallery.ImgSmall[38]='../uploads/zone/gallery/110_1.jpg';
+Gallery.ImgBig[38]='../uploads/zone/gallery/110_2.jpg';
+Gallery.Title[38]='.';
+Gallery.ImgSmall[39]='../uploads/zone/gallery/111_1.jpg';
+Gallery.ImgBig[39]='../uploads/zone/gallery/111_2.jpg';
+Gallery.Title[39]='.';
+</script>
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.ConfirmButtonBehavior, {"ConfirmText":"","displayModalPopupID":"ctl00_mpop1","id":"ctl00_cc1","postBackScript":"__doPostBack(\u0027ctl00$btn_Results\u0027,\u0027\u0027)"}, null, null, $get("ctl00_btn_Results"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.ModalPopupBehavior, {"BackgroundCssClass":"ModalBackground","CancelControlID":"ctl00_lbl_cross","PopupControlID":"ctl00_pnl_results","dynamicServicePath":"/Mofa/pages/default.aspx","id":"ctl00_mpop1"}, null, null, $get("ctl00_cc1_CBE_MPE_Placeholder"));
+});
+//]]>
+</script>
+</form>
+    <script type="text/javascript">
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+</script>
+
+<script type="text/javascript">
+
+try {
+
+var pageTracker = _gat._getTracker("UA-7907872-1");
+
+pageTracker._trackPageview();
+
+} catch(err) {}</script>
+</body>
+<script type="text/javascript">
+$('aspnetForm').action=document.URL
+</script>
+
+</html>

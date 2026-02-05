@@ -1,0 +1,1170 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><link rel="shortcut icon" type="image/ico" href="http://www.fahr.gov.ae/favicon.ico" /><title>
+	«·ÂÌ∆‹‹‹… «·« Õ‹‹‹«œÌ… ··„‹‹‹Ê«—œ «·»‘—Ì‹‹‹… «·ÕﬂÊ„Ì‹‹‹…
+</title><link id="ctl00_cssLink" rel="stylesheet" type="text/css" href="styles/ar.css" /><link href="styles/RadMenuLeft.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" language="javascript" src="js/jquery.js"></script>
+
+    <script src="js/ddaccordion.js" type="text/javascript"></script>
+
+    <!-- Meta Tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta id="ctl00_metaDescription" name="description" content="«·ÂÌ∆‹‹‹… «·« Õ‹‹‹«œÌ… ··„‹‹‹Ê«—œ «·»‘—Ì‹‹‹… «·ÕﬂÊ„Ì‹‹‹…" /><meta id="ctl00_metaKeywords" name="keywords" content="«·ÂÌ∆‹‹‹… «·« Õ‹‹‹«œÌ… ··„‹‹‹Ê«—œ «·»‘—Ì‹‹‹… «·ÕﬂÊ„Ì‹‹‹…" />
+
+
+        <script type="text/javascript">
+            var tab;
+            var tabInitial;
+            function SelectMyTab(sender, eventArgs) {
+                var multiPageID = sender.get_multiPageID();
+                tab = eventArgs.get_tab();
+                sender.set_multiPageID(null);
+                tab.select();
+            }
+            function TabReturnToCurrent(sender, eventArgs) {
+                if (tabInitial)
+                    tabInitial.select();
+            }
+            function TabOnLoad(sender, eventArgs) {
+                var tabStrip = $find("ctl00_RadTabStrip1");
+
+                tabInitial = tabStrip.get_selectedTab();
+            }
+            function CallPrinter() {
+                var topicContent = "";
+
+                var prtContent = document.getElementById("divPrint");
+
+                var pageTitle = document.getElementById("pagetitle").innerHTML;
+
+                var WinPrint = window.open('', '', 'right=0,top=0,width=952,height=700,toolbar=0,scrollbars=1,status=0');
+
+
+                WinPrint.document.write("<html><head><LINK href='styles/ar.css' type='text/css' rel='stylesheet'></head><body class='printBody' style='background-image:none;' height='100%'><table cellpadding='0' cellspacing='0'  border='0' width='100%'  align='center'><tr><td><img src='images/bg-banner.gif' border='0' alt='' /><br></td><td align=left></td></tr><tr><td colspan=2><hr width='100%' height='2'/><td></tr><tr><td colspan=2><strong style=font-size:13 >" + pageTitle + "</strong></td></tr><tr><td colspan=2><br>" + prtContent.innerHTML + "</td></tr> <tr><td colspan=2><hr color='#F8F1D4' width='100%' height='2'/><td></tr><tr ><td style='padding-right:15px;font-size:11px; font-family: tahoma; ' colspan=2> Ã„Ì⁄ «·ÕﬁÊﬁ „Õ›ÊŸ… ·œÌ «·ÂÌ∆‹‹‹… «·« Õ‹‹‹«œÌ… ··„‹‹‹Ê«—œ «·»‘—Ì‹‹‹… «·ÕﬂÊ„Ì‹‹‹… </td></tr></table></body></html>");
+                WinPrint.document.close();
+                WinPrint.focus();
+                WinPrint.print();
+                // document.getElementById("replaceContent").style.display='block';
+                WinPrint.close();
+            }
+
+            function test2(sender, args) {
+
+
+                var tabStrip = $find('ctl00_RadTabStrip1');
+
+                var tab = args.get_tab();
+                //args.get_tab().set_postBack(false);
+                // tab.set_selected(true);
+
+                var selIndex = tabStrip.get_selectedIndex();
+
+                var multiPage = $find("ctl00_RadMultiPage1");
+
+                if (selIndex == 0) {
+                    multiPage.get_pageViews().getPageView(0).set_selected(true);
+                }
+                if (selIndex == 1) {
+
+                    multiPage.get_pageViews().getPageView(1).set_selected(true);
+                }
+                if (selIndex == 2) {
+                    multiPage.get_pageViews().getPageView(2).set_selected(true);
+                }
+                if (selIndex == 3) {
+
+                    multiPage.get_pageViews().getPageView(3).set_selected(true);
+                }
+                if (selIndex == 4) {
+                    multiPage.get_pageViews().getPageView(4).set_selected(true);
+                }
+
+            }
+
+
+            function emailFriend() {
+
+                var website = "send_afriend.aspx?path=/Default.aspx";
+                window.open(website, '_blank', ' width=952,height=650,menubar=no,scrollbars=no');
+            }
+             
+        </script>
+
+    
+
+    <script type="text/javascript">
+
+        function resizeText(multiplier) {
+            if (document.body.style.fontSize == "") {
+                document.body.style.fontSize = "0.7em";
+            }
+            document.body.style.fontSize = parseFloat(document.body.style.fontSize) + (multiplier * 0.2) + "em";
+        }
+
+        function AddToFavorite() {
+            window.external.AddFavorite(location.href, document.title);
+        }
+
+
+
+        function onTabSelecting(sender, args) {
+            if (args.get_tab().get_pageViewID()) {
+                args.get_tab().get_pageViewID().set_selected(true);
+                //args.get_tab().set_postBack(false);
+            }
+        }
+        function ChangeArrowColor(count) {
+
+            if (count == 0) {
+                document.getElementById('img0').src = "images/ico-red.gif";
+                document.getElementById('img1').src = "images/ico-w.gif";
+                document.getElementById('img2').src = "images/ico-w.gif";
+                document.getElementById('img3').src = "images/ico-w.gif";
+
+            }
+            if (count == 1) {
+                document.getElementById('img0').src = "images/ico-w.gif";
+                document.getElementById('img1').src = "images/ico-red.gif";
+                document.getElementById('img2').src = "images/ico-w.gif";
+                document.getElementById('img3').src = "images/ico-w.gif";
+            }
+            if (count == 2) {
+                document.getElementById('img0').src = "images/ico-w.gif";
+                document.getElementById('img1').src = "images/ico-w.gif";
+                document.getElementById('img2').src = "images/ico-red.gif";
+                document.getElementById('img3').src = "images/ico-w.gif";
+            }
+            if (count == 2) {
+                document.getElementById('img0').src = "images/ico-w.gif";
+                document.getElementById('img1').src = "images/ico-w.gif";
+                document.getElementById('img2').src = "images/ico-w.gif";
+                document.getElementById('img3').src = "images/ico-red.gif";
+            }
+
+        }
+    </script>
+
+    
+
+        <script type="text/javascript">
+
+            //Initialize Accordion for News on Default page:
+            ddaccordion.init({
+                headerclass: "defaultNewsHeader", //Shared CSS class name of headers group
+                contentclass: "defaultNewsContent", //Shared CSS class name of contents group
+                revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click" or "mouseover"
+                mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+                collapseprev: true, //Collapse previous content (so only one open at any time)? true/false
+                defaultexpanded: [0], //index of content(s) open by default [index1, index2, etc]. [] denotes no content.
+                onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+                animatedefault: false, //Should contents open by default be animated into view?
+                persiststate: true, //persist state of opened contents within browser session?
+                toggleclass: ["collClass1", "expClass1"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+                togglehtml: ["", "", ""],
+                //Additional HTML added to the header when it's collapsed and expanded
+                animatespeed: "normal", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+                oninit: function(expandedindices) { //custom code to run when headers have initalized
+                    //do nothing
+                },
+                onopenclose: function(header, index, state, isclicked) { //custom code to run whenever a header is opened or closed
+                }
+            })
+
+            ddaccordion.init({
+                headerclass: "defaultFaqHeader", //Shared CSS class name of headers group
+                contentclass: "defaultFaqContent", //Shared CSS class name of contents group
+                revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click" or "mouseover"
+                mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+                collapseprev: true, //Collapse previous content (so only one open at any time)? true/false
+                defaultexpanded: [0], //index of content(s) open by default [index1, index2, etc]. [] denotes no content.
+                onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+                animatedefault: false, //Should contents open by default be animated into view?
+                persiststate: true, //persist state of opened contents within browser session?
+                toggleclass: ["collClass", "expClass"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+                togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded
+
+                animatespeed: "normal", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+                oninit: function(expandedindices) { //custom code to run when headers have initalized
+                    //do nothing
+                },
+                onopenclose: function(header, index, state, isclicked) { //custom code to run whenever a header is opened or closed
+                }
+            })
+
+            ddaccordion.init({
+                headerclass: "newsListHeader", //Shared CSS class name of headers group
+                contentclass: "newsListContent", //Shared CSS class name of contents group
+                revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click" or "mouseover"
+                mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+                collapseprev: true, //Collapse previous content (so only one open at any time)? true/false
+                defaultexpanded: [0], //index of content(s) open by default [index1, index2, etc]. [] denotes no content.
+                onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+                animatedefault: false, //Should contents open by default be animated into view?
+                persiststate: true, //persist state of opened contents within browser session?
+                toggleclass: ["collClass", "expClass"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+                togglehtml: ["", "", ""],
+                animatespeed: "normal", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+                oninit: function(expandedindices) { //custom code to run when headers have initalized
+                    //do nothing
+                },
+                onopenclose: function(header, index, state, isclicked) { //custom code to run whenever a header is opened or closed
+                }
+            })
+
+           
+        </script>
+
+    <link href="/Telerik.Web.UI.WebResource.axd?compress=1&amp;_TSM_CombinedScripts_=%3b%3bTelerik.Web.UI%2c+Version%3d2010.1.309.35%2c+Culture%3dneutral%2c+PublicKeyToken%3d121fae78165ba3d4%3aar-AE%3a30afb63f-e6ac-41db-9851-11879733de0a%3a8cee9284%3aa3b7d93f" type="text/css" rel="stylesheet" /></head>
+<body>
+    <form name="aspnetForm" method="post" action="Default.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE1ODkxMTcwMDQPFgYeCFBhZ2VTaXplAgMeB1BhZ2VOdW0CAR4KVG90YWxQYWdlcwIHFgJmD2QWBAIBD2QWBgICDxYCHgRocmVmBQ1zdHlsZXMvYXIuY3NzZAIGDxYCHgdjb250ZW50BWzYp9mE2YfZitim2YDZgNmA2Kkg2KfZhNin2KrYrdmA2YDZgNin2K/ZitipINmE2YTZhdmA2YDZgNmI2KfYsdivINin2YTYqNi02LHZitmA2YDZgNipINin2YTYrdmD2YjZhdmK2YDZgNmA2KlkAgcPFgIfBAVs2KfZhNmH2YrYptmA2YDZgNipINin2YTYp9iq2K3ZgNmA2YDYp9iv2YrYqSDZhNmE2YXZgNmA2YDZiNin2LHYryDYp9mE2KjYtNix2YrZgNmA2YDYqSDYp9mE2K3Zg9mI2YXZitmA2YDZgNipZAIDD2QWCgIFDw8WAh4ISW1hZ2VVcmwFGGltYWdlcy9idG4tZ28tc2VhcmNoLmdpZmRkAggPFCsAAhQrAAIPFgIeDVNlbGVjdGVkSW5kZXhmFgIeA2RpcgUDcnRsDxQrAAUUKwACDxYGHgpQYWdlVmlld0lEBQlQYWdlVmlldzAeBFRleHQFJ9in2YTYtdmB2K3YqSDYp9mE2LHYpiYjMTc0MDvYsyYjMTc0MDvYqR4LTmF2aWdhdGVVcmwFEmRlZmF1bHQuYXNweD90YWI9MGRkFCsAAg8WBh8IBQlQYWdlVmlldzEfCQUS2LnZhiDYp9mE2YfZitim2KkgHwoFF3BhZ2VfYWJvdXR1cy5hc3B4P3RhYj0xZGQUKwACDxYGHwgFCVBhZ2VWaWV3Mh8JBS/Yp9mE2YLZiNin2YYmIzE3NDA72YYg2YjYp9mE2KrYtNixJiMxNzQwO9i52KfYqh8KBRRwYWdlX2xhd3MuYXNweD90YWI9MmRkFCsAAg8WBh8IBQlQYWdlVmlldzMfCQUX2K7Yr9mF2KfYqiDYp9mE2YfZitim2KkfCgUYcGFnZV9zZXJ2aWNlcy5hc3B4P3RhYj0zZGQUKwACDxYGHwgFCVBhZ2VWaWV3NB8JBRvYp9mE2LHZg9mGINin2YTYpdi52YTYp9mF2YofCgUTTmV3c0xpc3QuYXNweD90YWI9NGRkDxQrAQVmZmZmZhYBBW5UZWxlcmlrLldlYi5VSS5SYWRUYWIsIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTAuMS4zMDkuMzUsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNGQWCmYPDxYGHwgFCVBhZ2VWaWV3MB8JBSfYp9mE2LXZgdit2Kkg2KfZhNix2KYmIzE3NDA72LMmIzE3NDA72KkfCgUSZGVmYXVsdC5hc3B4P3RhYj0wZGQCAQ8PFgYfCAUJUGFnZVZpZXcxHwkFEti52YYg2KfZhNmH2YrYptipIB8KBRdwYWdlX2Fib3V0dXMuYXNweD90YWI9MWRkAgIPDxYGHwgFCVBhZ2VWaWV3Mh8JBS/Yp9mE2YLZiNin2YYmIzE3NDA72YYg2YjYp9mE2KrYtNixJiMxNzQwO9i52KfYqh8KBRRwYWdlX2xhd3MuYXNweD90YWI9MmRkAgMPDxYGHwgFCVBhZ2VWaWV3Mx8JBRfYrtiv2YXYp9iqINin2YTZh9mK2KbYqR8KBRhwYWdlX3NlcnZpY2VzLmFzcHg/dGFiPTNkZAIEDw8WBh8IBQlQYWdlVmlldzQfCQUb2KfZhNix2YPZhiDYp9mE2KXYudmE2KfZhdmKHwoFE05ld3NMaXN0LmFzcHg/dGFiPTRkZAIJDxQrAAJkFQUJUGFnZVZpZXcwCVBhZ2VWaWV3MQlQYWdlVmlldzIJUGFnZVZpZXczCVBhZ2VWaWV3NGQCCw9kFhBmDw8WAh8FBRNpbWFnZXMvaWNvLW1vcmUuZ2lmZGQCAQ8PFgIfBQUaaW1hZ2VzL3RvcC1yaWdodC1ldmVudC5naWZkZAICDw8WAh8FBRlpbWFnZXMvdG9wLWxlZnQtZXZlbnQuZ2lmZGQCCQ8PFgIfBQUTaW1hZ2VzL2ljby1tb3JlLmdpZmRkAgoPDxYCHwUFGmltYWdlcy90b3AtcmlnaHQtZXZlbnQuZ2lmZGQCCw9kFgRmDw8WAh8FBRNpbWFnZXMvaWNvLW5leHQuZ2lmZGQCBQ8PFgIfBQUTaW1hZ2VzL2ljby1iYWNrLmdpZmRkAgwPDxYCHwUFGWltYWdlcy90b3AtbGVmdC1ldmVudC5naWZkZAINDw8WAh8FBRNpbWFnZXMvaWNvLW1vcmUuZ2lmZGQCDA9kFg4CAQ9kFgICBA8PFgIfBQUTaW1hZ2VzL2ljby1tb3JlLmdpZmRkAgIPFgIeB1Zpc2libGVoZAIDDxYCHwtoZAIEDxYCHwtoZAIFDxYCHwtoZAIHD2QWAmYPZBYCZg8VAcUBPGEgdGFyZ2V0PV9ibGFuayBocmVmPSJodHRwOi8vd3d3LnZpc2lvbjIwMjEuYWUvIj48aW1nICBzcmM9Ii4uL2Fzc2V0c21hbmFnZXIvYmFubmVyL3Zpc2lvbjIwMjEucG5nIiBhbHQ9Itix2KTZitipINin2YTYpdmF2KfYsdin2KogMjAyMSIgd2lkdGg9IjIyOHB4IiBoZWlnaHQ9IjEwOXB4IiBib3JkZXI9IjAiIGFsaWduPSJjZW50ZXIiPjwvYT5kAggPDxYCHwkFE9ix2YjYp9io2Lcg2YfYp9mF2KlkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WBQUPY3RsMDAkU2VhcmNoSW1nBRJjdGwwMCRSYWRUYWJTdHJpcDEFE2N0bDAwJFJhZE11bHRpUGFnZTEFHmN0bDAwJE1haW5Db250ZW50JGZhcUxlZnRBcnJvdwUfY3RsMDAkTWFpbkNvbnRlbnQkZmFxUmlnaHRBcnJvd76Q3p4pcyNzozA5ZIwyNU/MEbkx" />
+
+
+<script src="/ScriptResource.axd?d=AiRwyp9VGeqRK-rjIop6XBcHt9l7UPyjIsp0Rj61GCr16QMpNSckWGo3JNIs434Vsj5EkhCMVTeIgg0QhRFFZidH39GG3j4-QmfhSE0eWUo1&amp;t=ffffffff8522231c" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=2Y04a_QMdMAEzSxVENWek0eGmk5WHTPWepuzv4p2aO9pHjPn_FnYhECSLDIh1F4y0&amp;t=668675f2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=2Y04a_QMdMAEzSxVENWek0eGmk5WHTPWepuzv4p2aO9L-XAl_-ThBZDpXQjYNACXEORYnNUFBhhV-I7fpfhf5w2&amp;t=668675f2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=2Y04a_QMdMAEzSxVENWek0eGmk5WHTPWepuzv4p2aO-KWcimYR0a5JnoxhRrWZVJUNCsDXtlsv40-WtQqlldtg2&amp;t=668675f2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=2Y04a_QMdMAEzSxVENWek0eGmk5WHTPWepuzv4p2aO8KGJetVgR9vHIfREViiYCd8SduPBIEziSVnUIul9eG_yzvAZ1b2egD8VyejJJdCSE1&amp;t=668675f2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=2Y04a_QMdMAEzSxVENWek0eGmk5WHTPWepuzv4p2aO-vw2p_tGJXvUPV2j9N2dVARx5OG9wQWnWZo0npAU3vgLPgWvTsBn7SJsmhM0n1kfA1&amp;t=668675f2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=2Y04a_QMdMAEzSxVENWek-7ZJtjRPGCBAe2yjMo94Ytc5iFY9VYYUtjiUtbaprUMu_p2Iyvxd4ejQyNZJ7qZXw2&amp;t=668675f2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=2Y04a_QMdMAEzSxVENWek-7ZJtjRPGCBAe2yjMo94YvBodaHDvf-LhOA28Lt5hwbG6uQbbwsQ4Jcm-QZ7WqsRSRPmDTkyMmfCpCb-auRhTw1&amp;t=668675f2" type="text/javascript"></script>
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDQKFir77AwKFlOrlDQKYupndAwKt9v2cCwKOkrn2CAK9o/+RCQLs56XSCgKH0cPnBALsxs+gBwK+n/zkCQL7xquXBALexOeEAgLmqM/yB3IVNjJrBDfGaC4HrQepzS8a6X8E" />
+    
+    
+    <div>
+        <table width="952" border="0" align="center" cellpadding="0" cellspacing="0">
+            <!-- first row-->
+            <tr>
+                <td width="100%" align="left" style="height: 37px;" class="bg-top-hedar">
+                    <table width="60%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td width="100%" align="left" style="padding-left: 10px">
+                                <table width="490" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td align="center" valign="top">
+                                            <input name="ctl00$txtKeyword" type="text" value="... ﬂ·„… «·»ÕÀ ..." id="ctl00_txtKeyword" class="text-search" size="30" onfocus="javascript:this.value=''" />
+                                            
+                                            
+                                        </td>
+                                        <td align="center" valign="top" style='padding-left: 3px;'>
+                                            <input type="image" name="ctl00$SearchImg" id="ctl00_SearchImg" onMouseOver="window.status='';return true" src="images/btn-go-search.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$SearchImg&quot;, &quot;&quot;, true, &quot;search&quot;, &quot;&quot;, false, false))" border="0" />
+                                        </td>
+                                        <td align="right">
+                                            <a id="ctl00_AdvancedSearch" onMouseOver="window.status='';return true" href="javascript:__doPostBack('ctl00$AdvancedSearch','')">ª »ÕÀ „ ﬁœ„</a>
+                                        </td>
+                                        <td>
+                                            &nbsp;|&nbsp;&nbsp;<a href='page_contactus.aspx'>« ’· »‰«</a>
+                                        </td>
+                                        <td>
+                                            |&nbsp;<a href="Sitemap.aspx">Œ—Ìÿ… «·„Êﬁ⁄</a> &nbsp; | <span class="text-top-e">
+                                                <a id="ctl00_LinkButton1" onMouseOver="window.status='';return true" href="javascript:__doPostBack('ctl00$LinkButton1','')">English</a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- End  first row-->
+            <!-- second row-->
+            <tr onmouseover="TabReturnToCurrent()">
+                <td style="padding: 0px; margin: 0px;">
+                    
+                    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="952px" height="178px"
+                        codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0">
+                        <param name="movie" value="images/banner.swf" />
+                        <param name="quality" value="high" />
+                        <param name="wmode" value="transparent" />
+                        <embed wmode="transparent" src="images/banner.swf" quality="high"
+                            pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"
+                            width="952px" height="178px"></embed>
+                    </object>
+                </td>
+            </tr>
+            <!-- End of second row-->
+            <!-- 3rd row TopMenuBar-->
+            <tr>
+                <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td class="bg-menu" style="height: 41px; padding: 0px;">
+                                <div id="ctl00_RadTabStrip1" class="RadTabStrip RadTabStrip_ RadTabStripTop_ RadTabStrip_rtl RadTabStrip__rtl RadTabStripTop__rtl RadTabStrip_TopLinks" dir="rtl">
+	<!-- 2010.1.309.35 --><div class="rtsLevel rtsLevel1">
+		<ul class="rtsUL"><li class="rtsLI rtsFirst"><a class="rtsLink rtsSelected" href="default.aspx?tab=0"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">«·’›Õ… «·—∆&#1740;”&#1740;…</span></span></span></a></li><li class="rtsLI"><a class="rtsLink rtsAfter" href="page_aboutus.aspx?tab=1"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">⁄‰ «·ÂÌ∆… </span></span></span></a></li><li class="rtsLI"><a class="rtsLink" href="page_laws.aspx?tab=2"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">«·ﬁÊ«‰&#1740;‰ Ê«· ‘—&#1740;⁄« </span></span></span></a></li><li class="rtsLI"><a class="rtsLink" href="page_services.aspx?tab=3"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">Œœ„«  «·ÂÌ∆…</span></span></span></a></li><li class="rtsLI rtsLast"><a class="rtsLink" href="NewsList.aspx?tab=4"><span class="rtsOut"><span class="rtsIn"><span class="rtsTxt">«·—ﬂ‰ «·≈⁄·«„Ì</span></span></span></a></li></ul>
+	</div><input id="ctl00_RadTabStrip1_ClientState" name="ctl00_RadTabStrip1_ClientState" type="hidden" />
+</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right" class="bg-sub-menu1" align="center" style="height: 35px;
+                                padding: 0px;">
+                                <div id="ctl00_RadMultiPage1">
+	<div id="ctl00_PageView0">
+
+	</div><div id="ctl00_PageView1" class="rmpHiddenView">
+		<div><table class="bg-sub-menu1"   border="0" cellspacing="0" cellpadding="0"><td style='padding-right:80px;' class="text-SUB-MENU1"><a target="_self" href="page_bod.aspx?tab=1" id="" runat="server" class="text-SUB-MENU1">„Ã·” «·≈œ«—…</a></td><td class="text-SUB-MENU1"><a target="_self"   href="page_authoritystrategy.aspx?tab=1" id="" runat="server" class="text-SUB-MENU1">≈” —« &#1740;Ã&#1740;… «·™&#1740;∆…</a></td><td class="text-SUB-MENU1"><a target="_self"   href="organization.aspx?tab=1" id="" runat="server" class="text-SUB-MENU1">«·™&#1740;ﬂ· «· ‰Ÿ&#1740;„Ì</a></td><td class="text-SUB-MENU1"><a target="_self"   href="location.aspx" id="" runat="server" class="text-SUB-MENU1">„Êﬁ⁄ «·™&#1740;∆…</a></td></table></div>
+	</div><div id="ctl00_PageView2" class="rmpHiddenView">
+		<div><table class="bg-sub-menu1"   border="0" cellspacing="0" cellpadding="0"><td style='padding-right:300px;' class="text-SUB-MENU1"><a  target="_self"  href="page_hrlaw.aspx?tab=2" id="" runat="server" class="text-SUB-MENU1">ﬁ«‰Ê‰ «·„Ê«—œ «·»‘—&#1740;…</a></td><td class="text-SUB-MENU1"><a target="_self"   href="page_regulationsofthelaw.aspx?tab=2" id="" runat="server" class="text-SUB-MENU1">«··«∆Õ… «· ‰›&#1740;–&#1740;… ··ﬁ«‰Ê‰</a></td><td class="text-SUB-MENU1"><a target="_self"   href="DocLib_circulars.aspx?tab=2" id="" runat="server" class="text-SUB-MENU1">«· ⁄«„Ì„</a></td></table></div>
+	</div><div id="ctl00_PageView3" class="rmpHiddenView">
+		<div><table class="bg-sub-menu1"   border="0" cellspacing="0" cellpadding="0"><td style='padding-right:470px;' class="text-SUB-MENU1"><a  target="_self"  href="services.aspx?tab=3" id="" runat="server" class="text-SUB-MENU1">«·Œœ„«  «·≈·ﬂ —Ê‰&#1740;…</a></td><td class="text-SUB-MENU1"><a target="_self"   href="Eventslist.aspx?tab=3" id="" runat="server" class="text-SUB-MENU1">„»«œ—«  «·ÂÌ∆…</a></td><td class="text-SUB-MENU1"><a target="_blank"   href="http://mail01.fahr.gov.ae/?tab=3" id="" runat="server" class="text-SUB-MENU1">«·»—Ìœ «·≈·ﬂ —Ê‰Ì ·„ÊŸ›Ì «·ÂÌ∆…</a></td></table></div>
+	</div><div id="ctl00_PageView4" class="rmpHiddenView">
+
+	</div><input id="ctl00_RadMultiPage1_ClientState" name="ctl00_RadMultiPage1_ClientState" type="hidden" />
+</div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- End of 3rd row TopMenuBar-->
+            <!-- 4th row Navigation Breadcrumbs-->
+            <tr onmouseover="TabReturnToCurrent()">
+                <td height="15">
+                    <!-- InstanceBeginEditable name="top-link-bath" -->
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            
+                            <td height="30px" width="40%" align="right">
+                                &nbsp;
+                            </td>
+                            
+                            <td width="40%" align="left">
+                                <div id="ctl00_pnlPrintFriend">
+	
+                                    <table width="160px" border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td align="left" style='padding-left: 6px;'>
+                                                <a href="#" onclick="emailFriend();">
+                                                    <img src="images/ic-mail.gif" width="16px" height="15px" border="0px" title="«Œ»— ’œÌﬁ"
+                                                        alt="" />
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#" onclick="CallPrinter();" style='padding-left: 6px;'>
+                                                    <img src="images/ic-print.gif" width="16px" border="0px" height="15px" title="ÿ»«⁄… «·’›Õ…"
+                                                        alt="" />
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="default.aspx" target="_self">
+                                                    <img src="images/homeicon.gif" width="24px" border="0px" height="28px" title="«·’›Õ… «·—∆Ì”Ì…"
+                                                        alt="" />
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#" onclick="AddToFavorite();">
+                                                    <img src="images/bookmarkicon.gif" width="24px" border="0px" height="28px" title="√÷› ··„›÷·…"
+                                                        alt="" />
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#" onclick="resizeText(-1);">
+                                                    <img src="images/textminus.bmp" width="24px" border="0px" height="28px" title=" ’€Ì— «·Œÿ"
+                                                        alt="" />
+                                                </a>
+                                            </td>
+                                            <td align="right">
+                                                <a href="#" onclick="resizeText(1);">
+                                                    <img src="images/textplus.bmp" width="24px" border="0px" height="28px" title=" ﬂ»Ì— «·Œÿ"
+                                                        alt="" />
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                
+</div>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- InstanceEndEditable -->
+                </td>
+            </tr>
+            <!-- End of 4th row Navigation Breadcrumbs-->
+            <tr onmouseover="TabReturnToCurrent()">
+                <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td width="80%" valign="top">
+                                
+    
+        
+           <div id="divPrint">
+           <span id="pagetitle" visible="false"></span>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td>
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" 
+                      style="margin-top: 0px">
+                  <tr>
+                        <td width="10px" align="right" class="WelcomeTopLeftImg">
+                          </td>
+                        <td width="695px"  class="WelcomeCenterImg" valign="middle">
+                        </td>
+                        <td width="10px" align="left" class="WelcomeTopRightImg">
+                        </td>
+                 </tr>
+          
+                 <tr>
+                    <td  class="WelcomeLeftSideImg">
+                        &nbsp;
+                    </td>
+                    <td valign="top" style="padding-top: 10px">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td width="12%" align="center" style="padding-right: 15px">
+                                
+                                    <img src='../ImagePath.aspx?width=67&amp;height=138&amp;path=/banner/images/logo-welcome.gif' alt="" />
+                                </td>
+                                <td width="88%" valign="top" class="welcomeMsgPadding">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td class="text-title2">
+                                                „‹—Õ»‹‹« »ﬂ‹‹„ ›Ì «·ÂÌ∆‹‹… «·≈ Õ«œÌ… ··‹‹„Ê«—œ «·»‘—Ì‹‹‹‹… «·Õﬂ‹‹‹Ê„Ì‹‹‹‹‹‹‹…
+                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-top: 5PX;">
+                                                 √””  «·ÂÌ∆… «·« Õ«œÌ… ··„Ê«—œ «·»‘—Ì… «·ÕﬂÊ„Ì… »œÊ·… «·≈„«—«  «·⁄—»Ì… «·„ Õœ… ÿ»ﬁ« ··„—”Ê„ »ﬁ«‰Ê‰ « Õ«œÌ —ﬁ„ (11) ·”‰… 2008 »‘√‰ «·„Ê«—œ «·»‘—Ì… «·–Ì √’œ—Â ’«Õ» «·”„Ê «·‘ÌŒ Œ·Ì›… »‰ “«Ìœ ¬· ‰ÂÌ«‰° —∆Ì” «·œÊ·… Õ›ŸÂ «··Â. ..
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="50px" align="left" valign="bottom">
+                                                <table width="80px" border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td width="39%" align="left">
+                                                            <img id="ctl00_MainContent_WelcomeImgMore" alt="" src="images/ico-more.gif" height="12" width="13" border="0" />
+                                                        </td>
+                                                         <td width="15%">&nbsp;</td>
+                                                        <td width="56%" align="right">
+                                                            <a href="Page_welcome.aspx">«·„“Ìœ</a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        
+                                       
+                                        
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="WelcomeRightSideImg">
+                        &nbsp;
+                    </td>
+                </tr>
+               <tr>
+                    <td class="WelcomeBottomLeftImg">
+                    </td>
+                    <td class="WelcomeBottomCenterImg">
+                    </td>
+                    <td class="WelcomeBottomRightImg">
+                     </td>
+              </tr>
+              </table>
+              </td>
+            </tr>
+            
+            <tr>
+              <td height="10"></td>
+            </tr>
+            
+        <tr>
+          <td>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                         <td width="10">
+                        
+                                <img id="ctl00_MainContent_newsFaqLeftSide" alt="" src="images/top-right-event.gif" height="39" width="11" border="0" />
+                            </td>
+                            <td width="695" valign="middle"  style="padding-top:7px; background:url('images/top-center-event.gif');">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>    
+                                        <td class="text-title" style='padding-right: 12px'>
+                                            «·—ﬂ‰ «·≈⁄·«„Ì
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td width="10" align="left">
+                               <img id="ctl00_MainContent_newsFaqRightSide" alt="" src="images/top-left-event.gif" height="39" width="11" border="0" /> 
+                            </td>
+
+                        </tr>
+                        
+                        <tr>
+                            <td class="WelcomeLeftSideImg">
+                                &nbsp;
+                            </td>
+                            <td valign="top" class="newPadding">
+                                
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                      <tr>
+                                        <td>
+                                       <input name="ctl00$MainContent$hiddenId1" type="hidden" id="ctl00_MainContent_hiddenId1" value="/assetsmanager//images/alhamely.png#«·ÂÌ∆… «·≈ Õ«œÌ… ··„Ê«—œ «·»‘—Ì… «·ÕﬂÊ„Ì…# ⁄ÌÌ‰ ‰«’— À«‰Ì Ã„⁄… «·Â«„·Ì „œÌ—«  ‰›Ì–Ì« »œ—Ã… ÊﬂÌ· Ê“«—… „”«⁄œ »«·ÂÌ∆…#6/2/2010#NewsDetails.aspx?newsId= 338" />
+                                         <input name="ctl00$MainContent$hiddenId2" type="hidden" id="ctl00_MainContent_hiddenId2" value="/assetsmanager//images/genimage.jpg# ‘ﬂÌ· ·Ã‰… «·„—√… «·⁄«„·… ›Ì «·ÕﬂÊ„… «·« Õ«œÌ…#52% „‰ ﬁÊ… «·⁄„· «·„Ê«ÿ‰… ≈‰«À #6/2/2010#NewsDetails.aspx?newsId= 340" />
+                                           <input name="ctl00$MainContent$hiddenId3" type="hidden" id="ctl00_MainContent_hiddenId3" value="/assetsmanager//images/HR-Fahr.png#·Ã‰… «⁄ —«÷«  Ê Ÿ·„«  Ê‰Ÿ«„ ··”·Êﬂ «·„Â‰Ì ›Ì &quot;«·« Õ«œÌ… ··„Ê«—œ «·»‘—Ì…&quot;#√ÿ·ﬁ  »—‰«„ÃÌ &quot;„”«—&quot; Ê&quot;«” ﬁÿ«»&quot;#5/29/2010#NewsDetails.aspx?newsId= 339" />
+                                          <div id="firstnews">
+                                              <table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="22%"><img src="/assetsmanager//images/alhamely.png" width="143px" height="110px" alt="" /></td><td width="78%" valign="top" style='padding-right:10px;'><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td height="30px" valign="top" class="text-title-news"><a href='NewsDetails.aspx?newsId=338'> ⁄ÌÌ‰ ‰«’— À«‰Ì Ã„⁄… «·Â«„·Ì „œÌ—«  ‰›Ì–Ì« »œ—Ã… ÊﬂÌ· Ê“«—… „”«⁄œ »«·ÂÌ∆…</a></td></tr><tr><td>«·ÂÌ∆… «·≈ Õ«œÌ… ··„Ê«—œ «·»‘—Ì… «·ÕﬂÊ„Ì…</td></tr></table></td></tr></table>
+                                           </div>
+                                           
+                                        </td>
+                                       </tr>
+                                       
+                                    <tr>
+                                        <td height="10px">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bg-line">
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr><td height="35px" width="100%" align="right">
+                                    <div id="ctl00_MainContent_newsdiv1">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="4%" style='padding-left:10px;'><img  src="images/ico-red-news.gif" width="6px" height="6px" alt="" /></td><td width="76%" class="text-title-subnews"><a  href='NewsDetails.aspx?newsId=338'> ⁄ÌÌ‰ ‰«’— À«‰Ì Ã„⁄… «·Â«„·Ì „œÌ—«  ‰›Ì–Ì« »œ—Ã… ÊﬂÌ· Ê“«—… „”«⁄œ »«·ÂÌ∆…</a></td><td width="20%" align="left"><strong>6/2/2010</strong></td></tr></table>
+                                    </div>
+                                   </td></tr>
+                                   
+                                    <tr>
+                                        <td class="bg-line">
+                                        </td>
+                                    </tr>
+                                   
+                                   <tr><td height="35px" width="100%" align="right">
+                                    <div id="ctl00_MainContent_newsdiv2">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="4%" style='padding-left:10px;'><img src="images/ico-red-news.gif" width="6px" height="6px" alt="" /></td><td width="76%" class="text-title-subnews"><a href='NewsDetails.aspx?newsId=340'>52% „‰ ﬁÊ… «·⁄„· «·„Ê«ÿ‰… ≈‰«À </a></td><td width="20%" align="left"><strong>6/2/2010</strong></td></tr></table>
+                                    </div>
+                                   </td></tr>
+                                   
+                                    <tr>
+                                        <td class="bg-line">
+                                        </td>
+                                    </tr>
+                                   
+                                   <tr><td height="35px" width="100%" align="right">
+                                    <div id="ctl00_MainContent_newsdiv3">
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="4%" style='padding-left:10px;'><img src="images/ico-red-news.gif" width="6px" height="6px" alt="" /></td><td width="76%" class="text-title-subnews"><a href='NewsDetails.aspx?newsId=339'>√ÿ·ﬁ  »—‰«„ÃÌ "„”«—" Ê"«” ﬁÿ«»"</a></td><td width="20%" align="left"><strong>5/29/2010</strong></td></tr></table>
+                                    </div>
+                                   </td></tr>
+                                   
+                                   <tr>
+                                        <td class="bg-line">
+                                        </td>
+                                    </tr>
+                                   
+                                    <tr>
+                                        <td height="25px" align="left" valign="bottom">
+                                            <table width="50px" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td width="39%" align="left">
+                                                       <img id="ctl00_MainContent_NewsMore" alt="" src="images/ico-more.gif" height="12" width="13" border="0" />
+                                                    </td>
+                                                      <td width="15%">&nbsp;</td>
+                                                    <td width="56%" align="right">
+                                                     <a href="NewsList.aspx">«·„“Ìœ</a>
+                                                   </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                               
+                                </table>
+                                
+                            </td>
+                            <td class="WelcomeRightSideImg">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="WelcomeBottomLeftImg">
+                            </td>
+                            <td class="WelcomeBottomCenterImg">
+                            </td>
+                            <td class="WelcomeBottomRightImg">
+                             </td>
+                       </tr>
+                    </table>
+                </td>
+          </tr>
+             
+      <tr>
+        <td height="15"></td>
+      </tr>
+            <tr>
+                <td>
+                   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            
+                <tr>
+                    <td width="10">
+                        <img id="ctl00_MainContent_faqLeftImg" alt="" src="images/top-right-event.gif" height="39" width="11" border="0" />
+                    </td>
+                    <td width="695" valign="middle"  style="padding-top:7px; background:url('images/top-center-event.gif');">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td width="75%" class="text-title" style='padding-right: 12px'>
+                                   √”∆·… ‘«∆⁄…
+                                </td>
+                                <td width="25%" align="right"   class="text-title" style='padding-right: 12px'>
+                                <div id="ctl00_MainContent_pnlPaging">
+	
+                                    <table width="60%" border="0" cellspacing="0" cellpadding="0" >
+                                        <tr>
+                                            <td align="right" >
+                                             <input type="image" name="ctl00$MainContent$faqLeftArrow" id="ctl00_MainContent_faqLeftArrow" title="«·”«»ﬁ" alt="" src="images/ico-next.gif" border="0" />
+                                              </td>
+                                            <td align="center">
+                                                <img src="images/ico-red.gif" id="ctl00_MainContent_img0" width="7" height="11" />
+                                            </td>
+                                            <td align="center">
+                                                <img src="images/ico-w.gif" id="ctl00_MainContent_img1" width="7" height="11" />
+                                            </td>
+                                            <td align="center">
+                                                <img src="images/ico-w.gif" id="ctl00_MainContent_img2" width="7" height="11" />
+                                            </td>
+                                            <td align="center">
+                                                <img src="images/ico-w.gif" id="ctl00_MainContent_img3" width="7" height="11" />
+                                            </td>
+                                            <td align="left">
+                                                <input type="image" name="ctl00$MainContent$faqRightArrow" id="ctl00_MainContent_faqRightArrow" title="«· «·Ì" alt="" src="images/ico-back.gif" border="0" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    
+</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    
+                   <td width="10" align="left">
+                       <img id="ctl00_MainContent_faqRightImg" alt="" src="images/top-left-event.gif" height="39" width="11" border="0" /> 
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="WelcomeLeftSideImg">
+                        &nbsp;
+                    </td>
+                    <td valign="top" class="faqPadding">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td height="30px" align="right" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="100%" align="right" title="≈÷€ÿ Â‰« ·„‘«Âœ…/≈Œ›«¡ «·ÃÊ«»"  class="defaultNewsHeader"><strong>„« „œÏ ≈„ﬂ«‰Ì… „‰Õ „ÊŸ› ≈Ã«“… ·„—«›ﬁ… „—Ì÷ ·„œ… ‘Â— ›Ì Ÿ· «·ﬁ«‰Ê‰ «·« Õ«œÌ —ﬁ„ (11) ·”‰… 2008„ »‘√‰ «·„Ê«—œ «·»‘—Ì… ›Ì «·ÕﬂÊ„… «·« Õ«œÌ…ø</strong></td></tr></table></td></tr><tr><td><div class="defaultNewsContent"><P>ÿ»ﬁ« ·‰’ «·„«œ… (59) „‰ «·ﬁ«‰Ê‰ «·« Õ«œÌ —ﬁ„ (11) ·”‰… 2008„ »‘√‰ «·„Ê«—œ «·»‘—Ì… ›Ì «·ÕﬂÊ„… «·« Õ«œÌ… ›≈‰Â&nbsp;"ÌÃÊ“ ··Ê“Ì— √Ê „‰ Ì›Ê÷Â „‰Õ «·„ÊŸ› «·„Ê«ÿ‰ ≈Ã«“… «” À‰«∆Ì… »—« » ≈Ã„«·Ì ·„œ… <a href='FAQs.aspx?faqId=48'> ..</a><p align="left" class="news-read-more"><a href='FAQs.aspx?faqId=48'>„“Ìœ „‰ «· ›«’Ì· &gt;&gt;</a></p></div></td></tr><tr><td height="10"></td></tr><tr><td class="bg-line"></td></tr><tr><td height="30px" align="right" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="100%" align="right" title="≈÷€ÿ Â‰« ·„‘«Âœ…/≈Œ›«¡ «·ÃÊ«»"  class="defaultNewsHeader"><strong>„« ÂÌ «·¬·Ì… «·„ »⁄… ›Ì «Õ ”«» «·Œ»—… «·⁄„·Ì… ··„ÊŸ› »⁄œ √‰  „  ⁄ÌÌ‰Â Ê»«‘— ⁄„·Âø</strong></td></tr></table></td></tr><tr><td><div class="defaultNewsContent"><P>ÿ»ﬁ« ·‰’ «·„«œ… (18) „‰ „—”Ê„ »ﬁ«‰Ê‰ « Õ«œÌ —ﬁ„ (11) ·”‰… 2008„ »‘√‰ «·„Ê«—œ «·»‘—Ì… ›Ì «·ÕﬂÊ„… «·« Õ«œÌ… ›≈‰ «·Œ»—… «·⁄„·Ì… «·Ê«Ã» «·√Œ– »Â« ⁄‰œ «· ⁄ÌÌ‰ ÂÌ «·Œ»—«  «·”«»ﬁ… ⁄·Ï <a href='FAQs.aspx?faqId=49'> ..</a><p align="left" class="news-read-more"><a href='FAQs.aspx?faqId=49'>„“Ìœ „‰ «· ›«’Ì· &gt;&gt;</a></p></div></td></tr><tr><td height="10"></td></tr><tr><td class="bg-line"></td></tr><tr><td height="30px" align="right" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="100%" align="right" title="≈÷€ÿ Â‰« ·„‘«Âœ…/≈Œ›«¡ «·ÃÊ«»"  class="defaultNewsHeader"><strong>„« ÂÌ «·ﬁÊ«⁄œ «·„⁄„Ê· »Â« ›Ì„« Ì ⁄·ﬁ »«·√Ã«“«  «·œ—«”Ì… «·⁄·Ì« («·„«Ã” Ì—-«·œﬂ Ê—«Â) »œÊ‰ „— »ø</strong></td></tr></table></td></tr><tr><td><div class="defaultNewsContent"><P>«·ﬁÊ«⁄œ ﬂ«· «·Ì:<BR>1 ñ »«·‰”»… ··„Ê«ÿ‰Ì‰ ›ﬁœ ‰’ «·„—”Ê„ »ﬁ«‰Ê‰ « Õ«œÌ —ﬁ„ 11 ·”‰… 2008 ›Ì «·„«œ… —ﬁ„ 61 ÌÃÊ“ ··Ê“Ì— √Ê „‰ Ì›Ê÷Â „‰Õ «·„ÊŸ› «·„Ê«ÿ‰ ≈Ã«“… œ—«”Ì… „œ›Ê⁄… «·—« » <a href='FAQs.aspx?faqId=50'> ..</a><p align="left" class="news-read-more"><a href='FAQs.aspx?faqId=50'>„“Ìœ „‰ «· ›«’Ì· &gt;&gt;</a></p></div></td></tr><tr><td height="10"></td></tr><tr><td class="bg-line"></td></tr></table>
+                             
+                             </td>
+                            </tr>
+                            
+                            <tr>
+                                <td height="25px" align="left" valign="bottom">
+                                    <table width="50px" border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td width="39%" align="left">
+                                               <img id="ctl00_MainContent_FaqMoreImg" alt="" src="images/ico-more.gif" height="12" width="13" border="0" />
+                                            </td>
+                                             <td width="15%">&nbsp;</td>
+                                            <td width="56%" align="right">
+                                             <a href="FAQs.aspx">«·„“Ìœ</a>
+                                           </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            
+                        
+                    </table>
+                    </td>
+                    <td class="WelcomeRightSideImg">
+                     &nbsp;
+                    </td>
+                </tr>
+                
+               <tr>
+                    <td class="WelcomeBottomLeftImg">
+                    </td>
+                    <td class="WelcomeBottomCenterImg">
+                    </td>
+                    <td class="WelcomeBottomRightImg">
+                     </td>
+               </tr>
+            </table>
+        </td>
+    </tr>
+              <tr>
+                <td>&nbsp;</td>
+              </tr>
+              </table></td>
+            </tr>
+          </table>
+          </div>
+          
+                            </td>
+                            <td width="20%" style='padding-right: 15px;' valign="top">
+                                
+              
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+           <tr>
+            <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td><a href="http://www.fahr.gov.ae/myinfo/"><img src="/assetsmanager//banner/images/btn-byanati.gif" width="226px" height="81px" border="0" alt="" /></a></td></tr><tr><td height="5px"></td></tr><tr><td><a href="LegalAdvice.aspx"><img src="/assetsmanager//banner/images/pic.jpg" width="226px" height="81px" border="0" alt="" /></a></td></tr><tr><td height="5px"></td></tr><tr><td><a href="complaints.aspx"><img src="/assetsmanager//banner/images/bt-shakawi1.gif" width="226px" height="81px" border="0" alt="" /></a></td></tr><tr><td height="5px"></td></tr><tr><td><a href="PollQuestions.aspx"><img src="/assetsmanager//banner/images/call.gif" width="226px" height="81px" border="0" alt="" /></a></td></tr><tr><td height="5px"></td></tr></table>
+               </td>
+            </tr>
+            
+            <tr>
+                <td height="10px">
+                </td>
+            </tr>
+         
+            <tr>
+                  <td height="10px">
+                      <a href="http://www.skgep.gov.ae" target="_blank">
+                      <img src="images/btn-shikh.gif" width="226px" height="81px" border="0" alt="" />
+                      </a>
+                  </td>
+            </tr> 
+            
+            <tr>
+                <td height="12px">
+                </td>
+            </tr>
+            
+    <tr>
+      <td height="10px">
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+               <tr>
+                <td width="4%" align="right" class="TopLeftImg">
+               
+                </td>
+                <td width="92%"  class="CenterImg" valign="middle">
+                </td>
+                <td width="4%" align="left" class="TopRightImg">
+                </td>
+               </tr>
+              <tr>
+                <td  class="LeftSideImg" >
+                   <img id="ctl00_SideContent_newletterLeftSide" alt="" src="images/left-min-menu.gif" border="0" />
+                </td>
+                <td valign="top" bgcolor="#F5F5F5" style="padding-top: 10px">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td width="18%">
+                                            <img  src="images/ico-newslitter.gif" width="23px" height="14px" alt="" />
+                                        </td>
+                                        <td width="82%">
+                                        <span class="text-title2">
+                                                «·‰‘—… «·œÊ—Ì…</span>
+                                          
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr><td>
+                                        <div id="ctl00_SideContent_pnlNewsletter">
+	
+                                       
+                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    
+                                    <tr>
+                                        <td>
+                                            <strong>··«‘ —«ﬂ</strong> »«·‰‘—… «·«Œ»«—Ì… «·—Ã«¡ «œŒ«· »—Ìœﬂ «·«·ﬂ —Ê‰Ì
+                                        </td>
+                                    </tr>
+                                                        
+                                    <tr>
+                                        <td height="40px" align="right">
+                                          
+                                            <input name="ctl00$SideContent$newLetterEmail" type="text" id="ctl00_SideContent_newLetterEmail" class="text-search" onfocus="javascript:this.value=''" size="37" />
+                                               
+                                            
+                                                 
+                                                
+                                        </td>
+                                        
+                                                  
+                                    </tr>
+                                                        
+                                    <tr>
+                                        <td height="20px"  align="left" valign="top">
+                                            <table width="50%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td width="39%"  align="left">
+                                                      <img id="ctl00_SideContent_SubscImgBtn" alt="" src="images/ico-more.gif" height="12" width="13" border="0" />   
+                                                     
+                                                          
+                                                    </td>
+                                                    <td width="10%">&nbsp;</td>
+                                                    <td width="51%" align="right">
+                                                    <a id="ctl00_SideContent_SubscBtn" onMouseOver="window.status='';return true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$SideContent$SubscBtn&quot;, &quot;&quot;, true, &quot;NewsLetterGroup&quot;, &quot;&quot;, false, true))">≈‘ —ﬂ</a>
+                                                       
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>
+                                            Õ–› »—Ìœﬂ «·«·ﬂ —Ê‰Ì „‰ «·ﬁ«∆„…<strong><br />
+                                            <a id="ctl00_SideContent_DeleteSubscBtn" onMouseOver="window.status='';return true" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$SideContent$DeleteSubscBtn&quot;, &quot;&quot;, true, &quot;NewsLetterGroup&quot;, &quot;&quot;, false, true))">«÷€ÿ Â‰«</a></strong>
+                                        </td>
+                                    </tr>
+                                                        
+                                    </table>
+                                    
+                                     
+</div>
+                                     </td></tr>
+                                   
+                                    <tr><td>
+                                    
+                                        
+                                    
+                                    
+                                    </td></tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                    <td class="RightSideImg" >
+                       <img id="ctl00_SideContent_newletterRightSide" alt="" src="images/right-min-menu.gif" border="0" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="BottomLeftImg">
+                       
+                    </td>
+                    <td class="BottomCenterImg">
+                    </td>
+                    <td class="BottomRightImg">
+                     
+                    </td>
+                </tr>
+              </table>
+
+             </td>
+          </tr>
+            
+            <tr>
+              <td height="10px"></td>
+            </tr>
+            
+             
+            
+            
+            <tr>
+              <td height="10px">
+               <div id="ctl00_SideContent_RotatorBottom_slide4">
+	
+                    <a target=_blank href="http://www.vision2021.ae/"><img  src="../assetsmanager/banner/vision2021.png" alt="—ƒÌ… «·≈„«—«  2021" width="228px" height="109px" border="0" align="center"></a>
+                
+</div>
+                  
+                     </td>
+            </tr>
+            
+            <tr>
+              <td height="10px"></td>
+            </tr>
+          
+            <tr>
+              <td height="10px">
+               <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            
+                    <tr>
+                    <td align="right" width="4%" class="LeftMenuImg">
+                      </td>
+                            <td width="92%" valign="middle" class="CenterMenuImg">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td class="text-title" style='padding-right: 12px'>
+                                             <span id="ctl00_SideContent_lblSiteLinksTitle">—Ê«»ÿ Â«„…</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td align="left" width="4%" class="RightMenuImg">
+                            
+                            </td>
+                        </tr>
+                                            
+                    <tr>
+                        <td class="LeftSideImg">
+                         <img id="ctl00_SideContent_LinksLeftSide" alt="" src="images/left-min-menu.gif" border="0" />
+                            </td>
+                        <td bgcolor="#F5F5F5">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td height="10px">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                  <table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="3%" align="right" style='padding-right:5px;'><img src="images/ico-more.gif" border='' alt='' /></td><td width="97%" height="35px" style='padding-right:5px;'><a href="http://www.government.ae/"  target="_blank">«·Ê“«—«  Ê«·ÃÂ«  «·ÕﬂÊ„Ì… «·≈ Õ«œÌ…</a></td></tr><tr><td height="25px" colspan="2" align="right" style='padding-right:5px;' class="spaser-menu-right"></td></tr><tr><td width="3%" align="right" style='padding-right:5px;'><img src="images/ico-more.gif" border='' alt='' /></td><td width="97%" height="35px" style='padding-right:5px;'><a href="Page_localgoventities.aspx"  target="_self">«·ÃÂ«  «·ÕﬂÊ„Ì… «·„Õ·Ì…</a></td></tr><tr><td height="25px" colspan="2" align="right" style='padding-right:5px;' class="spaser-menu-right"></td></tr><tr><td width="3%" align="right" style='padding-right:5px;'><img src="images/ico-more.gif" border='' alt='' /></td><td width="97%" height="35px" style='padding-right:5px;'><a href="Page_entitiesconcernedwithdevelopmentofhr.aspx"  target="_self">«·√ÃÂ“… «·„⁄‰Ì… » ‰„Ì… «·„Ê«—œ «·»‘—Ì…</a></td></tr><tr><td height="25px" colspan="2" align="right" style='padding-right:5px;' class="spaser-menu-right"></td></tr></table>
+                                    </td>
+                                </tr>
+                      
+                                
+                                
+                            </table>
+                        </td>
+                        <td class="RightSideImg">
+                            <img id="ctl00_SideContent_LinksRightSide" alt="" src="images/right-min-menu.gif" border="0" />
+                         </td>
+                    </tr>
+                                            
+                                        <tr>
+                                                <td class="BottomLeftImg">
+                                                   
+                                                </td>
+                                                <td class="BottomCenterImg">
+                                                </td>
+                                                <td class="BottomRightImg">
+                                                 
+                                                </td>
+                                             </tr>
+                                    </table>
+              
+              
+              </td>
+            </tr>
+            
+          </table>
+          
+          
+         
+        
+       
+      <script type="text/javascript">
+      var myNumber=1;
+       $(document).ready(function StartCycles()
+       {
+       
+         var div1;
+         var div2;
+         var div3;
+      
+        var imgloc;
+        var news;
+        var title;
+        var nwsdate;
+        var link;
+        var myInterval = window.setInterval(doThis,6000);
+         });
+      
+      function doThis()
+      {
+       var variable;
+       var myArr = new Array();
+       
+       if(myNumber>3)
+       {
+       myNumber=1;
+       }
+       if(myNumber==1)
+       {
+        variable=document.getElementById('ctl00_MainContent_hiddenId1').value;
+        div3=document.getElementById('ctl00_MainContent_newsdiv3');
+        div2=document.getElementById('ctl00_MainContent_newsdiv2');
+        div1=document.getElementById('ctl00_MainContent_newsdiv1');
+        div1.className ="divStyle";
+        div2.className ="divNormal";
+        div3.className ="divNormal";
+        }
+        if(myNumber==2)
+        {
+         variable=document.getElementById('ctl00_MainContent_hiddenId2').value;
+         div3=document.getElementById('ctl00_MainContent_newsdiv3');
+          div2=document.getElementById('ctl00_MainContent_newsdiv2');
+         div1=document.getElementById('ctl00_MainContent_newsdiv1');
+        div2.className ="divStyle";
+        div1.className ="divNormal";
+        div3.className ="divNormal";
+       }
+         if(myNumber==3)
+         {
+           variable=document.getElementById('ctl00_MainContent_hiddenId3').value;
+           div3=document.getElementById('ctl00_MainContent_newsdiv3');
+           div2=document.getElementById('ctl00_MainContent_newsdiv2');
+            div1=document.getElementById('ctl00_MainContent_newsdiv1');
+            div3.className ="divStyle";
+            div1.className ="divNormal";
+            div2.className ="divNormal";
+        }
+          myArr = variable.split("#");
+           imgloc=myArr[0];
+            news=myArr[1];
+            title=myArr[2];
+            nwsdate=myArr[3];
+            link=myArr[4];
+                        
+                if(imgloc!="none")
+                {
+               
+                     document.getElementById('firstnews').innerHTML= "<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">"+
+                   "<tr>"+
+                   "<td width=\"22%\">"+
+                   "<img src='" + imgloc + "' width=\"143px\" height=\"110px\" alt=\"\" />"+
+                   "</td>"+
+                   "<td width=\"78%\" valign=\"top\" style=\"padding-right:10px;\">"+
+                   "<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">"+
+                   "<tr>"+
+                    "<td height=\"30px\" valign=\"top\" class=\"text-title-news\">"+
+                    "<a href=\""+link+ "\">" + title + "</a>"+
+                    "</td>"+
+                    "</tr>"+
+                    "<tr>"+
+                    "<td>" + news + "<a href=\""+link+ "\">" + " ...." + "</a>"+
+                    "</td>"+
+                    "</tr>"+
+                    "</table>"+
+                    "</td>"+
+                    "</tr>"+
+                    "</table>";
+                    }
+                    else
+                    {
+                    document.getElementById('firstnews').innerHTML= "<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">"+
+                   "<tr>"+
+                   "<td width=\"100%\" valign=\"top\" style=\"padding-right:10px;\">"+
+                   "<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">"+
+                   "<tr>"+
+                    "<td height=\"30px\" valign=\"top\" class=\"text-title-news\">"+
+                    "<a href=\""+link+ "\">" + title + "</a>"+
+                    "</td>"+
+                    "</tr>"+
+                    "<tr>"+
+                    "<td>" + news + "<a href=\""+link+ "\">" + " ...." + "</a>"+
+                    "</td>"+
+                    "</tr>"+
+                    "</table>"+
+                    "</td>"+
+                    "</tr>"+
+                    "</table>";
+                    }
+                  
+            myNumber=myNumber+1;
+         }
+           
+     
+      </script>
+        <script type="text/javascript"> 
+$(document).ready(function(){
+	
+	$(".accordion div:not(:)").hide();
+ 
+	$(".accordion h4").click(function(){
+		$(this).next("div").slideToggle("fast")
+		.siblings("div:visible").slideUp("fast");
+		$(this).toggleClass("active");
+		$(this).siblings("h4").removeClass("active");
+	});
+ 
+});
+</script>
+    
+
+   <script type="text/javascript" language="javascript" src="js/jquery.accordion.js"></script>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td width="724" valign="top" style="padding-right: 15px">
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- InstanceEndEditable -->
+                </td>
+            </tr>
+            <tr>
+                <td height="112" bgcolor="#F5F5F5" style='padding-right: 10px;'>
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td width="50%" align="right" style="font-family: tahoma; font-size: 10px;
+                                line-height: 18px; color: #555555;">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td>
+                                             „  ÕœÌÀ «·„Êﬁ⁄ ›Ì
+                                            :
+                                            Monday, June 07, 2010 14:28
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            1024x768 Â–« «·„Êﬁ⁄ Ì„ﬂ‰  ’›ÕÂ »«·‘ﬂ· «·„‰«”» „‰ Œ·«· ‘«‘…
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                             œ⁄„ „«Ìﬂ—Ê”Ê›  ≈‰ —‰  ≈ﬂ”»·Ê—— 6,0 , 1,0 ›«Ì—›Êﬂ” , ”›«—Ì 1,2 , 6,0 √Ê»—«
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Ã„Ì⁄ «·ÕﬁÊﬁ „Õ›ÊŸ… ·œÌ «·ÂÌ∆‹‹‹… «·« Õ‹‹‹«œÌ… ··„‹‹‹Ê«—œ «·»‘—Ì‹‹‹… «·ÕﬂÊ„Ì‹‹‹…
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td align="left" valign="top" style='padding-left: 10px;'>
+                                <a href='page_privacypolicy.aspx'>”Ì«”… «·Œ’Ê’Ì… </a>&nbsp;&nbsp;| &nbsp;&nbsp;<a href='page_termsandconditions.aspx'> ‘—Êÿ Ê√Õﬂ«„ </a>&nbsp;&nbsp;| &nbsp;&nbsp;<a href='Sitemap.aspx'> Œ—Ìÿ… «·„Êﬁ⁄</a>&nbsp;&nbsp;| &nbsp;&nbsp;<a href='page_contactus.aspx'>« ’· »‰«</a>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </td>
+            </tr>
+            <!-- last row-->
+            <tr>
+                <td>
+                    &nbsp;
+                </td>
+            </tr>
+            <!-- End of last row-->
+        </table>
+    </div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadTabStrip, {"_selectedIndex":0,"_skin":"","attributes":{},"causesValidation":false,"clientStateFieldID":"ctl00_RadTabStrip1_ClientState","multiPageID":"ctl00_RadMultiPage1","selectedIndexes":["0"],"tabData":[{"pageViewID":"ctl00_PageView0"},{"pageViewID":"ctl00_PageView1"},{"pageViewID":"ctl00_PageView2"},{"pageViewID":"ctl00_PageView3"},{"pageViewID":"ctl00_PageView4"}]}, {"load":TabOnLoad,"mouseOver":SelectMyTab,"tabSelected":test2}, null, $get("ctl00_RadTabStrip1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadMultiPage, {"clientStateFieldID":"ctl00_RadMultiPage1_ClientState","pageViewData":[{"id":"ctl00_PageView0"},{"id":"ctl00_PageView1"},{"id":"ctl00_PageView2"},{"id":"ctl00_PageView3"},{"id":"ctl00_PageView4"}],"selectedIndex":0}, null, null, $get("ctl00_RadMultiPage1"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

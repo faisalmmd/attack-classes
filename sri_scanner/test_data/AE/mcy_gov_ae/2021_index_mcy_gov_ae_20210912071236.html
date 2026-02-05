@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="revisit-after" content="3 days">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="VijbFxbzdIoZ7PilPnFlxBd3RNJwbKa32ToWEyHd">
+
+    <title>Portal | Ministry of Culture and Knowledge Development</title>
+
+    <script>
+        window.Language = "en";
+        window.homeUrl = 'https://www.mcy.gov.ae';
+        window.GoogleMapsKey = 'AIzaSyBie28ykXPKNc3wFmQ03NItkTzxZAVJcEc';
+    </script>
+
+    
+    <!-- Scripts -->
+    <script src="/js/app.js?id=afe19ac7760ac90f8e26" defer></script>
+
+    <!-- Styles -->
+    <link href="https://www.mcy.gov.ae/css/app.css" rel="stylesheet">
+        <link rel="icon" href="https://www.mcy.gov.ae/images/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <div id="app" class="h-full">
+        <div :class="$store.getters.theme" class="h-full">
+			<div :class="$store.getters.magnification" class="h-full">
+				<div class="site-wrapper rs_preserve h-full">
+                <header-main
+                    ref="header"
+                    @theme-toggled="$store.commit('toggleTheme')"
+                    @increase-font-clicked="$store.commit('magnifyUp')"
+                    @decrease-font-clicked="$store.commit('magnifyDown')"
+                    lang-text="EN"
+                    inline-template
+                    >
+                    <header class="header lg:flex  justify-between px-6 xl:px-10 fixed w-full pin-l pin-t bg-white border-transparent z-60" :class="{ 'header--scrolled' : scrolled, 'header--search' : searchtrigger }">
+                        <div class=" rs_skip header__section flex-no-grow flex  flex-row items-center justify-between pt-3 pb-4 md:pb-2 lg:py-0">
+                            <div class="flex flex-row items-center ">
+                                <div class="w-32 xs:w-44 md:w-52">
+                                    <a class="w-full block" href="https://www.mcy.gov.ae/en" title="Ministry of Culture and Youth">
+                                                                            <img
+                                            v-if="$store.state.theme === 'dark'"
+                                            class="w-full"
+                                            src="https://www.mcy.gov.ae/images/logo-dark-en.png"
+                                            alt="Ministry of Culture and Youth"
+                                            >
+                                        <img
+                                            v-else
+                                            class="w-full"
+                                            src="https://www.mcy.gov.ae/images/logo-en.png"
+                                            alt="Ministry of Culture and Youth"
+                                            >
+                                                                        </a>
+                                </div>
+
+                                <div class=" ml-2 md:ml-4 ">
+                                    <div class="block h-10 xs:h-12 md:h-15 lg:w-16 lg:h-16 xl:w-20 xl:h-20">
+                                        <img 
+                                            v-if="$store.state.theme === 'dark'"
+                                            v-cloak
+                                            class="w-auto h-full"
+                                            src="https://www.mckd.gov.ae/en/wp-content/uploads/sites/2/2021/03/mckd-website-rating-4-dark-mode.png"
+                                            alt="Rated 4 Stars by the Global Star Rating System for Services">
+                                        <img v-else v-cloak
+                                            class="w-auto h-full"
+                                            src="https://www.mckd.gov.ae/en/wp-content/uploads/sites/2/2021/03/mckd-website-rating-4.png"
+                                            alt="Rated 4 Stars by the Global Star Rating System for Services">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lg:hidden block rs_skip">
+                                <ul class="list-reset flex items-center justify-end">
+                                    <li>
+                                        <a title="Switch Language" class="no-underline text-dark block mr-2 md:mr-4 hover:text-gold" :href="$store.state.lel | switcher">
+                                                                                             <span class="block w-7 h-3 lg:w-6 lg:h-4 hover:text-gold">
+                                                    <svg width="29px" height="14px" viewBox="0 0 29 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-1" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd" font-family="DroidArabicKufi, Droid Arabic Kufi" font-size="14" font-weight="normal">
+                                                            <g id="عربي" transform="translate(0.000000, -11.000000)" fill="currentColor">
+                                                                <text>
+                                                                    <tspan x="0" y="18">عربي</tspan>
+                                                                </text>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                                                    </a>
+                                    </li>
+                                    <li class="relative">
+                                                                                <a class=" no-underline text-dark block text-xs uppercase hover:text-gold " href="https://www.mcy.gov.ae/en/login">
+                                            Sign In                                        </a>
+                                                                                                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header__section flex-grow flex  justify-between py-3 pt-0 lg:py-0">
+                            <div class="flex-grow flex items-center  lg:justify-end  lg:px-4 xl:px-10">
+                                <div>
+                                    <div class="relative rs_skip">
+                                        <ul class="list-reset flex items-center lg:items-end justify-end  ">
+                                            <li>
+                                                <a title="Home" aria-label="Home" class="no-underline text-dark block mr-4 hover:text-gold" href="https://www.mcy.gov.ae/en">
+                                                    <span class="block w-4 h-3">
+                                                        <svg role="img" viewBox="0 0 13 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                            <g id="Symbols" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                                                <g id="Header" transform="translate(-811.000000, -31.000000)" fill="currentColor" fill-rule="nonzero">
+                                                                    <g transform="translate(0.000000, -1.000000)" id="top---settings">
+                                                                        <g transform="translate(40.000000, 0.000000)">
+                                                                            <g transform="translate(771.000000, 29.000000)">
+                                                                                <g id="settings---icons" transform="translate(0.000000, 3.000000)">
+                                                                                    <polygon id="Fill-1" points="5.17409205 11 5.17409205 7.1174092 7.76518159 7.1174092 7.76518159 11 11 11 11 5.82186443 12.9392736 5.82186443 6.46963682 0 0 5.82186443 1.93927364 5.82186443 1.93927364 11"></polygon>
+                                                                                </g>
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="Print" aria-label="Print" href="javascript:window.print()" class="no-underline text-dark block mr-4 hover:text-gold" href="#">
+                                                    <span class="block w-4 h-3">
+                                                        <svg role="img" fill="currentColor" fill-rule="nonzero" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 10">
+                                                            <path d="M9.447 2.778H1.666C.722 2.778 0 3.5 0 4.444v3.334h2.222V10H8.89V7.778h2.222V4.444c0-.944-.722-1.666-1.666-1.666zM3.334 8.891h4.444V6.113H3.334V8.89zM9.447 5c-.334 0-.556-.222-.556-.556 0-.33.222-.553.556-.553.33 0 .553.222.553.553 0 .334-.222.556-.553.556zM2.222 2.222H8.89V0H2.22v2.222z"></path>
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="Email Us" aria-label="Email Us" href="mailto:info@mckd.gov.ae" class="no-underline text-dark block mr-4 hover:text-gold" href="#">
+                                                    <span class="block w-4 h-3">
+                                                        <svg viewBox="0 0 13 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                            <g id="Symbols" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                                                <g id="Header" transform="translate(-870.000000, -31.000000)" fill="currentColor" fill-rule="nonzero">
+                                                                    <g transform="translate(0.000000, -1.000000)" id="top---settings">
+                                                                        <g transform="translate(40.000000, 0.000000)">
+                                                                            <g transform="translate(771.000000, 29.000000)">
+                                                                                <g id="settings---icons" transform="translate(0.000000, 3.000000)">
+                                                                                    <path d="M70.698375,0 L60.301625,0 C59.5841875,0 59,0.561674869 59,1.25146473 L59,8.74853527 C59,9.43520037 59.5841875,10 60.301625,10 L70.698375,10 C71.4158125,10 72,9.43520037 72,8.74853527 L72,1.25146473 C72,0.561674869 71.4158125,0 70.698375,0 Z M70.698375,2.49902351 L65.5,5.62377939 L60.301625,2.49902351 L60.301625,1.25146473 L65.5,4.37622061 L70.698375,1.25146473 L70.698375,2.49902351 Z" id="Fill-1"></path>
+                                                                                </g>
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="Switch Mode" aria-label="Switch Mode" @click.prevent="$emit('theme-toggled')" class="no-underline text-dark block mr-4 hover:text-gold" href="#">
+                                                    <span class="block w-4 h-3">
+                                                        <svg role="img" fill="currentColor" fill-rule="nonzero" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">
+                                                            <path d="M4.773 9.545a4.773 4.773 0 1 1 0-9.545 4.773 4.773 0 0 1 0 9.545zm0-1.363a3.41 3.41 0 1 0 0-6.818 3.41 3.41 0 0 0 0 6.818z"></path>
+                                                            <path d="M5 8.182A4.09 4.09 0 0 0 5 0c0 3.182.328 8.182 0 8.182z"></path>
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a 	@click.prevent="showTheme=!showTheme"
+                                                    title="Theme"
+                                                    aria-label="Theme"
+                                                    class="no-underline text-dark block mr-3 md:mr-4 hover:text-gold  relative"
+                                                    style="top:-3px;"
+                                                    href="#">
+                                                    <span class="block w-5 h-3">
+                                                        <svg role="img" fill="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M12 3C7.03 3 3 7.03 3 12C3 16.97 7.03 21 12 21C12.83 21 13.5 20.33 13.5 19.5C13.5 19.11 13.35 18.76 13.11 18.49C12.88 18.23 12.73 17.88 12.73 17.5C12.73 16.67 13.4 16 14.23 16H16C18.76 16 21 13.76 21 11C21 6.58 16.97 3 12 3ZM6.5 12C5.67 12 5 11.33 5 10.5C5 9.67 5.67 9 6.5 9C7.33 9 8 9.67 8 10.5C8 11.33 7.33 12 6.5 12ZM9.5 8C8.67 8 8 7.33 8 6.5C8 5.67 8.67 5 9.5 5C10.33 5 11 5.67 11 6.5C11 7.33 10.33 8 9.5 8ZM14.5 8C13.67 8 13 7.33 13 6.5C13 5.67 13.67 5 14.5 5C15.33 5 16 5.67 16 6.5C16 7.33 15.33 8 14.5 8ZM17.5 12C16.67 12 16 11.33 16 10.5C16 9.67 16.67 9 17.5 9C18.33 9 19 9.67 19 10.5C19 11.33 18.33 12 17.5 12Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                                <div v-if="showTheme"
+                                                    class="absolute mt-2"
+                                                    v-cloak>
+                                                    <div class="flex rounded-lg overflow-hidden">
+                                                        <button @click="$store.commit('changeTheme', 'black')" class="bg-dark-important w-8 h-8"></button>
+                                                        <button @click="$store.commit('changeTheme', 'red')" class="bg-red-important w-8 h-8"></button>
+                                                        <button @click="$store.commit('changeTheme', 'green')" class="bg-green-theme-important w-8 h-8"></button>
+                                                        <button @click="$store.commit('changeTheme', 'brown')" class="bg-gold-important w-8 h-8"></button>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div id="readspeaker_button1" class="rs_preserve rsbtn relative" style="top:3px;">
+                                                                                                            <a rel="nofollow" class="rsbtn_play" accesskey="L" title="Listen to this page using ReadSpeaker webReader" href="//app-as.readspeaker.com/cgi-bin/rsent?customerid=9689&lang=en_uk&amp;voice=Alice&amp;readclass=site-wrapper&amp;url=https%3A%2F%2Fwww.mcy.gov.ae%2Fen%2Flogin" aria-label="Listen to this page using ReadSpeaker webReader">
+                                                            <span class="block w-4 h-3">
+                                                                <svg role="img" fill="currentColor" fill-rule="nonzero" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 10">
+                                                                    <path d="M0 3.297v3.41h2.272l2.842 2.84V.456L2.272 3.297H0zM7.672 5c0-1.02-.569-1.876-1.42-2.272v4.544c.851-.396 1.42-1.248 1.42-2.272zm-1.42-5v1.193c1.648.51 2.84 1.99 2.84 3.807 0 1.82-1.192 3.297-2.84 3.807V10a5.12 5.12 0 0 0 3.975-5 5.122 5.122 0 0 0-3.975-5z"></path>
+                                                                </svg>
+                                                            </span>
+                                                        </a>
+                                                                                                    </div>
+                                            </li>
+                                            <li>
+                                                <a title="Increase font size" aria-label="Increase font size" @click.prevent="$emit('increase-font-clicked')" class="no-underline text-dark block mr-4 hover:text-gold" href="#">
+                                                    <span class="hover:text-gold w-4 h-3">
+                                                        <svg role="img" class="ac-font svg" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                            <g id="Style-Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                <g id="style-guide---c" transform="translate(-954.000000, -3619.000000)" fill="currentColor" fill-rule="nonzero">
+                                                                    <g id="Header" transform="translate(0.000000, 3587.000000)">
+                                                                        <g transform="translate(588.000000, 0.000000)" id="top---settings">
+                                                                            <g transform="translate(223.000000, 29.000000)">
+                                                                                <g id="settings---icons" transform="translate(0.000000, 3.000000)">
+                                                                                    <g id="Group-11" transform="translate(143.000000, 0.000000)">
+                                                                                        <polygon id="Line-2" points="12 2 12 7.33333333 13.4049587 7.33333333 13.4049587 2"></polygon>
+                                                                                        <polygon id="Line-2" points="15.6198347 4 10 4 10 5.33333333 15.6198347 5.33333333"></polygon>
+                                                                                        <path d="M6.48284155,7.27213542 L2.61371707,7.27213542 L1.8042194,9.47916667 L0,9.47916667 L3.77308239,0 L5.33033639,0 L9.11027893,9.47916667 L7.29919938,9.47916667 L6.48284155,7.27213542 Z M3.10078771,5.94401042 L5.99577092,5.94401042 L4.54827931,2.01171875 L3.10078771,5.94401042 Z" id="A"></path>
+                                                                                    </g>
+                                                                                </g>
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="Decrease font size" aria-label="Decrease font size" @click.prevent="$emit('decrease-font-clicked')" class="no-underline text-dark block mr-4 hover:text-gold" href="#">
+                                                    <span class="hover:text-gold w-4 h-3">
+                                                        <svg role="img" class="ac-font svg" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                            <g id="Style-Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                <g id="style-guide---c" transform="translate(-984.000000, -3619.000000)" fill="currentColor" fill-rule="nonzero">
+                                                                    <g id="Header" transform="translate(0.000000, 3587.000000)">
+                                                                        <g transform="translate(588.000000, 0.000000)" id="top---settings">
+                                                                            <g transform="translate(223.000000, 29.000000)">
+                                                                                <g id="settings---icons" transform="translate(0.000000, 3.000000)">
+                                                                                    <g id="Group-10" transform="translate(173.000000, 0.000000)">
+                                                                                        <polygon id="Line-2-Copy" points="15.6198347 4 10 4 10 5.40495868 15.6198347 5.40495868"></polygon>
+                                                                                        <path d="M6.48284155,7.66278732 L2.61371707,7.66278732 L1.8042194,9.9883781 L0,9.9883781 L3.77308239,0 L5.33033639,0 L9.11027893,9.9883781 L7.29919938,9.9883781 L6.48284155,7.66278732 Z M3.10078771,6.26331676 L5.99577092,6.26331676 L4.54827931,2.11978629 L3.10078771,6.26331676 Z" id="A"></path>
+                                                                                    </g>
+                                                                                </g>
+                                                                            </g>
+                                                                        </g>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="hidden lg:inline-block relative">
+                                                <a title="Switch Language" aria-label="Switch Language" class="no-underline text-dark block mr-4 hover:text-gold" :href="$store.state.lel | switcher">
+                                                                                                            <span class="block w-7 h-3 hover:text-gold">
+                                                            <svg width="29px" height="14px" viewBox="0 0 29 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                                <g id="Page-1" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd" font-family="DroidArabicKufi, Droid Arabic Kufi" font-size="14" font-weight="normal">
+                                                                    <g id="عربي" transform="translate(0.000000, -11.000000)" fill="currentColor">
+                                                                        <text>
+                                                                            <tspan x="0" y="18">عربي</tspan>
+                                                                        </text>
+                                                                    </g>
+                                                                </g>
+                                                            </svg>
+                                                        </span>
+                                                                                                    </a>
+                                            </li>
+                                            <li class="hidden lg:inline-block relative" style="top:3px;">
+                                                                                                    <a class="no-underline text-dark block text-sm uppercase hover:text-gold " href="https://www.mcy.gov.ae/en/login">
+                                                        Sign In                                                    </a>
+                                                                                                                                                    </li>
+                                        </ul>
+                                    </div>
+                                    <div :class="{'hidden':searchtrigger}">
+                                        <ul id="menu-primary-menu" class="header__menu hidden lg:flex">
+                                            <li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36"><a title="About" href="https://www.mcy.gov.ae/en/about/">About</a></li>
+                                            
+                                            <li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51"><a title="Services" href="https://www.mcy.gov.ae/en/services/">Services</a></li>
+                                            <li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a title="Projects" href="https://www.mcy.gov.ae/en/projects/">Projects</a></li>
+                                            <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"><a title="Media" href="https://www.mcy.gov.ae/en/media/">Media</a></li>
+                                            <li id="menu-item-65" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a title="Open Data" href="https://www.mcy.gov.ae/en/open-data/">Open Data</a></li>
+                                            <li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63"><a title="E-Participation" href="https://www.mcy.gov.ae/en/e-participation/">E-Participation</a></li>
+                                            <li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a title="Contact" href="https://www.mcy.gov.ae/en/contact/">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rs_skip flex-no-grow flex items-center  lg:border-l pr-0 lg:pl-4 xl:pl-10    border-grey-opacity-35">
+                                <ul class="list-reset flex ">
+                                    <li>
+                                        <a title="Search" aria-label="Search" @click.prevent="toggleSearch" class="site-search-trigger  lg:mr-8 xl:mr-10  mr-4  block text-gold hover:text-gold" href="#">
+                                            <span class="block h-5 w-5 lg:h-6 lg:w-6">
+                                                <svg role="img" fill="none" fill-rule="nonzero" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28">
+                                                    <circle cx="11.5" cy="11.5" r="10.5"></circle>
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M20 19l7 8"></path>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a title="Menu" aria-label="Menu" @click.prevent="toggleNav" :class="{'is-open': navtrigger}" class="site-nav-trigger block text-gold hover:text-dark" href="#">
+                                        <span></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a title="Search" aria-label="Search" @click.prevent="toggleSearch" :class="{'is-open': searchtrigger}" class="site-search-trigger-close text-gold bg-white hover:text-dark" href="#">
+                                        <span></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <section v-if="searchtrigger" class="rs_skip rs_preserve is-open site-search bg-white overflow-y-hidden overflow-x-hidden" v-cloak>
+                            <ais-index
+                                :app-id="algolia.application_id"
+                                :api-key="algolia.search_api_key"
+                                :index-name="algolia.indices.searchable_posts.name"
+                                :auto-search="true"
+                                :query-parameters="{facets:['*']}"
+                                >
+                                <form @submit.prevent="" action="https://www.mcy.gov.ae/en" method="GET" class="flex items-center">
+                                    <div class="relative w-full md:mr-4 xl:mr-8">
+                                        <ais-input
+                                            ref="search"
+                                            placeholder="What are you looking for?"
+                                            autofocus=""
+                                            class="site-search__input w-full h-12 border-b border-grey hover:border-gold outline-none px-0 ais-input pr-20 md:pr-36 text-sm"
+                                            ></ais-input>
+                                        <ais-stats>
+                                            <template slot-scope="scope">
+                                                <a
+                                                    title="Advanced Search"
+                                                    :href="'https://www.mcy.gov.ae/en/search?query='+ scope.query"
+                                                    class="hidden h-8 mt-2 no-underline text-dark font-bold uppercase md:flex items-center hover:text-gold absolute pin-r pin-t pin-b">
+                                                    Advanced Search                                                </a>
+                                                <a
+                                                    title="Advanced"
+                                                    :href="'https://www.mcy.gov.ae/en/search?query='+ scope.query"
+                                                    class="md:hidden h-8 mt-2 mr-2 no-underline text-dark font-bold text-xs uppercase flex items-center hover:text-gold absolute pin-r pin-t pin-b">
+                                                    Advanced                                                </a>
+                                            </template>
+                                        </ais-stats>
+                                    </div>
+                                    <button class="site-search__button text-gold hover:text-gold" type="submit">
+                                        <span class="block h-5 w-5 lg:h-6 lg:w-6">
+                                            <svg fill="none" fill-rule="nonzero" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28">
+                                                <circle cx="11.5" cy="11.5" r="10.5"></circle>
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M20 19l7 8"></path>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </form>
+                                <ais-results inline-template :results-per-page="15">
+                                    <div class="max-h-450 h-auto" data-simplebar>
+                                        <ul class="site-search__results--show site-search__results list-reset mt-4">
+                                            <li v-for="result in results" :key="result.objectID">
+                                                <a class="block py-2 no-underline text-black hover:text-gold" :href="result.permalink">
+                                                    <ais-snippet :result="result" attribute-name="post_title"></ais-snippet>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </ais-results>
+                                <ais-stats>
+                                    <template slot-scope="scope">
+                                        <a title="See All Results"
+                                            :href="'https://www.mcy.gov.ae/en/search?query='+ scope.query"
+                                            class="px-4 w-full md:w-64 mt-8 h-12 no-underline text-dark font-bold uppercase flex items-center border border-black hover:border-gold hover:text-white hover:bg-gold"
+                                            v-if="scope.totalResults"
+                                            >
+                                            <svg class="flip-img mr-2" fill="none" fill-rule="nonzero" stroke="currentColor" stroke-width="3" xmlns="http://www.w3.org/2000/svg" width="10" height="14" class="mr-4">
+                                                <path d="M1.657 12.314l5.657-5.657L1.657 1"></path>
+                                            </svg>
+                                            See All Results <span>(<span v-text="scope.totalResults"></span>)</span>
+                                        </a>
+                                    </template>
+                                </ais-stats>
+                                <ais-no-results>
+                                    <template slot-scope="props">
+                                       No results found for <i v-text="props.query"></i>.
+                                    </template>
+                                </ais-no-results>
+                            </ais-index>
+                        </section>
+                        <section :class="{'is-open' : navtrigger}" class="rs_skip rs_preserve site-nav bg-gold-light fixed w-full pin-b z-10 overflow-y-auto overflow-x-hidden" v-cloak>
+                            <div class="flex flex-wrap content-between lg:min-h-full lg:pt-10">
+                                <!-- Desktop -->
+                                <div class="hidden md:flex w-full flex-wrap min-h-auto pt-6 lg:pt-0 px-6 xl:px-10 mx-0 md:-mx-10">
+                                    <div class="w-full md:w-1/3 lg:w-1/4 px-0 md:px-10 mb-10">
+                                        <a title="About" class="pb-2 border-b border-dark site-nav__list-header text-dark text-xl lg:text-1.5xl font-bold uppercase no-underline mb-3 block hover:text-gold" href="https://www.mcy.gov.ae/en/about">About</a>
+                                        <ul class="site-nav__list list-reset">
+                                            <li><a title="About the Ministry" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/about/#about-the-ministry">About the Ministry</a></li>
+                                            <li><a title="Vision and Mission" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/about/#vision-and-mission">Vision and Mission</a></li>
+                                            <li><a title="Strategic Objectives" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/about/#mckd-objectives">Strategic Objectives</a></li>
+                                            <li><a title="Cultural Sectors" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/about/#cultural-sectors">Cultural Sectors</a></li>
+                                            <li><a title="About the Minister" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/about/#about-the-minister">About the Minister</a></li>
+                                            <li><a title="Organizational Chart" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/about/#organizational-chart">Organizational Chart</a></li>
+                                                                                        <li><a title="Partners" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/about/#mckd-partners">Partners</a></li>
+                                        </ul>
+                                    </div>
+                                    <!--  -->
+                                    <div class="w-full md:w-1/3 lg:w-1/4 px-0 md:px-10 mb-10">
+                                        <a title="Services" class="pb-2 border-b border-dark site-nav__list-header text-dark text-xl lg:text-1.5xl font-bold uppercase no-underline mb-3 block hover:text-gold" href="https://www.mcy.gov.ae/en/services">Services</a>
+                                        <ul class="site-nav__list list-reset">
+                                            <li><a title="Literature Services Package" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold" href="https://www.mcy.gov.ae/en/services/#LiteratureServicesPackage">Literature Services Package</a></li>
+                                            <li><a title="Cultural Centers Services Package" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold" href="https://www.mcy.gov.ae/en/services/#CulturalCentersServicesPackage">Cultural Centers Services Package</a></li>
+                                            <!-- <li><a title="Art Services Package" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold" href="https://www.mcy.gov.ae/en/services/#ArtServicesPackage">Art Services Package</a></li> -->
+                                            <li><a title="Tangible Heritage Services Package" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold" href="https://www.mcy.gov.ae/en/services/#TangibleHeritageServicesPackage">Tangible Heritage Services Package</a></li>
+                                            <li><a href="https://autorefund.mof.gov.ae/vTransactMerchantPortal/login" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold" title="Refund Fees Portal" v-trigger-warning>Refund Fees Portal</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-full md:w-1/3 lg:w-1/4 px-0 md:px-10 mb-10">
+                                        <a title="Projects" class="pb-2 border-b border-dark site-nav__list-header text-dark text-xl lg:text-1.5xl font-bold uppercase no-underline mb-3 block hover:text-gold" href="https://www.mcy.gov.ae/en/projects">Projects</a>
+                                        <ul class="site-nav__list list-reset">
+                                            <li><a title="Summer Camp" @click="toggleNav" href="https://www.mcy.gov.ae/en/projects/#cultural-summer-camp" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold">Summer Camp</a></li>
+                                            <li><a title="Al Burda" @click="toggleNav" href="https://www.mcy.gov.ae/en/projects/#al-burda-festival" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold">Al Burda</a></li>
+                                            <li><a title="Reading Month" @click="toggleNav" href="https://www.mcy.gov.ae/en/projects/#reading" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold">Reading Month</a></li>
+                                            <li><a title="National Register of Artifacts" @click="toggleNav" href="https://www.mcy.gov.ae/en/projects/#national-register-of-artifacts-and-archaeological-sites" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold">National Register of Artifacts</a></li>
+                                            <li><a title="UAE Flag" @click="toggleNav" href="https://www.mcy.gov.ae/en/projects/#uae-flag" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold">UAE Flag</a></li>
+                                            <!-- <li><a title="Emirates National Gate of Libraries" @click="toggleNav" href="https://www.mcy.gov.ae/en/projects/#emirates-national-gate-of-libraries" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold">Emirates National Gate of Libraries</a></li> -->
+                                        </ul>
+                                    </div>
+                                    <div class="w-full md:w-1/3 lg:w-1/4 px-0 md:px-10 mb-10">
+                                        <a title="Media" class="pb-2 border-b border-dark site-nav__list-header text-dark text-xl lg:text-1.5xl font-bold uppercase no-underline mb-3 block hover:text-gold" href="https://www.mcy.gov.ae/en/media">Media</a>
+                                        <ul class="site-nav__list list-reset">
+                                            <li><a title="News" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/media/#news">News</a></li>
+                                            <li><a title="Events" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/media/#events">Events</a></li>
+                                            <li><a title="Gallery" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/media/#gallery">Gallery</a></li>
+                                            <li><a title="Media Kit" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/media/#media-kit">Media Kit</a></li>
+                                            <li><a title="Smart Application" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/media/#smart-application">Smart Application</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-full md:w-1/3 lg:w-1/4 px-0 md:px-10 mb-10">
+                                        <a title="Open Data" class="pb-2 border-b border-dark site-nav__list-header text-dark text-xl lg:text-1.5xl font-bold uppercase no-underline mb-3 block hover:text-gold" href="https://www.mcy.gov.ae/en/open-data">Open Data</a>
+                                        <ul class="site-nav__list list-reset">
+                                            <li><a @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold" href="https://www.mcy.gov.ae/en/open-data/#open-data-policy" title="Open Data Policy">Open Data Policy</a></li>
+                                            <li><a title="Downloadables" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/open-data/#downloadbles">Downloadables</a></li>
+                                            <li><a title="Request Data" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/open-data/#request-data">Request Data</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-full md:w-1/3 lg:w-1/4 px-0 md:px-10 mb-10">
+                                        <a title="E-Participation" class="pb-2 border-b border-dark site-nav__list-header text-dark text-xl lg:text-1.5xl font-bold uppercase no-underline mb-4 block hover:text-gold" href="https://www.mcy.gov.ae/en/e-participation">E-Participation</a>
+                                        <ul class="site-nav__list list-reset">
+                                            <li><a title="E-Participation Policy" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold" href="https://www.mcy.gov.ae/en/e-participation/#e-participation-policy">E-Participation Policy</a></li>
+                                            <li><a title="Polls" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/e-participation/#polls">Polls</a></li>
+                                            <li><a title="E-Consultation" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/e-participation/#e-consultation">E-Consultation</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-full md:w-1/3 lg:w-1/4 px-0 md:px-10 mb-10">
+                                        <a title="Contact" class="pb-2 border-b border-dark site-nav__list-header text-dark text-xl lg:text-1.5xl font-bold uppercase no-underline mb-4 block hover:text-gold" href="https://www.mcy.gov.ae/en/contact">Contact</a>
+                                        <ul class="site-nav__list list-reset">
+                                            <li><a title="Ministry Locations" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/contact/#ministry-locations">Ministry Locations</a></li>
+                                            <li><a title="Cultural Centers" @click="toggleNav" class="text-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/contact/#cultural-centers">Cultural Centers</a></li>
+                                            <li><a title="Contact Forms" @click="toggleNav" class="ttext-sm xl:text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/contact/#contact-forms">Contact Forms</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End Desktop -->
+                                <!-- Mobile -->
+                                <div class="block md:hidden w-full px-6">
+                                    <accordion-button class="accordion-button--menu border-b border-grey-light py-0">
+                                        <template class="accordion-button__title" slot="title">
+                                            <a
+                                                title="About"
+                                                class="site-nav__list-header py-4 text-dark text-2xl lg:text-1.5xl font-bold uppercase no-underline block hover:text-gold"
+                                                href="https://www.mcy.gov.ae/en/about">
+                                                About                                            </a>
+                                        </template>
+                                        <ul class="site-nav__list mb-8 list-reset border-t-3 border-gold-light2 pt-6">
+                                            <li><a title="About the Ministry" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/about/#about-the-ministry">About the Ministry</a></li>
+                                            <li><a title="Vision and Mission" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/about/#vision-and-mission">Vision and Mission</a></li>
+                                            <li><a title="MCY Responsibilities" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/about/#mckd-responsibilities">MCY Responsibilities</a></li>
+                                            <li><a title="Cultural Sectors" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/about/#cultural-sectors">Cultural Sectors</a></li>
+                                            <li><a title="About the Minister" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/about/#about-the-minister">About the Minister</a></li>
+                                            <li><a title="Organizational Chart" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/about/#organizational-chart">Organizational Chart</a></li>
+                                                                                        <li><a title="Partners" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/about/#mckd-partners">Partners</a></li>
+                                        </ul>
+                                    </accordion-button>
+                                                                        <accordion-button class="accordion-button--menu border-b border-grey-light py-0">
+                                        <template class="accordion-button__title" slot="title">
+                                            <a
+                                                title="Services"
+                                                class="site-nav__list-header py-4 text-dark text-2xl lg:text-1.5xl font-bold uppercase no-underline block hover:text-gold"
+                                                href="https://www.mcy.gov.ae/en/services">
+                                                Services                                            </a>
+                                        </template>
+                                        <ul class="site-nav__list mb-8 list-reset border-t-3 border-gold-light2 pt-6">
+                                            <li><a title="Literature Services Package" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold" href="https://www.mcy.gov.ae/en/services/#LiteratureServicesPackage">Literature Services Package</a></li>
+                                            <li><a title="Cultural Centers Services Package" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold" href="https://www.mcy.gov.ae/en/services/#CulturalCentersServicesPackage">Cultural Centers Services Package</a></li>
+                                            <!-- <li><a title="Art Services Package" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold" href="https://www.mcy.gov.ae/en/services/#ArtServicesPackage">Art Services Package</a></li> -->
+                                            <li><a title="Tangible Heritage Services Package" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold" href="https://www.mcy.gov.ae/en/services/#TangibleHeritageServicesPackage">Tangible Heritage Services Package</a></li>
+                                            <li><a href="https://autorefund.mof.gov.ae/vTransactMerchantPortal/login" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold" title="Refund Fees Portal" v-trigger-warning>Refund Fees Portal</a></li>
+                                        </ul>
+                                    </accordion-button>
+                                    <accordion-button class="accordion-button--menu border-b border-grey-light py-0">
+                                        <template class="accordion-button__title" slot="title">
+                                            <a
+                                                title="Media"
+                                                class="site-nav__list-header py-4 text-dark text-2xl lg:text-1.5xl font-bold uppercase no-underline block hover:text-gold"
+                                                href="https://www.mcy.gov.ae/en/media">
+                                                Media                                            </a>
+                                        </template>
+                                        <ul class="site-nav__list mb-8 list-reset border-t-3 border-gold-light2 pt-6">
+                                            <li><a title="News" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/media/#news">News</a></li>
+                                            <li><a title="Events" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/media/#events">Events</a></li>
+                                            <li><a title="Gallery" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/media/#gallery">Gallery</a></li>
+                                            <li><a title="Media Kit" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/media/#media-kit">Media Kit</a></li>
+                                            <li><a title="Smart Application" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/media/#smart-application">Smart Application</a></li>
+                                        </ul>
+                                    </accordion-button>
+                                    <accordion-button class="accordion-button--menu border-b border-grey-light py-0">
+                                        <template class="accordion-button__title" slot="title">
+                                            <a
+                                                title="Projects"
+                                                class="site-nav__list-header py-4 text-dark text-2xl lg:text-1.5xl font-bold uppercase no-underline block hover:text-gold"
+                                                href="https://www.mcy.gov.ae/en/projects">
+                                            Projects					</a>
+                                        </template>
+                                        <ul class="site-nav__list mb-8 list-reset border-t-3 border-gold-light2 pt-6">
+                                            <li><a title="Summer Camp" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold" href="https://www.mcy.gov.ae/en/projects/#cultural-summer-camp" v-trigger-warning>Summer Camp</a></li>
+                                            <li><a title="Al Burda" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold" href="https://www.mcy.gov.ae/en/projects/#al-burda-festival" v-trigger-warning>Al Burda</a></li>
+                                            <li><a title="Reading Month" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold" href="https://www.mcy.gov.ae/en/projects/#reading" v-trigger-warning>Reading Month</a></li>
+                                            <li><a title="National Register of Artifacts" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold" href="https://www.mcy.gov.ae/en/projects/#national-register-of-artifacts-and-archaeological-sites" v-trigger-warning>National Register of Artifacts</a></li>
+                                            <li><a title="UAE Flag" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold" href="https://www.mcy.gov.ae/en/projects/#uae-flag" v-trigger-warning>UAE Flag</a></li>
+                                            <!-- <li><a title="Emirates National Gate of Libraries" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold" href="https://www.mcy.gov.ae/en/projects/#emirates-national-gate-of-libraries" v-trigger-warning>Emirates National Gate of Libraries</a></li> -->
+                                        </ul>
+                                    </accordion-button>
+                                    <accordion-button class="accordion-button--menu border-b border-grey-light py-0">
+                                        <template class="accordion-button__title" slot="title">
+                                            <a
+                                                title="Open Data"
+                                                class="site-nav__list-header py-4 text-dark text-2xl lg:text-1.5xl font-bold uppercase no-underline block hover:text-gold"
+                                                href="https://www.mcy.gov.ae/en/open-data">
+                                            Open Data					</a>
+                                        </template>
+                                        <ul class="site-nav__list mb-8 list-reset border-t-3 border-gold-light2 pt-6">
+                                            <li><a @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold" href="https://www.mcy.gov.ae/en/open-data/#open-data-policy" title="Open Data Policy">Open Data Policy</a></li>
+                                            <li><a title="Downloadables" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/open-data/#downloadbles">Downloadables</a></li>
+                                            <li><a title="Request Data" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/open-data/#request-data">Request Data</a></li>
+                                        </ul>
+                                    </accordion-button>
+                                    <accordion-button class="accordion-button--menu border-b border-grey-light py-0">
+                                        <template class="accordion-button__title" slot="title">
+                                            <a
+                                                title="E-Participation"
+                                                class="site-nav__list-header py-4 text-dark text-2xl lg:text-1.5xl font-bold uppercase no-underline block hover:text-gold"
+                                                href="https://www.mcy.gov.ae/en/e-participation">
+                                            E-Participation					</a>
+                                        </template>
+                                        <ul class="site-nav__list mb-8 list-reset border-t-3 border-gold-light2 pt-6">
+                                            <li><a title="E-Participation Policy" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3 hover:text-gold" href="https://www.mcy.gov.ae/en/e-participation/#e-participation-policy">E-Participation Policy</a></li>
+                                            <li><a title="Polls" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/e-participation/#polls">Polls</a></li>
+                                            <li><a title="E-Consultation" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-3" href="https://www.mcy.gov.ae/en/e-participation/#e-consultation">E-Consultation</a></li>
+                                        </ul>
+                                    </accordion-button>
+                                    <accordion-button class="accordion-button--menu border-b border-grey-light py-0">
+                                        <template class="accordion-button__title" slot="title">
+                                            <a
+                                                title="Contact"
+                                                class="site-nav__list-header py-4 text-dark text-2xl lg:text-1.5xl font-bold uppercase no-underline block hover:text-gold"
+                                                href="https://www.mcy.gov.ae/en/contact">
+                                            Contact					</a>
+                                        </template>
+                                        <ul class="site-nav__list mb-8 list-reset border-t-3 border-gold-light2 pt-6">
+                                            <li><a title="Ministry Locations" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-4" href="https://www.mcy.gov.ae/en/contact/#ministry-locations">Ministry Locations</a></li>
+                                            <li><a title="Cultural Centers" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-4" href="https://www.mcy.gov.ae/en/contact/#cultural-centers">Cultural Centers</a></li>
+                                            <li><a title="Contact Forms" @click="toggleNav" class="text-lg font-normal no-underline text-black hover:text-gold block mb-4" href="https://www.mcy.gov.ae/en/contact/#contact-forms">Contact Forms</a></li>
+                                        </ul>
+                                    </accordion-button>
+                                </div>
+                                <!-- End Mobile -->
+                                <!-- Footer -->
+                                <div class="w-full flex flex-wrap xl:flex-no-wrap mx-0 mb-0 md:mb-4 mt-10 md:mt-0">
+                                    <div class="px-6 lg:px-10">
+                                        <div class="menu-footer-menu-container">
+                                            <ul id="menu-footer-menu" class="header__bottom__list list-reset flex flex-wrap">
+                                                <li id="menu-item-1040" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1040"><a title="Sitemap+" href="https://www.mcy.gov.ae/en/sitemap/">Sitemap+</a></li>
+                                                <li id="menu-item-1291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1291"><a title="Archive" href="https://www.mcy.gov.ae/en/archive/">Archive</a></li>
+                                                <li id="menu-item-1308" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1308"><a title="Careers" target="_blank" href="https://www.federalerp.gov.ae/OA_HTML/RF.jsp?function_id=14296&#038;resp_id=23350&#038;resp_appl_id=800&#038;security_group_id=0&#038;lang_code=US&#038;params=vvwRQT-0d.VtIano6j4nows35loUJz2GmcJlQGZ3FzT.mivYTwkdfmyO65nwNV.J">Careers</a></li>
+                                                <li id="menu-item-1048" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1048"><a title="Terms & Conditions" href="https://www.mcy.gov.ae/en/terms-conditions/">Terms & Conditions</a></li>
+                                                <li id="menu-item-1049" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1049"><a title="Privacy Policy" href="https://www.mcy.gov.ae/en/privacy-policy/">Privacy Policy</a></li>
+                                                <li id="menu-item-1050" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1050"><a title="Disclaimer" href="https://www.mcy.gov.ae/en/disclaimer/">Disclaimer</a></li>
+                                                <li id="menu-item-1051" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1051"><a title="Accessibility" href="https://www.mcy.gov.ae/en/accessibility/">Accessibility</a></li>
+                                                <li id="menu-item-1052" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1052"><a title="Copyright Policy" href="https://www.mcy.gov.ae/en/copyright-policy/">Copyright Policy</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <ul class="w-full md:w-auto flex items-center list-reset my-6 xl:mt-0 px-6 lg:px-10 xl:px-0">
+                                        <li class="mr-6">
+                                            <a class="text-grey hover:text-gold" target="_blank" aria-label="Instagram" href="https://www.instagram.com/mckduae" v-trigger-warning>
+                                                <svg role="img" width="22px" height="22px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g id="Desktop-V2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+                                                        <g id="Menu-v2" transform="translate(-1124.000000, -718.000000)" fill="currentColor" fill-rule="nonzero">
+                                                            <g id="Group-6" transform="translate(1124.000000, 718.000000)">
+                                                                <g id="Group-7">
+                                                                    <g id="Group-27">
+                                                                        <path d="M27.1875,20.625 C27.1875,24.24375 24.24375,27.1875 20.625,27.1875 L9.375,27.1875 C5.75625,27.1875 2.8125,24.24375 2.8125,20.625 L2.8125,9.375 C2.8125,5.75625 5.75625,2.8125 9.375,2.8125 L20.625,2.8125 C24.24375,2.8125 27.1875,5.75625 27.1875,9.375 L27.1875,20.625 Z M20.625,0 L9.375,0 C4.198125,0 0,4.198125 0,9.375 L0,20.625 C0,25.801875 4.198125,30 9.375,30 L20.625,30 C25.801875,30 30,25.801875 30,20.625 L30,9.375 C30,4.198125 25.801875,0 20.625,0 Z" id="Fill-1"></path>
+                                                                        <path d="M15,19.6875 C12.41625,19.6875 10.3125,17.58375 10.3125,15 C10.3125,12.414375 12.41625,10.3125 15,10.3125 C17.58375,10.3125 19.6875,12.414375 19.6875,15 C19.6875,17.58375 17.58375,19.6875 15,19.6875 Z M15,7.5 C10.858125,7.5 7.5,10.858125 7.5,15 C7.5,19.141875 10.858125,22.5 15,22.5 C19.141875,22.5 22.5,19.141875 22.5,15 C22.5,10.858125 19.141875,7.5 15,7.5 Z" id="Fill-4"></path>
+                                                                        <path d="M22.9902344,6 C24.0721781,6 24.9492188,6.87704061 24.9492188,7.95898437 C24.9492188,9.04092814 24.0721781,9.91796875 22.9902344,9.91796875 C21.9082906,9.91796875 21.03125,9.04092814 21.03125,7.95898437 C21.03125,6.87704061 21.9082906,6 22.9902344,6" id="Fill-5"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="mr-6">
+                                            <a class="text-grey hover:text-gold" aria-label="Twitter" target="_blank" href="https://twitter.com/mckduae" v-trigger-warning>
+                                                <svg role="img" width="24px" height="19px" viewBox="0 0 24 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g id="Desktop-V2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+                                                        <g id="Menu-v2" transform="translate(-1195.000000, -724.000000)" fill="currentColor" fill-rule="nonzero">
+                                                            <g id="Group-6" transform="translate(1124.000000, 718.000000)">
+                                                                <path d="M95,8.24754761 C94.1206937,8.6276207 93.1682681,8.89074822 92.1727209,9.00586651 C93.1907663,8.41200231 93.9669557,7.47095595 94.3400516,6.34900942 C93.387626,6.89901904 92.3339583,7.29919215 91.2052965,7.51298327 C90.3128662,6.58472783 89.0304664,6 87.6168268,6 C84.900164,6 82.6953363,8.14887478 82.6953363,10.7965955 C82.6953363,11.1748413 82.7403328,11.5384689 82.8209515,11.8893056 C78.7262714,11.6883054 75.1021795,9.78245817 72.6704945,6.87709175 C72.2449027,7.58424697 72.0030466,8.41200231 72.0030466,9.29092133 C72.0030466,10.9537411 72.8748535,12.4246971 74.1928756,13.2798615 C73.3866885,13.2597615 72.6329974,13.0386613 71.9674244,12.6805155 L71.9674244,12.7389883 C71.9674244,15.0651087 73.6660417,17.0056742 75.9139911,17.4497019 C75.5033982,17.5556838 75.0646824,17.6123293 74.6184673,17.6123293 C74.3034919,17.6123293 73.9960159,17.5849202 73.68854,17.5282747 C74.3184907,19.4341219 76.133349,20.8173687 78.2875557,20.8612233 C76.6020623,22.1457973 74.4778533,22.909598 72.1717835,22.909598 C71.7761894,22.909598 71.3880947,22.8876707 71,22.8456434 C73.1823295,24.2087902 75.7677525,25 78.5500352,25 C87.601828,25 92.5533161,17.6909021 92.5533161,11.3539142 L92.5383173,10.7326409 C93.5057417,10.0547221 94.3400516,9.21234853 95,8.24754761 Z" id="twitter-logo-silhouette"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="mr-6">
+                                            <a class="text-grey hover:text-gold" target="_blank" aria-label="Youtube" href="https://www.youtube.com/channel/UCXWRX6zxXtd6wFt_M_48k6Q" v-trigger-warning>
+                                                <svg role="img" width="24px" height="17px" viewBox="0 0 24 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g id="Desktop-V2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+                                                        <g id="Menu-v2" transform="translate(-1259.000000, -725.000000)" fill="currentColor" fill-rule="nonzero">
+                                                            <g id="Group-6" transform="translate(1124.000000, 718.000000)">
+                                                                <path d="M144,20.1363636 L144,10.8636364 L151.5,15.5 L144,20.1363636 Z M157.98,8.63818182 C157.329,7.44509091 156.6225,7.22563636 155.184,7.14218182 C153.747,7.04172727 150.1335,7 147.003,7 C143.8665,7 140.2515,7.04172727 138.816,7.14063636 C137.3805,7.22563636 136.6725,7.44354545 136.0155,8.63818182 C135.345,9.82972727 135,11.8820909 135,15.4953636 C135,15.4984545 135,15.5 135,15.5 C135,15.5030909 135,15.5046364 135,15.5046364 L135,15.5077273 C135,19.1055455 135.345,21.1733636 136.0155,22.3525455 C136.6725,23.5456364 137.379,23.762 138.8145,23.8624545 C140.2515,23.949 143.8665,24 147.003,24 C150.1335,24 153.747,23.949 155.1855,23.864 C156.624,23.7635455 157.3305,23.5471818 157.9815,22.3540909 C158.658,21.1749091 159,19.1070909 159,15.5092727 C159,15.5092727 159,15.5046364 159,15.5015455 C159,15.5015455 159,15.4984545 159,15.4969091 C159,11.8820909 158.658,9.82972727 157.98,8.63818182 Z" id="Fill-1"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="text-grey hover:text-gold"
+                                                target="_blank"
+                                                aria-label="Facebook"
+                                                href="https://www.facebook.com/mckduae"
+                                                v-trigger-warning>
+                                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M16.499 0.00457747L13.6462 0C10.441 0 8.36976 2.12509 8.36976 5.41423V7.91055H5.50132C5.25345 7.91055 5.05273 8.1115 5.05273 8.35937V11.9763C5.05273 12.2241 5.25368 12.4249 5.50132 12.4249H8.36976V21.5514C8.36976 21.7993 8.57048 22 8.81835 22H12.5608C12.8087 22 13.0094 21.799 13.0094 21.5514V12.4249H16.3633C16.6112 12.4249 16.8119 12.2241 16.8119 11.9763L16.8133 8.35937C16.8133 8.24036 16.7659 8.12638 16.6819 8.04215C16.5979 7.95793 16.4835 7.91055 16.3645 7.91055H13.0094V5.79439C13.0094 4.77727 13.2518 4.26094 14.5767 4.26094L16.4986 4.26025C16.7462 4.26025 16.9469 4.0593 16.9469 3.81166V0.453169C16.9469 0.205757 16.7464 0.00503522 16.499 0.00457747Z" fill="currentColor" opacity="0.5"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- End Footer -->
+                            </div>
+                        </section>
+                    </header>
+                </header-main>
+
+                <main class="site-main">
+
+
+<section
+    class="flex flex-col justify-between">
+    <div class="bg-gold-light py-4 px-6 lg:px-0">
+        <div class="container mx-auto">
+            <ul class="site-breadcrumbs list-reset flex items-center">
+                <li>
+                    <a class="text-xs text-black tracking-wide no-underline block uppercase mr-2 hover:text-gold" title="Home" href="https://www.mcy.gov.ae/en">
+                        Home                    </a>
+                </li>
+                <li>
+                    <a class="text-xs text-black text-white-alpha-60 tracking-wide no-underline block uppercase mr-2 flex items-center">
+                        <svg class="flip-img" xmlns="http://www.w3.org/2000/svg" width="4" height="5">
+                            <path fill="none" fill-rule="nonzero" stroke="currentColor" d="M.5 4.621L2.621 2.5.5.379"/>
+                        </svg>
+                    </a>
+                </li>
+                <li><a class="text-xs text-black tracking-wide no-underline block uppercase mr-2 hover:text-gold" title="Sign In">Sign In</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 px-6">
+    <div class="container mx-auto">
+        <h1 class="text-3xl md:text-5.5xl font-bold mb-14">Login for Individual and Organization</h1>
+        <div class="flex flex-wrap">
+            <div class="w-full md:w-1/2 border-r-0 border-b md:border-r md:border-b-0 border-grey-lighter">
+                <div class="pr-0 md:pr-6 lg:pr-10">
+                    <div class="mb-10 pr-0 xl:pr-16">
+                                                <form
+                            method="POST"
+                            action="https://www.mcy.gov.ae/en/login"
+                            class="form border-b border-grey-lighter pb-8 mb-8"
+                            novalidate
+                        >
+
+                            <input type="hidden" name="_token" value="VijbFxbzdIoZ7PilPnFlxBd3RNJwbKa32ToWEyHd">                                                        <div class="mb-4">
+                                <input placeholder="Email Address" 
+                                    id="email" 
+                                    type="email" 
+                                    class="w-full h-11 bg-grey-lightest outline-none text-md px-4 border border-grey focus:border-gold" 
+                                    name="email" 
+                                    value="">
+
+                                                            </div>
+                            <div class="mb-4">
+                                <input placeholder="Password" 
+                                    id="password" type="password" 
+                                    class="password w-full h-11 bg-grey-lightest outline-none text-md px-4 border border-grey focus:border-gold" 
+                                    name="password">
+
+                                                            </div>
+
+                            <a class="text-sm text-grey italic no-underline" href="https://www.mcy.gov.ae/en/password/reset" >
+                                Forgot Password                            </a>
+
+                            <div class="flex items-center justify-between mt-4">
+                                <label class="text-sm text-grey checkbox_container mb-0">
+                                    Remember me                                    <input class="checkbox_checkbox" type="checkbox" name="remember" id="remember" >
+                                    <span class="checkbox_checkmark"></span>
+                                </label>
+                                <input type="submit" value="Sign In" class="h-12 bg-red text-white font-bold tracking-wider border border-transparent uppercase py-3 px-8 cursor-pointer hover:bg-red-dark">
+                            </div>
+                        </form>
+
+                        <h3 class="text-xl mb-6">New User Sign Up</h3>
+
+                        <ul class="list-reset flex flex-wrap">
+                            <li class="mb-4 lg:mb-0 w-full lg:w-auto">
+                                <a class="mr-0 lg:mr-4 flex items-center px-3 h-12 border border-grey-light text-black text-md uppercase font-bold no-underline border border-transparent hover:border-gold" href="https://www.mcy.gov.ae/en/register">
+                                    <div class="text-gold">
+                                        <svg class="svg mr-3" width="22" height="22" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor" fill-rule="nonzero"><ellipse cx="11" cy="5.5" rx="5" ry="5.5"/><path d="M6 13.114c-.984-.313-2.65.801-5 3.343-.333 2.229 0 3.714 1 4.457 1.5 1.115 16.695 1.115 18 0 .87-.743 1.204-2.228 1-4.457l-4-3.343h-1c-.667 3.715-1.333 5.572-2 5.572h-2V12h-2v6.686H8c-1.333-2.229-2-4.086-2-5.572z"/></g></svg>
+                                    </div>
+                                    Individual User                                </a>
+                            </li>
+                            <li class="w-full lg:w-auto">
+                                <a class="flex items-center px-3 h-12 border border-grey-light text-black text-md uppercase font-bold no-underline border border-transparent hover:border-gold" href="https://www.mcy.gov.ae/en/register?type=organization">
+                                    <div class="text-gold">
+                                        <svg class="svg mr-3" width="23" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M12 0v23h5V7c-2-2-3.333-3-4-3-.667 0-1-1.333-1-4zM12 0v23H6V7c2.4-2 4-3 4.8-3 .8 0 1.2-1.333 1.2-4zM17 16h3l2 2v5h-5zM6 16H3l-2 2v5h5z" stroke="currentColor"/><path stroke="currentColor" d="M12 6l-6 4v4l6-4v4M12 14l-6 4"/><path fill="currentColor" fill-rule="nonzero" d="M12 17l-6 4v2h6z"/><path d="M6 18l-5 3M22 18l-5 3" stroke="currentColor"/></g></svg>
+                                    </div>
+                                    Organization User                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 pl-0 md:pl-10">
+                <div class="mt-4 md:mt-6 pt-0 md:pt-4">
+                    <div class="border border-grey text-center py-4">
+                        <a href="https://www.mcy.gov.ae/en/uaepass/auth" style="display: block; max-width: 400px; margin: 10px auto;">
+                                                            <img class="max-w-full h-auto" src="https://www.mcy.gov.ae/images/uaepass-login-btn-EN.png">
+                                                    </a>
+                        <p style="max-width: 390px; display: block; margin: 0 auto;">A single trusted digital identity for all citizens, residents and visitors.</p>
+                        <!--
+                        <a href="https://www.mcy.gov.ae/smartpass/redirect/eyJpdiI6Ikl0UStZS3pZZVp4TFpVNDRMaUVPNEE9PSIsInZhbHVlIjoiTDBTVkRIRTI0QWlRNU93aWpjOGtQaXJvcWphUTUxU29JN1ZVQjRJVk5aaz0iLCJtYWMiOiJkOGExZDhmMTE4MmM0ZmEzYmNlYTc0MGU1NmYxY2ViNmQ1MzJmMjgzZDI4MjI4N2JmY2VlM2FjMzhjNWZkYzVmIn0%3D?lang=en">
+                                                            <img class="max-w-full h-auto" src="https://www.mcy.gov.ae/images/smartpass.png">
+                                                    </a>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+</main>
+<footer-main class="site-footer" inline-template>
+	<footer>
+        <section class="bg-gold-light py-6 lg:py-3">
+            <div class="container px-6 lg:px-0">
+                <div class="flex flex-wrap lg:items-center">
+                    <div class="w-full md:w-1/2 lg:w-2/3 lg:pr-6 xl:pr-0">
+                        <ul class="list-reset lg:flex items-center justify-between mb-8 md:-mb-4 lg:mb-0">
+                            <li class="mb-4 lg:mb-0">
+                                <a
+                                    title="Client Satisfaction Survey"
+                                    id="feedbackSurveyButton"
+                                    class="cursor-pointer no-underline flex items-center text-black uppercase font-semibold text-left text-sm xl:text-base hover:text-gold"
+                                >
+                                    <svg class="mr-2 w-6" width="27px" height="25px" viewBox="0 0 27 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Desktop-V2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Artboard" transform="translate(-24.000000, -7024.000000)">
+                                                <g id="Group-15" transform="translate(0.000000, 6699.000000)">
+                                                    <image id="happiness-logo" x="21" y="323" width="34" height="30" xlink:href="data:image/png;base64,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"></image>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    Client Satisfaction Survey                                </a>
+                            </li>
+                            <li class="mb-4 lg:mb-0">
+                                <a
+                                    href="tel:800552255"
+                                    title="Call Us: 800552255"
+                                    class="no-underline flex items-center text-black uppercase font-semibold text-left text-sm xl:text-base hover:text-gold"
+                                >
+                                    <div class="text-gold">
+                                        <svg class="mr-2 w-6" width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g id="Desktop-V2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g id="Desktop" transform="translate(-647.000000, -6106.000000)" fill-rule="nonzero">
+                                                    <g id="Group-37" transform="translate(0.000000, 5990.000000)">
+                                                        <g id="Group-33" transform="translate(647.000000, 112.000000)">
+                                                            <g id="Group-5" transform="translate(0.000000, 4.000000)">
+                                                                <path d="M13.6336516,10.4250328 L13.8152431,10.5323683 L17.1914863,12.5282025 C17.6081121,12.7863927 17.8862441,13.153772 17.9771894,13.6078926 C18.0516795,14.1669251 17.8872728,14.6369096 17.5204047,15.0040101 L15.2332945,17.2735936 C15.0584756,17.4679971 14.8408116,17.6255834 14.5858357,17.7488134 C14.3481423,17.8636181 14.1067651,17.9398848 13.8629396,17.9747246 L13.7538201,17.9824812 C13.6393199,17.9961373 13.5394602,18 13.4227099,18 C13.1534194,18 12.7642752,17.9588274 12.234663,17.8777919 C11.6715953,17.7916623 11.0108482,17.5882081 10.2437525,17.2698481 C9.48103471,16.9533301 8.63009568,16.4864083 7.68664701,15.8692667 C6.7314474,15.2443027 5.72645382,14.3961522 4.67522408,13.3322787 C3.83415092,12.5025897 3.13336294,11.7045779 2.57290603,10.9365686 C2.01752094,10.1755229 1.56761577,9.46673208 1.22324791,8.80838198 C0.878684537,8.14969923 0.617615805,7.54633639 0.440777878,6.99602019 C0.266922297,6.45576732 0.147100229,5.98258259 0.082117528,5.57319828 C0.0161588833,5.15762519 -0.011109355,4.81968134 0.00411153065,4.54687582 C0.0140046826,4.36736865 0.020307663,4.24105238 0.020307663,4.24062361 L0.0280542614,4.13157367 C0.0628904542,3.88761403 0.139032358,3.6463812 0.253736526,3.40863848 C0.376767488,3.15357943 0.534238239,2.93581313 0.699096788,2.78886165 L3.01622778,0.470213469 C3.31984137,0.166401082 3.69993002,0 4.11942022,0 C4.43575749,0 4.73223058,0.0966954856 4.98322807,0.285259384 C5.17449277,0.428875108 5.33650322,0.605307208 5.49875529,0.865185376 L7.35285782,4.3856484 C7.55044847,4.73719555 7.60678016,5.13160301 7.52244286,5.53254831 C7.44562732,5.8979114 7.27529852,6.21874837 7.01697739,6.47699501 L6.35990279,7.1344959 C6.40171865,7.24842423 6.45932402,7.37733962 6.53422341,7.5219277 C6.6522711,7.75817766 6.8458531,8.06444213 7.11357533,8.43418014 C7.37554503,8.79584509 7.76016041,9.22679871 8.27744799,9.73338152 C8.77228444,10.2396002 9.20605201,10.6275396 9.57401337,10.8957801 C9.95050544,11.1702606 10.258162,11.3676228 10.4895853,11.4858854 C10.6469027,11.566238 10.7706639,11.6206571 10.8493568,11.6488035 L11.6906462,10.794276 C12.0409083,10.4829532 12.467,10.3204182 12.934816,10.3204182 C13.1661297,10.3204182 13.379573,10.352881 13.5731075,10.4250328 L13.6336516,10.4250328 Z" id="Path" fill="currentColor"></path>
+                                                                <path d="M16.9408588,18.3724279 L13.7405272,16.4790069 L13.5356551,16.3681983 C13.5531563,16.3787146 13.5304273,16.3736527 13.4618765,16.3736527 C13.371975,16.3736527 13.310061,16.3972921 13.2794598,16.4221284 L12.2768707,17.4438821 C12.1543089,17.5672023 12.0155808,17.6419777 11.857448,17.6947003 C11.7307414,17.7368589 11.6276728,17.7606854 11.4986181,17.7606854 L11.3463528,17.7455893 L11.1272301,17.7017095 C10.8959275,17.6553529 10.6282005,17.5473802 10.2954082,17.3772426 C9.97920132,17.2155032 9.60521391,16.9753662 9.16599924,16.6548597 C8.71802148,16.3279838 8.21964481,15.8818463 7.6779961,15.3269515 C7.11178587,14.7722304 6.66884626,14.2754635 6.34769042,13.8316756 C6.03265872,13.3961956 5.7950998,13.0200056 5.63864195,12.7064015 C5.44279182,12.3282414 5.31191655,11.9787018 5.24970502,11.6513463 L5.23603285,11.5061709 C5.23603285,11.3763641 5.26037893,11.2545897 5.30192918,11.1295712 C5.35386539,10.9730889 5.42849078,10.8345124 5.55086524,10.711197 L6.40998674,9.85071242 C6.45377108,9.80689992 6.48101654,9.75553168 6.49721582,9.67841018 C6.5057853,9.63763235 6.50397627,9.62495462 6.48236119,9.58587403 L4.63859396,6.07682533 C4.6199809,6.04753564 4.60021566,6.02219554 4.57882904,6 L2.21939435,8.36164657 C2.18111556,8.39613571 2.14099829,8.45166555 2.1011513,8.53435042 C2.05936718,8.62103535 2.03238667,8.70045718 2.01830231,8.77349372 C2.01566921,8.83586393 2.01047581,8.93404227 2.00180289,9.09155337 C1.99365656,9.23769848 2.01292747,9.47675124 2.06347623,9.79553083 C2.11508788,10.1209817 2.21668576,10.5225716 2.36900012,10.9963266 C2.51780318,11.4598299 2.74593325,11.9875584 3.05397644,12.5769759 C3.36232351,13.1670118 3.77440471,13.8168185 4.29034609,14.5244727 C4.80172485,15.2258816 5.45218502,15.9672731 6.24877761,16.7539042 C7.2410195,17.7589313 8.16988758,18.5435668 9.03135094,19.1077263 C9.90536325,19.6799797 10.6793468,20.1050705 11.3493213,20.3833602 C12.0146655,20.6597484 12.5651949,20.8294228 12.9921825,20.8947977 C13.4529268,20.9653614 13.7800095,21 13.9527627,21 C14.0224621,21 14.073867,20.9980097 14.1029531,20.9950768 C14.1506927,20.990147 14.1700455,20.9881485 14.1994749,20.9864072 C14.2749217,20.9729205 14.3575103,20.9453776 14.4477123,20.90177 C14.5302094,20.8618619 14.5857761,20.8215948 14.6504018,20.7515135 L16.9796597,18.4361946 C16.9897416,18.4053612 16.9718631,18.3917673 16.9408588,18.3724279 Z" id="Path"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    Call Us: 800552255
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-full md:w-1/2 lg:w-1/3">
+                        <ul class="list-reset flex items-center justify-between md:justify-end">
+                            <li class="mr-6">
+                                <a href="https://u.ae/" title="https://u.ae/" aria-label="https://u.ae/" target="_blank" rel="noopener noreferrer" v-trigger-warning>
+                                    <img class="bg-white-important h-12" :class="[ $store.state.theme === 'dark' ? 'p-1' : '' ]" src="https://www.mcy.gov.ae/en/wp-content/themes/mckd/public/images/u-ae-logo.png" alt="Logo of https://u.ae/">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://ncrm.government.ae/" title="https://ncrm.government.ae/" aria-label="https://ncrm.government.ae/" target="_blank" v-trigger-warning>
+                                    <img class="bg-white-important h-12" :class="[ $store.state.theme === 'dark' ? 'p-1' : '' ]" src="https://www.mcy.gov.ae/en/wp-content/themes/mckd/public/images/tawasul-logo-180-65.png" alt="Logo of https://ncrm.government.ae/">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-white py-8">
+            <div class="container px-6 lg:px-0">
+                <slider inline-template>
+                    <div class="flex items-center">
+                        <button @click.prevent="slider.previous()" class="w-11 h-11 bg-dark flex items-center justify-center text-white hover:bg-gold">
+                            <svg class="flip-img" width="12" height="19" xmlns="http://www.w3.org/2000/svg"><path d="M10.515 17.97L2.029 9.486 10.515 1" fill-rule="nonzero" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                        </button>
+                        <div class="w-full">
+                            <flickity
+                                ref="slider"
+                                :options="{
+                                    prevNextButtons: false,
+                                    pageDots: false,
+                                    wrapAround: true,
+                                    draggable: true,
+                                    rightToLeft: false,
+                                    cellAlign: 'left',
+                                }"
+                                class="rs_skip"
+                                style="height: 84px;"
+                            >
+                                                                    <div class="w-full md:w-1/4 px-6 text-center">
+                                        <a rel="noopener" target="_blank" title="Government data" href="https://bayanat.ae/en" v-trigger-warning>
+                                            <img alt="Government data" class="max-w-full h-auto" src="https://www.mcy.gov.ae/en/wp-content/themes/mckd/public/images/bayanati-en.jpg" />
+                                        </a>
+                                    </div>
+                                    <!-- <div class="w-full md:w-1/4 px-6 text-center">
+                                        <a rel="noopener" target="_blank" title="Environment" href="https://beeatna.ae/en" v-trigger-warning>
+                                            <img alt="Environment" class="max-w-full h-auto" src="https://www.mcy.gov.ae/en/wp-content/themes/mckd/public/images/beatna-en.jpg" />
+                                        </a>
+                                    </div> -->
+                                    <!-- <div class="w-full md:w-1/4 px-6 text-center">
+                                        <a rel="noopener" target="_blank" title="government.ae" href="https://u.ae/en" v-trigger-warning>
+                                            <img alt="government.ae" class="max-w-full h-auto" src="https://www.mcy.gov.ae/en/wp-content/themes/mckd/public/images/goverment-en.jpg" />
+                                        </a>
+                                    </div>
+                                    <div class="w-full md:w-1/4 px-6 text-center">
+                                        <a rel="noopener" target="_blank" title="The National Customer Relation Management" href="https://ncrm.government.ae/ncrmstorefront/ncrm/en/?lang=en" v-trigger-warning>
+                                            <img alt="The National Customer Relation Management" class="max-w-full h-auto" src="https://www.mcy.gov.ae/en/wp-content/themes/mckd/public/images/tawasul.png" />
+                                        </a>
+                                    </div> -->
+                                    <div class="w-full md:w-1/4 px-6 text-center">
+                                        <a rel="noopener" target="_blank" title="Participation" href="https://government.ae/en/participate" v-trigger-warning>
+                                            <img alt="Participation" class="max-w-full h-auto" src="https://www.mcy.gov.ae/en/wp-content/themes/mckd/public/images/sharik-en.jpg" />
+                                        </a>
+                                    </div>
+                                    <div class="w-full md:w-1/4 px-6 text-center">
+                                        <a rel="noopener" target="_blank" title="SDGs" href="https://uaesdgs.ae/en" v-trigger-warning>
+                                            <img alt="SDGs" class="max-w-full h-auto" src="https://www.mcy.gov.ae/en/wp-content/themes/mckd/public/images/uaesdgs.jpg" />
+                                        </a>
+                                    </div>
+                                    <div class="w-full md:w-1/4 px-6 text-center">
+                                        <a rel="noopener" target="_blank" title="Work in UAE" href="https://workinuae.ae/en" v-trigger-warning>
+                                            <img alt="Work in UAE" class="max-w-full h-auto" src="https://www.mcy.gov.ae/en/wp-content/themes/mckd/public/images/working-en.jpg" />
+                                        </a>
+                                    </div>
+                                    <div class="w-full md:w-1/4 px-6 text-center">
+                                        <a rel="noopener" target="_blank" title="Al Ameen" href="https://alameen.gov.ae/en" v-trigger-warning>
+                                            <img alt="Al Ameen" class="max-w-full h-auto" src="https://www.mcy.gov.ae/en/wp-content/themes/mckd/public/images/alameen-new-logo.jpg" />
+                                        </a>
+                                    </div>
+                                                            </flickity>
+                        </div>
+                        <button @click.prevent="slider.next()" class="w-11 h-11 bg-dark flex items-center justify-center text-white hover:bg-gold">
+                            <svg class="flip-img" width="12" height="19" xmlns="http://www.w3.org/2000/svg"><path d="M1.485 17.97l8.486-8.485L1.485 1" fill-rule="nonzero" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                        </button>
+                    </div>
+                </slider>
+            </div>
+        </section>
+        <section class="bg-gold-light py-8 lg:pt-6 lg:pb-3">
+            <div class="container">
+                <div class="flex flex-wrap">
+                    <div class="w-full md:w-1/2 lg:w-2/3 flex flex-wrap mb-8 md:mb-0 px-6 lg:px-0">
+                                                    <div class="w-1/2 lg:w-1/3">
+                                <ul class="list-reset -mb-4">
+                                    <li class="mb-2">
+                                        <a title="Sitemap+" class="no-underline text-xsm font-medium text-gold uppercase hover:underline" href="https://www.mcy.gov.ae/en/sitemap">Sitemap+</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a title="Archive" class="no-underline text-xsm font-medium text-gold uppercase hover:underline" href="https://www.mcy.gov.ae/en/archive">Archive</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a title="FAQ" class="no-underline text-xsm font-medium text-gold uppercase hover:underline" href="https://www.mcy.gov.ae/en/faq">FAQ</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a title="Careers" class="no-underline text-xsm font-medium text-gold uppercase hover:underline" href="https://www.federalerp.gov.ae/OA_HTML/RF.jsp?function_id=14296&resp_id=23350&resp_appl_id=800&security_group_id=0&lang_code=US&params=vvwRQT-0d.VtIano6j4nows35loUJz2GmcJlQGZ3FzT.mivYTwkdfmyO65nwNV.J" target="_blank" v-trigger-warning>Careers</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a title="Terms & Conditions" class="no-underline text-xsm font-medium text-gold uppercase hover:underline" href="https://www.mcy.gov.ae/en/terms-conditions">Terms & Conditions</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="w-1/2 lg:w-1/3">
+                                <ul class="list-reset -mb-4">
+                                    <li class="mb-2">
+                                        <a title="" class="no-underline text-xsm font-medium text-gold uppercase hover:underline" href="https://www.mcy.gov.ae/en/privacy-policy">Privacy Policy</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a title="Privacy Policy" class="no-underline text-xsm font-medium text-gold uppercase hover:underline" href="https://www.mcy.gov.ae/en/disclaimer">Disclaimer</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a title="Accessibility" class="no-underline text-xsm font-medium text-gold uppercase hover:underline" href="https://www.mcy.gov.ae/en/accessibility">Accessibility</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a title="Copyright Policy" class="no-underline text-xsm font-medium text-gold uppercase hover:underline" href="https://www.mcy.gov.ae/en/copyright-policy">Copyright Policy</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a title="User Manual" href="https://www.mcy.gov.ae/en/wp-content/themes/mckd-en/etc/mckd-user-manual.pdf" download="" class="no-underline text-xsm font-medium text-gold uppercase hover:underline">User Manual</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="w-full md:hidden pt-8">
+                                <ul class="list-reset lg:flex items-center -mb-4">
+                                    <li class="mb-4 lg:mb-0 lg:mr-10">
+                                        <a title="Customer Happiness Chapter" class="no-underline text-black flex items-center lg:text-sm font-medium uppercase hover:text-gold" href="https://www.mcy.gov.ae/en/wp-content/themes/mckd-en/public/files/customer-happiness-chapter.pdf">
+                                            <svg class="mr-3" width="20" height="21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <defs>
+                                                    <path d="M18 0H6C4.9 0 4 .9 4 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zM9.5 7.5C9.5 8.33 8.83 9 8 9H7v2H5.5V5H8c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V5H13c.83 0 1.5.67 1.5 1.5v3zm4-3H17v1h1.5V9H17v2h-1.5V5h3v1.5zM7 7.5h1v-1H7v1zM2 4H0v14c0 1.1.9 2 2 2h14v-2H2V4zm10 5.5h1v-3h-1v3z" id="a-pdfFooter" />
+                                                </defs>
+                                                <use fill="currentColor" fill-rule="nonzero" xlink:href="#a-pdfFooter" transform="translate(0 .5)" />
+                                            </svg>
+                                            Customer Happiness Chapter                                        </a>
+                                    </li>
+                                    <li class="mb-4 lg:mb-0">
+                                        <a title="Customer Happiness Formula" class="no-underline text-black flex items-center lg:text-sm font-medium uppercase hover:text-gold" href="https://www.mcy.gov.ae/en/wp-content/themes/mckd-en/public/files/customer-happiness-formula.pdf">
+                                            <svg class="mr-3" width="20" height="21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <defs>
+                                                    <path d="M18 0H6C4.9 0 4 .9 4 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zM9.5 7.5C9.5 8.33 8.83 9 8 9H7v2H5.5V5H8c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V5H13c.83 0 1.5.67 1.5 1.5v3zm4-3H17v1h1.5V9H17v2h-1.5V5h3v1.5zM7 7.5h1v-1H7v1zM2 4H0v14c0 1.1.9 2 2 2h14v-2H2V4zm10 5.5h1v-3h-1v3z" id="a-pdfFooter" />
+                                                </defs>
+                                                <use fill="currentColor" fill-rule="nonzero" xlink:href="#a-pdfFooter" transform="translate(0 .5)" />
+                                            </svg>
+                                            Customer Happiness Formula                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                                            </div>
+                    <div class="w-full md:w-1/2 lg:w-1/3 border-t md:border-t-0 border-gold-light3 px-6 md:pt-0 pt-6 lg:px-0">
+                        <mckd-form inline-template url="https://www.mcy.gov.ae/api/en/mailchimp-subscribe">
+                            <form @submit.prevent="submit" class="flex md:justify-end md:pl-10 lg:pl-0" novalidate>
+                                <div class="w-full">
+                                    <label class="font-medium uppercase text-black block mb-4" for="email">
+                                        Subscribe To Our Newsletter                                    </label>
+                                    <div class="w-full relative flex items-center">
+                                        <input
+                                            class="appearance-none w-full py-2 px-3 h-9 text-sm text-grey-darker leading-tight outline-none"     v-model="form.email"
+                                            type="email"
+                                            id="NewsletterEmail"
+                                            placeholder="Email Address"
+                                            v-validate="'required|email'"
+                                            name="email"
+                                            :class="{ 'border border-red':errors.first('email') }">
+                                        <input
+                                            class="bg-gold-light5 bg-gold-light5-dark hover:bg-gold-light3 text-white font-bold text-sm h-9 tracking-wider uppercase px-6"
+                                            :class="{'cursor-wait':isLoading, 'cursor-pointer':!isLoading}"
+                                            type="submit"
+                                            v-if="!response.success"
+                                            :value="isLoading ? '...':'Subscribe'"
+                                            v-cloak>
+                                        <input
+                                            class="bg-gold hover:bg-gold-light3 text-white font-bold text-sm h-9 tracking-wider uppercase px-6"
+                                            @click.prevent=""
+                                            type="submit"
+                                            v-if="response && response.success"
+                                            :value="'Success!'"
+                                            v-cloak>
+                                    </div>
+                                    <div class="mt-2">
+                                        <span v-if="errors.first('email')" class="block text-white text-xs text-red leading-normal mb-2">
+                                            The email field is required.                                        </span>
+                                        <span v-if="!response.success && response.message && !isLoading" class="block text-white text-xs text-red leading-normal">
+                                            You have already subscribed to our Newsletter                                        </span>
+                                        <span v-if="response && response.success" class="block text-white text-xs leading-normal">
+                                            Your subscription information has been submitted successfully.                                        </span>
+                                    </div>
+                                </div>
+                            </form>
+                        </mckd-form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                    <section class="bg-gold-light md:border-t lg:border-t-0 border-gold-light3 pb-6 md:py-6 lg:pt-6">
+                <div class="container px-6 lg:px-0">
+                    <div class="flex flex-wrap md:items-start lg:items-center">
+                        <div class="w-full md:w-1/2 lg:w-2/3 hidden md:block">
+                            <ul class="items-center lg:flex lg:justify-start lg:mb-0 list-reset mb-8 md:-mb-4">
+                                <li class="mb-4 lg:mb-0 lg:mr-10">
+                                    <a title="Customer Happiness Chapter" class="no-underline text-black flex items-center text-sm font-medium uppercase hover:text-gold" href="https://www.mcy.gov.ae/en/wp-content/themes/mckd-en/public/files/customer-happiness-chapter.pdf">
+                                        <svg class="mr-3" width="20" height="21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M18 0H6C4.9 0 4 .9 4 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zM9.5 7.5C9.5 8.33 8.83 9 8 9H7v2H5.5V5H8c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V5H13c.83 0 1.5.67 1.5 1.5v3zm4-3H17v1h1.5V9H17v2h-1.5V5h3v1.5zM7 7.5h1v-1H7v1zM2 4H0v14c0 1.1.9 2 2 2h14v-2H2V4zm10 5.5h1v-3h-1v3z" id="a-pdfFooter"/></defs><use fill="currentColor" fill-rule="nonzero" xlink:href="#a-pdfFooter" transform="translate(0 .5)"/></svg>
+                                        Customer Happiness Chapter                                    </a>
+                                </li>
+                                <li class="mb-4 lg:mb-0">
+                                    <a title="Customer Happiness Formula" class="no-underline text-black flex items-center text-sm font-medium uppercase hover:text-gold" href="https://www.mcy.gov.ae/en/wp-content/themes/mckd-en/public/files/customer-happiness-formula.pdf">
+                                        <svg class="mr-3" width="20" height="21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M18 0H6C4.9 0 4 .9 4 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zM9.5 7.5C9.5 8.33 8.83 9 8 9H7v2H5.5V5H8c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V5H13c.83 0 1.5.67 1.5 1.5v3zm4-3H17v1h1.5V9H17v2h-1.5V5h3v1.5zM7 7.5h1v-1H7v1zM2 4H0v14c0 1.1.9 2 2 2h14v-2H2V4zm10 5.5h1v-3h-1v3z" id="a-pdfFooter"/></defs><use fill="currentColor" fill-rule="nonzero" xlink:href="#a-pdfFooter" transform="translate(0 .5)"/></svg>
+                                        Customer Happiness Formula                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-full md:w-1/2 lg:w-1/3">
+                            <ul class="list-reset flex items-center md:justify-end">
+                                <li class="mr-4">
+                                    <a href="https://apps.apple.com/ae/app/mckd-uae/id1480384511?ls=1" title="Download on the App Store" aria-label="Download on the App Store" target="_blank" v-trigger-warning>
+                                        <svg width="140px" height="48px" viewBox="0 0 140 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <g id="Desktop-V2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g id="Group-41" transform="translate(-21.000000, -860.000000)">
+                                                    <g id="apple" transform="translate(21.000000, 860.000000)">
+                                                        <rect id="bg" fill="#000000" x="0" y="0" width="140" height="47.5" rx="3"></rect>
+                                                        <path d="M54.2200617,34.7292 L51.8369136,34.7292 L50.5314815,30.62475 L45.9939506,30.62475 L44.7504321,34.7292 L42.4302469,34.7292 L46.9258025,20.7558 L49.7024691,20.7558 L54.2200617,34.7292 L54.2200617,34.7292 Z M50.137963,28.90275 L46.3885185,28.90275 L47.5480864,25.254 C47.8524074,24.09375 48.0738272,23.21595 48.2112963,22.62165 L48.2532716,22.62165 C48.5985185,24.00345 48.8325309,24.88125 48.9574074,25.254 L50.137963,28.90275 Z M65.7811111,29.5674 C65.7811111,31.281 65.3183333,32.6355 64.3927778,33.62985 C63.5637654,34.515 62.534321,34.95705 61.3054938,34.95705 C59.9790741,34.95705 59.0262346,34.48035 58.4459259,33.52695 L58.4039506,33.52695 L58.4039506,38.8347 L56.1666667,38.8347 L56.1666667,27.97035 C56.1666667,26.89305 56.1383333,25.7874 56.0837654,24.6534 L58.051358,24.6534 L58.1762346,26.25045 L58.2182099,26.25045 C58.964321,25.04715 60.0966049,24.44655 61.6161111,24.44655 C62.8040123,24.44655 63.795679,24.9159 64.5890123,25.85565 C65.3844444,26.79645 65.7811111,28.03335 65.7811111,29.5674 Z M63.5018519,29.6493 C63.5018519,28.6686 63.2814815,27.8601 62.838642,27.2238 C62.3548765,26.5602 61.7053086,26.2284 60.8909877,26.2284 C60.3390123,26.2284 59.8374074,26.4132 59.389321,26.77755 C58.9401852,27.14505 58.646358,27.6249 58.5088889,28.2192 C58.4396296,28.4964 58.405,28.7232 58.405,28.9017 L58.405,30.5817 C58.405,31.3146 58.6295679,31.93305 59.0787037,32.4381 C59.5278395,32.94315 60.1112963,33.19515 60.8290741,33.19515 C61.6717284,33.19515 62.3275926,32.86965 62.7966667,32.22075 C63.2667901,31.5708 63.5018519,30.714 63.5018519,29.6493 Z M77.3631481,29.5674 C77.3631481,31.281 76.9003704,32.6355 75.9737654,33.62985 C75.1458025,34.515 74.116358,34.95705 72.8875309,34.95705 C71.5611111,34.95705 70.6082716,34.48035 70.0290123,33.52695 L69.987037,33.52695 L69.987037,38.8347 L67.7497531,38.8347 L67.7497531,27.97035 C67.7497531,26.89305 67.7214198,25.7874 67.6668519,24.6534 L69.6344444,24.6534 L69.759321,26.25045 L69.8012963,26.25045 C70.546358,25.04715 71.678642,24.44655 73.1991975,24.44655 C74.3860494,24.44655 75.377716,24.9159 76.1731481,25.85565 C76.9654321,26.79645 77.3631481,28.03335 77.3631481,29.5674 Z M75.0838889,29.6493 C75.0838889,28.6686 74.8624691,27.8601 74.4196296,27.2238 C73.9358642,26.5602 73.2883951,26.2284 72.4730247,26.2284 C71.92,26.2284 71.4194444,26.4132 70.9703086,26.77755 C70.5211728,27.14505 70.2283951,27.6249 70.0909259,28.2192 C70.022716,28.4964 69.987037,28.7232 69.987037,28.9017 L69.987037,30.5817 C69.987037,31.3146 70.2116049,31.93305 70.658642,32.4381 C71.1077778,32.9421 71.6912346,33.19515 72.4111111,33.19515 C73.2537654,33.19515 73.9096296,32.86965 74.3787037,32.22075 C74.8488272,31.5708 75.0838889,30.714 75.0838889,29.6493 Z M90.3125309,30.8106 C90.3125309,31.9992 89.9001235,32.96625 89.0721605,33.7128 C88.1623457,34.52865 86.8957407,34.93605 85.2681481,34.93605 C83.7654321,34.93605 82.5607407,34.64625 81.6488272,34.0656 L82.1672222,32.19975 C83.1494444,32.79405 84.2271605,33.09225 85.4014198,33.09225 C86.2440741,33.09225 86.8999383,32.90115 87.3711111,32.52105 C87.8401852,32.14095 88.0741975,31.63065 88.0741975,30.99435 C88.0741975,30.42735 87.8811111,29.9496 87.4938889,29.56215 C87.1087654,29.1747 86.4654938,28.81455 85.5672222,28.4817 C83.1221605,27.56925 81.900679,26.2326 81.900679,24.4749 C81.900679,23.3262 82.3288272,22.38435 83.1861728,21.65145 C84.0403704,20.9175 85.18,20.55105 86.6050617,20.55105 C87.8758642,20.55105 88.9315432,20.7726 89.7741975,21.21465 L89.2148765,23.03955 C88.4278395,22.61115 87.537963,22.39695 86.5420988,22.39695 C85.7550617,22.39695 85.1401235,22.5912 84.6993827,22.9776 C84.3268519,23.32305 84.1400617,23.7441 84.1400617,24.24285 C84.1400617,24.79515 84.3530864,25.2519 84.7812346,25.611 C85.1537654,25.9428 85.8306173,26.3019 86.8128395,26.68935 C88.0143827,27.1734 88.8969136,27.73935 89.4646296,28.38825 C90.0302469,29.03505 90.3125309,29.8446 90.3125309,30.8106 Z M97.7096296,26.3334 L95.2435802,26.3334 L95.2435802,31.22535 C95.2435802,32.4696 95.6780247,33.0912 96.5490123,33.0912 C96.9488272,33.0912 97.2804321,33.05655 97.5427778,32.98725 L97.6046914,34.6872 C97.1639506,34.85205 96.583642,34.935 95.8648148,34.935 C94.9812346,34.935 94.2907407,34.66515 93.792284,34.1265 C93.2959259,33.5868 93.0461728,32.6817 93.0461728,31.41015 L93.0461728,26.3313 L91.577037,26.3313 L91.577037,24.6513 L93.0461728,24.6513 L93.0461728,22.80645 L95.2435802,22.14285 L95.2435802,24.6513 L97.7096296,24.6513 L97.7096296,26.3334 Z M108.836235,29.60835 C108.836235,31.1571 108.393395,32.42865 107.509815,33.423 C106.58321,34.44675 105.353333,34.95705 103.820185,34.95705 C102.342654,34.95705 101.166296,34.4667 100.289012,33.486 C99.4117284,32.5053 98.9730864,31.26735 98.9730864,29.7753 C98.9730864,28.21395 99.424321,26.93505 100.329938,25.9407 C101.233457,24.9453 102.45284,24.4476 103.985988,24.4476 C105.463519,24.4476 106.652469,24.93795 107.549691,25.9197 C108.408086,26.87205 108.836235,28.1016 108.836235,29.60835 Z M106.515,29.6808 C106.515,28.75155 106.316667,27.9546 105.914753,27.28995 C105.445679,26.48565 104.775123,26.08455 103.906235,26.08455 C103.006914,26.08455 102.323765,26.4867 101.854691,27.28995 C101.452778,27.95565 101.254444,28.7652 101.254444,29.7228 C101.254444,30.65205 101.452778,31.449 101.854691,32.1126 C102.338457,32.9169 103.014259,33.318 103.886296,33.318 C104.740494,33.318 105.411049,32.9085 105.894815,32.0916 C106.307222,31.41435 106.515,30.609 106.515,29.6808 Z M116.108457,26.62215 C115.887037,26.5812 115.650926,26.5602 115.403272,26.5602 C114.616235,26.5602 114.007593,26.85735 113.579444,27.4527 C113.206914,27.9777 113.020123,28.6413 113.020123,29.44245 L113.020123,34.7292 L110.783889,34.7292 L110.804877,27.8265 C110.804877,26.6652 110.776543,25.60785 110.720926,24.65445 L112.66963,24.65445 L112.751481,26.58225 L112.813395,26.58225 C113.049506,25.9197 113.422037,25.3863 113.932037,24.98625 C114.430494,24.6261 114.968827,24.44655 115.549136,24.44655 C115.755864,24.44655 115.942654,24.46125 116.108457,24.4875 L116.108457,26.62215 Z M126.114321,29.2146 C126.114321,29.6157 126.088086,29.9538 126.032469,30.22995 L119.320617,30.22995 C119.346852,31.22535 119.671111,31.9866 120.294444,32.5116 C120.860062,32.98095 121.591481,33.21615 122.489753,33.21615 C123.483519,33.21615 124.390185,33.0576 125.205556,32.73945 L125.556049,34.29345 C124.60321,34.70925 123.478272,34.9161 122.180185,34.9161 C120.618704,34.9161 119.393025,34.4562 118.501049,33.53745 C117.611173,32.6187 117.165185,31.38495 117.165185,29.83725 C117.165185,28.3179 117.579691,27.05265 118.409753,26.0436 C119.278642,24.9663 120.452901,24.42765 121.930432,24.42765 C123.381728,24.42765 124.480432,24.9663 125.226543,26.0436 C125.817346,26.89935 126.114321,27.95775 126.114321,29.2146 Z M123.980926,28.63395 C123.995617,27.97035 123.849753,27.39705 123.546481,26.913 C123.159259,26.29035 122.564259,25.97955 121.76358,25.97955 C121.03216,25.97955 120.43716,26.283 119.982778,26.892 C119.610247,27.37605 119.388827,27.9567 119.320617,28.6329 L123.980926,28.6329 L123.980926,28.63395 Z" id="app-store" fill="#FFFFFF"></path>
+                                                        <path d="M49.3981481,12.15945 C49.3981481,13.3953 49.027716,14.3256 48.2879012,14.95035 C47.6026543,15.5268 46.6288272,15.81555 45.3674691,15.81555 C44.742037,15.81555 44.2068519,15.78825 43.7587654,15.73365 L43.7587654,8.9811 C44.3432716,8.8866 44.9729012,8.8383 45.6529012,8.8383 C46.8544444,8.8383 47.7600617,9.09975 48.3708025,9.62265 C49.055,10.2138 49.3981481,11.05905 49.3981481,12.15945 Z M48.2385802,12.1899 C48.2385802,11.38875 48.0266049,10.7745 47.6026543,10.3461 C47.1787037,9.91875 46.5595679,9.70455 45.7441975,9.70455 C45.3979012,9.70455 45.1030247,9.72765 44.8585185,9.77595 L44.8585185,14.9094 C44.9938889,14.9304 45.2415432,14.93985 45.6014815,14.93985 C46.4430864,14.93985 47.0926543,14.7057 47.5501852,14.2374 C48.007716,13.7691 48.2385802,13.0866 48.2385802,12.1899 Z M55.5464815,13.23885 C55.5464815,14.0001 55.3292593,14.6238 54.8948148,15.1131 C54.4393827,15.61605 53.8359877,15.867 53.0825309,15.867 C52.356358,15.867 51.7781481,15.62655 51.3468519,15.14355 C50.9166049,14.6616 50.7014815,14.05365 50.7014815,13.32075 C50.7014815,12.55425 50.9229012,11.9253 51.3678395,11.43705 C51.8127778,10.9488 52.4109259,10.70415 53.1643827,10.70415 C53.8905556,10.70415 54.4740123,10.9446 54.9158025,11.42655 C55.3355556,11.89485 55.5464815,12.49965 55.5464815,13.23885 Z M54.4058025,13.27455 C54.4058025,12.8178 54.3071605,12.42615 54.1109259,12.0996 C53.8800617,11.7048 53.5516049,11.5074 53.1245062,11.5074 C52.682716,11.5074 52.3469136,11.7048 52.1160494,12.0996 C51.9187654,12.42615 51.8211728,12.8241 51.8211728,13.2945 C51.8211728,13.75125 51.9198148,14.1429 52.1160494,14.46945 C52.3542593,14.86425 52.6858642,15.06165 53.1140123,15.06165 C53.5337654,15.06165 53.8632716,14.8611 54.1004321,14.45895 C54.3040123,14.1261 54.4058025,13.7313 54.4058025,13.27455 Z M63.7904321,10.80495 L62.2425926,15.75465 L61.2351852,15.75465 L60.5940123,13.6053 C60.431358,13.06875 60.2991358,12.53535 60.1962963,12.00615 L60.176358,12.00615 C60.0808642,12.55005 59.948642,13.0824 59.778642,13.6053 L59.0975926,15.75465 L58.078642,15.75465 L56.6231481,10.80495 L57.7533333,10.80495 L58.3126543,13.158 C58.4480247,13.7145 58.5592593,14.24475 58.6484568,14.74665 L58.6683951,14.74665 C58.7502469,14.33295 58.8856173,13.80585 59.0766049,13.1685 L59.778642,10.806 L60.6748148,10.806 L61.3474691,13.1181 C61.5101235,13.68195 61.6423457,14.2248 61.7441358,14.7477 L61.7745679,14.7477 C61.8490741,14.23845 61.961358,13.6956 62.1103704,13.1181 L62.7106173,10.806 L63.7904321,10.806 L63.7904321,10.80495 Z M69.4917284,15.75465 L68.3919753,15.75465 L68.3919753,12.91965 C68.3919753,12.04605 68.0603704,11.60925 67.3950617,11.60925 C67.0687037,11.60925 66.8053086,11.72895 66.600679,11.9694 C66.3981481,12.20985 66.2953086,12.49335 66.2953086,12.8178 L66.2953086,15.7536 L65.1955556,15.7536 L65.1955556,12.2193 C65.1955556,11.7846 65.1819136,11.31315 65.155679,10.80285 L66.1221605,10.80285 L66.1735802,11.5767 L66.2040123,11.5767 C66.332037,11.33625 66.5230247,11.1378 66.7738272,10.97925 C67.0718519,10.79445 67.4055556,10.701 67.7707407,10.701 C68.2324691,10.701 68.6165432,10.8501 68.9219136,11.14935 C69.3017901,11.5158 69.4917284,12.06285 69.4917284,12.78945 L69.4917284,15.75465 Z M71.4257407,8.5338 L72.5244444,8.5338 L72.5244444,15.75465 L71.4257407,15.75465 L71.4257407,8.5338 Z M78.9991358,13.23885 C78.9991358,14.0001 78.7819136,14.6238 78.3474691,15.1131 C77.892037,15.61605 77.2875926,15.867 76.5351852,15.867 C75.807963,15.867 75.2297531,15.62655 74.7995062,15.14355 C74.3692593,14.6616 74.1541358,14.05365 74.1541358,13.32075 C74.1541358,12.55425 74.3755556,11.9253 74.8204938,11.43705 C75.2654321,10.9488 75.8635802,10.70415 76.6159877,10.70415 C77.3432099,10.70415 77.9256173,10.9446 78.3684568,11.42655 C78.7882099,11.89485 78.9991358,12.49965 78.9991358,13.23885 Z M77.8574074,13.27455 C77.8574074,12.8178 77.7587654,12.42615 77.5625309,12.0996 C77.332716,11.7048 77.0032099,11.5074 76.5771605,11.5074 C76.134321,11.5074 75.7985185,11.7048 75.5687037,12.0996 C75.3714198,12.42615 75.2738272,12.8241 75.2738272,13.2945 C75.2738272,13.75125 75.3724691,14.1429 75.5687037,14.46945 C75.8069136,14.86425 76.1385185,15.06165 76.5666667,15.06165 C76.9864198,15.06165 77.3148765,14.8611 77.552037,14.45895 C77.7566667,14.1261 77.8574074,13.7313 77.8574074,13.27455 Z M84.3216049,15.75465 L83.3341358,15.75465 L83.252284,15.1845 L83.2218519,15.1845 C82.8839506,15.63915 82.402284,15.867 81.7768519,15.867 C81.3098765,15.867 80.9320988,15.71685 80.647716,15.41865 C80.3895679,15.14775 80.2604938,14.8107 80.2604938,14.41065 C80.2604938,13.80585 80.5123457,13.3449 81.0191975,13.0257 C81.525,12.7065 82.2364815,12.55005 83.1525926,12.5574 L83.1525926,12.465 C83.1525926,11.81295 82.8104938,11.48745 82.1252469,11.48745 C81.637284,11.48745 81.207037,11.6103 80.8355556,11.8539 L80.612037,11.1315 C81.0716667,10.84695 81.6393827,10.70415 82.3088889,10.70415 C83.6017284,10.70415 84.2502469,11.38665 84.2502469,12.75165 L84.2502469,14.57445 C84.2502469,15.069 84.2743827,15.46275 84.3216049,15.75465 Z M83.1798765,14.05365 L83.1798765,13.2903 C81.9667901,13.2693 81.3602469,13.60215 81.3602469,14.2878 C81.3602469,14.5461 81.4295062,14.7393 81.5711728,14.86845 C81.7128395,14.9976 81.8933333,15.06165 82.1084568,15.06165 C82.3498148,15.06165 82.5754321,14.985 82.7811111,14.83275 C82.9878395,14.67945 83.1148148,14.4852 83.162037,14.24685 C83.1735802,14.1933 83.1798765,14.1282 83.1798765,14.05365 Z M90.570679,15.75465 L89.5947531,15.75465 L89.5433333,14.9598 L89.5129012,14.9598 C89.2012346,15.5646 88.6702469,15.867 87.9241358,15.867 C87.3280864,15.867 86.8317284,15.63285 86.4382099,15.16455 C86.0446914,14.69625 85.8484568,14.0883 85.8484568,13.34175 C85.8484568,12.5406 86.0614815,11.8917 86.4896296,11.3961 C86.9041358,10.9341 87.412037,10.7031 88.0164815,10.7031 C88.6807407,10.7031 89.1456173,10.92675 89.4100617,11.3751 L89.4310494,11.3751 L89.4310494,8.5338 L90.5318519,8.5338 L90.5318519,14.42115 C90.5318519,14.9031 90.5444444,15.34725 90.570679,15.75465 Z M89.4310494,13.66725 L89.4310494,12.84195 C89.4310494,12.69915 89.4205556,12.58365 89.4006173,12.49545 C89.3387037,12.23085 89.2054321,12.00825 89.0029012,11.8287 C88.7982716,11.64915 88.5516667,11.55885 88.267284,11.55885 C87.8569753,11.55885 87.5358642,11.7216 87.2997531,12.04815 C87.0657407,12.3747 86.9471605,12.79155 86.9471605,13.3008 C86.9471605,13.7901 87.0594444,14.187 87.2850617,14.49255 C87.5232716,14.81805 87.8443827,14.9808 88.2462963,14.9808 C88.607284,14.9808 88.8958642,14.84535 89.1151852,14.5734 C89.3271605,14.32245 89.4310494,14.02005 89.4310494,13.66725 Z M99.9762963,13.23885 C99.9762963,14.0001 99.7590741,14.6238 99.3246296,15.1131 C98.8691975,15.61605 98.2668519,15.867 97.5123457,15.867 C96.7872222,15.867 96.2090123,15.62655 95.7766667,15.14355 C95.3464198,14.6616 95.1312963,14.05365 95.1312963,13.32075 C95.1312963,12.55425 95.352716,11.9253 95.7976543,11.43705 C96.2425926,10.9488 96.8407407,10.70415 97.5952469,10.70415 C98.3203704,10.70415 98.9048765,10.9446 99.3456173,11.42655 C99.7653704,11.89485 99.9762963,12.49965 99.9762963,13.23885 Z M98.8366667,13.27455 C98.8366667,12.8178 98.7380247,12.42615 98.5417901,12.0996 C98.3098765,11.7048 97.9824691,11.5074 97.554321,11.5074 C97.1135802,11.5074 96.7777778,11.7048 96.5458642,12.0996 C96.3485802,12.42615 96.2509877,12.8241 96.2509877,13.2945 C96.2509877,13.75125 96.3496296,14.1429 96.5458642,14.46945 C96.7840741,14.86425 97.115679,15.06165 97.5438272,15.06165 C97.9635802,15.06165 98.2941358,14.8611 98.5312963,14.45895 C98.7338272,14.1261 98.8366667,13.7313 98.8366667,13.27455 Z M105.889568,15.75465 L104.790864,15.75465 L104.790864,12.91965 C104.790864,12.04605 104.459259,11.60925 103.792901,11.60925 C103.466543,11.60925 103.203148,11.72895 102.999568,11.9694 C102.795988,12.20985 102.694198,12.49335 102.694198,12.8178 L102.694198,15.7536 L101.593395,15.7536 L101.593395,12.2193 C101.593395,11.7846 101.580802,11.31315 101.554568,10.80285 L102.52,10.80285 L102.57142,11.5767 L102.601852,11.5767 C102.730926,11.33625 102.921914,11.1378 103.171667,10.97925 C103.470741,10.79445 103.803395,10.701 104.16963,10.701 C104.630309,10.701 105.014383,10.8501 105.319753,11.14935 C105.700679,11.5158 105.889568,12.06285 105.889568,12.78945 L105.889568,15.75465 Z M113.290864,11.6292 L112.079877,11.6292 L112.079877,14.0337 C112.079877,14.6448 112.295,14.95035 112.721049,14.95035 C112.918333,14.95035 113.082037,14.93355 113.211111,14.8989 L113.239444,15.73365 C113.022222,15.81555 112.73679,15.8565 112.385247,15.8565 C111.950802,15.8565 111.612901,15.7242 111.368395,15.4596 C111.12284,15.195 111.001111,14.7498 111.001111,14.12505 L111.001111,11.6292 L110.278086,11.6292 L110.278086,10.80495 L111.001111,10.80495 L111.001111,9.89775 L112.078827,9.57225 L112.078827,10.8039 L113.289815,10.8039 L113.289815,11.6292 L113.290864,11.6292 Z M119.11284,15.75465 L118.012037,15.75465 L118.012037,12.94065 C118.012037,12.0534 117.680432,11.60925 117.016173,11.60925 C116.506173,11.60925 116.157778,11.8665 115.96679,12.381 C115.934259,12.48915 115.91537,12.62145 115.91537,12.77685 L115.91537,15.7536 L114.816667,15.7536 L114.816667,8.5338 L115.91537,8.5338 L115.91537,11.51685 L115.936358,11.51685 C116.282654,10.974 116.779012,10.7031 117.422284,10.7031 C117.877716,10.7031 118.254444,10.8522 118.553519,11.15145 C118.926049,11.5242 119.11284,12.0786 119.11284,12.8115 L119.11284,15.75465 Z M125.118457,13.04565 C125.118457,13.24305 125.103765,13.40895 125.077531,13.5444 L121.779321,13.5444 C121.794012,14.0337 121.95142,14.40645 122.25679,14.66475 C122.535926,14.89575 122.895864,15.01125 123.336605,15.01125 C123.824568,15.01125 124.269506,14.93355 124.67037,14.7771 L124.842469,15.5415 C124.373395,15.7452 123.82142,15.84705 123.182346,15.84705 C122.416296,15.84705 121.812901,15.6213 121.376358,15.1698 C120.937716,14.7183 120.720494,14.11245 120.720494,13.35225 C120.720494,12.6057 120.923025,11.9841 121.331235,11.4885 C121.757284,10.9593 122.333395,10.6947 123.060617,10.6947 C123.772099,10.6947 124.312531,10.9593 124.677716,11.4885 C124.972593,11.9085 125.118457,12.42825 125.118457,13.04565 Z M124.069074,12.7611 C124.077469,12.43455 124.005062,12.15315 123.856049,11.91585 C123.665062,11.6103 123.374383,11.457 122.980864,11.457 C122.621975,11.457 122.329198,11.6061 122.105679,11.90535 C121.923086,12.1437 121.815,12.42825 121.779321,12.7611 L124.069074,12.7611 Z" id="download-on-the" fill="#FFFFFF"></path>
+                                                        <path d="M29.2434973,22.858547 C29.2784227,26.9469282 32.8196402,28.2984329 32.8630323,28.3132497 C32.8418654,28.4085007 32.3084603,30.2637769 30.9802391,32.1476284 C29.871095,33.8060528 28.7090338,35.4274351 26.8632827,35.4570688 C25.0704487,35.4983441 24.4671928,34.4019002 22.4108313,34.4019002 C20.3354196,34.4019002 19.6930051,35.4274351 17.9731968,35.4983441 C16.2152881,35.5629031 14.8722501,33.7277354 13.722889,32.0841278 C11.4252252,28.7281204 9.63662457,22.6267698 12.0348311,18.474888 C13.1968923,16.438635 15.3156961,15.1273474 17.5805513,15.092422 C19.3405766,15.0564383 20.9736008,16.2809418 22.0552279,16.2809418 C23.1156881,16.2809418 25.1350076,14.8161944 27.2167694,15.0352715 C28.0877861,15.0606717 30.5664268,15.3792331 32.1655839,17.710764 C32.036466,17.7880231 29.2128054,19.4475058 29.2434973,22.858547 Z M25.8567979,12.8275668 C24.8915886,13.9663445 23.3474654,14.8373612 21.8435592,14.7251768 C21.6467073,13.188462 22.4087146,11.5543795 23.2617395,10.5574199 C24.2258905,9.42605061 25.90019,8.55926724 27.2389946,8.5 C27.4146796,10.0970404 26.7817902,11.6707973 25.8567979,12.8275668 Z" fill="#FFFFFF"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://play.google.com/store/apps/details?id=ae.gov.mckd&hl=en" title="Get it on Google Play" aria-label="Get it on Google Play" target="_blank" v-trigger-warning>
+                                        <svg width="140px" height="48px" viewBox="0 0 140 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <defs>
+                                                <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+                                                    <stop stop-color="#1E79AF" offset="0%"></stop>
+                                                    <stop stop-color="#63FFD3" offset="100%"></stop>
+                                                </linearGradient>
+                                                <linearGradient x1="84.7178118%" y1="14.4459862%" x2="5.24419544%" y2="96.5617838%" id="linearGradient-2">
+                                                    <stop stop-color="#DC4057" offset="0%"></stop>
+                                                    <stop stop-color="#9E36BB" offset="100%"></stop>
+                                                </linearGradient>
+                                                <linearGradient x1="50%" y1="0%" x2="50%" y2="97.8256537%" id="linearGradient-3">
+                                                    <stop stop-color="#FF9676" offset="0%"></stop>
+                                                    <stop stop-color="#FFD074" offset="100%"></stop>
+                                                </linearGradient>
+                                                <linearGradient x1="17.4435371%" y1="0%" x2="100%" y2="100%" id="linearGradient-4">
+                                                    <stop stop-color="#51C6AD" offset="0%"></stop>
+                                                    <stop stop-color="#D5FFA1" offset="100%"></stop>
+                                                </linearGradient>
+                                            </defs>
+                                            <g id="Desktop-V2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g id="Group-41" transform="translate(-180.000000, -860.000000)">
+                                                    <g id="google-play" transform="translate(180.000000, 860.000000)">
+                                                        <rect id="bg" fill="#000000" x="0" y="0" width="140" height="47.5" rx="3"></rect>
+                                                        <g transform="translate(10.461868, 19.521911)">
+                                                            <path d="M0.875914979,-0.14279554 C0.481497123,-0.0183856918 0.22624982,0.38426096 0.22624982,0.993440216 L0.228680747,20.1660397 C0.228680747,20.7684775 0.476027538,21.1649956 0.859506224,21.2973726 L11.4978492,10.5687085 L0.875914979,-0.14279554" id="left" fill="url(#linearGradient-1)"></path>
+                                                            <path d="M0.859506224,21.2973726 C1.1354164,21.3917525 1.48121573,21.3476268 1.85800936,21.1392556 L14.8403734,13.9394187 L11.4978492,10.5687085 L0.859506224,21.2973726" id="bottom" fill="url(#linearGradient-2)"></path>
+                                                            <path d="M14.8421966,13.9394187 L19.2689141,11.4849288 C20.1665338,10.9854509 20.1665338,10.1728033 19.2689141,9.67455105 L14.8257878,7.21086834 L11.4978492,10.56687 L14.8421966,13.9394187" id="right" fill="url(#linearGradient-3)"></path>
+                                                            <path d="M14.8251801,7.21086834 L1.85800936,0.0208371174 C1.4903317,-0.182018349 1.15121743,-0.229208292 0.876522711,-0.14279554 L11.4978492,10.56687 L14.8251801,7.21086834" id="top" fill="url(#linearGradient-4)"></path>
+                                                        </g>
+                                                        <path d="M48.5224533,34.7808091 L45.7730752,35.4157283 C44.6591031,35.5928438 43.6587767,35.7485093 42.5995004,35.7485093 C37.2964338,35.7485093 35.275726,31.8121327 35.275726,28.7313036 C35.275726,24.9689782 38.1387499,21.4805996 43.0419291,21.4805996 C44.0793271,21.4805996 45.0772225,21.6344265 45.986389,21.884472 C47.4273208,22.2926343 48.1012953,22.7957894 48.5224533,23.0905733 L46.9253345,24.6202629 L46.2519678,24.7722513 L46.7320758,24.0006651 C46.0818029,23.3602302 44.8863947,22.1780302 42.6177324,22.1780302 C39.5845436,22.1780302 37.2964338,24.5032073 37.2964338,27.8978189 C37.2964338,31.5437016 39.9090723,34.973246 44.0993822,34.973246 C45.3306466,34.973246 45.9645107,34.7238134 46.5400326,34.490928 L46.5400326,31.3653604 L43.6368984,31.5228645 L45.175675,30.6893798 L49.2499081,30.6893798 L48.7515682,31.1729235 C48.6172595,31.2881405 48.5990275,31.3273633 48.5613481,31.4818031 C48.541293,31.6583057 48.5224533,32.2196822 48.5224533,32.417022 L48.5224533,34.7808091 Z M54.8276694,35.4984639 C51.567189,35.4984639 49.8260378,32.9385628 49.8260378,30.6207399 C49.8260378,27.9125275 52.0193414,25.5953174 55.1370049,25.5953174 C58.1501385,25.5953174 60.0365376,27.9756517 60.0365376,30.47488 C60.0365376,32.9158871 58.1726246,35.4984639 54.8276694,35.4984639 Z M57.3929048,33.825366 C57.8851675,33.163481 58.0079293,32.3373506 58.0079293,31.5320573 C58.0079293,29.7106481 57.1449503,26.2369781 54.6040242,26.2369781 C53.9251879,26.2369781 53.2512135,26.5035706 52.7589508,26.9386986 C51.956745,27.662482 51.8145358,28.5719609 51.8145358,29.4642798 C51.8145358,31.5075431 52.8203317,34.8776404 55.3017001,34.8776404 C56.1020828,34.8776404 56.9194819,34.4860251 57.3929048,33.825366 Z M65.7419226,35.4984639 C62.4820499,35.4984639 60.73786,32.9385628 60.73786,30.6207399 C60.73786,27.9125275 62.9305558,25.5953174 66.0494348,25.5953174 C69.0643916,25.5953174 70.9526139,27.9756517 70.9526139,30.47488 C70.9526139,32.9158871 69.08627,35.4984639 65.7419226,35.4984639 Z M68.3065502,33.825366 C68.8024593,33.163481 68.9227901,32.3373506 68.9227901,31.5320573 C68.9227901,29.7106481 68.0622421,26.2369781 65.518885,26.2369781 C64.8424797,26.2369781 64.1612125,26.5035706 63.6701653,26.9386986 C62.8691749,27.662482 62.726358,28.5719609 62.726358,29.4642798 C62.726358,31.5075431 63.7278998,34.8776404 66.2135223,34.8776404 C67.0157281,34.8776404 67.8343427,34.4860251 68.3065502,33.825366 Z M78.4568846,26.6102076 C78.9278767,27.0005971 79.9105788,27.829179 79.9105788,29.4005428 C79.9105788,30.9320709 79.0542849,31.6540157 78.1906982,32.3373506 C77.9257271,32.6063946 77.615784,32.8981142 77.615784,33.3491765 C77.615784,33.8069803 77.9257271,34.0551871 78.1487647,34.2402697 L78.8895896,34.8169676 C79.7902479,35.583651 80.6112934,36.2865972 80.6112934,37.7145526 C80.6112934,39.6597588 78.7443417,41.6215122 75.2164593,41.6215122 C72.2446515,41.6215122 70.8079738,40.1941696 70.8079738,38.6638672 C70.8079738,37.9192467 71.1756514,36.8645208 72.3886839,36.1419631 C73.6600585,35.3581198 75.3823701,35.2533214 76.3049068,35.1920357 C76.016842,34.8169676 75.6880591,34.4241267 75.6880591,33.7830789 C75.6880591,33.432525 75.792589,33.223541 75.8934724,32.9771727 C75.6692194,32.9986227 75.4431433,33.0206855 75.23773,33.0206855 C73.0626583,33.0206855 71.8332171,31.3843589 71.8332171,29.7719338 C71.8332171,28.8207806 72.2634911,27.7654419 73.147133,27.0005971 C74.3164087,26.0298326 75.7105452,25.8625228 76.81844,25.8625228 L81.0446061,25.8625228 L79.7306902,26.6102076 L78.4568846,26.6102076 Z M77.0037982,35.7914093 C76.8354565,35.7693464 76.7345731,35.7693464 76.5315907,35.7693464 C76.3456248,35.7693464 75.23773,35.809795 74.3796128,36.1002889 C73.9256373,36.2675987 72.6135446,36.7621738 72.6135446,38.2311906 C72.6135446,39.6971431 74.0301671,40.7543204 76.2216475,40.7543204 C78.1906982,40.7543204 79.2359966,39.8025544 79.2359966,38.5210717 C79.2359966,37.4663458 78.5595913,36.9098722 77.0037982,35.7914093 Z M77.5932979,31.8617741 C78.0673286,31.3843589 78.1086544,30.7249255 78.1086544,30.3504702 C78.1086544,28.8630677 77.2292666,26.5464706 75.5245793,26.5464706 C74.9928141,26.5464706 74.4166845,26.8155145 74.0897248,27.231644 C73.74271,27.662482 73.6387879,28.2214071 73.6387879,28.7588821 C73.6387879,30.1439376 74.4397783,32.4409234 76.2015924,32.4409234 C76.7157334,32.4409234 77.2687692,32.1890394 77.5932979,31.8617741 Z M84.0619938,33.6825704 C84.0619938,34.4860251 84.2042031,34.6110479 84.8781775,34.6741721 C85.2294464,34.7158463 85.5794998,34.734232 85.9259069,34.7759062 L85.1674578,35.2312585 L81.5532775,35.2312585 C82.0273082,34.6110479 82.1087443,34.5491494 82.1087443,34.1360841 L82.1087443,33.6746033 L82.1008437,21.3782526 L80.5049404,21.3782526 L82.041286,20.6317935 L84.9741991,20.6317935 C84.3385118,21.0031845 84.1482917,21.2293285 84.0668557,21.9531119 L84.0619938,33.6825704 Z M94.1424391,33.8425259 L93.1615602,34.7759062 C92.9348763,34.9015418 92.7094078,35.0474016 92.4845471,35.1509743 C91.8032799,35.4629182 91.1104658,35.5413639 90.4948336,35.5413639 C89.8396989,35.5413639 88.8126323,35.4984639 87.7649029,34.734232 C86.3093856,33.7003432 85.6730905,31.9230597 85.6730905,30.3743716 C85.6730905,27.1679069 88.2614197,25.5953174 90.3726795,25.5953174 C91.1104658,25.5953174 91.8683072,25.7816258 92.4845471,26.1744667 C93.5091827,26.8578016 93.7741537,27.7458305 93.9212248,28.2214071 L89.1000894,30.1856118 L87.5212025,30.3094088 C88.0323049,32.9385628 89.7959422,34.4676395 91.7449377,34.4676395 C92.7185238,34.4676395 93.4411168,34.1471156 94.104152,33.816786 C94.104152,33.816786 94.2372453,33.7469203 94.1424391,33.8425259 Z M91.2338353,28.6130223 C91.6252145,28.4696139 91.8288046,28.3458169 91.8288046,28.0577744 C91.8288046,27.231644 90.9020138,26.2774266 89.7959422,26.2774266 C88.9767199,26.2774266 87.438551,26.9209258 87.438551,29.1554002 C87.438551,29.5041155 87.4798768,29.8755065 87.5005397,30.2468975 L91.2338353,28.6130223 Z M100.053845,33.9307773 L100.053845,39.198278 L99.0164471,39.198278 L99.0164471,25.7944958 L100.053845,25.7944958 L100.053845,27.321121 C100.729643,26.3344222 101.964553,25.5524175 103.3988,25.5524175 C105.971328,25.5524175 107.703971,27.5202994 107.703971,30.6354484 C107.703971,33.7297604 105.971328,35.7387036 103.3988,35.7387036 C102.044774,35.7387036 100.831742,35.0345316 100.053845,33.9307773 Z M106.589392,30.6354484 C106.589392,28.2875956 105.375751,26.4968292 103.223774,26.4968292 C101.887372,26.4968292 100.609312,27.555845 100.053845,28.4794196 L100.053845,32.7700272 C100.609312,33.6954404 101.887372,34.7930662 103.223774,34.7930662 C105.375751,34.7930662 106.589392,32.9869784 106.589392,30.6354484 Z M109.120594,22.093456 L110.157384,22.093456 L110.157384,35.4972382 L109.120594,35.4972382 L109.120594,22.093456 Z M118.767727,35.4684339 C118.698445,35.1319758 118.64618,34.8353533 118.607893,34.5877593 C118.576291,34.3407782 118.558059,34.0882813 118.558059,33.8314945 C118.202536,34.3579382 117.698727,34.7961305 117.055139,35.1411686 C116.410943,35.4886582 115.798957,35.6590323 114.95968,35.6590323 C113.949022,35.6590323 113.16444,35.408374 112.60472,34.8997032 C112.046822,34.3916453 111.76605,33.7034075 111.76605,32.8325386 C111.76605,31.9628954 112.172622,31.2568848 112.983336,30.7169583 C113.794051,30.1745804 114.84178,29.9049236 116.138679,29.9049236 L118.558059,29.9049236 L118.558059,28.6994351 C118.558059,28.0050688 118.323475,27.4590137 117.854914,27.0631085 C117.384529,26.6665904 116.724533,26.4661864 115.868846,26.4661864 C115.086696,26.4661864 114.452224,26.6494304 113.969077,27.0061128 C113.490185,27.3701495 113.248915,27.8212119 113.248915,28.3648155 L112.187208,28.3648155 L112.16533,28.3127227 C112.127043,27.5797464 112.459472,26.9368601 113.166264,26.3816122 C113.870017,25.8269771 114.791946,25.5481275 115.926581,25.5481275 C117.05757,25.5481275 117.972813,25.8226871 118.662589,26.3705808 C119.351757,26.9129587 119.697556,27.696802 119.697556,28.7214979 L119.697556,33.5079063 C119.697556,33.8517188 119.713965,34.1838869 119.756506,34.5074751 C119.800263,34.8316762 119.870152,35.1552643 119.963135,35.4684339 L118.767727,35.4684339 Z M115.086696,34.7060406 C115.967907,34.7060406 116.601163,34.5074751 117.248397,34.1146342 C117.891377,33.7242446 118.328944,33.214961 118.558059,32.5984275 L118.558059,30.735344 L116.127132,30.735344 C115.198518,30.735344 114.429738,30.9424895 113.825045,31.3604575 C113.219136,31.7771999 112.912232,32.2815807 112.912232,32.8680843 C112.912232,33.4214936 113.106706,33.8639759 113.493223,34.1992084 C113.880956,34.5381179 114.410898,34.7060406 115.086696,34.7060406 Z M121.797877,38.331699 C122.019699,38.4315946 122.398316,38.4928803 122.63837,38.4928803 C123.272841,38.4928803 123.714662,38.2311906 124.111511,37.3070031 L124.868137,35.5781352 L120.781749,25.7944958 L121.93887,25.7944958 L125.444267,34.2727511 L128.91563,25.7944958 L130.08916,25.7944958 L125.105152,37.6312042 C124.587973,38.8507884 123.77422,39.437292 122.656602,39.437292 C122.321134,39.437292 121.878705,39.377232 121.619811,39.2969478 L121.797877,38.331699 Z" id="logotype" fill="#FFFFFF"></path>
+                                                        <path d="M35.1983878,11.0417844 C35.1983878,8.96029181 36.7447987,7.62134896 38.6683678,7.62134896 C39.9571468,7.62134896 40.799405,8.23632132 41.3251971,8.98939926 L40.3832304,9.53500918 C40.0265092,9.03894386 39.4016279,8.65311528 38.6683678,8.65311528 C37.3603904,8.65311528 36.3880776,9.6440073 36.3880776,11.0417844 C36.3880776,12.4191243 37.3603904,13.4304534 38.6683678,13.4304534 C39.3427937,13.4304534 39.9373289,13.1232769 40.2345965,12.8359182 L40.2345965,11.8146801 L38.2521932,11.8146801 L38.2521932,10.793442 L41.3846506,10.793442 L41.3846506,13.2620018 C40.7405708,13.9859723 39.808513,14.4715094 38.6683678,14.4715094 C36.7447987,14.4715094 35.1983878,13.1139873 35.1983878,11.0417844 Z M42.8189668,14.3426934 L42.8189668,7.73034708 L47.3492013,7.73034708 L47.3492013,8.75220448 L43.9783105,8.75220448 L43.9783105,10.4565388 L47.2798388,10.4565388 L47.2798388,11.4777769 L43.9783105,11.4777769 L43.9783105,13.3214553 L47.3492013,13.3214553 L47.3492013,14.3426934 L42.8189668,14.3426934 Z M50.5584528,14.3426934 L50.5584528,8.75220448 L48.5562316,8.75220448 L48.5562316,7.73034708 L53.720637,7.73034708 L53.720637,8.75220448 L51.7184158,8.75220448 L51.7184158,14.3426934 L50.5584528,14.3426934 Z M57.7517096,7.73034708 L58.9110533,7.73034708 L58.9110533,14.3426934 L57.7517096,14.3426934 L57.7517096,7.73034708 Z M62.1413613,14.3426934 L62.1413613,8.75220448 L60.1391401,8.75220448 L60.1391401,7.73034708 L65.3035454,7.73034708 L65.3035454,8.75220448 L63.3013242,8.75220448 L63.3013242,14.3426934 L62.1413613,14.3426934 Z M69.0472594,11.0417844 C69.0472594,9.06867062 70.4444171,7.62134896 72.4280591,7.62134896 C74.3999342,7.62134896 75.8082395,9.06867062 75.8082395,11.0417844 C75.8082395,13.0142788 74.3999342,14.4616005 72.4280591,14.4616005 C70.4444171,14.4616005 69.0472594,13.0142788 69.0472594,11.0417844 Z M74.6185498,11.0417844 C74.6185498,9.67373406 73.7558544,8.65311528 72.4280591,8.65311528 C71.0891162,8.65311528 70.2369491,9.67373406 70.2369491,11.0417844 C70.2369491,12.3993064 71.0891162,13.4304534 72.4280591,13.4304534 C73.7558544,13.4304534 74.6185498,12.3993064 74.6185498,11.0417844 Z M81.7721709,14.3426934 L78.3220087,9.61428054 L78.3220087,14.3426934 L77.162665,14.3426934 L77.162665,7.73034708 L78.3523548,7.73034708 L81.7325352,12.3107455 L81.7325352,7.73034708 L82.8924982,7.73034708 L82.8924982,14.3426934 L81.7721709,14.3426934 Z" id="get-it-on" fill="#FFFFFF"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+        <section class="bg-black py-4">
+            <div class="container px-6 lg:px-0">
+                <div class="flex flex-wrap">
+                    <div class="w-full md:w-2/3">
+                        <p class="text-white text-xs font-normal mb-4 md:mb-0">This site is best viewed in 1366x768 screen resolution. Supports: Microsoft Internet Explorer 11.0+, Firefox 10.0+, Safari 1.2+, Google Chrome 12.0.                            <span class="xl:block">
+                                        						    Copyright © 2012-2021 Ministry of Culture and Youth, UAE. All rights reserved.
+        						                            </span>
+                        </p>
+                    </div>
+                    <div class="w-full md:w-1/3">
+                        <p class="text-white text-xs md:text-right font-normal">
+                            Page last updated on:                            10/15/2019 05:45:40.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+	</footer>
+</footer-main>
+
+<transition name="fade">
+	<div v-if="$store.state.showWarning"
+         :class="[ $store.state.showWarning ? 'fixed overflow-auto pin z-60 bg-black-opacity-75 md:flex items-center' : '']"
+         v-cloak>
+		<div class="w-full lg:w-3/5 xl:w-2/5 p-6 mx-auto" v-cloak>
+			<div class="bg-white rounded-sm p-8">
+				<div class="flex items-start justify-between">
+					<h3 class="text-3xl font-normal">You are leaving  Ministry of Culture and Youth</h3>
+					<button type="button" aria-label="Close" @click.prevent="$store.state.showWarning = !$store.state.showWarning" class="text-dark hover:text-gold">
+						<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" class="svg">
+							<path fill="currentColor" fill-rule="nonzero" d="M14 1.41L12.59 0 7 5.59 1.41 0 0 1.41 5.59 7 0 12.59 1.41 14 7 8.41 12.59 14 14 12.59 8.41 7z"></path>
+						</svg>
+					</button>
+				</div>
+				<p class="leading-loose mt-8">
+					You are leaving https://www.mckd.gov.ae/ and entering a website that Ministry of Culture and Youth does not control and may have a different content and privacy policies.				</p>
+				<!-- <label class="md:w-2/3 block mt-8 cursor-pointer">
+					<input type="checkbox" class="mr-2 leading-tight font-normal">
+					<span>
+				        Don't show this warning in future			      	</span>
+			    </label> -->
+			    <div class="flex flex-wrap items-center mt-8 -mx-2">
+			    	<div class="w-full md:w-1/2 px-2 mb-2 md:mb-0">
+			    		<button @click.prevent="$store.state.showWarning = !$store.state.showWarning" class="w-full border border-transparent px-6 py-4 bg-dark text-white text-center uppercase font-semibold hover:bg-transparent hover:text-dark hover:border-dark">
+			    			Stay on this site			    		</button>
+			    	</div>
+			    	<div v-if="$store.state.warningUrl" class="w-full md:w-1/2 px-2">
+				    	<a  @click="$store.state.showWarning = !$store.state.showWarning" target="_blank" :href="$store.state.warningUrl" class="w-full px-6 py-4 bg-red text-white uppercase font-semibold block no-underline text-center hover:bg-red-dark">
+				    		Continue				    	</a>
+				    </div>
+			    </div>
+			</div>
+		</div>
+	</div>
+</transition>
+
+</div>
+</div>
+</div>
+</div>
+    <script>var _mckd = {"api":{"base":"https:\/\/api.mcy.gov.ae\/prodsrvcswp\/"},"apiAuth":{"user":"MCKD_OAOPLM_2019","password":"abc@123","key":"MCKD_OAOPLM_2019"},"lang":{"id":"en","code":"1033"}}</script>
+
+
+    <!-- ReadSpeaker Plugin -->
+    <script src="//f1-as.readspeaker.com/script/9689/ReadSpeaker.js?pids=embhl" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.rsConf = {general: {usePost: true}};
+    </script>
+
+    <!-- Start livechat code -->
+    <script type="text/javascript">
+    window.__lc = window.__lc || {};
+    window.__lc.license = 11486923;
+    (function() {
+        var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+        lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+    })();
+    </script>
+    <noscript>
+    <a href="https://www.livechatinc.com/chat-with/11486923/" rel="nofollow">Chat with us</a>,
+    powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
+    </noscript>
+    <!-- End of LiveChat code -->
+        </body>
+</html>

@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <meta name="description" content="المجلس الأعلى للأمومة والطفولة">
+    <meta name="author" content="Logixpro Technology Sytems">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="csrf-token" content="94dZQKCWovMSc13D94uaYO7JCi1S7DmLFbrSHuUq">
+    <link rel="shortcut icon" href="https://scmc.gov.ae/site/img/favicon.png">
+
+    <!-- Mobile Specific Meta  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap">
+    <link rel="stylesheet" href="https://scmc.gov.ae/site/fonts/FrescoPro/stylesheet.css">
+    <link rel="stylesheet" href="https://scmc.gov.ae/site/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://scmc.gov.ae/site/css/shrinked.min.css">
+    <link rel="stylesheet" href="https://scmc.gov.ae/site/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://scmc.gov.ae/site/flaticon\flaticon.css">
+    <link rel="stylesheet" href="https://scmc.gov.ae/site/revolution/css/settings.css">
+<link rel="stylesheet" href="https://scmc.gov.ae/site/revolution/css/layers.css">
+<link rel="stylesheet" href="https://scmc.gov.ae/site/revolution/css/navigation.css">
+    <link rel="stylesheet" href="https://scmc.gov.ae/site/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://scmc.gov.ae/site/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://scmc.gov.ae/site/css/scmc-ar.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--
+        [if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]
+    -->
+
+    
+    <style>.site-map{list-style: none; padding: 0;}
+.site-map a {font-size:17px;line-height:normal;}
+/*.fix-scroll {max-height: 400px;overflow: auto;}*/
+a:hover, a:active {color: #49264b;}
+.event-block .inner-box .lower-content h4 {white-space:normal;font-size:16px;line-height:26px;min-height:80px;}
+tr:nth-child(even) {background: #ffe7ff}
+
+
+@font-face {
+            font-family: Abdo;
+            src: url(../../fonts/ArbFONTS-Abdo-Master-Medium.otf);
+        }
+
+        @font-face {
+            font-family: AbdoBook;
+            src: url(../../fonts/ArbFONTS-Abdo-Master-Book.otf);
+        }
+
+        .injuryCategory {
+            color: #59b9c9;
+            font-family: Abdo !important;
+            font-size: 1.8em;
+            letter-spacing: 0 !important;
+        }
+
+        .injuryPreface {
+            font-family: AbdoBook !important;
+            font-size: 1.1em;
+            letter-spacing: 0 !important;
+            padding: 10px 0 10px 0;
+        }
+
+        .injuryPrefaceBold {
+            font-family: Abdo !important;
+            font-size: 1.1em;
+            letter-spacing: 0 !important;
+            padding: 10px 0 10px 0;
+        }
+li {
+    line-height: 22px;
+}
+
+#downloaddocs { 
+        font-size: 1.8em;
+       }
+
+
+#news-slider , #news-slider-en {
+	overflow: hidden;
+}
+
+@keyframes slider {
+	0% { right: 0; }
+	20% { right: 0; }
+        21% { right: -100%; }
+       40% { right: -100%; }
+	41% { right: -200%; }
+	60% { right: -200%; }
+	61% { right: -300%; }
+	80% { right: -300%; }
+	81% { right: -400%; }
+	100% { right: -400%; }
+}
+#news-slider figure {
+	width:500%;
+	position: relative;
+	animation: 20s slider infinite;
+}
+
+#news-slider figure:hover {
+	/*animation-play-state: paused; enable for pause on hover*/
+}
+#news-slider figure img {
+	width: 20%;
+	height : 100%;
+	float: right;
+}
+
+#news-slider-en  figure{
+width:500%;
+	position: relative;
+	animation: 20s slider2 infinite;
+}
+
+@keyframes slider2 {
+	0% { left: 0; }
+	20% { left: 0; }
+        21% { left: -100%; }
+       40% { left: -100%; }
+	41% { left: -200%; }
+	60% { left: -200%; }
+	61% { left: -300%; }
+	80% { left: -300%; }
+	81% { left: -400%; }
+	100% { left: -400%; }
+}
+ #news-slider-en figure img {
+        width: 20%;
+	height : 100%;
+	float: left;
+}</style>
+
+    <script src="https://scmc.gov.ae/site/js/jquery-3.2.0.min.js"></script>
+    <script src="https://scmc.gov.ae/site/js/jquery-ui.min.js"></script>
+    <script src="https://scmc.gov.ae/site/js/jquery.smartmenus.min.js"></script>
+
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="https://scmc.gov.ae/site/js/jquery.instagramFeed.js"></script>
+
+    <script src="https://scmc.gov.ae/site/js/owl.carousel.min.js"></script>
+    <script src="https://scmc.gov.ae/site/js/bootstrap.min.js"></script>
+    <script src="https://scmc.gov.ae/site/js/theme.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+</head>
+
+<body style="direction: rtl;">
+
+    <div id="preloader"></div>
+
+    <header class="qniko-header qhV1">
+    <div class="header-box logo-box">
+        <div class="row">
+            <div class="col-6">
+                <div class="nav-brand float-right">
+                    <a href="#"><img src="https://scmc.gov.ae/site/img/uae.png" alt="UAE Logo"></a>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="nav-brand">
+                    <a href="/"><img src="https://scmc.gov.ae/site/img/scmc.png" alt="SCMC Logo"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-box menu">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="main-nav qnikoNav" role="navigation">
+                    <input id="QnikoMenu-state" type="checkbox">
+                    <label class="QnikoMenu-btn" for="QnikoMenu-state"><span class="QnikoMenu-btn-icon"></span></label>
+                    <ul id="QnikoMenu" class="sm-simple qnikoMenu">
+                        <li><a href="/ar"><span class="icon-only"><i class="fa fa-home"></i></span><span class="name-only">الصفحة الرئيسية</span></a></li><li><a href="https://scmc.gov.ae/ar/events">الفعاليات</a></li><li><a href="https://scmc.gov.ae/ar/news">أخبارنا</a></li><li><a href="https://scmc.gov.ae/ar/downloads">مكتبتنا</a></li><li><a href="https://scmc.gov.ae/ar/contact">تواصل معنا</a></li><li><a style="font-family:Poppins!important;font-size:18px;font-weight:500;" href="https://scmc.gov.ae/en"> English </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>    <div class="form-back-drop"></div>
+<section class="appointment-box">
+    <div class="inner-box">
+        <div class="cross-icon"><span class="fa fa-close"></span></div>
+        <div class="section-titleV1">
+            <h3>تواصل معنا</h3>
+        </div>
+
+        <div class="appointment-form">
+            <form class="contact-form" method="post" action="https://scmc.gov.ae/ar/contact">
+                <input type="hidden" name="_token" value="94dZQKCWovMSc13D94uaYO7JCi1S7DmLFbrSHuUq">                <div class="form-group">
+                    <input type="text" name="name" value="" placeholder="الإسم" required="required">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" value="" placeholder="البريد الإلكتروني" required="required">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="phone" value="" placeholder="رقم الهاتف" required="required">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="قم بكتابة رسالتك أو إستفسارك" required="required"></textarea>
+                </div>
+                <div class="error-msg text-danger mt-2 mb-3" style="display: none; max-width: 260px; line-height: normal;"></div>
+                <div class="form-group">
+                    <a href="#" class="btn-style-b submit-btn">قم بالإرسال <i class="flaticon-left"></i></a>
+                </div>
+            </form>
+        </div>
+
+        <div class="contact-info-box">
+            <ul class="info-list">
+                <li class="ltr">+971 2 885 6888 <span class="fa fa-phone"></span></li>
+                <!-- <li class="ltr">+971 2 885 6899 <span class="fa fa-fax"></span></li>-->
+                <li><span class="fa fa-envelope"></span>info@scmc.gov.ae</li>
+                <li><span class="fa fa-map"></span>قرية مارينا، أبوظبي <br> الإمارات العربية المتحدة</li>
+            </ul>
+        </div>
+    </div>
+    <div class="contact-sidebar">
+        <ul>
+            <li><a target="_blank" href="https://www.instagram.com/uaescmc/"><span class="fa fa-instagram"></span></a></li>
+            <li><a target="_blank" href="https://twitter.com/UAESCMC"><span class="fa fa-twitter"></span></a></li>
+            <li class='side-form'><a href="#"><span class="fa fa-envelope-o"></span></a></li>
+        </ul>
+    </div>
+</section>
+                                <section class="main-slider hero-area heroV1">
+    <div class="rev_slider_wrapper fullwidthbanner-container">
+        <div class="rev_slider fullwidthabanner" id="slideshow_0" data-version="5.4.1">
+            <ul>
+                                                                <li data-index="0" 
+                    data-transition="slideoverhorizontal" 
+                    data-slotamount="default" 
+                    data-hideafterloop="0" 
+                    data-hideslideonmobile="off" 
+                    data-easein="Power4.easeInOut" 
+                    data-easeout="Power4.easeInOut" 
+                    data-masterspeed="1000" 
+                    data-thumb="https://scmc.gov.ae/uploads/slideshow/slide-01678687739.png" 
+                    data-rotate="0"
+                    data-saveperformance="off"
+                    data-title="">
+
+                    <a href="#" target="_self" style="width:100%;height:100%;position:absolute;z-index:1000;"></a>
+                    <img src="https://scmc.gov.ae/uploads/slideshow/slide-01678687739.png" 
+                        alt="" 
+                        data-bgposition="center center" 
+                        data-bgfit="cover" 
+                        data-bgrepeat="no-repeat" 
+                        data-bgparallax="10" 
+                        class="rev-slidebg" 
+                        data-no-retina>
+
+                    
+                    
+                </li>
+                                                                                <li data-index="1" 
+                    data-transition="slideoverhorizontal" 
+                    data-slotamount="default" 
+                    data-hideafterloop="0" 
+                    data-hideslideonmobile="off" 
+                    data-easein="Power4.easeInOut" 
+                    data-easeout="Power4.easeInOut" 
+                    data-masterspeed="1000" 
+                    data-thumb="https://scmc.gov.ae/uploads/slideshow/slide-01655881878.jpg" 
+                    data-rotate="0"
+                    data-saveperformance="off"
+                    data-title="">
+
+                    <a href="https://scmc.gov.ae/mentalhealth/" target="_blank" style="width:100%;height:100%;position:absolute;z-index:1000;"></a>
+                    <img src="https://scmc.gov.ae/uploads/slideshow/slide-01655881878.jpg" 
+                        alt="" 
+                        data-bgposition="center center" 
+                        data-bgfit="cover" 
+                        data-bgrepeat="no-repeat" 
+                        data-bgparallax="10" 
+                        class="rev-slidebg" 
+                        data-no-retina>
+
+                    
+                    
+                </li>
+                                                                                <li data-index="2" 
+                    data-transition="slideoverhorizontal" 
+                    data-slotamount="default" 
+                    data-hideafterloop="0" 
+                    data-hideslideonmobile="off" 
+                    data-easein="Power4.easeInOut" 
+                    data-easeout="Power4.easeInOut" 
+                    data-masterspeed="1000" 
+                    data-thumb="https://scmc.gov.ae/uploads/slideshow/slide-01654065615.png" 
+                    data-rotate="0"
+                    data-saveperformance="off"
+                    data-title="">
+
+                    <a href="mailto:emiratisation@scmc.gov.ae" target="_self" style="width:100%;height:100%;position:absolute;z-index:1000;"></a>
+                    <img src="https://scmc.gov.ae/uploads/slideshow/slide-01654065615.png" 
+                        alt="" 
+                        data-bgposition="center center" 
+                        data-bgfit="cover" 
+                        data-bgrepeat="no-repeat" 
+                        data-bgparallax="10" 
+                        class="rev-slidebg" 
+                        data-no-retina>
+
+                    
+                    
+                </li>
+                                                                                <li data-index="3" 
+                    data-transition="slideoverhorizontal" 
+                    data-slotamount="default" 
+                    data-hideafterloop="0" 
+                    data-hideslideonmobile="off" 
+                    data-easein="Power4.easeInOut" 
+                    data-easeout="Power4.easeInOut" 
+                    data-masterspeed="1000" 
+                    data-thumb="https://scmc.gov.ae/uploads/slideshow/slide-01646989838.png" 
+                    data-rotate="0"
+                    data-saveperformance="off"
+                    data-title="">
+
+                    <a href="https://scmc.gov.ae/mentalhealth/ar" target="_blank" style="width:100%;height:100%;position:absolute;z-index:1000;"></a>
+                    <img src="https://scmc.gov.ae/uploads/slideshow/slide-01646989838.png" 
+                        alt="" 
+                        data-bgposition="center center" 
+                        data-bgfit="cover" 
+                        data-bgrepeat="no-repeat" 
+                        data-bgparallax="10" 
+                        class="rev-slidebg" 
+                        data-no-retina>
+
+                    
+                    
+                </li>
+                                                                                <li data-index="4" 
+                    data-transition="slideoverhorizontal" 
+                    data-slotamount="default" 
+                    data-hideafterloop="0" 
+                    data-hideslideonmobile="off" 
+                    data-easein="Power4.easeInOut" 
+                    data-easeout="Power4.easeInOut" 
+                    data-masterspeed="1000" 
+                    data-thumb="https://scmc.gov.ae/uploads/slideshow/slide-01613642863.png" 
+                    data-rotate="0"
+                    data-saveperformance="off"
+                    data-title="">
+
+                    <a href="https://scmc.gov.ae/ar/injury-prevention-campaign" target="_blank" style="width:100%;height:100%;position:absolute;z-index:1000;"></a>
+                    <img src="https://scmc.gov.ae/uploads/slideshow/slide-01613642863.png" 
+                        alt="" 
+                        data-bgposition="center center" 
+                        data-bgfit="cover" 
+                        data-bgrepeat="no-repeat" 
+                        data-bgparallax="10" 
+                        class="rev-slidebg" 
+                        data-no-retina>
+
+                    
+                    
+                </li>
+                                                                                <li data-index="5" 
+                    data-transition="slideoverhorizontal" 
+                    data-slotamount="default" 
+                    data-hideafterloop="0" 
+                    data-hideslideonmobile="off" 
+                    data-easein="Power4.easeInOut" 
+                    data-easeout="Power4.easeInOut" 
+                    data-masterspeed="1000" 
+                    data-thumb="https://scmc.gov.ae/uploads/slideshow/slide-01599466104.png" 
+                    data-rotate="0"
+                    data-saveperformance="off"
+                    data-title="">
+
+                    <a href="little-volunteer-page" target="_self" style="width:100%;height:100%;position:absolute;z-index:1000;"></a>
+                    <img src="https://scmc.gov.ae/uploads/slideshow/slide-01599466104.png" 
+                        alt="" 
+                        data-bgposition="center center" 
+                        data-bgfit="cover" 
+                        data-bgrepeat="no-repeat" 
+                        data-bgparallax="10" 
+                        class="rev-slidebg" 
+                        data-no-retina>
+
+                    
+                    
+                </li>
+                                            </ul>
+        </div>
+    </div>
+</section>
+
+
+                                                            <section class="how-it-works-area">
+    <div class="container">
+                <div class="row">
+            <div class="col-12">
+                <div class="sponsors-outer">
+                    <ul class="cardshow_1 owl-carousel owl-theme">
+                                                                                                <li class="slide-item">
+                            <figure class="image-box">
+                                <a href="ar/children-advisor-council" >
+                                    <img src="https://scmc.gov.ae/uploads/cardshow/card-101595652960.png" alt="">
+                                </a>
+                            </figure>
+                        </li>
+                                                                                                                        <li class="slide-item">
+                            <figure class="image-box">
+                                <a href="ar/my-child-seat" >
+                                    <img src="https://scmc.gov.ae/uploads/cardshow/card-91595652960.png" alt="">
+                                </a>
+                            </figure>
+                        </li>
+                                                                                                                        <li class="slide-item">
+                            <figure class="image-box">
+                                <a href="https://ecd.gov.ae/" target=_blank>
+                                    <img src="https://scmc.gov.ae/uploads/cardshow/card-81595652960.png" alt="">
+                                </a>
+                            </figure>
+                        </li>
+                                                                                                                        <li class="slide-item">
+                            <figure class="image-box">
+                                <a href="https://ecp.gov.ae/" target=_blank>
+                                    <img src="https://scmc.gov.ae/uploads/cardshow/card-71595652960.png" alt="">
+                                </a>
+                            </figure>
+                        </li>
+                                                                                                                        <li class="slide-item">
+                            <figure class="image-box">
+                                <a href="ar/forum" target=_blank>
+                                    <img src="https://scmc.gov.ae/uploads/cardshow/card-61595652960.png" alt="">
+                                </a>
+                            </figure>
+                        </li>
+                                                                                                                        <li class="slide-item">
+                            <figure class="image-box">
+                                <a href="ar/golden-balloon-page" >
+                                    <img src="https://scmc.gov.ae/uploads/cardshow/card-51595652960.png" alt="">
+                                </a>
+                            </figure>
+                        </li>
+                                                                                                                        <li class="slide-item">
+                            <figure class="image-box">
+                                <a href="https://hemmah.ae/" target=_blank>
+                                    <img src="https://scmc.gov.ae/uploads/cardshow/card-31595652960.png" alt="">
+                                </a>
+                            </figure>
+                        </li>
+                                                                                                                        <li class="slide-item">
+                            <figure class="image-box">
+                                <a href="ar/little-volunteer-page" target=_blank>
+                                    <img src="https://scmc.gov.ae/uploads/cardshow/card-21595652960.png" alt="">
+                                </a>
+                            </figure>
+                        </li>
+                                                                                                                        <li class="slide-item">
+                            <figure class="image-box">
+                                <a href="ar/mini-masterclass" >
+                                    <img src="https://scmc.gov.ae/uploads/cardshow/card-11595652960.png" alt="">
+                                </a>
+                            </figure>
+                        </li>
+                                                                                                                        <li class="slide-item">
+                            <figure class="image-box">
+                                <a href="ar/children-environment-award" >
+                                    <img src="https://scmc.gov.ae/uploads/cardshow/card-01595652960.png" alt="">
+                                </a>
+                            </figure>
+                        </li>
+                                                                                                                        <li class="slide-item">
+                            <figure class="image-box">
+                                <a href="https://award.scmc.gov.ae" target=_blank>
+                                    <img src="https://scmc.gov.ae/uploads/cardshow/card-111595652960.png" alt="">
+                                </a>
+                            </figure>
+                        </li>
+                                                                                                                        <li class="slide-item">
+                            <figure class="image-box">
+                                <a href="https://bpa.scmc.gov.ae/" target=_blank>
+                                    <img src="https://scmc.gov.ae/uploads/cardshow/card-01603875070.png" alt="">
+                                </a>
+                            </figure>
+                        </li>
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script type="text/javascript">
+    if ($(".cardshow_1").length) {
+        $(".cardshow_1").owlCarousel({
+            loop: true,
+            rtl:true,
+            margin: 30,
+            nav: 1,
+            dots: 1,
+            smartSpeed: 500,
+            autoplay: 4000,
+            //autoplayHoverPause: true,
+            navText: ['<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>'],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                480: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                800: {
+                    items: 6
+                },
+                1024: {
+                    items: 6
+                }
+            }
+        });
+    }
+</script>                                                        <section class="about-us-area">
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+<div style="margin-top: 20%;"><img src="../../../../../uploads/html/hhlogo02.png" alt="" width="512" height="512" /></div>
+</div>
+<div class="col-md-6">
+<div class="about-text">
+<div class="section-titleV1">
+<p class="mat-grey font-18 font-no-style">رئيس المجلس الأعلى للأمومة والطفولة</p>
+<h3>سمو الشيخة فاطمة بنت مبارك</h3>
+</div>
+<div class="fix-scroll section-text">
+<p>التطوير الذي نراه اليوم مجرد خطوة في مسيرة الارتقاء برسالة وخطط المجلس، ومحاولة لإبراز رؤيته وإنجازاته داخل دولة الإمارات وخارجها.</p>
+<p>يعتبر المجلس الأعلى للأمومة والطفولة «الحاضنة» الرسمية المعنية بقضايا الأمومة والطفولة في دولة الإمارات العربية المتحدة، الذي أنشئ بموجب مرسوم بقانون اتحادي رقم 1 لسنة 2003م بأمرٍ سامٍ من مؤسس وباني نهضة الدولة المغفور له بإذن الله الشيخ زايد بن سلطان آل نهيان، وبهذا شكّل المجلس لبنة أساسية في الهيكل البنائي لمؤسسات الدولة المختصة برعاية قضايا الأمومة والطفولة. وفي سبيل تحقيق الغايات السامية المرجوة من المجلس، والتي هي فضلاً عن كونها مهمة وطنية هي مسؤولية أخلاقية، رسمت العديد من الاستراتيجيات لتطبيق رسالة المجلس وتحويلها واقعاً ملموساً.</p>
+<p>ومن خلال موقعنا هذا، فإنّنا نأمل أن يكون بوابة تواصل مع أفراد المجتمع، وفرصة للتعريف بإسهامات المجلس الأعلى للأمومة والطفولة. وفي سبيل تحقيق أقصى فائدة من التواصل نوجّه الدعوة إلى أبناء دولة الإمارات والمقيمين على أرضها الطيبة وإلى من يتابع من بقاع أخرى أخبار المجلس ويهتم بالتطور الحضاري الذي تشهده دولة الامارات، بالتفاعل مع محتوى الموقع، والمشاركة الإيجابية التي تنير لنا الدرب عبر مقترحات تساعد في تعزيز رسالة المجلس.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+                                        <section class="testimonial-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="social-circle">
+                    <img src="../../../../../uploads/html/solf.png" alt="" width="512" height="512" />
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-5 social-column">
+                        <div class="instagram">
+                            <div class="inside">
+                                <i class="fa fa-instagram"></i>
+                            </div>
+                        </div>
+                        <div class="insta-box">
+                            <div id="instagram-feed" class="data">
+                                  <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/Ca7Q5BiN8r4/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="13" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CL0ynDyFVV0/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g>
+              <path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CL0ynDyFVV0/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Emirati Children&#39;s Day (@emiratichildrensday)</a></p>
+            </div>
+          </blockquote> 
+          <script async src="//www.instagram.com/embed.js"></script>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 social-column">
+                        <div class="twitter">
+                            <div class="inside">
+                                <i class="fa fa-twitter"></i>
+                            </div>
+                        </div>
+                        <div class="twitter-box">
+                            <div class="data">
+                                <a class="twitter-timeline" href="https://twitter.com/UAEChildrensDay?s=20&t=hz-Q6X1GQJdZtZ8isJCHQg">تغريدات من UAESCMC</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+                                                            <section class="our-recent-work">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="event-circle">
+                    <h3><img src="../../../../../uploads/html/faaliat.png" /></h3>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row clearfix">
+                    <div class="events_4 event-carousel owl-carousel owl-theme">
+                                                                        <div class="slide event-block col-lg-12">
+                            <div class="inner-box">
+                                <div class="image">
+                                    <a href="https://scmc.gov.ae/ar/events/78">
+                                     
+                                    <img src="https://scmc.gov.ae/uploads/events/evt-01667293951.png" alt="" />
+                                                                        </a>
+                                </div>
+                                <div class="lower-content">
+                                    <div class="content">
+                                        <div class="post-date">
+                                            <span>01 <br>
+                                            <i>Nov</i>
+                                            <i class="year">2022</i>
+                                            </span>
+                                        </div>
+                                        <ul class="post-info">
+                                                                                        <li>فعالية سابقة</li>
+                                                                                    </ul>
+                                        <a href="https://scmc.gov.ae/ar/events/78"><h4>افتتاح مركز تحفيظ القرآن في مسجد السعديات</h4></a>
+                                        
+                                        
+                                                                                                                        <a class="register-btn" href="#">لا يمكن التسجيل<i class="flaticon-left"></i></a>
+                                                                                                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                                                        <div class="slide event-block col-lg-12">
+                            <div class="inner-box">
+                                <div class="image">
+                                    <a href="https://scmc.gov.ae/ar/events/73">
+                                     
+                                    <img src="https://scmc.gov.ae/uploads/events/evt-01616668421.PNG" alt="" />
+                                                                        </a>
+                                </div>
+                                <div class="lower-content">
+                                    <div class="content">
+                                        <div class="post-date">
+                                            <span>02 <br>
+                                            <i>Nov</i>
+                                            <i class="year">2021</i>
+                                            </span>
+                                        </div>
+                                        <ul class="post-info">
+                                                                                        <li>فعالية سابقة</li>
+                                                                                    </ul>
+                                        <a href="https://scmc.gov.ae/ar/events/73"><h4>حماية الأطفال من الاساءة</h4></a>
+                                        
+                                        
+                                                                                                                        <a class="register-btn" href="#">لا يمكن التسجيل<i class="flaticon-left"></i></a>
+                                                                                                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                                                        <div class="slide event-block col-lg-12">
+                            <div class="inner-box">
+                                <div class="image">
+                                    <a href="https://scmc.gov.ae/ar/events/76">
+                                     
+                                    <img src="https://scmc.gov.ae/uploads/events/evt-01634470883.jpeg" alt="" />
+                                                                        </a>
+                                </div>
+                                <div class="lower-content">
+                                    <div class="content">
+                                        <div class="post-date">
+                                            <span>20 <br>
+                                            <i>Oct</i>
+                                            <i class="year">2021</i>
+                                            </span>
+                                        </div>
+                                        <ul class="post-info">
+                                                                                        <li>فعالية سابقة</li>
+                                                                                    </ul>
+                                        <a href="https://scmc.gov.ae/ar/events/76"><h4>الطريقة المثلى للتقديم وطريقة التققيم</h4></a>
+                                        
+                                        
+                                                                                                                        <a class="register-btn" href="#">لا يمكن التسجيل<i class="flaticon-left"></i></a>
+                                                                                                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                                                        <div class="slide event-block col-lg-12">
+                            <div class="inner-box">
+                                <div class="image">
+                                    <a href="https://scmc.gov.ae/ar/events/75">
+                                     
+                                    <img src="https://scmc.gov.ae/uploads/events/evt-01634208830.jpeg" alt="" />
+                                                                        </a>
+                                </div>
+                                <div class="lower-content">
+                                    <div class="content">
+                                        <div class="post-date">
+                                            <span>17 <br>
+                                            <i>Oct</i>
+                                            <i class="year">2021</i>
+                                            </span>
+                                        </div>
+                                        <ul class="post-info">
+                                                                                        <li>فعالية سابقة</li>
+                                                                                    </ul>
+                                        <a href="https://scmc.gov.ae/ar/events/75"><h4>تعرفوا أكثر عن جائزة الوقاية من التنمر</h4></a>
+                                        
+                                        
+                                                                                                                        <a class="register-btn" href="#">لا يمكن التسجيل<i class="flaticon-left"></i></a>
+                                                                                                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script type="text/javascript">
+    if ($(".events_4").length) {
+        $(".events_4").owlCarousel({
+            loop: true,
+            rtl:true,
+            margin: 0,
+            nav: 1,
+            dots: 0,
+            smartSpeed: 500,
+            autoplay: 5000,
+            autoplayHoverPause: true,
+            navText: ['<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>'],
+            responsive: {
+                0: {items: 1},
+                480: {items: 1},
+                600: {items: 1},
+                800: {items: 3},
+                1024: {items: 3}
+            }
+        });
+    }
+</script>
+                                                                            <section class="service-area">
+    <div class="container">
+        <div class="row flex-column-reverse flex-md-row">
+            <div class="col-md-9">
+                <div class="row clearfix">
+                    <div class="news_5 owl-carousel owl-theme">
+
+                                                                        <div class="news-block col-md-12 col-sm-12">
+                            <div class="inner-box">
+                                <div class="image">
+                                    <a href="https://scmc.gov.ae/ar/news/202">
+                                                                        <img src="https://scmc.gov.ae/news-default.jpg" alt="" />
+                                                                        </a>
+                                </div>
+                                <div class="lower-content">
+                                    <!-- <h3>بحضور وزير الاقتصاد وعدد من البرلمانيين الأوروبيين.. البرلمان الإماراتي للطفل يعقد جلسته الختامية ويناقش دعم الأطفال المبتكرين</h3> -->
+                                    <p>أكد أعضاء البرلمان الإماراتي للطفل على أهمية دعم الأطفال المبدعين والمبتكرين ووضعهم في أهم الأولويات وتوفير متطلباتهم واحتياجاتهم وتبني مشاريعهم وتشجيع أعمالهم ودعم براءات الاختراع وتذليل العقبات التي تواجهها هذه الفئة بالتعاون مع مؤسسات الدولة المعنية لدف...</p>
+                                    <div class="post-date">25 Nov, 2022</div>
+                                    <div class="clearfix">
+                                        <div class="pull-right">
+                                            <div class="author"><a href="https://scmc.gov.ae/ar/news/202">إقرأ الخبر كاملاً </a></div>
+                                        </div>
+                                        <div class="pull-left">
+                                            <ul class="post-info">
+                                                <li><a href="#"><span class="fa fa-share-alt"></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                                                        <div class="news-block col-md-12 col-sm-12">
+                            <div class="inner-box">
+                                <div class="image">
+                                    <a href="https://scmc.gov.ae/ar/news/201">
+                                                                        <img src="https://scmc.gov.ae/news-default.jpg" alt="" />
+                                                                        </a>
+                                </div>
+                                <div class="lower-content">
+                                    <!-- <h3>المجلس الأعلى للأمومة والطفولة يشارك باحتفالات يوم العلم</h3> -->
+                                    <p>شارك المجلس الأعلى للأمومة والطفولة باحتفالات الدولة بيوم العلم بحضور سعادة الريم بنت عبدالله الفلاسي الأمين العام للمجلس وجميع الموظفين وذلك أمام مبنى المجلس. &nbsp;ويأتي هذا الحفل تلبية لتوجيهات صاحب السمو الشيخ محمد بن راشد آل مكتوم، نائب رئيس الدولة رئ...</p>
+                                    <div class="post-date">03 Nov, 2022</div>
+                                    <div class="clearfix">
+                                        <div class="pull-right">
+                                            <div class="author"><a href="https://scmc.gov.ae/ar/news/201">إقرأ الخبر كاملاً </a></div>
+                                        </div>
+                                        <div class="pull-left">
+                                            <ul class="post-info">
+                                                <li><a href="#"><span class="fa fa-share-alt"></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                                                        <div class="news-block col-md-12 col-sm-12">
+                            <div class="inner-box">
+                                <div class="image">
+                                    <a href="https://scmc.gov.ae/ar/news/200">
+                                                                        <img src="https://scmc.gov.ae/uploads/news/200/news-01666092997.jpeg" alt="">
+                                                                        </a>
+                                </div>
+                                <div class="lower-content">
+                                    <!-- <h3>تصميم لوحة تذكارية باسم سمو الشيخة فاطمة بنت مبارك في فلورنسا الإيطالية تعبيرا عن مشاعر الشكر و الامتنان</h3> -->
+                                    <p>فلورنسا - إيطاليا في 16 أكتوبر 2022
+&nbsp;
+صممت جمعية المرأة العربية الإيطالية ( aiwa )و مؤسسة مونتدوميني لرعاية المسنين لوحة تذكارية باسم سمو الشيخة فاطمة بنت مبارك رئيسة الإتحاد النسائي العام، رئيسة المجلس الأعلى للأمومة والطفولة، الرئيسة الأعلى لمؤسسة...</p>
+                                    <div class="post-date">16 Oct, 2022</div>
+                                    <div class="clearfix">
+                                        <div class="pull-right">
+                                            <div class="author"><a href="https://scmc.gov.ae/ar/news/200">إقرأ الخبر كاملاً </a></div>
+                                        </div>
+                                        <div class="pull-left">
+                                            <ul class="post-info">
+                                                <li><a href="#"><span class="fa fa-share-alt"></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                                                        <div class="news-block col-md-12 col-sm-12">
+                            <div class="inner-box">
+                                <div class="image">
+                                    <a href="https://scmc.gov.ae/ar/news/199">
+                                                                        <img src="https://scmc.gov.ae/uploads/news/199/news-01666092925.jpg" alt="">
+                                                                        </a>
+                                </div>
+                                <div class="lower-content">
+                                    <!-- <h3>فلورنسا الإيطالية تهدي الشيخة فاطمة بنت مبارك مفتاح المدينة تكريما لجهودها الإنسانية</h3> -->
+                                    <p>فلورنسا في 13 أكتوبر / وام / أهدت اليسيا بيتييني نائبة عمدة مدينة فلورنسا الإيطالية مفتاح المدينة لسمو الشيخة فاطمة بنت مبارك رئيسة الاتحاد النسائي العام رئيسة المجلس الأعلى للأمومة والطفولة الرئيسة الأعلى لمؤسسة التنمية الأسرية تكريما لسموها على جهودها ال...</p>
+                                    <div class="post-date">13 Oct, 2022</div>
+                                    <div class="clearfix">
+                                        <div class="pull-right">
+                                            <div class="author"><a href="https://scmc.gov.ae/ar/news/199">إقرأ الخبر كاملاً </a></div>
+                                        </div>
+                                        <div class="pull-left">
+                                            <ul class="post-info">
+                                                <li><a href="#"><span class="fa fa-share-alt"></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                                                        <div class="news-block col-md-12 col-sm-12">
+                            <div class="inner-box">
+                                <div class="image">
+                                    <a href="https://scmc.gov.ae/ar/news/198">
+                                                                        <img src="https://scmc.gov.ae/uploads/news/198/news-01658991870.jfif" alt="">
+                                                                        </a>
+                                </div>
+                                <div class="lower-content">
+                                    <!-- <h3>الريم الفلاسي تؤكد أن التعاطي الإعلامي مع البدائل الصحيحة للمصطلحات والصور الخطأ المتبادلة حول الأطفال سوف يشكل منصة رائدة للانطلاق إلى رحاب أوسع في حماية حقوق الطفل</h3> -->
+                                    <p>
+  
+
+أكدت سعادة الريم بنت عبد الله الفلاسي أن التعاطي الإعلامي مع البدائل الصحيحة للمصطلحات والصور الخطأ المتبادلة حول الأطفال بوسائل الإعلام العربية من خلال ذلك الدليل المبني على احترام جملة المبادئ العامة لحقوق الطفل وأخلاقيات مهنة الإعلام سوف يشكل من...</p>
+                                    <div class="post-date">26 Jul, 2022</div>
+                                    <div class="clearfix">
+                                        <div class="pull-right">
+                                            <div class="author"><a href="https://scmc.gov.ae/ar/news/198">إقرأ الخبر كاملاً </a></div>
+                                        </div>
+                                        <div class="pull-left">
+                                            <ul class="post-info">
+                                                <li><a href="#"><span class="fa fa-share-alt"></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                                                        <div class="news-block col-md-12 col-sm-12">
+                            <div class="inner-box">
+                                <div class="image">
+                                    <a href="https://scmc.gov.ae/ar/news/197">
+                                                                        <img src="https://scmc.gov.ae/uploads/news/197/news-01654506889.png" alt="">
+                                                                        </a>
+                                </div>
+                                <div class="lower-content">
+                                    <!-- <h3>جناح المجلس الأعلى للأمومة والطفولة يشهد توقيع عدد من إصدارات الأطفال</h3> -->
+                                    <p>
+   
+
+شهد جناح المجلس الأعلى للأمومة والطفولة بمعرض أبوظبي الدولي للكتاب توقيع عدد من الإصدارات الخاصة بالأطفال، والتي قام المجلس بالتكفل بها حرصاً ودعماً للطفل وتسليط الضوء عليه وتشجيعه على الكتابة والقراءة وتعزيز حسِه الإبداعي.
+وشهدت منصة المجلس حفل...</p>
+                                    <div class="post-date">29 May, 2022</div>
+                                    <div class="clearfix">
+                                        <div class="pull-right">
+                                            <div class="author"><a href="https://scmc.gov.ae/ar/news/197">إقرأ الخبر كاملاً </a></div>
+                                        </div>
+                                        <div class="pull-left">
+                                            <ul class="post-info">
+                                                <li><a href="#"><span class="fa fa-share-alt"></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                                                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="news-circle">
+                    <h3><img src="../../../../../uploads/html/akhbar.png" alt="" width="512" height="512" /></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script type="text/javascript">
+    if ($(".news_5").length) {
+        $(".news_5").owlCarousel({
+            loop: true,
+            rtl:true,
+            margin: 0,
+            nav: 1,
+            dots: 0,
+            smartSpeed: 500,
+            autoplay: 5000,
+            autoplayHoverPause: true,
+            navText: ['<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>'],
+            responsive: {
+                0: {items: 1},
+                480: {items: 1},
+                600: {items: 1},
+                800: {items: 1},
+                1024: {items: 2}
+            }
+        });
+    }
+</script>
+                                                                            <section class="testimonial-area advisors-area">
+    <div class="container">
+        <div class="row adv">
+                        <div class="col-md-12">
+                <div class="section-titleV1">
+                                        <h3>تعرف  <span>على مستشارينا</span></h3>
+                </div>
+            </div>
+                        <div class="col-md-9">
+                <div class="advisor_6 advisor-carousel owl-carousel owl-theme">
+                                                                    <div class="team-block">
+                            <div class="inner-box">
+                                <a target="_blank" href="../uploads/advisors/Salamaalteneji.pdf">
+                                    <div class="image-box">
+                                        <div class="image">
+                                            <img src="https://scmc.gov.ae/uploads/advisors/adv-01595678418.png" alt="" />
+                                        </div>
+                                                                            </div>
+                                </a>
+                                <div class="lower-box">
+                                    <a target="_blank" href="../uploads/advisors/Salamaalteneji.pdf">سلامة الطنيجي</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                                                                    <div class="team-block">
+                            <div class="inner-box">
+                                <a target="_blank" href="../uploads/advisors/EbrahimAlawadi.pdf">
+                                    <div class="image-box">
+                                        <div class="image">
+                                            <img src="https://scmc.gov.ae/uploads/advisors/adv-21595678418.png" alt="" />
+                                        </div>
+                                                                            </div>
+                                </a>
+                                <div class="lower-box">
+                                    <a target="_blank" href="../uploads/advisors/EbrahimAlawadi.pdf">إبراهيم أبو الشوارب</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                                                                    <div class="team-block">
+                            <div class="inner-box">
+                                <a target="_blank" href="../uploads/advisors/WadimaAlmansouri.pdf">
+                                    <div class="image-box">
+                                        <div class="image">
+                                            <img src="https://scmc.gov.ae/uploads/advisors/adv-31595678418.png" alt="" />
+                                        </div>
+                                                                            </div>
+                                </a>
+                                <div class="lower-box">
+                                    <a target="_blank" href="../uploads/advisors/WadimaAlmansouri.pdf">وديمه المنصوري</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                                                                    <div class="team-block">
+                            <div class="inner-box">
+                                <a target="_blank" href="../uploads/advisors/GhaithAlghafli.pdf">
+                                    <div class="image-box">
+                                        <div class="image">
+                                            <img src="https://scmc.gov.ae/uploads/advisors/adv-41595678418.png" alt="" />
+                                        </div>
+                                                                            </div>
+                                </a>
+                                <div class="lower-box">
+                                    <a target="_blank" href="../uploads/advisors/GhaithAlghafli.pdf">غيث الغفلي</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                                                                    <div class="team-block">
+                            <div class="inner-box">
+                                <a target="_blank" href="../uploads/advisors/MariamAlhamli.pdf">
+                                    <div class="image-box">
+                                        <div class="image">
+                                            <img src="https://scmc.gov.ae/uploads/advisors/adv-51595678418.png" alt="" />
+                                        </div>
+                                                                            </div>
+                                </a>
+                                <div class="lower-box">
+                                    <a target="_blank" href="../uploads/advisors/MariamAlhamli.pdf">مريم الهاملي</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                                                                    <div class="team-block">
+                            <div class="inner-box">
+                                <a target="_blank" href="../uploads/advisors/AishaAlali.pdf">
+                                    <div class="image-box">
+                                        <div class="image">
+                                            <img src="https://scmc.gov.ae/uploads/advisors/adv-61595678418.png" alt="" />
+                                        </div>
+                                                                            </div>
+                                </a>
+                                <div class="lower-box">
+                                    <a target="_blank" href="../uploads/advisors/AishaAlali.pdf">عائشة العلي</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                                                                    <div class="team-block">
+                            <div class="inner-box">
+                                <a target="_blank" href="../uploads/advisors/wadimaAldarmaki.pdf">
+                                    <div class="image-box">
+                                        <div class="image">
+                                            <img src="https://scmc.gov.ae/uploads/advisors/adv-71595678418.png" alt="" />
+                                        </div>
+                                                                            </div>
+                                </a>
+                                <div class="lower-box">
+                                    <a target="_blank" href="../uploads/advisors/wadimaAldarmaki.pdf">وديمه الدرمكي</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                                                                    <div class="team-block">
+                            <div class="inner-box">
+                                <a target="_self" href="../uploads/advisors/RashedAlsuwaidi.pdf">
+                                    <div class="image-box">
+                                        <div class="image">
+                                            <img src="https://scmc.gov.ae/uploads/advisors/adv-81595678418.png" alt="" />
+                                        </div>
+                                                                            </div>
+                                </a>
+                                <div class="lower-box">
+                                    <a target="_self" href="../uploads/advisors/RashedAlsuwaidi.pdf">راشد السويدي</a>
+                                                                    </div>
+                            </div>
+                        </div>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script type="text/javascript">
+    if ($(".advisor_6").length) {
+        $(".advisor_6").owlCarousel({
+            loop: true,
+            rtl:true,
+            margin: 30,
+            nav: 1,
+            dots: 0,
+            center: true,
+            smartSpeed: 500,
+            autoplay: 5000,
+            //autoplayHoverPause: true,
+            navText: ['<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>'],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                800: {
+                    items: 3
+                },
+                1024: {
+                    items: 3
+                },
+                1200: {
+                    items: 3
+                }
+            }
+        });
+    }
+</script>
+
+    
+                                                        <footer class="footer-area">
+<div class="container">
+<div class="row">
+<div class="col-md-2">
+<div class="f-widget fw-logo-text"><img src="../../../../../site/img/white_logo.png" alt="Logo" /></div>
+</div>
+<div class="col-md-10">
+<div class="row">
+<div class="col-md-6">
+<div class="row">
+<div class="col-md-4 hidden-xs">
+<div class="f-widget">
+<ul class="fw-links">
+<li><a href="../../../../../ar/home">الصفحة الرئيسية</a></li>
+<li><a href="../../../../../ar/news">أخبارنا</a></li>
+<li><a href="../../../../../ar/gallery">ألبوم الصور</a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-4 hidden-xs">
+<div class="f-widget">
+<ul class="fw-links">
+<li><a href="../../../../../ar/events">الفعاليات</a></li>
+<li><a href="../../../../../ar/downloads">مكتبتنا</a></li>
+<li><a href="../../../../../ar/contact">تواصل معنا</a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-4">
+<div class="f-widget">
+<ul class="fw-links">
+<li><a href="https://twitter.com/UAESCMC" target="_blank" rel="noopener">تويتر</a></li>
+<li><a href="https://www.instagram.com/uaescmc/" target="_blank" rel="noopener">انستغرام</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6 hidden-xs">
+<div class="f-widget">
+<ul class="fw-links text-right">
+<li><a href="#">يجب أن تكون دقة الشاشة 1280x1024 </a></li>
+<li><a href="#">لأفضل تصفح للموقع يدعم مايكروسوفت ، فاير فوكس 35.0+، سفاري 5.1+ ، كروم 39.0+</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-copyright">
+<div class="row">
+<div class="col-md-6">
+<div class="copyright-text">
+<p>جميع الحقوق محفوظة - 2021 © المجلس الأعلى للأمومة والطفولة</p>
+</div>
+</div>
+<div class="col-md-6">
+<div class="fc-links">
+<ul>
+<li><a href="../../../../../ar/map">خريطة الموقع</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+                
+    <div id="volumteer_div"></div>
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
+
+    
+<script src="https://scmc.gov.ae/site/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="https://scmc.gov.ae/site/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="https://scmc.gov.ae/site/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="https://scmc.gov.ae/site/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="https://scmc.gov.ae/site/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="https://scmc.gov.ae/site/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="https://scmc.gov.ae/site/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="https://scmc.gov.ae/site/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="https://scmc.gov.ae/site/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="https://scmc.gov.ae/site/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="https://scmc.gov.ae/site/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+<script type="text/javascript">
+    var myslider;
+    $(document).ready(function() {
+        if ($("#slideshow_0").revolution == undefined) {
+            revslider_showDoubleJqueryError("#slideshow_0");
+        } else {
+            myslider = $("#slideshow_0").show().revolution({
+                sliderType: "standard",
+                jsFileLocation: "revolution/js/",
+                sliderLayout: "fullscreen",
+                dottedOverlay: "none",
+                delay: 5000,
+                navigation: {
+                    keyboardNavigation: "off",
+                    keyboard_direction: "horizontal",
+                    mouseScrollNavigation: "off",
+                    mouseScrollReverse: "default",
+                    onHoverStop: "off",
+                    touch: {
+                        touchenabled: "on",
+                        swipe_threshold: 75,
+                        swipe_min_touches: 1,
+                        swipe_direction: "horizontal",
+                        drag_block_vertical: false
+                    },
+                    arrows: {
+                        style: "gyges",
+                        enable: 1,
+                        hide_onmobile: true,
+                        hide_under: 650,
+                        hide_onleave: false,
+                        tmp: "",
+                        left: {
+                            h_align: "left",
+                            v_align: "center",
+                            h_offset: 125,
+                            v_offset: -15,
+                        },
+                        right: {
+                            h_align: "right",
+                            v_align: "center",
+                            h_offset: 125,
+                            v_offset: -15,
+                        },
+                    },
+                    bullets: {
+                        enable: 1,
+                        hide_onmobile: true,
+                        hide_under: 960,
+                        style: "zeus",
+                        hide_onleave: false,
+                        direction: "horizontal",
+                        h_align: "right",
+                        v_align: "bottom",
+                        h_offset: 80,
+                        v_offset: 50,
+                        space: 5,
+                        tmp: '<span class="tp-bullet-image"></span><span class="tp-bullet-imageoverlay"></span><span class="tp-bullet-title">title</span>'
+                    }
+                },
+                responsiveLevels: [1240, 1024, 778, 480],
+                visibilityLevels: [1240, 1024, 778, 480],
+                gridwidth: [1240, 1024, 778, 480],
+                gridheight: [868, 768, 960, 720],
+                lazyType: "none",
+                shadow: 0,
+                spinner: "off",
+                stopLoop: "on",
+                // stopAfterLoops: -1,
+                // stopAtSlide: -1,
+                stopAfterLoops: 0,
+                stopAtSlide: 0,
+                shuffle: "off",
+                autoHeight: "on",
+                fullScreenAutoWidth: "off",
+                fullScreenAlignForce: "off",
+                fullScreenOffsetContainer: "",
+                disableProgressBar: "on",
+                hideThumbsOnMobile: "off",
+                hideSliderAtLimit: 0,
+                hideCaptionAtLimit: 0,
+                hideAllCaptionAtLilmit: 0,
+                debugMode: false,
+                fallbacks: {
+                    simplifyAll: "off",
+                    nextSlideOnWindowFocus: "off",
+                    disableFocusListener: false,
+                },
+                parallax: {
+                    type: "mouse",
+                    origo: "slidercenter",
+                    speed: 2000,
+                    levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50, 46, 47, 48, 49, 50, 55],
+                    type: "mouse",
+                    disable_onmobile: "on"
+                },
+                fullScreenOffset: "220",
+            });
+            var newCall = new Object(),
+                cslide;
+
+            newCall.callback = function() {
+                var proc = myslider.revgetparallaxproc(),
+                    fade = 1 + proc,
+                    scale = 1 + (Math.abs(proc) / 10);
+
+                punchgs.TweenLite.set(myslider.find('.slotholder, .rs-background-video-layer'), {
+                    opacity: fade,
+                    scale: scale
+                });
+            }
+            newCall.inmodule = "parallax";
+            newCall.atposition = "start";
+
+            myslider.bind("revolution.slide.onloaded", function(e) {
+                myslider.revaddcallback(newCall);
+            });
+        }
+    }); /*ready*/
+</script>
+</body>
+
+</html>

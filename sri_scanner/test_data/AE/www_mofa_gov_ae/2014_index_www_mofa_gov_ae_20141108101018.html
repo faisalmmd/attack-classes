@@ -1,0 +1,1275 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1"><title>
+	الرئيسيـة
+</title><meta name="description" content="الموقع الرسمي لوزارة الخارجية الاماراتية - يستعرض أحدث اخبار الامارات المتعلقة بسياستها الخارجية والتأشيرات المطلوبة لدخول الامارات أو لمغادرتها والتصديقات والأوراق الثبوتية المطلوبة وغيرها في قسم خدمات الوزارة كما يتضمن ارشادات ونصائح السفر وخدمة تواجدي والبعثات الدبلوماسية المعتمدة لتمثيل الامارات في الخارج والبعثات التمثيلية المعتمدة داخل الامارات ... وغيرها " /><meta name="keywords" content="الأخبار,خريطة الموقع,تواجدي,اتصل بنا,كلمات وتصاريح,خدمات الوزارة,فعاليات رئيسية,التوظيف,روابط,ارشادات ونصائح السفر,مكتبة الصور والفيديو,مجلة الدبلوماسي" /><meta name="ROBOTS" content="INDEX, FOLLOW" /><meta name="revisit-after" content="2 days" /><link rel="SHORTCUT ICON" href="../favicon.ico" /><meta name="viewport" content="width=device-width" /><meta charset="utf-8" /><link href="../javascript_h5/js/sh/shCore.css" rel="stylesheet" /><link href="../javascript_h5/js/sh/shThemeDefault.css" rel="stylesheet" /><link id="ctl00_lnk_style" href="../App_Themes/site_h5/css/StyleSheet.css" rel="stylesheet" />
+    <script src="../javascript_h5/js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="../javascript_h5/js/jquery.cycle.all.js" type="text/javascript"></script>
+    <script src="../javascript_h5/js/modernizr.custom.16740.js" type="text/javascript"></script>
+    <script src="../javascript_h5/js/MOFAScript.js" type="text/javascript"></script>
+    <link href="../App_Themes/site_h5/css/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+    <script src="../javascript_h5/js/jquery-ui.js" type="text/javascript"></script>
+    <link href="../App_Themes/site_h5/css/colorbox.css" rel="stylesheet" />
+    <script src="../javascript_h5/js/jquery.colorbox-min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../javascript/jquery.cookie.js"></script>
+    <script src="../javascript_h5/js/jquery.fontscale.js" type="text/javascript"></script>
+    <script src="../javascript_h5/js/sh/jquery.searchabledropdown-1.0.8.src.js" type="text/javascript"></script>
+    
+
+    <script>
+
+        var divs = '.desc_2, .s2title, .s2date span, .news_desc span, .news_title, .text-top-news-tit222 a, .p-top-news-tit222, .in-ff4 input, .in-ff3-ff, .hear2 a, .add p, .add2 p, .radio, .right_coll1 , .tablee_tit, .tit2222, .footerhints, #footerMenu ul li a, .ftitle, .footer_ListCont ul li a, .con22, .tit2, .tab22 p, .menuCont2 ul li a, .inner-p, .content3_1 p, .menuh ul li a, .item p, .par1, .text111, .top-footer_left p';
+        $(document).ready(function () {
+
+
+
+
+            $('.in-ff4 a').click(function () {
+                $(this).parent().find("input").datepicker('show');
+            });
+
+            $("#up").fontscale(divs, "up", { unit: "px", increment: 2 });
+            $("#down").fontscale(divs, "down", { unit: "px", increment: 2 });
+            $("#reset").fontscale(divs, "reset");
+
+
+            $(".in-ff4 input").datepicker({
+                dateFormat: "dd/mm/yy",
+                onSelect: function (date) {
+
+                    $(this).hide();
+                    $(this).show();
+                }
+
+            });
+            $(".colbx").colorbox();
+
+
+            $('#anc_changeColor').click(function (e) {
+                //Cancel the link behavior
+                e.preventDefault();
+
+                //Get the A tag
+                var id = $(this).attr('href');
+
+                //Get the screen height and width
+                var maskHeight = $(document).height();
+                var maskWidth = $(window).width();
+
+                //Set heigth and width to mask to fill up the whole screen
+                $('#Cmask').css({ 'width': maskWidth, 'height': maskHeight });
+
+                //transition effect		
+                $('#Cmask').fadeIn(1000);
+                $('#Cmask').fadeTo("slow", 0.8);
+
+                //Get the window height and width
+                var winH = $(window).height();
+                var winW = $(window).width();
+
+                //Set the popup window to center
+
+
+
+
+
+
+
+                //transition effect
+                $(id).fadeIn(2000);
+
+
+                $(id).css('height', $("#dv_Colors").height() + 'px');
+                $(id).css('top', winH / 2 - $(id).height() / 2);
+                $(id).css('left', winW / 2 - $(id).width() / 2);
+            });
+
+
+            //if close button is clicked
+            $('.window .close').click(function (e) {
+                //Cancel the link behavior
+                e.preventDefault();
+
+                $('#Cmask').hide();
+                $('.window').hide();
+            });
+
+            //if mask is clicked
+            $('#Cmask').click(function () {
+                $(this).hide();
+                $('.window').hide();
+            });
+
+        });
+    </script>
+    <script type="text/javascript">        var switchTo5x = true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">        stLight.options({ publisher: "99f272f9-8a2e-43d5-ba5f-d9b596db704d", doNotHash: false, doNotCopy: false, hashAddressBar: false });</script>
+    <style>
+        #Cmask
+        {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 9000;
+            background-color: #000;
+            display: none;
+        }
+        
+        #Cboxes .window
+        {
+            position: fixed;
+            top: 10px;
+            right: 450px;
+            width: 500px;
+            display: none;
+            z-index: 9999;
+            padding: 20px;
+        }
+        
+        #Cboxes #Cdialog
+        {
+            padding: 10px;
+            background-color: #ffffff;
+        }
+        
+        .textToSp a
+        {
+            width: 19px;
+            height: 20px;
+            margin-top: 14px;
+            float: right;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="/Mofa/portal/52ed8054-3a59-437c-a950-284b99940695.aspx" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="7A3F6F2E" />
+</div>
+    <div id="window">
+        <div id="viewport">
+            <div id="big_view">
+                <div id="res_wrapper">
+                    <div class="res_menu">
+                        <div class="menuicon openmenu">
+                            <img src="../App_Themes/site_h5/images/menuico.png" />
+                        </div>
+                        <div class="menuicon">
+                            <div id="Theme_ttt" style="display: none;">
+                                <ul>
+                                    <li>
+                                        <input type="image" name="ctl00$ImageButton1" id="ctl00_ImageButton1" src="../App_Themes/site_h5/images/Gold.png" style="border-width:0px;" /></li>
+                                    <li>
+                                        <input type="image" name="ctl00$ImageButton2" id="ctl00_ImageButton2" src="../App_Themes/site_h5/images/Black.jpg" style="border-width:0px;" /></li>
+                                </ul>
+                            </div>
+                            <img class="xtheme" src="../App_Themes/site_h5/images/ThemeSel_big.png" />
+                        </div>
+                        <div id="ctl00_pnl_searchMob" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_lbtn_Search')">
+	
+                            <div class="search_wrapper">
+                                <div class="res_search_input">
+                                    <input name="ctl00$txt_Search" type="text" id="ctl00_txt_Search" />
+                                </div>
+                            </div>
+                            <div class="res_search">
+                                <a id="ctl00_lbtn_Search" href="javascript:__doPostBack('ctl00$lbtn_Search','')"><img src="../App_Themes/site_h5/images/srchico.png" /></a>
+                            </div>
+                        
+</div>
+                        <div class="res_logo">
+                            <a href="../portal/52ed8054-3a59-437c-a950-284b99940695.aspx">
+                                <img src="../App_Themes/site_h5/images/logo2.jpg" /></a>
+                        </div>
+                    </div>
+                    <header class="header_container">
+                        <div class="header">
+                            <div class="menuheader">
+                                <nav class="menuh ">
+                                    <ul>
+                                        <li><a href="http://government.ae/" target="_blank">موقع حكومة الإمارات</a> </li>
+                                        <li><a href="../portal/4f1784f9-bd34-4b2c-a63c-9f67a1cfe495.aspx">للمساعدة</a></li>
+                                        <li><a href="../portal/def45ce9-e395-4e03-b6aa-b00e4b4ddbe3.aspx">أسئلة شائعة</a></li>
+                                        <li><a href="../portal/7fbd8c80-c823-47e1-86b4-f8516ff40144.aspx">خريطة الموقع</a></li>
+                                        <li><a href="../portal/51688f24-9da5-4bbe-a524-a1d91efdef66.aspx">اتصل بنا</a></li>
+                                        
+                                    </ul>
+                                </nav>
+                                <div class="newh">
+      
+      
+                                <div class="first_icon op" ><a title="نظام الألوان" id="anc_changeColor" name="Cmodal" href="#Cdialog"></a></div>
+                                <div class="a1_icon op"><a title="خط كبير"   id="up"  href="#"></a></div>
+                                <div class="a2_icon op"><a title="خط متوسط"  id="reset"  href="#"></a></div>
+                                <div class="a3_icon op" ><a title="خط صغير" id="down"  href="#"></a></div>
+      
+                                 <div class="email_icon op" style="display:none;"><a  title="البريد الإلكتروني للموظفين" alt="البريد الإلكتروني للموظفين" href="https://webmail.mofa.gov.ae/" target="_blank"></a></div>
+                                <div class="stare_icon hhh"><a title="أضف للمفضلة" id="bookmarkme" href="#"></a></div>
+
+                                 <div id="ctl00_readspeaker_button1" class="rs_skip rsbtn rs_preserve" style="float:right; padding-top:10px; padding-right:3px; position:absolute "></div>
+
+                            
+
+                                <div class="icons" id="theme">
+<div id="ThemeMenu">
+<ul>
+<li><input type="image" name="ctl00$ibtn_Gold" id="ctl00_ibtn_Gold" src="../App_Themes/site_h5/images/Gold.png" style="border-width:0px;" /></li>
+<li><input type="image" name="ctl00$ibtn_Black" id="ctl00_ibtn_Black" src="../App_Themes/site_h5/images/Black.jpg" style="border-width:0px;" /></li>
+</ul>
+</div>
+</div>
+                                </div>
+                                <div id="srchcont">
+                                    <div id="ctl00_pnl_search2" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_lbtn_SearchMain')">
+	
+                                    <div class="contSearch">
+                                        <div class="conttxtf">
+                                            <input name="ctl00$txt_SearchMain" type="text" id="ctl00_txt_SearchMain" />
+                                        </div>
+                                        <div class="contbut">
+                                            <input type="submit" name="ctl00$lbtn_SearchMain" value="" id="ctl00_lbtn_SearchMain" />
+                                        </div>
+                                    </div>
+                                         
+</div>
+
+                                </div>
+                                <div class="advanceSrch">
+                                <a href="../portal/0c5c1a90-c6a6-434b-9a37-f5b30044c8d9.aspx">بحث متقدم</a>
+                                    </div>
+                                <div class="selectLang">
+                                    <a href="http://mofa.gov.ae/mofa_english">English</a>
+                                </div>
+                            </div>
+                            <div class="logo_imageheader">
+                                
+                                    <a href="../Default.aspx">
+                                        <div class="logo"></div>
+                                    </a>
+                                    
+                               
+                            </div>
+                        </div>
+                    </header>
+                    
+  <div class="menuCont">
+<nav class="menuCont2">
+<ul>
+
+<li class='selected'>
+<a href='../portal/52ed8054-3a59-437c-a950-284b99940695.aspx'>الرئيسيـة</a>
+
+<div class="submenu"></div>
+</li>
+
+<li class='parent'>
+<a >الإمارات</a>
+
+<div class="submenu">
+<div class="item">
+<div class="arr_g"></div>
+<a href="../portal/4cd46486-d16e-4e66-8f90-7c13e5d9620b.aspx"><p>لمحــة عن الإمـــارات</p></a>
+</div>
+
+<div class="item">
+<div class="arr_g"></div>
+<a href="../portal/46464bd1-59aa-472a-859a-da742652689f.aspx"><p>حكومــة الإمــارات</p></a>
+</div>
+
+<div class="item">
+<div class="arr_g"></div>
+<a href="../portal/512d518e-4c44-417c-9e51-ea6c2376ff07.aspx"><p>الإمارات و حقوق الإنسان</p></a>
+</div>
+</div>
+</li>
+
+<li class='parent'>
+<a >الوزارة</a>
+
+<div class="submenu">
+<div class="item">
+<div class="arr_g"></div>
+<a href="../portal/4ca2f728-fa64-4285-89d3-0d451ce74e6c.aspx"><p>نبذه عن الوزارة</p></a>
+</div>
+
+<div class="item">
+<div class="arr_g"></div>
+<a href="../portal/9cea62b1-ed1b-4c97-a3ea-0f386bfa9b99.aspx"><p>إستراتيجية الوزارة</p></a>
+</div>
+
+<div class="item">
+<div class="arr_g"></div>
+<a href="../portal/c9ddc4ba-a489-444a-a005-f41b2ab453fd.aspx"><p>السيــاســة الخــارجيــة</p></a>
+</div>
+
+<div class="item">
+<div class="arr_g"></div>
+<a href="../portal/51688f24-9da5-4bbe-a524-a1d91efdef66.aspx"><p>اتصل بنا</p></a>
+</div>
+</div>
+</li>
+
+<li >
+<a href='../portal/f8a010f2-7701-4080-abf5-df516ad972b0.aspx'>الخدمات</a>
+
+<div class="submenu"></div>
+</li>
+
+<li class='parent'>
+<a >المركز الإعلامي</a>
+
+<div class="submenu">
+<div class="item">
+<div class="arr_g"></div>
+<a href="../portal/63502e94-42dd-45fe-a9ab-dd8a30c10b0d.aspx"><p>الأخبار</p></a>
+</div>
+
+<div class="item">
+<div class="arr_g"></div>
+<a href="../portal/fab165b8-a36a-44e9-8ee9-9190a1a02d72.aspx"><p>كلمــات وتصــاريح</p></a>
+</div>
+
+<div class="item">
+<div class="arr_g"></div>
+<a href="../portal/31a66f92-3f6c-4ff0-86f7-90e656ef73fd.aspx"><p>بيانات رسمية</p></a>
+</div>
+
+<div class="item">
+<div class="arr_g"></div>
+<a href="../portal/d72f0315-e0c4-40f7-a607-c9bbc2f03ef9.aspx"><p>فعاليات رئيسية</p></a>
+</div>
+
+<div class="item">
+<div class="arr_g"></div>
+<a href="../portal/834d0e65-d2f2-4b18-a154-fd65b581ff78.aspx"><p>مكتبة الصور والفيديو</p></a>
+</div>
+
+<div class="item">
+<div class="arr_g"></div>
+<a href="../portal/88162fa3-5eb7-4bf9-a11c-06d892773c06.aspx"><p>الركن الإعلامي</p></a>
+</div>
+</div>
+</li>
+
+<li class='parent'>
+<a >البعثات التمثيلية</a>
+
+<div class="submenu">
+<div class="item">
+<div class="arr_g"></div>
+<a href="../portal/9f1a41fd-f236-4340-a839-42db27b3f0a2.aspx"><p>بعثات الدولة في الخارج</p></a>
+</div>
+
+<div class="item">
+<div class="arr_g"></div>
+<a href="../portal/691f3a14-bdec-4c4b-aada-e851b1768571.aspx"><p>البعثات المعتمدة لدى الدولة</p></a>
+</div>
+
+<div class="item">
+<div class="arr_g"></div>
+<a href="../portal/ddd774f2-ed0f-4aab-bee5-4fed28fc1396.aspx"><p>البوابة الالكترونية لبعثات الدولة في الخارج</p></a>
+</div>
+</div>
+</li>
+
+<li class='parent'>
+<a >تقارير الخارجية</a>
+
+<div class="submenu">
+<div class="item">
+<div class="arr_g"></div>
+<a href="../portal/64b9daa0-5a19-4a5b-ab07-64e34b35a66d.aspx"><p>تقارير الخارجية حول دولة الإمارات</p></a>
+</div>
+</div>
+</li>
+
+</ul>
+</nav>
+</div>
+
+                    <div style="width: 100%; height: 1px; clear: both">
+                    </div>
+                    <div class="content" id="navigation_here">
+                        <div class="content2">
+                            
+                            <div id="ctl00_dv_headline" class="top-tit" style="display:none;">
+                                <div class="tit-top">
+                                    <span id="ctl00_lbl_Headline">الرئيسيـة</span></div>
+                                
+                            </div>
+                            
+ 
+
+ <div id="Slider2">
+                                <ul>
+                                
+                                    <li>
+                                        <div class="s2item">
+                                            <a href='../portal/6e942bec-2a02-4289-933d-b5c80e0bbd36.aspx'><img class="s2img" src='../Uploads/Files/2014/11/08/37359.jpg' /></a>
+                                            <div class="s2content">
+                                                
+                                                    <div class="s2date">
+                                                        <div class="dateico2"></div>
+                                                        <span>08/11/2014</span>
+                                                    </div>
+                                                    <div class="s2title">صاحب السمو الشيخ محمد بن راشد وسمو الشيخ محمد بن زايد يبحثان مع أميردولة الكويت العلاقات الأخوية ومسيرة مجلس التعاون</div>
+                                                <div class="rel">
+                                                    <div class="desc_2">
+                                                        استقبل صاحب السمو الشيخ محمد بن راشد آل مكتوم نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي رعاه الله والفريق أول سمو الشيخ محمد بن زايد آل نهيان ولي عهد أبوظبي نائب القائد الأعلى للقوات المسلحة صاحب السمو الشيخ صباح الأحمد الجابر الصباح أمير دولة الكويت الشقيقة الذي وصل الى البلاد في وقت سابق أمس في زيارة أخوية للدولة.&nbsp;&nbsp;&nbsp;<a href="../portal/6e942bec-2a02-4289-933d-b5c80e0bbd36.aspx"><span>تفاصيل >></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="s2item">
+                                            <a href='../portal/b59f0618-3880-41b2-82ab-f7a7332fa3a1.aspx'><img class="s2img" src='../Uploads/Files/2014/11/07/37358.jpg' /></a>
+                                            <div class="s2content">
+                                                
+                                                    <div class="s2date">
+                                                        <div class="dateico2"></div>
+                                                        <span>07/11/2014</span>
+                                                    </div>
+                                                    <div class="s2title">الفريق أول سمو الشيخ محمد بن زايد يلتقي وزير الخارجية الأمريكي</div>
+                                                <div class="rel">
+                                                    <div class="desc_2">
+                                                        التقى الفريق أول سمو الشيخ محمد بن زايد آل نهيان ولي عهد أبوظبي نائب القائد الأعلى للقوات المسلحة في أبوظبي معالي جون كيري وزير الخارجية الأمريكي .&nbsp;&nbsp;&nbsp;<a href="../portal/b59f0618-3880-41b2-82ab-f7a7332fa3a1.aspx"><span>تفاصيل >></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="s2item">
+                                            <a href='../portal/8efab8bc-192b-49f3-83fd-7a0ada2102f5.aspx'><img class="s2img" src='../Uploads/Files/2014/11/06/37357.jpg' /></a>
+                                            <div class="s2content">
+                                                
+                                                    <div class="s2date">
+                                                        <div class="dateico2"></div>
+                                                        <span>06/11/2014</span>
+                                                    </div>
+                                                    <div class="s2title">سمو الشيخ عبدالله بن زايد يستقبل وزير الدفاع الصومالي</div>
+                                                <div class="rel">
+                                                    <div class="desc_2">
+                                                        استقبل سمو الشيخ عبدالله بن زايد آل نهيان وزير الخارجية بأبوظبي معالي محمد شيخ حسن حامد وزير الدفاع الصومالي الذي يزور البلاد حاليا.&nbsp;&nbsp;&nbsp;<a href="../portal/8efab8bc-192b-49f3-83fd-7a0ada2102f5.aspx"><span>تفاصيل >></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="s2item">
+                                            <a href='../portal/5d72f09b-f2bd-403e-b7f8-46a2392e5162.aspx'><img class="s2img" src='../Uploads/Files/2014/11/06/37355.PNG' /></a>
+                                            <div class="s2content">
+                                                
+                                                    <div class="s2date">
+                                                        <div class="dateico2"></div>
+                                                        <span>06/11/2014</span>
+                                                    </div>
+                                                    <div class="s2title">صاحب السمو الشيخ محمد بن راشد يتسلم أوراق اعتماد عدد من السفراء الجدد</div>
+                                                <div class="rel">
+                                                    <div class="desc_2">
+                                                        تسلم صاحب السمو الشيخ محمد بن راشد آل مكتوم نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي رعاه الله في قصر المشرف في العاصمة ابوظبي أوراق اعتماد عدد من سفراء الدول الشقيقة والصديقة الجدد لدى الدولة .&nbsp;&nbsp;&nbsp;<a href="../portal/5d72f09b-f2bd-403e-b7f8-46a2392e5162.aspx"><span>تفاصيل >></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="s2item">
+                                            <a href='../portal/d5730e91-24be-4a59-8bd4-892578411450.aspx'><img class="s2img" src='../Uploads/Files/2014/11/06/37354.png' /></a>
+                                            <div class="s2content">
+                                                
+                                                    <div class="s2date">
+                                                        <div class="dateico2"></div>
+                                                        <span>06/11/2014</span>
+                                                    </div>
+                                                    <div class="s2title">معالي الدكتور أنور قرقاش يشارك في مناقشات المائدة المستديرة بالبرلمان الاوروبي</div>
+                                                <div class="rel">
+                                                    <div class="desc_2">
+                                                        شارك معالي الدكتور أنور قرقاش وزير الدولة للشؤون الخارجية وسعادة سليمان حامد سالم المزروعي رئيس بعثة الدولة لدى الاتحاد الأوروبي سفير الدولة لدى المملكة البلجيكية في مناقشات المائدة المستديرة التي جرت تحت شعار " مكافحة الارهاب.&nbsp;&nbsp;&nbsp;<a href="../portal/d5730e91-24be-4a59-8bd4-892578411450.aspx"><span>تفاصيل >></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="s2item">
+                                            <a href='../portal/663fb338-c33c-4735-aa26-318830f0a557.aspx'><img class="s2img" src='../Uploads/Files/2014/11/05/37352.jpg' /></a>
+                                            <div class="s2content">
+                                                
+                                                    <div class="s2date">
+                                                        <div class="dateico2"></div>
+                                                        <span>05/11/2014</span>
+                                                    </div>
+                                                    <div class="s2title">معالي الدكتور أنور قرقاش يلتقي وزير الخارجية البلجيكي في بروكسل</div>
+                                                <div class="rel">
+                                                    <div class="desc_2">
+                                                        استقبل معالي ديدييه ريندرس نائب رئيس الوزراء وزير الخارجية البلجيكي في "باليه ديغمونت" في بروكسل معالي الدكتور أنور بن محمد قرقاش وزير الدولة للشؤون الخارجية يرافقه سعادة سليمان حامد سالم المزروعي رئيس بعثة الدولة لدى الاتحاد الأوروبي سفير الدولة لدى المملكة البلجيكية ودوقية لوكسمبورج .&nbsp;&nbsp;&nbsp;<a href="../portal/663fb338-c33c-4735-aa26-318830f0a557.aspx"><span>تفاصيل >></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+
+                                <div id="pager"></div>
+                            </div>
+                            
+  <section id="News_Wrapper">
+                                <ul>
+                                
+                                    <li>
+                                        <div class="news_item">
+                                            <div class="news_img">
+                                                <img src="../Uploads/Files/2014/11/05/37351.jpg" />
+                                            </div>
+                                            <div class="time" style="width:200px; float:right; margin-top:5px !important; text-align:right;">
+                                    <div class="dateicosmall"></div>
+                                    <span id="ctl00_ContentPlaceHolder_Body_cc_bottomNews_rpt_MainNews_ctl00_spn_lastUpdate">05/11/2014 </span>
+                                </div>
+                                            <a href='../portal/addabb6d-7f8e-40c7-abfe-8a17f6c148cb.aspx'>
+                                                <p class="news_title">معالي الدكتور أنور قرقاش يجتمع مع رئيسة لجنة العلاقات مع دول مجلس التعاون واليمن في المجلس التشريعي الأوروبي</p>
+                                            </a>
+                                            <p class="news_desc"><span>اجتمع معالي الدكتور أنور بن محمد قرقاش وزير الدولة للشؤون الخارجية في مقر البرلمان الاوروبي ببروكسل مع السيدة ميشيل اليوت ماري رئيسة لجنة العلاقات مع دول مجلس التعاون لدول الخليج العربية و اليمن في المجلس التشريعي الأوروبي&nbsp<a href='../portal/addabb6d-7f8e-40c7-abfe-8a17f6c148cb.aspx' class="NewsMore">&nbsp;تفاصيل >></a></span> </p>
+                                           
+                                        </div>
+                                        
+                                        <div class="news_item">
+                                            <div class="news_img">
+                                                <img  src="../Uploads/Files/2014/11/05/37350.jpg" />
+                                            </div>
+                                            <div class="time" style="width:200px; float:right; margin-top:5px !important; text-align:right;">
+                                    <div class="dateicosmall"></div>
+                                    <span id="ctl00_ContentPlaceHolder_Body_cc_bottomNews_rpt_MainNews_ctl01_spn_lastUpdate">05/11/2014 </span>
+                                </div>
+                                            <a href='../portal/74c57804-8240-4e7c-912b-e17972c97ea6.aspx'>
+                                                <p class="news_title">معالي الدكتور أنور قرقاش يجتمع مع نائب رئيس اللجنة الفرعية للأمن والدفاع في البرلمان الاوروبي</p>
+                                            </a>
+                                            <p class="news_desc"><span>اجتمع معالي الدكتور أنور بن محمد قرقاش وزير الدولة للشؤون الخارجية في مقر البرلمان الاوروبي في بروكسل مع السيد " افضل خان" نائب رئيس اللجنة الفرعية للأمن والدفاع في البرلمان الاوروبي وذلك بحضور سعادة سليمان حامد سالم المزروعي رئيس بعثة الدولة لدى الاتحاد الأوروبي سفير الدولة لدى المملكة البلجيكية ودوقية لكسمبورج .&nbsp<a href='../portal/74c57804-8240-4e7c-912b-e17972c97ea6.aspx' class="NewsMore">&nbsp;تفاصيل >></a></span></p>
+                                            
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="news_item">
+                                            <div class="news_img">
+                                                <img src="../Uploads/Files/2014/11/05/37349.jpg" />
+                                            </div>
+                                            <div class="time" style="width:200px; float:right; margin-top:5px !important; text-align:right;">
+                                    <div class="dateicosmall"></div>
+                                    <span id="ctl00_ContentPlaceHolder_Body_cc_bottomNews_rpt_MainNews_ctl02_spn_lastUpdate">05/11/2014 </span>
+                                </div>
+                                            <a href='../portal/bcb227ca-dbfe-4920-ab35-3a769534c126.aspx'>
+                                                <p class="news_title">بحضور معالي الدكتور قرقاش الاعلان عن جمعية أصدقاء الامارات في مقر البرلمان الأوروبي</p>
+                                            </a>
+                                            <p class="news_desc"><span>بحضور معالي الدكتور أنور بن محمد قرقاش وزير الدولة للشؤون الخارجية وسعادة سليمان حامد سالم المزروعي رئيس بعثة الدولة لدى الاتحاد الأوروبي سفير الدولة لدى المملكة البلجيكية ودوقية لوكسمبورج الاعلان عن جمعية أصدقاء الامارات وذلك في مقر البرلمان الاوروبي في بروكسل .&nbsp<a href='../portal/bcb227ca-dbfe-4920-ab35-3a769534c126.aspx' class="NewsMore">&nbsp;تفاصيل >></a></span> </p>
+                                           
+                                        </div>
+                                        
+                                        <div class="news_item">
+                                            <div class="news_img">
+                                                <img  src="../Uploads/Files/2014/11/06/37356.png" />
+                                            </div>
+                                            <div class="time" style="width:200px; float:right; margin-top:5px !important; text-align:right;">
+                                    <div class="dateicosmall"></div>
+                                    <span id="ctl00_ContentPlaceHolder_Body_cc_bottomNews_rpt_MainNews_ctl03_spn_lastUpdate">05/11/2014 </span>
+                                </div>
+                                            <a href='../portal/ade6aa58-0e8a-4bf7-8de6-7fcd53fdb273.aspx'>
+                                                <p class="news_title">سمو الشيخ عبدالله بن زايد يبحث مع رئيس وزراء تونغا سبل تعزيز التعاون بين البلدين</p>
+                                            </a>
+                                            <p class="news_desc"><span>استقبل سمو الشيخ عبدالله بن زايد آل نهيان وزير الخارجية بمكتبه بديوان عام الوزارة معالي اللورد تايفيكانو رئيس وزراء مملكة تونغا الذي يزور البلاد حاليا.&nbsp<a href='../portal/ade6aa58-0e8a-4bf7-8de6-7fcd53fdb273.aspx' class="NewsMore">&nbsp;تفاصيل >></a></span></p>
+                                            
+                                        </div>
+                                    </li>
+                                    
+                                
+                                </ul>
+
+
+                                <div class="time" style="width:200px; float:right; margin-right:10px;">
+                                    <div class="dateicosmall"></div>
+                                    <span id="ctl00_ContentPlaceHolder_Body_cc_bottomNews_spn_lastUpdate">آخر تحديث :  19/ 06 /2013 </span>
+                                </div>
+                                <div class="pager3">
+                                    <div class="pager">
+                                        <div class="prev" id="p_3">
+                                        </div>
+                                        <div class="innerPager" id="page_3">1 / 1</div>
+                                        <div class="next" id="n_3">
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            
+<section class="services">
+                                <a href="../portal/41b95ca9-985f-47f7-80cc-664122c62aea.aspx"><p class="ser_title">تواجدي</p></a>
+                                <a href="../portal/f8a010f2-7701-4080-abf5-df516ad972b0.aspx"><p class="ser_title">خدمات الوزارة</p></a>
+                                <a href="https://twitter.com/MOFAUAE" target="_blank"><p class="ser_title">تغريدات الوزارة</p></a>
+                                <div class="service">
+                                    <img src="../App_Themes/site_h5/images/twajidi.jpg" />
+                                    <p class="red">الخدمة مخصصة فقط لمواطني دولة الإمارات العربية المتحدة</p>
+                                    <p>خدمة "تواجدي"، هي خدمة تقدمها وزارة الخارجية لمواطنيها أثناء تواجدهم خارج الدولة تمكننا من التواصل معكم في حالات الضرورة فبادر للتسجيل قبل مغادرتك للدولة</p>
+                                    <div class="sep2"></div>
+                                    <a href="../portal/41b95ca9-985f-47f7-80cc-664122c62aea.aspx" class="NewsMore servmore">تفاصيل >></a>
+                                </div>
+                                <div class="service">
+                                    <img src="../App_Themes/site_h5/images/service2.jpg" />
+                                    <div style="width:100%; height:16px; clear:both;"></div>
+                                    <ul>
+                                        <li><div class="btm_arr"></div><a href="../portal/f8a010f2-7701-4080-abf5-df516ad972b0.aspx">خدمات المواطنين</a></li>
+                                        <li><div class="btm_arr"></div><a href="../portal/f8a010f2-7701-4080-abf5-df516ad972b0.aspx">التأشيرات </a></li>
+                                        <li><div class="btm_arr"></div><a href="../portal/f8a010f2-7701-4080-abf5-df516ad972b0.aspx">التصديقات</a></li>
+                                        <li><div class="btm_arr"></div><a href="../portal/f8a010f2-7701-4080-abf5-df516ad972b0.aspx">خدمات البعثات الدبلوماسية</a></li>
+                                    </ul>
+                                    <div class="sep2"></div>
+                                    <a href="../portal/f8a010f2-7701-4080-abf5-df516ad972b0.aspx" class="NewsMore servmore">تفاصيل >></a>
+                                </div>
+                                <div class="service">
+                                    <a class="twitter-timeline" href="https://twitter.com/MOFAUAE" data-widget-id="333883384092823552" height="369">Tweets by @MOFAUAE</a> 
+                                    <script>    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");</script>
+                                    <!--Bottom Line-->
+                                </div>
+                            </section>
+
+                        </div>
+                        <div class="content3">
+                            <aside class="twajidi">
+                                 <a href="http://mofa.gov.ae/citizen/portal/c041e6de-90f2-4f5c-a2cd-2f60a060441d.aspx" target="_blank">  
+                                           <img src="../App_Themes/site_h5/images/twj_ic.png" /><div class="text111">تواجدي</div>
+                                        </a>
+                                       
+                                        <br />
+
+                                         <a href="http://mofa.gov.ae/citizen" target="_blank">
+                                           <img src="../App_Themes/site_h5/images/Icon-citizen.png" /><div class="text111">شؤون المواطنين</div>
+                                        </a>
+                                       
+                                        <br />
+
+                                        <a href="http://mofa.gov.ae/citizen/portal/b9bbd506-80d2-4088-8688-a1971a2fccc7.aspx">
+                                           <img src="../Uploads/Banners/165_idle.png" /><div class="text111">المناطق الخطرة</div>
+                                        </a>
+                                       
+                                        <br />
+                                 
+                                        <a href="../portal/9f12047b-d21c-44f2-a304-13326756300c.aspx">
+                                           <img src="../Uploads/Banners/147_idle.PNG" /><div class="text111">أهم التحذيرات </div>
+                                        </a>
+
+                                          <br />
+                                        <a href="http://mofa.gov.ae/Mofa/portal/d6d97137-ddef-4b0a-9997-ad153bffc986.aspx">
+                                           <img src="../Uploads/Banners/162_idle.png" /><div class="text111">إصدارات عن دولة الإمارات </div>
+                                        </a>
+                                        
+                                        <br />
+                                      <a href="../portal/6E3C39B0-753F-4B8B-9C66-8B802FBB18EE.aspx">
+                                           <img src="../Uploads/Banners/149_idle.png" /><div class="text111">الشؤون الاقتصادية</div>
+                                        </a>   
+                            </aside>
+                            <div id="dv_NormalBanner" class="Normal_views">
+                                
+ <aside class="adv">
+                                <ul>
+                                
+                                
+                                    <li>
+                                    <input type="hidden" name="ctl00$cc_banners$rpt_mainBanner$ctl00$hfd_page" id="ctl00_cc_banners_rpt_mainBanner_ctl00_hfd_page" value="0" />
+                                    
+                                        <a target="_self" href="../portal/eade2edc-bceb-43b5-a473-03fc3bc4b32d.aspx">
+                                            <img src='../Uploads/Banners/7_idle.png' name="Image7" title="زايد القائد المؤسس" alt="زايد القائد المؤسس" /><div class="text111">زايد القائد المؤسس</div>
+                                        </a>
+                                        
+                                        <a target="_self" href="../portal/a67604c7-9d37-4331-a6ef-16e8feac2a6d.aspx">
+                                            <img src='../Uploads/Banners/8_idle.png' name="Image8" title="خليفة خيرُ خلف لخير سلف" alt="خليفة خيرُ خلف لخير سلف" /><div class="text111">خليفة خيرُ خلف لخير سلف</div>
+                                        </a>
+                                        
+                                        <a target="_blank" href="../Uploads/Banners/67_pdf.pdf">
+                                            <img src='../Uploads/Banners/67_idle.png' name="Image67" title="الجزر الإماراتية المحتلة" alt="الجزر الإماراتية المحتلة" /><div class="text111">الجزر الإماراتية المحتلة</div>
+                                        </a>
+                                        
+                                        <a target="_self" href="http://mofa.gov.ae/Mofa/portal/46308073-5ebd-4e98-bf75-82eeb06ed1e5.aspx">
+                                            <img src='../Uploads/Banners/26_idle.png' name="Image26" title="كلمة وزير الخارجية أمام الجمعية العامة للأمم المتحدة الدورة الثامنة والستين" alt="كلمة وزير الخارجية أمام الجمعية العامة للأمم المتحدة الدورة الثامنة والستين" /><div class="text111">كلمة وزير الخارجية أمام الجمعية العامة للأمم المتحدة الدورة الثامنة والستين</div>
+                                        </a>
+                                        
+                                        <a target="_self" href="../portal/4ff7b713-6ecc-41a4-a8ba-240cccc6e785.aspx">
+                                            <img src='../Uploads/Banners/105_idle.png' name="Image105" title="تواصل مع الدكتور أنور قرقاش" alt="تواصل مع الدكتور أنور قرقاش" /><div class="text111">تواصل مع الدكتور أنور قرقاش</div>
+                                        </a>
+                                        
+                                        <a target="_blank" href="../portal/cd339254-f648-4817-9a06-f1bc814b686a.aspx">
+                                            <img src='../Uploads/Banners/169_idle.png' name="Image169" title="إرشادات ونصائح السفر" alt="إرشادات ونصائح السفر" /><div class="text111">إرشادات ونصائح السفر</div>
+                                        </a>
+                                        
+                                        </li>
+                                    
+                                
+                                    <li>
+                                    <input type="hidden" name="ctl00$cc_banners$rpt_mainBanner$ctl01$hfd_page" id="ctl00_cc_banners_rpt_mainBanner_ctl01_hfd_page" value="1" />
+                                    
+                                        <a target="_self" href="../portal/57a2973b-2a90-4adc-8a62-a6d165b33eab.aspx">
+                                            <img src='../Uploads/Banners/31_idle.png' name="Image31" title="المساعدات" alt="المساعدات" /><div class="text111">المساعدات</div>
+                                        </a>
+                                        
+                                        <a target="_self" href="../portal/0908964e-a2de-41ff-8f71-30b4c23adf88.aspx">
+                                            <img src='../Uploads/Banners/80_idle.png' name="Image80" title="اللجنة الدائمة لمتابعة التقرير الدوري الشامل لحقوق الانسان" alt="اللجنة الدائمة لمتابعة التقرير الدوري الشامل لحقوق الانسان" /><div class="text111">اللجنة الدائمة لمتابعة التقرير الدوري الشامل لحقوق الانسان</div>
+                                        </a>
+                                        
+                                        <a target="_blank" href="http://expo2020dubai.ae/ar/">
+                                            <img src='../Uploads/Banners/79_idle.png' name="Image79" title="إكسبو 2020, دبي, الإمارات العربية المتحدة" alt="إكسبو 2020, دبي, الإمارات العربية المتحدة" /><div class="text111">إكسبو 2020, دبي, الإمارات العربية المتحدة</div>
+                                        </a>
+                                        
+                                        <a target="_self" href="../portal/f6cb4798-3b94-483e-8daf-6bd074af164d.aspx">
+                                            <img src='../Uploads/Banners/108_idle.png' name="Image108" title="تطبيقات الهواتف الذكية" alt="تطبيقات الهواتف الذكية" /><div class="text111">تطبيقات الهواتف الذكية</div>
+                                        </a>
+                                        
+                                        <a target="_self" href="../portal/e94927d6-e561-4e69-89df-bda79e3799c9.aspx">
+                                            <img src='../Uploads/Banners/104_idle.png' name="Image104" title="صندوق الشراكة مع دول المحيط الهادي" alt="صندوق الشراكة مع دول المحيط الهادي" /><div class="text111">صندوق الشراكة مع دول المحيط الهادي</div>
+                                        </a>
+                                        
+                                        <a target="_blank" href="../Uploads/Banners/103_pdf.pdf">
+                                            <img src='../Uploads/Banners/103_idle.png' name="Image103" title="دليل الخدمات" alt="دليل الخدمات" /><div class="text111">دليل الخدمات</div>
+                                        </a>
+                                        
+                                        </li>
+                                    
+                                
+                                    <li>
+                                    <input type="hidden" name="ctl00$cc_banners$rpt_mainBanner$ctl02$hfd_page" id="ctl00_cc_banners_rpt_mainBanner_ctl02_hfd_page" value="2" />
+                                    
+                                        <a target="_blank" href="../Uploads/Banners/140_pdf.pdf">
+                                            <img src='../Uploads/Banners/140_idle.png' name="Image140" title="الدليل الإرشادي لإنشاء وثيقة السفر إلى المملكة المتحدة" alt="الدليل الإرشادي لإنشاء وثيقة السفر إلى المملكة المتحدة" /><div class="text111">الدليل الإرشادي لإنشاء وثيقة السفر إلى المملكة المتحدة</div>
+                                        </a>
+                                        
+                                        <a target="_blank" href="http://mofa.gov.ae/Mofa/portal/10fc14d7-90ca-4592-a52f-8e0ce53491ea.aspx">
+                                            <img src='../Uploads/Banners/138_idle.png' name="Image138" title="الشركاء" alt="الشركاء" /><div class="text111">الشركاء</div>
+                                        </a>
+                                        
+                                        <a target="_blank" href="../Uploads/Banners/139_pdf.pdf">
+                                            <img src='../Uploads/Banners/139_idle.png' name="Image139" title="جائزة وزير الخارجية" alt="جائزة وزير الخارجية" /><div class="text111">جائزة وزير الخارجية</div>
+                                        </a>
+                                        
+                                        <a target="_self" href="../portal/0310E269-4571-4365-9A41-97FEAE14BD5F.aspx">
+                                            <img src='../Uploads/Banners/123_idle.png' name="Image123" title="التوظيف" alt="التوظيف" /><div class="text111">التوظيف</div>
+                                        </a>
+                                        
+                                        </li>
+                                    
+                                </ul>
+
+                                <div class="pager2">
+                                    <div class="pager" style="border:1px solid #909090">
+                                        <div class="prev" id="p_2">
+
+                                        </div>
+                                        <div class="innerPager" id="page_2"></div>
+                                        <div class="next" id="n_2">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
+                            </div>
+                            <div id="dv_MobileBanner" class="Mobile_views">
+                                
+ <aside class="adv">
+                                <ul>
+                                
+                                
+                                    <li>
+                                    <input type="hidden" name="ctl00$cc_bannersMobile$rpt_mainBanner$ctl00$hfd_page" id="ctl00_cc_bannersMobile_rpt_mainBanner_ctl00_hfd_page" value="0" />
+                                    
+                                        <a target="_self" href="../portal/eade2edc-bceb-43b5-a473-03fc3bc4b32d.aspx">
+                                            <img src='../Uploads/Banners/7_idle.png' name="Image7" title="زايد القائد المؤسس" alt="زايد القائد المؤسس" /><div class="text111">زايد القائد المؤسس</div>
+                                        </a>
+                                        
+                                        <a target="_self" href="../portal/a67604c7-9d37-4331-a6ef-16e8feac2a6d.aspx">
+                                            <img src='../Uploads/Banners/8_idle.png' name="Image8" title="خليفة خيرُ خلف لخير سلف" alt="خليفة خيرُ خلف لخير سلف" /><div class="text111">خليفة خيرُ خلف لخير سلف</div>
+                                        </a>
+                                        
+                                        <a target="_blank" href="../Uploads/Banners/67_pdf.pdf">
+                                            <img src='../Uploads/Banners/67_idle.png' name="Image67" title="الجزر الإماراتية المحتلة" alt="الجزر الإماراتية المحتلة" /><div class="text111">الجزر الإماراتية المحتلة</div>
+                                        </a>
+                                        
+                                        <a target="_self" href="http://mofa.gov.ae/Mofa/portal/46308073-5ebd-4e98-bf75-82eeb06ed1e5.aspx">
+                                            <img src='../Uploads/Banners/26_idle.png' name="Image26" title="كلمة وزير الخارجية أمام الجمعية العامة للأمم المتحدة الدورة الثامنة والستين" alt="كلمة وزير الخارجية أمام الجمعية العامة للأمم المتحدة الدورة الثامنة والستين" /><div class="text111">كلمة وزير الخارجية أمام الجمعية العامة للأمم المتحدة الدورة الثامنة والستين</div>
+                                        </a>
+                                        
+                                        <a target="_self" href="../portal/4ff7b713-6ecc-41a4-a8ba-240cccc6e785.aspx">
+                                            <img src='../Uploads/Banners/105_idle.png' name="Image105" title="تواصل مع الدكتور أنور قرقاش" alt="تواصل مع الدكتور أنور قرقاش" /><div class="text111">تواصل مع الدكتور أنور قرقاش</div>
+                                        </a>
+                                        
+                                        <a target="_blank" href="../portal/cd339254-f648-4817-9a06-f1bc814b686a.aspx">
+                                            <img src='../Uploads/Banners/169_idle.png' name="Image169" title="إرشادات ونصائح السفر" alt="إرشادات ونصائح السفر" /><div class="text111">إرشادات ونصائح السفر</div>
+                                        </a>
+                                        
+                                        </li>
+                                    
+                                
+                                    <li>
+                                    <input type="hidden" name="ctl00$cc_bannersMobile$rpt_mainBanner$ctl01$hfd_page" id="ctl00_cc_bannersMobile_rpt_mainBanner_ctl01_hfd_page" value="1" />
+                                    
+                                        <a target="_self" href="../portal/57a2973b-2a90-4adc-8a62-a6d165b33eab.aspx">
+                                            <img src='../Uploads/Banners/31_idle.png' name="Image31" title="المساعدات" alt="المساعدات" /><div class="text111">المساعدات</div>
+                                        </a>
+                                        
+                                        <a target="_self" href="../portal/0908964e-a2de-41ff-8f71-30b4c23adf88.aspx">
+                                            <img src='../Uploads/Banners/80_idle.png' name="Image80" title="اللجنة الدائمة لمتابعة التقرير الدوري الشامل لحقوق الانسان" alt="اللجنة الدائمة لمتابعة التقرير الدوري الشامل لحقوق الانسان" /><div class="text111">اللجنة الدائمة لمتابعة التقرير الدوري الشامل لحقوق الانسان</div>
+                                        </a>
+                                        
+                                        <a target="_blank" href="http://expo2020dubai.ae/ar/">
+                                            <img src='../Uploads/Banners/79_idle.png' name="Image79" title="إكسبو 2020, دبي, الإمارات العربية المتحدة" alt="إكسبو 2020, دبي, الإمارات العربية المتحدة" /><div class="text111">إكسبو 2020, دبي, الإمارات العربية المتحدة</div>
+                                        </a>
+                                        
+                                        <a target="_self" href="../portal/f6cb4798-3b94-483e-8daf-6bd074af164d.aspx">
+                                            <img src='../Uploads/Banners/108_idle.png' name="Image108" title="تطبيقات الهواتف الذكية" alt="تطبيقات الهواتف الذكية" /><div class="text111">تطبيقات الهواتف الذكية</div>
+                                        </a>
+                                        
+                                        <a target="_self" href="../portal/e94927d6-e561-4e69-89df-bda79e3799c9.aspx">
+                                            <img src='../Uploads/Banners/104_idle.png' name="Image104" title="صندوق الشراكة مع دول المحيط الهادي" alt="صندوق الشراكة مع دول المحيط الهادي" /><div class="text111">صندوق الشراكة مع دول المحيط الهادي</div>
+                                        </a>
+                                        
+                                        <a target="_blank" href="../Uploads/Banners/103_pdf.pdf">
+                                            <img src='../Uploads/Banners/103_idle.png' name="Image103" title="دليل الخدمات" alt="دليل الخدمات" /><div class="text111">دليل الخدمات</div>
+                                        </a>
+                                        
+                                        </li>
+                                    
+                                
+                                    <li>
+                                    <input type="hidden" name="ctl00$cc_bannersMobile$rpt_mainBanner$ctl02$hfd_page" id="ctl00_cc_bannersMobile_rpt_mainBanner_ctl02_hfd_page" value="2" />
+                                    
+                                        <a target="_blank" href="../Uploads/Banners/140_pdf.pdf">
+                                            <img src='../Uploads/Banners/140_idle.png' name="Image140" title="الدليل الإرشادي لإنشاء وثيقة السفر إلى المملكة المتحدة" alt="الدليل الإرشادي لإنشاء وثيقة السفر إلى المملكة المتحدة" /><div class="text111">الدليل الإرشادي لإنشاء وثيقة السفر إلى المملكة المتحدة</div>
+                                        </a>
+                                        
+                                        <a target="_blank" href="http://mofa.gov.ae/Mofa/portal/10fc14d7-90ca-4592-a52f-8e0ce53491ea.aspx">
+                                            <img src='../Uploads/Banners/138_idle.png' name="Image138" title="الشركاء" alt="الشركاء" /><div class="text111">الشركاء</div>
+                                        </a>
+                                        
+                                        <a target="_blank" href="../Uploads/Banners/139_pdf.pdf">
+                                            <img src='../Uploads/Banners/139_idle.png' name="Image139" title="جائزة وزير الخارجية" alt="جائزة وزير الخارجية" /><div class="text111">جائزة وزير الخارجية</div>
+                                        </a>
+                                        
+                                        <a target="_self" href="../portal/0310E269-4571-4365-9A41-97FEAE14BD5F.aspx">
+                                            <img src='../Uploads/Banners/123_idle.png' name="Image123" title="التوظيف" alt="التوظيف" /><div class="text111">التوظيف</div>
+                                        </a>
+                                        
+                                        </li>
+                                    
+                                </ul>
+
+                                <div class="pager2">
+                                    <div class="pager" style="border:1px solid #909090">
+                                        <div class="prev" id="p_2">
+
+                                        </div>
+                                        <div class="innerPager" id="page_2"></div>
+                                        <div class="next" id="n_2">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
+                            </div>
+                            <aside class="twajidi2">
+                                 <a href="http://mygov.ae" target="_blank" >
+                                           <img src="../Uploads/Banners/57_idle.PNG" /><div class="text111">بوابة الإقتراحات والملاحظات</div>
+                                        </a>
+                                        </aside>
+                            
+                            <aside class="content3_1">
+                                <p>الأنشطة والفعاليات</p>
+                                <ul>
+                                
+                                        <li>
+
+                                            <img src="../App_Themes/site_h5/images/logo-nesar.jpg" class="img1" />
+                                            <div class="date1">
+                                                <div class="dateico1"></div>
+                                                <div class="date2">25/11/2014</div>
+                                            </div>
+                                            <div class="par1">الاجتماع التاسع للجنة القنصلية المشتركة بين دولة الإمارات والجمهورية الإسلامية الإيرانية<div class="details"><a href="../portal/accfbc38-7d13-4acc-8988-8585203b93e0.aspx">تفاصيل >></a></div></div>
+                                        </li>
+                                  
+                                        <li>
+
+                                            <img src="../App_Themes/site_h5/images/logo-nesar.jpg" class="img1" />
+                                            <div class="date1">
+                                                <div class="dateico1"></div>
+                                                <div class="date2">30/10/2014</div>
+                                            </div>
+                                            <div class="par1">الدورة الأولى للجنة المشتركة بين دولة الإمارات و جمهورية سنغافورة<div class="details"><a href="../portal/6808c664-0673-4790-8c9c-6efeeb0f2392.aspx">تفاصيل >></a></div></div>
+                                        </li>
+                                  
+                                        <li>
+
+                                            <img src="../App_Themes/site_h5/images/logo-nesar.jpg" class="img1" />
+                                            <div class="date1">
+                                                <div class="dateico1"></div>
+                                                <div class="date2">29/10/2014</div>
+                                            </div>
+                                            <div class="par1">مؤتمر مكافحة القرصنة<div class="details"><a href="../portal/937300d4-b0ff-435d-8e4b-160045eb8b25.aspx">تفاصيل >></a></div></div>
+                                        </li>
+                                  
+                                        <li>
+
+                                            <img src="../App_Themes/site_h5/images/logo-nesar.jpg" class="img1" />
+                                            <div class="date1">
+                                                <div class="dateico1"></div>
+                                                <div class="date2">20/10/2014</div>
+                                            </div>
+                                            <div class="par1">اللجنة المشتركة بين دولة الإمارات وجمهورية بيلاروسيا<div class="details"><a href="../portal/5456e2a7-3620-41f5-8fe7-a46a058117c2.aspx">تفاصيل >></a></div></div>
+                                        </li>
+                                  
+                                        <li>
+
+                                            <img src="../App_Themes/site_h5/images/logo-nesar.jpg" class="img1" />
+                                            <div class="date1">
+                                                <div class="dateico1"></div>
+                                                <div class="date2">26/01/2014</div>
+                                            </div>
+                                            <div class="par1">الدورة الأولى للجنة المشتركة بين دولة الامارات وجمهورية سيريلانكا<div class="details"><a href="../portal/134749ae-eb47-4897-957f-6b34dc820b13.aspx">تفاصيل >></a></div></div>
+                                        </li>
+                                  
+                                </ul>
+
+                                <div class="pager">
+                                    <div class="prev" id="p_1">
+                                    </div>
+                                    <div class="innerPager" id="page_1"></div>
+                                    <div class="next" id="n_1">
+                                    </div>
+                                </div>
+                            </aside>
+                            <div id="ctl00_cc_newsletter_pnl_news" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_cc_newsletter_btn_Newsletter')">
+	
+<aside class="content3_3">
+                                <div class="tit2">القائمة البريدية</div>
+                                <div class="add">
+                                    <p>أضف بريدك الإلكتروني إلى قائمتنا </p>
+                                    <img src="../App_Themes/site_h5/images/mess.png" />
+
+                                </div>
+                                <input name="ctl00$cc_newsletter$txt_Subscribe" type="text" id="ctl00_cc_newsletter_txt_Subscribe" class="e-mail" watermarktext="البريد الإلكتروني" />
+                                <input type="submit" name="ctl00$cc_newsletter$btn_Newsletter" value="اشتراك" id="ctl00_cc_newsletter_btn_Newsletter" class="bb" />
+                            </aside>
+    
+</div>
+                            
+ <aside class="content3_4">
+                                <div class="tit2">التصويت</div>
+                                <div class="add2">
+                                    <p>
+                                       <span id="ctl00_cc_votes_lbl_PollQuestion">ما رأيك في تطبيقات الوزارة للهواتف الذكية؟</span>
+                                    </p>
+                                    <img src="../App_Themes/site_h5/images/mess2.png" />
+                                </div>
+                                <div class="radio"><table id="ctl00_cc_votes_rdo_listPoll" class="gro" border="0">
+	<tr>
+		<td><input id="ctl00_cc_votes_rdo_listPoll_0" type="radio" name="ctl00$cc_votes$rdo_listPoll" value="52" checked="checked" onclick="javascript:SelectMe('52');" /><label for="ctl00_cc_votes_rdo_listPoll_0">ممتاز</label></td>
+	</tr><tr>
+		<td><input id="ctl00_cc_votes_rdo_listPoll_1" type="radio" name="ctl00$cc_votes$rdo_listPoll" value="53" onclick="javascript:SelectMe('53');" /><label for="ctl00_cc_votes_rdo_listPoll_1">جيد</label></td>
+	</tr><tr>
+		<td><input id="ctl00_cc_votes_rdo_listPoll_2" type="radio" name="ctl00$cc_votes$rdo_listPoll" value="54" onclick="javascript:SelectMe('54');" /><label for="ctl00_cc_votes_rdo_listPoll_2">مقبول</label></td>
+	</tr>
+</table></div>
+                                                                    <div class="results"></div>
+                                <input name="ctl00$cc_votes$btn_Results" type="button" id="ctl00_cc_votes_btn_Results" class="bb" value="النتائج" /><input name="ctl00$cc_votes$btn_Submit" type="button" id="ctl00_cc_votes_btn_Submit" class="bb" value="ارسل" style="margin-left:4px; cursor:pointer;" />
+                                <div style="width:100%; height:1px; clear:both"></div>
+
+                            </aside>
+                            <input type="hidden" name="ctl00$cc_votes$hfd_selectedAnswer" id="ctl00_cc_votes_hfd_selectedAnswer" />
+                            <input type="hidden" name="ctl00$cc_votes$hfd_vote" id="ctl00_cc_votes_hfd_vote" value="12" />
+                            <script  type="text/javascript">
+                                function SelectMe(val) {
+                                    document.getElementById("ctl00_cc_votes_hfd_selectedAnswer").value = val;
+                                }
+
+                                $(function () {
+                                    $("#ctl00_cc_votes_btn_Submit").click(function () {
+                                        PollAndShowResults(this.id);
+                                    });
+
+
+                                    $("#ctl00_cc_votes_btn_Results").click(function () {
+                                        PollAndShowResults(this.id);
+                                    });
+
+                                    function PollAndShowResults(control_id) {
+                                        var poll = $("#ctl00_cc_votes_hfd_vote").val();
+                                        var ans = $("#ctl00_cc_votes_hfd_selectedAnswer").val();
+                                        var _getResultsOnly = '';
+                                        if (control_id == 'ctl00_cc_votes_btn_Results')
+                                            _getResultsOnly = '&getresult=1';
+
+                                        $.ajax({ url: "../pages/setpoll.aspx?poll=" + poll + "&ans=" + ans + _getResultsOnly, success: function (result) {
+                                            $(".radio").css("display", "none");
+                                            $(".results").html(result);
+                                            $("#ctl00_cc_votes_btn_Submit").css("display", "none");
+                                            $("#ctl00_cc_votes_btn_Results").css("display", "none");
+                                        }
+                                        });
+                                    }
+                                });
+                            </script>
+                        </div>
+                        <div style="width: 100%; height: 1px; clear: both">
+                        </div>
+                    </div>
+                    <footer class="footer_cont">
+
+                        <div class="footer_lft ">
+                            <div class="top-footer_left">
+                                <p>
+                                    حقوق النسخ © 2013
+                                    وزارة الخارجية الإمـارات العربية المتحدة، جميع الحقوق محفوظة.
+                                </p>
+                                <img src="../App_Themes/site_h5/images/logo5.jpg" />
+                            </div>
+                            <div class="top-footer_left2">
+                                <p>قنوات وبرامج</p>
+                                <div class="footericons ">
+                                    <a href="http://www.adobe.com/products/reader.html" target="_blank"><img src="../App_Themes/site_h5/images/i1.jpg" /></a><a href="http://get.adobe.com/flashplayer/" target="_blank"><img src="../App_Themes/site_h5/images/i2.jpg" /></a><a href="http://instagram.com/mofauae/" target="_blank"><img src="../App_Themes/site_h5/images/ii.png" /></a><a href="https://twitter.com/mofauae" target="_blank"><img src="../App_Themes/site_h5/images/i3.jpg" /></a><a href="https://www.facebook.com/Mofauae" target="_blank"><img src="../App_Themes/site_h5/images/facebook.jpg" /></a><a target="_blank" href="http://www.youtube.com/user/MOFAUAE/videos"><img src="../App_Themes/site_h5/images/youtube.jpg" /></a><a target="_blank" href="../pages/RSS.ashx?id=49"><img src="../App_Themes/site_h5/images/i4.jpg" /></a>
+                                    </div>
+                            </div>
+                        </div>
+                        
+<div id="footer_in_right">
+
+<div class="footer_ListCont">
+                                <p class="ftitle">الإمارات</p>
+                                <input type="hidden" name="ctl00$cc_footer$rpt_footerMenu$ctl00$hfd_catNo" id="ctl00_cc_footer_rpt_footerMenu_ctl00_hfd_catNo" value="194" />
+                                <ul>
+                                
+                                <li>
+                                    <a href="../portal/4cd46486-d16e-4e66-8f90-7c13e5d9620b.aspx">لمحــة عن الإمـــارات</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../portal/46464bd1-59aa-472a-859a-da742652689f.aspx">حكومــة الإمــارات</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../portal/512d518e-4c44-417c-9e51-ea6c2376ff07.aspx">الإمارات و حقوق الإنسان</a>
+                                </li>
+                                
+                                </ul>
+                                
+                            </div>
+                            
+
+<div class="footer_ListCont">
+                                <p class="ftitle">الوزارة</p>
+                                <input type="hidden" name="ctl00$cc_footer$rpt_footerMenu$ctl01$hfd_catNo" id="ctl00_cc_footer_rpt_footerMenu_ctl01_hfd_catNo" value="195" />
+                                <ul>
+                                
+                                <li>
+                                    <a href="../portal/4ca2f728-fa64-4285-89d3-0d451ce74e6c.aspx">نبذه عن الوزارة</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../portal/9cea62b1-ed1b-4c97-a3ea-0f386bfa9b99.aspx">إستراتيجية الوزارة</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../portal/c9ddc4ba-a489-444a-a005-f41b2ab453fd.aspx">السيــاســة الخــارجيــة</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../portal/51688f24-9da5-4bbe-a524-a1d91efdef66.aspx">اتصل بنا</a>
+                                </li>
+                                
+                                </ul>
+                                
+                            </div>
+                            
+
+<div class="footer_ListCont">
+                                <p class="ftitle">الخدمات</p>
+                                <input type="hidden" name="ctl00$cc_footer$rpt_footerMenu$ctl02$hfd_catNo" id="ctl00_cc_footer_rpt_footerMenu_ctl02_hfd_catNo" value="30" />
+                                <ul>
+                                
+                                </ul>
+                                
+                            </div>
+                            
+
+<div class="footer_ListCont">
+                                <p class="ftitle">المركز الإعلامي</p>
+                                <input type="hidden" name="ctl00$cc_footer$rpt_footerMenu$ctl03$hfd_catNo" id="ctl00_cc_footer_rpt_footerMenu_ctl03_hfd_catNo" value="197" />
+                                <ul>
+                                
+                                <li>
+                                    <a href="../portal/63502e94-42dd-45fe-a9ab-dd8a30c10b0d.aspx">الأخبار</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../portal/fab165b8-a36a-44e9-8ee9-9190a1a02d72.aspx">كلمــات وتصــاريح</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../portal/31a66f92-3f6c-4ff0-86f7-90e656ef73fd.aspx">بيانات رسمية</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../portal/d72f0315-e0c4-40f7-a607-c9bbc2f03ef9.aspx">فعاليات رئيسية</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../portal/834d0e65-d2f2-4b18-a154-fd65b581ff78.aspx">مكتبة الصور والفيديو</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="../portal/88162fa3-5eb7-4bf9-a11c-06d892773c06.aspx">الركن الإعلامي</a>
+                                </li>
+                                
+                                </ul>
+                                
+                                 <a href='../portal/44fc22e0-f4ab-438a-8f82-0d2e24946a80.aspx'><p class="ftitle" style="margin-top:12px;">البعثات التمثيلية</p></a>
+                                
+                                 <a href='../portal/022ced70-6cda-416f-9061-21a0f8b25011.aspx'><p class="ftitle" style="margin-top:12px;">تقارير الخارجية</p></a>
+                                
+                            </div>
+                            
+
+                            <div class="sep"></div>
+                            <div id="footerMenu">
+                                <ul>
+                                
+                                <li><a href='../portal/7fc6cb0b-2aec-4133-9733-9efb4d189e21.aspx'>شروط وأحكام</a></li>
+                                
+                                <li><a href='../portal/d0f95dee-14ae-46e9-911c-3fc4153b698e.aspx'>سياسة الخصوصية</a></li>
+                                
+                                <li><a href='../portal/65d86073-39ec-4b97-af0e-a33749d50cd1.aspx'>إخلاء المسؤولية</a></li>
+                                
+                                <li><a href='../portal/74d1f72a-e8d7-4e01-8a50-a32aaeca9d26.aspx'>حقوق الملكية</a></li>
+                                
+                                <li><a href='../portal/0ed12d9f-2271-4bb0-8fb8-8dae2f8d6648.aspx'>سهولة التصفح</a></li>
+                                
+                                <li><a href='../portal/c8f5b7d7-8af1-498f-86a7-95a3244a5234.aspx'>ميثاق المتعاملين</a></li>
+                                
+                                <li><a href='../portal/61fd0b4c-f97e-489c-88ad-cc0d9e7b06ee.aspx'>سياسة المشاركة الالكترونية</a></li>
+                                
+                                <li><a href='../portal/4f2618d0-5540-45ac-ba40-c2321ff98a59.aspx'>سياسة التواصل الاجتماعي</a></li>
+                                
+                                </ul>
+                            </div>
+                            <p class="footerhints">يمكن تصفح هذا الموقع ضمن أي شاشة عرض.</p>
+                            <p class="footerhints">تدعم مايكروسوفت إنترنت إكسبلورر 9.0+ و فايرفوكس 3.6+ و سفاري 5.0.3+ و جوجل كروم 12+</p>
+                        </div>
+                    </footer>
+                </div>
+                <div id="res_menuW">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Cboxes">
+        <div id="Cdialog" class="window" style="background-color: White">
+            <a href="#" class="close" alt="أغلق" title="أغلق" style="font-family: Arial; color: Gray;
+                font-style: normal; text-decoration: none; text-align: right; float: right;">&nbsp;&nbsp;x&nbsp;&nbsp;</a>
+            <div id="dv_Colors">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                        <td colspan="2">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            الرجاء اختيار نظام الألوان
+                        </td>
+                        <td>
+                            <select name="ctl00$ddl_Colors" id="ctl00_ddl_Colors">
+	<option value="0">إفتراضي</option>
+	<option value="yblu">أصفر + أزرق</option>
+	<option value="bgrn">أخضر + أسود</option>
+
+</select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <input type="submit" name="ctl00$btn_SaveColor" value="حفظ" id="ctl00_btn_SaveColor" class="button_green" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            &nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="Cmask">
+    </div>
+    
+    
+<script src="/MOFA/WebResource.axd?d=H_lPBr7L9br6a5rXF0BANAXikiYXBxe_6wb_uwFbnlDa5Lw5aUaIGsQGdqUh0XFipzyY_dfQB9zb6leIz7Y_cVEvYVY1&amp;t=635295238417495136" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+SelectMe('52');
+//]]>
+</script>
+</form>
+    <script type="text/javascript">
+
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+    </script>
+    <script type="text/javascript">
+
+        try {
+
+            var pageTracker = _gat._getTracker("UA-7907872-1");
+
+            pageTracker._trackPageview();
+
+        } catch (err) { }</script>
+</body>
+</html>

@@ -1,0 +1,1276 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--%@ Register tagprefix="WebParts" namespace="MOE.Portal.WebParts" assembly="MOE.Portal.WebParts.NewsLetterWP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2e9ca895f34befb1" %!-->
+
+
+<html id="ctl00_HTML1" xmlns:o="urn:schemas-microsoft-com:office:office" __expr-val-dir="ltr" dir="rtl">
+
+
+<META NAME="ROBOTS" CONTENT="NOHTMLINDEX"/>
+
+<head id="ctl00_Head1">
+		<title>
+        
+	وزارة التربية و التعليم
+
+      </title>
+    <link rel="stylesheet" type="text/css" href="/Style%20Library/ar-SA/Styles/CoreMOE.css"/>
+<link rel="stylesheet" type="text/css" href="/Style%20Library/ar-SA/Styles/layout.css"/>
+<link rel="stylesheet" type="text/css" href="/Style%20Library/ar-SA/Core%20Styles/pageLayouts.css"/>
+<link rel="stylesheet" type="text/css" href="/Style%20Library/ar-SA/Styles/presentation.css"/>
+<link rel="stylesheet" type="text/css" href="/_layouts/1025/styles/core.css?rev=W5TF%2FVT2%2FKVTFdeWZfhIbQ%3D%3D"/>
+
+	<style type="text/css">
+		.ms-pagetitleareaframe table, .ms-titleareaframe
+		{
+			background: none;
+			height: 10px;
+			overflow:hidden;
+		}
+		.ms-pagetitle, .ms-titlearea
+		{
+			display:none;
+		}
+		div.ms-PartSpacingVertical
+		{           
+	   	  display:none;
+           visibility:hidden !important;           
+		}
+	</style>
+	
+<link rel="stylesheet" href="http://www.moe.gov.ae/_catalogs/masterpage/ar/scripts/MOE_Style.css" /><link rel="stylesheet" href="http://www.moe.gov.ae/_catalogs/masterpage/en/scripts/content_styles.css" /><link rel="stylesheet" href="http://www.moe.gov.ae/_catalogs/masterpage/ar/scripts/transmenu.css" />
+<SCRIPT language=javascript type=text/javascript src="http://www.moe.gov.ae/_catalogs/masterpage/ar/scripts/transmenu.js"></SCRIPT>
+<SCRIPT language=javascript type=text/javascript src="http://www.moe.gov.ae/_catalogs/masterpage/ar/scripts/moeinit.js"></SCRIPT>
+<SCRIPT language=javascript type=text/javascript src="http://www.moe.gov.ae/_catalogs/masterpage/ar/scripts/rt_sameheight.js"></SCRIPT>
+<SCRIPT language=javascript type=text/javascript>addLoadEvent(init);</SCRIPT>
+<SCRIPT type=text/javascript src="http://www.moe.gov.ae/_catalogs/masterpage/ar/scripts/styleswitcher.js"></SCRIPT>
+<script  type=text/javascript src="http://www.moe.gov.ae/_catalogs/masterpage/ar/scripts/AC_RunActiveContent.js" ></script>
+<!-- New CSS & JS files End-->
+
+
+
+    <style type="text/css">
+        .body{
+	margin:0px;
+	padding:0px;
+	vertical-align:top;
+	}
+
+.notifcation, .notifcation a{
+	color:#ffff00;
+	font-family:tahoma;
+	text-align:center;
+	font-size:11px;
+}
+.ms-formbody
+{
+font-family:verdana;
+font-size:.7em;
+vertical-align:top;
+border-top:1px solid #d8d8d8;
+padding:3px 6px 4px 6px;
+background-color:transparent; !important
+}
+		.ms-pagetitleareaframe table, .ms-titleareaframe
+		{
+			background: none;
+			height: 10px;
+			overflow:hidden;
+		}
+		.ms-pagetitle, .ms-titlearea
+		{
+			display:none;
+		}
+		div.ms-PartSpacingVertical
+		{           
+	   	  display:none;
+           visibility:hidden !important;           
+		}
+		/* New Design Master Page*/
+		
+			div.Announcements ul.Announcements li span.Header a
+			{color: #666666!important;}
+			div.Announcements ul.Announcements li span.Header
+			{color: #666666!important;}
+			div.Announcements3 h3
+			{color: #B89207!important;}
+			div.AnnouncementsBottom2 li a,div.AnnouncementsBottom1 h3
+			{color: #B89207!important;}
+			table.NewsList div.NewsSnaps span
+			{color: #666666!important;}
+			div.EventsCalendarLink
+			{width: 176px;!important;}
+			div.Events
+			{width: 176px;!important;}
+			.EventsFooter
+			{width: 176px;!important;}
+
+
+
+</style>
+    <link rel="stylesheet" type="text/css" id="onetidThemeCSS" href="/Arabic/_themes/moe/moe1011-65001.css?rev=12%2E0%2E0%2E4518"/>
+<style type="text/css">
+.ms-sbtable .ms-sblink A {	COLOR: #000000}
+.ms-sbtable .ms-sblink A:link {	COLOR: #000000}
+.ms-sbtable .ms-sblink A:visited {	COLOR: #000000}
+</style>
+<title>
+
+</title></head>
+
+<script type="text/javascript">
+function hideCloseButton()
+
+{
+
+   var alltags = document.getElementsByTagName("body")[0].getElementsByTagName("*"); 
+
+   var sPath = window.location.pathname;
+
+   var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
+
+        for(i=0;i<alltags.length;i++) 
+
+           { 
+
+               try{
+
+                if ((alltags[i].tagName.toLowerCase() == "div") && (alltags[i].id== "__MOE_CloseButton_div")) 
+
+                      {
+
+                         if ( (sPage.toLowerCase() == "dispform.aspx"))
+
+                            {
+
+                               alltags[i].style.visibility = "hidden"; 
+
+                            }
+
+                      }             
+
+               } catch(e) { } ;
+
+ }
+
+}
+  
+    protected void Authorize(object sender, EventArgs e)
+    {
+        SearchBoxEx srch = (SearchBoxEx)sender;
+        if (((HttpContext.Current.User != null) && HttpContext.Current.User.Identity.IsAuthenticated))
+        {
+            if (srch.ID == "SearchBox")
+            {
+                srch.Visible = true;
+            }
+            if (srch.ID == "SearchBoxEx1")
+            {
+                srch.Visible = false;
+            }
+
+        }
+        else
+        {
+            if (srch.ID == "SearchBox")
+            {
+                srch.Visible = false;
+            }
+            if (srch.ID == "SearchBoxEx1")
+            {
+                srch.Visible = true;
+            }
+            //srch.ScopeDisplayGroupName = "Search Dropdown";
+            //srch.DropDownModeEx = DropDownModesEx.ShowDD_NoContextual;
+        }
+    }
+
+    protected void PutLink(object sender, EventArgs e)
+    {
+        Literal srch = (Literal)sender;
+        if (((HttpContext.Current.User != null) && HttpContext.Current.User.Identity.IsAuthenticated))
+        {
+            if (srch.ID == "LiteralSearchLinkText")
+            {
+                srch.Visible = true;
+            }
+        }
+        else
+        {
+            if (srch.ID == "LiteralSearchLinkText")
+            {
+                srch.Visible = false;
+            }
+            //srch.ScopeDisplayGroupName = "Search Dropdown";
+            //srch.DropDownModeEx = DropDownModesEx.ShowDD_NoContextual;
+        }
+    }
+  
+</script>
+
+
+<body  onload="javascript:_spBodyOnLoadWrapper();">
+    <form name="aspnetForm" method="post" action="default.aspx" id="aspnetForm" style="vertical-align:top">
+<input type="hidden" name="MSO_PageHashCode" id="MSO_PageHashCode" value="800267265" />
+<input type="hidden" name="__SPSCEditMenu" id="__SPSCEditMenu" value="true" />
+<input type="hidden" name="MSOWebPartPage_PostbackSource" id="MSOWebPartPage_PostbackSource" value="" />
+<input type="hidden" name="MSOTlPn_SelectedWpId" id="MSOTlPn_SelectedWpId" value="" />
+<input type="hidden" name="MSOTlPn_View" id="MSOTlPn_View" value="0" />
+<input type="hidden" name="MSOTlPn_ShowSettings" id="MSOTlPn_ShowSettings" value="False" />
+<input type="hidden" name="MSOGallery_SelectedLibrary" id="MSOGallery_SelectedLibrary" value="" />
+<input type="hidden" name="MSOGallery_FilterString" id="MSOGallery_FilterString" value="" />
+<input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x5DC0595E406356F3FF007F6FBD5BB46F000582BDDB354EA7A0FC4D8CF87033633F431CCBD9B411D236B32D7D5246F96C61476603F5E4CB79AF350090843831C1,03 Feb 2010 15:11:33 -0000" />
+<input type="hidden" name="MSOAuthoringConsole_FormContext" id="MSOAuthoringConsole_FormContext" value="" />
+<input type="hidden" name="MSOAC_EditDuringWorkflow" id="MSOAC_EditDuringWorkflow" value="" />
+<input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
+<input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
+<input type="hidden" name="MSOLayout_LayoutChanges" id="MSOLayout_LayoutChanges" value="" />
+<input type="hidden" name="MSOLayout_InDesignMode" id="MSOLayout_InDesignMode" value="" />
+<input type="hidden" name="MSOSPWebPartManager_OldDisplayModeName" id="MSOSPWebPartManager_OldDisplayModeName" value="Browse" />
+<input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMA9kFgJmD2QWAgICD2QWBgIBD2QWDgUmZ19mOWRmMDQyNF9jNWIzXzRlYTdfOTZkYV81M2Q0ZGY5MzYzYjYPDxYCHgpDaHJvbWVUeXBlAgJkZAUmZ19lNmIxMDU3OV81OTU5XzRiYzZfYjFkYl8xNDE5NTc5OTU4MjAPDxYCHwACAmQWAgIKDzwrAAoBAA8WAh4CU0QWAQYB0hFP+nLMiGRkBSZnX2JmZmQ5OTI5X2MwMzVfNDhmOF84ODk4X2ZjOGZhY2VhODI1NA8PFgIeC1BhcmFtVmFsdWVzMogEAAEAAAD/////AQAAAAAAAAAMAgAAAFhNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xMi4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljBQEAAAA9TWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViUGFydFBhZ2VzLlBhcmFtZXRlck5hbWVWYWx1ZUhhc2h0YWJsZQEAAAAFX2NvbGwDHFN5c3RlbS5Db2xsZWN0aW9ucy5IYXNodGFibGUCAAAACQMAAAAEAwAAABxTeXN0ZW0uQ29sbGVjdGlvbnMuSGFzaHRhYmxlBwAAAApMb2FkRmFjdG9yB1ZlcnNpb24IQ29tcGFyZXIQSGFzaENvZGVQcm92aWRlcghIYXNoU2l6ZQRLZXlzBlZhbHVlcwAAAwMABQULCBxTeXN0ZW0uQ29sbGVjdGlvbnMuSUNvbXBhcmVyJFN5c3RlbS5Db2xsZWN0aW9ucy5JSGFzaENvZGVQcm92aWRlcgjsUTg/AwAAAAoKCwAAAAkEAAAACQUAAAAQBAAAAAIAAAAGBgAAAAVUb2RheQYHAAAACExpc3ROYW1lEAUAAAACAAAABggAAAAUMjAxMC0wMi0wM1QxOToxMTozNFoGCQAAAA1Bbm5vdW5jZW1lbnRzC2RkBSZnX2I3OWM2NmZkXzc1MDdfNDgyMl84ZTM2XzFlMmFkOTMwZTNmZA8PFgIfAjLdAwABAAAA/////wEAAAAAAAAADAIAAABYTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwUBAAAAPU1pY3Jvc29mdC5TaGFyZVBvaW50LldlYlBhcnRQYWdlcy5QYXJhbWV0ZXJOYW1lVmFsdWVIYXNodGFibGUBAAAABV9jb2xsAxxTeXN0ZW0uQ29sbGVjdGlvbnMuSGFzaHRhYmxlAgAAAAkDAAAABAMAAAAcU3lzdGVtLkNvbGxlY3Rpb25zLkhhc2h0YWJsZQcAAAAKTG9hZEZhY3RvcgdWZXJzaW9uCENvbXBhcmVyEEhhc2hDb2RlUHJvdmlkZXIISGFzaFNpemUES2V5cwZWYWx1ZXMAAAMDAAUFCwgcU3lzdGVtLkNvbGxlY3Rpb25zLklDb21wYXJlciRTeXN0ZW0uQ29sbGVjdGlvbnMuSUhhc2hDb2RlUHJvdmlkZXII7FE4PwEAAAAKCgsAAAAJBAAAAAkFAAAAEAQAAAABAAAABgYAAAAITGlzdE5hbWUQBQAAAAEAAAAGBwAAAAdSZXBvcnRzC2RkBSZnXzhjODE2N2Q5XzY0MjJfNGMyOF9hNzZiXzcxZDI0OWE1ZDliNg8PFgIfAjLgAwABAAAA/////wEAAAAAAAAADAIAAABYTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwUBAAAAPU1pY3Jvc29mdC5TaGFyZVBvaW50LldlYlBhcnRQYWdlcy5QYXJhbWV0ZXJOYW1lVmFsdWVIYXNodGFibGUBAAAABV9jb2xsAxxTeXN0ZW0uQ29sbGVjdGlvbnMuSGFzaHRhYmxlAgAAAAkDAAAABAMAAAAcU3lzdGVtLkNvbGxlY3Rpb25zLkhhc2h0YWJsZQcAAAAKTG9hZEZhY3RvcgdWZXJzaW9uCENvbXBhcmVyEEhhc2hDb2RlUHJvdmlkZXIISGFzaFNpemUES2V5cwZWYWx1ZXMAAAMDAAUFCwgcU3lzdGVtLkNvbGxlY3Rpb25zLklDb21wYXJlciRTeXN0ZW0uQ29sbGVjdGlvbnMuSUhhc2hDb2RlUHJvdmlkZXII7FE4PwEAAAAKCgsAAAAJBAAAAAkFAAAAEAQAAAABAAAABgYAAAAITGlzdE5hbWUQBQAAAAEAAAAGBwAAAApJbnRlcnZpZXdzC2RkBSZnXzdmOTI1YmUwXzM0MjBfNDEzYl85NmNkXzE5MjVlYTVjOTc1Mw8PFgIfAAICZGQFJmdfNjY1ZDI4MDZfNWJiYV80OWYwX2I5ODVfZjUwZThhNDUwNDBiDw8WAh8CMo8FAAEAAAD/////AQAAAAAAAAAMAgAAAFhNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xMi4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljBQEAAAA9TWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViUGFydFBhZ2VzLlBhcmFtZXRlck5hbWVWYWx1ZUhhc2h0YWJsZQEAAAAFX2NvbGwDHFN5c3RlbS5Db2xsZWN0aW9ucy5IYXNodGFibGUCAAAACQMAAAAEAwAAABxTeXN0ZW0uQ29sbGVjdGlvbnMuSGFzaHRhYmxlBwAAAApMb2FkRmFjdG9yB1ZlcnNpb24IQ29tcGFyZXIQSGFzaENvZGVQcm92aWRlcghIYXNoU2l6ZQRLZXlzBlZhbHVlcwAAAwMABQULCBxTeXN0ZW0uQ29sbGVjdGlvbnMuSUNvbXBhcmVyJFN5c3RlbS5Db2xsZWN0aW9ucy5JSGFzaENvZGVQcm92aWRlcgjsUTg/CgAAAAoKCwAAAAkEAAAACQUAAAAQBAAAAAYAAAAGBgAAAAVzR3VpZAYHAAAACGxhbmd1YWdlBggAAAAFVG9kYXkGCQAAAApldmVudFVzZXJzBgoAAAAGVXNlcklEBgsAAAAKZXZlbnRUeXBlcxAFAAAABgAAAAYMAAAAJDQwNWNkYjc1LWZmNzMtNGM2ZS05YmE1LTI5OTU1YmNlN2VkYQYNAAAAAkVOBg4AAAAUMjAxMC0wMi0wM1QxOToxMTozNFoGDwAAAAlob21lIHBhZ2UGEAAAAA9DdXJyZW50VXNlck5hbWUGEQAAAAdub3RoaW5nC2RkAgUPZBYCZg9kFgICAQ9kFgICAQ8WAh4TUHJldmlvdXNDb250cm9sTW9kZQspiAFNaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJDb250cm9scy5TUENvbnRyb2xNb2RlLCBNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xMi4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljAWQCBw9kFhACAg9kFgICAQ9kFgICAQ8WAh4HVmlzaWJsZWgWAmYPZBYEAgIPZBYCAgMPFgIfBGhkAgMPDxYCHglBY2Nlc3NLZXkFAS9kZAIKD2QWAgIBD2QWAmYPD2QWAh4FY2xhc3MFGG1zLXNidGFibGUgbXMtc2J0YWJsZS1leGQCOg8PFgIfAAICZGQCPA8PFgIfAAICZBYCAgoPPCsACgEADxYCHwEWAQbR5CRP+nLMiGRkAj4PDxYCHwIyjwUAAQAAAP////8BAAAAAAAAAAwCAAAAWE1pY3Jvc29mdC5TaGFyZVBvaW50LCBWZXJzaW9uPTEyLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTcxZTliY2UxMTFlOTQyOWMFAQAAAD1NaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJQYXJ0UGFnZXMuUGFyYW1ldGVyTmFtZVZhbHVlSGFzaHRhYmxlAQAAAAVfY29sbAMcU3lzdGVtLkNvbGxlY3Rpb25zLkhhc2h0YWJsZQIAAAAJAwAAAAQDAAAAHFN5c3RlbS5Db2xsZWN0aW9ucy5IYXNodGFibGUHAAAACkxvYWRGYWN0b3IHVmVyc2lvbghDb21wYXJlchBIYXNoQ29kZVByb3ZpZGVyCEhhc2hTaXplBEtleXMGVmFsdWVzAAADAwAFBQsIHFN5c3RlbS5Db2xsZWN0aW9ucy5JQ29tcGFyZXIkU3lzdGVtLkNvbGxlY3Rpb25zLklIYXNoQ29kZVByb3ZpZGVyCOxROD8KAAAACgoLAAAACQQAAAAJBQAAABAEAAAABgAAAAYGAAAABXNHdWlkBgcAAAAIbGFuZ3VhZ2UGCAAAAAVUb2RheQYJAAAACmV2ZW50VXNlcnMGCgAAAAZVc2VySUQGCwAAAApldmVudFR5cGVzEAUAAAAGAAAABgwAAAAkNDA1Y2RiNzUtZmY3My00YzZlLTliYTUtMjk5NTViY2U3ZWRhBg0AAAACRU4GDgAAABQyMDEwLTAyLTAzVDE5OjExOjM0WgYPAAAACWhvbWUgcGFnZQYQAAAAD0N1cnJlbnRVc2VyTmFtZQYRAAAAB25vdGhpbmcLZGQCSA9kFgICAQ8PFgIfBGhkFgQCAQ8PFgIfBGhkZAIDDw8WAh8EaGQWAgIBDw8WAh8EZ2QWBAIBDw8WAh8EaGQWHAIBDw8WAh8EaGRkAgMPFgIfBGhkAgUPDxYCHwRoZGQCBw8WAh8EaGQCCQ8PFgIfBGhkZAILDw8WAh8EaGRkAg0PDxYCHwRoZGQCDw8PFgQeB0VuYWJsZWRoHwRoZGQCEQ8PFgIfBGhkZAITDw8WBB8HaB8EaGRkAhUPDxYCHwRoZGQCFw8WAh8EaGQCGQ8WAh8EaGQCGw8PFgIfBGdkZAIDDw8WAh8EZ2QWBgIBDw8WAh8EZ2RkAgMPDxYCHwRnZGQCBQ8PFgIfBGdkZAJKD2QWCgIDD2QWAmYPDxYCHwRoZGQCBQ9kFgJmDw8WAh8EaGRkAgcPZBYCZg8PFgIfBGhkZAIJD2QWAmYPDxYCHwRoZGQCCw9kFgJmDw8WAh8EaGRkAkwPZBYCAgIPZBYCAgEPFgIfAwsrBAFkZEhsAew7N3VlEiMIjAwxxMVFgRz2" />
+
+<script> var MSOWebPartPageFormName = 'aspnetForm';</script>
+<script type="text/javascript">
+//<![CDATA[
+
+                function DoCallBack(filterText)
+                {
+                    WebForm_DoCallback('ctl00$SPWebPartManager1$g_68b0123e_a10f_428d_bcb9_78c17d5a6a00',filterText,UpdateFilterCallback,0,CallBackError,true);
+                }
+                function CallBackError(result, clientsideString)
+                {                
+                }
+            //]]>
+</script>
+<script type="text/javascript" language="javascript" src="/_layouts/1025/init.js?rev=9HRWm7UooJ5Ajp2ZvPewsQ%3D%3D"></script>
+<script type="text/javascript" language="javascript" src="/_layouts/1025/init.js?rev=9HRWm7UooJ5Ajp2ZvPewsQ%3D%3D"></script><script type="text/javascript" language="javascript" src="/_layouts/1025/core.js?rev=0LFzYPzBWjS0tmjJbN1cXg%3D%3D" defer></script><script type="text/javascript" language="javascript" src="/_layouts/1025/non_ie.js?rev=yfNry4hY0Gwa%2FPDNGrqXVg%3D%3D"></script><script type="text/javascript" language="javascript" src="/_layouts/1025/search.js?rev=Fj9CLFcXvCRPvtP%2Bb%2FTL%2FA%3D%3D" defer></script>
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWZwLB39RLAvD1ndYLAsft38kOAt6Om/ADAqb5hLUGAueryNoDApW5zdcOApC5zdcOAo+5zdcOAuig+IYEAuug+IYEAqbNweINAqbN1YkEAqbNqbULAqbNvdADAqbNkf8KAqbN5ZoBAqbNufMEAqbNjZ4LAoPku7cIAoPkj1ICg+Tj+QcCg+T3pA4Cg+TLwwYCg+Tf7g0Cg+SzigQCg+SHsQsCg+TbiQ4Cg+SvtQUCzofuQgLOh8LpBwLOh9aUDgLOh6qwBQLOh77fDQLOh5L6BALOh+ahCwLOh/rMAwLOh46lBQLOh+LADQKrvpDZCgKrvuSEAQKrvvijCAKrvsxOAqu+oOoHAqu+tJEOAqu+iLwFAqu+nNsNAqu+sLAPAqu+hN8HArSpsvQEArSphpMLArSpmr4CArSp7uUKAoTg8vYFAoTg7vUFAqrmn8kEAqrmi6INAqrm954CAqrm4/sKAqrmz9QDAqrmu7EIAqrm59gNAqrm07UCAo/P5ZwBAo/P0fkJAo/PvdIOAo/PqY8HAo/PlegPAo/PgcUEAo/P7aENAo/P2ZoCAo/PhaIHAo/P8Z4MAsKssOkJAsKsnMIOAsKsiL8HAsKs9JsMAsKs4PQEAsKszNENAsKsuIoCAsKspOcKAsKs0I4MAsKsvOsEAqeVzvIDAqeVuq8IAqeVpogBAqeVkuUJAqeV/sEOAqeV6roHAqeV1pcMAqeVwvAEAqeV7psGAqeV2vQOAriC7N8NAriC2LgCAriCxJULAriCsM4DAuCT/NoOApjk458LAtm2r/AOAqukqv0DAqukjsUPAqukoqAIJdVhOCKiSSGXIrv/QadsFMRtUMY=" />
+
+    
+    
+<table  width="990px" align="center" cellpadding="0" cellspacing="0" style="border:1px solid #666666">
+<tr>
+	<td>
+	<!-- Top Menu  start -->
+	    <table width="990" cellspacing="0" cellpadding="0" border="0" >
+      <tr>
+      <td width="5px">&nbsp;</td>
+        <td >
+            <!-- Site action menu Start -->
+				
+            <!-- Site action menu End -->
+        </td>
+		<td class="toplink">
+            <!-- Sign In  Start -->
+            <a href="http://www.moe.gov.ae/Arabic/_layouts/Authenticate.aspx?Source=%2fArabic%2fPages%2fUserRedirect.aspx">تسجيل الدخول</a>
+            <!-- SSign In End -->
+          </td>
+  		<td class="toplinkseperator">&nbsp;</td>
+            <td>
+                <!-- Contact Us  Start -->
+				<a href="/Arabic/Pages/ContactInformation.aspx" id="ctl00_lnkContactUsMap" class="toplink">
+				اتصل بنا</a>
+                <!-- Contact Us End -->
+            </td>
+         <td class="toplinkseperator">&nbsp;</td>
+            <td >
+                <!-- Site Map  Start -->
+					<a href="/arabic/Pages/siteMap.aspx" id="ctl00_lnkSiteMap" class="toplink">
+					خريطة الموقع</a>
+                <!-- Site Map End -->
+            </td>
+         
+			<td class="toplinkseperator">&nbsp;</td>
+            <td class="loginAndSearch" valign="top">
+                <!--Search Webpart Start-->  
+					
+					<div id="SRSB"> <div id="ctl00_PlaceHolderSearchArea_SearchBox">
+	<table class="ms-sbtable ms-sbtable-ex" border="0">
+		<tr class="ms-sbrow">
+			<td class="ms-sbcell ms-sbtext"><span title="بحث" style="display:block;">بحث</span></td><td class="ms-sbcell"><input name="ctl00$PlaceHolderSearchArea$SearchBox$S622C1022_InputKeywords" type="text" maxlength="200" id="ctl00_PlaceHolderSearchArea_SearchBox_S622C1022_InputKeywords" accesskey="S" title="إدخال كلمات البحث" class="ms-sbplain" alt="إدخال كلمات البحث" onkeypress="javascript:return S622C1022_OSBEK(event);" style="width:120px;" /></td><td class="ms-sbgo ms-sbcell"><a id="ctl00_PlaceHolderSearchArea_SearchBox_S622C1022_go" title="الانتقال إلى البحث" href="javascript:S622C1022_Submit()"><img title="الانتقال إلى البحث" onmouseover="this.src='/_layouts/images/gosearch.gif'" onmouseout="this.src='/_layouts/images/gosearch.gif'" alt="الانتقال إلى البحث" src="/_layouts/images/gosearch.gif" border="0" /></a></td><td class="ms-sbLastcell"></td>
+		</tr>
+	</table>
+</div></div>
+					
+					
+
+					
+                <!--Search Webpart End-->   
+            </td>
+     
+       <td width="150px"> &nbsp;</td>
+                   <td >
+                <!-- Help   Start -->
+					
+                <!-- Help End -->
+            </td>
+
+       
+         <td class="toplink" >
+            <!--Language Webpart Start-->    
+				<a href="javascript:__doPostBack('ctl00$MasterpageLanguageLink1$ctl00','')">English</a>
+            <!--Language Webpart End-->   
+        </td>
+</table>
+	
+	
+	
+	<!-- Top Menu  End -->
+	</td>
+</tr>
+
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="990" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="17" height="167">&nbsp;</td>
+        <td  class="MOElogo">&nbsp;</td>
+        <td width="389">&nbsp;</td>
+       
+         <td height="96" class="MOEBannertext">&nbsp;</td>
+        <td width="18">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+
+
+<tr >
+    <td class="Mainmenubg"  height="40px">
+       <DIV id=toolbar>
+              <DIV id=topmenu>
+                <DIV id=mtm_menu>
+    <table  border=0 cellSpacing=0 cellPadding=0 width="991px" >
+    <tr>
+
+            <td width="660px" class="tblalign">
+            <table border="0" cellspacing="0" cellpadding="0" >
+            <tr>
+            <td><DIV class="Mainmenulink" id=moe_menu1>
+				عن الوزارة</DIV></td>     
+            <td><DIV class="Mainmenulink" id=moe_menu2>
+				وطني</DIV></td>
+            <td><DIV class="Mainmenulink" id=moe_menu3>
+				المركز الإعلامي</DIV></td>
+            <td><DIV class="Mainmenulink" id=moe_menu4>
+				روابط</DIV></td>            
+            <td><DIV class="Mainmenulinklast" id=moe_menu5>
+				جوائز الجودة</DIV></td>
+
+            </tr>
+            </table>
+        </td>
+        <td>
+                <table  border="0" cellspacing="0" cellpadding="0" >
+                    <tr >
+                    <td   class="newslettertext">
+					
+					 &nbsp;
+
+					</td>
+          
+                    <td  width="350" align="center" class="NewsletterWP" >   
+                   
+
+</td>
+                    </tr>
+                </table>
+        </td>
+        
+
+    </tr>
+ </table>  
+   
+   </DIV>
+
+              </DIV>
+              <SCRIPT language=javascript type=text/javascript src="http://www.moe.gov.ae/_catalogs/masterpage/ar/scripts/moemenu.js"></SCRIPT>
+          </DIV>
+   </td>
+   </tr>
+
+  <tr>
+    <td height="31"><table width="990" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="15">&nbsp;</td>
+          <td width="181" >
+            <a href="/Arabic/Pages/default.aspx" id="ctl00_HomelnkTest" class="grey">
+			الرئيسية</a>
+</td>
+        <td width="687">&nbsp;</td>
+      
+        
+                <td width="89" align="right">
+        <table width="84" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="center">
+            <a href="/Arabic/Pages/default.aspx" id="ctl00_HomelconlinkTest" class="grey">
+             <img src="/_catalogs/masterpage/en/images/homeICON.jpg" alt="Home - Ministry of Education" width="21" height="24" border="0"></a>  </td>
+            <td align="center">&nbsp;</td>
+            
+            <td align="center">
+            <a href="https://mail.moe.gov.ae/OWA ">
+            <img src="/_catalogs/masterpage/en/images/contactICON.jpg" alt="Mail - Ministry of Education" width="24" height="24" border="0"></a></td>
+            <td align="center">&nbsp;</td>
+            
+            <td align="center">
+     
+                       <a href="/Arabic/Pages/ContactInformation.aspx" id="ctl00_ContactUslconlinkTest" class="grey">      
+                        <img src="/_catalogs/masterpage/en/images/phoneICON.jpg" alt="Contact us - Ministry of Education" width="22" height="24" border="0"></a>
+            
+                 </td>
+          </tr>
+        </table></td>
+
+        <td width="17">&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="5" align="center">
+		
+		<script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','951','height','78','src','http://www.moe.gov.ae/_catalogs/masterpage/ar/swf/MoETopBanner','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','wmode','transparent','movie','http://www.moe.gov.ae/_catalogs/masterpage/ar/swf/MoETopBanner' ); //end AC code
+        </script>
+          <noscript>
+          <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="951" height="78">
+            <param id="ctl00_LiteralbannerTEXT" name="movie" value="&quot;&lt;asp:Literal" Text="http://www.moe.gov.ae/_catalogs/masterpage/ar/swf/MoETopBanner"></param>">
+            <param name="quality" value="high">
+            <param name="wmode" value="transparent">
+            <embed id="ctl00_LiteralHomeTEXTswf" src="&quot;&lt;asp:Literal" Text="http://www.moe.gov.ae/_catalogs/masterpage/ar/swf/MoETopBanner"></embed>" width="951" height="78" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" wmode="transparent"></embed>
+          </object>
+          </noscript>
+          </td>
+        </tr>
+        <tr>
+        <td colspan="5">&nbsp;</td>
+        </tr>
+      <tr><td></td></tr>
+      <tr>
+        <td >&nbsp;</td>
+        <td colspan="3" >
+            <!--Body Start-->
+        <table width="949" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+          
+                      <td width="176" valign="top"  >
+           <!--Left Menu start-->
+            <table width="176px" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td class="td.tblalign">
+                <table width="176" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td  class="leftmenubg" >
+                  <a href="/Arabic/Pages/askministry.aspx" id="ctl00_AskMinistrylnkTest" class="btnlink">
+					الوزارة معك</a>                    
+</td>
+                  </tr>
+                  <tr>
+                    <td height="4"></td>
+                  </tr>
+                  <tr>
+                  <td  class="leftmenubg">
+                   <a href="/Arabic/Pages/MOE_SERVICES.aspx" id="ctl00_MoeServiceslnkTest" class="btnlink">
+					خدماتنا</a>                    
+                   </td>
+                  </tr>
+                  <tr>
+                    <td height="4"></td>
+                  </tr>
+                  
+                  <tr>
+                    <td  class="leftmenubg">
+                   <a href="/Arabic/Pages/assessment.aspx" id="ctl00_MoeAssessmentlnkTest" class="btnlink">
+					الاختبارات الدولية</a>                    
+                   </td>
+                  </tr>
+                  <tr>
+                    <td height="4"></td>
+                  </tr>
+
+                  
+                  
+                  <tr>
+                    <td  class="leftmenubg" >
+                    <a href="/Arabic/Pages/SN_site.aspx" id="ctl00_SpecialNeedeslnkTest" class="btnlink">
+					الاحتياجات الخاصة</a>                    
+                  </td>
+                  </tr>
+                                
+                  <tr>
+                    <td height="4"></td>
+                  </tr>
+                  <tr>
+                    <td  class="leftmenubg">
+                   <a href="/Arabic/Pages/Stu_Activities.aspx" id="ctl00_StudentactivitylnkTest" class="btnlink">
+					الأنشطة الطلابية</a>                    
+</td>
+                  </tr>
+                  <tr>
+                    <td height="4"></td>
+                  </tr>
+                  <tr>
+                    <td  class="leftmenubg" >
+                    <a href="http://www.moe.gov.ae/Arabic/Documents/كتيب_الاعتماد_الاكاديمي.pdf" id="ctl00_AcademicAcclnkTest" class="btnlink">
+					الإعتماد الأكاديمي</a>                    
+</td>
+                  </tr>
+                  <tr>
+                    <td height="6"></td>
+                  </tr>
+                  
+                </table></td>
+              </tr>
+             
+              <tr>
+                <td width="176"  >
+				<!-- Poll Webpart Start-->  
+				
+<div class="PollsHeader_v2"><h3><span>استفتاء</span></h3></div><div class="Polls_v2"><div class="Polls2_v2"><div class="PollQuestion_v2"><span>ما هو تقييمك لتصميم الموقع الجديد لوزارة التربية والتعليم؟</span><div id="ErrorMessagePoll_v2"></div></div><div class="PollAnswer_v2"><span id="ctl00_PollView1_ctl03" class="PollAnswer" onclick="HideLabel()"><input id="ctl00_PollView1_ctl03_0" type="radio" name="ctl00$PollView1$ctl03" value="ممتاز" /><label for="ctl00_PollView1_ctl03_0">ممتاز</label><input id="ctl00_PollView1_ctl03_1" type="radio" name="ctl00$PollView1$ctl03" value="جيد" /><label for="ctl00_PollView1_ctl03_1">جيد</label><input id="ctl00_PollView1_ctl03_2" type="radio" name="ctl00$PollView1$ctl03" value="سيء" /><label for="ctl00_PollView1_ctl03_2">سيء</label></span></div><div class="PollButtons_v2"><input type="submit" name="ctl00$PollView1$ctl04" value="تصويت" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$PollView1$ctl04&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" class="VoteButtonSmall_v2" /><input type="submit" name="ctl00$PollView1$ctl05" value="نتيجة التصويت " onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$PollView1$ctl05&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" class="VoteButtonLarg_v2" /></div></div></div><script> function HideLabel() { document.all["ErrorMessagePoll"].style.display="none";}</script>
+
+				<!-- Poll Webpart End-->  
+                
+
+                
+                </td>
+              </tr>
+              <tr>
+                <td>&nbsp;
+
+				</td>
+              </tr>
+              <tr>
+                <td width="173px;">
+<!-- Calander Webpart Start-->      
+<div class="CalendarHeader_v2"><h3><span>تقويم الأحداث</span></h3></div><div class="Calendar_v2"><div class="MonthSelection_v2"><table border="0" cellpadding="0" cellspacing="0"><tr><td style="padding-top: 3px"><span>فبراير 3,2010</span></td><td style="padding-left: 5px; padding-right: 5px; padding-top: 3px"><input type="submit" name="ctl00$CalendarWP1$CalendarButton1_v2" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$CalendarWP1$CalendarButton1_v2&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_CalendarWP1_CalendarButton1_v2" class="CalendarButton1_v2" /></td><td style="padding-top: 3px"><input type="submit" name="ctl00$CalendarWP1$CalendarButton2_v2" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$CalendarWP1$CalendarButton2_v2&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_CalendarWP1_CalendarButton2_v2" class="CalendarButton2_v2" /></td></tr></table></div><div class="DayList_v2"><table class="Calendar_v2" cellspacing="0" cellpadding="0" title="Calendar" border="0" width="156">
+	<tr><th align="center" abbr="السبت" scope="col">س</th><th align="center" abbr="الاحد" scope="col">أ</th><th align="center" abbr="الاثنين" scope="col">ا</th><th align="center" abbr="الثلاثاء" scope="col">ث</th><th align="center" abbr="الاربعاء" scope="col">أ</th><th align="center" abbr="الخميس" scope="col">خ</th><th align="center" abbr="الجمعة" scope="col">ج</th></tr><tr><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3682')" style="color:Gray" title="30 يناير">30</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3683')" style="color:Gray" title="31 يناير">31</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3684')" style="color:Gray" title="01 فبراير">1</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3685')" style="color:Gray" title="02 فبراير">2</a></font></td><td class="Selected_v2" align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3686')" style="color:Gray" title="03 فبراير">3</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3687')" style="color:Gray" title="04 فبراير">4</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3688')" style="color:Gray" title="05 فبراير">5</a></font></td></tr><tr><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3689')" style="color:Gray" title="06 فبراير">6</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3690')" style="color:Gray" title="07 فبراير">7</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3691')" style="color:Gray" title="08 فبراير">8</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3692')" style="color:Gray" title="09 فبراير">9</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3693')" style="color:Gray" title="10 فبراير">10</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3694')" style="color:Gray" title="11 فبراير">11</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3695')" style="color:Gray" title="12 فبراير">12</a></font></td></tr><tr><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3696')" style="color:Gray" title="13 فبراير">13</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3697')" style="color:Gray" title="14 فبراير">14</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3698')" style="color:Gray" title="15 فبراير">15</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3699')" style="color:Gray" title="16 فبراير">16</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3700')" style="color:Gray" title="17 فبراير">17</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3701')" style="color:Gray" title="18 فبراير">18</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3702')" style="color:Gray" title="19 فبراير">19</a></font></td></tr><tr><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3703')" style="color:Gray" title="20 فبراير">20</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3704')" style="color:Gray" title="21 فبراير">21</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3705')" style="color:Gray" title="22 فبراير">22</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3706')" style="color:Gray" title="23 فبراير">23</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3707')" style="color:Gray" title="24 فبراير">24</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3708')" style="color:Gray" title="25 فبراير">25</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3709')" style="color:Gray" title="26 فبراير">26</a></font></td></tr><tr><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3710')" style="color:Gray" title="27 فبراير">27</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3711')" style="color:Gray" title="28 فبراير">28</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3712')" style="color:Gray" title="01 مارس">1</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3713')" style="color:Gray" title="02 مارس">2</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3714')" style="color:Gray" title="03 مارس">3</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3715')" style="color:Gray" title="04 مارس">4</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3716')" style="color:Gray" title="05 مارس">5</a></font></td></tr><tr><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3717')" style="color:Gray" title="06 مارس">6</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3718')" style="color:Gray" title="07 مارس">7</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3719')" style="color:Gray" title="08 مارس">8</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3720')" style="color:Gray" title="09 مارس">9</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3721')" style="color:Gray" title="10 مارس">10</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3722')" style="color:Gray" title="11 مارس">11</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$CalendarWP1$ctl02','3723')" style="color:Gray" title="12 مارس">12</a></font></td></tr>
+</table></div></div>
+<!-- Calander Webpart End-->                          
+                
+                
+                <table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+		<td valign="top"><div WebPartID="00000000-0000-0000-0000-000000000000" HasPers="true" id="WebPartWPQ7" width="100%" OnlyForMePart="true" allowDelete="false" style="" ><div class="EventsCalendarLink" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ddw1="http://tempuri.org/" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:SharePoint="Microsoft.SharePoint.WebControls" xmlns:ddwrt2="urn:frontpage:internal" xmlns:date="http://exslt.org/dates-and-times"></div><div class="Events" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ddw1="http://tempuri.org/" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:SharePoint="Microsoft.SharePoint.WebControls" xmlns:ddwrt2="urn:frontpage:internal" xmlns:date="http://exslt.org/dates-and-times"><ul class="Events"><li><a href="/English/Lists/Calendar/DispForm.aspx?ID=90">CESS Expiation & GEF  2/23/2010</a></li></ul><div class="ViewAll"><a href="../Lists/Calendar/ViewAll.aspx">View All</a></div></div><div class="EventsFooter" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ddw1="http://tempuri.org/" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:SharePoint="Microsoft.SharePoint.WebControls" xmlns:ddwrt2="urn:frontpage:internal" xmlns:date="http://exslt.org/dates-and-times"></div></div></td>
+	</tr>
+</table>
+                
+                </td>
+              </tr>
+              <tr>
+                          <td height="10"></td>
+                        </tr>
+              <tr>
+                <td>
+                <a href="http://www.moe.gov.ae/Arabic/Pages/alalmnoor.aspx">
+                <img src="/_catalogs/masterpage/en/images/Light-of-knowlege .jpg" width="176" height="139"></td>
+              </tr>
+            </table>
+              <!--Left Menu End-->
+            </td>
+            <td width="32">&nbsp;</td>
+            <td width="741" valign="top"><table width="741" cellspacing="0" cellpadding="0">
+              <tr>
+                <td>
+                <table width="742" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                        <td>
+                        <table width="358" cellspacing="0" cellpadding="0">
+                        <tr>
+                        <td >
+
+<a href="http://www.moe.gov.ae/Arabic/Pages/401010.aspx" id="ctl00_StrategylnkTest">
+<img src="/_catalogs/masterpage/ar/images/registration-bnr-ar.jpg" id="ctl00_StartegyImageTest" /></a>
+</td>
+
+                        </tr>
+                        </table>
+                           </td>
+                    <td valign="bottom">
+                          
+                            <table width="383" cellspacing="0" cellpadding="0">
+                            <tr>
+                            <td width="25">&nbsp;</td>
+                            <td width="70">
+                            <a href="https://employee.moe.gov.ae" id="ctl00_EmployeelnkTest">
+                            <img src="/_catalogs/masterpage/ar/images/employee.jpg" id="ctl00_EmployeeImageTest" /></a>
+                            
+                             
+                             
+                             </td>
+                            <td width="17">&nbsp;</td>
+                            <td width="123">
+                            <td width="70">
+                            <a href="http://www.moe.gov.ae/Arabic/teachers/Pages/default.aspx" id="ctl00_teacherslnkTest">
+                            
+                            <img src="/_catalogs/masterpage/ar/images/teachersIcon.jpg" id="ctl00_teachersImageTest" /></a></td>
+                            
+
+                            <td width="14">&nbsp;</td>
+                            <td width="97">
+                            
+                            
+                            
+                            <td width="70"><a href="http://www.moe.gov.ae/arabic/students/Pages/default.aspx" id="ctl00_StudentslnkTest">
+<img src="/_catalogs/masterpage/ar/images/studentIcon.jpg" id="ctl00_StudentImageTest" /></a>
+                            </td>
+
+                            
+                            <td width="25">&nbsp;</td>
+                            </tr>
+                            </table>
+                            
+                   </td>
+                  </tr>
+                  <tr>
+                  <!--Main Body Start-->
+                    <td height="100%" colspan="2" >
+                    <!-- Sharepoint body start -->
+          
+<div class="content">
+
+
+
+			
+	<table cellpadding="0" cellspacing="0" class="splashLinkFrame" border="0" align="left">
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" width="100%" class="splashLinkFrame" border="0">
+					<tr>
+						<td colspan="2" width="100%" valign="top" class="splashLinkArea">
+								<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td id="MSOZoneCell_WebPartWPQ13" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="9e73d03f-704a-496d-96d4-331fd8dacf16" HasPers="false" id="WebPartWPQ13" width="100%" class="ms-WPBody" allowDelete="false" style="" >
+
+
+<div xmlns:x='http://www.w3.org/2001/XMLSchema' xmlns:d='http://schemas.microsoft.com/sharepoint/dsp' xmlns:asp='http://schemas.microsoft.com/ASPNET/20' xmlns:__designer='http://schemas.microsoft.com/WebParts/v2/DataView/designer' xmlns:SharePoint='Microsoft.SharePoint.WebControls' xmlns:ddwrt2='urn:frontpage:internal'>
+<style type='text/css'>
+
+#marqueecontainer{
+position: relative;
+width: 100%; /*marquee width */
+height: 118px; /*marquee height */
+border: 0px solid orange;
+background-color: white;
+overflow: hidden;
+padding: 0px;
+padding-left: 0px;
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+/***********************************************
+* Cross browser Marquee II- © Dynamic Drive (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+
+var delayb4scroll=2000 //Specify initial delay before marquee starts to scroll on page (2000=2 seconds)
+var marqueespeed=1 //Specify marquee scroll speed (larger is faster 1-10)
+var pauseit=1 //Pause marquee onMousever (0=no. 1=yes)?
+
+////NO NEED TO EDIT BELOW THIS LINE////////////
+
+var copyspeed=marqueespeed
+var pausespeed=(pauseit==0)? copyspeed: 0
+var actualheight=''
+
+function scrollmarquee(){
+if (parseInt(cross_marquee.style.top)>(actualheight*(-1)+8))
+cross_marquee.style.top=parseInt(cross_marquee.style.top)-copyspeed+"px"
+else
+cross_marquee.style.top=parseInt(marqueeheight)+8+"px"
+}
+
+function initializemarquee(){
+cross_marquee=document.getElementById("vmarquee")
+cross_marquee.style.top=0
+marqueeheight=document.getElementById("marqueecontainer").offsetHeight
+actualheight=cross_marquee.offsetHeight
+if (window.opera || navigator.userAgent.indexOf("Netscape/7")!=-1){ //if Opera or Netscape 7x, add scrollbars to scroll and exit
+cross_marquee.style.height=marqueeheight+"px"
+cross_marquee.style.overflow="scroll"
+return
+}
+setTimeout('lefttime=setInterval("scrollmarquee()",30)', delayb4scroll)
+}
+
+if (window.addEventListener)
+window.addEventListener("load", initializemarquee, false)
+else if (window.attachEvent)
+window.attachEvent("onload", initializemarquee)
+else if (document.getElementById)
+window.onload=initializemarquee
+
+
+</script>
+    <table cellpadding='0' cellspacing='0' border='0' width='740'>
+        <tr>
+            <td><div class='AnnouncementsLeftTop'></div></td>
+            <td width='100%'><div class='AnnouncementsMiddleTop'></div></td>
+            <td><div class='AnnouncementsRightTop'></div></td>
+        </tr>
+        <tr>
+            <td colspan='3'>
+                <div class='AnnouncementsBottom1'><div class='AnnouncementsBottom2'>
+                <h3>أخبار وزارة التربية والتعليم</h3>
+                <div id='marqueecontainer' onMouseover='copyspeed=pausespeed' onMouseout='copyspeed=marqueespeed'>
+                <div class='AnnouncementsBottom2'>
+                <div id='vmarquee' style='position: absolute; width: 98%;'>
+                <!--YOUR SCROLL CONTENT HERE-->
+                <table cellpadding='0' cellspacing='0' border='0' class='NewsList'>
+                    <tr>
+                        <td>
+                            <a href='h0302010_1.aspx'><img alt='' border='0' src='http://www.moe.gov.ae/Arabic/PublishingImages/3-2-10.JPG' width='170px' style='BORDER: 0px solid; ' class='NewsThumbnails'></a>
+                        </td>
+                        <td>
+                            <div class='NewsSnaps'><span><a href='h0302010_1.aspx'>معرض مؤسسة الشارقة للتمكين الاجتماعي في ضيافة "الت</a>&nbsp;03/02/2010</span>انطلقت في وزارة التربية والتعليم أمس(الثلاثاء)، فعاليات "معرض منتجات الأيتام" الذي تنظمه مؤسسة الشارقة للتمكين الاجتماعي بمبنى الوزارة في دبي</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href='h0202010_1.aspx'><img alt='' border='0' src='http://www.moe.gov.ae/Arabic/PublishingImages/2-2-10.JPG' width='170px' style='BORDER: 0px solid; ' class='NewsThumbnails'></a>
+                        </td>
+                        <td>
+                            <div class='NewsSnaps'><span><a href='h0202010_1.aspx'>القطامي يوجه بصياغةلائحة لمواجهة السلوكيات الدخيلة</a>&nbsp;02/02/2010</span>وجه معالي حميد القطامي وزير التربية والتعليم لجنة إعداد لائحة السلوك الطلابي في الوزارة إلى الخروج بلائحة أكثر تطوراً</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href='h0102010_1.aspx'><img alt='' border='0' src='http://www.moe.gov.ae/Arabic/PublishingImages/1-2-2010.JPG' width='170px' style='BORDER: 0px solid; ' class='NewsThumbnails'></a>
+                        </td>
+                        <td>
+                            <div class='NewsSnaps'><span><a href='h0102010_1.aspx'>القطامي : طلبة الثاني عشر تعاملوا مع ورقة الأسئلة </a>&nbsp;01/02/2010</span>قال معالي حميد القطامي وزير التربية والتعليم إن الوزارة عززت من ثقة الطالب في نفسه بطرح امتحانات ارتكزت في بنائها وصياغتها على قياس جهد الطالب</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href='h3101010_1.aspx'><img alt='' border='0' src='http://www.moe.gov.ae/Arabic/PublishingImages/31-1-2010a.JPG' width='170px' style='BORDER: 0px solid; ' class='NewsThumbnails'></a>
+                        </td>
+                        <td>
+                            <div class='NewsSnaps'><span><a href='h3101010_1.aspx'>65 مدرسة تحصل على الاعتماد الأكاديمي </a>&nbsp;31/01/2010</span>أعلنت وزارة التربية والتعليم حصول 65 مدرسة من بينها مدرستان خاصتان، في الإمارات الشمالية على الاعتماد الأكاديمي لمدارس المرحلة الأولى والبالغ عددها 71 مدرسة</div>
+                        </td>
+                    </tr>
+                </table>
+                <!--YOUR SCROLL CONTENT HERE-->
+                </div></div></div>
+                <div class='ViewAll'><a href='ViewAllNews.aspx'>عرض الكل</a></div></br></div></div></div></td></tr><tr><td><div class='AnnouncementsLeftBottom'></div></td>	   <td width='100%'><div class='AnnouncementsMiddleBottom'></div></td>	   <td><div class='AnnouncementsRightBottom'></div></td></tr></table></h4></div></div></td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0"  width="100%" class="splashLinkFrame">
+					<tr>
+						<td width="50%" valign="top" style="padding-top:3px;" class="splashLinkArea">
+						    <table cellpadding="0" cellspacing="0" border="0" width="100%" class="splashLinkFrame">
+						        <tr>
+						            <td width="50%" valign="top" colspan="2" style="padding-top:3px;" class="splashLinkArea">
+    									<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td id="MSOZoneCell_WebPartWPQ12" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="bffd9929-c035-48f8-8898-fc8facea8254" HasPers="false" id="WebPartWPQ12" width="100%" allowDelete="false" style="" ><div class="Announcements" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:SharePoint="Microsoft.SharePoint.WebControls" xmlns:ddwrt2="urn:frontpage:internal"><div class="Announcements2"><div class="Announcements3"><div class="Rss"><a target="_blank" href="http://www.moe.gov.ae/Arabic/_layouts/listfeed.aspx?List=e9be1cc7-a79e-452a-b560-5a4c73e44343" name="RSS %D8%AE%D8%AF%D9%85%D8%A9 %D8%A7%D9%84%D8%AA%D9%84%D9%82%D9%8A%D9%85 %D8%B9%D9%86 %D8%B7%D8%B1%D9%8A%D9%82"><div class="RssImage"></div></a></div><h3>إعلانات وزارة التربية والتعليم</h3><ul class="Announcements"><li><span class="Header"><a href="../Lists/Announcements/Display.aspx?ID=103" class="More">إعلان</a>     1/25/2010</span>فتح باب التسجيل للحصول على التفرغ الدراسي داخل الدولة وخارجها ...</li><li><span class="Header"><a href="../Lists/Announcements/Display.aspx?ID=99" class="More">جدول امتحانات نهاية الفصل الدراسي الأول</a>     1/4/2010</span>جدول امتحانات نهاية الفصل الدراسي الأول للصف الثاني عشر...</li><li><span class="Header"><a href="../Lists/Announcements/Display.aspx?ID=96" class="More">تنظيم مواعيد وأعمال الامتحانات</a>     11/19/2009</span>تنظيم مواعيد وأعمال الامتحانات للعام الدراسي 2009/2010...</li></ul><div class="ViewAll"><a href="../Lists/Announcements/ViewAll.aspx">عرض الكل</a></div></div></div></div></div></td>
+			</tr>
+		</table><div class="ms-PartSpacingVertical"></div></td>
+	</tr><tr>
+		<td id="MSOZoneCell_WebPartWPQ32" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="271b8850-2fe5-4bd3-941c-e2357da3a2b4" HasPers="false" id="WebPartWPQ32" width="100%" class="ms-WPBody" allowDelete="false" style="" ><br>
+<script src="http://www.moe.gov.ae/Arabic/Banners/AC_RunActiveContent.js" type="text/javascript"></script>
+
+    <table width="552" cellspacing="0" cellpadding="0">
+        <tr>
+            <td width="260" height="235" >
+
+                <script type="text/javascript">
+                    AC_FL_RunContent('codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0', 'width', '260', 'height', '235', 'src', 'http://www.moe.gov.ae/Arabic/Banners/activities_banner_ar', 'quality', 'high', 'pluginspage', 'http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash', 'movie', 'http://www.moe.gov.ae/Arabic/Banners/activities_banner_ar'); //end AC code
+                </script>
+
+                <noscript>
+                    <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0"
+                        width="260" height="235">
+                        <param name="movie" value="http://www.moe.gov.ae/Arabic/Banners/activities_banner_ar.swf">
+                        <param name="quality" value="high">
+                        <embed src="http://www.moe.gov.ae/Arabic/Banners/activities_banner_ar.swf"
+                            quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"
+                            type="application/x-shockwave-flash" width="260" height="235"></embed>
+                    </object>
+                </noscript>
+            </td>
+            <td width="10" bgcolor="#FFFFFF">
+                &nbsp;
+            </td>
+            <td width="285" bgcolor="#000000">
+                <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0"
+                    width="285" height="235">
+                    <param name="movie" value="http://www.moe.gov.ae/Arabic/Banners/Mother and son.swf">
+                    <param name="quality" value="high">
+                    <param name="allowScriptAccess" value="sameDomain" />
+                    <param name="allowFullScreen" value="True" />
+                    <embed src="http://www.moe.gov.ae/Arabic/Banners/Mother and son.swf"
+                        quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"
+                        width="285" height="235" allowscriptaccess="sameDomain" allowfullscreen="True">
+                    </embed>
+                </object>
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#E7E7D4">
+                &nbsp;
+            </td>
+            <td bgcolor="#FFFFFF">
+                &nbsp;
+            </td>
+            <td bgcolor="#E7E7D4">                
+              &nbsp;
+            </td>
+        </tr>
+    </table></div></td>
+			</tr>
+		</table><div class="ms-PartSpacingVertical"></div></td>
+	</tr><tr>
+		<td id="MSOZoneCell_WebPartWPQ15" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="8c8167d9-6422-4c28-a76b-71d249a5d9b6" HasPers="false" id="WebPartWPQ15" width="100%" allowDelete="false" style="display:none;" ><div class="Interviews" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:SharePoint="Microsoft.SharePoint.WebControls" xmlns:ddwrt2="urn:frontpage:internal"><div class="Interviews2"><div class="Interviews3"><div class="Rss"><a target="_blank" href="http://www.moe.gov.ae/Arabic/_layouts/listfeed.aspx?List=53d2d169-580f-4261-bb1f-9c3b8b503f3a" title="RSS خدمة التلقيم عن طريق"><div class="RssImage"></div></a></div><h3>مقابلات وزراة التربية والتعليم</h3><div class="InterviewsTop"></div><ul class="Interviews"><li><a href="../Lists/Interviews/Display.aspx?ID=23" class="More">القطامي : نبحث إضافة حوافز مادية للمعلمين ...</a></li><li><a href="../Lists/Interviews/Display.aspx?ID=24" class="More">&quot; الرماقية &quot; ... رؤية تتجاوز الأنماط التقليدية...</a></li><li><a href="../Lists/Interviews/Display.aspx?ID=22" class="More">مدرسة أذن ... بصمة في قلب الميدان التربوي...</a></li></ul></div></div></div></div></td>
+			</tr>
+		</table><div class="ms-PartSpacingVertical"></div></td>
+	</tr><tr>
+		<td id="MSOZoneCell_WebPartWPQ25" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="14bbf62a-8d82-45b2-bfd8-e47a370b769e" HasPers="false" id="WebPartWPQ25" width="100%" class="ms-WPBody" allowDelete="false" style="display:none;" ><A title="" href="http://www.gesseducation.com/ar" target=_blank><IMG style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: 0px solid" height=65 src="http://www.moe.gov.ae/Arabic/PublishingImages/gess.gif" width=549 border=0></A></div></td>
+			</tr>
+		</table><div class="ms-PartSpacingVertical"></div></td>
+	</tr><tr>
+		<td id="MSOZoneCell_WebPartWPQ27" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="bfb5f9f5-8350-43e6-b67e-5b80a1cf2a67" HasPers="false" id="WebPartWPQ27" width="100%" class="ms-WPBody" allowDelete="false" style="display:none;" ><A title="" href="http://www.moe.gov.ae/Arabic/Document%20Library/Default.html" target=_blank><IMG style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 549px; BORDER-BOTTOM: 0px solid" src="http://www.moe.gov.ae/Arabic/Document%20Library/الدليل.gif" border=0></A></div></td>
+			</tr>
+		</table><div class="ms-PartSpacingVertical"></div></td>
+	</tr><tr>
+		<td id="MSOZoneCell_WebPartWPQ29" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="7c99d20e-1961-402d-8e32-387c2c3795e3" HasPers="false" id="WebPartWPQ29" width="100%" class="ms-WPBody" allowDelete="false" style="display:none;" ><A title="" href="http://www.moe.gov.ae/Arabic/Pages/401010.aspx" target=""><IMG style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 549px; BORDER-BOTTOM: 0px solid; HEIGHT: 69px" src="http://www.moe.gov.ae/Arabic/Doc%20Lib/التعليم-العالي-1.jpg" border=0></A></div></td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+                                    </td>
+						        </tr>
+            					<tr>
+            						<td valign="top">
+            									<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td id="MSOZoneCell_WebPartWPQ22" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="dd6cb900-c853-412e-9cde-1530ea8f4bf2" HasPers="false" id="WebPartWPQ22" width="100%" class="ms-WPBody" allowDelete="false" style="display:none;" ><A title="" href="http://www.moe.gov.ae/Arabic/Pages/ministerletter.aspx" target=""><IMG style="BORDER-BOTTOM: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 265px; HEIGHT: 102px; BORDER-TOP: 0px solid; BORDER-RIGHT: 0px solid" border=0 src="http://www.moe.gov.ae/Arabic/PublishingImages/h1n1222.gif"></A></div></td>
+			</tr>
+		</table><div class="ms-PartSpacingVertical"></div></td>
+	</tr><tr>
+		<td id="MSOZoneCell_WebPartWPQ18" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="ad6e3cb7-0fce-4fbf-89c7-62a5a6f2d378" HasPers="false" id="WebPartWPQ18" width="100%" class="ms-WPBody" allowDelete="false" style="display:none;" ><A title="" href="http://www.moe.gov.ae/Arabic/Pages/assessment.aspx" target=""><IMG style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: 0px solid" src="http://www.moe.gov.ae/SiteCollectionImages/inter_exm.bmp" border=0></A></div></td>
+			</tr>
+		</table><div class="ms-PartSpacingVertical"></div></td>
+	</tr><tr>
+		<td id="MSOZoneCell_WebPartWPQ8" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="f9df0424-c5b3-4ea7-96da-53d4df9363b6" HasPers="false" id="WebPartWPQ8" width="100%" class="ms-WPBody" allowDelete="false" style="display:none;" ><div class="PhotoAlbum"><div class="PhotoAlbum1"><div class="PhotoAlbum2"><div class="PhotoAlbum3"><h3>ألبوم الصور</h3><div class="Thumbs"><a href="/Arabic/MOE Photo Album/مكتوم بن محمد بن راشد لدى حضوره حفل تكريم طلبة الثانوية، يرافقه حميد القطامي.jpg" target="_blank"><img class="Thumbnails" src="http://www.moe.gov.ae/Arabic/MOE%20Photo%20Album/_t/%d9%85%d9%83%d8%aa%d9%88%d9%85%20%d8%a8%d9%86%20%d9%85%d8%ad%d9%85%d8%af%20%d8%a8%d9%86%20%d8%b1%d8%a7%d8%b4%d8%af%20%d9%84%d8%af%d9%89%20%d8%ad%d8%b6%d9%88%d8%b1%d9%87%20%d8%ad%d9%81%d9%84%20%d8%aa%d9%83%d8%b1%d9%8a%d9%85%20%d8%b7%d9%84%d8%a8%d8%a9%20%d8%a7%d9%84%d8%ab%d8%a7%d9%86%d9%88%d9%8a%d8%a9%d8%8c%20%d9%8a%d8%b1%d8%a7%d9%81%d9%82%d9%87%20%d8%ad%d9%85%d9%8a%d8%af%20%d8%a7%d9%84%d9%82%d8%b7%d8%a7%d9%85%d9%8a_jpg.jpg" border="0" height="40" width="53" /></a><a href="NoPic" target="_blank"></a><a href="NoPic" target="_blank"></a></div><div class="ViewAll"><a class="ViewAll" style="color:#6f2525;text-decoration: underline" href="/Arabic/MoE%20Photo%20Album/Forms/ViewAll.aspx">عرض الكل</a></div></div></div></div></div></div></td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+            						</td>
+            						<td valign="top">
+            									<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td id="MSOZoneCell_WebPartWPQ23" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="f88c11d9-386a-4971-b994-893f64d6e127" HasPers="false" id="WebPartWPQ23" width="100%" class="ms-WPBody" allowDelete="false" style="display:none;" ><A title="" href="http://www.moe.gov.ae/Arabic/Pages/HINIListPage.aspx" target=""><IMG style="BORDER-BOTTOM: 0px solid; BORDER-LEFT: 0px solid; BORDER-TOP: 0px solid; BORDER-RIGHT: 0px solid" border=0 src="http://www.moe.gov.ae/Arabic/PublishingImages/h1n1.gif"></A></div></td>
+			</tr>
+		</table><div class="ms-PartSpacingVertical"></div></td>
+	</tr><tr>
+		<td id="MSOZoneCell_WebPartWPQ21" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="1a58fed9-7f02-4bdc-9760-f9b4f0d5ef6f" HasPers="false" id="WebPartWPQ21" width="100%" class="ms-WPBody" allowDelete="false" style="display:none;" ><A title="" href="http://www.moe.gov.ae/Arabic/Pages/suc.aspx" target=""><IMG style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: 0px solid" src="http://www.moe.gov.ae/Arabic/Doc%20Lib/بوابتك%20للنجاح.jpg" border=0></A> </div></td>
+			</tr>
+		</table><div class="ms-PartSpacingVertical"></div></td>
+	</tr><tr>
+		<td id="MSOZoneCell_WebPartWPQ9" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="68b0123e-a10f-428d-bcb9-78c17d5a6a00" HasPers="false" id="WebPartWPQ9" width="100%" allowDelete="false" style="display:none;" ><?xml version="1.0" encoding="utf-8"?><div class="SchoolFinderSide"><a href="SchoolFinder.aspx"><div class="SchoolFinderHomeNav" /></a></div></div></td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+            						</td>
+            					</tr>
+						    </table>
+						</td>
+						<td width="50%" valign="top" style="padding:3px;" class="splashLinkArea">
+									<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td id="MSOZoneCell_WebPartWPQ31" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="e59a6d77-688f-498f-b5d1-c9b491cf2348" HasPers="false" id="WebPartWPQ31" width="100%" class="ms-WPBody" allowDelete="false" style="" ><table  background="http://www.moe.gov.ae/Arabic/Banners/ecc-banner.jpg"  width="177px" height="140px" border="0" cellspacing="0" cellpadding="0">
+  <tr  >
+   <td width="5">&nbsp;</td>
+    <td width="157" style="font-family:tahoma;font-weight:bold;font-size:16px;color:#FFFFFF !important"><a  style="color:#FFFFFF;text-decoration:none;" href="http://www.ecc.ae/ar/index.html">التنافسية</a></td>
+     
+  </tr>
+  <tr  >
+    <td colspan="2" >&nbsp;</td>
+  </tr>
+  <tr  >
+    <td colspan="2" >&nbsp;</td>
+  </tr>
+  <tr  >
+    <td colspan="2" >&nbsp;</td>
+  </tr>
+  <tr  >
+    <td colspan="2" >&nbsp;</td>
+  </tr>
+
+</table>
+<br/>
+
+<table width="177" height="140" border="0" cellspacing="0" cellpadding="0" background="http://www.moe.gov.ae/Arabic/Banners/health_ar.jpg">
+  <tr>
+   <td width="5px">&nbsp;</td>
+    <td style="font-family:tahoma;font-weight:bold;font-size:16px;color:#FFFFFF !important;text-decoration:none">
+<a style="color:#FFFFFF;text-decoration:none;" href="http://www.moe.gov.ae/Arabic/Pages/Health%20and%20Nutrition.aspx">الصحة والتغذية</a></td>
+    
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<br>
+<table width="177" height="140" border="0" cellspacing="0" cellpadding="0" background="http://www.moe.gov.ae/Arabic/Banners/school%20finder%20ar.jpg">
+  <tr>
+   <td width="5px">&nbsp;</td>
+    <td style="font-family:tahoma;font-weight:bold;font-size:16px;color:#FFFFFF !important">
+    <a style="color:#FFFFFF;text-decoration:none;"  href="http://www.moe.gov.ae/Arabic/Pages/mapmoe.aspx">ابحث عن مدرسة</a></td>
+    
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</div></td>
+			</tr>
+		</table><div class="ms-PartSpacingVertical"></div></td>
+	</tr><tr>
+		<td id="MSOZoneCell_WebPartWPQ14" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="b79c66fd-7507-4822-8e36-1e2ad930e3fd" HasPers="false" id="WebPartWPQ14" width="100%" allowDelete="false" style="display:none;" ><div class="Investigations" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:SharePoint="Microsoft.SharePoint.WebControls" xmlns:ddwrt2="urn:frontpage:internal"><div class="Investigations2"><div class="Investigations3"><div class="Rss"><a target="_blank" href="http://www.moe.gov.ae/Arabic/_layouts/listfeed.aspx?List=9b54ba5b-9d0a-4382-85e6-e9389f9f88dc" title="RSS خدمة التلقيم عن طريق"><div class="RssImage"></div></a></div><h3>تحقيقات وزارة التربية والتعليم</h3><div class="InvestigationsTop"></div><span class="Error">
+								لا توجد تحقيقات في الوقت الحالي
+							</span></div></div></div></div></td>
+			</tr>
+		</table><div class="ms-PartSpacingVertical"></div></td>
+	</tr><tr>
+		<td id="MSOZoneCell_WebPartWPQ11" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="e6b10579-5959-4bc6-b1db-141957995820" HasPers="false" id="WebPartWPQ11" width="100%" class="ms-WPBody" allowDelete="false" style="display:none;" ><div class="CalendarHeader_v2"><h3><span>تقويم الأحداث</span></h3></div><div class="Calendar_v2"><div class="MonthSelection_v2"><table border="0" cellpadding="0" cellspacing="0"><tr><td style="padding-top: 3px"><span>فبراير 3,2010</span></td><td style="padding-left: 5px; padding-right: 5px; padding-top: 3px"><input type="submit" name="ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$CalendarButton1_v2" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$CalendarButton1_v2&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_SPWebPartManager1_g_e6b10579_5959_4bc6_b1db_141957995820_CalendarButton1_v2" class="CalendarButton1_v2" /></td><td style="padding-top: 3px"><input type="submit" name="ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$CalendarButton2_v2" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$CalendarButton2_v2&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_SPWebPartManager1_g_e6b10579_5959_4bc6_b1db_141957995820_CalendarButton2_v2" class="CalendarButton2_v2" /></td></tr></table></div><div class="DayList_v2"><table class="Calendar_v2" cellspacing="0" cellpadding="0" title="Calendar" border="0" width="156">
+					<tr><th align="center" abbr="السبت" scope="col">س</th><th align="center" abbr="الاحد" scope="col">أ</th><th align="center" abbr="الاثنين" scope="col">ا</th><th align="center" abbr="الثلاثاء" scope="col">ث</th><th align="center" abbr="الاربعاء" scope="col">أ</th><th align="center" abbr="الخميس" scope="col">خ</th><th align="center" abbr="الجمعة" scope="col">ج</th></tr><tr><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3682')" style="color:Gray" title="30 يناير">30</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3683')" style="color:Gray" title="31 يناير">31</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3684')" style="color:Gray" title="01 فبراير">1</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3685')" style="color:Gray" title="02 فبراير">2</a></font></td><td class="Selected_v2" align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3686')" style="color:Gray" title="03 فبراير">3</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3687')" style="color:Gray" title="04 فبراير">4</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3688')" style="color:Gray" title="05 فبراير">5</a></font></td></tr><tr><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3689')" style="color:Gray" title="06 فبراير">6</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3690')" style="color:Gray" title="07 فبراير">7</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3691')" style="color:Gray" title="08 فبراير">8</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3692')" style="color:Gray" title="09 فبراير">9</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3693')" style="color:Gray" title="10 فبراير">10</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3694')" style="color:Gray" title="11 فبراير">11</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3695')" style="color:Gray" title="12 فبراير">12</a></font></td></tr><tr><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3696')" style="color:Gray" title="13 فبراير">13</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3697')" style="color:Gray" title="14 فبراير">14</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3698')" style="color:Gray" title="15 فبراير">15</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3699')" style="color:Gray" title="16 فبراير">16</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3700')" style="color:Gray" title="17 فبراير">17</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3701')" style="color:Gray" title="18 فبراير">18</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3702')" style="color:Gray" title="19 فبراير">19</a></font></td></tr><tr><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3703')" style="color:Gray" title="20 فبراير">20</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3704')" style="color:Gray" title="21 فبراير">21</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3705')" style="color:Gray" title="22 فبراير">22</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3706')" style="color:Gray" title="23 فبراير">23</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3707')" style="color:Gray" title="24 فبراير">24</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3708')" style="color:Gray" title="25 فبراير">25</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3709')" style="color:Gray" title="26 فبراير">26</a></font></td></tr><tr><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3710')" style="color:Gray" title="27 فبراير">27</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3711')" style="color:Gray" title="28 فبراير">28</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3712')" style="color:Gray" title="01 مارس">1</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3713')" style="color:Gray" title="02 مارس">2</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3714')" style="color:Gray" title="03 مارس">3</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3715')" style="color:Gray" title="04 مارس">4</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3716')" style="color:Gray" title="05 مارس">5</a></font></td></tr><tr><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3717')" style="color:Gray" title="06 مارس">6</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3718')" style="color:Gray" title="07 مارس">7</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3719')" style="color:Gray" title="08 مارس">8</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3720')" style="color:Gray" title="09 مارس">9</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3721')" style="color:Gray" title="10 مارس">10</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3722')" style="color:Gray" title="11 مارس">11</a></font></td><td align="center" width="14%"><font color="Gray"><a href="javascript:__doPostBack('ctl00$SPWebPartManager1$g_e6b10579_5959_4bc6_b1db_141957995820$ctl02','3723')" style="color:Gray" title="12 مارس">12</a></font></td></tr>
+				</table></div></div></div></td>
+			</tr>
+		</table><div class="ms-PartSpacingVertical"></div></td>
+	</tr><tr>
+		<td id="MSOZoneCell_WebPartWPQ30" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="665d2806-5bba-49f0-b985-f50e8a45040b" HasPers="false" id="WebPartWPQ30" width="100%" allowDelete="false" style="display:none;" ><div class="EventsCalendarLink" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ddw1="http://tempuri.org/" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:SharePoint="Microsoft.SharePoint.WebControls" xmlns:ddwrt2="urn:frontpage:internal" xmlns:date="http://exslt.org/dates-and-times"></div><div class="Events" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ddw1="http://tempuri.org/" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:SharePoint="Microsoft.SharePoint.WebControls" xmlns:ddwrt2="urn:frontpage:internal" xmlns:date="http://exslt.org/dates-and-times"><ul class="Events"><li><a href="/English/Lists/Calendar/DispForm.aspx?ID=90">CESS Expiation & GEF  2/23/2010</a></li></ul><div class="ViewAll"><a href="../Lists/Calendar/ViewAll.aspx">View All</a></div></div><div class="EventsFooter" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ddw1="http://tempuri.org/" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:SharePoint="Microsoft.SharePoint.WebControls" xmlns:ddwrt2="urn:frontpage:internal" xmlns:date="http://exslt.org/dates-and-times"></div></div></td>
+			</tr>
+		</table><div class="ms-PartSpacingVertical"></div></td>
+	</tr><tr>
+		<td id="MSOZoneCell_WebPartWPQ16" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="b188d43b-7bd7-4890-8932-fd57d6acb0c3" HasPers="false" id="WebPartWPQ16" width="100%" class="ms-WPBody" allowDelete="false" style="display:none;" ><IMG style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; WIDTH: 184px; BORDER-BOTTOM: 0px solid; HEIGHT: 184px" src="http://www.moe.gov.ae/Arabic/PublishingImages/National_day.png" width=184 border=0> <br></div></td>
+			</tr>
+		</table><div class="ms-PartSpacingVertical"></div></td>
+	</tr><tr>
+		<td id="MSOZoneCell_WebPartWPQ24" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="49f0d16c-4d55-487e-886e-4d6cc9370fdc" HasPers="false" id="WebPartWPQ24" width="100%" class="ms-WPBody" allowDelete="false" style="display:none;" ><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="182" height="120">
+  <param name="movie" value="http://www.moe.gov.ae/Arabic/Doc%20Lib/MASTER%20Arabic%20REVISED%20LOWREZ.swf">
+  <param name="quality" value="high">
+  <param name="allowScriptAccess" value="sameDomain" />
+  <param name="allowFullScreen" value="True" />
+  <embed src="http://www.moe.gov.ae/Arabic/Doc%20Lib/MASTER%20Arabic%20REVISED%20LOWREZ.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="182" height="120" allowScriptAccess="sameDomain" allowFullScreen="True">
+  </embed> 
+</object></div></td>
+			</tr>
+		</table><div class="ms-PartSpacingVertical"></div></td>
+	</tr><tr>
+		<td id="MSOZoneCell_WebPartWPQ26" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="6089969f-9fb1-4b25-8a8c-f2b31bd4ebf1" HasPers="false" id="WebPartWPQ26" width="100%" class="ms-WPBody" allowDelete="false" style="display:none;" ><a href="http://www.moe.gov.ae/Arabic/Pages/alalm_nooor.aspx" ><img src="http://www.moe.gov.ae/Arabic/PublishingImages/knowledge_nov11.jpg" border="0" alt=" " /></a></div></td>
+			</tr>
+		</table><div class="ms-PartSpacingVertical"></div></td>
+	</tr><tr>
+		<td id="MSOZoneCell_WebPartWPQ28" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="77c886d7-78e4-4ebc-ab67-99480aa177e9" HasPers="false" id="WebPartWPQ28" width="100%" class="ms-WPBody" allowDelete="false" style="display:none;" ><A title="" href="http://www.moe.gov.ae/Arabic/Pages/edu_stat.aspx" target=""><IMG style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: 0px solid" src="http://www.moe.gov.ae/Arabic/Doc%20Lib/statistics_dec9.jpg" border=0></A> </div></td>
+			</tr>
+		</table><div class="ms-PartSpacingVertical"></div></td>
+	</tr><tr>
+		<td id="MSOZoneCell_WebPartWPQ20" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="0ad28e46-ba3d-47ab-b9a2-c7c16c177b1e" HasPers="false" id="WebPartWPQ20" width="100%" class="ms-WPBody" allowDelete="false" style="display:none;" ><IMG style="BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; BORDER-LEFT: 0px solid; BORDER-BOTTOM: 0px solid" src="/Arabic/PublishingImages/knowledge_nov11.jpg" border=0></div></td>
+			</tr>
+		</table><div class="ms-PartSpacingVertical"></div></td>
+	</tr><tr>
+		<td id="MSOZoneCell_WebPartWPQ19" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="8bf5533b-0a2e-4010-812c-540b3422e5f9" HasPers="false" id="WebPartWPQ19" width="100%" class="ms-WPBody" allowDelete="false" style="display:none;" ><a href="http://www.moe.gov.ae/Arabic/Pages/2401010.aspx"><IMG style="BORDER-BOTTOM: 0px solid; BORDER-LEFT: 0px solid; BORDER-TOP: 0px solid; BORDER-RIGHT: 0px solid" border=0 src="http://www.moe.gov.ae/Arabic/Doc%20Lib/الاجازات-الدراسية.jpg"></a></div></td>
+			</tr>
+		</table><div class="ms-PartSpacingVertical"></div></td>
+	</tr><tr>
+		<td id="MSOZoneCell_WebPartWPQ17" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="7f925be0-3420-413b-96cd-1925ea5c9753" HasPers="false" id="WebPartWPQ17" width="100%" class="ms-WPBody" allowDelete="false" style="display:none;" ><div class="PollsHeader_v2"><h3><span>استفتاء</span></h3></div><div class="Polls_v2"><div class="Polls2_v2"><div class="PollQuestion_v2"><span>ما هو تقييمك لتصميم الموقع الجديد لوزارة التربية والتعليم؟</span><div id="ErrorMessagePoll_v2"></div></div><div class="PollAnswer_v2"><span id="ctl00_SPWebPartManager1_g_7f925be0_3420_413b_96cd_1925ea5c9753_ctl03" class="PollAnswer" onclick="HideLabel()"><input id="ctl00_SPWebPartManager1_g_7f925be0_3420_413b_96cd_1925ea5c9753_ctl03_0" type="radio" name="ctl00$SPWebPartManager1$g_7f925be0_3420_413b_96cd_1925ea5c9753$ctl03" value="ممتاز" /><label for="ctl00_SPWebPartManager1_g_7f925be0_3420_413b_96cd_1925ea5c9753_ctl03_0">ممتاز</label><input id="ctl00_SPWebPartManager1_g_7f925be0_3420_413b_96cd_1925ea5c9753_ctl03_1" type="radio" name="ctl00$SPWebPartManager1$g_7f925be0_3420_413b_96cd_1925ea5c9753$ctl03" value="جيد" /><label for="ctl00_SPWebPartManager1_g_7f925be0_3420_413b_96cd_1925ea5c9753_ctl03_1">جيد</label><input id="ctl00_SPWebPartManager1_g_7f925be0_3420_413b_96cd_1925ea5c9753_ctl03_2" type="radio" name="ctl00$SPWebPartManager1$g_7f925be0_3420_413b_96cd_1925ea5c9753$ctl03" value="سيء" /><label for="ctl00_SPWebPartManager1_g_7f925be0_3420_413b_96cd_1925ea5c9753_ctl03_2">سيء</label></span></div><div class="PollButtons_v2"><input type="submit" name="ctl00$SPWebPartManager1$g_7f925be0_3420_413b_96cd_1925ea5c9753$ctl04" value="تصويت" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$SPWebPartManager1$g_7f925be0_3420_413b_96cd_1925ea5c9753$ctl04&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" class="VoteButtonSmall_v2" /><input type="submit" name="ctl00$SPWebPartManager1$g_7f925be0_3420_413b_96cd_1925ea5c9753$ctl05" value="نتيجة التصويت " onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$SPWebPartManager1$g_7f925be0_3420_413b_96cd_1925ea5c9753$ctl05&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" class="VoteButtonLarg_v2" /></div></div></div><script> function HideLabel() { document.all["ErrorMessagePoll"].style.display="none";}</script></div></td>
+			</tr>
+		</table><div class="ms-PartSpacingVertical"></div></td>
+	</tr><tr>
+		<td id="MSOZoneCell_WebPartWPQ10" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="ab1b15e2-bc27-4fcc-9ab6-808c6bbec3a6" HasPers="false" id="WebPartWPQ10" width="100%" class="ms-WPBody" allowMinimize="false" allowDelete="false" style="display:none;" ><div class="UserGeneric" ErrorWebPart="1">
+					<span class="ms-bold">خطأ في جزء ويب: </span>لا يمكن عرض عنصر تحكم جزء ويب أو نموذج ويب في هذه الصفحة أو استيراده منها. تعذر العثور على النوع أو لم يتم تسجيله باعتباره آمن.<br><br><span class="ms-bold">تفاصيل الخطأ:</span><br>[UnsafeControlException: لا يمكن عرض عنصر تحكم جزء ويب أو نموذج ويب في هذه الصفحة أو استيراده منها. تعذر العثور على النوع أو لم يتم تسجيله باعتباره آمن.]<br>&nbsp;   at Microsoft.SharePoint.ApplicationRuntime.SafeControls.GetTypeFromGuid(Guid guid)<br>&nbsp;   at Microsoft.SharePoint.WebPartPages.SPWebPartManager.CreateWebPartsFromRowSetData(Boolean onlyInitializeClosedWebParts)
+				</div></div></td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+
+<!-- Sharepoint body start -->
+
+                    
+               </div>          
+                    
+                    </td>
+                     <!--Main Body End-->
+                    </tr>
+                </table></td>
+              </tr>
+              
+            </table></td>
+            
+            
+            
+            
+          
+            
+            
+            
+            
+            
+
+          </tr>
+          <tr>
+            <td valign="top">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td valign="top"  >&nbsp;</td>
+          </tr>
+       
+        </table>
+        
+                       
+        <!--Body end-->
+        
+        </td>
+        <td>&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><table width="990" cellspacing="0" cellpadding="0">
+       <tr>
+        <td colspan="3">&nbsp;</td>
+        </tr>
+      <tr>
+        <td width="17">&nbsp;</td>
+        <td ><div class="footer">
+			آخر تحديث للموقع تم بتاريخ 20 يناير 2010</div></td>
+        <td width="18">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td  class="footer">
+         <a href="/Arabic/Pages/ApproachesPrivacy.aspx" id="ctl00_PrivacylnkTest" class="footerlink">
+			سياسة الخصوصية</a> |   
+        <a href="/Arabic/Pages/TermsandConditions.aspx" id="ctl00_TermsAndConditionlnkTest" class="footerlink">
+			الشروط والأحكام</a>
+|  
+        
+
+         <a href="/Arabic/Pages/Disclaimer.aspx" id="ctl00_DisclamierlnkTest" class="footerlink">
+			إخلاء المسئولية</a>
+         |  
+         <a href="/Arabic/Pages/Warning.aspx" id="ctl00_WarninglnkTest" class="footerlink">
+			تحذير</a>
+       
+        | 
+          <a href="/Arabic/Pages/Access.aspx" id="ctl00_AccesslnkTest" class="footerlink">
+			إمكانية الوصول</a>
+  | 
+
+          <a href="/Arabic/Pages/ContactInformation.aspx" id="ctl00_AssistanceContactTest" class="footerlink">
+
+			اتصل بنا
+			</a>
+</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td class="footer" height="35px">
+        حقوق النسخ © وزارة التربية والتعليم، جميع الحقوق محفوظة
+        </td>
+        <td>&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+
+
+
+
+
+    <script language="Javascript">
+    <!--
+        function doClear(theText,Val) 
+        { 
+         if(theText.value==Val)
+            {
+                theText.value = "";
+            }
+        }  
+      function doFill(theText,Val)
+       {
+        if(theText.value=="")
+            {
+                theText.value =  Val;
+            }
+        }  
+            /-->  
+
+    </script>
+
+    <script type="text/javascript">
+
+ 
+
+var alltags = document.getElementsByTagName("body")[0].getElementsByTagName("*");
+
+var sPath = window.location.pathname;
+
+var sPage = sPath.substring(sPath.lastIndexOf('/') + 1); 
+
+ 
+
+if ( (sPage.toLowerCase() == "dispform.aspx"))
+
+{
+
+                for(i=0;i<alltags.length;i++) 
+
+        { 
+
+               try{ 
+
+                if ((alltags[i].tagName.toLowerCase() == "a") &&  (alltags[i].getAttribute("href").indexOf("Lists/Event%20Categories/DispForm.aspx?") > 0)) 
+
+                      {
+
+ 
+
+                               alltags[i].style.textDecoration="none";
+
+                               alltags[i].style.color="#000000";
+
+                             
+
+                            
+
+                      }             
+
+               } catch(e) { } 
+
+                }
+
+}
+
+    </script>
+
+
+
+
+
+    
+
+<script type="text/javascript">
+//<![CDATA[
+var __wpmExportWarning='This Web Part Page has been personalized. As a result, one or more Web Part properties may contain confidential information. Make sure the properties contain information that is safe for others to read. After exporting this Web Part, view properties in the Web Part description file (.WebPart) by using a text editor such as Microsoft Notepad.';var __wpmCloseProviderWarning='You are about to close this Web Part.  It is currently providing data to other Web Parts, and these connections will be deleted if this Web Part is closed.  To close this Web Part, click OK.  To keep this Web Part, click Cancel.';var __wpmDeleteWarning='You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.';//]]>
+</script>
+<script type="text/javascript" language="JavaScript" defer>
+<!--
+function S622C1022_Submit() {GoSearch(null,'ctl00_PlaceHolderSearchArea_SearchBox_S622C1022_InputKeywords',null,true,false,null,null,null,null,'MoESearch\u002fResults.aspx', 'هذا الموقع','هذه القائمة', 'هذا المجلد', 'المواقع ذات الصلة', '\u002fArabic\u002f_layouts\u002fOSSSearchResults.aspx');}
+// -->
+</script><script type="text/javascript" language="JavaScript" >
+// append an onload event handler
+var S622C1022__onload= document.body.onload;
+if(typeof document.body.onload == 'function')
+{
+ document.body.onload = function()
+ {
+S622C1022__onload();        
+  document.getElementById('ctl00_PlaceHolderSearchArea_SearchBox_S622C1022_InputKeywords').name = 'InputKeywords';
+ }
+}
+else
+{
+ document.body.onload = function()
+ {
+  eval(S622C1022__onload);        
+  document.getElementById('ctl00_PlaceHolderSearchArea_SearchBox_S622C1022_InputKeywords').name = 'InputKeywords';
+ }
+}
+
+function S622C1022_OSBEK(event1) { 
+if((event1.which == 10) || (event1.which == 13))
+{   
+S622C1022_Submit();
+}
+}
+// -->
+</script></form>
+
+    </body>
+</html>

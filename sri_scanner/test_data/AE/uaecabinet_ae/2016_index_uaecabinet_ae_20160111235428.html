@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0; maximum-scale=1">
+
+<meta name="robots" content="index, follow">
+<meta name="baseurl" content="http://uaecabinet.ae/" />
+<meta name="logourl" content="http://uaecabinet.ae/assets/uploads/logo/59b17bfeb0efdf325a6d7a46b8067bca.png" />
+<meta name="curLang" content="ar" />
+	<meta name="description" content="UAE CABINET" />
+	<meta name="keywords" content="UAE CABINET" />
+	<meta name="author" content="UAE CABINET" />
+ <title>UAE CABINET</title>
+<link rel="shortcut icon" href="http://uaecabinet.ae/assets/images/fav-icon.png"> 
+	<link media="all" type="text/css" rel="stylesheet" href="http://uaecabinet.ae/assets/frontend/css/reset.css">
+
+<!--[if lt IE 8]>
+    <link media="all" type="text/css" rel="stylesheet" href="http://uaecabinet.ae/assets/frontend/css/bootstrap-ie7.css">
+
+<![endif]-->
+<link media="all" type="text/css" rel="stylesheet" href="http://uaecabinet.ae/assets/frontend/fonts/css/font-awesome.min.css">
+
+<link media="all" type="text/css" rel="stylesheet" href="http://uaecabinet.ae/assets/frontend/css/bootstrap.css">
+
+	<link media="all" type="text/css" rel="stylesheet" href="http://uaecabinet.ae/assets/frontend/css/bootstrap-ar.css">
+ 
+<!---- animated-css ---->
+
+<link media="all" type="text/css" rel="stylesheet" href="http://uaecabinet.ae/assets/frontend/css/jquery.fancybox.css">
+ 
+<link media="all" type="text/css" rel="stylesheet" href="http://uaecabinet.ae/assets/frontend/css/animate.css">
+
+<link media="all" type="text/css" rel="stylesheet" href="http://uaecabinet.ae/assets/frontend/css/owl.carousel.css">
+
+<link media="all" type="text/css" rel="stylesheet" href="http://uaecabinet.ae/assets/frontend/css/owl.theme.default.min.css">
+
+
+
+<link media="all" type="text/css" rel="stylesheet" href="http://uaecabinet.ae/assets/frontend/css/unroll-menu.css">
+
+<link media="all" type="text/css" rel="stylesheet" href="http://uaecabinet.ae/assets/frontend/css/style.css">
+
+<link media="all" type="text/css" rel="stylesheet" href="http://uaecabinet.ae/assets/frontend/css/gray.min.css">
+
+
+<link media="all" type="text/css" rel="stylesheet" href="http://uaecabinet.ae/assets/frontend/css/style-ar.css">
+
+
+<link media="print" type="text/css" rel="stylesheet" href="http://uaecabinet.ae/assets/frontend/css/print.css">
+
+<link media="all" type="text/css" rel="stylesheet" href="http://uaecabinet.ae/assets/frontend/css/dev.css">
+
+
+<script type="text/javascript" src="http://uaecabinet.ae/assets/frontend/js/jquery-2.1.1.min.js"></script>
+
+<!--[if lt IE 10]>
+    <link media="all" type="text/css" rel="stylesheet" href="http://uaecabinet.ae/assets/frontend/css/ie9-and-down.css">
+
+<![endif]-->
+
+<!--[if lt IE 9]>
+    <script src="http://uaecabinet.ae/assets/frontend/js/html5shiv.js"></script>
+    <script src="http://uaecabinet.ae/assets/frontend/js/respond.min.js"></script>
+       <![endif]-->
+
+
+<script type="text/javascript" src='https://www.google.com/recaptcha/api.js?onload=myCaptchaCallBack&render=explicit&hl=ar' async defer></script>
+
+<script type="text/javascript">
+      var recaptcha1,recaptcha2,sendMail;
+	var issearchPage = false;
+      var myCaptchaCallBack = function() {		
+
+				
+		      };
+      var fontInc = 0;
+	</script>
+</head>
+<body class="        ar ">
+	﻿<header class="header ">
+
+		<div class="container">
+        	<div class="top-block">
+            	
+                  		<div class="navbar-header">
+							                    		<a tabindex="1" class="logoBig" href="http://uaecabinet.ae/ar" data-toggle="tooltip" data-placement="right"  title="UAE CABINET Logo">
+								<img  class="logo" src="http://uaecabinet.ae/assets/uploads/logo/59b17bfeb0efdf325a6d7a46b8067bca.png" alt="UAE CABINET Logo">
+							</a>
+                          
+                  		</div>
+                  	
+                  	
+                  		<div class="top-right">
+							<div class="accessibility">
+								<ul>
+								  <li class="home"> <a data-toggle="tooltip" data-placement="bottom" tabindex="2" title="الصفحة الرئيسة" href="http://uaecabinet.ae/">الصفحة الرئيسة</a></li>
+								  <li class="print"> <a  data-toggle="tooltip" data-placement="bottom" tabindex="3" title="نسخة للطباعة" href="#">نسخة للطباعة</a></li>
+								  <li class="share"> <a  data-toggle="tooltip" data-placement="bottom" tabindex="4" id="sendCabEmail" title="ايميل" href="#sendEmailDiv">ايميل</a></li>
+								  <li class="share-social"  data-toggle="tooltip" data-placement="bottom" tabindex="5" title="للتواصل مع المجتمع الافتراضى"> <span class='st_sharethis_large' displayText='ShareThis' title="للتواصل مع المجتمع الافتراضى"></span> </li>
+								  <li class="eye"> <a   data-toggle="tooltip" data-placement="bottom" tabindex="6" href="#" title="تغيير اللون">تغيير اللون</a></li>
+								  <li class="voice"> 
+								  		<!--<a  data-toggle="tooltip" data-placement="bottom" tabindex="7"  title="استمع لهذه الصفحة" href="#">استمع لهذه الصفحة</a>-->
+								  										  		<div id="vox">  
+											<a  data-toggle="tooltip" data-placement="bottom" tabindex="7"  title="استمع لهذه الصفحة" href="http://webvoice.tingwo.co/ministr5643280vox?url=http://uaecabinet.ae/&lang=ar" onclick="javascript:window.open('http://webvoice.tingwo.co/ministr5643280vox?url=http://uaecabinet.ae/&lang=ar', 'Tingwo', 'toolbar=no,status=no,width=400,height=300,scrollbars=no,menubar=no'); return false;" accesskey="L" target="_vox"> 
+												<!--<img src="http://www.tingwo.co/resources/buttons/button_113.png" alt="Listen to this Page. Powered by Tingwo.co" />--> 
+												استمع لهذه الصفحة
+											</a>  
+										</div>
+								  </li>
+								  <li class="text-plus"> <a  data-toggle="tooltip" data-placement="bottom" tabindex="8"  title="زيادة حجم الخط" class="increaseFont" href="#">زيادة حجم الخط</a></li>
+								  <li class="text-minus"> <a  data-toggle="tooltip" data-placement="bottom" tabindex="9" title="تصغير حجم الخط"  class="decreaseFont"  href="#">تصغير حجم الخط</a></li>
+								</ul>
+							</div>
+             				<div class="searchBlock">
+             					<form method="POST" action="http://uaecabinet.ae/search" accept-charset="UTF-8" class="search-form"><input name="_token" type="hidden" value="z5Hz4EcLza97ZSsfSsnXTCRZeYAjCP0WEeVgs7Dx">	               					<label for="search" class="search-label hidden">بحث</label>
+									<input role="editable text" type="text" aria-label="بحث" placeholder="بحث" title="بحث"  name="searchterm" id="search">
+									<button name="searchButton" class="search-button" role="push button"  title="بحث" data-toggle="tooltip" data-placement="bottom"  > بحث</button>
+               					</form>             				</div>
+            			</div><!-- top-right -->
+            	              <div class="menu-toggle-button" data-menu-id="demo-menu"><i class="fa fa-bars"></i></div> 
+			</div><!-- top-black -->
+		</div><!-- container -->
+  <!-- navbar -->
+                
+	<div class="navbar-main">
+		
+		<div class="container">
+		
+			    <nav class="navbar  mainNavWrap" role="navigation">
+										 
+					<ul  role="menubar" id="demo-menu" class="menu-list"> <li aria-level="0" data-lang="" class=" has-submenu " data-level="0" data-id="1"><a  title="واجهة التصفح الرئيسية مجلس الوزراء"  data-slug="#" href="#" class="">مجلس الوزراء</a><ul class="sub-menu" > <li aria-level="1" data-lang="" class=" has-submenu  sub-menu " data-level="1" data-id="8"><a  title="واجهة التصفح الرئيسية مجلس الوزراء "  data-slug="the-cabinet-1" href="http://uaecabinet.ae/ar/the-cabinet-1" class="">مجلس الوزراء </a><ul class="sub-menu" > <li aria-level="2" data-lang="" class="" data-level="2" data-id="9"><a  title="واجهة التصفح الرئيسية عن مجلس الوزراء "  data-slug="about-the-cabinet" href="http://uaecabinet.ae/ar/about-the-cabinet" class=" ">عن مجلس الوزراء </a> </li> <li aria-level="2" data-lang="" class="" data-level="2" data-id="10"><a  title="واجهة التصفح الرئيسية أعضاء مجلس الوزراء"  data-slug="cabinet-members" href="http://uaecabinet.ae/ar/cabinet-members" class=" ">أعضاء مجلس الوزراء</a> </li> <li aria-level="2" data-lang="" class="" data-level="2" data-id="11"><a  title="واجهة التصفح الرئيسية آلية عمل المجلس"  data-slug="cabinet-mandate" href="http://uaecabinet.ae/ar/cabinet-mandate" class=" ">آلية عمل المجلس</a> </li> <li aria-level="2" data-lang="" class="" data-level="2" data-id="12"><a  title="واجهة التصفح الرئيسية اللجان الدائمة"  data-slug="permanent-committees" href="http://uaecabinet.ae/ar/permanent-committees" class=" ">اللجان الدائمة</a> </li> <li aria-level="2" data-lang="" class="" data-level="2" data-id="13"><a  title="واجهة التصفح الرئيسية المجالس المشكلة"  data-slug="councils" href="http://uaecabinet.ae/ar/councils" class=" ">المجالس المشكلة</a> </li> <li aria-level="2" data-lang="" class="" data-level="2" data-id="14"><a  title="واجهة التصفح الرئيسية تاريخ مجلس الوزراء "  data-slug="cabinet-history" href="http://uaecabinet.ae/ar/cabinet-history" class=" ">تاريخ مجلس الوزراء </a> </li> <li aria-level="2" data-lang="" class="" data-level="2" data-id="56"><a  title="واجهة التصفح الرئيسية دليل أعمال نظام مجلس الوزراء"  data-slug="ministers-council-guide" href="http://uaecabinet.ae/ar/ministers-council-guide" class=" ">دليل أعمال نظام مجلس الوزراء</a> </li> </ul> </li> <li aria-level="1" data-lang="" class="" data-level="1" data-id="15"><a  title="واجهة التصفح الرئيسية المجلس الوزاري للخدمات"  data-slug="ministerial-council-for-services" href="http://uaecabinet.ae/ar/ministerial-council-for-services" class="">المجلس الوزاري للخدمات</a> </li> <li aria-level="1" data-lang="" class=" has-submenu  sub-menu " data-level="1" data-id="16"><a  title="واجهة التصفح الرئيسية وزارة شؤون مجلس الوزراء"  data-slug="ministry-of-cabinet-affairs" href="http://uaecabinet.ae/ar/ministry-of-cabinet-affairs" class="">وزارة شؤون مجلس الوزراء</a><ul class="sub-menu" > <li aria-level="2" data-lang="" class="" data-level="2" data-id="17"><a  title="واجهة التصفح الرئيسية الأمانة العامة لمجلس الوزراء"  data-slug="general-secretariat-of-the-cabinet" href="http://uaecabinet.ae/ar/general-secretariat-of-the-cabinet" class=" ">الأمانة العامة لمجلس الوزراء</a> </li> <li aria-level="2" data-lang="" class="" data-level="2" data-id="18"><a  title="واجهة التصفح الرئيسية مكتب رئاسة مجلس الوزراء"  data-slug="prime-ministers-office" href="http://uaecabinet.ae/ar/prime-ministers-office" class=" ">مكتب رئاسة مجلس الوزراء</a> </li> </ul> </li> </ul> </li> <li aria-level="0" data-lang="" class=" has-submenu " data-level="0" data-id="2"><a  title="واجهة التصفح الرئيسية رئيس مجلس الوزراء"  data-slug="#" href="#" class="">رئيس مجلس الوزراء</a><ul class="sub-menu" > <li aria-level="1" data-lang="" class="" data-level="1" data-id="19"><a  title="واجهة التصفح الرئيسية السيرة"  data-slug="biography" href="http://uaecabinet.ae/ar/biography" class="">السيرة</a> </li> <li aria-level="1" data-lang="" class="" data-level="1" data-id="20"><a  title="واجهة التصفح الرئيسية الأدوار والمسؤوليات"  data-slug="roles-responsibilities" href="http://uaecabinet.ae/ar/roles-responsibilities" class="">الأدوار والمسؤوليات</a> </li> <li aria-level="1" data-lang="" class="" data-level="1" data-id="21"><a  title="واجهة التصفح الرئيسية مبادرات رئيس مجلس الوزراء"  data-slug="prime-ministers-initiatives" href="http://uaecabinet.ae/ar/prime-ministers-initiatives" class="">مبادرات رئيس مجلس الوزراء</a> </li> <li aria-level="1" data-lang="" class="" data-level="1" data-id="54"><a  title="واجهة التصفح الرئيسية تواصل مع رئيس مجلس الوزراء "  data-slug="contact-the-prime-minister" href="http://uaecabinet.ae/ar/contact-the-prime-minister" class="">تواصل مع رئيس مجلس الوزراء </a> </li> </ul> </li> <li aria-level="0" data-lang="" class=" has-submenu " data-level="0" data-id="3"><a  title="واجهة التصفح الرئيسية دولة الإمارات"  data-slug="uae" href="http://uaecabinet.ae/ar/uae" class="">دولة الإمارات</a><ul class="sub-menu" > <li aria-level="1" data-lang="" class="" data-level="1" data-id="25"><a  title="واجهة التصفح الرئيسية الدستور"  data-slug="the-constitution" href="http://uaecabinet.ae/ar/the-constitution" class="">الدستور</a> </li> <li aria-level="1" data-lang="" class="" data-level="1" data-id="24"><a  title="واجهة التصفح الرئيسية السلطات الاتحاديـــة"  data-slug="federal-system" href="http://uaecabinet.ae/ar/federal-system" class="">السلطات الاتحاديـــة</a> </li> <li aria-level="1" data-lang="" class="" data-level="1" data-id="26"><a  title="واجهة التصفح الرئيسية المجلس الأعلى للاتحاد"  data-slug="federal-supreme-council" href="http://uaecabinet.ae/ar/federal-supreme-council" class="">المجلس الأعلى للاتحاد</a> </li> <li aria-level="1" data-lang="" class="" data-level="1" data-id="27"><a  title="واجهة التصفح الرئيسية الجهات الحكومية الاتحادية "  data-slug="federal-government-entities" href="http://uaecabinet.ae/ar/federal-government-entities" class="">الجهات الحكومية الاتحادية </a> </li> </ul> </li> <li aria-level="0" data-lang="" class=" has-submenu " data-level="0" data-id="4"><a  title="واجهة التصفح الرئيسية استراتيجية الحكومة"  data-slug="#" href="#" class="">استراتيجية الحكومة</a><ul class="sub-menu" > <li aria-level="1" data-lang="" class="" data-level="1" data-id="28"><a  title="واجهة التصفح الرئيسية رؤية الإمارات"  data-slug="uae-vision" href="http://uaecabinet.ae/ar/uae-vision" class="">رؤية الإمارات</a> </li> <li aria-level="1" data-lang="" class="" data-level="1" data-id="29"><a  title="واجهة التصفح الرئيسية الأجندة الوطنية"  data-slug="national-agenda" href="http://uaecabinet.ae/ar/national-agenda" class="">الأجندة الوطنية</a> </li> <li aria-level="1" data-lang="" class=" has-submenu  sub-menu " data-level="1" data-id="30"><a  title="واجهة التصفح الرئيسية التخطيط الاستراتيجي"  data-slug="strategic-planning" href="http://uaecabinet.ae/ar/strategic-planning" class="">التخطيط الاستراتيجي</a><ul class="sub-menu" > <li aria-level="2" data-lang="" class="" data-level="2" data-id="46"><a  title="واجهة التصفح الرئيسية استراتيجية الحكومة 2010-2008"  data-slug="uae-strategy-2008-2010" href="http://uaecabinet.ae/ar/uae-strategy-2008-2010" class=" ">استراتيجية الحكومة 2010-2008</a> </li> <li aria-level="2" data-lang="" class="" data-level="2" data-id="47"><a  title="واجهة التصفح الرئيسية استراتيجية الحكومة 2013-2011"  data-slug="uae-strategy-2011-2013" href="http://uaecabinet.ae/ar/uae-strategy-2011-2013" class=" ">استراتيجية الحكومة 2013-2011</a> </li> <li aria-level="2" data-lang="" class="" data-level="2" data-id="48"><a  title="واجهة التصفح الرئيسية  الاستراتيجية الوطنية للابتكار"  data-slug="the-national-strategy-for-innovation" href="http://uaecabinet.ae/ar/the-national-strategy-for-innovation" class=" "> الاستراتيجية الوطنية للابتكار</a> </li> </ul> </li> </ul> </li> <li aria-level="0" data-lang="" class=" has-submenu " data-level="0" data-id="5"><a  title="واجهة التصفح الرئيسية المركز الإعلامي"  data-slug="#" href="#" class="">المركز الإعلامي</a><ul class="sub-menu" > <li aria-level="1" data-lang="" class="" data-level="1" data-id="31"><a  title="واجهة التصفح الرئيسية الأخبار"  data-slug="news" href="http://uaecabinet.ae/ar/news" class="">الأخبار</a> </li> <li aria-level="1" data-lang="" class="" data-level="1" data-id="32"><a  title="واجهة التصفح الرئيسية الخطابات والأقوال"  data-slug="speeches-quotes" href="http://uaecabinet.ae/ar/speeches-quotes" class="">الخطابات والأقوال</a> </li> <li aria-level="1" data-lang="" class=" has-submenu  sub-menu " data-level="1" data-id="33"><a  title="واجهة التصفح الرئيسية الركن التفاعلي"  data-slug="#" href="#" class="">الركن التفاعلي</a><ul class="sub-menu" > <li aria-level="2" data-lang="" class="" data-level="2" data-id="35"><a  title="واجهة التصفح الرئيسية التطبيقات الذكية"  data-slug="applications" href="http://uaecabinet.ae/ar/applications" class=" ">التطبيقات الذكية</a> </li> </ul> </li> <li aria-level="1" data-lang="" class="" data-level="1" data-id="49"><a  title="واجهة التصفح الرئيسية الإصدارات"  data-slug="publications" href="http://uaecabinet.ae/ar/publications" class="">الإصدارات</a> </li> </ul> </li> <li aria-level="0" data-lang="" class=" has-submenu " data-level="0" data-id="6"><a  title="واجهة التصفح الرئيسية تواصل معنا"  data-slug="#" href="#" class="">تواصل معنا</a><ul class="sub-menu" > <li aria-level="1" data-lang="" class="" data-level="1" data-id="38"><a  title="واجهة التصفح الرئيسية قنوات التواصل"  data-slug="contacts" href="http://uaecabinet.ae/ar/contacts" class="">قنوات التواصل</a> </li> </ul> </li> </ul>
+															
+			   </nav>     
+               <div class="languageArab">
+						<a class="changeLang"  data-toggle="tooltip" data-placement="bottom" title="تغيير اللغة إلى الإنكليزية" href="http://uaecabinet.ae/language/en">
+							English
+						</a>
+					</div>                        
+			
+		</div>
+	</div>
+<!-- /.navbar-collapse -->
+            
+<div class="clearfix"></div>
+</header> 
+	
+		<div class="socialMediaWrap" aria-label="التواصل الاجتماعي">  
+	<ul class="social-share socialButtonWrap">
+		 <li class="youtube"><a  data-toggle="tooltip" data-placement="right" title="يوتيوب" target="_blank" href="http://uaecabinet.ae/ar/youtube-account"><i class="fa fa-youtube-play"></i><span class="hideText">يوتيوب</span></a></li>
+		 <li class="insta"><a  data-toggle="tooltip" data-placement="right" title="إنستجرام" href="http://uaecabinet.ae/ar/instagram-account"><i class="fa fa-instagram"></i><span class="hideText">إنستجرام</span></a></li>
+		 <li> <a href="http://uaecabinet.ae/ar/contacts" data-toggle="tooltip" data-placement="right" title="رقم الهاتف"><i class=" fa  fa-phone"></i> <span class="hideText">رقم الهاتف</span></a></li>
+         <li> <a href="mailto:contactus@moca.gov.ae" data-toggle="tooltip" data-placement="right" title="ايميل"><i class=" fa fa-envelope"></i> <span class="hideText">ايميل</span></a></li>
+		
+	</ul>   
+</div><div  class="homePage " data-navlink="home" id="homeWrapper"> 
+	<div  class="callbacks_container desktopSlider" id="home">
+		<ul class="rslides" id="slider4">
+		
+			<li>  
+				<a href="http://uaecabinet.ae/ar/prime-ministers-initiatives"  >
+				<img src="http://uaecabinet.ae/assets/uploads/banners/recommended/44a66343c23f049bca646c180321beef.jpg" alt="الحكومة الذكية">
+					<div class="caption bounceInDown" >
+					  <div class="slide-text-info">
+						<h1>الحكومة الذكية</h1>
+						<p>مبادرة الحكومة الذكية تسعى لتوفير الخدمات للجمهور حيثما كانوا وعلى مدار الساعة لتحقيق أهداف متكاملة تتمثل في إسعاد المواطن وتسهيل حياته وتعزيز الحيوية الاقتصادية والتنافسية</p>
+					  </div>
+					</div>
+				</a>
+			  </li>
+			  
+	  	
+			<li>  
+				<a href="http://uaecabinet.ae/ar/the-national-strategy-for-innovation"  >
+				<img src="http://uaecabinet.ae/assets/uploads/banners/recommended/c144331b1d3d76d5bebbbbdf271a4020.jpg" alt="الاستراتيجية الوطنية للابتكار">
+					<div class="caption bounceInDown" >
+					  <div class="slide-text-info">
+						<h1>الاستراتيجية الوطنية للابتكار</h1>
+						<p>تهدف لجعل الإمارات ضمن الدول الاكثر ابتكاراً على مستوى العالم خلال السنوات القادمة</p>
+					  </div>
+					</div>
+				</a>
+			  </li>
+			  
+	  	
+			<li>  
+				<a href="http://uaecabinet.ae/ar/the-cabinet-1"  >
+				<img src="http://uaecabinet.ae/assets/uploads/banners/recommended/8366b0556e5c9c0bd7447234cce4caba.jpg" alt="مجلس الوزراء">
+					<div class="caption bounceInDown" >
+					  <div class="slide-text-info">
+						<h1>مجلس الوزراء</h1>
+						<p>يعد مجلس الوزراء الهيئة التنفيذية لدولة الإمارات العربية المتحدة، ويتولى تحت الرقابة العليا لرئيس الاتحاد والمجلس الأعلى تصريف جميع الشؤون الداخلية والخارجية التي يختص بها الاتحاد بموجب دستوره والقوانين الاتحادية</p>
+					  </div>
+					</div>
+				</a>
+			  </li>
+			  
+	  		</ul>
+	</div>
+	
+	<div  class="callbacks_container desktopSlider" id="homeMobile">
+		<ul class="rslides" id="slider5">
+		  	
+			  <li> 
+				  <a href="http://uaecabinet.ae/ar/the-cabinet-1">
+						<img src="http://uaecabinet.ae/assets/uploads/banners/recommended/7f1a338bdc9c870020af1897cc25588e.jpg" alt="الحكومة الذكية">
+						<div class="caption bounceInDown" >
+						  <div class="slide-text-info">
+							<h1>الحكومة الذكية</h1>
+							<p>مبادرة الحكومة الذكية تسعى لتوفير الخدمات للجمهور حيثما كانوا وعلى مدار الساعة لتحقيق أهداف متكاملة تتمثل في إسعاد المواطن وتسهيل حياته وتعزيز الحيوية الاقتصادية والتنافسية</p>
+						  </div>
+						</div>
+					</a>
+			  </li>
+		  	
+			  <li> 
+				  <a href="http://uaecabinet.ae/ar/the-cabinet-1">
+						<img src="http://uaecabinet.ae/assets/uploads/banners/recommended/3c3726900b7a4f1dfd0b5f0b8c7adb3d.jpg" alt="الاستراتيجية الوطنية للابتكار">
+						<div class="caption bounceInDown" >
+						  <div class="slide-text-info">
+							<h1>الاستراتيجية الوطنية للابتكار</h1>
+							<p>تهدف لجعل الإمارات ضمن الدول الاكثر ابتكاراً على مستوى العالم خلال السنوات القادمة</p>
+						  </div>
+						</div>
+					</a>
+			  </li>
+		  	
+			  <li> 
+				  <a href="http://uaecabinet.ae/ar/the-cabinet-1">
+						<img src="http://uaecabinet.ae/assets/uploads/banners/recommended/fbd8ac80af4d65952911eec60b5e2f29.jpg" alt="مجلس الوزراء">
+						<div class="caption bounceInDown" >
+						  <div class="slide-text-info">
+							<h1>مجلس الوزراء</h1>
+							<p>يعد مجلس الوزراء الهيئة التنفيذية لدولة الإمارات العربية المتحدة، ويتولى تحت الرقابة العليا لرئيس الاتحاد والمجلس الأعلى تصريف جميع الشؤون الداخلية والخارجية التي يختص بها الاتحاد بموجب دستوره والقوانين الاتحادية</p>
+						  </div>
+						</div>
+					</a>
+			  </li>
+		  		</ul>
+	</div>
+    <div class="clearfix"></div>
+
+	<div class="content-area">
+		<div class="twitter-widget">
+      <div class="container ">
+        <div class="widgetBg">
+       
+            <div class="text-feed">
+            <i class="twitter-icon"><img src="http://uaecabinet.ae/assets/frontend/images/twitter-icon.png" title="twitter_messages"  alt="twitter_messages" ></i>
+              <div class="twitter-marquee">
+             
+                <ul class="tweets">
+                					<li> 
+						<a href="#" title="HHShkMohd" >@ HHShkMohd </a> : نريد للقراءة أن تكون مهارة أولى لأبنائنا والحكومة وظيفتهاليس فقط تقديم الخدمات بل بناءالعقول والمهارات
+#خلوة_المائة <a href="https://t.co/Agv3AK3A4F" target="_blank">https://t.co/Agv3AK3A4F</a>
+					</li>
+									<li> 
+						<a href="#" title="HHShkMohd" >@ HHShkMohd </a> : نريد القراءة في كل مدرسة ودائرة ومكتب وبيت، وفي كل مرافقناوحدائقنا وشوارعنا #خلوة_المائة هي صندوق الأفكار لتنفيذ ذلك <a href="https://t.co/MDia3Y8oXE" target="_blank">https://t.co/MDia3Y8oXE</a>
+					</li>
+									<li> 
+						<a href="#" title="HHShkMohd" >@ HHShkMohd </a> : اختتمنا قبل قليل #خلوة_المائة وهي البداية في #عام_القراءة والبداية لجهود مستمرة لترسيخ القراءة عادة مجتمعة ثابتة <a href="https://t.co/sxgBZ3QBbH" target="_blank">https://t.co/sxgBZ3QBbH</a>
+					</li>
+				                   
+                </ul>
+           
+              </div>
+              <div class="clearfix"></div>
+            </div>
+        </div>              
+      </div>
+</div>
+		<section class="section1 section-home">
+			<div class="container">
+				<div class="BlockWrapContainer row">
+	 		  <div class="blockPr col-sm-4 fadeInRight wow prd-block animated" title="أعضاء مجلس الوزراء">
+			<div class="clearfix InnerBlock">
+			  <div class="content-new"> <img src="http://uaecabinet.ae/assets/uploads/home_section/recommended/c2c86e7ad15d38f9ca8fc9ebd4057d6f.jpg" alt="أعضاء مجلس الوزراء" title="أعضاء مجلس الوزراء" > </div>
+			  <div class="blockCaptionHover">
+				<div class="speakerDetails">
+				  <h2>أعضاء مجلس الوزراء</h2>
+				  <p>ويتكون مجلس الوزراء من رئيس المجلس ونائبيه والوزراء، ويقوم بأمانة السر فيه الأمين العام لمجلس الوزراء.</p>
+				  <a title="أعضاء مجلس الوزراء" class="readStyle" href="http://uaecabinet.ae/ar/cabinet-members">اقرأ المزيد</a> </div>
+			  </div>
+			</div>
+		  </div>
+	  		  <div class="blockPr col-sm-4 fadeInRight wow prd-block animated" title="المجلس الوزاري">
+			<div class="clearfix InnerBlock">
+			  <div class="content-new"> <img src="http://uaecabinet.ae/assets/uploads/home_section/recommended/b7cb245396e87eb0d32c8930189089e0.jpg" alt="المجلس الوزاري" title="المجلس الوزاري" > </div>
+			  <div class="blockCaptionHover">
+				<div class="speakerDetails">
+				  <h2>المجلس الوزاري</h2>
+				  <p>تم تشكيل المجلس الوزاري للخدمات في عام 2006، برئاسة سمو الشيخ منصور بن زايد آل نهيان، نائب رئيس مجلس الوزراء ووزير شؤون الرئاسة وعضوية وزراء الوزارات الخدمية. ويمثل المجلس الوزاري جهازاً تنفيذياّ لمجل</p>
+				  <a title="المجلس الوزاري" class="readStyle" href="http://uaecabinet.ae/ar/ministerial-council-for-services">اقرأ المزيد</a> </div>
+			  </div>
+			</div>
+		  </div>
+	  		  <div class="blockPr col-sm-4 fadeInRight wow prd-block animated" title="الأجندة الوطنية">
+			<div class="clearfix InnerBlock">
+			  <div class="content-new"> <img src="http://uaecabinet.ae/assets/uploads/home_section/recommended/de3ecd19708c8c9dd1f0f39557848540.jpg" alt="الأجندة الوطنية" title="الأجندة الوطنية" > </div>
+			  <div class="blockCaptionHover">
+				<div class="speakerDetails">
+				  <h2>الأجندة الوطنية</h2>
+				  <p>أطلق صاحب السمو الشيخ محمد بن راشد آل مكتوم، نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي "رعاه الله" "الأجندة الوطنية" لدولة الإمارات خلال الأعوام السبعة المقبلة وصولاً لرؤية الإمارات 2021 في عيدها ال</p>
+				  <a title="الأجندة الوطنية" class="readStyle" href="http://uaecabinet.ae/ar/national-agenda">اقرأ المزيد</a> </div>
+			  </div>
+			</div>
+		  </div>
+	  	</div>
+				<div class="BlockWrapContainer row sect2">
+				   	
+				   	
+					  <div class="col-sm-6 col-md-4 fadeInRight wow animated blockPr">
+							<div class="instgram-block">
+								<h2> <i class="fa  fa-instagram" title="إنستجرام" data-toggle="tooltip" data-placement="top"> </i> <span>إنستجرام </span></h2>
+							   	
+									<div class="insta-img"><a href="https://www.instagram.com/p/BAZvQwOvKDC/" title="سمو الشيخ منصور بن زايد آل نهيان، نائب رئيس مجلس الوزراء، وزير شؤون الرئاسة أثناء مشاركته في العصف الذهني بحضور معالي حسين الحمادي وزير التربية والتعليم وسعادة مروان الصوالح وكيل وزارة التربية والتعليم.
+ #خلوة_المائة #عام_القراءة 
+#حكومة_الإمارات" target="_blank"><img src="https://scontent.cdninstagram.com/hphotos-xfa1/t51.2885-15/s640x640/sh0.08/e35/12407735_922411171181924_56380328_n.jpg" alt="إنستجرام"  data-toggle="tooltip" data-placement="top"></a></div>
+															</div>
+					  </div>
+				  
+				  					  <div class="col-sm-6 col-md-4 blockPr youtube">
+						<div class="video-block ">
+						  <h2 > <i class="fa  fa-youtube-play" title="يوتيوب" data-toggle="tooltip" data-placement="top"> </i> <span>يوتيوب</span></h2>					  
+						  <div class="youtube">
+							<iframe width="100%" height="330" src="https://www.youtube.com/embed/cZxqVz4Klds" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						  </div>
+						</div>
+					  </div>
+				  				  <div class="blockPr col-sm-12 col-md-4 fadeInRight wow prd-block animated " style="visibility: visible; animation-name: fadeInLeft;">
+		<div class="initiatives">
+			  <h2> <i class="fa  fa-lightbulb-o"  title="المبادرات" data-toggle="tooltip" data-placement="top"> </i> <span>المبادرات </span></h2>
+			  <div class="owl-carousel initiative-block contentBlock">
+				
+													
+								<div class="item" data-pageslug="avision-2021">
+									<div class="client-logo">
+																					<a href="http://uaecabinet.ae/ar/details/prime-ministers-initiatives/vision-2021">
+																				<img src="http://uaecabinet.ae/assets/uploads/content_category/initiatives/recommended/3179177892fceff99cab076d3580cd50.png"  data-toggle="tooltip" data-placement="bottom" title="رؤية الإمارات 2021" alt="رؤية الإمارات 2021">
+																					</a>
+																			</div>
+									<div class="blockCaptionHover intiative-caption">
+									  <h2>رؤية الإمارات 2021</h2>
+									  <p>أطلق صاحب السمو الشيخ محمد بن راشد آل مكتوم، نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي، في فبراير ٢٠١٠، وثيقة وطنية بعيدة المدى هي “رؤية الإمارات ٢٠٢١”، والتي تطمح إلى جعل الإمارات في مصاف أفضل دول العالم بحلول اليوبيل الذهبي للاتحاد. تستلهم الرؤية</p>
+									</div>
+								</div>
+													
+								<div class="item" data-pageslug="asmart-government">
+									<div class="client-logo">
+																					<a href="http://uaecabinet.ae/ar/details/prime-ministers-initiatives/smart-government">
+																				<img src="http://uaecabinet.ae/assets/uploads/content_category/initiatives/recommended/fd54c5217433a3cbbb43b8147cee27c0.jpg"  data-toggle="tooltip" data-placement="bottom" title="الحكومة الذكية" alt="الحكومة الذكية">
+																					</a>
+																			</div>
+									<div class="blockCaptionHover intiative-caption">
+									  <h2>الحكومة الذكية</h2>
+									  <p>في الثاني والعشرين من مايو 2013 ، أطلق صاحب السمو الشيخ محمد بن راشد آل مكتوم نائب رئيس الدولة، رئيس مجلس الوزراء، حاكم دبي  رعاه الله مبادرة الحكومة الذكية من أجل توفير الخدمات للجمهور حيثما كانوا وعلى مدار الساعة، وحدد سموه ملامح الحكومة الذكية في </p>
+									</div>
+								</div>
+													
+								<div class="item" data-pageslug="amohammed-bin-rashid-government-excellence-award">
+									<div class="client-logo">
+																					<a href="http://uaecabinet.ae/ar/details/prime-ministers-initiatives/mohammed-bin-rashid-government-excellence-award">
+																				<img src="http://uaecabinet.ae/assets/uploads/content_category/initiatives/recommended/8411f429dac54b4f61111cd94399bed8.jpg"  data-toggle="tooltip" data-placement="bottom" title="جائزة محمد بن راشد للأداء الحكومي المتميز" alt="جائزة محمد بن راشد للأداء الحكومي المتميز">
+																					</a>
+																			</div>
+									<div class="blockCaptionHover intiative-caption">
+									  <h2>جائزة محمد بن راشد للأداء الحكومي المتميز</h2>
+									  <p>أطلق صاحب السمو الشيخ محمد بن راشد آل مكتوم، نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي "رعاه الله"، في 24 يونيو 2009 جائزة محمد بن راشد للأداء الحكومي المتميز ضمن برنامج الشيخ خليفة للتميز الحكومي، الذي يعدّ أول برنامج متكامل للتميّز الحكومي على مس</p>
+									</div>
+								</div>
+													
+								<div class="item" data-pageslug="amohammed-bin-rashid-smart-learning-programme">
+									<div class="client-logo">
+																					<a href="http://uaecabinet.ae/ar/details/prime-ministers-initiatives/mohammed-bin-rashid-smart-learning-programme">
+																				<img src="http://uaecabinet.ae/assets/uploads/content_category/initiatives/recommended/30636f9ffaee130e94f68a9518e77289.jpg"  data-toggle="tooltip" data-placement="bottom" title="برنامج  محمد بن راشد للتعلم الذكي" alt="برنامج  محمد بن راشد للتعلم الذكي">
+																					</a>
+																			</div>
+									<div class="blockCaptionHover intiative-caption">
+									  <h2>برنامج  محمد بن راشد للتعلم الذكي</h2>
+									  <p>أطلق صاحب السمو الشيخ محمد بن راشد آل مكتوم مبادرة محمد بن راشد للتعلم الذكي التي تشمل جميع مدارس الدولة، والتي وتهدف لخلق بيئة تعليمية جديدة في المدارس تضم صفوفاً ذكية في جميع المدارس وتوزيع أجهزة لوحية لجميع الطلاب وتزويد جميع مدارس الدولة بشبكات </p>
+									</div>
+								</div>
+													
+								<div class="item" data-pageslug="auae-national-brainstorming">
+									<div class="client-logo">
+																					<a href="http://uaecabinet.ae/ar/details/prime-ministers-initiatives/uae-national-brainstorming">
+																				<img src="http://uaecabinet.ae/assets/uploads/content_category/initiatives/recommended/ee27681f7f99233b799a576a44e7d50a.jpg"  data-toggle="tooltip" data-placement="bottom" title="العصف الذهني الوطني " alt="العصف الذهني الوطني ">
+																					</a>
+																			</div>
+									<div class="blockCaptionHover intiative-caption">
+									  <h2>العصف الذهني الوطني  (#العصف_الذهني_الإماراتي )</h2>
+									  <p>أطلق صاحب السمو الشيخ محمد بن راشد آل مكتوم، نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي في ديسمبر 2013 دعوة لشعب الإمارات للمشاركة في أكبر عصف ذهني في العالم عبر موقع التواصل الاجتماعي "تويتر" لتطوير قطاعي الصحة والتعليم في الدولة عبر توليد أكبر قدر</p>
+									</div>
+								</div>
+													
+								<div class="item" data-pageslug="auae-flag-day">
+									<div class="client-logo">
+																					<a href="http://uaecabinet.ae/ar/details/prime-ministers-initiatives/uae-flag-day">
+																				<img src="http://uaecabinet.ae/assets/uploads/content_category/initiatives/recommended/f2eb3afb0f9f1fff948f101342b897f5.jpg"  data-toggle="tooltip" data-placement="bottom" title="يوم العلم" alt="يوم العلم">
+																					</a>
+																			</div>
+									<div class="blockCaptionHover intiative-caption">
+									  <h2>يوم العلم</h2>
+									  <p>دعا صاحب السمو الشيخ محمد بن راشد آل مكتوم نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي، خلال كلمة وجهها إلى شعب دولة الإمارات في نوفمبر 2013، إلى إطلاق حملة وطنية وشعبية شاملة ومستمرة احتفالا بــ"يوم العلم"، الذي يصادف الثالث من شهر نوفمبر، ذكرى تولي</p>
+									</div>
+								</div>
+													
+								<div class="item" data-pageslug="auae-pioneers">
+									<div class="client-logo">
+																					<a href="http://uaecabinet.ae/ar/details/prime-ministers-initiatives/uae-pioneers">
+																				<img src="http://uaecabinet.ae/assets/uploads/content_category/initiatives/recommended/a89be1496fa7460a7eb20266e80ece4d.jpg"  data-toggle="tooltip" data-placement="bottom" title="أوائل الإمارات" alt="أوائل الإمارات">
+																					</a>
+																			</div>
+									<div class="blockCaptionHover intiative-caption">
+									  <h2>أوائل الإمارات</h2>
+									  <p>أعلن صاحب السمو الشيخ محمد بن راشد آل مكتوم نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي، وضمن احتفالات الدولة باليوم الوطني عن ترشيح 43 شخصاً متميزاً في مجال عمله، لتكريمهم في اليوم الوطني للدولة 43، ودعا المواطنين عبر موقع التواصل الاجتماعي "تويتر" </p>
+									</div>
+								</div>
+													
+								<div class="item" data-pageslug="amohammed-bin-rashid-centre-for-government-innovation">
+									<div class="client-logo">
+																					<a href="http://uaecabinet.ae/ar/details/prime-ministers-initiatives/mohammed-bin-rashid-centre-for-government-innovation">
+																				<img src="http://uaecabinet.ae/assets/uploads/content_category/initiatives/recommended/2783928529662136ce8f9195d76171b6.jpg"  data-toggle="tooltip" data-placement="bottom" title="مركز محمد بن راشد للابتكار الحكومي" alt="مركز محمد بن راشد للابتكار الحكومي">
+																					</a>
+																			</div>
+									<div class="blockCaptionHover intiative-caption">
+									  <h2>مركز محمد بن راشد للابتكار الحكومي</h2>
+									  <p>افتتح صاحب السمو الشيخ محمد بن راشد آل مكتوم نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي رعاه الله "مركز محمد بن راشد للابتكار الحكومي" في سبتمبر 2014 والذي يوفر خدماته لكافة الجهات الاتحادية والمحلية ويعمل على تطوير منظومة متكاملة من الأدوات الحديث</p>
+									</div>
+								</div>
+													
+								<div class="item" data-pageslug="amohammed-bin-rashid-policies-council">
+									<div class="client-logo">
+																					<a href="http://uaecabinet.ae/ar/details/prime-ministers-initiatives/mohammed-bin-rashid-policies-council">
+																				<img src="http://uaecabinet.ae/assets/uploads/content_category/initiatives/recommended/1259df9100b449938e1a8c574d2c3946.jpg"  data-toggle="tooltip" data-placement="bottom" title="مجلس محمد بن راشد للسياسات" alt="مجلس محمد بن راشد للسياسات">
+																					</a>
+																			</div>
+									<div class="blockCaptionHover intiative-caption">
+									  <h2>مجلس محمد بن راشد للسياسات </h2>
+									  <p>تأتي مبادرة مجلس محمد بن راشد للسياسات بناء على توجيهات صاحب السمو الشيخ محمد بن راشد آل مكتوم لتعزيز التواصل مع المجتمع بكافة فئاته وشرائحه، وليكون مجلس سموه منصة لإثراء النقاش حول العديد من المواضيع الثقافية والاجتماعية والفكرية، ومنصة لإطلاق المبا</p>
+									</div>
+								</div>
+													
+								<div class="item" data-pageslug="auae-national-agenda-1">
+									<div class="client-logo">
+																					<a href="http://uaecabinet.ae/ar/details/prime-ministers-initiatives/uae-national-agenda-1">
+																				<img src="http://uaecabinet.ae/assets/uploads/content_category/initiatives/recommended/4a644eee327bfb61a63164315f6200ac.png"  data-toggle="tooltip" data-placement="bottom" title="الأجندة الوطنية" alt="الأجندة الوطنية">
+																					</a>
+																			</div>
+									<div class="blockCaptionHover intiative-caption">
+									  <h2>الأجندة الوطنية</h2>
+									  <p>أطلق صاحب السمو الشيخ محمد بن راشد آل مكتوم، نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي "رعاه الله" "الأجندة الوطنية" لدولة الإمارات خلال الأعوام السبعة المقبلة وصولاً لرؤية الإمارات 2021 في عيدها الذهبي بمناسبة مرور خمسين عاماً من اتحادها.
+</p>
+									</div>
+								</div>
+													
+								<div class="item" data-pageslug="agovernment-creativity-lab-1">
+									<div class="client-logo">
+																					<a href="http://uaecabinet.ae/ar/details/prime-ministers-initiatives/government-creativity-lab-1">
+																				<img src="http://uaecabinet.ae/assets/uploads/content_category/initiatives/recommended/185c2c79e315287c38eafd3a9033bfc1.png"  data-toggle="tooltip" data-placement="bottom" title="مختبر الإبداع الحكومي" alt="مختبر الإبداع الحكومي">
+																					</a>
+																			</div>
+									<div class="blockCaptionHover intiative-caption">
+									  <h2>مختبر الإبداع الحكومي</h2>
+									  <p>بعد النجاح الكبير الذي حققه "مختبر الإبداع الحكومي" الذي عقد أثناء الخلوة الوزارية، وجه صاحب السمو الشيخ محمد بن راشد آل مكتوم، نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي في ديسمبر 2013 بتعميم تجربة  "مختبر الإبداع الحكومي" على جميع الجهات الاتحادية</p>
+									</div>
+								</div>
+													
+								<div class="item" data-pageslug="aemirates-programme-for-excellence-in-government-services">
+									<div class="client-logo">
+																					<a href="http://uaecabinet.ae/ar/details/prime-ministers-initiatives/emirates-programme-for-excellence-in-government-services">
+																				<img src="http://uaecabinet.ae/assets/uploads/content_category/initiatives/recommended/8f1a5603376e57d48b0a8d5fdd5519ac.jpg"  data-toggle="tooltip" data-placement="bottom" title="برنامج الإمارات للخدمة الحكومية المتميزة" alt="برنامج الإمارات للخدمة الحكومية المتميزة">
+																					</a>
+																			</div>
+									<div class="blockCaptionHover intiative-caption">
+									  <h2>برنامج الإمارات للخدمة الحكومية المتميزة</h2>
+									  <p>أطلق صاحب السمو الشيخ محمد بن اشد آل مكتوم، نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي "برنامج الإمارات للخدمة الحكومية المتميزة" في مارس 2011 للوصول إلى مستويات جديدة في خدمة المتعاملين وتوفير الخدمات الحكومية الاتحادية في شتي أرجاء الدولة بنفس الج</p>
+									</div>
+								</div>
+													
+								<div class="item" data-pageslug="aminister-e-briefcase-and-knowledge-centre">
+									<div class="client-logo">
+																					<a href="http://uaecabinet.ae/ar/details/prime-ministers-initiatives/minister-e-briefcase-and-knowledge-centre">
+																				<img src="http://uaecabinet.ae/assets/uploads/content_category/initiatives/recommended/ae68f921d86f32ae288646447ae92b57.jpg"  data-toggle="tooltip" data-placement="bottom" title="حقيبة الوزير الإلكترونية والمركز المعرفي " alt="حقيبة الوزير الإلكترونية والمركز المعرفي ">
+																					</a>
+																			</div>
+									<div class="blockCaptionHover intiative-caption">
+									  <h2>حقيبة الوزير الإلكترونية والمركز المعرفي </h2>
+									  <p>تأتي هذه المبادرات استجابة لتوجيهات صاحب السمو الشيخ محمد بن راشد آل مكتوم نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي بالتحول الإلكتروني الشامل في الحكومة الاتحادية، حيث تم توزيع أجهزة "آيباد" لوحية خاصة على أعضاء مجلس الوزراء للبدء في استخدام الخدم</p>
+									</div>
+								</div>
+													
+								<div class="item" data-pageslug="anational-programme-for-government-communications">
+									<div class="client-logo">
+																					<a href="http://uaecabinet.ae/ar/details/prime-ministers-initiatives/national-programme-for-government-communications">
+																				<img src="http://uaecabinet.ae/assets/uploads/content_category/initiatives/recommended/c3c1653531178a8eb314daed5792bd6d.jpg"  data-toggle="tooltip" data-placement="bottom" title=" البرنامج الوطني للاتصال الحكومي" alt=" البرنامج الوطني للاتصال الحكومي">
+																					</a>
+																			</div>
+									<div class="blockCaptionHover intiative-caption">
+									  <h2> البرنامج الوطني للاتصال الحكومي</h2>
+									  <p>أطلق صاحب السمو الشيخ محمد بن راشد آل مكتوم، نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي خلال ترأسه جلسة مجلس الوزراء "البرنامج الوطني للاتصال الحكومي" والذي يضم حملات اتصالية مكثفة وواسعة الانتشار تشارك فيها مختلف فرق الاتصال في الجهات الاتحادية </p>
+									</div>
+								</div>
+													
+								<div class="item" data-pageslug="auae-green-growth-strategy">
+									<div class="client-logo">
+																					<a href="http://uaecabinet.ae/ar/details/prime-ministers-initiatives/uae-green-growth-strategy">
+																				<img src="http://uaecabinet.ae/assets/uploads/content_category/initiatives/recommended/5a638ca0b070bd6cf8b9cde88c54f27b.jpg"  data-toggle="tooltip" data-placement="bottom" title="استراتيجية التنمية الخضراء  " alt="استراتيجية التنمية الخضراء  ">
+																					</a>
+																			</div>
+									<div class="blockCaptionHover intiative-caption">
+									  <h2>استراتيجية التنمية الخضراء  </h2>
+									  <p>مبادرة وطنية طويلة المدى أعلنها صاحب السمو الشيخ محمد بن راشد آل مكتوم نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي، تمهيداً لبناء اقتصاد أخضر في دولة الإمارات تحت شعار “اقتصاد أخضر لتنمية مستدامة” وتهدف من خلالها دولة الإمارات لتكون أحد الرواد العالم</p>
+									</div>
+								</div>
+													
+								<div class="item" data-pageslug="agovernmentae">
+									<div class="client-logo">
+																					<a href="http://uaecabinet.ae/ar/details/prime-ministers-initiatives/governmentae">
+																				<img src="http://uaecabinet.ae/assets/uploads/content_category/initiatives/recommended/e031e65ce0e0f7af55353c8ebe29e777.jpg"  data-toggle="tooltip" data-placement="bottom" title="بوابة الإمارات الإلكترونية " alt="بوابة الإمارات الإلكترونية ">
+																					</a>
+																			</div>
+									<div class="blockCaptionHover intiative-caption">
+									  <h2>بوابة الإمارات الإلكترونية </h2>
+									  <p>تعد البوابة الإلكترونية لدولة الإمارات التي أطلقها صاحب السمو الشيخ محمد بن راشد آل مكتوم نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي نافذة الخدمات الإلكترونية كافة، التي تقدمها الجهات الاتحادية والمحلية في دولة الإمارات للأفراد والزوار وأصحاب الأعما</p>
+									</div>
+								</div>
+													
+								<div class="item" data-pageslug="ae-sessions">
+									<div class="client-logo">
+																					<a href="http://uaecabinet.ae/ar/details/prime-ministers-initiatives/e-sessions">
+																				<img src="http://uaecabinet.ae/assets/uploads/content_category/initiatives/recommended/8c20b2d1e6b81c7f32b01acaab9c502a.jpg"  data-toggle="tooltip" data-placement="bottom" title="اللقاءات الإلكترونية" alt="اللقاءات الإلكترونية">
+																					</a>
+																			</div>
+									<div class="blockCaptionHover intiative-caption">
+									  <h2>اللقاءات الإلكترونية</h2>
+									  <p>حرصاً منه على التواصل الدائم مع مختلف أطياف المجتمع من مواطنين ومقيمين، قام صاحب السمو الشيخ محمد بن راشد آل مكتوم، نائب رئيس الدولة رئيس مجلس الوزراء حاكم دبي بإجراء لقاءات إلكترونية مفتوحة على موقعه الإلكتروني، وذلك بهدف الرد على استفسارات زوار موق</p>
+									</div>
+								</div>
+								</div>
+		</div>
+	</div>
+		
+	
+					</div>
+			</div>
+		</section>
+	</div>
+</div>
+    
+	
+    <!----footer---->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-class ">
+            	<div class=" footerLeftBlock">
+                <div class="social-mob">  
+	<ul class="footer-social-media">
+		 <li class="youtube"><a  aria-hidden="true" data-toggle="tooltip" data-placement="right" title="يوتيوب" target="_blank" href="http://uaecabinet.ae/ar/youtube-account"><i class="fa fa-youtube-play"></i><span class="hideText">يوتيوب</span></a></li>
+		 <li class="insta"><a  aria-hidden="true" data-toggle="tooltip" data-placement="right" title="إنستجرام" href="http://uaecabinet.ae/ar/instagram-account"><i class="fa fa-instagram"></i><span class="hideText">إنستجرام</span></a></li>
+		 <li> <a aria-hidden="true" href="http://uaecabinet.ae/ar/contacts" data-toggle="tooltip" data-placement="right" title="رقم الهاتف"><i class=" fa  fa-phone"></i> <span class="hideText">رقم الهاتف</span></a></li>
+         <li> <a aria-hidden="true" href="mailto:contactus@moca.gov.ae" data-toggle="tooltip" data-placement="right" title="ايميل"><i class=" fa fa-envelope"></i> <span class="hideText">ايميل</span></a></li>
+	</ul>   
+</div>                                 	<ul class="footerMenu">
+                    	<li><a title="Footer link الصفحة الرئيسة" href="http://uaecabinet.ae/ar">الصفحة الرئيسة</a> I</li>  
+                    	<li><a title="Footer link الشروط والأحكام" href="http://uaecabinet.ae/ar/terms-and-conditions"> الشروط والأحكام</a> I</li>  
+                    	<li><a title="Footer link سياسة الخصوصية" href="http://uaecabinet.ae/ar/privacy-policy"> سياسة الخصوصية</a> I</li>  
+                    	<li><a title="Footer link خارطة الموقع" href="http://uaecabinet.ae/ar/sitemap"> خارطة الموقع</a> I</li>  
+                    	<li><a title="Footer link تواصل معنا" href="http://uaecabinet.ae/ar/contacts"> تواصل معنا</a></li>  
+                    	                        
+                  </ul>
+                    
+                </div>
+									<p>حقوق التأليف والنشر © 2015 وزارة شؤون مجلس الوزراء. جميع الحقوق محفوظة.</p>
+				                
+				 
+			</div>
+		</div>
+
+				
+	</div>			
+	 <div id="sendEmailDiv" style="display:none" >
+			<div class="message hidden success">Email Send successfully.</div>
+			<div class="send-email-wrapper">
+				<form method="POST" action="http://uaecabinet.ae/send-email-to-friend" accept-charset="UTF-8" class="send-email" id="emailSender" name="send_to_friend" role="form"><input name="_token" type="hidden" value="z5Hz4EcLza97ZSsfSsnXTCRZeYAjCP0WEeVgs7Dx">
+			 	
+							<div class="form-group">
+								 <h3>إرسال ارسل الى صديق</h3>
+							     <div class="emailSendMsg"></div>
+							</div>
+														 
+					
+							<div class="form-group">
+								 <input title="من البريد الإلكتروني" type="text" placeholder="من البريد الإلكتروني"  class="form-control " value="" id="from_email" name="from_email"  onBlur="onchangevalid(this.value,'from_email');" >
+								 
+						
+					</div>
+					
+							<div class="form-group">
+								<input title="أرسل إلى"  type="text" placeholder="أرسل إلى" value="" name="to_email" id="to_email"  onBlur="onchangevalid(this.value,'to_email');" class="form-control ">
+							</div>
+						
+					
+								<label>الموضوع</label> UAE CABINET								 
+			
+					
+							<div class="form-group">
+								<textarea title="النص" placeholder="النص" value="" name="emailContent" id="emailContent"  onBlur="onchangevalid(this.value,'messages.emailContent');" class="form-control"></textarea>
+							</div>
+				
+					
+							<div class="form-group">
+								<input type="text" title="رابط" placeholder="رابط" value="http://uaecabinet.ae" name="url_link" id="url_link"  onBlur="onchangevalid(this.value,'emailid');" class="form-control ">
+							</div>
+					
+					
+							<div class="form-group">
+								<div id="sendMailRecaptcha" aria-label="captcha"></div>
+							</div>
+						  
+				
+							<div class="form-group">
+								<input title=""  type="submit" name="btnSendEmail" id="btnSendEmail" value="Submit" />
+						
+					</div> 
+				</form>
+			</div>
+	
+    <div class="clearfix"></div>
+</div>	
+	<!----footer---->
+	<a href="#" id="toTop" style="display:none"> <span id="toTopHover" style="opacity: 1;"> </span></a>			
+			<script type="text/javascript" src="http://uaecabinet.ae/assets/frontend/js/eas-float-owl.js"></script>
+<!-- <script type="text/javascript" src="http://uaecabinet.ae/assets/frontend/js/easing.js"></script>
+<script type="text/javascript" src="http://uaecabinet.ae/assets/frontend/js/floating-1.12.js"></script>  
+<script src="http://uaecabinet.ae/assets/frontend/js/owl.carousel.js"></script>-->
+	
+	<script src="http://uaecabinet.ae/assets/frontend/js/responsiveslides.js"></script>
+<script src="http://uaecabinet.ae/assets/frontend/js/jquery.fancybox.js"></script>
+<script src="http://uaecabinet.ae/assets/frontend/js/wow.min.js"></script>
+
+<script src="http://uaecabinet.ae/assets/frontend/js/bootstrap.js"></script>
+<script src="http://uaecabinet.ae/assets/frontend/js/jquery.daisynav.min.js"></script>
+<script src="http://uaecabinet.ae/assets/frontend/js/jquery.stickit.js"></script>
+<script src="http://uaecabinet.ae/assets/frontend/js/jquery.gray.min.js"></script><!---->
+<script src="http://uaecabinet.ae/assets/frontend/js/jquery.loadmask.min.js"></script><!---->
+<script src="http://uaecabinet.ae/assets/frontend/js/jquery.navgoco.js"></script><!---->
+<script src="http://uaecabinet.ae/assets/frontend/js/main_script.js?483590070"></script>
+<!-- 
+<script src="http://uaecabinet.ae/assets/frontend/js/google-tts-master/src/google-tts.js"></script>
+<script src="http://uaecabinet.ae/assets/frontend/js/google-tts-master/soundmanager2.js"></script>
+ -->
+ 
+
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "c0d044d3-b404-4e2d-867d-9e50fd372bc6", doNotHash: false, onhover: false, doNotCopy: false, hashAddressBar: false});</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#toTop').on('click',function(e){
+				e.preventDefault();
+				$('html,body').animate({
+						scrollTop:0
+				},1500); 
+		});	
+	});
+</script>
+ 
+	
+<script type="text/javascript" src="http://uaecabinet.ae/assets/frontend/js/jquery.bxslider.js"></script>
+<script>
+ $(function () {
+  // Slideshow 4
+  $("#slider4").responsiveSlides({
+	auto: true,
+	pager: true,
+	nav: false,
+	speed: 500,
+	namespace: "callbacks",
+	timeout: 6000  
+  });
+    $("#slider5").responsiveSlides({
+	auto: true,
+	pager: true,
+	nav: false,
+	speed: 500,
+	namespace: "callbacks",
+	timeout: 6000  
+  });
+  $('.tweets').bxSlider({
+  mode:'vertical',
+  auto: true,
+  pager:false,
+  controls:false,
+   pause: 4000,  
+});
+	$("#slider4").responsiveSlides({
+		auto: true,
+		pager: true,
+		nav: false,
+		speed: 500,
+		namespace: "callbacks",
+		timeout: 6000  
+	});
+	$('.contentBlock').owlCarousel({
+		loop:true,
+		//margin:10,
+		// autoplay:true,
+		nav:true,
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:1
+			},
+			1000:{
+				items:1
+			}
+		}
+	});
+	 $('.socialMediaWrap').addFloating({  
+                targetRight: 0,  
+                targetTop: 280,  
+                snap: true  
+		}); 
+});
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71973274-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

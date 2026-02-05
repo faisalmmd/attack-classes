@@ -1,0 +1,41 @@
+# SRI Scanner - Quick Reference
+
+## Installation
+pip install -r requirements.txt
+
+## Basic Commands
+
+# Scan test data
+python scanner.py test_data/
+
+# Scan with path and country filter
+python scanner.py /path/to/data --country AE
+
+# Limit files for testing
+python scanner.py /path/to/data --limit 50
+
+# Visualize results
+python visualize.py results/sri_analysis_*.json
+
+## Test Scripts
+
+# Quick test
+python test_scanner.py
+
+# Test specific country (N files)
+python test_scanner.py AE 20
+
+## Output
+
+- results/sri_analysis_TIMESTAMP.json  (Full analysis)
+- results/sri_detailed_TIMESTAMP.csv   (Per-file data)
+- Console summary
+
+## Directory Structure Expected
+
+input_dir/
+├── COUNTRY_CODE/
+│   └── domain/
+│       └── YEAR_*_TIMESTAMP.html
+
+See EXAMPLES.md for detailed usage.
