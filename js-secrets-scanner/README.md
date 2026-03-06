@@ -4,9 +4,9 @@ Static analysis tool for detecting hardcoded secrets, API keys, and credentials 
 
 ## Why this exists
 
-A recurring problem with government web portals is that secrets end up in client-side code — not always through negligence, but because embedded maps, analytics dashboards, and third-party integrations require API keys that developers drop directly into JavaScript bundles. Once those keys are in a page, they're also in the Wayback Machine's archive. They might have been revoked the same week, or they might still be live. Either way, understanding *which* secrets appeared, *when*, and *for how long* is exactly the kind of longitudinal signal this project was built to capture.
+A recurring problem with government web portals is that secrets end up in client-side code - not always through negligence, but because embedded maps, analytics dashboards, and third-party integrations require API keys that developers drop directly into JavaScript bundles. Once those keys are in a page, they're also in the Wayback Machine's archive. They might have been revoked the same week, or they might still be live. Either way, understanding *which* secrets appeared, *when*, and *for how long* is exactly the kind of longitudinal signal this project was built to capture.
 
-The research grounding comes from industry-scale secret scanning studies. Intruder (2025) scanned five million applications and found over 42,000 exposed tokens across 334 secret types. Escape.tech scanned 189 million URLs and found 18,000+ exposed API secrets. TruffleHog and Gitleaks have repeatedly shown that production JavaScript bundles — the same kind of files archived in this dataset — are a reliable source of leaked credentials. Google Maps API keys are by far the most common finding in government sites.
+The research grounding comes from industry-scale secret scanning studies. Intruder (2025) scanned five million applications and found over 42,000 exposed tokens across 334 secret types. Escape.tech scanned 189 million URLs and found 18,000+ exposed API secrets. TruffleHog and Gitleaks have repeatedly shown that production JavaScript bundles - the same kind of files archived in this dataset - are a reliable source of leaked credentials. Google Maps API keys are by far the most common finding in government sites.
 
 This tool treats the archive as a time machine for credential exposure: you can pinpoint the first snapshot where a secret appeared and the last one where it was present before being rotated.
 
@@ -38,11 +38,11 @@ This tool treats the archive as a time machine for credential exposure: you can 
 | MEDIUM | Generic client/consumer secret | OAuth secrets |
 | LOW | Generic access/auth token | Needs manual review |
 
-All matched values are **redacted in output** — the tool logs a preview of the first 6 characters plus the match length. The raw secret is never written to disk.
+All matched values are **redacted in output** - the tool logs a preview of the first 6 characters plus the match length. The raw secret is never written to disk.
 
 ## Wayback Machine noise filtering
 
-Every JS file in the archive begins with the Wayback Machine's `_wb_wombat` wrapper — hundreds of lines of URL-rewriting infrastructure that would generate massive false positives if scanned. The scanner identifies these lines by known marker strings and skips them before applying any patterns.
+Every JS file in the archive begins with the Wayback Machine's `_wb_wombat` wrapper - hundreds of lines of URL-rewriting infrastructure that would generate massive false positives if scanned. The scanner identifies these lines by known marker strings and skips them before applying any patterns.
 
 ## Install
 
@@ -87,6 +87,6 @@ AE,maps_gov_ae,2019,20191104121533,2019_20191104121533_script_3.js,js_file,googl
 
 ## Research notes
 
-The longitudinal dimension here is particularly interesting. Government portals often embed Google Maps API keys for location services and boundary displays — these appear consistently across snapshots. Tracking the **first appearance** and **last appearance** of a given key prefix lets you estimate how long a credential was exposed in the archive before (presumably) being rotated. Some keys persist across multi-year windows, which is a meaningful finding on its own.
+The longitudinal dimension here is particularly interesting. Government portals often embed Google Maps API keys for location services and boundary displays - these appear consistently across snapshots. Tracking the **first appearance** and **last appearance** of a given key prefix lets you estimate how long a credential was exposed in the archive before (presumably) being rotated. Some keys persist across multi-year windows, which is a meaningful finding on its own.
 
 Cross-referencing with the SRI scanner output also makes sense: sites that load many external scripts without SRI and also embed API keys directly represent a doubly elevated risk surface.
