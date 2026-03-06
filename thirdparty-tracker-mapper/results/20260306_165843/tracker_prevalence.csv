@@ -1,0 +1,51 @@
+year,tracker_name,category,occurrences,unique_domains,unique_countries
+2025,Google Tag Manager,ANALYTICS,71,33,1
+2024,Google Tag Manager,ANALYTICS,66,31,1
+2023,Google Tag Manager,ANALYTICS,44,23,1
+2022,Google Tag Manager,ANALYTICS,43,23,1
+2021,Google Tag Manager,ANALYTICS,33,20,1
+2020,Google Tag Manager,ANALYTICS,21,11,1
+2019,Google Tag Manager,ANALYTICS,14,7,1
+2022,AddThis (Oracle),SOCIAL,13,4,1
+2021,AddThis (Oracle),SOCIAL,12,7,1
+2020,AddThis (Oracle),SOCIAL,10,5,1
+2023,AddThis (Oracle),SOCIAL,10,2,1
+2024,AddThis (Oracle),SOCIAL,10,2,1
+2018,Google Tag Manager,ANALYTICS,9,6,1
+2018,Twitter Platform,SOCIAL,8,4,1
+2024,Twitter Platform,SOCIAL,8,4,1
+2021,Twitter Platform,SOCIAL,7,4,1
+2023,Twitter Platform,SOCIAL,7,4,1
+2015,ShareThis,SOCIAL,6,4,1
+2019,Twitter Platform,SOCIAL,6,3,1
+2022,Twitter Platform,SOCIAL,6,4,1
+2024,Cloudflare Web Analytics,ANALYTICS,6,3,1
+2025,AddThis (Oracle),SOCIAL,6,2,1
+2014,AddThis (Oracle),SOCIAL,4,2,1
+2014,ShareThis,SOCIAL,4,2,1
+2016,ShareThis,SOCIAL,4,3,1
+2020,Twitter Platform,SOCIAL,4,2,1
+2023,Cloudflare Web Analytics,ANALYTICS,4,3,1
+2023,Google Sign-In,SOCIAL,4,2,1
+2024,Google Sign-In,SOCIAL,4,2,1
+2025,Google Sign-In,SOCIAL,4,2,1
+2017,AddThis (Oracle),SOCIAL,3,2,1
+2017,Twitter Platform,SOCIAL,3,3,1
+2013,ShareThis,SOCIAL,2,1,1
+2016,Google Analytics,ANALYTICS,2,1,1
+2017,Google Ad Services,ADVERTISING,2,1,1
+2017,Google Analytics,ANALYTICS,2,1,1
+2018,AddThis (Oracle),SOCIAL,2,1,1
+2018,Google Analytics,ANALYTICS,2,1,1
+2019,AddThis (Oracle),SOCIAL,2,1,1
+2019,Google Analytics,ANALYTICS,2,1,1
+2020,Google Analytics,ANALYTICS,2,1,1
+2021,Google Analytics,ANALYTICS,2,1,1
+2025,Cloudflare Web Analytics,ANALYTICS,2,1,1
+2008,Google Analytics,ANALYTICS,1,1,1
+2012,ShareThis,SOCIAL,1,1,1
+2015,AddThis (Oracle),SOCIAL,1,1,1
+2017,Google Tag Manager,ANALYTICS,1,1,1
+2018,ShareThis,SOCIAL,1,1,1
+2024,Google APIs (social/signin),SOCIAL,1,1,1
+2025,Twitter Platform,SOCIAL,1,1,1

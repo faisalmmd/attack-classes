@@ -1,0 +1,1481 @@
+country,domain,year,timestamp,source_file,tracker_name,pattern,line_number
+AE,chatbot_moccae_gov_ae,2021,20210707022154,2021_index_chatbot_moccae_gov_ae_20210707022154.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,chatbot_moccae_gov_ae,2021,20210707022154,2021_index_chatbot_moccae_gov_ae_20210707022154.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,emiratesrc_ae,2021,20210817030003,2021_index_emiratesrc_ae_20210817030003.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,emiratesrc_ae,2021,20210817030003,2021_index_emiratesrc_ae_20210817030003.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,emiratesrc_ae,2021,20210817030003,2021_index_emiratesrc_ae_20210817030003.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,emiratesrc_ae,2022,20220116155308,2022_index_emiratesrc_ae_20220116155308.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,emiratesrc_ae,2022,20220116155308,2022_index_emiratesrc_ae_20220116155308.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,emiratesrc_ae,2022,20220116155308,2022_index_emiratesrc_ae_20220116155308.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,emiratesrc_ae,2022,20220302182825,2022_index_emiratesrc_ae_20220302182825.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,emiratesrc_ae,2022,20220302182825,2022_index_emiratesrc_ae_20220302182825.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,emiratesrc_ae,2022,20220302182825,2022_index_emiratesrc_ae_20220302182825.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,fatwauae_gov_ae,2024,20240620012536,2024_index_fatwauae_gov_ae_20240620012536.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,fgic_gov_ae,2021,20211204021713,2021_index_fgic_gov_ae_20211204021713.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,fgic_gov_ae,2021,20211204021713,2021_index_fgic_gov_ae_20211204021713.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,fgic_gov_ae,2021,20211204021713,2021_index_fgic_gov_ae_20211204021713.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,fgic_gov_ae,2022,20220407221856,2022_index_fgic_gov_ae_20220407221856.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,fgic_gov_ae,2022,20220407221856,2022_index_fgic_gov_ae_20220407221856.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,fgic_gov_ae,2022,20220407221856,2022_index_fgic_gov_ae_20220407221856.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,fgic_gov_ae,2022,20220616170055,2022_index_fgic_gov_ae_20220616170055.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,fgic_gov_ae,2022,20220616170055,2022_index_fgic_gov_ae_20220616170055.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,fgic_gov_ae,2022,20220616170055,2022_index_fgic_gov_ae_20220616170055.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,fgic_gov_ae,2023,20230315204247,2023_index_fgic_gov_ae_20230315204247.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,fgic_gov_ae,2023,20230315204247,2023_index_fgic_gov_ae_20230315204247.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,fgic_gov_ae,2023,20230315204247,2023_index_fgic_gov_ae_20230315204247.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,fgic_gov_ae,2023,20231205111556,2023_index_fgic_gov_ae_20231205111556.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,fgic_gov_ae,2023,20231205111556,2023_index_fgic_gov_ae_20231205111556.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,fgic_gov_ae,2023,20231205111556,2023_index_fgic_gov_ae_20231205111556.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,fgic_gov_ae,2024,20240229094528,2024_index_fgic_gov_ae_20240229094528.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,fgic_gov_ae,2024,20240229094528,2024_index_fgic_gov_ae_20240229094528.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,fgic_gov_ae,2024,20240229094528,2024_index_fgic_gov_ae_20240229094528.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,gas_gov_ae,2019,20190110102034,2019_index_gas_gov_ae_20190110102034.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,gas_gov_ae,2019,20190622102534,2019_index_gas_gov_ae_20190622102534.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,gas_gov_ae,2020,20200416083108,2020_index_gas_gov_ae_20200416083108.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,gas_gov_ae,2020,20200621153209,2020_index_gas_gov_ae_20200621153209.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,gas_gov_ae,2021,20210111174059,2021_index_gas_gov_ae_20210111174059.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,gas_gov_ae,2021,20210930043014,2021_index_gas_gov_ae_20210930043014.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,gas_gov_ae,2022,20220209053902,2022_index_gas_gov_ae_20220209053902.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,gas_gov_ae,2022,20220520174518,2022_index_gas_gov_ae_20220520174518.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,gas_gov_ae,2023,20230130160223,2023_index_gas_gov_ae_20230130160223.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,gas_gov_ae,2023,20230227174601,2023_index_gas_gov_ae_20230227174601.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,gas_gov_ae,2024,20240324110430,2024_index_gas_gov_ae_20240324110430.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,gas_gov_ae,2024,20241002160220,2024_index_gas_gov_ae_20241002160220.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,gas_gov_ae,2025,20250108011621,2025_index_gas_gov_ae_20250108011621.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,gas_gov_ae,2025,20250316171446,2025_index_gas_gov_ae_20250316171446.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,gpssa_gov_ae,2015,20150412011927,2015_index_gpssa_gov_ae_20150412011927.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,gpssa_gov_ae,2015,20150612173311,2015_index_gpssa_gov_ae_20150612173311.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,gpssa_gov_ae,2016,20160128161856,2016_index_gpssa_gov_ae_20160128161856.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,gpssa_gov_ae,2016,20160409055325,2016_index_gpssa_gov_ae_20160409055325.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,gpssa_gov_ae,2017,20170112162344,2017_index_gpssa_gov_ae_20170112162344.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,gpssa_gov_ae,2017,20171216041645,2017_index_gpssa_gov_ae_20171216041645.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,gpssa_gov_ae,2018,20180103185200,2018_index_gpssa_gov_ae_20180103185200.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,gpssa_gov_ae,2018,20180803202918,2018_index_gpssa_gov_ae_20180803202918.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,gpssa_gov_ae,2019,20190103125357,2019_index_gpssa_gov_ae_20190103125357.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,gpssa_gov_ae,2019,20190507084003,2019_index_gpssa_gov_ae_20190507084003.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,gpssa_gov_ae,2020,20200106200151,2020_index_gpssa_gov_ae_20200106200151.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,gpssa_gov_ae,2020,20200701100448,2020_index_gpssa_gov_ae_20200701100448.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,gpssa_gov_ae,2021,20210204093450,2021_index_gpssa_gov_ae_20210204093450.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,gpssa_gov_ae,2021,20211102210613,2021_index_gpssa_gov_ae_20211102210613.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",11
+AE,gpssa_gov_ae,2022,20220115035348,2022_index_gpssa_gov_ae_20220115035348.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",11
+AE,gpssa_gov_ae,2022,20221015000917,2022_index_gpssa_gov_ae_20221015000917.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",11
+AE,gpssa_gov_ae,2023,20230104091419,2023_index_gpssa_gov_ae_20230104091419.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",11
+AE,gpssa_gov_ae,2023,20230228054638,2023_index_gpssa_gov_ae_20230228054638.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",11
+AE,gpssa_gov_ae,2024,20240101135224,2024_index_gpssa_gov_ae_20240101135224.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",11
+AE,gpssa_gov_ae,2025,20250113024206,2025_index_gpssa_gov_ae_20250113024206.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,gpssa_gov_ae,2025,20250113024206,2025_index_gpssa_gov_ae_20250113024206.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,gpssa_gov_ae,2025,20250113024206,2025_index_gpssa_gov_ae_20250113024206.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,gpssa_gov_ae,2025,20250118192551,2025_index_gpssa_gov_ae_20250118192551.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,gpssa_gov_ae,2025,20250118192551,2025_index_gpssa_gov_ae_20250118192551.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,gpssa_gov_ae,2025,20250118192551,2025_index_gpssa_gov_ae_20250118192551.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,hct_ac_ae,2011,20110101054407,2011_index_hct_ac_ae_20110101054407.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,hct_ac_ae,2011,20110101054407,2011_index_hct_ac_ae_20110101054407.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,hct_ac_ae,2011,20110101054407,2011_index_hct_ac_ae_20110101054407.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,hct_ac_ae,2011,20110101054407,2011_index_hct_ac_ae_20110101054407.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,hct_ac_ae,2011,20110101054407,2011_index_hct_ac_ae_20110101054407.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,hct_ac_ae,2011,20110504185317,2011_index_hct_ac_ae_20110504185317.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,hct_ac_ae,2011,20110504185317,2011_index_hct_ac_ae_20110504185317.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,hct_ac_ae,2011,20110504185317,2011_index_hct_ac_ae_20110504185317.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,hct_ac_ae,2011,20110504185317,2011_index_hct_ac_ae_20110504185317.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,hct_ac_ae,2011,20110504185317,2011_index_hct_ac_ae_20110504185317.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,hct_ac_ae,2012,20120103090748,2012_index_hct_ac_ae_20120103090748.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,hct_ac_ae,2012,20120103090748,2012_index_hct_ac_ae_20120103090748.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,hct_ac_ae,2012,20120818133819,2012_index_hct_ac_ae_20120818133819.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,hct_ac_ae,2012,20120818133819,2012_index_hct_ac_ae_20120818133819.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,hct_ac_ae,2013,20130115043837,2013_index_hct_ac_ae_20130115043837.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,hct_ac_ae,2013,20130115043837,2013_index_hct_ac_ae_20130115043837.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,hct_ac_ae,2013,20130430031238,2013_index_hct_ac_ae_20130430031238.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,hct_ac_ae,2013,20130430031238,2013_index_hct_ac_ae_20130430031238.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,hct_ac_ae,2014,20140120043708,2014_index_hct_ac_ae_20140120043708.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,hct_ac_ae,2014,20140120043708,2014_index_hct_ac_ae_20140120043708.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,hct_ac_ae,2014,20140520063036,2014_index_hct_ac_ae_20140520063036.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,hct_ac_ae,2014,20140520063036,2014_index_hct_ac_ae_20140520063036.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,hct_ac_ae,2015,20150205232558,2015_index_hct_ac_ae_20150205232558.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,hct_ac_ae,2015,20150205232558,2015_index_hct_ac_ae_20150205232558.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,hct_ac_ae,2015,20150205232558,2015_index_hct_ac_ae_20150205232558.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,hct_ac_ae,2015,20150205232558,2015_index_hct_ac_ae_20150205232558.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,hct_ac_ae,2015,20150707193507,2015_index_hct_ac_ae_20150707193507.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",1
+AE,hct_ac_ae,2016,20160110002310,2016_index_hct_ac_ae_20160110002310.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",1
+AE,hct_ac_ae,2016,20160728020007,2016_index_hct_ac_ae_20160728020007.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",1
+AE,hct_ac_ae,2017,20170110000010,2017_index_hct_ac_ae_20170110000010.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",1
+AE,hct_ac_ae,2017,20170218132004,2017_index_hct_ac_ae_20170218132004.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",1
+AE,hct_ac_ae,2018,20180101142215,2018_index_hct_ac_ae_20180101142215.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",1
+AE,hct_ac_ae,2018,20180704191343,2018_index_hct_ac_ae_20180704191343.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",1
+AE,hct_ac_ae,2019,20190101075106,2019_index_hct_ac_ae_20190101075106.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",1
+AE,hct_ac_ae,2019,20191018033112,2019_index_hct_ac_ae_20191018033112.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",1
+AE,hct_ac_ae,2020,20200101031719,2020_index_hct_ac_ae_20200101031719.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",1
+AE,hct_ac_ae,2020,20200329034701,2020_index_hct_ac_ae_20200329034701.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",1
+AE,hct_ac_ae,2024,20240110072527,2024_index_hct_ac_ae_20240110072527.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,hct_ac_ae,2024,20240110072527,2024_index_hct_ac_ae_20240110072527.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,hct_ac_ae,2024,20240110072527,2024_index_hct_ac_ae_20240110072527.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,hct_ac_ae,2024,20240503043017,2024_index_hct_ac_ae_20240503043017.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,hct_ac_ae,2024,20240503043017,2024_index_hct_ac_ae_20240503043017.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,hct_ac_ae,2024,20240503043017,2024_index_hct_ac_ae_20240503043017.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,hct_ac_ae,2025,20250103173449,2025_index_hct_ac_ae_20250103173449.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,hct_ac_ae,2025,20250103173449,2025_index_hct_ac_ae_20250103173449.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,hct_ac_ae,2025,20250103173449,2025_index_hct_ac_ae_20250103173449.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,hct_ac_ae,2025,20250129171518,2025_index_hct_ac_ae_20250129171518.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,hct_ac_ae,2025,20250129171518,2025_index_hct_ac_ae_20250129171518.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,hct_ac_ae,2025,20250129171518,2025_index_hct_ac_ae_20250129171518.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,icp_gov_ae,2021,20211226184656,2021_index_icp_gov_ae_20211226184656.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,icp_gov_ae,2021,20211226184656,2021_index_icp_gov_ae_20211226184656.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,icp_gov_ae,2021,20211226184656,2021_index_icp_gov_ae_20211226184656.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,icp_gov_ae,2021,20211226184656,2021_index_icp_gov_ae_20211226184656.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,icp_gov_ae,2022,20220101105102,2022_index_icp_gov_ae_20220101105102.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,icp_gov_ae,2022,20220101105102,2022_index_icp_gov_ae_20220101105102.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,icp_gov_ae,2022,20220101105102,2022_index_icp_gov_ae_20220101105102.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,icp_gov_ae,2022,20220101105102,2022_index_icp_gov_ae_20220101105102.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,icp_gov_ae,2022,20220927032801,2022_index_icp_gov_ae_20220927032801.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,icp_gov_ae,2022,20220927032801,2022_index_icp_gov_ae_20220927032801.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,icp_gov_ae,2022,20220927032801,2022_index_icp_gov_ae_20220927032801.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,icp_gov_ae,2022,20220927032801,2022_index_icp_gov_ae_20220927032801.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,icp_gov_ae,2023,20230104115629,2023_index_icp_gov_ae_20230104115629.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,icp_gov_ae,2023,20230104115629,2023_index_icp_gov_ae_20230104115629.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,icp_gov_ae,2023,20230104115629,2023_index_icp_gov_ae_20230104115629.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,icp_gov_ae,2023,20230104115629,2023_index_icp_gov_ae_20230104115629.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,icp_gov_ae,2023,20230304163623,2023_index_icp_gov_ae_20230304163623.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,icp_gov_ae,2023,20230304163623,2023_index_icp_gov_ae_20230304163623.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,icp_gov_ae,2023,20230304163623,2023_index_icp_gov_ae_20230304163623.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,icp_gov_ae,2023,20230304163623,2023_index_icp_gov_ae_20230304163623.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,icp_gov_ae,2024,20240101084931,2024_index_icp_gov_ae_20240101084931.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,icp_gov_ae,2024,20240101084931,2024_index_icp_gov_ae_20240101084931.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,icp_gov_ae,2024,20240101084931,2024_index_icp_gov_ae_20240101084931.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,icp_gov_ae,2024,20240101084931,2024_index_icp_gov_ae_20240101084931.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,icp_gov_ae,2024,20240804203409,2024_index_icp_gov_ae_20240804203409.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,icp_gov_ae,2024,20240804203409,2024_index_icp_gov_ae_20240804203409.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,icp_gov_ae,2024,20240804203409,2024_index_icp_gov_ae_20240804203409.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,icp_gov_ae,2024,20240804203409,2024_index_icp_gov_ae_20240804203409.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,icp_gov_ae,2025,20250103201254,2025_index_icp_gov_ae_20250103201254.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,icp_gov_ae,2025,20250103201254,2025_index_icp_gov_ae_20250103201254.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,icp_gov_ae,2025,20250103201254,2025_index_icp_gov_ae_20250103201254.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,icp_gov_ae,2025,20250103201254,2025_index_icp_gov_ae_20250103201254.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,mcy_gov_ae,2021,20211208153158,2021_index_mcy_gov_ae_20211208153158.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,mcy_gov_ae,2021,20211208153158,2021_index_mcy_gov_ae_20211208153158.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,mcy_gov_ae,2021,20211208153158,2021_index_mcy_gov_ae_20211208153158.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,mcy_gov_ae,2021,20211208153158,2021_index_mcy_gov_ae_20211208153158.html,Google Tag Manager / gtag.js,\bgtag\s*\(,8
+AE,mcy_gov_ae,2022,20220407222414,2022_index_mcy_gov_ae_20220407222414.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,mcy_gov_ae,2022,20220407222414,2022_index_mcy_gov_ae_20220407222414.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,mcy_gov_ae,2022,20220407222414,2022_index_mcy_gov_ae_20220407222414.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,mcy_gov_ae,2022,20220407222414,2022_index_mcy_gov_ae_20220407222414.html,Google Tag Manager / gtag.js,\bgtag\s*\(,8
+AE,mcy_gov_ae,2023,20230101211558,2023_index_mcy_gov_ae_20230101211558.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,mcy_gov_ae,2023,20230101211558,2023_index_mcy_gov_ae_20230101211558.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,mcy_gov_ae,2023,20230101211558,2023_index_mcy_gov_ae_20230101211558.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,mcy_gov_ae,2023,20230101211558,2023_index_mcy_gov_ae_20230101211558.html,Google Tag Manager / gtag.js,\bgtag\s*\(,8
+AE,mcy_gov_ae,2025,20250119225337,2025_index_mcy_gov_ae_20250119225337.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,mcy_gov_ae,2025,20250304072420,2025_index_mcy_gov_ae_20250304072420.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,mof_gov_ae,2010,20100924055715,2010_index_mof_gov_ae_20100924055715.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,mof_gov_ae,2010,20100924055715,2010_index_mof_gov_ae_20100924055715.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,mof_gov_ae,2011,20110427215442,2011_index_mof_gov_ae_20110427215442.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,mof_gov_ae,2011,20110427215442,2011_index_mof_gov_ae_20110427215442.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,mof_gov_ae,2011,20110428224445,2011_index_mof_gov_ae_20110428224445.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,mof_gov_ae,2011,20110428224445,2011_index_mof_gov_ae_20110428224445.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,mof_gov_ae,2012,20120102081931,2012_index_mof_gov_ae_20120102081931.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,mof_gov_ae,2012,20120102081931,2012_index_mof_gov_ae_20120102081931.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,mof_gov_ae,2012,20120107013210,2012_index_mof_gov_ae_20120107013210.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,mof_gov_ae,2012,20120107013210,2012_index_mof_gov_ae_20120107013210.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,mof_gov_ae,2013,20130219025109,2013_index_mof_gov_ae_20130219025109.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,mof_gov_ae,2013,20130219025109,2013_index_mof_gov_ae_20130219025109.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,mof_gov_ae,2013,20130219025109,2013_index_mof_gov_ae_20130219025109.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,mof_gov_ae,2013,20130219025109,2013_index_mof_gov_ae_20130219025109.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,mof_gov_ae,2013,20130627234934,2013_index_mof_gov_ae_20130627234934.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,mof_gov_ae,2013,20130627234934,2013_index_mof_gov_ae_20130627234934.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,mof_gov_ae,2013,20130627234934,2013_index_mof_gov_ae_20130627234934.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,mof_gov_ae,2013,20130627234934,2013_index_mof_gov_ae_20130627234934.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,mof_gov_ae,2014,20140208014450,2014_index_mof_gov_ae_20140208014450.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,mof_gov_ae,2014,20140208014450,2014_index_mof_gov_ae_20140208014450.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,mof_gov_ae,2014,20140208014450,2014_index_mof_gov_ae_20140208014450.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,mof_gov_ae,2014,20140208014450,2014_index_mof_gov_ae_20140208014450.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,mof_gov_ae,2014,20140705083837,2014_index_mof_gov_ae_20140705083837.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,mof_gov_ae,2014,20140705083837,2014_index_mof_gov_ae_20140705083837.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,mof_gov_ae,2014,20140705083837,2014_index_mof_gov_ae_20140705083837.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,mof_gov_ae,2014,20140705083837,2014_index_mof_gov_ae_20140705083837.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,mof_gov_ae,2015,20150314203346,2015_index_mof_gov_ae_20150314203346.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,mof_gov_ae,2015,20150314203346,2015_index_mof_gov_ae_20150314203346.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,mof_gov_ae,2015,20150314203346,2015_index_mof_gov_ae_20150314203346.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,mof_gov_ae,2015,20150314203346,2015_index_mof_gov_ae_20150314203346.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,mof_gov_ae,2015,20150412011725,2015_index_mof_gov_ae_20150412011725.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,mof_gov_ae,2015,20150412011725,2015_index_mof_gov_ae_20150412011725.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,mof_gov_ae,2015,20150412011725,2015_index_mof_gov_ae_20150412011725.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,mof_gov_ae,2015,20150412011725,2015_index_mof_gov_ae_20150412011725.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,mof_gov_ae,2016,20160109202833,2016_index_mof_gov_ae_20160109202833.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",3
+AE,mof_gov_ae,2016,20160109202833,2016_index_mof_gov_ae_20160109202833.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",4
+AE,mof_gov_ae,2016,20161008152351,2016_index_mof_gov_ae_20161008152351.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",3
+AE,mof_gov_ae,2016,20161008152351,2016_index_mof_gov_ae_20161008152351.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",4
+AE,mof_gov_ae,2017,20170218201340,2017_index_mof_gov_ae_20170218201340.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",3
+AE,mof_gov_ae,2017,20170218201340,2017_index_mof_gov_ae_20170218201340.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",4
+AE,mof_gov_ae,2017,20170606034354,2017_index_mof_gov_ae_20170606034354.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",3
+AE,mof_gov_ae,2017,20170606034354,2017_index_mof_gov_ae_20170606034354.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",4
+AE,mof_gov_ae,2018,20180102084805,2018_index_mof_gov_ae_20180102084805.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",3
+AE,mof_gov_ae,2018,20180102084805,2018_index_mof_gov_ae_20180102084805.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",4
+AE,mof_gov_ae,2018,20180505211835,2018_index_mof_gov_ae_20180505211835.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",3
+AE,mof_gov_ae,2018,20180505211835,2018_index_mof_gov_ae_20180505211835.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",4
+AE,mof_gov_ae,2019,20190105171602,2019_index_mof_gov_ae_20190105171602.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",3
+AE,mof_gov_ae,2019,20190105171602,2019_index_mof_gov_ae_20190105171602.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",4
+AE,mof_gov_ae,2019,20190625031533,2019_index_mof_gov_ae_20190625031533.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",3
+AE,mof_gov_ae,2019,20190625031533,2019_index_mof_gov_ae_20190625031533.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",4
+AE,mof_gov_ae,2020,20200107145859,2020_index_mof_gov_ae_20200107145859.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",5
+AE,mof_gov_ae,2020,20200107145859,2020_index_mof_gov_ae_20200107145859.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",6
+AE,mof_gov_ae,2020,20200107145859,2020_index_mof_gov_ae_20200107145859.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,mof_gov_ae,2020,20200201162545,2020_index_mof_gov_ae_20200201162545.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",5
+AE,mof_gov_ae,2020,20200201162545,2020_index_mof_gov_ae_20200201162545.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",6
+AE,mof_gov_ae,2020,20200201162545,2020_index_mof_gov_ae_20200201162545.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,mof_gov_ae,2021,20210102085347,2021_index_mof_gov_ae_20210102085347.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",2
+AE,mof_gov_ae,2021,20210102085347,2021_index_mof_gov_ae_20210102085347.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",3
+AE,mof_gov_ae,2021,20210102085347,2021_index_mof_gov_ae_20210102085347.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",4
+AE,mof_gov_ae,2021,20210114035357,2021_index_mof_gov_ae_20210114035357.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",2
+AE,mof_gov_ae,2021,20210114035357,2021_index_mof_gov_ae_20210114035357.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",3
+AE,mof_gov_ae,2021,20210114035357,2021_index_mof_gov_ae_20210114035357.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",4
+AE,mof_gov_ae,2022,20220119011625,2022_index_mof_gov_ae_20220119011625.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",31
+AE,mof_gov_ae,2022,20220119011625,2022_index_mof_gov_ae_20220119011625.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",32
+AE,mof_gov_ae,2022,20220119011625,2022_index_mof_gov_ae_20220119011625.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",33
+AE,mof_gov_ae,2022,20220407230715,2022_index_mof_gov_ae_20220407230715.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",52
+AE,mof_gov_ae,2022,20220407230715,2022_index_mof_gov_ae_20220407230715.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",53
+AE,mof_gov_ae,2022,20220407230715,2022_index_mof_gov_ae_20220407230715.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",54
+AE,mof_gov_ae,2023,20230128185406,2023_index_mof_gov_ae_20230128185406.html,Google Tag Manager / gtag.js,\bgtag\s*\(,2
+AE,mof_gov_ae,2023,20230128185406,2023_index_mof_gov_ae_20230128185406.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,mof_gov_ae,2023,20230128185406,2023_index_mof_gov_ae_20230128185406.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,mof_gov_ae,2023,20230128185406,2023_index_mof_gov_ae_20230128185406.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,mof_gov_ae,2023,20230128185406,2023_index_mof_gov_ae_20230128185406.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,mof_gov_ae,2023,20230128185406,2023_index_mof_gov_ae_20230128185406.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,mof_gov_ae,2023,20230301170559,2023_index_mof_gov_ae_20230301170559.html,Google Tag Manager / gtag.js,\bgtag\s*\(,2
+AE,mof_gov_ae,2023,20230301170559,2023_index_mof_gov_ae_20230301170559.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,mof_gov_ae,2023,20230301170559,2023_index_mof_gov_ae_20230301170559.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,mof_gov_ae,2023,20230301170559,2023_index_mof_gov_ae_20230301170559.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,mof_gov_ae,2023,20230301170559,2023_index_mof_gov_ae_20230301170559.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,mof_gov_ae,2023,20230301170559,2023_index_mof_gov_ae_20230301170559.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,mof_gov_ae,2024,20240112102231,2024_index_mof_gov_ae_20240112102231.html,Google Tag Manager / gtag.js,\bgtag\s*\(,2
+AE,mof_gov_ae,2024,20240112102231,2024_index_mof_gov_ae_20240112102231.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,mof_gov_ae,2024,20240112102231,2024_index_mof_gov_ae_20240112102231.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,mof_gov_ae,2024,20240112102231,2024_index_mof_gov_ae_20240112102231.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,mof_gov_ae,2024,20240112102231,2024_index_mof_gov_ae_20240112102231.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,mof_gov_ae,2024,20240112102231,2024_index_mof_gov_ae_20240112102231.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,mof_gov_ae,2024,20240228000909,2024_index_mof_gov_ae_20240228000909.html,Google Tag Manager / gtag.js,\bgtag\s*\(,2
+AE,mof_gov_ae,2024,20240228000909,2024_index_mof_gov_ae_20240228000909.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,mof_gov_ae,2024,20240228000909,2024_index_mof_gov_ae_20240228000909.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,mof_gov_ae,2024,20240228000909,2024_index_mof_gov_ae_20240228000909.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,mof_gov_ae,2024,20240228000909,2024_index_mof_gov_ae_20240228000909.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,mof_gov_ae,2025,20250108011002,2025_index_mof_gov_ae_20250108011002.html,Google Tag Manager / gtag.js,\bgtag\s*\(,2
+AE,mof_gov_ae,2025,20250108011002,2025_index_mof_gov_ae_20250108011002.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,mof_gov_ae,2025,20250108011002,2025_index_mof_gov_ae_20250108011002.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,mof_gov_ae,2025,20250108011002,2025_index_mof_gov_ae_20250108011002.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,mof_gov_ae,2025,20250108011002,2025_index_mof_gov_ae_20250108011002.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,mof_gov_ae,2025,20250217010015,2025_index_mof_gov_ae_20250217010015.html,Google Tag Manager / gtag.js,\bgtag\s*\(,2
+AE,mof_gov_ae,2025,20250217010015,2025_index_mof_gov_ae_20250217010015.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,mof_gov_ae,2025,20250217010015,2025_index_mof_gov_ae_20250217010015.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,mof_gov_ae,2025,20250217010015,2025_index_mof_gov_ae_20250217010015.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,mof_gov_ae,2025,20250217010015,2025_index_mof_gov_ae_20250217010015.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,mohap_gov_ae,2017,20170605091953,2017_index_mohap_gov_ae_20170605091953.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,mohap_gov_ae,2017,20170829182124,2017_index_mohap_gov_ae_20170829182124.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,mohap_gov_ae,2018,20180107053746,2018_index_mohap_gov_ae_20180107053746.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,mohap_gov_ae,2018,20180805180638,2018_index_mohap_gov_ae_20180805180638.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,mohap_gov_ae,2019,20190108031725,2019_index_mohap_gov_ae_20190108031725.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,mohap_gov_ae,2019,20190512051502,2019_index_mohap_gov_ae_20190512051502.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,mohap_gov_ae,2024,20240108125233,2024_index_mohap_gov_ae_20240108125233.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,mohap_gov_ae,2024,20240108125233,2024_index_mohap_gov_ae_20240108125233.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,mohap_gov_ae,2024,20240108125233,2024_index_mohap_gov_ae_20240108125233.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,mohap_gov_ae,2024,20241111094846,2024_index_mohap_gov_ae_20241111094846.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,mohap_gov_ae,2025,20250103172532,2025_index_mohap_gov_ae_20250103172532.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,mohap_gov_ae,2025,20250122094546,2025_index_mohap_gov_ae_20250122094546.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,moi_gov_ae,2014,20140625035645,2014_index_moi_gov_ae_20140625035645.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,moi_gov_ae,2015,20150105214318,2015_index_moi_gov_ae_20150105214318.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,moi_gov_ae,2015,20151202133410,2015_index_moi_gov_ae_20151202133410.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,moi_gov_ae,2016,20160101000011,2016_index_moi_gov_ae_20160101000011.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,moi_gov_ae,2016,20160605035139,2016_index_moi_gov_ae_20160605035139.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,moi_gov_ae,2017,20170102081549,2017_index_moi_gov_ae_20170102081549.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,moi_gov_ae,2017,20170715124530,2017_index_moi_gov_ae_20170715124530.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,moi_gov_ae,2019,20190630074143,2019_index_moi_gov_ae_20190630074143.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,moi_gov_ae,2020,20200102050246,2020_index_moi_gov_ae_20200102050246.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,moi_gov_ae,2020,20201118183108,2020_index_moi_gov_ae_20201118183108.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,moi_gov_ae,2021,20210103231421,2021_index_moi_gov_ae_20210103231421.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,moi_gov_ae,2023,20230111091218,2023_index_moi_gov_ae_20230111091218.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,moi_gov_ae,2023,20230405034248,2023_index_moi_gov_ae_20230405034248.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,moi_gov_ae,2024,20240102162640,2024_index_moi_gov_ae_20240102162640.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,moi_gov_ae,2024,20240102162640,2024_index_moi_gov_ae_20240102162640.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,moi_gov_ae,2024,20240102162640,2024_index_moi_gov_ae_20240102162640.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,moi_gov_ae,2024,20240102162640,2024_index_moi_gov_ae_20240102162640.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,moi_gov_ae,2024,20240610090957,2024_index_moi_gov_ae_20240610090957.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,moi_gov_ae,2024,20240610090957,2024_index_moi_gov_ae_20240610090957.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,moi_gov_ae,2024,20240610090957,2024_index_moi_gov_ae_20240610090957.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,moi_gov_ae,2024,20240610090957,2024_index_moi_gov_ae_20240610090957.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,moi_gov_ae,2025,20250103214513,2025_index_moi_gov_ae_20250103214513.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,moi_gov_ae,2025,20250103214513,2025_index_moi_gov_ae_20250103214513.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,moi_gov_ae,2025,20250103214513,2025_index_moi_gov_ae_20250103214513.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,moi_gov_ae,2025,20250103214513,2025_index_moi_gov_ae_20250103214513.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,moi_gov_ae,2025,20250325094954,2025_index_moi_gov_ae_20250325094954.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,moi_gov_ae,2025,20250325094954,2025_index_moi_gov_ae_20250325094954.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,moi_gov_ae,2025,20250325094954,2025_index_moi_gov_ae_20250325094954.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,moi_gov_ae,2025,20250325094954,2025_index_moi_gov_ae_20250325094954.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,moiat_gov_ae,2021,20210331171638,2021_index_moiat_gov_ae_20210331171638.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,moiat_gov_ae,2021,20210331171638,2021_index_moiat_gov_ae_20210331171638.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,moiat_gov_ae,2021,20210331171638,2021_index_moiat_gov_ae_20210331171638.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,moiat_gov_ae,2021,20210331171638,2021_index_moiat_gov_ae_20210331171638.html,LinkedIn Insight Tag,_linkedin_data_partner_id,3
+AE,moiat_gov_ae,2021,20210331171638,2021_index_moiat_gov_ae_20210331171638.html,LinkedIn Insight Tag,_linkedin_data_partner_id,4
+AE,moiat_gov_ae,2021,20210331171638,2021_index_moiat_gov_ae_20210331171638.html,Facebook Pixel (fbevents),\bfbevents\.js\b,9
+AE,moiat_gov_ae,2021,20210331171638,2021_index_moiat_gov_ae_20210331171638.html,Facebook Pixel,"\bfbq\s*\(\s*['\""]init['\""]",10
+AE,moiat_gov_ae,2021,20210331171638,2021_index_moiat_gov_ae_20210331171638.html,Twitter Pixel,"\btwq\s*\(\s*['\""]init['\""]",6
+AE,moiat_gov_ae,2021,20211027063858,2021_index_moiat_gov_ae_20211027063858.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,moiat_gov_ae,2021,20211027063858,2021_index_moiat_gov_ae_20211027063858.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,moiat_gov_ae,2021,20211027063858,2021_index_moiat_gov_ae_20211027063858.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,moiat_gov_ae,2022,20220813014324,2022_index_moiat_gov_ae_20220813014324.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,moiat_gov_ae,2022,20220813014324,2022_index_moiat_gov_ae_20220813014324.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,moiat_gov_ae,2022,20220813014324,2022_index_moiat_gov_ae_20220813014324.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,moiat_gov_ae,2023,20230102094715,2023_index_moiat_gov_ae_20230102094715.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,moiat_gov_ae,2023,20230102094715,2023_index_moiat_gov_ae_20230102094715.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,moiat_gov_ae,2023,20230102094715,2023_index_moiat_gov_ae_20230102094715.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,moiat_gov_ae,2023,20231213163158,2023_index_moiat_gov_ae_20231213163158.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,moiat_gov_ae,2023,20231213163158,2023_index_moiat_gov_ae_20231213163158.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,moiat_gov_ae,2023,20231213163158,2023_index_moiat_gov_ae_20231213163158.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,moiat_gov_ae,2024,20240102015035,2024_index_moiat_gov_ae_20240102015035.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,moiat_gov_ae,2024,20240102015035,2024_index_moiat_gov_ae_20240102015035.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,moiat_gov_ae,2024,20240102015035,2024_index_moiat_gov_ae_20240102015035.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,moiat_gov_ae,2024,20240814080521,2024_index_moiat_gov_ae_20240814080521.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,moiat_gov_ae,2024,20240814080521,2024_index_moiat_gov_ae_20240814080521.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,moiat_gov_ae,2024,20240814080521,2024_index_moiat_gov_ae_20240814080521.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,moiat_gov_ae,2025,20250120075302,2025_index_moiat_gov_ae_20250120075302.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,moiat_gov_ae,2025,20250120075302,2025_index_moiat_gov_ae_20250120075302.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,moiat_gov_ae,2025,20250120075302,2025_index_moiat_gov_ae_20250120075302.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,moiat_gov_ae,2025,20250207230130,2025_index_moiat_gov_ae_20250207230130.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,moiat_gov_ae,2025,20250207230130,2025_index_moiat_gov_ae_20250207230130.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,moiat_gov_ae,2025,20250207230130,2025_index_moiat_gov_ae_20250207230130.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,nla_ae,2022,20221006055104,2022_index_nla_ae_20221006055104.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",26
+AE,nla_ae,2022,20221006055104,2022_index_nla_ae_20221006055104.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,nla_ae,2022,20221006055104,2022_index_nla_ae_20221006055104.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,nla_ae,2022,20221006055104,2022_index_nla_ae_20221006055104.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,nla_ae,2023,20230206115403,2023_index_nla_ae_20230206115403.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,nla_ae,2023,20230206115403,2023_index_nla_ae_20230206115403.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,nla_ae,2023,20230206115403,2023_index_nla_ae_20230206115403.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,nla_ae,2023,20230209012558,2023_index_nla_ae_20230209012558.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,nla_ae,2023,20230209012558,2023_index_nla_ae_20230209012558.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,nla_ae,2023,20230209012558,2023_index_nla_ae_20230209012558.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,nla_ae,2024,20240109152503,2024_index_nla_ae_20240109152503.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,nla_ae,2024,20240109152503,2024_index_nla_ae_20240109152503.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,nla_ae,2024,20240109152503,2024_index_nla_ae_20240109152503.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,nla_ae,2024,20241123053130,2024_index_nla_ae_20241123053130.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,nla_ae,2024,20241123053130,2024_index_nla_ae_20241123053130.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,nla_ae,2024,20241123053130,2024_index_nla_ae_20241123053130.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,nla_ae,2024,20241123053130,2024_index_nla_ae_20241123053130.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,nla_ae,2024,20241123053130,2024_index_nla_ae_20241123053130.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,nla_ae,2024,20241123053130,2024_index_nla_ae_20241123053130.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,nla_ae,2024,20241123053130,2024_index_nla_ae_20241123053130.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,nla_ae,2025,20250103175455,2025_index_nla_ae_20250103175455.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,nla_ae,2025,20250103175455,2025_index_nla_ae_20250103175455.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,nla_ae,2025,20250103175455,2025_index_nla_ae_20250103175455.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,nla_ae,2025,20250103175455,2025_index_nla_ae_20250103175455.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,nla_ae,2025,20250103175455,2025_index_nla_ae_20250103175455.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,nla_ae,2025,20250103175455,2025_index_nla_ae_20250103175455.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,nla_ae,2025,20250103175455,2025_index_nla_ae_20250103175455.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,nla_ae,2025,20250218082042,2025_index_nla_ae_20250218082042.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,nla_ae,2025,20250218082042,2025_index_nla_ae_20250218082042.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,nla_ae,2025,20250218082042,2025_index_nla_ae_20250218082042.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,nla_ae,2025,20250218082042,2025_index_nla_ae_20250218082042.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,nla_ae,2025,20250218082042,2025_index_nla_ae_20250218082042.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,nla_ae,2025,20250218082042,2025_index_nla_ae_20250218082042.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,nla_ae,2025,20250218082042,2025_index_nla_ae_20250218082042.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,scmc_gov_ae,2018,20181221193317,2018_index_scmc_gov_ae_20181221193317.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,scmc_gov_ae,2018,20181221193317,2018_index_scmc_gov_ae_20181221193317.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,scmc_gov_ae,2018,20181221193317,2018_index_scmc_gov_ae_20181221193317.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,space_gov_ae,2015,20151117231913,2015_index_space_gov_ae_20151117231913.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",3
+AE,space_gov_ae,2016,20160110005143,2016_index_space_gov_ae_20160110005143.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",3
+AE,space_gov_ae,2016,20160403160838,2016_index_space_gov_ae_20160403160838.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",3
+AE,space_gov_ae,2017,20170312023030,2017_index_space_gov_ae_20170312023030.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",3
+AE,space_gov_ae,2018,20181220022727,2018_index_space_gov_ae_20181220022727.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,space_gov_ae,2018,20181220022727,2018_index_space_gov_ae_20181220022727.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,space_gov_ae,2018,20181220022727,2018_index_space_gov_ae_20181220022727.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,space_gov_ae,2018,20181220022727,2018_index_space_gov_ae_20181220022727.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,space_gov_ae,2018,20181220022727,2018_index_space_gov_ae_20181220022727.html,Google Tag Manager / gtag.js,\bgtag\s*\(,8
+AE,space_gov_ae,2018,20181220022727,2018_index_space_gov_ae_20181220022727.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,space_gov_ae,2019,20190105093734,2019_index_space_gov_ae_20190105093734.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,space_gov_ae,2019,20190105093734,2019_index_space_gov_ae_20190105093734.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,space_gov_ae,2019,20190105093734,2019_index_space_gov_ae_20190105093734.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,space_gov_ae,2019,20190105093734,2019_index_space_gov_ae_20190105093734.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,space_gov_ae,2019,20190105093734,2019_index_space_gov_ae_20190105093734.html,Google Tag Manager / gtag.js,\bgtag\s*\(,8
+AE,space_gov_ae,2019,20190105093734,2019_index_space_gov_ae_20190105093734.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,space_gov_ae,2019,20190824233309,2019_index_space_gov_ae_20190824233309.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,space_gov_ae,2019,20190824233309,2019_index_space_gov_ae_20190824233309.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,space_gov_ae,2019,20190824233309,2019_index_space_gov_ae_20190824233309.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,space_gov_ae,2019,20190824233309,2019_index_space_gov_ae_20190824233309.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,space_gov_ae,2019,20190824233309,2019_index_space_gov_ae_20190824233309.html,Google Tag Manager / gtag.js,\bgtag\s*\(,8
+AE,space_gov_ae,2019,20190824233309,2019_index_space_gov_ae_20190824233309.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,space_gov_ae,2020,20200102232309,2020_index_space_gov_ae_20200102232309.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,space_gov_ae,2020,20200102232309,2020_index_space_gov_ae_20200102232309.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,space_gov_ae,2020,20200102232309,2020_index_space_gov_ae_20200102232309.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,space_gov_ae,2020,20200102232309,2020_index_space_gov_ae_20200102232309.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,space_gov_ae,2020,20200102232309,2020_index_space_gov_ae_20200102232309.html,Google Tag Manager / gtag.js,\bgtag\s*\(,8
+AE,space_gov_ae,2020,20200102232309,2020_index_space_gov_ae_20200102232309.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,space_gov_ae,2020,20200719031819,2020_index_space_gov_ae_20200719031819.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,space_gov_ae,2020,20200719031819,2020_index_space_gov_ae_20200719031819.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,space_gov_ae,2020,20200719031819,2020_index_space_gov_ae_20200719031819.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,space_gov_ae,2020,20200719031819,2020_index_space_gov_ae_20200719031819.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,space_gov_ae,2020,20200719031819,2020_index_space_gov_ae_20200719031819.html,Google Tag Manager / gtag.js,\bgtag\s*\(,8
+AE,space_gov_ae,2020,20200719031819,2020_index_space_gov_ae_20200719031819.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,space_gov_ae,2021,20210114232229,2021_index_space_gov_ae_20210114232229.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,space_gov_ae,2021,20210114232229,2021_index_space_gov_ae_20210114232229.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,space_gov_ae,2021,20210114232229,2021_index_space_gov_ae_20210114232229.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,space_gov_ae,2021,20210114232229,2021_index_space_gov_ae_20210114232229.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,space_gov_ae,2021,20210114232229,2021_index_space_gov_ae_20210114232229.html,Google Tag Manager / gtag.js,\bgtag\s*\(,8
+AE,space_gov_ae,2021,20210114232229,2021_index_space_gov_ae_20210114232229.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,space_gov_ae,2021,20210811184644,2021_index_space_gov_ae_20210811184644.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,space_gov_ae,2021,20210811184644,2021_index_space_gov_ae_20210811184644.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,space_gov_ae,2021,20210811184644,2021_index_space_gov_ae_20210811184644.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,space_gov_ae,2021,20210811184644,2021_index_space_gov_ae_20210811184644.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,space_gov_ae,2021,20210811184644,2021_index_space_gov_ae_20210811184644.html,Google Tag Manager / gtag.js,\bgtag\s*\(,8
+AE,space_gov_ae,2021,20210811184644,2021_index_space_gov_ae_20210811184644.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,space_gov_ae,2022,20220101082211,2022_index_space_gov_ae_20220101082211.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,space_gov_ae,2022,20220101082211,2022_index_space_gov_ae_20220101082211.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,space_gov_ae,2022,20220101082211,2022_index_space_gov_ae_20220101082211.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,space_gov_ae,2022,20220101082211,2022_index_space_gov_ae_20220101082211.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,space_gov_ae,2022,20220101082211,2022_index_space_gov_ae_20220101082211.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,space_gov_ae,2022,20220101082211,2022_index_space_gov_ae_20220101082211.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,space_gov_ae,2022,20220405082453,2022_index_space_gov_ae_20220405082453.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,space_gov_ae,2022,20220405082453,2022_index_space_gov_ae_20220405082453.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,space_gov_ae,2022,20220405082453,2022_index_space_gov_ae_20220405082453.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,space_gov_ae,2023,20230101080554,2023_index_space_gov_ae_20230101080554.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,space_gov_ae,2023,20230101080554,2023_index_space_gov_ae_20230101080554.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,space_gov_ae,2023,20230101080554,2023_index_space_gov_ae_20230101080554.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,space_gov_ae,2024,20240101190202,2024_index_space_gov_ae_20240101190202.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,space_gov_ae,2024,20240101190202,2024_index_space_gov_ae_20240101190202.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,space_gov_ae,2024,20240101190202,2024_index_space_gov_ae_20240101190202.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,space_gov_ae,2024,20240123040706,2024_index_space_gov_ae_20240123040706.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,space_gov_ae,2024,20240123040706,2024_index_space_gov_ae_20240123040706.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,space_gov_ae,2024,20240123040706,2024_index_space_gov_ae_20240123040706.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,space_gov_ae,2025,20250101202147,2025_index_space_gov_ae_20250101202147.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,space_gov_ae,2025,20250315004244,2025_index_space_gov_ae_20250315004244.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,tax_gov_ae,2017,20171122214841,2017_index_tax_gov_ae_20171122214841.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,tax_gov_ae,2018,20180101190745,2018_index_tax_gov_ae_20180101190745.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,tax_gov_ae,2018,20180611150301,2018_index_tax_gov_ae_20180611150301.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,tax_gov_ae,2019,20190103103235,2019_index_tax_gov_ae_20190103103235.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,tax_gov_ae,2019,20190517100608,2019_index_tax_gov_ae_20190517100608.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,tax_gov_ae,2020,20200111063250,2020_index_tax_gov_ae_20200111063250.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tax_gov_ae,2020,20200111063250,2020_index_tax_gov_ae_20200111063250.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tax_gov_ae,2020,20200111063250,2020_index_tax_gov_ae_20200111063250.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tax_gov_ae,2020,20200724045949,2020_index_tax_gov_ae_20200724045949.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tax_gov_ae,2020,20200724045949,2020_index_tax_gov_ae_20200724045949.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tax_gov_ae,2020,20200724045949,2020_index_tax_gov_ae_20200724045949.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tax_gov_ae,2021,20210204154055,2021_index_tax_gov_ae_20210204154055.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tax_gov_ae,2021,20210204154055,2021_index_tax_gov_ae_20210204154055.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tax_gov_ae,2021,20210204154055,2021_index_tax_gov_ae_20210204154055.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tax_gov_ae,2021,20211222233905,2021_index_tax_gov_ae_20211222233905.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tax_gov_ae,2021,20211222233905,2021_index_tax_gov_ae_20211222233905.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tax_gov_ae,2021,20211222233905,2021_index_tax_gov_ae_20211222233905.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tax_gov_ae,2022,20220104134222,2022_index_tax_gov_ae_20220104134222.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tax_gov_ae,2022,20220104134222,2022_index_tax_gov_ae_20220104134222.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tax_gov_ae,2022,20220104134222,2022_index_tax_gov_ae_20220104134222.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tax_gov_ae,2022,20220407222519,2022_index_tax_gov_ae_20220407222519.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tax_gov_ae,2022,20220407222519,2022_index_tax_gov_ae_20220407222519.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tax_gov_ae,2022,20220407222519,2022_index_tax_gov_ae_20220407222519.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tax_gov_ae,2023,20230102204710,2023_index_tax_gov_ae_20230102204710.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tax_gov_ae,2023,20230102204710,2023_index_tax_gov_ae_20230102204710.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tax_gov_ae,2023,20230102204710,2023_index_tax_gov_ae_20230102204710.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tax_gov_ae,2023,20230507102933,2023_index_tax_gov_ae_20230507102933.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tax_gov_ae,2023,20230507102933,2023_index_tax_gov_ae_20230507102933.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tax_gov_ae,2023,20230507102933,2023_index_tax_gov_ae_20230507102933.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tax_gov_ae,2023,20230507102933,2023_index_tax_gov_ae_20230507102933.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tax_gov_ae,2023,20230507102933,2023_index_tax_gov_ae_20230507102933.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tax_gov_ae,2023,20230507102933,2023_index_tax_gov_ae_20230507102933.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tax_gov_ae,2024,20240105084549,2024_index_tax_gov_ae_20240105084549.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tax_gov_ae,2024,20240105084549,2024_index_tax_gov_ae_20240105084549.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tax_gov_ae,2024,20240105084549,2024_index_tax_gov_ae_20240105084549.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tax_gov_ae,2024,20240105084549,2024_index_tax_gov_ae_20240105084549.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tax_gov_ae,2024,20240105084549,2024_index_tax_gov_ae_20240105084549.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tax_gov_ae,2024,20240105084549,2024_index_tax_gov_ae_20240105084549.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tax_gov_ae,2024,20240424132525,2024_index_tax_gov_ae_20240424132525.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tax_gov_ae,2024,20240424132525,2024_index_tax_gov_ae_20240424132525.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tax_gov_ae,2024,20240424132525,2024_index_tax_gov_ae_20240424132525.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tax_gov_ae,2024,20240424132525,2024_index_tax_gov_ae_20240424132525.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tax_gov_ae,2024,20240424132525,2024_index_tax_gov_ae_20240424132525.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tax_gov_ae,2024,20240424132525,2024_index_tax_gov_ae_20240424132525.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tax_gov_ae,2025,20250104101324,2025_index_tax_gov_ae_20250104101324.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tax_gov_ae,2025,20250104101324,2025_index_tax_gov_ae_20250104101324.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tax_gov_ae,2025,20250104101324,2025_index_tax_gov_ae_20250104101324.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tax_gov_ae,2025,20250104101324,2025_index_tax_gov_ae_20250104101324.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tax_gov_ae,2025,20250104101324,2025_index_tax_gov_ae_20250104101324.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tax_gov_ae,2025,20250104101324,2025_index_tax_gov_ae_20250104101324.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tax_gov_ae,2025,20250205185425,2025_index_tax_gov_ae_20250205185425.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tax_gov_ae,2025,20250205185425,2025_index_tax_gov_ae_20250205185425.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tax_gov_ae,2025,20250205185425,2025_index_tax_gov_ae_20250205185425.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tax_gov_ae,2025,20250205185425,2025_index_tax_gov_ae_20250205185425.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tax_gov_ae,2025,20250205185425,2025_index_tax_gov_ae_20250205185425.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tax_gov_ae,2025,20250205185425,2025_index_tax_gov_ae_20250205185425.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tdra_gov_ae,2021,20210416235058,2021_index_tdra_gov_ae_20210416235058.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",6
+AE,tdra_gov_ae,2021,20211129152537,2021_index_tdra_gov_ae_20211129152537.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tdra_gov_ae,2021,20211129152537,2021_index_tdra_gov_ae_20211129152537.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tdra_gov_ae,2021,20211129152537,2021_index_tdra_gov_ae_20211129152537.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tdra_gov_ae,2022,20220101114833,2022_index_tdra_gov_ae_20220101114833.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tdra_gov_ae,2022,20220101114833,2022_index_tdra_gov_ae_20220101114833.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tdra_gov_ae,2022,20220101114833,2022_index_tdra_gov_ae_20220101114833.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tdra_gov_ae,2022,20220407221207,2022_index_tdra_gov_ae_20220407221207.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tdra_gov_ae,2022,20220407221207,2022_index_tdra_gov_ae_20220407221207.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tdra_gov_ae,2022,20220407221207,2022_index_tdra_gov_ae_20220407221207.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tdra_gov_ae,2023,20230101030400,2023_index_tdra_gov_ae_20230101030400.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tdra_gov_ae,2023,20230101030400,2023_index_tdra_gov_ae_20230101030400.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tdra_gov_ae,2023,20230101030400,2023_index_tdra_gov_ae_20230101030400.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tdra_gov_ae,2023,20230119235211,2023_index_tdra_gov_ae_20230119235211.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tdra_gov_ae,2023,20230119235211,2023_index_tdra_gov_ae_20230119235211.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tdra_gov_ae,2023,20230119235211,2023_index_tdra_gov_ae_20230119235211.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tdra_gov_ae,2024,20240101123123,2024_index_tdra_gov_ae_20240101123123.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tdra_gov_ae,2024,20240101123123,2024_index_tdra_gov_ae_20240101123123.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tdra_gov_ae,2024,20240101123123,2024_index_tdra_gov_ae_20240101123123.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tdra_gov_ae,2024,20240731235008,2024_index_tdra_gov_ae_20240731235008.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tdra_gov_ae,2024,20240731235008,2024_index_tdra_gov_ae_20240731235008.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tdra_gov_ae,2024,20240731235008,2024_index_tdra_gov_ae_20240731235008.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tdra_gov_ae,2025,20250101002318,2025_index_tdra_gov_ae_20250101002318.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tdra_gov_ae,2025,20250101002318,2025_index_tdra_gov_ae_20250101002318.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tdra_gov_ae,2025,20250101002318,2025_index_tdra_gov_ae_20250101002318.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,tdra_gov_ae,2025,20250122120025,2025_index_tdra_gov_ae_20250122120025.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,tdra_gov_ae,2025,20250122120025,2025_index_tdra_gov_ae_20250122120025.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,tdra_gov_ae,2025,20250122120025,2025_index_tdra_gov_ae_20250122120025.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,uaecabinet_ae,2016,20160111235428,2016_index_uaecabinet_ae_20160111235428.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,uaecabinet_ae,2018,20180215212546,2018_index_uaecabinet_ae_20180215212546.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,uaecabinet_ae,2021,20210308134703,2021_index_uaecabinet_ae_20210308134703.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,uaecabinet_ae,2022,20220118004219,2022_index_uaecabinet_ae_20220118004219.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,uaecabinet_ae,2022,20220503111027,2022_index_uaecabinet_ae_20220503111027.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,uaecabinet_ae,2023,20230102133938,2023_index_uaecabinet_ae_20230102133938.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,uaecabinet_ae,2023,20230711140234,2023_index_uaecabinet_ae_20230711140234.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,uaecabinet_ae,2024,20240101221054,2024_index_uaecabinet_ae_20240101221054.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,uaecabinet_ae,2024,20240305050423,2024_index_uaecabinet_ae_20240305050423.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,uaecabinet_ae,2025,20250101235515,2025_index_uaecabinet_ae_20250101235515.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,uaecabinet_ae,2025,20250101235515,2025_index_uaecabinet_ae_20250101235515.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,uaecabinet_ae,2025,20250101235515,2025_index_uaecabinet_ae_20250101235515.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,uaecabinet_ae,2025,20250325013227,2025_index_uaecabinet_ae_20250325013227.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,uaecabinet_ae,2025,20250325013227,2025_index_uaecabinet_ae_20250325013227.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,uaecabinet_ae,2025,20250325013227,2025_index_uaecabinet_ae_20250325013227.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_agda_ac_ae,2021,20210701072103,2021_index_www_agda_ac_ae_20210701072103.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_agda_ac_ae,2021,20210701072103,2021_index_www_agda_ac_ae_20210701072103.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_agda_ac_ae,2021,20210701072103,2021_index_www_agda_ac_ae_20210701072103.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_agda_ac_ae,2021,20210701072103,2021_index_www_agda_ac_ae_20210701072103.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_agda_ac_ae,2021,20211125103900,2021_index_www_agda_ac_ae_20211125103900.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_agda_ac_ae,2021,20211125103900,2021_index_www_agda_ac_ae_20211125103900.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_agda_ac_ae,2021,20211125103900,2021_index_www_agda_ac_ae_20211125103900.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_agda_ac_ae,2021,20211125103900,2021_index_www_agda_ac_ae_20211125103900.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_agda_ac_ae,2022,20220125213842,2022_index_www_agda_ac_ae_20220125213842.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_agda_ac_ae,2022,20220125213842,2022_index_www_agda_ac_ae_20220125213842.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_agda_ac_ae,2022,20220125213842,2022_index_www_agda_ac_ae_20220125213842.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_agda_ac_ae,2022,20220125213842,2022_index_www_agda_ac_ae_20220125213842.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_agda_ac_ae,2022,20220130180906,2022_index_www_agda_ac_ae_20220130180906.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_agda_ac_ae,2022,20220130180906,2022_index_www_agda_ac_ae_20220130180906.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_agda_ac_ae,2022,20220130180906,2022_index_www_agda_ac_ae_20220130180906.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_agda_ac_ae,2022,20220130180906,2022_index_www_agda_ac_ae_20220130180906.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_agda_ac_ae,2023,20230115165257,2023_index_www_agda_ac_ae_20230115165257.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_agda_ac_ae,2023,20230115165257,2023_index_www_agda_ac_ae_20230115165257.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_agda_ac_ae,2023,20230115165257,2023_index_www_agda_ac_ae_20230115165257.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_agda_ac_ae,2023,20230115165257,2023_index_www_agda_ac_ae_20230115165257.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_agda_ac_ae,2023,20230208143911,2023_index_www_agda_ac_ae_20230208143911.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_agda_ac_ae,2023,20230208143911,2023_index_www_agda_ac_ae_20230208143911.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_agda_ac_ae,2023,20230208143911,2023_index_www_agda_ac_ae_20230208143911.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_agda_ac_ae,2023,20230208143911,2023_index_www_agda_ac_ae_20230208143911.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_agda_ac_ae,2024,20240221021654,2024_index_www_agda_ac_ae_20240221021654.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_agda_ac_ae,2024,20240221021654,2024_index_www_agda_ac_ae_20240221021654.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_agda_ac_ae,2024,20240221021654,2024_index_www_agda_ac_ae_20240221021654.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_agda_ac_ae,2024,20241209191236,2024_index_www_agda_ac_ae_20241209191236.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_agda_ac_ae,2024,20241209191236,2024_index_www_agda_ac_ae_20241209191236.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_agda_ac_ae,2024,20241209191236,2024_index_www_agda_ac_ae_20241209191236.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_awqaf_gov_ae,2020,20200107145840,2020_index_www_awqaf_gov_ae_20200107145840.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_awqaf_gov_ae,2020,20200107145840,2020_index_www_awqaf_gov_ae_20200107145840.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_awqaf_gov_ae,2020,20200107145840,2020_index_www_awqaf_gov_ae_20200107145840.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_awqaf_gov_ae,2020,20200831081315,2020_index_www_awqaf_gov_ae_20200831081315.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_awqaf_gov_ae,2020,20200831081315,2020_index_www_awqaf_gov_ae_20200831081315.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_awqaf_gov_ae,2020,20200831081315,2020_index_www_awqaf_gov_ae_20200831081315.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_awqaf_gov_ae,2021,20210125031622,2021_index_www_awqaf_gov_ae_20210125031622.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_awqaf_gov_ae,2021,20210125031622,2021_index_www_awqaf_gov_ae_20210125031622.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_awqaf_gov_ae,2021,20210125031622,2021_index_www_awqaf_gov_ae_20210125031622.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_awqaf_gov_ae,2021,20210314180604,2021_index_www_awqaf_gov_ae_20210314180604.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_awqaf_gov_ae,2021,20210314180604,2021_index_www_awqaf_gov_ae_20210314180604.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_awqaf_gov_ae,2021,20210314180604,2021_index_www_awqaf_gov_ae_20210314180604.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_awqaf_gov_ae,2022,20220102213824,2022_index_www_awqaf_gov_ae_20220102213824.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_awqaf_gov_ae,2022,20220102213824,2022_index_www_awqaf_gov_ae_20220102213824.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_awqaf_gov_ae,2022,20220102213824,2022_index_www_awqaf_gov_ae_20220102213824.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_awqaf_gov_ae,2022,20220316174756,2022_index_www_awqaf_gov_ae_20220316174756.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_awqaf_gov_ae,2022,20220316174756,2022_index_www_awqaf_gov_ae_20220316174756.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_awqaf_gov_ae,2022,20220316174756,2022_index_www_awqaf_gov_ae_20220316174756.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_awqaf_gov_ae,2023,20230104195135,2023_index_www_awqaf_gov_ae_20230104195135.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_awqaf_gov_ae,2023,20230104195135,2023_index_www_awqaf_gov_ae_20230104195135.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_awqaf_gov_ae,2023,20230104195135,2023_index_www_awqaf_gov_ae_20230104195135.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_awqaf_gov_ae,2023,20231115163048,2023_index_www_awqaf_gov_ae_20231115163048.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_awqaf_gov_ae,2023,20231115163048,2023_index_www_awqaf_gov_ae_20231115163048.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_awqaf_gov_ae,2023,20231115163048,2023_index_www_awqaf_gov_ae_20231115163048.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_awqaf_gov_ae,2024,20240101105941,2024_index_www_awqaf_gov_ae_20240101105941.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_awqaf_gov_ae,2024,20241001150958,2024_index_www_awqaf_gov_ae_20241001150958.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_awqaf_gov_ae,2025,20250111090957,2025_index_www_awqaf_gov_ae_20250111090957.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_awqaf_gov_ae,2025,20250214183815,2025_index_www_awqaf_gov_ae_20250214183815.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_centralbank_ae,2016,20160111024041,2016_index_www_centralbank_ae_20160111024041.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_centralbank_ae,2016,20160407104118,2016_index_www_centralbank_ae_20160407104118.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_centralbank_ae,2017,20170126172055,2017_index_www_centralbank_ae_20170126172055.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_centralbank_ae,2017,20170518204927,2017_index_www_centralbank_ae_20170518204927.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_centralbank_ae,2018,20180201194754,2018_index_www_centralbank_ae_20180201194754.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_centralbank_ae,2018,20180528153309,2018_index_www_centralbank_ae_20180528153309.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_centralbank_ae,2019,20190104202614,2019_index_www_centralbank_ae_20190104202614.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",6
+AE,www_centralbank_ae,2019,20191220145134,2019_index_www_centralbank_ae_20191220145134.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",6
+AE,www_centralbank_ae,2020,20200112065556,2020_index_www_centralbank_ae_20200112065556.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",6
+AE,www_centralbank_ae,2020,20200401211754,2020_index_www_centralbank_ae_20200401211754.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_centralbank_ae,2020,20200401211754,2020_index_www_centralbank_ae_20200401211754.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_centralbank_ae,2020,20200401211754,2020_index_www_centralbank_ae_20200401211754.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_centralbank_ae,2021,20210101091536,2021_index_www_centralbank_ae_20210101091536.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_centralbank_ae,2021,20210101091536,2021_index_www_centralbank_ae_20210101091536.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_centralbank_ae,2021,20210101091536,2021_index_www_centralbank_ae_20210101091536.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_centralbank_ae,2021,20210414233740,2021_index_www_centralbank_ae_20210414233740.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_centralbank_ae,2021,20210414233740,2021_index_www_centralbank_ae_20210414233740.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_centralbank_ae,2021,20210414233740,2021_index_www_centralbank_ae_20210414233740.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_centralbank_ae,2022,20220102205046,2022_index_www_centralbank_ae_20220102205046.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_centralbank_ae,2022,20220102205046,2022_index_www_centralbank_ae_20220102205046.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_centralbank_ae,2022,20220102205046,2022_index_www_centralbank_ae_20220102205046.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_centralbank_ae,2022,20220301110247,2022_index_www_centralbank_ae_20220301110247.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_centralbank_ae,2022,20220301110247,2022_index_www_centralbank_ae_20220301110247.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_centralbank_ae,2022,20220301110247,2022_index_www_centralbank_ae_20220301110247.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_centralbank_ae,2023,20230101100743,2023_index_www_centralbank_ae_20230101100743.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_centralbank_ae,2023,20230101100743,2023_index_www_centralbank_ae_20230101100743.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_centralbank_ae,2023,20230101100743,2023_index_www_centralbank_ae_20230101100743.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_centralbank_ae,2023,20230721120825,2023_index_www_centralbank_ae_20230721120825.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_centralbank_ae,2023,20230721120825,2023_index_www_centralbank_ae_20230721120825.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_centralbank_ae,2023,20230721120825,2023_index_www_centralbank_ae_20230721120825.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_centralbank_ae,2024,20240101094850,2024_index_www_centralbank_ae_20240101094850.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_centralbank_ae,2024,20240101094850,2024_index_www_centralbank_ae_20240101094850.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_centralbank_ae,2024,20240101094850,2024_index_www_centralbank_ae_20240101094850.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_centralbank_ae,2024,20240120215426,2024_index_www_centralbank_ae_20240120215426.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_centralbank_ae,2024,20240120215426,2024_index_www_centralbank_ae_20240120215426.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_centralbank_ae,2024,20240120215426,2024_index_www_centralbank_ae_20240120215426.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_centralbank_ae,2025,20250107145528,2025_index_www_centralbank_ae_20250107145528.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_centralbank_ae,2025,20250107145528,2025_index_www_centralbank_ae_20250107145528.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_centralbank_ae,2025,20250107145528,2025_index_www_centralbank_ae_20250107145528.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_centralbank_ae,2025,20250216093950,2025_index_www_centralbank_ae_20250216093950.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_centralbank_ae,2025,20250216093950,2025_index_www_centralbank_ae_20250216093950.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_centralbank_ae,2025,20250216093950,2025_index_www_centralbank_ae_20250216093950.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_ehs_gov_ae,2022,20220119130244,2022_index_www_ehs_gov_ae_20220119130244.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ehs_gov_ae,2022,20220119130244,2022_index_www_ehs_gov_ae_20220119130244.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ehs_gov_ae,2022,20220119130244,2022_index_www_ehs_gov_ae_20220119130244.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_ehs_gov_ae,2022,20220609090020,2022_index_www_ehs_gov_ae_20220609090020.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_ehs_gov_ae,2023,20230109054545,2023_index_www_ehs_gov_ae_20230109054545.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_ehs_gov_ae,2023,20230204211655,2023_index_www_ehs_gov_ae_20230204211655.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_ehs_gov_ae,2024,20240105122556,2024_index_www_ehs_gov_ae_20240105122556.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_ehs_gov_ae,2024,20240105122556,2024_index_www_ehs_gov_ae_20240105122556.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_ehs_gov_ae,2024,20240417231033,2024_index_www_ehs_gov_ae_20240417231033.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_ehs_gov_ae,2024,20240417231033,2024_index_www_ehs_gov_ae_20240417231033.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_ehs_gov_ae,2025,20250104184724,2025_index_www_ehs_gov_ae_20250104184724.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_ehs_gov_ae,2025,20250104184724,2025_index_www_ehs_gov_ae_20250104184724.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_ehs_gov_ae,2025,20250216201139,2025_index_www_ehs_gov_ae_20250216201139.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_ehs_gov_ae,2025,20250216201139,2025_index_www_ehs_gov_ae_20250216201139.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_eia_gov_ae,2013,20130521054318,2013_index_www_eia_gov_ae_20130521054318.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_eia_gov_ae,2013,20130521054318,2013_index_www_eia_gov_ae_20130521054318.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_eia_gov_ae,2013,20130812050113,2013_index_www_eia_gov_ae_20130812050113.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_eia_gov_ae,2013,20130812050113,2013_index_www_eia_gov_ae_20130812050113.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_eia_gov_ae,2014,20140516194111,2014_index_www_eia_gov_ae_20140516194111.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_eia_gov_ae,2014,20140516194111,2014_index_www_eia_gov_ae_20140516194111.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_eia_gov_ae,2015,20150324061329,2015_index_www_eia_gov_ae_20150324061329.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_eia_gov_ae,2015,20150324061329,2015_index_www_eia_gov_ae_20150324061329.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_eia_gov_ae,2022,20221116034944,2022_index_www_eia_gov_ae_20221116034944.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_eia_gov_ae,2022,20221116034944,2022_index_www_eia_gov_ae_20221116034944.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_eia_gov_ae,2022,20221116034944,2022_index_www_eia_gov_ae_20221116034944.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_eia_gov_ae,2023,20230101034611,2023_index_www_eia_gov_ae_20230101034611.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_eia_gov_ae,2023,20230101034611,2023_index_www_eia_gov_ae_20230101034611.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_eia_gov_ae,2023,20230101034611,2023_index_www_eia_gov_ae_20230101034611.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_eia_gov_ae,2023,20231109153255,2023_index_www_eia_gov_ae_20231109153255.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_eia_gov_ae,2023,20231109153255,2023_index_www_eia_gov_ae_20231109153255.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_eia_gov_ae,2023,20231109153255,2023_index_www_eia_gov_ae_20231109153255.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_eia_gov_ae,2024,20240101042033,2024_index_www_eia_gov_ae_20240101042033.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_eia_gov_ae,2024,20240101042033,2024_index_www_eia_gov_ae_20240101042033.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_eia_gov_ae,2024,20240101042033,2024_index_www_eia_gov_ae_20240101042033.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_eia_gov_ae,2024,20240624152406,2024_index_www_eia_gov_ae_20240624152406.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_eia_gov_ae,2024,20240624152406,2024_index_www_eia_gov_ae_20240624152406.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_eia_gov_ae,2024,20240624152406,2024_index_www_eia_gov_ae_20240624152406.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_eia_gov_ae,2025,20250104031204,2025_index_www_eia_gov_ae_20250104031204.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_eia_gov_ae,2025,20250104031204,2025_index_www_eia_gov_ae_20250104031204.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_eia_gov_ae,2025,20250104031204,2025_index_www_eia_gov_ae_20250104031204.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_eia_gov_ae,2025,20250131022951,2025_index_www_eia_gov_ae_20250131022951.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_eia_gov_ae,2025,20250131022951,2025_index_www_eia_gov_ae_20250131022951.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_eia_gov_ae,2025,20250131022951,2025_index_www_eia_gov_ae_20250131022951.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_emiratesrc_ae,2021,20211022041659,2021_index_www_emiratesrc_ae_20211022041659.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_emiratesrc_ae,2021,20211022041659,2021_index_www_emiratesrc_ae_20211022041659.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_emiratesrc_ae,2021,20211022041659,2021_index_www_emiratesrc_ae_20211022041659.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_emiratesrc_ae,2022,20220116155308,2022_index_www_emiratesrc_ae_20220116155308.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_emiratesrc_ae,2022,20220116155308,2022_index_www_emiratesrc_ae_20220116155308.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_emiratesrc_ae,2022,20220116155308,2022_index_www_emiratesrc_ae_20220116155308.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_emiratesrc_ae,2022,20220121100536,2022_index_www_emiratesrc_ae_20220121100536.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_emiratesrc_ae,2022,20220121100536,2022_index_www_emiratesrc_ae_20220121100536.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_emiratesrc_ae,2022,20220121100536,2022_index_www_emiratesrc_ae_20220121100536.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_ese_gov_ae,2021,20211020215138,2021_index_www_ese_gov_ae_20211020215138.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ese_gov_ae,2021,20211020215138,2021_index_www_ese_gov_ae_20211020215138.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ese_gov_ae,2021,20211020215138,2021_index_www_ese_gov_ae_20211020215138.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_ese_gov_ae,2022,20220225003618,2022_index_www_ese_gov_ae_20220225003618.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ese_gov_ae,2022,20220225003618,2022_index_www_ese_gov_ae_20220225003618.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ese_gov_ae,2022,20220225003618,2022_index_www_ese_gov_ae_20220225003618.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_ese_gov_ae,2022,20220614100748,2022_index_www_ese_gov_ae_20220614100748.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ese_gov_ae,2022,20220614100748,2022_index_www_ese_gov_ae_20220614100748.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ese_gov_ae,2022,20220614100748,2022_index_www_ese_gov_ae_20220614100748.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_ese_gov_ae,2023,20230201060946,2023_index_www_ese_gov_ae_20230201060946.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ese_gov_ae,2023,20230201060946,2023_index_www_ese_gov_ae_20230201060946.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,4
+AE,www_ese_gov_ae,2023,20230201060946,2023_index_www_ese_gov_ae_20230201060946.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_ese_gov_ae,2023,20231201070547,2023_index_www_ese_gov_ae_20231201070547.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ese_gov_ae,2023,20231201070547,2023_index_www_ese_gov_ae_20231201070547.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ese_gov_ae,2023,20231201070547,2023_index_www_ese_gov_ae_20231201070547.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_ese_gov_ae,2024,20240101231235,2024_index_www_ese_gov_ae_20240101231235.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ese_gov_ae,2024,20240101231235,2024_index_www_ese_gov_ae_20240101231235.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ese_gov_ae,2024,20240101231235,2024_index_www_ese_gov_ae_20240101231235.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_ese_gov_ae,2024,20240118222025,2024_index_www_ese_gov_ae_20240118222025.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ese_gov_ae,2024,20240118222025,2024_index_www_ese_gov_ae_20240118222025.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ese_gov_ae,2024,20240118222025,2024_index_www_ese_gov_ae_20240118222025.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_ese_gov_ae,2025,20250120221842,2025_index_www_ese_gov_ae_20250120221842.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ese_gov_ae,2025,20250120221842,2025_index_www_ese_gov_ae_20250120221842.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ese_gov_ae,2025,20250120221842,2025_index_www_ese_gov_ae_20250120221842.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_fahr_gov_ae,2011,20111216233805,2011_index_www_fahr_gov_ae_20111216233805.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2011,20111216233805,2011_index_www_fahr_gov_ae_20111216233805.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2011,20111216233805,2011_index_www_fahr_gov_ae_20111216233805.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2011,20111216233805,2011_index_www_fahr_gov_ae_20111216233805.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2012,20120112042349,2012_index_www_fahr_gov_ae_20120112042349.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2012,20120112042349,2012_index_www_fahr_gov_ae_20120112042349.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2012,20120112042349,2012_index_www_fahr_gov_ae_20120112042349.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2012,20120112042349,2012_index_www_fahr_gov_ae_20120112042349.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2012,20120510164307,2012_index_www_fahr_gov_ae_20120510164307.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2012,20120510164307,2012_index_www_fahr_gov_ae_20120510164307.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2012,20120510164307,2012_index_www_fahr_gov_ae_20120510164307.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2012,20120510164307,2012_index_www_fahr_gov_ae_20120510164307.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2013,20130521055718,2013_index_www_fahr_gov_ae_20130521055718.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2013,20130521055718,2013_index_www_fahr_gov_ae_20130521055718.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2013,20130521055718,2013_index_www_fahr_gov_ae_20130521055718.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2013,20130521055718,2013_index_www_fahr_gov_ae_20130521055718.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2013,20131020094828,2013_index_www_fahr_gov_ae_20131020094828.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2013,20131020094828,2013_index_www_fahr_gov_ae_20131020094828.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2013,20131020094828,2013_index_www_fahr_gov_ae_20131020094828.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2013,20131020094828,2013_index_www_fahr_gov_ae_20131020094828.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2014,20140113111123,2014_index_www_fahr_gov_ae_20140113111123.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2014,20140113111123,2014_index_www_fahr_gov_ae_20140113111123.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2014,20140113111123,2014_index_www_fahr_gov_ae_20140113111123.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2014,20140113111123,2014_index_www_fahr_gov_ae_20140113111123.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2014,20141119213337,2014_index_www_fahr_gov_ae_20141119213337.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2014,20141119213337,2014_index_www_fahr_gov_ae_20141119213337.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2014,20141119213337,2014_index_www_fahr_gov_ae_20141119213337.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2014,20141119213337,2014_index_www_fahr_gov_ae_20141119213337.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2015,20150215072715,2015_index_www_fahr_gov_ae_20150215072715.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2015,20150215072715,2015_index_www_fahr_gov_ae_20150215072715.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2015,20150215072715,2015_index_www_fahr_gov_ae_20150215072715.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2015,20150215072715,2015_index_www_fahr_gov_ae_20150215072715.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2015,20150426111421,2015_index_www_fahr_gov_ae_20150426111421.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2015,20150426111421,2015_index_www_fahr_gov_ae_20150426111421.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2015,20150426111421,2015_index_www_fahr_gov_ae_20150426111421.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2015,20150426111421,2015_index_www_fahr_gov_ae_20150426111421.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2017,20170420131432,2017_index_www_fahr_gov_ae_20170420131432.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2017,20170420131432,2017_index_www_fahr_gov_ae_20170420131432.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2017,20170420131432,2017_index_www_fahr_gov_ae_20170420131432.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2017,20170420131432,2017_index_www_fahr_gov_ae_20170420131432.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2017,20171017104528,2017_index_www_fahr_gov_ae_20171017104528.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2017,20171017104528,2017_index_www_fahr_gov_ae_20171017104528.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2017,20171017104528,2017_index_www_fahr_gov_ae_20171017104528.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2017,20171017104528,2017_index_www_fahr_gov_ae_20171017104528.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2018,20180214220320,2018_index_www_fahr_gov_ae_20180214220320.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2018,20180214220320,2018_index_www_fahr_gov_ae_20180214220320.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2018,20180214220320,2018_index_www_fahr_gov_ae_20180214220320.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2018,20180214220320,2018_index_www_fahr_gov_ae_20180214220320.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2018,20181015172128,2018_index_www_fahr_gov_ae_20181015172128.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2018,20181015172128,2018_index_www_fahr_gov_ae_20181015172128.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2018,20181015172128,2018_index_www_fahr_gov_ae_20181015172128.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2018,20181015172128,2018_index_www_fahr_gov_ae_20181015172128.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2019,20190126052035,2019_index_www_fahr_gov_ae_20190126052035.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2019,20190126052035,2019_index_www_fahr_gov_ae_20190126052035.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2019,20190126052035,2019_index_www_fahr_gov_ae_20190126052035.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2019,20190126052035,2019_index_www_fahr_gov_ae_20190126052035.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2019,20191124052926,2019_index_www_fahr_gov_ae_20191124052926.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2019,20191124052926,2019_index_www_fahr_gov_ae_20191124052926.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2019,20191124052926,2019_index_www_fahr_gov_ae_20191124052926.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2019,20191124052926,2019_index_www_fahr_gov_ae_20191124052926.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2020,20200112065548,2020_index_www_fahr_gov_ae_20200112065548.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2020,20200112065548,2020_index_www_fahr_gov_ae_20200112065548.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2020,20200112065548,2020_index_www_fahr_gov_ae_20200112065548.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2020,20200112065548,2020_index_www_fahr_gov_ae_20200112065548.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2020,20201003060004,2020_index_www_fahr_gov_ae_20201003060004.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2020,20201003060004,2020_index_www_fahr_gov_ae_20201003060004.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2020,20201003060004,2020_index_www_fahr_gov_ae_20201003060004.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2020,20201003060004,2020_index_www_fahr_gov_ae_20201003060004.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2021,20210116060207,2021_index_www_fahr_gov_ae_20210116060207.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2021,20210116060207,2021_index_www_fahr_gov_ae_20210116060207.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2021,20210116060207,2021_index_www_fahr_gov_ae_20210116060207.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2021,20210116060207,2021_index_www_fahr_gov_ae_20210116060207.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2021,20210129065144,2021_index_www_fahr_gov_ae_20210129065144.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2021,20210129065144,2021_index_www_fahr_gov_ae_20210129065144.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2021,20210129065144,2021_index_www_fahr_gov_ae_20210129065144.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2021,20210129065144,2021_index_www_fahr_gov_ae_20210129065144.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2022,20220123031522,2022_index_www_fahr_gov_ae_20220123031522.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2022,20220123031522,2022_index_www_fahr_gov_ae_20220123031522.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2022,20220123031522,2022_index_www_fahr_gov_ae_20220123031522.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2022,20220123031522,2022_index_www_fahr_gov_ae_20220123031522.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2022,20220407224435,2022_index_www_fahr_gov_ae_20220407224435.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2022,20220407224435,2022_index_www_fahr_gov_ae_20220407224435.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2022,20220407224435,2022_index_www_fahr_gov_ae_20220407224435.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2022,20220407224435,2022_index_www_fahr_gov_ae_20220407224435.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2023,20230102152430,2023_index_www_fahr_gov_ae_20230102152430.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2023,20230102152430,2023_index_www_fahr_gov_ae_20230102152430.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2023,20230102152430,2023_index_www_fahr_gov_ae_20230102152430.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2023,20230102152430,2023_index_www_fahr_gov_ae_20230102152430.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2023,20230718075816,2023_index_www_fahr_gov_ae_20230718075816.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2023,20230718075816,2023_index_www_fahr_gov_ae_20230718075816.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2023,20230718075816,2023_index_www_fahr_gov_ae_20230718075816.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2023,20230718075816,2023_index_www_fahr_gov_ae_20230718075816.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2024,20240101232809,2024_index_www_fahr_gov_ae_20240101232809.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_fahr_gov_ae,2024,20240101232809,2024_index_www_fahr_gov_ae_20240101232809.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2024,20240101232809,2024_index_www_fahr_gov_ae_20240101232809.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,6
+AE,www_fahr_gov_ae,2024,20240101232809,2024_index_www_fahr_gov_ae_20240101232809.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,7
+AE,www_fahr_gov_ae,2024,20241112171805,2024_index_www_fahr_gov_ae_20241112171805.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_fahr_gov_ae,2024,20241112171805,2024_index_www_fahr_gov_ae_20241112171805.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2024,20241112171805,2024_index_www_fahr_gov_ae_20241112171805.html,Google Tag Manager / gtag.js,\bgtag\s*\(,8
+AE,www_fahr_gov_ae,2024,20241112171805,2024_index_www_fahr_gov_ae_20241112171805.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,www_fahr_gov_ae,2025,20250103173827,2025_index_www_fahr_gov_ae_20250103173827.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_fahr_gov_ae,2025,20250103173827,2025_index_www_fahr_gov_ae_20250103173827.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2025,20250103173827,2025_index_www_fahr_gov_ae_20250103173827.html,Google Tag Manager / gtag.js,\bgtag\s*\(,8
+AE,www_fahr_gov_ae,2025,20250103173827,2025_index_www_fahr_gov_ae_20250103173827.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,www_fahr_gov_ae,2025,20250120053606,2025_index_www_fahr_gov_ae_20250120053606.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_fahr_gov_ae,2025,20250120053606,2025_index_www_fahr_gov_ae_20250120053606.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,www_fahr_gov_ae,2025,20250120053606,2025_index_www_fahr_gov_ae_20250120053606.html,Google Tag Manager / gtag.js,\bgtag\s*\(,8
+AE,www_fahr_gov_ae,2025,20250120053606,2025_index_www_fahr_gov_ae_20250120053606.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,www_fanr_gov_ae,2015,20150527143057,2015_index_www_fanr_gov_ae_20150527143057.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_fanr_gov_ae,2016,20160109155320,2016_index_www_fanr_gov_ae_20160109155320.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_fanr_gov_ae,2016,20160314164247,2016_index_www_fanr_gov_ae_20160314164247.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_fanr_gov_ae,2017,20170313055106,2017_index_www_fanr_gov_ae_20170313055106.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_fanr_gov_ae,2017,20170605223809,2017_index_www_fanr_gov_ae_20170605223809.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_fanr_gov_ae,2018,20180224033818,2018_index_www_fanr_gov_ae_20180224033818.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_fanr_gov_ae,2018,20180515192752,2018_index_www_fanr_gov_ae_20180515192752.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_fanr_gov_ae,2019,20190120110231,2019_index_www_fanr_gov_ae_20190120110231.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_fanr_gov_ae,2019,20190506030015,2019_index_www_fanr_gov_ae_20190506030015.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_fanr_gov_ae,2020,20200122031723,2020_index_www_fanr_gov_ae_20200122031723.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_fanr_gov_ae,2020,20200609013202,2020_index_www_fanr_gov_ae_20200609013202.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_fanr_gov_ae,2021,20210221071906,2021_index_www_fanr_gov_ae_20210221071906.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_fanr_gov_ae,2021,20210307183804,2021_index_www_fanr_gov_ae_20210307183804.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_fanr_gov_ae,2022,20220110155011,2022_index_www_fanr_gov_ae_20220110155011.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,www_fanr_gov_ae,2022,20220120185004,2022_index_www_fanr_gov_ae_20220120185004.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,www_fanr_gov_ae,2023,20230123163844,2023_index_www_fanr_gov_ae_20230123163844.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,www_fanr_gov_ae,2023,20230628001918,2023_index_www_fanr_gov_ae_20230628001918.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,www_fanr_gov_ae,2024,20240101101025,2024_index_www_fanr_gov_ae_20240101101025.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,www_fanr_gov_ae,2024,20241228133804,2024_index_www_fanr_gov_ae_20241228133804.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,www_fanr_gov_ae,2025,20250103174454,2025_index_www_fanr_gov_ae_20250103174454.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,www_fanr_gov_ae,2025,20250306081131,2025_index_www_fanr_gov_ae_20250306081131.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,www_mediaoffice_abudhabi,2024,20240106002308,2024_index_www_mediaoffice_abudhabi_20240106002308.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,4
+AE,www_mediaoffice_abudhabi,2024,20240301003248,2024_index_www_mediaoffice_abudhabi_20240301003248.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,4
+AE,www_mediaoffice_abudhabi,2025,20250211194645,2025_index_www_mediaoffice_abudhabi_20250211194645.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,4
+AE,www_mediaoffice_abudhabi,2025,20250301004214,2025_index_www_mediaoffice_abudhabi_20250301004214.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,4
+AE,www_mfnca_gov_ae,2018,20180123002901,2018_index_www_mfnca_gov_ae_20180123002901.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_mfnca_gov_ae,2018,20180123002901,2018_index_www_mfnca_gov_ae_20180123002901.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mfnca_gov_ae,2018,20180123002901,2018_index_www_mfnca_gov_ae_20180123002901.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_mfnca_gov_ae,2018,20180123002901,2018_index_www_mfnca_gov_ae_20180123002901.html,Hotjar Init,"\(function\s*\(\s*h\s*,\s*o\s*,\s*t\s*,\s*j\s*,\s*a\s*,\s*r\b",2
+AE,www_mfnca_gov_ae,2018,20180725191945,2018_index_www_mfnca_gov_ae_20180725191945.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_mfnca_gov_ae,2018,20180725191945,2018_index_www_mfnca_gov_ae_20180725191945.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mfnca_gov_ae,2018,20180725191945,2018_index_www_mfnca_gov_ae_20180725191945.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_mfnca_gov_ae,2018,20180725191945,2018_index_www_mfnca_gov_ae_20180725191945.html,Hotjar Init,"\(function\s*\(\s*h\s*,\s*o\s*,\s*t\s*,\s*j\s*,\s*a\s*,\s*r\b",2
+AE,www_mfnca_gov_ae,2019,20190126042250,2019_index_www_mfnca_gov_ae_20190126042250.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_mfnca_gov_ae,2019,20190126042250,2019_index_www_mfnca_gov_ae_20190126042250.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mfnca_gov_ae,2019,20190126042250,2019_index_www_mfnca_gov_ae_20190126042250.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_mfnca_gov_ae,2019,20190126042250,2019_index_www_mfnca_gov_ae_20190126042250.html,Hotjar Init,"\(function\s*\(\s*h\s*,\s*o\s*,\s*t\s*,\s*j\s*,\s*a\s*,\s*r\b",2
+AE,www_mfnca_gov_ae,2019,20190705155754,2019_index_www_mfnca_gov_ae_20190705155754.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_mfnca_gov_ae,2019,20190705155754,2019_index_www_mfnca_gov_ae_20190705155754.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mfnca_gov_ae,2019,20190705155754,2019_index_www_mfnca_gov_ae_20190705155754.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_mfnca_gov_ae,2019,20190705155754,2019_index_www_mfnca_gov_ae_20190705155754.html,Hotjar Init,"\(function\s*\(\s*h\s*,\s*o\s*,\s*t\s*,\s*j\s*,\s*a\s*,\s*r\b",2
+AE,www_mfnca_gov_ae,2020,20200210154209,2020_index_www_mfnca_gov_ae_20200210154209.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_mfnca_gov_ae,2020,20200210154209,2020_index_www_mfnca_gov_ae_20200210154209.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mfnca_gov_ae,2020,20200210154209,2020_index_www_mfnca_gov_ae_20200210154209.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_mfnca_gov_ae,2020,20200210154209,2020_index_www_mfnca_gov_ae_20200210154209.html,Hotjar Init,"\(function\s*\(\s*h\s*,\s*o\s*,\s*t\s*,\s*j\s*,\s*a\s*,\s*r\b",2
+AE,www_mfnca_gov_ae,2020,20201103232549,2020_index_www_mfnca_gov_ae_20201103232549.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mfnca_gov_ae,2020,20201103232549,2020_index_www_mfnca_gov_ae_20201103232549.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,www_mfnca_gov_ae,2020,20201103232549,2020_index_www_mfnca_gov_ae_20201103232549.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_mfnca_gov_ae,2020,20201103232549,2020_index_www_mfnca_gov_ae_20201103232549.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,www_mfnca_gov_ae,2020,20201103232549,2020_index_www_mfnca_gov_ae_20201103232549.html,Hotjar Init,"\(function\s*\(\s*h\s*,\s*o\s*,\s*t\s*,\s*j\s*,\s*a\s*,\s*r\b",2
+AE,www_mfnca_gov_ae,2021,20210801141747,2021_index_www_mfnca_gov_ae_20210801141747.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mfnca_gov_ae,2021,20210801141747,2021_index_www_mfnca_gov_ae_20210801141747.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,www_mfnca_gov_ae,2021,20210801141747,2021_index_www_mfnca_gov_ae_20210801141747.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_mfnca_gov_ae,2021,20210801141747,2021_index_www_mfnca_gov_ae_20210801141747.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,www_mfnca_gov_ae,2021,20210801141747,2021_index_www_mfnca_gov_ae_20210801141747.html,Hotjar Init,"\(function\s*\(\s*h\s*,\s*o\s*,\s*t\s*,\s*j\s*,\s*a\s*,\s*r\b",2
+AE,www_mfnca_gov_ae,2021,20211029052348,2021_index_www_mfnca_gov_ae_20211029052348.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mfnca_gov_ae,2021,20211029052348,2021_index_www_mfnca_gov_ae_20211029052348.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,www_mfnca_gov_ae,2021,20211029052348,2021_index_www_mfnca_gov_ae_20211029052348.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_mfnca_gov_ae,2021,20211029052348,2021_index_www_mfnca_gov_ae_20211029052348.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,www_mfnca_gov_ae,2021,20211029052348,2021_index_www_mfnca_gov_ae_20211029052348.html,Hotjar Init,"\(function\s*\(\s*h\s*,\s*o\s*,\s*t\s*,\s*j\s*,\s*a\s*,\s*r\b",2
+AE,www_mfnca_gov_ae,2022,20220101061633,2022_index_www_mfnca_gov_ae_20220101061633.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mfnca_gov_ae,2022,20220101061633,2022_index_www_mfnca_gov_ae_20220101061633.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,www_mfnca_gov_ae,2022,20220101061633,2022_index_www_mfnca_gov_ae_20220101061633.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_mfnca_gov_ae,2022,20220101061633,2022_index_www_mfnca_gov_ae_20220101061633.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,www_mfnca_gov_ae,2022,20220101061633,2022_index_www_mfnca_gov_ae_20220101061633.html,Hotjar Init,"\(function\s*\(\s*h\s*,\s*o\s*,\s*t\s*,\s*j\s*,\s*a\s*,\s*r\b",2
+AE,www_mfnca_gov_ae,2022,20221204231859,2022_index_www_mfnca_gov_ae_20221204231859.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mfnca_gov_ae,2022,20221204231859,2022_index_www_mfnca_gov_ae_20221204231859.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,www_mfnca_gov_ae,2022,20221204231859,2022_index_www_mfnca_gov_ae_20221204231859.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_mfnca_gov_ae,2022,20221204231859,2022_index_www_mfnca_gov_ae_20221204231859.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,www_mfnca_gov_ae,2022,20221204231859,2022_index_www_mfnca_gov_ae_20221204231859.html,Hotjar Init,"\(function\s*\(\s*h\s*,\s*o\s*,\s*t\s*,\s*j\s*,\s*a\s*,\s*r\b",2
+AE,www_mfnca_gov_ae,2023,20230101053756,2023_index_www_mfnca_gov_ae_20230101053756.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mfnca_gov_ae,2023,20230101053756,2023_index_www_mfnca_gov_ae_20230101053756.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,www_mfnca_gov_ae,2023,20230101053756,2023_index_www_mfnca_gov_ae_20230101053756.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_mfnca_gov_ae,2023,20230101053756,2023_index_www_mfnca_gov_ae_20230101053756.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,www_mfnca_gov_ae,2023,20230101053756,2023_index_www_mfnca_gov_ae_20230101053756.html,Hotjar Init,"\(function\s*\(\s*h\s*,\s*o\s*,\s*t\s*,\s*j\s*,\s*a\s*,\s*r\b",2
+AE,www_mfnca_gov_ae,2023,20230315115103,2023_index_www_mfnca_gov_ae_20230315115103.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mfnca_gov_ae,2023,20230315115103,2023_index_www_mfnca_gov_ae_20230315115103.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,www_mfnca_gov_ae,2023,20230315115103,2023_index_www_mfnca_gov_ae_20230315115103.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_mfnca_gov_ae,2023,20230315115103,2023_index_www_mfnca_gov_ae_20230315115103.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,www_mfnca_gov_ae,2023,20230315115103,2023_index_www_mfnca_gov_ae_20230315115103.html,Hotjar Init,"\(function\s*\(\s*h\s*,\s*o\s*,\s*t\s*,\s*j\s*,\s*a\s*,\s*r\b",2
+AE,www_mfnca_gov_ae,2024,20240101063537,2024_index_www_mfnca_gov_ae_20240101063537.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mfnca_gov_ae,2024,20240101063537,2024_index_www_mfnca_gov_ae_20240101063537.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,www_mfnca_gov_ae,2024,20240101063537,2024_index_www_mfnca_gov_ae_20240101063537.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_mfnca_gov_ae,2024,20240101063537,2024_index_www_mfnca_gov_ae_20240101063537.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,www_mfnca_gov_ae,2024,20240101063537,2024_index_www_mfnca_gov_ae_20240101063537.html,Hotjar Init,"\(function\s*\(\s*h\s*,\s*o\s*,\s*t\s*,\s*j\s*,\s*a\s*,\s*r\b",2
+AE,www_mfnca_gov_ae,2024,20240504002611,2024_index_www_mfnca_gov_ae_20240504002611.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mfnca_gov_ae,2024,20240504002611,2024_index_www_mfnca_gov_ae_20240504002611.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,www_mfnca_gov_ae,2024,20240504002611,2024_index_www_mfnca_gov_ae_20240504002611.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_mfnca_gov_ae,2024,20240504002611,2024_index_www_mfnca_gov_ae_20240504002611.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,www_mfnca_gov_ae,2024,20240504002611,2024_index_www_mfnca_gov_ae_20240504002611.html,Hotjar Init,"\(function\s*\(\s*h\s*,\s*o\s*,\s*t\s*,\s*j\s*,\s*a\s*,\s*r\b",2
+AE,www_mfnca_gov_ae,2025,20250103170247,2025_index_www_mfnca_gov_ae_20250103170247.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mfnca_gov_ae,2025,20250103170247,2025_index_www_mfnca_gov_ae_20250103170247.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,www_mfnca_gov_ae,2025,20250103170247,2025_index_www_mfnca_gov_ae_20250103170247.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_mfnca_gov_ae,2025,20250103170247,2025_index_www_mfnca_gov_ae_20250103170247.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,www_mfnca_gov_ae,2025,20250103170247,2025_index_www_mfnca_gov_ae_20250103170247.html,Hotjar Init,"\(function\s*\(\s*h\s*,\s*o\s*,\s*t\s*,\s*j\s*,\s*a\s*,\s*r\b",2
+AE,www_mfnca_gov_ae,2025,20250326113757,2025_index_www_mfnca_gov_ae_20250326113757.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mfnca_gov_ae,2025,20250326113757,2025_index_www_mfnca_gov_ae_20250326113757.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,5
+AE,www_mfnca_gov_ae,2025,20250326113757,2025_index_www_mfnca_gov_ae_20250326113757.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_mfnca_gov_ae,2025,20250326113757,2025_index_www_mfnca_gov_ae_20250326113757.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,www_mfnca_gov_ae,2025,20250326113757,2025_index_www_mfnca_gov_ae_20250326113757.html,Hotjar Init,"\(function\s*\(\s*h\s*,\s*o\s*,\s*t\s*,\s*j\s*,\s*a\s*,\s*r\b",2
+AE,www_moca_gov_ae,2013,20130629101600,2013_index_www_moca_gov_ae_20130629101600.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_moca_gov_ae,2014,20140101074736,2014_index_www_moca_gov_ae_20140101074736.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_moca_gov_ae,2014,20141128171231,2014_index_www_moca_gov_ae_20141128171231.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_moccae_gov_ae,2016,20160403035850,2016_index_www_moccae_gov_ae_20160403035850.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2016,20160403035850,2016_index_www_moccae_gov_ae_20160403035850.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_moccae_gov_ae,2016,20160518010434,2016_index_www_moccae_gov_ae_20160518010434.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2016,20160518010434,2016_index_www_moccae_gov_ae_20160518010434.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_moccae_gov_ae,2017,20170419071714,2017_index_www_moccae_gov_ae_20170419071714.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2017,20170419071714,2017_index_www_moccae_gov_ae_20170419071714.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_moccae_gov_ae,2017,20171107084547,2017_index_www_moccae_gov_ae_20171107084547.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2017,20171107084547,2017_index_www_moccae_gov_ae_20171107084547.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_moccae_gov_ae,2018,20180107112349,2018_index_www_moccae_gov_ae_20180107112349.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2018,20180107112349,2018_index_www_moccae_gov_ae_20180107112349.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_moccae_gov_ae,2018,20181117170402,2018_index_www_moccae_gov_ae_20181117170402.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2018,20181117170402,2018_index_www_moccae_gov_ae_20181117170402.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_moccae_gov_ae,2019,20190117200208,2019_index_www_moccae_gov_ae_20190117200208.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2019,20190117200208,2019_index_www_moccae_gov_ae_20190117200208.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_moccae_gov_ae,2019,20190625031536,2019_index_www_moccae_gov_ae_20190625031536.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2019,20190625031536,2019_index_www_moccae_gov_ae_20190625031536.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_moccae_gov_ae,2020,20200111115859,2020_index_www_moccae_gov_ae_20200111115859.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2020,20200111115859,2020_index_www_moccae_gov_ae_20200111115859.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_moccae_gov_ae,2020,20200706205722,2020_index_www_moccae_gov_ae_20200706205722.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2020,20200706205722,2020_index_www_moccae_gov_ae_20200706205722.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_moccae_gov_ae,2021,20210102221039,2021_index_www_moccae_gov_ae_20210102221039.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2021,20210102221039,2021_index_www_moccae_gov_ae_20210102221039.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_moccae_gov_ae,2021,20210626224911,2021_index_www_moccae_gov_ae_20210626224911.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2021,20210626224911,2021_index_www_moccae_gov_ae_20210626224911.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_moccae_gov_ae,2022,20220118223416,2022_index_www_moccae_gov_ae_20220118223416.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2022,20220118223416,2022_index_www_moccae_gov_ae_20220118223416.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_moccae_gov_ae,2022,20220119032344,2022_index_www_moccae_gov_ae_20220119032344.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2022,20220119032344,2022_index_www_moccae_gov_ae_20220119032344.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_moccae_gov_ae,2023,20230107002926,2023_index_www_moccae_gov_ae_20230107002926.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2023,20230107002926,2023_index_www_moccae_gov_ae_20230107002926.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_moccae_gov_ae,2023,20230921190245,2023_index_www_moccae_gov_ae_20230921190245.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2023,20230921190245,2023_index_www_moccae_gov_ae_20230921190245.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_moccae_gov_ae,2024,20240101233813,2024_index_www_moccae_gov_ae_20240101233813.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2024,20240101233813,2024_index_www_moccae_gov_ae_20240101233813.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_moccae_gov_ae,2024,20240101233813,2024_index_www_moccae_gov_ae_20240101233813.html,Google Tag Manager / gtag.js,\bgtag\s*\(,2
+AE,www_moccae_gov_ae,2024,20240101233813,2024_index_www_moccae_gov_ae_20240101233813.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2024,20240101233813,2024_index_www_moccae_gov_ae_20240101233813.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moccae_gov_ae,2024,20241003122611,2024_index_www_moccae_gov_ae_20241003122611.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2024,20241003122611,2024_index_www_moccae_gov_ae_20241003122611.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_moccae_gov_ae,2024,20241003122611,2024_index_www_moccae_gov_ae_20241003122611.html,Google Tag Manager / gtag.js,\bgtag\s*\(,2
+AE,www_moccae_gov_ae,2024,20241003122611,2024_index_www_moccae_gov_ae_20241003122611.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2024,20241003122611,2024_index_www_moccae_gov_ae_20241003122611.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moccae_gov_ae,2025,20250114030627,2025_index_www_moccae_gov_ae_20250114030627.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2025,20250114030627,2025_index_www_moccae_gov_ae_20250114030627.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_moccae_gov_ae,2025,20250114030627,2025_index_www_moccae_gov_ae_20250114030627.html,Google Tag Manager / gtag.js,\bgtag\s*\(,2
+AE,www_moccae_gov_ae,2025,20250114030627,2025_index_www_moccae_gov_ae_20250114030627.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2025,20250114030627,2025_index_www_moccae_gov_ae_20250114030627.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moccae_gov_ae,2025,20250129144841,2025_index_www_moccae_gov_ae_20250129144841.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2025,20250129144841,2025_index_www_moccae_gov_ae_20250129144841.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_moccae_gov_ae,2025,20250129144841,2025_index_www_moccae_gov_ae_20250129144841.html,Google Tag Manager / gtag.js,\bgtag\s*\(,2
+AE,www_moccae_gov_ae,2025,20250129144841,2025_index_www_moccae_gov_ae_20250129144841.html,Google Tag Manager (dataLayer),dataLayer\s*\.push\s*\(,3
+AE,www_moccae_gov_ae,2025,20250129144841,2025_index_www_moccae_gov_ae_20250129144841.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mocd_gov_ae,2016,20160908182436,2016_index_www_mocd_gov_ae_20160908182436.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mocd_gov_ae,2016,20160908233219,2016_index_www_mocd_gov_ae_20160908233219.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mocd_gov_ae,2017,20170610012145,2017_index_www_mocd_gov_ae_20170610012145.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mocd_gov_ae,2019,20190414190753,2019_index_www_mocd_gov_ae_20190414190753.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mocd_gov_ae,2019,20190624040859,2019_index_www_mocd_gov_ae_20190624040859.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mocd_gov_ae,2020,20201101045045,2020_index_www_mocd_gov_ae_20201101045045.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mocd_gov_ae,2021,20210128182051,2021_index_www_mocd_gov_ae_20210128182051.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mocd_gov_ae,2021,20210410212555,2021_index_www_mocd_gov_ae_20210410212555.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mocd_gov_ae,2022,20220119093007,2022_index_www_mocd_gov_ae_20220119093007.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mocd_gov_ae,2022,20221204132806,2022_index_www_mocd_gov_ae_20221204132806.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mocd_gov_ae,2023,20231023052308,2023_index_www_mocd_gov_ae_20231023052308.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mocd_gov_ae,2024,20240105122251,2024_index_www_mocd_gov_ae_20240105122251.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mocd_gov_ae,2024,20241216113357,2024_index_www_mocd_gov_ae_20241216113357.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mocd_gov_ae,2025,20250104171255,2025_index_www_mocd_gov_ae_20250104171255.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mocd_gov_ae,2025,20250219092930,2025_index_www_mocd_gov_ae_20250219092930.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_moe_gov_ae,2017,20170320035529,2017_index_www_moe_gov_ae_20170320035529.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_moe_gov_ae,2017,20170531111009,2017_index_www_moe_gov_ae_20170531111009.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_moe_gov_ae,2018,20180107182607,2018_index_www_moe_gov_ae_20180107182607.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_moe_gov_ae,2018,20180319213606,2018_index_www_moe_gov_ae_20180319213606.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_moe_gov_ae,2019,20190103220045,2019_index_www_moe_gov_ae_20190103220045.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_moe_gov_ae,2019,20190624151055,2019_index_www_moe_gov_ae_20190624151055.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_moe_gov_ae,2020,20200131213433,2020_index_www_moe_gov_ae_20200131213433.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_moe_gov_ae,2020,20200929170034,2020_index_www_moe_gov_ae_20200929170034.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_moe_gov_ae,2021,20210111075548,2021_index_www_moe_gov_ae_20210111075548.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_moe_gov_ae,2021,20210818094852,2021_index_www_moe_gov_ae_20210818094852.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_moe_gov_ae,2022,20220119052037,2022_index_www_moe_gov_ae_20220119052037.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_moe_gov_ae,2022,20220428032448,2022_index_www_moe_gov_ae_20220428032448.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_moe_gov_ae,2023,20230106230200,2023_index_www_moe_gov_ae_20230106230200.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_moe_gov_ae,2023,20230302164055,2023_index_www_moe_gov_ae_20230302164055.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_moe_gov_ae,2024,20240105054825,2024_index_www_moe_gov_ae_20240105054825.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_moe_gov_ae,2024,20240105054825,2024_index_www_moe_gov_ae_20240105054825.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moe_gov_ae,2024,20240105054825,2024_index_www_moe_gov_ae_20240105054825.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_moe_gov_ae,2024,20241221100514,2024_index_www_moe_gov_ae_20241221100514.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_moe_gov_ae,2024,20241221100514,2024_index_www_moe_gov_ae_20241221100514.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moe_gov_ae,2024,20241221100514,2024_index_www_moe_gov_ae_20241221100514.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_moe_gov_ae,2024,20241221100514,2024_index_www_moe_gov_ae_20241221100514.html,Hotjar Init,"\(function\s*\(\s*h\s*,\s*o\s*,\s*t\s*,\s*j\s*,\s*a\s*,\s*r\b",2
+AE,www_moe_gov_ae,2025,20250103171741,2025_index_www_moe_gov_ae_20250103171741.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_moe_gov_ae,2025,20250103171741,2025_index_www_moe_gov_ae_20250103171741.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moe_gov_ae,2025,20250103171741,2025_index_www_moe_gov_ae_20250103171741.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_moe_gov_ae,2025,20250103171741,2025_index_www_moe_gov_ae_20250103171741.html,Hotjar Init,"\(function\s*\(\s*h\s*,\s*o\s*,\s*t\s*,\s*j\s*,\s*a\s*,\s*r\b",2
+AE,www_moe_gov_ae,2025,20250327100458,2025_index_www_moe_gov_ae_20250327100458.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_moe_gov_ae,2025,20250327100458,2025_index_www_moe_gov_ae_20250327100458.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moe_gov_ae,2025,20250327100458,2025_index_www_moe_gov_ae_20250327100458.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_moe_gov_ae,2025,20250327100458,2025_index_www_moe_gov_ae_20250327100458.html,Hotjar Init,"\(function\s*\(\s*h\s*,\s*o\s*,\s*t\s*,\s*j\s*,\s*a\s*,\s*r\b",2
+AE,www_moec_gov_ae,2021,20211105040248,2021_index_www_moec_gov_ae_20211105040248.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",26
+AE,www_moec_gov_ae,2022,20220102035938,2022_index_www_moec_gov_ae_20220102035938.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",26
+AE,www_moec_gov_ae,2022,20220519060448,2022_index_www_moec_gov_ae_20220519060448.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",26
+AE,www_moec_gov_ae,2023,20230108021836,2023_index_www_moec_gov_ae_20230108021836.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",26
+AE,www_moec_gov_ae,2023,20230318091414,2023_index_www_moec_gov_ae_20230318091414.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",26
+AE,www_moec_gov_ae,2024,20240110085515,2024_index_www_moec_gov_ae_20240110085515.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",26
+AE,www_moec_gov_ae,2024,20241212091903,2024_index_www_moec_gov_ae_20241212091903.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",26
+AE,www_moec_gov_ae,2025,20250108145124,2025_index_www_moec_gov_ae_20250108145124.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",26
+AE,www_moec_gov_ae,2025,20250203135259,2025_index_www_moec_gov_ae_20250203135259.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",26
+AE,www_moei_gov_ae,2018,20180124125009,2018_index_www_moei_gov_ae_20180124125009.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",6
+AE,www_moei_gov_ae,2018,20180831085104,2018_index_www_moei_gov_ae_20180831085104.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",6
+AE,www_moei_gov_ae,2019,20190104101001,2019_index_www_moei_gov_ae_20190104101001.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",6
+AE,www_moei_gov_ae,2019,20190109131455,2019_index_www_moei_gov_ae_20190109131455.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",6
+AE,www_moei_gov_ae,2020,20200112065652,2020_index_www_moei_gov_ae_20200112065652.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",6
+AE,www_moei_gov_ae,2020,20200511134212,2020_index_www_moei_gov_ae_20200511134212.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",6
+AE,www_moei_gov_ae,2021,20210108150858,2021_index_www_moei_gov_ae_20210108150858.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",6
+AE,www_moei_gov_ae,2021,20210504085712,2021_index_www_moei_gov_ae_20210504085712.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",6
+AE,www_moei_gov_ae,2022,20220111134825,2022_index_www_moei_gov_ae_20220111134825.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",6
+AE,www_moei_gov_ae,2022,20220407225929,2022_index_www_moei_gov_ae_20220407225929.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",6
+AE,www_moei_gov_ae,2023,20230110143410,2023_index_www_moei_gov_ae_20230110143410.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",6
+AE,www_moei_gov_ae,2023,20230314195223,2023_index_www_moei_gov_ae_20230314195223.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",6
+AE,www_moei_gov_ae,2024,20240406051829,2024_index_www_moei_gov_ae_20240406051829.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_moei_gov_ae,2024,20240406051829,2024_index_www_moei_gov_ae_20240406051829.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moei_gov_ae,2024,20240406051829,2024_index_www_moei_gov_ae_20240406051829.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_moei_gov_ae,2025,20250112145341,2025_index_www_moei_gov_ae_20250112145341.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_moei_gov_ae,2025,20250120190541,2025_index_www_moei_gov_ae_20250120190541.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_mofa_gov_ae,2015,20151027023142,2015_index_www_mofa_gov_ae_20151027023142.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_mofa_gov_ae,2016,20160109231310,2016_index_www_mofa_gov_ae_20160109231310.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_mofa_gov_ae,2016,20160314094957,2016_index_www_mofa_gov_ae_20160314094957.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_mofa_gov_ae,2017,20170128213450,2017_index_www_mofa_gov_ae_20170128213450.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_mofa_gov_ae,2017,20171125213126,2017_index_www_mofa_gov_ae_20171125213126.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_mofa_gov_ae,2018,20180110174559,2018_index_www_mofa_gov_ae_20180110174559.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_mofa_gov_ae,2018,20180924114822,2018_index_www_mofa_gov_ae_20180924114822.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_mofa_gov_ae,2019,20190104033856,2019_index_www_mofa_gov_ae_20190104033856.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_mofa_gov_ae,2019,20190422140247,2019_index_www_mofa_gov_ae_20190422140247.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_mofa_gov_ae,2020,20200201175531,2020_index_www_mofa_gov_ae_20200201175531.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_mofa_gov_ae,2020,20200201175531,2020_index_www_mofa_gov_ae_20200201175531.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mofa_gov_ae,2020,20200201175531,2020_index_www_mofa_gov_ae_20200201175531.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_mofa_gov_ae,2020,20201101010223,2020_index_www_mofa_gov_ae_20201101010223.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_mofa_gov_ae,2020,20201101010223,2020_index_www_mofa_gov_ae_20201101010223.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mofa_gov_ae,2020,20201101010223,2020_index_www_mofa_gov_ae_20201101010223.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_mofa_gov_ae,2021,20210430170143,2021_index_www_mofa_gov_ae_20210430170143.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_mofa_gov_ae,2021,20210430170143,2021_index_www_mofa_gov_ae_20210430170143.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mofa_gov_ae,2021,20210430170143,2021_index_www_mofa_gov_ae_20210430170143.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_mofa_gov_ae,2021,20210818053845,2021_index_www_mofa_gov_ae_20210818053845.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_mofa_gov_ae,2021,20210818053845,2021_index_www_mofa_gov_ae_20210818053845.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mofa_gov_ae,2021,20210818053845,2021_index_www_mofa_gov_ae_20210818053845.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_mofa_gov_ae,2022,20220107042132,2022_index_www_mofa_gov_ae_20220107042132.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_mofa_gov_ae,2022,20220107042132,2022_index_www_mofa_gov_ae_20220107042132.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mofa_gov_ae,2022,20220107042132,2022_index_www_mofa_gov_ae_20220107042132.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_mofa_gov_ae,2022,20221222120439,2022_index_www_mofa_gov_ae_20221222120439.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_mofa_gov_ae,2022,20221222120439,2022_index_www_mofa_gov_ae_20221222120439.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mofa_gov_ae,2022,20221222120439,2022_index_www_mofa_gov_ae_20221222120439.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_mofa_gov_ae,2023,20230101054131,2023_index_www_mofa_gov_ae_20230101054131.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_mofa_gov_ae,2023,20230101054131,2023_index_www_mofa_gov_ae_20230101054131.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mofa_gov_ae,2023,20230101054131,2023_index_www_mofa_gov_ae_20230101054131.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_mofa_gov_ae,2023,20231025051942,2023_index_www_mofa_gov_ae_20231025051942.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_mofa_gov_ae,2023,20231025051942,2023_index_www_mofa_gov_ae_20231025051942.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mofa_gov_ae,2023,20231025051942,2023_index_www_mofa_gov_ae_20231025051942.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_mofa_gov_ae,2024,20240101063521,2024_index_www_mofa_gov_ae_20240101063521.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_mofa_gov_ae,2024,20240101063521,2024_index_www_mofa_gov_ae_20240101063521.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mofa_gov_ae,2024,20240101063521,2024_index_www_mofa_gov_ae_20240101063521.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_mofa_gov_ae,2024,20240301054841,2024_index_www_mofa_gov_ae_20240301054841.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_mofa_gov_ae,2024,20240301054841,2024_index_www_mofa_gov_ae_20240301054841.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mofa_gov_ae,2024,20240301054841,2024_index_www_mofa_gov_ae_20240301054841.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_mofa_gov_ae,2025,20250103214342,2025_index_www_mofa_gov_ae_20250103214342.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_mofa_gov_ae,2025,20250103214342,2025_index_www_mofa_gov_ae_20250103214342.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mofa_gov_ae,2025,20250103214342,2025_index_www_mofa_gov_ae_20250103214342.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_mofa_gov_ae,2025,20250121094226,2025_index_www_mofa_gov_ae_20250121094226.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_mofa_gov_ae,2025,20250121094226,2025_index_www_mofa_gov_ae_20250121094226.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mofa_gov_ae,2025,20250121094226,2025_index_www_mofa_gov_ae_20250121094226.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_mohre_gov_ae,2017,20170805214917,2017_index_www_mohre_gov_ae_20170805214917.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mohre_gov_ae,2018,20181220065821,2018_index_www_mohre_gov_ae_20181220065821.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_mohre_gov_ae,2018,20181220065821,2018_index_www_mohre_gov_ae_20181220065821.html,Facebook Pixel (fbevents),\bfbevents\.js\b,9
+AE,www_mohre_gov_ae,2018,20181220065821,2018_index_www_mohre_gov_ae_20181220065821.html,Facebook Pixel,"\bfbq\s*\(\s*['\""]init['\""]",10
+AE,www_mohre_gov_ae,2018,20181220065821,2018_index_www_mohre_gov_ae_20181220065821.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mohre_gov_ae,2019,20190201130911,2019_index_www_mohre_gov_ae_20190201130911.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_mohre_gov_ae,2019,20190201130911,2019_index_www_mohre_gov_ae_20190201130911.html,Facebook Pixel (fbevents),\bfbevents\.js\b,9
+AE,www_mohre_gov_ae,2019,20190201130911,2019_index_www_mohre_gov_ae_20190201130911.html,Facebook Pixel,"\bfbq\s*\(\s*['\""]init['\""]",10
+AE,www_mohre_gov_ae,2019,20190201130911,2019_index_www_mohre_gov_ae_20190201130911.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mohre_gov_ae,2019,20191006022554,2019_index_www_mohre_gov_ae_20191006022554.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_mohre_gov_ae,2019,20191006022554,2019_index_www_mohre_gov_ae_20191006022554.html,Facebook Pixel (fbevents),\bfbevents\.js\b,9
+AE,www_mohre_gov_ae,2019,20191006022554,2019_index_www_mohre_gov_ae_20191006022554.html,Facebook Pixel,"\bfbq\s*\(\s*['\""]init['\""]",10
+AE,www_mohre_gov_ae,2019,20191006022554,2019_index_www_mohre_gov_ae_20191006022554.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mohre_gov_ae,2020,20200202004747,2020_index_www_mohre_gov_ae_20200202004747.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_mohre_gov_ae,2020,20200202004747,2020_index_www_mohre_gov_ae_20200202004747.html,Facebook Pixel (fbevents),\bfbevents\.js\b,9
+AE,www_mohre_gov_ae,2020,20200202004747,2020_index_www_mohre_gov_ae_20200202004747.html,Facebook Pixel,"\bfbq\s*\(\s*['\""]init['\""]",10
+AE,www_mohre_gov_ae,2020,20200202004747,2020_index_www_mohre_gov_ae_20200202004747.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mohre_gov_ae,2020,20201010133815,2020_index_www_mohre_gov_ae_20201010133815.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_mohre_gov_ae,2020,20201010133815,2020_index_www_mohre_gov_ae_20201010133815.html,Facebook Pixel (fbevents),\bfbevents\.js\b,9
+AE,www_mohre_gov_ae,2020,20201010133815,2020_index_www_mohre_gov_ae_20201010133815.html,Facebook Pixel,"\bfbq\s*\(\s*['\""]init['\""]",10
+AE,www_mohre_gov_ae,2020,20201010133815,2020_index_www_mohre_gov_ae_20201010133815.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mohre_gov_ae,2021,20210118132007,2021_index_www_mohre_gov_ae_20210118132007.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_mohre_gov_ae,2021,20210118132007,2021_index_www_mohre_gov_ae_20210118132007.html,Facebook Pixel (fbevents),\bfbevents\.js\b,9
+AE,www_mohre_gov_ae,2021,20210118132007,2021_index_www_mohre_gov_ae_20210118132007.html,Facebook Pixel,"\bfbq\s*\(\s*['\""]init['\""]",10
+AE,www_mohre_gov_ae,2021,20210118132007,2021_index_www_mohre_gov_ae_20210118132007.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mohre_gov_ae,2021,20211016222547,2021_index_www_mohre_gov_ae_20211016222547.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_mohre_gov_ae,2021,20211016222547,2021_index_www_mohre_gov_ae_20211016222547.html,Facebook Pixel (fbevents),\bfbevents\.js\b,9
+AE,www_mohre_gov_ae,2021,20211016222547,2021_index_www_mohre_gov_ae_20211016222547.html,Facebook Pixel,"\bfbq\s*\(\s*['\""]init['\""]",10
+AE,www_mohre_gov_ae,2021,20211016222547,2021_index_www_mohre_gov_ae_20211016222547.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mohre_gov_ae,2022,20220117155750,2022_index_www_mohre_gov_ae_20220117155750.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_mohre_gov_ae,2022,20220117155750,2022_index_www_mohre_gov_ae_20220117155750.html,Facebook Pixel (fbevents),\bfbevents\.js\b,9
+AE,www_mohre_gov_ae,2022,20220117155750,2022_index_www_mohre_gov_ae_20220117155750.html,Facebook Pixel,"\bfbq\s*\(\s*['\""]init['\""]",10
+AE,www_mohre_gov_ae,2022,20220117155750,2022_index_www_mohre_gov_ae_20220117155750.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mohre_gov_ae,2022,20221204065352,2022_index_www_mohre_gov_ae_20221204065352.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_mohre_gov_ae,2022,20221204065352,2022_index_www_mohre_gov_ae_20221204065352.html,Facebook Pixel (fbevents),\bfbevents\.js\b,9
+AE,www_mohre_gov_ae,2022,20221204065352,2022_index_www_mohre_gov_ae_20221204065352.html,Facebook Pixel,"\bfbq\s*\(\s*['\""]init['\""]",10
+AE,www_mohre_gov_ae,2022,20221204065352,2022_index_www_mohre_gov_ae_20221204065352.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mohre_gov_ae,2023,20230102102754,2023_index_www_mohre_gov_ae_20230102102754.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_mohre_gov_ae,2023,20230102102754,2023_index_www_mohre_gov_ae_20230102102754.html,Facebook Pixel (fbevents),\bfbevents\.js\b,9
+AE,www_mohre_gov_ae,2023,20230102102754,2023_index_www_mohre_gov_ae_20230102102754.html,Facebook Pixel,"\bfbq\s*\(\s*['\""]init['\""]",10
+AE,www_mohre_gov_ae,2023,20230102102754,2023_index_www_mohre_gov_ae_20230102102754.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mohre_gov_ae,2023,20230711140124,2023_index_www_mohre_gov_ae_20230711140124.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_mohre_gov_ae,2023,20230711140124,2023_index_www_mohre_gov_ae_20230711140124.html,Facebook Pixel (fbevents),\bfbevents\.js\b,9
+AE,www_mohre_gov_ae,2023,20230711140124,2023_index_www_mohre_gov_ae_20230711140124.html,Facebook Pixel,"\bfbq\s*\(\s*['\""]init['\""]",10
+AE,www_mohre_gov_ae,2023,20230711140124,2023_index_www_mohre_gov_ae_20230711140124.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_mohre_gov_ae,2024,20240103193657,2024_index_www_mohre_gov_ae_20240103193657.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_mohre_gov_ae,2024,20240103193657,2024_index_www_mohre_gov_ae_20240103193657.html,Facebook Pixel (fbevents),\bfbevents\.js\b,9
+AE,www_mohre_gov_ae,2024,20240103193657,2024_index_www_mohre_gov_ae_20240103193657.html,Facebook Pixel,"\bfbq\s*\(\s*['\""]init['\""]",10
+AE,www_mohre_gov_ae,2024,20240103193657,2024_index_www_mohre_gov_ae_20240103193657.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_mohre_gov_ae,2024,20240103193657,2024_index_www_mohre_gov_ae_20240103193657.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mohre_gov_ae,2024,20240103193657,2024_index_www_mohre_gov_ae_20240103193657.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_mohre_gov_ae,2024,20241214223204,2024_index_www_mohre_gov_ae_20241214223204.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_mohre_gov_ae,2024,20241214223204,2024_index_www_mohre_gov_ae_20241214223204.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_mohre_gov_ae,2024,20241214223204,2024_index_www_mohre_gov_ae_20241214223204.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mohre_gov_ae,2024,20241214223204,2024_index_www_mohre_gov_ae_20241214223204.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_mohre_gov_ae,2025,20250103181837,2025_index_www_mohre_gov_ae_20250103181837.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_mohre_gov_ae,2025,20250103181837,2025_index_www_mohre_gov_ae_20250103181837.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_mohre_gov_ae,2025,20250103181837,2025_index_www_mohre_gov_ae_20250103181837.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mohre_gov_ae,2025,20250103181837,2025_index_www_mohre_gov_ae_20250103181837.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_mohre_gov_ae,2025,20250123104436,2025_index_www_mohre_gov_ae_20250123104436.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_mohre_gov_ae,2025,20250123104436,2025_index_www_mohre_gov_ae_20250123104436.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_mohre_gov_ae,2025,20250123104436,2025_index_www_mohre_gov_ae_20250123104436.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_mohre_gov_ae,2025,20250123104436,2025_index_www_mohre_gov_ae_20250123104436.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_moi_gov_ae,2014,20140625035645,2014_index_www_moi_gov_ae_20140625035645.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_moi_gov_ae,2015,20150105214318,2015_index_www_moi_gov_ae_20150105214318.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_moi_gov_ae,2015,20151022155356,2015_index_www_moi_gov_ae_20151022155356.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,www_moi_gov_ae,2016,20160101000011,2016_index_www_moi_gov_ae_20160101000011.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,www_moi_gov_ae,2016,20160219164045,2016_index_www_moi_gov_ae_20160219164045.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,www_moi_gov_ae,2017,20170102081549,2017_index_www_moi_gov_ae_20170102081549.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,www_moi_gov_ae,2017,20170118174955,2017_index_www_moi_gov_ae_20170118174955.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,www_moi_gov_ae,2019,20190531032437,2019_index_www_moi_gov_ae_20190531032437.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_moi_gov_ae,2020,20200102050246,2020_index_www_moi_gov_ae_20200102050246.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_moi_gov_ae,2020,20201211094917,2020_index_www_moi_gov_ae_20201211094917.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_moi_gov_ae,2021,20210103231421,2021_index_www_moi_gov_ae_20210103231421.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_moi_gov_ae,2023,20230111091218,2023_index_www_moi_gov_ae_20230111091218.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_moi_gov_ae,2023,20230511210437,2023_index_www_moi_gov_ae_20230511210437.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_moi_gov_ae,2024,20240102162640,2024_index_www_moi_gov_ae_20240102162640.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,www_moi_gov_ae,2024,20240102162640,2024_index_www_moi_gov_ae_20240102162640.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_moi_gov_ae,2024,20240102162640,2024_index_www_moi_gov_ae_20240102162640.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moi_gov_ae,2024,20240102162640,2024_index_www_moi_gov_ae_20240102162640.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_moi_gov_ae,2024,20240404193104,2024_index_www_moi_gov_ae_20240404193104.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,www_moi_gov_ae,2024,20240404193104,2024_index_www_moi_gov_ae_20240404193104.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_moi_gov_ae,2024,20240404193104,2024_index_www_moi_gov_ae_20240404193104.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moi_gov_ae,2024,20240404193104,2024_index_www_moi_gov_ae_20240404193104.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_moi_gov_ae,2025,20250103214513,2025_index_www_moi_gov_ae_20250103214513.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,www_moi_gov_ae,2025,20250103214513,2025_index_www_moi_gov_ae_20250103214513.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_moi_gov_ae,2025,20250103214513,2025_index_www_moi_gov_ae_20250103214513.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moi_gov_ae,2025,20250103214513,2025_index_www_moi_gov_ae_20250103214513.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_moi_gov_ae,2025,20250227114409,2025_index_www_moi_gov_ae_20250227114409.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",10
+AE,www_moi_gov_ae,2025,20250227114409,2025_index_www_moi_gov_ae_20250227114409.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_moi_gov_ae,2025,20250227114409,2025_index_www_moi_gov_ae_20250227114409.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moi_gov_ae,2025,20250227114409,2025_index_www_moi_gov_ae_20250227114409.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_moj_gov_ae,2018,20180107031514,2018_index_www_moj_gov_ae_20180107031514.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_moj_gov_ae,2018,20180811175926,2018_index_www_moj_gov_ae_20180811175926.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",1
+AE,www_moj_gov_ae,2018,20180811175926,2018_index_www_moj_gov_ae_20180811175926.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_moj_gov_ae,2019,20190503234617,2019_index_www_moj_gov_ae_20190503234617.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",1
+AE,www_moj_gov_ae,2019,20190503234617,2019_index_www_moj_gov_ae_20190503234617.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_moj_gov_ae,2019,20190625031545,2019_index_www_moj_gov_ae_20190625031545.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",1
+AE,www_moj_gov_ae,2019,20190625031545,2019_index_www_moj_gov_ae_20190625031545.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_moj_gov_ae,2020,20200112065547,2020_index_www_moj_gov_ae_20200112065547.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_moj_gov_ae,2020,20200112065547,2020_index_www_moj_gov_ae_20200112065547.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moj_gov_ae,2020,20200112065547,2020_index_www_moj_gov_ae_20200112065547.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_moj_gov_ae,2020,20200416080448,2020_index_www_moj_gov_ae_20200416080448.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_moj_gov_ae,2020,20200416080448,2020_index_www_moj_gov_ae_20200416080448.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moj_gov_ae,2020,20200416080448,2020_index_www_moj_gov_ae_20200416080448.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_moj_gov_ae,2021,20210125042108,2021_index_www_moj_gov_ae_20210125042108.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_moj_gov_ae,2021,20210125042108,2021_index_www_moj_gov_ae_20210125042108.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moj_gov_ae,2021,20210125042108,2021_index_www_moj_gov_ae_20210125042108.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_moj_gov_ae,2021,20210420033257,2021_index_www_moj_gov_ae_20210420033257.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_moj_gov_ae,2021,20210420033257,2021_index_www_moj_gov_ae_20210420033257.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moj_gov_ae,2021,20210420033257,2021_index_www_moj_gov_ae_20210420033257.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_moj_gov_ae,2022,20220121022021,2022_index_www_moj_gov_ae_20220121022021.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_moj_gov_ae,2022,20220121022021,2022_index_www_moj_gov_ae_20220121022021.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moj_gov_ae,2022,20220121022021,2022_index_www_moj_gov_ae_20220121022021.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_moj_gov_ae,2022,20220812073327,2022_index_www_moj_gov_ae_20220812073327.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_moj_gov_ae,2022,20220812073327,2022_index_www_moj_gov_ae_20220812073327.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moj_gov_ae,2022,20220812073327,2022_index_www_moj_gov_ae_20220812073327.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_moj_gov_ae,2022,20220812073327,2022_index_www_moj_gov_ae_20220812073327.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_moj_gov_ae,2023,20230103103029,2023_index_www_moj_gov_ae_20230103103029.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_moj_gov_ae,2023,20230103103029,2023_index_www_moj_gov_ae_20230103103029.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moj_gov_ae,2023,20230103103029,2023_index_www_moj_gov_ae_20230103103029.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_moj_gov_ae,2023,20230103103029,2023_index_www_moj_gov_ae_20230103103029.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_moj_gov_ae,2023,20230301122706,2023_index_www_moj_gov_ae_20230301122706.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_moj_gov_ae,2023,20230301122706,2023_index_www_moj_gov_ae_20230301122706.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moj_gov_ae,2023,20230301122706,2023_index_www_moj_gov_ae_20230301122706.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_moj_gov_ae,2023,20230301122706,2023_index_www_moj_gov_ae_20230301122706.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_moj_gov_ae,2024,20240109194801,2024_index_www_moj_gov_ae_20240109194801.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_moj_gov_ae,2024,20240109194801,2024_index_www_moj_gov_ae_20240109194801.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moj_gov_ae,2024,20240109194801,2024_index_www_moj_gov_ae_20240109194801.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_moj_gov_ae,2024,20240109194801,2024_index_www_moj_gov_ae_20240109194801.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_moj_gov_ae,2024,20240229115959,2024_index_www_moj_gov_ae_20240229115959.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_moj_gov_ae,2024,20240229115959,2024_index_www_moj_gov_ae_20240229115959.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moj_gov_ae,2024,20240229115959,2024_index_www_moj_gov_ae_20240229115959.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_moj_gov_ae,2024,20240229115959,2024_index_www_moj_gov_ae_20240229115959.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_moj_gov_ae,2025,20250103214657,2025_index_www_moj_gov_ae_20250103214657.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_moj_gov_ae,2025,20250103214657,2025_index_www_moj_gov_ae_20250103214657.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moj_gov_ae,2025,20250103214657,2025_index_www_moj_gov_ae_20250103214657.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_moj_gov_ae,2025,20250103214657,2025_index_www_moj_gov_ae_20250103214657.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_moj_gov_ae,2025,20250225214451,2025_index_www_moj_gov_ae_20250225214451.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_moj_gov_ae,2025,20250225214451,2025_index_www_moj_gov_ae_20250225214451.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_moj_gov_ae,2025,20250225214451,2025_index_www_moj_gov_ae_20250225214451.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_moj_gov_ae,2025,20250225214451,2025_index_www_moj_gov_ae_20250225214451.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_ncema_gov_ae,2013,20130131050421,2013_index_www_ncema_gov_ae_20130131050421.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2013,20130131050421,2013_index_www_ncema_gov_ae_20130131050421.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2013,20130511164429,2013_index_www_ncema_gov_ae_20130511164429.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2013,20130511164429,2013_index_www_ncema_gov_ae_20130511164429.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2014,20140504181034,2014_index_www_ncema_gov_ae_20140504181034.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2014,20140504181034,2014_index_www_ncema_gov_ae_20140504181034.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2014,20140516194037,2014_index_www_ncema_gov_ae_20140516194037.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2014,20140516194037,2014_index_www_ncema_gov_ae_20140516194037.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2015,20150514014642,2015_index_www_ncema_gov_ae_20150514014642.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2015,20150514014642,2015_index_www_ncema_gov_ae_20150514014642.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2015,20151208212801,2015_index_www_ncema_gov_ae_20151208212801.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2015,20151208212801,2015_index_www_ncema_gov_ae_20151208212801.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2016,20160109194834,2016_index_www_ncema_gov_ae_20160109194834.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2016,20160109194834,2016_index_www_ncema_gov_ae_20160109194834.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2016,20160425210324,2016_index_www_ncema_gov_ae_20160425210324.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2016,20160425210324,2016_index_www_ncema_gov_ae_20160425210324.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2017,20170523124024,2017_index_www_ncema_gov_ae_20170523124024.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2017,20170523124024,2017_index_www_ncema_gov_ae_20170523124024.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2017,20170924194918,2017_index_www_ncema_gov_ae_20170924194918.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2017,20170924194918,2017_index_www_ncema_gov_ae_20170924194918.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2018,20180123121236,2018_index_www_ncema_gov_ae_20180123121236.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2018,20180123121236,2018_index_www_ncema_gov_ae_20180123121236.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2018,20180803203157,2018_index_www_ncema_gov_ae_20180803203157.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2018,20180803203157,2018_index_www_ncema_gov_ae_20180803203157.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2019,20190129124817,2019_index_www_ncema_gov_ae_20190129124817.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2019,20190129124817,2019_index_www_ncema_gov_ae_20190129124817.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2019,20190629230734,2019_index_www_ncema_gov_ae_20190629230734.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2019,20190629230734,2019_index_www_ncema_gov_ae_20190629230734.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2020,20200122202007,2020_index_www_ncema_gov_ae_20200122202007.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2020,20200122202007,2020_index_www_ncema_gov_ae_20200122202007.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2020,20201203201843,2020_index_www_ncema_gov_ae_20201203201843.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2020,20201203201843,2020_index_www_ncema_gov_ae_20201203201843.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2021,20210102201907,2021_index_www_ncema_gov_ae_20210102201907.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2021,20210102201907,2021_index_www_ncema_gov_ae_20210102201907.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2021,20210928102153,2021_index_www_ncema_gov_ae_20210928102153.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2021,20210928102153,2021_index_www_ncema_gov_ae_20210928102153.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2022,20220120084359,2022_index_www_ncema_gov_ae_20220120084359.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2022,20220120084359,2022_index_www_ncema_gov_ae_20220120084359.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2022,20221127185716,2022_index_www_ncema_gov_ae_20221127185716.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2022,20221127185716,2022_index_www_ncema_gov_ae_20221127185716.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2023,20230129215453,2023_index_www_ncema_gov_ae_20230129215453.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2023,20230129215453,2023_index_www_ncema_gov_ae_20230129215453.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2023,20230223234122,2023_index_www_ncema_gov_ae_20230223234122.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2023,20230223234122,2023_index_www_ncema_gov_ae_20230223234122.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2024,20240304181844,2024_index_www_ncema_gov_ae_20240304181844.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2024,20240304181844,2024_index_www_ncema_gov_ae_20240304181844.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2024,20240720012128,2024_index_www_ncema_gov_ae_20240720012128.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2024,20240720012128,2024_index_www_ncema_gov_ae_20240720012128.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2025,20250101024552,2025_index_www_ncema_gov_ae_20250101024552.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2025,20250101024552,2025_index_www_ncema_gov_ae_20250101024552.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncema_gov_ae,2025,20250118213653,2025_index_www_ncema_gov_ae_20250118213653.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,3
+AE,www_ncema_gov_ae,2025,20250118213653,2025_index_www_ncema_gov_ae_20250118213653.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_ncm_ae,2017,20170929224349,2017_index_www_ncm_ae_20170929224349.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",6
+AE,www_ncm_ae,2017,20171211105557,2017_index_www_ncm_ae_20171211105557.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ncm_ae,2017,20171211105557,2017_index_www_ncm_ae_20171211105557.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ncm_ae,2017,20171211105557,2017_index_www_ncm_ae_20171211105557.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_ncm_ae,2018,20180101113734,2018_index_www_ncm_ae_20180101113734.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ncm_ae,2018,20180101113734,2018_index_www_ncm_ae_20180101113734.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ncm_ae,2018,20180101113734,2018_index_www_ncm_ae_20180101113734.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_ncm_ae,2018,20180127235838,2018_index_www_ncm_ae_20180127235838.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ncm_ae,2018,20180127235838,2018_index_www_ncm_ae_20180127235838.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ncm_ae,2018,20180127235838,2018_index_www_ncm_ae_20180127235838.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_ncm_ae,2019,20190104071410,2019_index_www_ncm_ae_20190104071410.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ncm_ae,2019,20190104071410,2019_index_www_ncm_ae_20190104071410.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ncm_ae,2019,20190104071410,2019_index_www_ncm_ae_20190104071410.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_ncm_ae,2019,20191130043019,2019_index_www_ncm_ae_20191130043019.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ncm_ae,2019,20191130043019,2019_index_www_ncm_ae_20191130043019.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ncm_ae,2019,20191130043019,2019_index_www_ncm_ae_20191130043019.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_ncm_ae,2020,20200116141516,2020_index_www_ncm_ae_20200116141516.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ncm_ae,2020,20200116141516,2020_index_www_ncm_ae_20200116141516.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ncm_ae,2020,20200116141516,2020_index_www_ncm_ae_20200116141516.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_ncm_ae,2020,20201031221616,2020_index_www_ncm_ae_20201031221616.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ncm_ae,2020,20201031221616,2020_index_www_ncm_ae_20201031221616.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ncm_ae,2020,20201031221616,2020_index_www_ncm_ae_20201031221616.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_ncm_ae,2021,20210110034122,2021_index_www_ncm_ae_20210110034122.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ncm_ae,2021,20210110034122,2021_index_www_ncm_ae_20210110034122.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ncm_ae,2021,20210110034122,2021_index_www_ncm_ae_20210110034122.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_ncm_ae,2021,20211028103924,2021_index_www_ncm_ae_20211028103924.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ncm_ae,2021,20211028103924,2021_index_www_ncm_ae_20211028103924.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ncm_ae,2021,20211028103924,2021_index_www_ncm_ae_20211028103924.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_ncm_ae,2022,20220101120823,2022_index_www_ncm_ae_20220101120823.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ncm_ae,2022,20220101120823,2022_index_www_ncm_ae_20220101120823.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ncm_ae,2022,20220101120823,2022_index_www_ncm_ae_20220101120823.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_ncm_ae,2022,20221006044447,2022_index_www_ncm_ae_20221006044447.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ncm_ae,2022,20221006044447,2022_index_www_ncm_ae_20221006044447.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ncm_ae,2022,20221006044447,2022_index_www_ncm_ae_20221006044447.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_ncm_ae,2023,20230106080044,2023_index_www_ncm_ae_20230106080044.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ncm_ae,2023,20230106080044,2023_index_www_ncm_ae_20230106080044.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ncm_ae,2023,20230106080044,2023_index_www_ncm_ae_20230106080044.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_ncm_ae,2023,20230307234748,2023_index_www_ncm_ae_20230307234748.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ncm_ae,2023,20230307234748,2023_index_www_ncm_ae_20230307234748.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ncm_ae,2023,20230307234748,2023_index_www_ncm_ae_20230307234748.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_ncm_ae,2024,20240104190056,2024_index_www_ncm_ae_20240104190056.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ncm_ae,2024,20240104190056,2024_index_www_ncm_ae_20240104190056.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ncm_ae,2024,20240104190056,2024_index_www_ncm_ae_20240104190056.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_ncm_ae,2024,20240117035227,2024_index_www_ncm_ae_20240117035227.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ncm_ae,2024,20240117035227,2024_index_www_ncm_ae_20240117035227.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ncm_ae,2024,20240117035227,2024_index_www_ncm_ae_20240117035227.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_ncm_ae,2025,20250124220655,2025_index_www_ncm_ae_20250124220655.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ncm_ae,2025,20250124220655,2025_index_www_ncm_ae_20250124220655.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ncm_ae,2025,20250124220655,2025_index_www_ncm_ae_20250124220655.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_ncm_ae,2025,20250128131807,2025_index_www_ncm_ae_20250128131807.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_ncm_ae,2025,20250128131807,2025_index_www_ncm_ae_20250128131807.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_ncm_ae,2025,20250128131807,2025_index_www_ncm_ae_20250128131807.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_sca_gov_ae,2011,20110825205030,2011_index_www_sca_gov_ae_20110825205030.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_sca_gov_ae,2011,20110825205030,2011_index_www_sca_gov_ae_20110825205030.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_sca_gov_ae,2011,20111225010957,2011_index_www_sca_gov_ae_20111225010957.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_sca_gov_ae,2011,20111225010957,2011_index_www_sca_gov_ae_20111225010957.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_sca_gov_ae,2012,20120223134123,2012_index_www_sca_gov_ae_20120223134123.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_sca_gov_ae,2012,20120223134123,2012_index_www_sca_gov_ae_20120223134123.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_sca_gov_ae,2012,20120730120447,2012_index_www_sca_gov_ae_20120730120447.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_sca_gov_ae,2012,20120730120447,2012_index_www_sca_gov_ae_20120730120447.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_sca_gov_ae,2013,20130225184430,2013_index_www_sca_gov_ae_20130225184430.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_sca_gov_ae,2013,20130225184430,2013_index_www_sca_gov_ae_20130225184430.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_sca_gov_ae,2013,20130813010003,2013_index_www_sca_gov_ae_20130813010003.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,4
+AE,www_sca_gov_ae,2013,20130813010003,2013_index_www_sca_gov_ae_20130813010003.html,Google Analytics (ga.js),_gaq\s*\.push\s*\(,5
+AE,www_sca_gov_ae,2014,20140117064250,2014_index_www_sca_gov_ae_20140117064250.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",9
+AE,www_sca_gov_ae,2020,20200120110339,2020_index_www_sca_gov_ae_20200120110339.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_sca_gov_ae,2020,20200120110339,2020_index_www_sca_gov_ae_20200120110339.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_sca_gov_ae,2020,20200120110339,2020_index_www_sca_gov_ae_20200120110339.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_sca_gov_ae,2020,20201114044401,2020_index_www_sca_gov_ae_20201114044401.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_sca_gov_ae,2020,20201114044401,2020_index_www_sca_gov_ae_20201114044401.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_sca_gov_ae,2020,20201114044401,2020_index_www_sca_gov_ae_20201114044401.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_sca_gov_ae,2021,20210121081520,2021_index_www_sca_gov_ae_20210121081520.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_sca_gov_ae,2021,20210121081520,2021_index_www_sca_gov_ae_20210121081520.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_sca_gov_ae,2021,20210121081520,2021_index_www_sca_gov_ae_20210121081520.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_sca_gov_ae,2021,20211128052501,2021_index_www_sca_gov_ae_20211128052501.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_sca_gov_ae,2021,20211128052501,2021_index_www_sca_gov_ae_20211128052501.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_sca_gov_ae,2021,20211128052501,2021_index_www_sca_gov_ae_20211128052501.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_sca_gov_ae,2022,20220115020259,2022_index_www_sca_gov_ae_20220115020259.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_sca_gov_ae,2022,20220115020259,2022_index_www_sca_gov_ae_20220115020259.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_sca_gov_ae,2022,20220115020259,2022_index_www_sca_gov_ae_20220115020259.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_sca_gov_ae,2022,20220330094320,2022_index_www_sca_gov_ae_20220330094320.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_sca_gov_ae,2022,20220330094320,2022_index_www_sca_gov_ae_20220330094320.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_sca_gov_ae,2022,20220330094320,2022_index_www_sca_gov_ae_20220330094320.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_sca_gov_ae,2023,20230101152708,2023_index_www_sca_gov_ae_20230101152708.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_sca_gov_ae,2023,20230101152708,2023_index_www_sca_gov_ae_20230101152708.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_sca_gov_ae,2023,20230101152708,2023_index_www_sca_gov_ae_20230101152708.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_sca_gov_ae,2023,20230311051430,2023_index_www_sca_gov_ae_20230311051430.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_sca_gov_ae,2023,20230311051430,2023_index_www_sca_gov_ae_20230311051430.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_sca_gov_ae,2023,20230311051430,2023_index_www_sca_gov_ae_20230311051430.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_sca_gov_ae,2024,20240117030634,2024_index_www_sca_gov_ae_20240117030634.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_sca_gov_ae,2024,20240117030634,2024_index_www_sca_gov_ae_20240117030634.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_sca_gov_ae,2024,20240117030634,2024_index_www_sca_gov_ae_20240117030634.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_sca_gov_ae,2024,20240830085902,2024_index_www_sca_gov_ae_20240830085902.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_sca_gov_ae,2024,20240830085902,2024_index_www_sca_gov_ae_20240830085902.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_sca_gov_ae,2024,20240830085902,2024_index_www_sca_gov_ae_20240830085902.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_sca_gov_ae,2025,20250103214511,2025_index_www_sca_gov_ae_20250103214511.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_sca_gov_ae,2025,20250103214511,2025_index_www_sca_gov_ae_20250103214511.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_sca_gov_ae,2025,20250103214511,2025_index_www_sca_gov_ae_20250103214511.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_sca_gov_ae,2025,20250205055459,2025_index_www_sca_gov_ae_20250205055459.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_sca_gov_ae,2025,20250205055459,2025_index_www_sca_gov_ae_20250205055459.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_sca_gov_ae,2025,20250205055459,2025_index_www_sca_gov_ae_20250205055459.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_space_gov_ae,2015,20150817073926,2015_index_www_space_gov_ae_20150817073926.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",3
+AE,www_space_gov_ae,2016,20160110005143,2016_index_www_space_gov_ae_20160110005143.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",3
+AE,www_space_gov_ae,2016,20160602011811,2016_index_www_space_gov_ae_20160602011811.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",3
+AE,www_space_gov_ae,2017,20170312023030,2017_index_www_space_gov_ae_20170312023030.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",3
+AE,www_space_gov_ae,2019,20190105093734,2019_index_www_space_gov_ae_20190105093734.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_space_gov_ae,2019,20190105093734,2019_index_www_space_gov_ae_20190105093734.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_space_gov_ae,2019,20190105093734,2019_index_www_space_gov_ae_20190105093734.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_space_gov_ae,2019,20190105093734,2019_index_www_space_gov_ae_20190105093734.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_space_gov_ae,2019,20190105093734,2019_index_www_space_gov_ae_20190105093734.html,Google Tag Manager / gtag.js,\bgtag\s*\(,8
+AE,www_space_gov_ae,2019,20190105093734,2019_index_www_space_gov_ae_20190105093734.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,www_space_gov_ae,2019,20191215220401,2019_index_www_space_gov_ae_20191215220401.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_space_gov_ae,2019,20191215220401,2019_index_www_space_gov_ae_20191215220401.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_space_gov_ae,2019,20191215220401,2019_index_www_space_gov_ae_20191215220401.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_space_gov_ae,2019,20191215220401,2019_index_www_space_gov_ae_20191215220401.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_space_gov_ae,2019,20191215220401,2019_index_www_space_gov_ae_20191215220401.html,Google Tag Manager / gtag.js,\bgtag\s*\(,8
+AE,www_space_gov_ae,2019,20191215220401,2019_index_www_space_gov_ae_20191215220401.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,www_space_gov_ae,2020,20200102232309,2020_index_www_space_gov_ae_20200102232309.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_space_gov_ae,2020,20200102232309,2020_index_www_space_gov_ae_20200102232309.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_space_gov_ae,2020,20200102232309,2020_index_www_space_gov_ae_20200102232309.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_space_gov_ae,2020,20200102232309,2020_index_www_space_gov_ae_20200102232309.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_space_gov_ae,2020,20200102232309,2020_index_www_space_gov_ae_20200102232309.html,Google Tag Manager / gtag.js,\bgtag\s*\(,8
+AE,www_space_gov_ae,2020,20200102232309,2020_index_www_space_gov_ae_20200102232309.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,www_space_gov_ae,2020,20200719235930,2020_index_www_space_gov_ae_20200719235930.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_space_gov_ae,2020,20200719235930,2020_index_www_space_gov_ae_20200719235930.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_space_gov_ae,2020,20200719235930,2020_index_www_space_gov_ae_20200719235930.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_space_gov_ae,2020,20200719235930,2020_index_www_space_gov_ae_20200719235930.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_space_gov_ae,2020,20200719235930,2020_index_www_space_gov_ae_20200719235930.html,Google Tag Manager / gtag.js,\bgtag\s*\(,8
+AE,www_space_gov_ae,2020,20200719235930,2020_index_www_space_gov_ae_20200719235930.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,www_space_gov_ae,2021,20210114232229,2021_index_www_space_gov_ae_20210114232229.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_space_gov_ae,2021,20210114232229,2021_index_www_space_gov_ae_20210114232229.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_space_gov_ae,2021,20210114232229,2021_index_www_space_gov_ae_20210114232229.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_space_gov_ae,2021,20210114232229,2021_index_www_space_gov_ae_20210114232229.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_space_gov_ae,2021,20210114232229,2021_index_www_space_gov_ae_20210114232229.html,Google Tag Manager / gtag.js,\bgtag\s*\(,8
+AE,www_space_gov_ae,2021,20210114232229,2021_index_www_space_gov_ae_20210114232229.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,www_space_gov_ae,2021,20210820154551,2021_index_www_space_gov_ae_20210820154551.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_space_gov_ae,2021,20210820154551,2021_index_www_space_gov_ae_20210820154551.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_space_gov_ae,2021,20210820154551,2021_index_www_space_gov_ae_20210820154551.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_space_gov_ae,2021,20210820154551,2021_index_www_space_gov_ae_20210820154551.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_space_gov_ae,2021,20210820154551,2021_index_www_space_gov_ae_20210820154551.html,Google Tag Manager / gtag.js,\bgtag\s*\(,8
+AE,www_space_gov_ae,2021,20210820154551,2021_index_www_space_gov_ae_20210820154551.html,Google Tag Manager / gtag.js,\bgtag\s*\(,9
+AE,www_space_gov_ae,2022,20220101082211,2022_index_www_space_gov_ae_20220101082211.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_space_gov_ae,2022,20220101082211,2022_index_www_space_gov_ae_20220101082211.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_space_gov_ae,2022,20220101082211,2022_index_www_space_gov_ae_20220101082211.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_space_gov_ae,2022,20220101082211,2022_index_www_space_gov_ae_20220101082211.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_space_gov_ae,2022,20220101082211,2022_index_www_space_gov_ae_20220101082211.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_space_gov_ae,2022,20220101082211,2022_index_www_space_gov_ae_20220101082211.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_space_gov_ae,2023,20230101080554,2023_index_www_space_gov_ae_20230101080554.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_space_gov_ae,2023,20230101080554,2023_index_www_space_gov_ae_20230101080554.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_space_gov_ae,2023,20230101080554,2023_index_www_space_gov_ae_20230101080554.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_space_gov_ae,2023,20230313143848,2023_index_www_space_gov_ae_20230313143848.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_space_gov_ae,2023,20230313143848,2023_index_www_space_gov_ae_20230313143848.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_space_gov_ae,2023,20230313143848,2023_index_www_space_gov_ae_20230313143848.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_space_gov_ae,2024,20240101190202,2024_index_www_space_gov_ae_20240101190202.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_space_gov_ae,2024,20240101190202,2024_index_www_space_gov_ae_20240101190202.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_space_gov_ae,2024,20240101190202,2024_index_www_space_gov_ae_20240101190202.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_space_gov_ae,2024,20240120235428,2024_index_www_space_gov_ae_20240120235428.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+AE,www_space_gov_ae,2024,20240120235428,2024_index_www_space_gov_ae_20240120235428.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_space_gov_ae,2024,20240120235428,2024_index_www_space_gov_ae_20240120235428.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+AE,www_space_gov_ae,2025,20250101202147,2025_index_www_space_gov_ae_20250101202147.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_space_gov_ae,2025,20250130131900,2025_index_www_space_gov_ae_20250130131900.html,Google Tag Manager / gtag.js,\bgtag\s*\(,1
+AE,www_zakatfund_gov_ae,2019,20190121183748,2019_index_www_zakatfund_gov_ae_20190121183748.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",7
+AE,www_zu_ac_ae,2016,20160110012721,2016_index_www_zu_ac_ae_20160110012721.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,www_zu_ac_ae,2016,20160120200454,2016_index_www_zu_ac_ae_20160120200454.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,www_zu_ac_ae,2017,20170914031907,2017_index_www_zu_ac_ae_20170914031907.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,www_zu_ac_ae,2018,20180131130041,2018_index_www_zu_ac_ae_20180131130041.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,www_zu_ac_ae,2018,20180403112531,2018_index_www_zu_ac_ae_20180403112531.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,www_zu_ac_ae,2019,20190104180957,2019_index_www_zu_ac_ae_20190104180957.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,www_zu_ac_ae,2019,20191129201451,2019_index_www_zu_ac_ae_20191129201451.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,www_zu_ac_ae,2020,20200101034843,2020_index_www_zu_ac_ae_20200101034843.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,www_zu_ac_ae,2020,20201017034059,2020_index_www_zu_ac_ae_20201017034059.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,www_zu_ac_ae,2021,20210101042642,2021_index_www_zu_ac_ae_20210101042642.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,www_zu_ac_ae,2021,20210829035207,2021_index_www_zu_ac_ae_20210829035207.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,www_zu_ac_ae,2022,20220101033613,2022_index_www_zu_ac_ae_20220101033613.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,www_zu_ac_ae,2022,20220624055621,2022_index_www_zu_ac_ae_20220624055621.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,www_zu_ac_ae,2023,20230101081356,2023_index_www_zu_ac_ae_20230101081356.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,www_zu_ac_ae,2023,20231029084833,2023_index_www_zu_ac_ae_20231029084833.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,www_zu_ac_ae,2023,20231029084833,2023_index_www_zu_ac_ae_20231029084833.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_zu_ac_ae,2023,20231029084833,2023_index_www_zu_ac_ae_20231029084833.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_zu_ac_ae,2023,20231029084833,2023_index_www_zu_ac_ae_20231029084833.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_zu_ac_ae,2024,20240101081945,2024_index_www_zu_ac_ae_20240101081945.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,www_zu_ac_ae,2024,20240101081945,2024_index_www_zu_ac_ae_20240101081945.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_zu_ac_ae,2024,20240101081945,2024_index_www_zu_ac_ae_20240101081945.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_zu_ac_ae,2024,20240101081945,2024_index_www_zu_ac_ae_20240101081945.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_zu_ac_ae,2024,20240215185835,2024_index_www_zu_ac_ae_20240215185835.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,www_zu_ac_ae,2024,20240215185835,2024_index_www_zu_ac_ae_20240215185835.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_zu_ac_ae,2024,20240215185835,2024_index_www_zu_ac_ae_20240215185835.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_zu_ac_ae,2024,20240215185835,2024_index_www_zu_ac_ae_20240215185835.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
+AE,www_zu_ac_ae,2025,20250103165453,2025_index_www_zu_ac_ae_20250103165453.html,Google Analytics (analytics.js),"\bga\s*\(\s*['\""]create['\""]",8
+AE,www_zu_ac_ae,2025,20250103165453,2025_index_www_zu_ac_ae_20250103165453.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+AE,www_zu_ac_ae,2025,20250103165453,2025_index_www_zu_ac_ae_20250103165453.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+AE,www_zu_ac_ae,2025,20250103165453,2025_index_www_zu_ac_ae_20250103165453.html,Google Tag Manager / gtag.js,\bgtag\s*\(,7
