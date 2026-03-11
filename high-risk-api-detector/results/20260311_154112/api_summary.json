@@ -1,0 +1,41 @@
+{
+  "generated": "2026-03-11T15:41:55.117506",
+  "countries_scanned": [
+    "AE"
+  ],
+  "total_api_findings": 29,
+  "unique_domains_with_findings": 6,
+  "by_api": {
+    "Camera / Microphone Access (getUserMedia)": 16,
+    "Geolocation API": 11,
+    "Push Notifications": 1,
+    "Device Motion / Orientation Sensors": 1
+  },
+  "by_category": {
+    "SECURITY": 17,
+    "PRIVACY": 11,
+    "FINGERPRINTING": 1
+  },
+  "by_severity": {
+    "HIGH": 27,
+    "LOW": 1,
+    "MEDIUM": 1
+  },
+  "by_year": {
+    "2019": 1,
+    "2020": 3,
+    "2021": 4,
+    "2022": 2,
+    "2023": 6,
+    "2024": 9,
+    "2025": 4
+  },
+  "by_country": {
+    "AE": 29
+  },
+  "permissions_policy": {
+    "headers_found": 57,
+    "no_policy": 1248,
+    "total_checked": 1305
+  }
+}

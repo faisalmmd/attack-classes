@@ -1,0 +1,45 @@
+{
+  "generated": "2026-03-11T15:39:03.431089",
+  "countries_scanned": [
+    "AE"
+  ],
+  "js_files_scanned": 615,
+  "html_files_scanned": 1305,
+  "total_findings": 2799,
+  "by_category": {
+    "INDICATOR": 1750,
+    "VULNERABLE": 717,
+    "DEFENSIVE": 332
+  },
+  "by_pattern": {
+    "for-in Loop (hasOwnProperty not detected nearby)": 1559,
+    "Unsafe for-in with Bracket Assignment": 598,
+    "hasOwnProperty Guard in Loop": 239,
+    "constructor.prototype Access": 114,
+    "jQuery.extend (deep merge)": 114,
+    "Object.create(null) - Null Prototype Dictionary": 90,
+    "__proto__ String Key": 39,
+    "Object.assign Call": 38,
+    "Object.prototype Direct Assignment": 5,
+    "Key Blocklist Check (__proto__ / constructor)": 3
+  },
+  "by_year": {
+    "2009": 15,
+    "2012": 5,
+    "2013": 5,
+    "2014": 4,
+    "2015": 31,
+    "2016": 19,
+    "2017": 73,
+    "2018": 152,
+    "2019": 237,
+    "2020": 302,
+    "2021": 369,
+    "2022": 392,
+    "2023": 327,
+    "2024": 524,
+    "2025": 344
+  },
+  "domains_with_vulnerable_patterns": 48,
+  "domains_with_defensive_patterns": 37
+}
