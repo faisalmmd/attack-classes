@@ -1,0 +1,10 @@
+country,domain,year,sink_count,source_count,chain_count,defensive_count,has_confirmed_chain,has_defense,sink_with_source,sink_patterns,chain_patterns
+S1,chatgpt_com,2022,6,0,0,0,False,False,False,location_assign_call|location_href_assign,
+S1,chatgpt_com,2023,4,16,0,2,False,True,True,location_href_assign|location_replace_call,
+S1,chatgpt_com,2024,18,21,0,5,False,True,True,location_href_assign|open_external_window,
+S1,chatgpt_com,2025,36,61,0,4,False,True,True,location_assign_call|location_href_assign|location_replace_call|open_external_window,
+S1,chatgpt_com,2026,28,50,4,4,True,True,True,location_assign_call|location_href_assign|location_replace_call|open_external_window,search_hash_direct_to_location
+S1,microsoft_com,2019,4,12,0,0,False,False,True,location_replace_call|open_external_window,
+S1,microsoft_com,2024,0,2,0,0,False,False,False,,
+S1,microsoft_com,2025,0,2,0,0,False,False,False,,
+S1,microsoft_com,2026,0,2,0,0,False,False,False,,

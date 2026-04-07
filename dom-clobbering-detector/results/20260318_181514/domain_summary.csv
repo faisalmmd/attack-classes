@@ -1,0 +1,9 @@
+country,domain,year,html_sink_count,js_reliance_count,chain_count,defensive_count,has_chain,has_defense,unique_clobbered_names,clobbered_names,element_tags_seen
+S1,chatgpt_com,2023,2,9,0,18,False,True,3,app|env|nonce,div
+S1,chatgpt_com,2024,0,20,0,35,False,True,1,nonce,
+S1,chatgpt_com,2025,0,25,0,58,False,True,1,nonce,
+S1,chatgpt_com,2026,0,17,0,43,False,True,1,nonce,
+S1,microsoft_com,2019,0,4,0,18,False,True,0,,
+S1,microsoft_com,2024,0,0,0,2,False,True,0,,
+S1,microsoft_com,2025,0,0,0,2,False,True,0,,
+S1,microsoft_com,2026,0,0,0,2,False,True,0,,

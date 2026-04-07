@@ -1,0 +1,9 @@
+country,domain,year,vulnerable_patterns,indicator_patterns,defensive_patterns,forin_bracket_assign_count,jquery_deep_extend_count,lodash_merge_count,has_any_defense
+S1,chatgpt_com,2023,10,22,15,9,0,0,True
+S1,chatgpt_com,2024,35,95,43,35,0,0,True
+S1,chatgpt_com,2025,47,113,69,45,0,0,True
+S1,chatgpt_com,2026,39,71,34,37,0,0,True
+S1,microsoft_com,2019,26,32,2,24,0,0,True
+S1,microsoft_com,2024,2,8,0,2,0,0,False
+S1,microsoft_com,2025,2,8,0,2,0,0,False
+S1,microsoft_com,2026,2,8,0,2,0,0,False

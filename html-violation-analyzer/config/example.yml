@@ -13,7 +13,7 @@ general:
   number_checker_processes: 1
 
 # Directory containing local HTML files to analyze
-input_dir: ../regional-longitudinal-study/subset_collected_data/snapshot_data
+input_dir: ../../snapshot_data
 
 # Use SQLite for simplicity and local testing
 database:

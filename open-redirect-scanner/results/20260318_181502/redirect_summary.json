@@ -1,0 +1,39 @@
+{
+  "generated": "2026-03-18T18:15:14.122749",
+  "countries_scanned": [
+    "S1"
+  ],
+  "js_files_scanned": 240,
+  "html_files_scanned": 33,
+  "total_findings": 281,
+  "by_category": {
+    "SOURCE": 166,
+    "SINK": 96,
+    "DEFENSIVE": 15,
+    "CHAIN": 4
+  },
+  "by_pattern": {
+    "URLSearchParams Instantiation": 59,
+    "location.href Assignment": 52,
+    "location.hash Read (URL Fragment)": 46,
+    "location.search Read (Query String)": 41,
+    "window.open() with Variable URL": 26,
+    "document.referrer Read": 20,
+    "URL Constructor with .origin / .hostname Check (Defense)": 13,
+    "location.assign() Call": 10,
+    "location.replace() Call": 8,
+    "URL Param/Hash Directly into location (Chain)": 4,
+    "Trusted Domain Allowlist Variable (Defense)": 2
+  },
+  "by_year": {
+    "2019": 16,
+    "2022": 6,
+    "2023": 22,
+    "2024": 46,
+    "2025": 103,
+    "2026": 88
+  },
+  "domains_with_confirmed_chain": 1,
+  "domains_with_sink_and_source": 5,
+  "domains_with_defensive_patterns": 1
+}

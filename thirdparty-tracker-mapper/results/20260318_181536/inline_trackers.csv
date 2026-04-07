@@ -1,0 +1,15 @@
+country,domain,year,timestamp,source_file,tracker_name,pattern,line_number
+S1,chatgpt_com,2023,20230408023707,2023_index_chatgpt_com_20230408023707.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+S1,chatgpt_com,2023,20230408023707,2023_index_chatgpt_com_20230408023707.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+S1,chatgpt_com,2023,20230408023707,2023_index_chatgpt_com_20230408023707.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+S1,chatgpt_com,2023,20230408023707,2023_index_chatgpt_com_20230408023707.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+S1,chatgpt_com,2023,20230408023707,2023_index_chatgpt_com_20230408023707.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+S1,chatgpt_com,2023,20230408023707,2023_index_chatgpt_com_20230408023707.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+S1,chatgpt_com,2023,20230408023707,2023_index_chatgpt_com_20230408023707.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+S1,chatgpt_com,2023,20230704051204,2023_index_chatgpt_com_20230704051204.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+S1,chatgpt_com,2023,20230704051204,2023_index_chatgpt_com_20230704051204.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+S1,chatgpt_com,2023,20230704051204,2023_index_chatgpt_com_20230704051204.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5
+S1,chatgpt_com,2023,20230704051204,2023_index_chatgpt_com_20230704051204.html,Google Tag Manager / gtag.js,\bgtag\s*\(,6
+S1,chatgpt_com,2023,20230704051204,2023_index_chatgpt_com_20230704051204.html,Google Tag Manager / gtag.js,\bgtag\s*\(,3
+S1,chatgpt_com,2023,20230704051204,2023_index_chatgpt_com_20230704051204.html,Google Tag Manager / gtag.js,\bgtag\s*\(,4
+S1,chatgpt_com,2023,20230704051204,2023_index_chatgpt_com_20230704051204.html,Google Tag Manager / gtag.js,\bgtag\s*\(,5

@@ -1,0 +1,12 @@
+year,country,pages_scanned,pages_with_any_third_party,pages_with_tracker,pages_with_cdn,total_script_inclusions,total_third_party_inclusions,total_tracker_inclusions,pct_pages_with_tracker
+2011,S1,2,0,0,0,0,0,0,0.0
+2013,S1,4,0,0,0,0,0,0,0.0
+2014,S1,2,0,0,0,0,0,0,0.0
+2015,S1,2,0,0,0,0,0,0,0.0
+2017,S1,1,0,0,0,1,0,0,0.0
+2019,S1,2,2,2,0,14,14,2,100.0
+2022,S1,4,0,0,0,0,0,0,0.0
+2023,S1,4,2,2,2,14,12,6,50.0
+2024,S1,4,4,0,2,84,82,0,0.0
+2025,S1,4,2,0,2,8,6,0,0.0
+2026,S1,4,2,0,2,8,6,0,0.0

@@ -121,7 +121,11 @@ def find_associated_files(html_path: Path) -> Dict[str, Optional[Path]]:
     result = {'headers': None, 'metadata': None}
 
     # Look for headers file
+    # Also handles pipeline naming: {year}_index_{domain}_{ts}.html
+    # -> {year}_headers_{domain}_{ts}.json
+    pipeline_headers = stem.replace('_index_', '_headers_') + '.json'
     header_patterns = [
+        pipeline_headers,
         f"{stem}.headers",
         f"{stem}_headers.txt",
         f"{stem}.headers.txt",

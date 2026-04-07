@@ -1,0 +1,12 @@
+{
+  "generated": "2026-03-18T18:15:36.978797",
+  "countries_scanned": [
+    "S1"
+  ],
+  "html_snapshots_processed": 33,
+  "total_script_inclusions": 129,
+  "total_third_party": 120,
+  "total_tracker_inclusions": 8,
+  "unique_tracker_names": 3,
+  "total_inline_tracker_calls": 14
+}
