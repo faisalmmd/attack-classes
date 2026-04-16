@@ -75,66 +75,50 @@ by the scanners (required for test_runner assertions) but is not shown in any ou
 
 ---
 
-## All 25 Attack Types — Qualification Status
+## Attack Status
 
-All 25 attacks implemented, tested, and confirmed working. 55/55 test assertions pass.
+25 attacks implemented, 55/55 test assertions passing. 13 attacks verified and approved for use; 12 pending further review.
 
-### JavaScript — 9/9 qualified
+---
 
-| Attack | Key evidence patterns | Test result |
-|--------|----------------------|-------------|
-| Prototype Pollution | `Object.prototype.x =`, `__proto__`, `$.extend(true,...)`, `_.merge()` | **PASS** 6 found |
-| Open Redirect | `location.href = var` near `location.search`/`document.referrer` | **PASS** 6 found |
-| High-Risk Browser APIs | `navigator.geolocation`, `getUserMedia`, `clipboard.read` | **PASS** 7 found |
-| Dangerous Sinks | `eval()`, `new Function()`, `innerHTML = var`, `document.write()` | **PASS** 8 found |
-| JSONP Callback | `?callback=`, `dataType:"jsonp"`, `<script src="...?callback=">` | **PASS** 6 found |
-| ReDoS | Nested quantifiers in regex: `(a+)+`, `(a\|b)+` | **PASS** 3 found |
-| Service Worker | `serviceWorker.register()` with broad scope, `importScripts()` | **PASS** 4 found |
-| Cryptominer (JS) | `CoinHive.Anonymous(...)`, known miner domains, `cryptonight` | **PASS** 5 found |
-| postMessage Audit | `addEventListener("message",...)` without `event.origin ===` check | **PASS** 4 found |
+### Verified and Approved (13)
 
-### CSS — 3/3 qualified
+| Attack | Category | Key patterns | Test |
+|--------|----------|-------------|------|
+| `xxe` | XML | `<!ENTITY x SYSTEM "file:///...">`, parameter entities (`%`) | PASS 3 CRITICAL |
+| `xml_bomb` | XML | Entity chain depth >=3, >=5 refs in one entity | PASS 5 found |
+| `xslt_injection` | XML | `document("file://...")`, `php:function()`, `<msxsl:script>` | PASS 13 found |
+| `xpath_injection` | XML | `select="//user[$var]"`, `concat()` in XPath | PASS 4 found |
+| `jsonp_callback` | JS | `?callback=`, `dataType:"jsonp"`, `<script src="...?callback=">` | PASS 6 found |
+| `postmessage_audit` | JS | `addEventListener("message",...)` without `event.origin ===` | PASS 4 found |
+| `cryptominer_js` | JS | `CoinHive.Anonymous(...)`, known miner domains, `cryptonight` | PASS 5 found |
+| `service_worker` | JS | `serviceWorker.register()` broad scope, `importScripts()` | PASS 4 found |
+| `css_attr_exfil` | CSS | `[value^=x]{background:url(https://...)}` | PASS 23 found |
+| `css_import_chain` | CSS | Multiple `@import 'https://...'` to same external domain | PASS 11 found |
+| `missing_sri` | HTML | External `<script src>` or `<link rel=stylesheet>` without `integrity=` | PASS 2 found |
+| `base_tag_hijack` | HTML | `<base href="https://external.com/">` | PASS 1 found |
+| `vulnerable_library` | JS | Version regex + CVE lookup (jQuery, Lodash, Angular, etc.) | PASS 9 found |
 
-| Attack | Key evidence patterns | Test result |
-|--------|----------------------|-------------|
-| Attribute Selector Exfil | `[value^=x]{background:url(http://...)}` — character-by-character probing | **PASS** 23 found |
-| @import Chain Exfil | Multiple `@import 'https://...'` to same external domain | **PASS** 11 found |
-| Font Ligature Keylogging | `@font-face{unicode-range:U+0041;src:url(https://...)}` single-char ranges | **PASS** 7 found |
+---
 
-### XML / XSLT — 4/4 qualified
+### Pending Review (12)
 
-| Attack | Key evidence patterns | Test result |
-|--------|----------------------|-------------|
-| XXE | `<!ENTITY x SYSTEM "file:///...">`, parameter entities (`%`) | **PASS** 3 CRITICAL found |
-| XML Bomb | Entities referencing other entities ≥5 times, chain depth ≥3 | **PASS** 5 found |
-| XPath Injection | `select="//user[name=$input]"`, `concat()` in XPath | **PASS** 4 found |
-| XSLT Injection | `document("file://...")`, `php:function(...)`, `<msxsl:script>` | **PASS** 13 found |
+These pass all test assertions but have open methodology concerns or known false positive issues that need to be addressed before use.
 
-### WebAssembly — 1/1 qualified
-
-| Attack | Key evidence patterns | Test result |
-|--------|----------------------|-------------|
-| WASM Cryptominer | Binary strings: `cryptonight`, `cn_slow_hash`, `stratum`, `keccak` | **PASS** 13 found |
-
-### HTML — 7/7 qualified + 2 inline delegation tests
-
-| Attack | Key evidence patterns | Test result |
-|--------|----------------------|-------------|
-| Missing SRI | External `<script src>` or `<link rel=stylesheet>` without `integrity=` | **PASS** 2 found |
-| Clickjacking | Hidden iframe (`opacity:0`), login page with no frame-busting | **PASS** 4 found |
-| Base Tag Hijacking | `<base href="https://external.com/">` | **PASS** 1 found |
-| Meta Refresh Redirect | `<meta http-equiv=refresh content="0;url=https://evil.com">` | **PASS** 1 found |
-| Form Action Hijacking | Form `action="http://..."` (plain HTTP) or external domain | **PASS** 3 found |
-| Dangling Markup / JS URLs | `href="javascript:..."` (CRITICAL), `<iframe src="data:...">` | **PASS** 2 found |
-| HTML Violations | Nested `<form>`, duplicate `id=`, block-in-inline, unclosed tags | **PASS** 15 found |
-| Inline `<script>` delegation | Inline JS scanned by JS scanner — eval(), CoinHive, postMessage caught | **PASS** |
-| Inline `<style>` delegation | Inline CSS scanned by CSS scanner — attribute exfil caught | **PASS** |
-
-### Vulnerable Library Detection (Retire.js) — 1/1 qualified
-
-| Attack | Key evidence patterns | Test result |
-|--------|----------------------|-------------|
-| Vulnerable Library | jQuery 1.9.1 → CVE-2020-11022 (XSS); Lodash 4.17.4 → CVE-2019-10744 | **PASS** 9 found |
+| Attack | Category | Status | Issue |
+|--------|----------|--------|-------|
+| `prototype_pollution` | JS | Real-data run done (7,751 findings, 40/50 domains) | Verified and pushed separately; not in the 13 above |
+| `open_redirect` | JS | Tests pass | Context window (5 lines) may miss multi-line flows |
+| `high_risk_api` | JS | Tests pass | All API calls flagged regardless of consent/purpose |
+| `dangerous_sink` | JS | Tests pass | `setTimeout(varName)` is MEDIUM -- still needs FP assessment on real data |
+| `redos` | JS | Tests pass | Syntactic heuristic only, not automaton-based -- over-flags and under-flags |
+| `css_font_keylog` | CSS | Tests pass | No peer-reviewed citation; PoC-only source |
+| `wasm_cryptominer` | WASM | Tests pass | Hash DB empty; string-only detection misses obfuscated miners |
+| `clickjacking` | HTML | Tests pass | Systematic FP: pages using HTTP header defense flagged as unprotected |
+| `meta_refresh_redirect` | HTML | Tests pass | Not yet reviewed against real data |
+| `form_action_hijack` | HTML | Tests pass | Not yet reviewed against real data |
+| `dangling_markup` | HTML | Tests pass | Unclosed-attribute heuristic is noisy on real HTML |
+| `html_violation` | HTML | Tests pass | Not yet reviewed against real data |
 
 ---
 
