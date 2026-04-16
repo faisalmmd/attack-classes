@@ -1,89 +1,122 @@
 # Web Archive Security Analysis Pipeline
 
-Static security scanner for archived web files. Runs 19 custom tests across
-JavaScript, CSS, XML/XSLT, and WebAssembly files.
+Static security scanner for archived web files (JS, CSS, HTML, XML/XSLT, WASM).
+Built for the regional longitudinal study of government web security across 16 countries
+(2003-2024) via the Internet Archive Wayback Machine.
+
+Runs 25 attack detectors and outputs a binary domain-by-attack matrix (0/1) plus
+a full evidence report with file paths, line numbers, and matched code.
 
 ## Quick Start
 
 ```bash
-# Scan a directory
+# Scan a directory, print evidence to stdout
 python driver.py /path/to/archived/site/
 
-# JSON output, only HIGH+ severity
-python driver.py /path/to/archived/site/ --format json --severity HIGH -o report.json
+# Evidence report + binary matrix CSV
+python driver.py /path/to/archived/site/ --output report.txt --matrix matrix.csv
 
-# CSV output
-python driver.py /path/to/archived/site/ --format csv -o results.csv
-
-# Scan only specific extensions
-python driver.py /path/to/archived/site/ --ext .js .css
+# Single attack
+python run_attack.py xxe
+python run_attack.py css_attr_exfil
+python run_attack.py --list        # show all attack names
 ```
 
 ## No dependencies required
 
-The pipeline uses only Python 3 standard library (re, os, json, csv, struct,
-argparse, dataclasses). No pip install needed.
+Python 3 standard library only (re, os, json, csv, struct, argparse, dataclasses).
+No pip install needed. BeautifulSoup is not used -- all parsing is regex/struct-based
+to keep the pipeline portable on any archive machine.
 
-## Tests Included (19)
+## Output format
 
-### JavaScript (.js .mjs .jsx .ts .tsx) — 9 tests
-1. Prototype Pollution Scanner
-2. Open Redirect Scanner  
-3. High-Risk Browser API Detector
-4. Dangerous Sink Usage (eval, innerHTML, document.write...)
-5. JSONP Callback Injection
-6. ReDoS (Regex Denial of Service)
-7. Service Worker Scope Audit
-8. Cryptominer Detection
-9. postMessage Handler Audit
+**Evidence report** (`--output report.txt`): one `[FOUND]` block per finding with file
+path, line number, description, and the exact matched line of code.
 
-### CSS (.css) — 3 tests
-10. Attribute Selector Data Exfiltration
-11. @import Chain Exfiltration
-12. Font Ligature Keylogging
+**Matrix CSV** (`--matrix matrix.csv`): rows = domain subdirectories, columns = attack
+types, cells = 1 if any finding of that attack was found in the domain, 0 otherwise.
 
-### XML (.xml .xsl .xslt .soap .rss .atom) — 4 tests
-13. XXE (XML External Entity) Patterns
-14. XML Bomb / Billion Laughs
-15. XPath Injection Indicators
-16. XSLT Injection
-
-### WebAssembly (.wasm) — 1 test
-17. Cryptominer Module Detection
-
-## Run Separately
-
-### TruffleHog (credential scanning across ALL files)
-```bash
-trufflehog filesystem --directory /path/to/archived/site/
+```
+domain,xxe,xml_bomb,css_attr_exfil,...
+chatbot_moccae_gov_ae,0,0,1,...
+portal_moi_gov_ae,1,0,0,...
 ```
 
-### Retire.js (vulnerable JS library detection)
-```bash
-retire --path /path/to/archived/site/ --outputformat json
-```
-
-## File Structure
+## File structure
 
 ```
 security_pipeline/
-├── driver.py                    # Main entry point
-├── README.md
-├── ATTACK_EXPLANATIONS.txt      # Detailed explanation of every attack
+├── driver.py              -- main entry point, walks directory, routes files to scanners
+├── run_attack.py          -- generic single-attack runner (outputs to results/<attack>/)
+├── run_pp.py              -- prototype_pollution runner with detailed severity breakdown
+├── test_runner.py         -- 55-assertion test suite against test_cases/
 ├── scanners/
-│   ├── __init__.py
-│   ├── js_scanner.py            # 9 JavaScript tests
-│   ├── css_scanner.py           # 3 CSS tests
-│   ├── xml_scanner.py           # 4 XML/XSLT tests
-│   └── wasm_scanner.py          # 1 WASM test
-└── test_samples/                # Test files with intentional vulnerabilities
-    ├── test.js
-    ├── test.css
-    ├── test.xml
-    └── test.xslt
+│   ├── js_scanner.py      -- 9 JavaScript/TypeScript attack detectors
+│   ├── css_scanner.py     -- 3 CSS attack detectors
+│   ├── html_scanner.py    -- 7 HTML attack detectors + inline script/style delegation
+│   ├── xml_scanner.py     -- 4 XML/XSLT attack detectors
+│   ├── wasm_scanner.py    -- 1 WASM cryptominer detector
+│   └── retire_scanner.py  -- vulnerable JS library detection (built-in CVE DB + retire CLI)
+├── test_cases/            -- synthetic test files, one per attack
+├── results/               -- per-attack output (summary.json tracked; bulk evidence gitignored)
+├── verification/
+│   └── VERIFICATION_GUIDE.md  -- methodology, references, false negative notes per attack
+└── data/                  -- gitignored (place dataset here to run on real data)
 ```
 
-## Exit Codes
+## Attacks
 
-- 0: No CRITICAL or HIGH findings
-- 1: CRITICAL or HIGH findings detected
+### Verified and approved (13)
+
+Methodology reviewed against primary sources, false negatives documented,
+test assertions confirmed. Safe to use for analysis.
+
+| Attack | File types | Key patterns |
+|--------|-----------|-------------|
+| `xxe` | XML | `<!ENTITY x SYSTEM "file:///...">`, parameter entities |
+| `xml_bomb` | XML | Entity chain depth >=3, >=5 refs in one entity value |
+| `xslt_injection` | XSLT | `document("file://...")`, `php:function()`, `<msxsl:script>` |
+| `xpath_injection` | XSLT | `select="//user[$var]"`, `concat()` in XPath expressions |
+| `jsonp_callback` | JS | `?callback=`, `dataType:"jsonp"`, script tag with callback param |
+| `postmessage_audit` | JS | `addEventListener("message",...)` without `event.origin ===` check |
+| `cryptominer_js` | JS | CoinHive/CryptoLoot domains, `CoinHive.Anonymous()`, `cryptonight` |
+| `service_worker` | JS | `serviceWorker.register()` with broad scope (`/`), `importScripts()` |
+| `css_attr_exfil` | CSS | `[value^=x] { background: url(https://...) }` |
+| `css_import_chain` | CSS | Multiple `@import 'https://...'` to same external domain |
+| `missing_sri` | HTML | External `<script src>` or `<link rel=stylesheet>` without `integrity=` |
+| `base_tag_hijack` | HTML | `<base href="https://external.com/">` |
+| `vulnerable_library` | JS | Version string + CVE lookup (jQuery, Lodash, Angular, Bootstrap, etc.) |
+
+### Pending review (12)
+
+Implemented and test-passing but not yet approved. See `TEST_SUMMARY.md` for specific
+open issues per attack.
+
+`prototype_pollution`, `open_redirect`, `high_risk_api`, `dangerous_sink`, `redos`,
+`css_font_keylog`, `wasm_cryptominer`, `clickjacking`, `meta_refresh_redirect`,
+`form_action_hijack`, `dangling_markup`, `html_violation`
+
+## Running on real data
+
+Place the extracted dataset under `data/` (gitignored). Then:
+
+```bash
+# Full pipeline, all 25 attacks
+python driver.py data/ --output results/evidence.txt --matrix results/matrix.csv
+
+# Single attack with structured output
+python run_attack.py xxe --data data/
+```
+
+Per-attack results land in `results/<attack_name>/`:
+- `summary.json` -- domain counts, scan time, severity breakdown (tracked in git)
+- `evidence.txt` -- full finding list with code snippets (gitignored, regenerate as needed)
+- `domain_summary.csv` -- per-domain counts (gitignored)
+- `attack_matrix.csv` -- binary 0/1 per domain (gitignored)
+
+## Notes
+
+- **TruffleHog** (hardcoded secrets): run separately via `js-secrets-scanner/` in archive-sec-analysis
+- **WASM hash DB**: `KNOWN_MINER_HASHES` in `wasm_scanner.py` is empty -- string-based detection only
+- **Retire CLI**: if `npm install -g retire` is available, the scanner prefers it; otherwise falls back to the built-in CVE database
+- **Wayback preamble**: JS files from the Wayback Machine start with a `_____WB$wombat` wrapper (~25 lines); the JS scanner strips this before scanning
