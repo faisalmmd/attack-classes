@@ -29,39 +29,50 @@ from collections import defaultdict
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from driver import PipelineDriver
 
-KNOWN_ATTACKS = [
-    # XML/XSLT
-    "xxe",
-    "xml_bomb",
-    "xslt_injection",
-    "xpath_injection",
-    # JavaScript
-    "jsonp_callback",
-    "postmessage_audit",
-    "cryptominer_js",
-    "service_worker",
-    "prototype_pollution",   # see also run_pp.py for detailed output
-    "open_redirect",
-    "high_risk_api",
-    "dangerous_sink",
-    "redos",
-    # CSS
-    "css_attr_exfil",
-    "css_import_chain",
-    "css_font_keylog",
-    # HTML
-    "missing_sri",
-    "base_tag_hijack",
-    "meta_refresh_redirect",
-    "form_action_hijack",
-    "dangling_markup",
-    "html_violation",
-    "clickjacking",
-    # WASM
-    "wasm_cryptominer",
-    # Retire.js
-    "vulnerable_library",
-]
+_JS   = {".js", ".mjs", ".jsx", ".ts", ".tsx"}
+_HTML = {".html", ".htm"}
+_CSS  = {".css"}
+_XML  = {".xml", ".xsl", ".xslt", ".soap", ".rss", ".atom"}
+_WASM = {".wasm"}
+
+# Maps each attack to the file extensions it can fire on.
+# JS/CSS attacks include HTML because the HTML scanner delegates
+# inline <script>/<style> blocks to the JS/CSS scanners respectively.
+ATTACK_EXTENSIONS = {
+    # XML/XSLT -- XML files only
+    "xxe":               _XML,
+    "xml_bomb":          _XML,
+    "xslt_injection":    _XML,
+    "xpath_injection":   _XML,
+    # JavaScript -- JS files + HTML (inline <script> delegation)
+    "prototype_pollution":   _JS | _HTML,
+    "open_redirect":         _JS | _HTML,
+    "high_risk_api":         _JS | _HTML,
+    "dangerous_sink":        _JS | _HTML,
+    "jsonp_callback":        _JS | _HTML,
+    "redos":                 _JS | _HTML,
+    "service_worker":        _JS | _HTML,
+    "cryptominer_js":        _JS | _HTML,
+    "postmessage_audit":     _JS | _HTML,
+    # CSS -- CSS files + HTML (inline <style> delegation)
+    "css_attr_exfil":        _CSS | _HTML,
+    "css_import_chain":      _CSS | _HTML,
+    "css_font_keylog":       _CSS | _HTML,
+    # HTML only
+    "missing_sri":           _HTML,
+    "base_tag_hijack":       _HTML,
+    "meta_refresh_redirect": _HTML,
+    "form_action_hijack":    _HTML,
+    "dangling_markup":       _HTML,
+    "html_violation":        _HTML,
+    "clickjacking":          _HTML,
+    # WASM only
+    "wasm_cryptominer":      _WASM,
+    # Vulnerable library -- JS files only (version strings live in library files, not inline)
+    "vulnerable_library":    {".js", ".mjs"},
+}
+
+KNOWN_ATTACKS = sorted(ATTACK_EXTENSIONS.keys())
 
 
 def main():
@@ -98,14 +109,17 @@ def main():
     out_dir = os.path.join(base, "results", attack)
     os.makedirs(out_dir, exist_ok=True)
 
+    extensions = ATTACK_EXTENSIONS[attack]
+
     print(f"[*] Attack   : {attack}")
     print(f"[*] Data dir : {data_dir}")
     print(f"[*] Output   : {out_dir}")
+    print(f"[*] Scanning : {', '.join(sorted(extensions))} files only")
     print()
 
     t0 = time.time()
     driver = PipelineDriver()
-    all_findings = driver.scan_all(data_dir)
+    all_findings = driver.scan_all(data_dir, extensions=extensions)
     elapsed = time.time() - t0
 
     target = [f for f in all_findings if f.test_name == attack]
