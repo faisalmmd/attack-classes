@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head><title>Violation Test</title></head>
+<body>
+
+<!-- TC-HV-01: POSITIVE — nested forms -->
+<form action="/outer" method="POST">
+    <input type="text" name="outer_field">
+    <form action="/inner" method="POST">
+        <input type="text" name="inner_field">
+        <button type="submit">Inner Submit</button>
+    </form>
+    <button type="submit">Outer Submit</button>
+</form>
+
+<!-- TC-HV-02: POSITIVE — duplicate IDs -->
+<div id="user-panel">First panel</div>
+<div id="user-panel">Duplicate panel</div>
+<input id="user-panel" type="text">
+
+<!-- TC-HV-03: POSITIVE — block element inside inline -->
+<span>
+    <div>Block inside inline span</div>
+    <p>Paragraph inside span</p>
+</span>
+<a href="/link">
+    <div>Block div inside anchor</div>
+</a>
+
+<!-- TC-HV-04: POSITIVE — unclosed tags -->
+<div>
+    <p>This paragraph is never closed
+    <p>Another paragraph auto-closes the first
+    <div>
+        <span>Unclosed span
+    </div>
+</div>
+
+<!-- TC-HV-05: NEGATIVE — properly structured HTML -->
+<div>
+    <p>Properly closed paragraph</p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+</div>
+
+</body>
+</html>

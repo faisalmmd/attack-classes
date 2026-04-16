@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TC-XXE-07: NEGATIVE — no doctype, no entities, completely clean -->
+<catalog>
+    <book id="1">
+        <title>Web Security Fundamentals</title>
+        <author>Alice &amp; Bob</author>
+        <price>29.99</price>
+    </book>
+    <book id="2">
+        <title>The &lt;script&gt; Tag Problem</title>
+        <author>Charlie</author>
+        <price>34.99</price>
+    </book>
+</catalog>

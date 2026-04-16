@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TC-XB-04: NEGATIVE — single entity, no nesting -->
+<!DOCTYPE doc [
+    <!ENTITY company "Acme Corporation">
+]>
+<document>
+    <name>&company;</name>
+</document>

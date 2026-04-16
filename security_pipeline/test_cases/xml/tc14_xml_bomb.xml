@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TC-XB-01: POSITIVE — entity referencing 10 others (exponential expansion) -->
+<!-- TC-XB-02: POSITIVE — 3 levels of nesting -->
+<!-- TC-XB-03: POSITIVE — 5+ entity definitions -->
+<!DOCTYPE bomb [
+    <!ENTITY lol "lol">
+    <!ENTITY lol2 "&lol;&lol;&lol;&lol;&lol;&lol;&lol;&lol;&lol;&lol;">
+    <!ENTITY lol3 "&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;">
+    <!ENTITY lol4 "&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;">
+    <!ENTITY lol5 "&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;&lol4;">
+]>
+<data>&lol5;</data>

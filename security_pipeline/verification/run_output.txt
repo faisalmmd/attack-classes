@@ -1,0 +1,82 @@
+
+======================================================================
+  SECURITY PIPELINE — MANUAL VERIFICATION
+======================================================================
+
+[JS-1] Prototype Pollution
+  [PASS] tc01: >=5 prototype_pollution findings (got 6)
+
+[JS-2] Open Redirect
+  [PASS] tc02: >=3 open_redirect findings (got 6)
+
+[JS-3] High-Risk Browser APIs
+  [PASS] tc03: >=7 high_risk_api findings (got 7)
+
+[JS-4] Dangerous Sinks
+  [PASS] tc04: >=7 dangerous_sink findings (got 9)
+
+[JS-5] JSONP Callback
+  [PASS] tc05: >=5 jsonp_callback findings (got 7)
+
+[JS-6] ReDoS
+  [PASS] tc06: >=3 redos findings (got 3)
+
+[JS-7] Service Worker
+  [PASS] tc07: >=3 service_worker findings (got 4)
+
+[JS-8] Cryptominer (JavaScript)
+  [PASS] tc08: >=4 cryptominer_js findings (got 6)
+
+[JS-9] postMessage Handler
+  [PASS] tc09: >=4 postmessage_audit findings (got 4)
+  [PASS] tc09 negative: strict origin check NOT flagged (got 0)
+
+[CSS-10] Attribute Selector Exfiltration
+  [PASS] tc10: >=5 css_attr_exfil findings (got 23)
+
+[CSS-11] @import Chain Exfiltration
+  [PASS] tc11: >=6 css_import_chain findings (got 11)
+
+[CSS-12] Font Ligature Keylogging
+  [PASS] tc12: >=7 css_font_keylog findings (got 7)
+  [PASS] tc12 negative: local/no-range font NOT flagged (got 0)
+
+[XML-13] XXE
+  [PASS] tc13: >=3 xxe findings (got 5)
+  [PASS] tc13_clean: 0 CRITICAL xxe (true-negative) (got 0)
+
+[XML-14] XML Bomb / Billion Laughs
+  [PASS] tc14: >=3 xml_bomb findings (got 6)
+  [PASS] tc14_safe: 0 xml_bomb CRITICAL (true-negative) (got 0)
+
+[XML-15] XPath Injection
+  [PASS] tc15: >=3 xpath_injection findings (got 4)
+
+[XML-16] XSLT Injection
+  [PASS] tc16: >=8 xslt_injection findings (got 11)
+
+[WASM-17] WASM Cryptominer
+  [PASS] tc17_miner: >=4 wasm_cryptominer findings (got 13)
+  [PASS] tc17_clean: 0 wasm_cryptominer HIGH+ (true-negative) (got 0)
+
+[HTML-18..24] HTML Attacks (all from tc_html_attacks.html)
+  [PASS] tc_html_attacks: missing_sri >=1 findings (got 2)
+  [PASS] tc_html_attacks: clickjacking >=1 findings (got 2)
+  [PASS] tc_html_attacks: base_tag_hijack >=1 findings (got 1)
+  [PASS] tc_html_attacks: meta_refresh_redirect >=1 findings (got 1)
+  [PASS] tc_html_attacks: form_action_hijack >=1 findings (got 3)
+  [PASS] tc_html_attacks: dangling_markup >=1 findings (got 2)
+  [PASS] tc_html_violations: html_violation >=5 findings (got 14)
+  [PASS] tc_html_clean: 0 sri/dangling findings (true-negative) (got 0)
+
+[RET-25] Vulnerable Library Detection
+  [PASS] tc_retire_jquery: >=4 findings (CRITICAL+HIGH CVEs) (got 4)
+  [PASS] tc_retire_lodash: >=5 findings (CRITICAL+HIGH CVEs) (got 5)
+  [PASS] tc_retire_clean: 0 vulnerable_library (true-negative) (got 0)
+
+[HTML-26] Inline Script + Style Delegation
+  [PASS] tc_html_attacks: inline JS scanner catches eval+CoinHive+postMessage (got 4)
+
+======================================================================
+  VERIFICATION RESULTS: 34/34 passed, 0 failed
+======================================================================
