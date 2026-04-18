@@ -87,16 +87,17 @@ for f in s.scan('test_cases/js/tc01_proto_pollution.js'):
 without checking if it's safe. Attackers craft a link like `site.com/login?redirect=evil.com`
 — victims see the trusted domain and click, landing on a phishing page.
 
-**Scanner logic:** Looks for `location.href = var`, `location.replace(var)`, `window.open(var)`.
+**Scanner logic:** Six redirect sinks (from Khodayari et al. NDSS 2025 Table II, 20,898 confirmed flows):
+`location.href = var`, `location.replace(var)`, `location.assign(var)`, `window.open(var)`,
+`window.location = var` (direct assignment, no `.href`), `iframe/frame.src = var`.
 Checks 5 lines of surrounding context for user-controlled sources (`location.search`,
-`document.referrer`, `URLSearchParams`, etc.) and escalates severity if found.
+`location.hash`, `document.referrer`, `window.name`, `URLSearchParams`, etc.) and escalates to HIGH if found, MEDIUM otherwise.
 
 **Test file:** `test_cases/js/tc02_open_redirect.js`
 - Lines 2–3: `next = URLSearchParams(...).get('next'); location.href = next;` — HIGH (source nearby)
 - Line 6: `window.location.replace(document.referrer);` — HIGH (referrer is user-controlled)
 - Line 12: `location.href = "/dashboard";` — NEGATIVE (static string, should NOT fire)
 - Line 15: `location.href = "https://example.com/page";` — NEGATIVE (hardcoded URL)
-false negatives
 
 **Command:**
 ```bash
@@ -118,7 +119,9 @@ Lines with a nearby user-controlled source show as HIGH; others as MEDIUM.
 - archive-sec-analysis scanner uses full-text DOTALL patterns (catches multi-line flows)
   but does not distinguish source proximity — all are the same severity
 
-**Reference:** Son & Shmatikov, "The Postman Always Rings Twice: Attacking and Defending postMessage in HTML5 Websites," *NDSS 2013*. https://www.ndss-symposium.org/ndss2013/ndss-2013-programme/postman-always-rings-twice-attacking-and-defending-postmessage-html5-websites/ — Although primarily about postMessage, §2 characterises DOM-based open redirect as a sink class driven by unvalidated navigation APIs (`location.href`, `location.replace`). For the pure open-redirect definition, the canonical reference is OWASP CWE-601: https://cwe.mitre.org/data/definitions/601.html
+**Known false negatives:** The 5-line context window misses multi-line flows where the source and sink are more than 5 lines apart — a simplification vs full CPG taint analysis. Sinks accessed via aliased variables (e.g., `var loc = window.location; loc.href = url`) are not followed. The `hashchange` event listener pattern (user navigates, JS reads `location.hash` and redirects) requires tracking the event callback, which static pattern matching does not do. The `frame.src` sink is flagged regardless of whether the frame is cross-origin — same-origin frame src changes are not a redirect vulnerability.
+
+**Reference:** Khodayari, Glauber & Pellegrino, "Do (Not) Follow the White Rabbit: Challenging the Myth of Harmless Open Redirection," *NDSS 2025*. https://dx.doi.org/10.14722/ndss.2025.240523 — Large-scale empirical study of client-side open redirect vulnerabilities across the top 10K websites; identifies 184 vulnerability indicators in 9 groups, confirms 20,898 open redirect flows across 623 sites, and shows 11.5% can be escalated to XSS, CSRF, or information leakage. Table II establishes the authoritative sink taxonomy (`window.open`, `window.location`, `frame.src`, `location.href`, `location.replace`, `location.assign`) used by this scanner. Also: OWASP CWE-601: https://cwe.mitre.org/data/definitions/601.html
 
 ---
 

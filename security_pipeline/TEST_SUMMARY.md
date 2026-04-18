@@ -188,6 +188,7 @@ and one column per attack type, with 1/0 indicating detection.
 
 | Date | Change | File |
 |------|--------|------|
+| 2026-04-19 | Open redirect: add `window.location = var` and `iframe/frame.src = var` sinks (Khodayari et al. NDSS 2025 Table II); replace Son & Shmatikov NDSS 2013 reference | `scanners/js_scanner.py`, `verification/VERIFICATION_GUIDE.md` |
 | 2026-04-16 | PP scanner: add `constructor.prototype`, DOTALL for-in, JSON.parse-merge chain, wayback preamble stripping | `scanners/js_scanner.py` |
 | 2026-04-16 | PP scanner: add `__proto__` assignment pattern as HIGH (was only MEDIUM before) | `scanners/js_scanner.py` |
 | 2026-04-16 | Dangerous sinks: split `setTimeout`/`setInterval` -- string literal is CRITICAL, variable arg is MEDIUM (was HIGH for both) | `scanners/js_scanner.py` |

@@ -205,11 +205,16 @@ class JavaScriptScanner:
     def _test_open_redirect(self, fp: str, lines: list) -> List[Finding]:
         findings = []
         # Redirect sinks
+        # Sources: Khodayari et al. NDSS 2025 Table II (20,898 confirmed flows)
         sink_patterns = [
             (r'location\s*\.\s*href\s*=\s*(?![\"\']https?://[^\s]*?[\"\'])', "location.href assigned from variable"),
             (r'location\s*\.\s*replace\s*\((?![\"\'])', "location.replace() with variable argument"),
             (r'location\s*\.\s*assign\s*\((?![\"\'])', "location.assign() with variable argument"),
             (r'window\s*\.\s*open\s*\((?![\"\'])', "window.open() with variable argument"),
+            # window.location = url (direct assignment, no .href) -- 996 confirmed flows in NDSS 2025
+            (r'window\s*\.\s*location\s*=\s*(?![\"\'])', "window.location direct assignment from variable"),
+            # frame/iframe .src assignment -- 367 confirmed flows in NDSS 2025
+            (r'(?:iframe|frame)\s*\.\s*src\s*=\s*(?![\"\'])', "iframe/frame.src assigned from variable"),
         ]
         # User-controllable sources near sinks
         source_indicators = [
