@@ -45,8 +45,10 @@ python driver.py test_cases/js/ --ext .js --output /dev/stdout 2>/dev/null | gre
 can inject a key like `__proto__` into a merge function, that property silently appears on
 *every* object in the application — enabling auth bypass, XSS, or RCE.
 
-**Scanner logic:** Looks for `Object.prototype.x =`, `__proto__` access, and known-vulnerable
-merge functions: `$.extend(true, ...)`, `_.merge()`, `_.defaultsDeep()`, `_.set()`.
+**Scanner logic:** Looks for `Object.prototype.x =` (CRITICAL), `__proto__` assignment (HIGH),
+`.constructor.prototype` access path (HIGH), known-vulnerable merge functions — `$.extend(true, ...)`,
+`_.merge()`, `_.defaultsDeep()`, `_.set()` (HIGH) — unsafe for-in bracket-assign (HIGH), JSON.parse
+piped into merge (HIGH), and bare `__proto__` references (MEDIUM).
 
 **Test file:** `test_cases/js/tc01_proto_pollution.js`
 - Line 2: `Object.prototype.isAdmin = true;` — direct pollution
@@ -74,9 +76,9 @@ for f in s.scan('test_cases/js/tc01_proto_pollution.js'):
   tracking whether sites added protections over time in the longitudinal study
 - Use security_pipeline for the matrix CSV output; use archive-sec-analysis for deep analysis
 
-**Known false negatives:** The 15-line lookahead window used for context can miss pollution in deeply nested callbacks or heavily minified code. Pollution via property descriptor manipulation (`Object.defineProperty`) is not detected.
+**Known false negatives:** The scanner uses full-text DOTALL pattern matching (no line lookahead window — that is a postMessage implementation detail, not PP). Patterns not detected: `Object.defineProperty(Object.prototype, 'x', ...)` (property descriptor pollution); `Object.setPrototypeOf(target, src)` (explicit prototype swap); dynamic computed-key paths where `__proto__` is assembled from user-controlled parts without appearing literally; array constructor chains (`[].constructor.prototype`); and for-in loops guarded by `hasOwnProperty` that are still flagged as HIGH (false positive case: the guard makes them safe, but the scanner does not parse guard presence).
 
-**Reference:** Shcherbakov et al., "Silent Spring: Prototype Pollution Leads to Remote Code Execution in Node.js," *USENIX Security 2022*. https://www.usenix.org/conference/usenixsecurity22/presentation/shcherbakov -- Demonstrates how `__proto__` and `constructor.prototype` pollution in server-side Node.js leads to RCE via gadget chains. The scanner covers `__proto__` assignment, `constructor.prototype`, known-vulnerable merge functions, unsafe for-in bracket-assign, and JSON.parse-into-merge chains.
+**Reference:** Shcherbakov et al., "Silent Spring: Prototype Pollution Leads to Remote Code Execution in Node.js," *USENIX Security 2023*. https://www.usenix.org/conference/usenixsecurity23/presentation/shcherbakov -- Demonstrates how `__proto__` and `constructor.prototype` pollution in server-side Node.js leads to RCE via gadget chains. The scanner covers `__proto__` assignment, `constructor.prototype`, known-vulnerable merge functions, unsafe for-in bracket-assign, and JSON.parse-into-merge chains. Also: Kang et al., "Probe the Proto: Measuring Client-Side Prototype Pollution Vulnerabilities of One Million Real-world Websites," *NDSS 2022* -- establishes the three-vector taxonomy (`__proto__`, `constructor.prototype`, `constructor[prototype]`) used as the basis for this scanner's pattern classes.
 
 ---
 
@@ -988,7 +990,7 @@ These should be disclosed in the paper's methodology section.
 
 | # | Attack | Issue | Severity |
 |---|--------|-------|----------|
-| 1 | Prototype Pollution | `constructor.prototype` patterns not detected; PortSwigger + Shcherbakov et al. list this as a primary vector alongside `__proto__` | Fix before paper |
+| 1 | Prototype Pollution | `constructor.prototype` and `__proto__` assignment patterns now detected (HIGH). Remaining gaps: `Object.defineProperty(Object.prototype,...)`, `Object.setPrototypeOf()`, and hasOwnProperty-guarded for-in loops (flagged as HIGH but are safe — disclose as known FP class) | Disclose in paper |
 | 2 | ReDoS | Scanner uses syntactic nested-quantifier matching; Davis et al. FSE 2018 use automaton-based complexity analysis. The scanner detects the *shape* of ReDoS-prone regexes, not the *complexity*. Describe as "heuristic" in the paper | Fix framing before paper |
 | 3 | Dangerous Sinks | `setTimeout(varName, delay)` fires on function callbacks (false positive). Only string arguments are dangerous. Pattern needs tightening | Fix before paper |
 | 4 | WASM Cryptominer | "Romano et al., IEEE S&P 2020" citation unverified — cannot locate this paper at IEEE S&P 2020. Use Konoth et al. CCS 2018 as primary reference instead | Fix citation before paper |
