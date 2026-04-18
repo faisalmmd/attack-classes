@@ -240,20 +240,39 @@ for f in s.scan('test_cases/js/tc05_jsonp.js'):
 ---
 
 ### Attack 6: ReDoS (Regex Denial of Service)
-**Gist:** Some regular expressions cause exponential backtracking when given a crafted input.
+**Gist:** Some regular expressions exhibit super-linear (SL) worst-case complexity when
+evaluated by a backtracking regex engine against adversarially crafted input ("malign input").
 `/^([a-zA-Z0-9]+)+@/` against `"aaaaaaaaaaaaaaaaa!"` tries millions of path combinations
 before failing. With 30 characters the browser tab freezes. An attacker sending a malformed
-input string can lock up the JS thread for minutes.
+input string can lock up the single-threaded JS event loop for minutes.
 
-**Scanner logic:** Finds regex literals (`/.../`) and `new RegExp("...")` calls. Within each,
-checks for dangerous structures: nested quantifiers `(a+)+`, quantified alternations `(a|b)+`,
-groups with overlap.
+**Scanner logic:** Finds regex literals (`/.../`) and `new RegExp("...")` calls on each line.
+Within each extracted regex string, tests for two of the three SL regex anti-patterns defined
+by Davis et al. ESEC/FSE 2018 (§5.1):
+
+- **Star Height > 1** (exponential O(2^n)): nested quantifiers — `(a+)+`, `(\w+)+`, `(\d+\.)+`.
+  Pattern: a quantified group whose body itself contains a `+` or `*`. Detected by the scanner.
+  Covers ~12% of SL regexes in npm (Davis et al. Table 4).
+
+- **QOD — Quantified Overlapping Disjunction** (exponential): quantified alternation group where
+  alternatives can match the same character — `(a|a)+`, `(\w|\d)+`. Pattern: group body
+  containing `|` followed by `+`/`*` at group level. Detected approximately by the scanner
+  (any quantified alternation, not just overlapping ones — higher FP rate than Star Height).
+
+- **QOA — Quantified Overlapping Adjacency** (polynomial O(n²), most common): two adjacent
+  quantified nodes whose character classes overlap — `/\s*\.\#\s*$/`. Requires character-set
+  overlap analysis between adjacent AST nodes. **Not detected** — requires AST traversal not
+  feasible with regex-on-regex matching.
+
+All findings are reported as **MEDIUM** (heuristic only). The paper's own static phase had
+90–98% FP rates across all three anti-patterns before dynamic validation (Table 4). Dynamic
+validation is not feasible in a static archive scanner.
 
 **Test file:** `test_cases/js/tc06_redos.js`
-- Line 2: `/^([a-zA-Z0-9]+)+@example\.com$/` — nested `+` quantifier
-- Line 5: `/^(a|a)+$/` — overlapping alternation
-- Line 8: `new RegExp("^(\\d+\\.)+$")` — nested quantifier via constructor
-- Lines 11–14: clean patterns (`+`, `{3}-{4}`) — NEGATIVE
+- Line 2: `/^([a-zA-Z0-9]+)+@example\.com$/` — Star Height > 1, nested `+` quantifier
+- Line 5: `/^(a|a)+$/` — QOD, overlapping alternation in quantified group
+- Line 8: `new RegExp("^(\\d+\\.)+$")` — Star Height > 1 via constructor
+- Lines 11–14: single `+` quantifier, bounded `{3}-{4}` — NEGATIVE (safe patterns)
 
 **Command:**
 ```bash
@@ -267,7 +286,28 @@ for f in s.scan('test_cases/js/tc06_redos.js'):
 
 **Expected output:** 3 MEDIUM findings on lines 2, 5, 8. Lines 11–14 should NOT appear.
 
-**Reference:** Davis et al., "The Impact of Regular Expression Denial of Service (ReDoS) on Practice: An Empirical Study at the Ecosystem Scale," *FSE/ESEC 2018*. https://dl.acm.org/doi/10.1145/3236024.3236027 — Studies ReDoS in npm and reports that 13% of packages contain at least one vulnerable regex. **Critical methodology note:** Davis et al. use *automaton-based complexity analysis* (NFA state-space traversal) to identify super-linear regexes. The scanner instead uses *syntactic pattern matching* on nested quantifiers — a much coarser heuristic that misses many ReDoS-prone patterns and can flag safe ones. If citing this paper as justification, reframe the scanner as "syntactic heuristic detection of nested quantifier structures" rather than claiming full ReDoS detection.
+**Known false negatives:**
+- **QOA entirely missed**: the most prevalent SL anti-pattern (71% of npm SL regexes, Davis et al.
+  Table 4) — `/\s*\.\#\s*$/`, `/(\w+\s)+\w+/`. Would require character-set overlap analysis.
+- **Polynomial O(n²) regexes under-detected**: 74–76% of SL regexes in npm are polynomial, not
+  exponential. Star Height only captures exponential cases (~12% of the SL population).
+- **Multi-line / minified regexes**: scanner matches regex literals line-by-line; minified JS
+  with dynamically constructed patterns (string concatenation) is not detected.
+- **`RegExp` from variable**: `new RegExp(someVar)` — dynamic pattern, cannot inspect statically.
+- **All findings are heuristic**: the anti-patterns are *necessary* but not *sufficient* for
+  SL behavior. Disclose as syntactic heuristic in the paper methodology section.
+
+**Reference:** Davis, Coghlan, Servant, and Lee, "The Impact of Regular Expression Denial of
+Service (ReDoS) in Practice: An Empirical Study at the Ecosystem Scale," *ESEC/FSE 2018*.
+https://dl.acm.org/doi/10.1145/3236024.3236027
+
+Key findings used: (1) three SL anti-pattern taxonomy — Star Height, QOD, QOA (§5.1);
+(2) QOA is the most common at 71% of SL regexes in npm, Star Height only 12% (Table 4);
+(3) all anti-patterns have 90–98% FP rates statically; dynamic validation is required for
+confirmation (§4.1); (4) ~1% of unique regexes in npm are SL, affecting 3% of modules
+(13,018 modules, Table 1). **Framing for paper:** describe the scanner as "syntactic
+heuristic detection of Star Height > 1 and QOD anti-patterns (Davis et al. ESEC/FSE 2018 §5.1);
+QOA (71% of SL regexes) not detected; all findings require manual confirmation."
 
 ---
 
@@ -1000,7 +1040,7 @@ These should be disclosed in the paper's methodology section.
 | # | Attack | Issue | Severity |
 |---|--------|-------|----------|
 | 1 | Prototype Pollution | `constructor.prototype` and `__proto__` assignment patterns now detected (HIGH). Remaining gaps: `Object.defineProperty(Object.prototype,...)`, `Object.setPrototypeOf()`, and hasOwnProperty-guarded for-in loops (flagged as HIGH but are safe — disclose as known FP class) | Disclose in paper |
-| 2 | ReDoS | Scanner uses syntactic nested-quantifier matching; Davis et al. FSE 2018 use automaton-based complexity analysis. The scanner detects the *shape* of ReDoS-prone regexes, not the *complexity*. Describe as "heuristic" in the paper | Fix framing before paper |
+| 2 | ReDoS | Syntactic heuristic detection of Star Height > 1 and QOD anti-patterns (Davis et al. ESEC/FSE 2018 §5.1). QOA — the most common SL anti-pattern (71% of npm SL regexes) — is not detected; requires AST-level character-set overlap analysis. All three anti-patterns have 90–98% FP rates statically (Table 4). Framing confirmed: describe as syntactic heuristic in paper methodology. | Disclose in paper |
 | 3 | Dangerous Sinks | `setTimeout(varName, delay)` FP fixed: string literal args are CRITICAL, variable args are MEDIUM (callback-or-string ambiguity disclosed as known limitation). `setAttribute('on*', var)` added as HIGH per Lekies et al. CCS 2013 §2. Verified and approved. | Disclose in paper |
 | 4 | WASM Cryptominer | "Romano et al., IEEE S&P 2020" citation unverified — cannot locate this paper at IEEE S&P 2020. Use Konoth et al. CCS 2018 as primary reference instead | Fix citation before paper |
 | 5 | Clickjacking | Pages using only HTTP `X-Frame-Options` headers (recommended approach) are flagged as unprotected. Creates systematic false positives for header-protected pages in the archive. Must be disclosed | Disclose in paper |
