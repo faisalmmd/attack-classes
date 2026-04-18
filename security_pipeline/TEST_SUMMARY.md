@@ -77,11 +77,11 @@ by the scanners (required for test_runner assertions) but is not shown in any ou
 
 ## Attack Status
 
-25 attacks implemented, 55/55 test assertions passing. 13 attacks verified and approved for use; 12 pending further review.
+25 attacks implemented, 55/55 test assertions passing. 14 attacks verified and approved for use; 11 pending further review.
 
 ---
 
-### Verified and Approved (13)
+### Verified and Approved (14)
 
 | Attack | Category | Key patterns | Test |
 |--------|----------|-------------|------|
@@ -89,25 +89,25 @@ by the scanners (required for test_runner assertions) but is not shown in any ou
 | `xml_bomb` | XML | Entity chain depth >=3, >=5 refs in one entity | PASS 5 found |
 | `xslt_injection` | XML | `document("file://...")`, `php:function()`, `<msxsl:script>` | PASS 13 found |
 | `xpath_injection` | XML | `select="//user[$var]"`, `concat()` in XPath | PASS 4 found |
-| `jsonp_callback` | JS | `?callback=`, `dataType:"jsonp"`, `<script src="...?callback=">` | PASS 6 found |
-| `postmessage_audit` | JS | `addEventListener("message",...)` without `event.origin ===` | PASS 4 found |
-| `cryptominer_js` | JS | `CoinHive.Anonymous(...)`, known miner domains, `cryptonight` | PASS 5 found |
-| `service_worker` | JS | `serviceWorker.register()` broad scope, `importScripts()` | PASS 4 found |
-| `css_attr_exfil` | CSS | `[value^=x]{background:url(https://...)}` | PASS 23 found |
-| `css_import_chain` | CSS | Multiple `@import 'https://...'` to same external domain | PASS 11 found |
+| `prototype_pollution` | JS+HTML | `Object.prototype.x =`, `__proto__` assign, `constructor.prototype`, `_.merge()`, `$.extend(true,...)` | PASS 5+ found; real data: 7,751 findings, 40/50 domains |
+| `jsonp_callback` | JS+HTML | `?callback=`, `dataType:"jsonp"`, `<script src="...?callback=">` | PASS 6 found |
+| `postmessage_audit` | JS+HTML | `addEventListener("message",...)` without `event.origin ===` | PASS 4 found |
+| `cryptominer_js` | JS+HTML | `CoinHive.Anonymous(...)`, known miner domains, `cryptonight` | PASS 5 found |
+| `service_worker` | JS+HTML | `serviceWorker.register()` broad scope, `importScripts()` | PASS 4 found |
+| `css_attr_exfil` | CSS+HTML | `[value^=x]{background:url(https://...)}` | PASS 23 found |
+| `css_import_chain` | CSS+HTML | Multiple `@import 'https://...'` to same external domain | PASS 11 found |
 | `missing_sri` | HTML | External `<script src>` or `<link rel=stylesheet>` without `integrity=` | PASS 2 found |
 | `base_tag_hijack` | HTML | `<base href="https://external.com/">` | PASS 1 found |
 | `vulnerable_library` | JS | Version regex + CVE lookup (jQuery, Lodash, Angular, etc.) | PASS 9 found |
 
 ---
 
-### Pending Review (12)
+### Pending Review (11)
 
 These pass all test assertions but have open methodology concerns or known false positive issues that need to be addressed before use.
 
 | Attack | Category | Status | Issue |
 |--------|----------|--------|-------|
-| `prototype_pollution` | JS | Real-data run done (7,751 findings, 40/50 domains) | Verified and pushed separately; not in the 13 above |
 | `open_redirect` | JS | Tests pass | Context window (5 lines) may miss multi-line flows |
 | `high_risk_api` | JS | Tests pass | All API calls flagged regardless of consent/purpose |
 | `dangerous_sink` | JS | Tests pass | `setTimeout(varName)` is MEDIUM -- still needs FP assessment on real data |

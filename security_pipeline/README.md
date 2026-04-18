@@ -66,7 +66,7 @@ security_pipeline/
 
 ## Attacks
 
-### Verified and approved (13)
+### Verified and approved (14)
 
 Methodology reviewed against primary sources, false negatives documented,
 test assertions confirmed. Safe to use for analysis.
@@ -77,22 +77,23 @@ test assertions confirmed. Safe to use for analysis.
 | `xml_bomb` | XML | Entity chain depth >=3, >=5 refs in one entity value |
 | `xslt_injection` | XSLT | `document("file://...")`, `php:function()`, `<msxsl:script>` |
 | `xpath_injection` | XSLT | `select="//user[$var]"`, `concat()` in XPath expressions |
-| `jsonp_callback` | JS | `?callback=`, `dataType:"jsonp"`, script tag with callback param |
-| `postmessage_audit` | JS | `addEventListener("message",...)` without `event.origin ===` check |
-| `cryptominer_js` | JS | CoinHive/CryptoLoot domains, `CoinHive.Anonymous()`, `cryptonight` |
-| `service_worker` | JS | `serviceWorker.register()` with broad scope (`/`), `importScripts()` |
-| `css_attr_exfil` | CSS | `[value^=x] { background: url(https://...) }` |
-| `css_import_chain` | CSS | Multiple `@import 'https://...'` to same external domain |
+| `prototype_pollution` | JS+HTML | `Object.prototype.x =`, `__proto__` assignment, `constructor.prototype`, `_.merge()`, `$.extend(true,...)` |
+| `jsonp_callback` | JS+HTML | `?callback=`, `dataType:"jsonp"`, script tag with callback param |
+| `postmessage_audit` | JS+HTML | `addEventListener("message",...)` without `event.origin ===` check |
+| `cryptominer_js` | JS+HTML | CoinHive/CryptoLoot domains, `CoinHive.Anonymous()`, `cryptonight` |
+| `service_worker` | JS+HTML | `serviceWorker.register()` with broad scope (`/`), `importScripts()` |
+| `css_attr_exfil` | CSS+HTML | `[value^=x] { background: url(https://...) }` |
+| `css_import_chain` | CSS+HTML | Multiple `@import 'https://...'` to same external domain |
 | `missing_sri` | HTML | External `<script src>` or `<link rel=stylesheet>` without `integrity=` |
 | `base_tag_hijack` | HTML | `<base href="https://external.com/">` |
 | `vulnerable_library` | JS | Version string + CVE lookup (jQuery, Lodash, Angular, Bootstrap, etc.) |
 
-### Pending review (12)
+### Pending review (11)
 
 Implemented and test-passing but not yet approved. See `TEST_SUMMARY.md` for specific
 open issues per attack.
 
-`prototype_pollution`, `open_redirect`, `high_risk_api`, `dangerous_sink`, `redos`,
+`open_redirect`, `high_risk_api`, `dangerous_sink`, `redos`,
 `css_font_keylog`, `wasm_cryptominer`, `clickjacking`, `meta_refresh_redirect`,
 `form_action_hijack`, `dangling_markup`, `html_violation`
 
