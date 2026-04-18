@@ -66,7 +66,7 @@ security_pipeline/
 
 ## Attacks
 
-### Verified and approved (16)
+### Verified and approved (17)
 
 Methodology reviewed against primary sources, false negatives documented,
 test assertions confirmed. Safe to use for analysis.
@@ -80,6 +80,7 @@ test assertions confirmed. Safe to use for analysis.
 | `prototype_pollution` | JS+HTML | `Object.prototype.x =`, `__proto__` assignment, `constructor.prototype`, `_.merge()`, `$.extend(true,...)` |
 | `open_redirect` | JS+HTML | `location.href/replace/assign`, `window.location =`, `window.open()`, `frame.src =` with variable arg |
 | `high_risk_api` | JS+HTML | `navigator.geolocation`, `getUserMedia`, `clipboard.read`, `getBattery()`, `RTCPeerConnection`, Bluetooth/USB/Serial |
+| `dangerous_sink` | JS+HTML | `eval()`, `innerHTML =`, `document.write()`, `setTimeout(string)`, `setAttribute('on*', var)` (Lekies et al. CCS 2013) |
 | `jsonp_callback` | JS+HTML | `?callback=`, `dataType:"jsonp"`, script tag with callback param |
 | `postmessage_audit` | JS+HTML | `addEventListener("message",...)` without `event.origin ===` check |
 | `cryptominer_js` | JS+HTML | CoinHive/CryptoLoot domains, `CoinHive.Anonymous()`, `cryptonight` |
@@ -90,12 +91,12 @@ test assertions confirmed. Safe to use for analysis.
 | `base_tag_hijack` | HTML | `<base href="https://external.com/">` |
 | `vulnerable_library` | JS | Version string + CVE lookup (jQuery, Lodash, Angular, Bootstrap, etc.) |
 
-### Pending review (9)
+### Pending review (8)
 
 Implemented and test-passing but not yet approved. See `TEST_SUMMARY.md` for specific
 open issues per attack.
 
-`dangerous_sink`, `redos`,
+`redos`,
 `css_font_keylog`, `wasm_cryptominer`, `clickjacking`, `meta_refresh_redirect`,
 `form_action_hijack`, `dangling_markup`, `html_violation`
 

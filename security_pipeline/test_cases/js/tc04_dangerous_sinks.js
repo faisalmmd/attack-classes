@@ -34,3 +34,7 @@ eval("2 + 2");
 
 // TC-DS-10: NEGATIVE — textContent is safe
 element.textContent = userInput;
+
+// TC-DS-11: POSITIVE — event handler via setAttribute (Lekies et al. CCS 2013 §2)
+var userCode = getParam("handler");
+element.setAttribute('onclick', userCode);

@@ -289,6 +289,9 @@ class JavaScriptScanner:
              "MEDIUM", "Dynamic src assignment — possible script/iframe injection"),
             (r'createContextualFragment\s*\(', "MEDIUM",
              "createContextualFragment() — parses HTML string into DOM fragment"),
+            # Event handler via setAttribute — Lekies et al. CCS 2013 §2 JS-context sink
+            (r'\.setAttribute\s*\(\s*[\'"]on\w+', "HIGH",
+             "setAttribute() with event handler attribute — XSS if second arg is user-controlled"),
         ]
         for i, line in enumerate(lines, 1):
             for pat, sev, desc in sinks:

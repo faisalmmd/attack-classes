@@ -171,7 +171,10 @@ directly runs attacker code. `innerHTML = userInput` parses attacker HTML includ
 `document.write(userInput)` injects raw HTML. If user-controlled data reaches any of these,
 it's XSS or arbitrary code execution.
 
-**Scanner logic:** `eval(` and `new Function(` are CRITICAL (always dangerous regardless of input type). `setTimeout`/`setInterval` with a string or template literal first arg are CRITICAL (equivalent to eval); with a variable arg they are MEDIUM (ambiguous: could be a callback reference or a string). `document.write(`, `.innerHTML = var`, `.outerHTML = var` are HIGH. `.insertAdjacentHTML(`, `.srcdoc =`, `.createContextualFragment(` are MEDIUM.
+**Scanner logic:** Full sink taxonomy from Lekies et al. CCS 2013 §2, three context classes:
+- **CRITICAL** (JavaScript context, direct code execution): `eval()`, `new Function()`, `setTimeout`/`setInterval` with string or template literal first arg
+- **HIGH** (HTML context or event handler injection): `document.write()`, `document.writeln()`, `.innerHTML = var`, `.outerHTML = var`, `element.setAttribute('on*', var)` (event handler attribute assignment)
+- **MEDIUM** (HTML context, lower exploitability): `insertAdjacentHTML()`, `.srcdoc =`, `.src = var`, `createContextualFragment()`, `setTimeout`/`setInterval` with variable first arg (ambiguous: callback ref vs string)
 
 **Test file:** `test_cases/js/tc04_dangerous_sinks.js`
 - Line 3: `eval(userInput)` — CRITICAL
@@ -179,7 +182,8 @@ it's XSS or arbitrary code execution.
 - Line 11: `setTimeout(callback_string, 100)` — MEDIUM (variable, ambiguous)
 - Line 15: `document.write('<div>' + data + '</div>')` — HIGH
 - Line 19: `.innerHTML = serverResponse` — HIGH
-- Line 36: `element.textContent = userInput` — NEGATIVE (textContent is safe, no HTML parsing)
+- Line 33: `element.setAttribute('onclick', userCode)` — HIGH (event handler injection)
+- Line 36 (orig TC-DS-10): `element.textContent = userInput` — NEGATIVE (safe, no HTML/JS parsing)
 
 **Command:**
 ```bash
@@ -192,11 +196,11 @@ for f in s.scan('test_cases/js/tc04_dangerous_sinks.js'):
 "
 ```
 
-**Expected output:** `eval` and `new Function` lines as CRITICAL. document.write, innerHTML, outerHTML as HIGH. `setTimeout(callback_string, 100)` as MEDIUM (variable arg). insertAdjacentHTML as MEDIUM. textContent NOT flagged.
+**Expected output:** `eval` and `new Function` as CRITICAL. `document.write`, `innerHTML`, `outerHTML`, `setAttribute('onclick',...)` as HIGH. `setTimeout(callback_string,...)` and `insertAdjacentHTML` as MEDIUM. `textContent` NOT flagged.
 
-**Known false negatives:** `document.domain = var` (legacy origin relaxation) and `location.href = stringVar` are not in the dangerous-sink list (they appear in open_redirect). Template-literal concatenations like `` eval(`code ${userInput}`) `` match as CRITICAL on the `eval(` part, not on the template itself.
+**Known false negatives:** `script.textContent = var`, `script.innerText = var`, `script.text = var` — the paper explicitly names these as JS-context sinks equivalent to eval, but the scanner cannot determine statically whether the target element is a `<script>` element. Any `.textContent =` assignment would generate enormous false positives on legitimate DOM manipulation. Direct event handler property assignment (`element.onclick = varName`) is similarly not detected because distinguishing a function reference (`el.onclick = myFn`) from a string variable is not possible without type information. `document.domain = var` (legacy origin relaxation) is not in scope here (covered conceptually by open_redirect).
 
-**Reference:** Lekies et al., "25 Million Flows Later: Large-scale Detection of DOM-based XSS," *ACM CCS 2013*. https://dl.acm.org/doi/10.1145/2508859.2516723 -- Provides the definitive taxonomy of DOM XSS sinks used here: `eval`, `innerHTML`, `document.write`, `setTimeout(string)`, `location.*`. The scanner uses CRITICAL for string/template literal `setTimeout` arguments and MEDIUM for variable arguments to reduce false positives on normal callback usage like `setTimeout(myFn, 1000)`.
+**Reference:** Lekies et al., "25 Million Flows Later: Large-scale Detection of DOM-based XSS," *ACM CCS 2013*. https://dl.acm.org/doi/10.1145/2508859.2516723 — Provides the definitive three-context taxonomy of DOM XSS sinks: HTML context (`document.write`, `innerHTML`, `insertAdjacentHTML`), JavaScript context (`eval`, `Function`, `setTimeout(string)`, `script.textContent`, event handler attributes), and URL context (`img.src`, `a.href`). The scanner covers all HTML-context and detectable JavaScript-context sinks. `setTimeout`/`setInterval` with string literal args are CRITICAL (direct eval equivalent); with variable args they are MEDIUM to avoid false positives on normal callback usage like `setTimeout(myFn, 1000)`.
 
 ---
 
@@ -997,7 +1001,7 @@ These should be disclosed in the paper's methodology section.
 |---|--------|-------|----------|
 | 1 | Prototype Pollution | `constructor.prototype` and `__proto__` assignment patterns now detected (HIGH). Remaining gaps: `Object.defineProperty(Object.prototype,...)`, `Object.setPrototypeOf()`, and hasOwnProperty-guarded for-in loops (flagged as HIGH but are safe — disclose as known FP class) | Disclose in paper |
 | 2 | ReDoS | Scanner uses syntactic nested-quantifier matching; Davis et al. FSE 2018 use automaton-based complexity analysis. The scanner detects the *shape* of ReDoS-prone regexes, not the *complexity*. Describe as "heuristic" in the paper | Fix framing before paper |
-| 3 | Dangerous Sinks | `setTimeout(varName, delay)` fires on function callbacks (false positive). Only string arguments are dangerous. Pattern needs tightening | Fix before paper |
+| 3 | Dangerous Sinks | `setTimeout(varName, delay)` FP fixed: string literal args are CRITICAL, variable args are MEDIUM (callback-or-string ambiguity disclosed as known limitation). `setAttribute('on*', var)` added as HIGH per Lekies et al. CCS 2013 §2. Verified and approved. | Disclose in paper |
 | 4 | WASM Cryptominer | "Romano et al., IEEE S&P 2020" citation unverified — cannot locate this paper at IEEE S&P 2020. Use Konoth et al. CCS 2018 as primary reference instead | Fix citation before paper |
 | 5 | Clickjacking | Pages using only HTTP `X-Frame-Options` headers (recommended approach) are flagged as unprotected. Creates systematic false positives for header-protected pages in the archive. Must be disclosed | Disclose in paper |
 | 6 | CSS Attacks (10–12) | No peer-reviewed paper citation available; sources are PortSwigger research blog and GitHub PoC. Attacks are technically correct and widely accepted in practitioner literature | Disclose in paper |
