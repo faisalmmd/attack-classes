@@ -131,13 +131,13 @@ Lines with a nearby user-controlled source show as HIGH; others as MEDIUM.
 these — or if the legitimate script is compromised — user location, audio, or clipboard
 contents can be exfiltrated silently.
 
-**Scanner logic:** Pattern matches for `navigator.geolocation`, `navigator.mediaDevices.getUserMedia`,
-`RTCPeerConnection` (IP leak), `navigator.clipboard.read/readText`, Bluetooth, USB, Serial,
-PaymentRequest, Credentials API.
+**Scanner logic:** Pattern matches for 11 APIs across two severity tiers (sourced from Snyder et al. CCS 2017 §5.2.1 and §8.1):
+- HIGH: `navigator.geolocation`, `navigator.mediaDevices.getUserMedia`, `navigator.clipboard.read/readText`
+- MEDIUM: `RTCPeerConnection` (IP leak), `navigator.getBattery()` (device fingerprinting), `navigator.bluetooth`, `navigator.usb`, `navigator.serial`, `navigator.credentials`, `PaymentRequest`
 
 **Test file:** `test_cases/js/tc03_high_risk_api.js`  
 Key lines: `navigator.geolocation.getCurrentPosition(cb)`, `navigator.mediaDevices.getUserMedia(...)`,
-`navigator.clipboard.readText()`, `new RTCPeerConnection(config)`, `navigator.bluetooth.requestDevice()`
+`navigator.clipboard.readText()`, `new RTCPeerConnection(config)`, `navigator.getBattery()`, `navigator.bluetooth.requestDevice()`
 
 **Command:**
 ```bash
@@ -150,7 +150,7 @@ for f in s.scan('test_cases/js/tc03_high_risk_api.js'):
 ```
 
 **Expected output:** geolocation, getUserMedia, clipboard.read/readText as HIGH. WebRTC,
-Bluetooth, USB, Credentials, PaymentRequest as MEDIUM. 7+ findings total.
+Battery, Bluetooth, USB, Credentials, PaymentRequest as MEDIUM. 8+ findings total.
 
 **Implementation choice: archive-sec-analysis (`high-risk-api-detector/`)**
 - Also checks HTTP response headers for `Permissions-Policy` / `Feature-Policy` directives
@@ -159,7 +159,9 @@ Bluetooth, USB, Credentials, PaymentRequest as MEDIUM. 7+ findings total.
 - Use security_pipeline for JS code detection in the pipeline; use archive-sec-analysis for
   header-based policy analysis on the archived JSON headers
 
-**Reference:** Snyder et al., "Most Websites Don't Need to Vibrate: A Cost-Benefit Approach to Improving Browser Security," *ACM CCS 2017*. https://dl.acm.org/doi/10.1145/3133956.3134038 — Empirically measures which browser APIs are used on real sites; finds that geolocation, getUserMedia, WebRTC, and payment APIs have very low legitimate usage rates, justifying treating their presence as an auditable risk signal. The scanner's API list is drawn from the high-risk category in this paper's Table 2.
+**Known false negatives:** High Resolution Timing (`performance.now()`, `PerformanceObserver`) is identified by the paper as the most-cited risky standard (7 academic papers on timing attacks) but is not detected — it appears in virtually every modern JS library for legitimate performance measurement and would produce overwhelming false positives in archived files. Canvas fingerprinting (`canvas.toDataURL()`, `getImageData()`) is similarly omitted for the same reason. All API calls are flagged regardless of whether consent was obtained — an inherent limitation of static analysis; the paper's own finding that these APIs have very low legitimate usage rates on the open web is the justification for treating any presence as an auditable signal.
+
+**Reference:** Snyder et al., "Most Websites Don't Need to Vibrate: A Cost-Benefit Approach to Improving Browser Security," *ACM CCS 2017*. https://dl.acm.org/doi/10.1145/3133956.3134038 — Applies a cost-benefit methodology to 74 Web API standards; §5.2.1 catalogues 20 academic papers leveraging 23 standards for privacy/security attacks, and §8.1 identifies high-cost, low-benefit candidates for disabling including geolocation, getUserMedia, WebRTC, Battery API, Canvas, and High Resolution Timing. The scanner's API list is drawn from the high-risk standards identified in these sections. Battery API was subsequently removed from Firefox by Mozilla, confirming the risk assessment.
 
 ---
 

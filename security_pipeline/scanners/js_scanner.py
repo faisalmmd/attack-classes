@@ -248,6 +248,7 @@ class JavaScriptScanner:
             (r'new\s+RTCPeerConnection', "MEDIUM", "WebRTC — can leak local/private IP addresses"),
             (r'navigator\s*\.\s*clipboard\s*\.\s*read', "HIGH", "Clipboard read — access to copied sensitive data"),
             (r'navigator\s*\.\s*clipboard\s*\.\s*readText', "HIGH", "Clipboard readText — access to copied text"),
+            (r'navigator\s*\.\s*getBattery\s*\(', "MEDIUM", "Battery API — device fingerprinting via charge level/time (removed from Firefox due to privacy risk)"),
             (r'navigator\s*\.\s*credentials', "MEDIUM", "Credential Management API"),
             (r'new\s+PaymentRequest', "MEDIUM", "Payment Request API — financial data access"),
             (r'navigator\s*\.\s*bluetooth', "MEDIUM", "Web Bluetooth API — device access"),

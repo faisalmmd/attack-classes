@@ -77,11 +77,11 @@ by the scanners (required for test_runner assertions) but is not shown in any ou
 
 ## Attack Status
 
-25 attacks implemented, 55/55 test assertions passing. 14 attacks verified and approved for use; 11 pending further review.
+25 attacks implemented, 55/55 test assertions passing. 16 attacks verified and approved for use; 9 pending further review.
 
 ---
 
-### Verified and Approved (14)
+### Verified and Approved (16)
 
 | Attack | Category | Key patterns | Test |
 |--------|----------|-------------|------|
@@ -90,6 +90,8 @@ by the scanners (required for test_runner assertions) but is not shown in any ou
 | `xslt_injection` | XML | `document("file://...")`, `php:function()`, `<msxsl:script>` | PASS 13 found |
 | `xpath_injection` | XML | `select="//user[$var]"`, `concat()` in XPath | PASS 4 found |
 | `prototype_pollution` | JS+HTML | `Object.prototype.x =`, `__proto__` assign, `constructor.prototype`, `_.merge()`, `$.extend(true,...)` | PASS 5+ found; real data: 7,751 findings, 40/50 domains |
+| `open_redirect` | JS+HTML | `location.href/replace/assign`, `window.location =`, `window.open()`, `frame.src =` (Khodayari et al. NDSS 2025) | PASS 4 found |
+| `high_risk_api` | JS+HTML | `navigator.geolocation`, `getUserMedia`, `clipboard.read`, `getBattery()`, `RTCPeerConnection`, Bluetooth/USB/Serial (Snyder et al. CCS 2017) | PASS 2 HIGH, 3+ MEDIUM |
 | `jsonp_callback` | JS+HTML | `?callback=`, `dataType:"jsonp"`, `<script src="...?callback=">` | PASS 6 found |
 | `postmessage_audit` | JS+HTML | `addEventListener("message",...)` without `event.origin ===` | PASS 4 found |
 | `cryptominer_js` | JS+HTML | `CoinHive.Anonymous(...)`, known miner domains, `cryptonight` | PASS 5 found |
@@ -102,14 +104,11 @@ by the scanners (required for test_runner assertions) but is not shown in any ou
 
 ---
 
-### Pending Review (11)
+### Pending Review (9)
 
 These pass all test assertions but have open methodology concerns or known false positive issues that need to be addressed before use.
 
 | Attack | Category | Status | Issue |
-|--------|----------|--------|-------|
-| `open_redirect` | JS | Tests pass | Context window (5 lines) may miss multi-line flows |
-| `high_risk_api` | JS | Tests pass | All API calls flagged regardless of consent/purpose |
 | `dangerous_sink` | JS | Tests pass | `setTimeout(varName)` is MEDIUM -- still needs FP assessment on real data |
 | `redos` | JS | Tests pass | Syntactic heuristic only, not automaton-based -- over-flags and under-flags |
 | `css_font_keylog` | CSS | Tests pass | No peer-reviewed citation; PoC-only source |
@@ -188,6 +187,7 @@ and one column per attack type, with 1/0 indicating detection.
 
 | Date | Change | File |
 |------|--------|------|
+| 2026-04-19 | High-risk API: add `navigator.getBattery()` as MEDIUM (Snyder et al. CCS 2017 §8.1); fix incorrect "Table 2" citation in VERIFICATION_GUIDE | `scanners/js_scanner.py`, `verification/VERIFICATION_GUIDE.md` |
 | 2026-04-19 | Open redirect: add `window.location = var` and `iframe/frame.src = var` sinks (Khodayari et al. NDSS 2025 Table II); replace Son & Shmatikov NDSS 2013 reference | `scanners/js_scanner.py`, `verification/VERIFICATION_GUIDE.md` |
 | 2026-04-16 | PP scanner: add `constructor.prototype`, DOTALL for-in, JSON.parse-merge chain, wayback preamble stripping | `scanners/js_scanner.py` |
 | 2026-04-16 | PP scanner: add `__proto__` assignment pattern as HIGH (was only MEDIUM before) | `scanners/js_scanner.py` |
