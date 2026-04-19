@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head><title>DOM Clobbering Test Cases</title></head>
+<body>
+
+<!-- TC-DC-H-01: POSITIVE HTML_SINK CRITICAL — <iframe name="scripts"> shadows
+     document.scripts. Liu et al. USENIX Security 2025 motivating example:
+     Google API client library reads document.scripts to locate loaded scripts;
+     <iframe name="scripts"> makes document.scripts an HTMLCollection of iframes
+     instead, corrupting the lookup and enabling XSS. -->
+<iframe name="scripts" src="https://apis.google.com/js/api.js"></iframe>
+
+<!-- TC-DC-H-02: POSITIVE HTML_SINK HIGH — <form name="config"> shadows
+     window.config. Any JS that reads window.config.csrfToken will receive
+     an HTMLFormElement (truthy, all property reads return undefined). -->
+<form name="config" action="/submit">
+  <input type="text" name="q">
+</form>
+
+<!-- TC-DC-H-03: POSITIVE HTML_SINK HIGH — <input name="auth"> shadows
+     window.auth and document.auth in browsers. -->
+<input name="auth" type="hidden" value="token123">
+
+<!-- TC-DC-H-04: POSITIVE HTML_SINK HIGH — <a name="location"> shadows
+     window.location. Older browsers allow a-with-name to shadow location;
+     security checks on window.location.href may receive DOM element. -->
+<a name="location" href="https://example.com">link</a>
+
+<!-- TC-DC-H-05: POSITIVE Two-level clobbering — <form id="x"><input name="y">
+     enables x.y access in JS, beyond simple window.X shadowing.
+     Lekies et al. USENIX Security 2021 §3. -->
+<form id="userState">
+  <input name="isAdmin" type="hidden" value="false">
+</form>
+
+<!-- TC-DC-H-06: POSITIVE CHAIN — named element + inline JS accessing same name.
+     The <form name="config"> above combined with window.config access below
+     creates a DOM clobbering chain already present in the page. -->
+<script>
+  // Reads window.config — already clobbered by <form name="config"> above
+  var csrfToken = window.config && window.config.csrfToken;
+  if (!csrfToken) {
+    csrfToken = document.querySelector('meta[name="csrf"]').content;
+  }
+</script>
+
+<!-- TC-DC-H-07: NEGATIVE — <form name="searchBox"> is not a sensitive name;
+     no security-relevant clobbering risk. -->
+<form name="searchBox" action="/search">
+  <input type="text" name="q">
+</form>
+
+<!-- TC-DC-H-08: NEGATIVE — <div id="config"> does not create namespace
+     promotion (div is not a clobberable element). -->
+<div id="config">app configuration placeholder</div>
+
+<!-- TC-DC-H-09: NEGATIVE — <form name="contactForm"> not a sensitive name -->
+<form name="contactForm" action="/contact">
+  <input type="email" name="email">
+</form>
+
+</body>
+</html>

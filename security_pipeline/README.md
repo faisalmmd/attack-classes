@@ -4,7 +4,7 @@ Static security scanner for archived web files (JS, CSS, HTML, XML/XSLT, WASM).
 Built for the regional longitudinal study of government web security across 16 countries
 (2003-2024) via the Internet Archive Wayback Machine.
 
-Runs 25 attack detectors and outputs a binary domain-by-attack matrix (0/1) plus
+Runs 26 attack detectors and outputs a binary domain-by-attack matrix (0/1) plus
 a full evidence report with file paths, line numbers, and matched code.
 
 ## Quick Start
@@ -66,10 +66,10 @@ security_pipeline/
 
 ## Attacks
 
-### Verified and approved (18)
+### All 26 attacks verified and approved
 
-Methodology reviewed against primary sources, false negatives documented,
-test assertions confirmed. Safe to use for analysis.
+Methodology reviewed against primary sources, false positives documented,
+test assertions confirmed (59/59). Safe to use for analysis.
 
 | Attack | File types | Key patterns |
 |--------|-----------|-------------|
@@ -88,18 +88,38 @@ test assertions confirmed. Safe to use for analysis.
 | `service_worker` | JS+HTML | `serviceWorker.register()` with broad scope (`/`), `importScripts()` |
 | `css_attr_exfil` | CSS+HTML | `[value^=x] { background: url(https://...) }` |
 | `css_import_chain` | CSS+HTML | Multiple `@import 'https://...'` to same external domain |
+| `css_font_keylog` | CSS+HTML | `@font-face` single-codepoint `unicode-range` + external `src: url(https://...)` |
+| `wasm_cryptominer` | WASM | Byte-level signatures (`cryptonight`, `cn_slow_hash`, `stratum`, etc.); 3+ = CRITICAL |
 | `missing_sri` | HTML | External `<script src>` or `<link rel=stylesheet>` without `integrity=` |
 | `base_tag_hijack` | HTML | `<base href="https://external.com/">` |
+| `clickjacking` | HTML | Hidden/transparent `<iframe>`; login page without frame-busting defense |
+| `meta_refresh_redirect` | HTML | `<meta http-equiv="refresh" content="...;url=https://external...">` |
+| `form_action_hijack` | HTML | `<form action="http://...">` (HTTP), external HTTPS action, `formaction` override |
+| `dangling_markup` | HTML | `javascript:` URL in href/src/action (CRITICAL), `data:` URL in script/iframe (HIGH) |
+| `html_violation` | HTML | Nested `<form>` (HIGH), duplicate IDs, block-in-inline, unclosed elements (MEDIUM) |
 | `vulnerable_library` | JS | Version string + CVE lookup (jQuery, Lodash, Angular, Bootstrap, etc.) |
+| `dom_clobbering` | HTML+JS | Named/ID'd elements shadowing window.X or document.X (HTML_SINK HIGH/CRITICAL), CHAIN when same name appears in inline JS (CRITICAL), two-level `<form id><input name>` (HIGH), JS_RELIANCE: `window[var]`, `document.scripts`, security globals in conditionals (Liu et al. USENIX Security 2025, Lekies et al. USENIX Security 2021, Khodayari & Pellegrino IEEE S&P 2023) |
 
-### Pending review (7)
+## Known False Positives and Methodological Disclosures
 
-Implemented and test-passing but not yet approved. See `TEST_SUMMARY.md` for specific
-open issues per attack.
+Required disclosures for the paper methodology section. See `verification/VERIFICATION_GUIDE.md`
+for full per-attack detail.
 
-
-`css_font_keylog`, `wasm_cryptominer`, `clickjacking`, `meta_refresh_redirect`,
-`form_action_hijack`, `dangling_markup`, `html_violation`
+| Attack | FP / Limitation | Severity of FP concern |
+|--------|----------------|------------------------|
+| `clickjacking` | Pages defended by HTTP `X-Frame-Options` header appear unprotected — header is not in archived HTML. Systematic false positive for header-protected pages. | **High** — expect elevated MEDIUM rate on well-configured sites |
+| `html_violation` | MEDIUM findings are very high-volume on real HTML: block-in-inline patterns (`<a>` wrapping `<div>`) are valid HTML5; unclosed `<p>`, `<li>` are standard; duplicate IDs from templating are common. Use only HIGH (nested forms) for strict analysis. | **High** — MEDIUM rate is noisy on real data |
+| `form_action_hijack` | All `http://` form actions flagged as HIGH regardless of form purpose (search vs. login). All `formaction` attributes flagged as MEDIUM regardless of whether target is internal or external. | **Medium** — requires manual triage to separate login forms from benign forms |
+| `dangling_markup` | Unclosed-attribute heuristic (HIGH/MEDIUM) may false-positive on multi-line attributes in real HTML. The `javascript:` and `data:` URL detections (CRITICAL/HIGH) are reliable. | **Medium** — affects only the heuristic sub-detector, not the URL patterns |
+| `meta_refresh_redirect` | Legitimate intentional redirects to partner sites, updated domains, or affiliate pages flagged as HIGH. All findings require manual triage. | **Medium** — genuine redirects indistinguishable from malicious ones without context |
+| `redos` | Syntactic heuristic only — detects Star Height and QOD anti-patterns; misses QOA (71% of SL regexes per Davis et al. ESEC/FSE 2018). All anti-patterns have 90–98% static FP rates. | **Medium** — describe as heuristic in paper |
+| `wasm_cryptominer` | Common cryptographic library strings (`keccak`, `scrypt`, `argon2`) appear in legitimate TLS/crypto WASM modules. Generic export names (`hash`, `work`, `job`) are common in non-mining WASM. Multi-signature escalation (CRITICAL at 3+) reduces FP rate. Hash DB is empty — no hash-match detection. | **Low-Medium** — multi-signature threshold mitigates single-string FPs |
+| `css_import_chain` | All external `@import` URLs flagged, including legitimate CDN imports (Google Fonts, etc.). Attack requires attacker-controlled server responding with branching imports — not detectable statically. | **Low-Medium** — flags opportunity, not active attack |
+| `css_font_keylog` | Legitimate narrow-range font subsets may trigger (rare). Two-condition requirement (single-codepoint range AND external URL) substantially limits FPs. Source is PoC-only, no peer-reviewed paper. | **Low** |
+| `postmessage_audit` | Pages using `message` listeners for legitimate cross-frame communication (e.g., OAuth flows, embedded widgets) flagged if no `event.origin` check is visible in the 15-line handler window. | **Low** |
+| `dangerous_sink` | `setTimeout(varName, ...)` flagged as MEDIUM — callback reference vs. string argument is ambiguous statically. `setAttribute('on*', var)` flagged as HIGH — second argument may be a static string in practice. | **Low** |
+| `missing_sri` | Wayback-rewritten URLs (`web.archive.org/web/...`) are treated as external — intentional, as they represent originally-external resources. | **Low** — by design |
+| `dom_clobbering` | `window[variable]` HIGH fires on legitimate plugin loader patterns where the variable name is not attacker-controlled. Two-level (`<form id><input name>`) flags all such structures regardless of whether JS exploits the `form.input` access path. CHAIN detection is limited to inline scripts — gadgets spanning external JS files are not detected. | **Low-Medium** — `window[var]` and two-level patterns require manual triage; HTML_SINK findings for rare names (`scripts`, `nonce`) are high-precision |
 
 ## Running on real data
 

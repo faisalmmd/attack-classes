@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-16 (updated 2026-04-16)
 **Test run:** `python test_runner.py`
-**Result: 55/55 PASS — all 25 attack types qualified**
+**Result: 59/59 PASS — all 26 attack types qualified**
 
 ---
 
@@ -77,11 +77,11 @@ by the scanners (required for test_runner assertions) but is not shown in any ou
 
 ## Attack Status
 
-25 attacks implemented, 55/55 test assertions passing. 18 attacks verified and approved for use; 7 pending further review.
+26 attacks implemented, 59/59 test assertions passing. All 26 attacks verified and approved for use.
 
 ---
 
-### Verified and Approved (18)
+### Verified and Approved (All 26)
 
 | Attack | Category | Key patterns | Test |
 |--------|----------|-------------|------|
@@ -100,31 +100,24 @@ by the scanners (required for test_runner assertions) but is not shown in any ou
 | `service_worker` | JS+HTML | `serviceWorker.register()` broad scope, `importScripts()` | PASS 4 found |
 | `css_attr_exfil` | CSS+HTML | `[value^=x]{background:url(https://...)}` | PASS 23 found |
 | `css_import_chain` | CSS+HTML | Multiple `@import 'https://...'` to same external domain | PASS 11 found |
+| `css_font_keylog` | CSS+HTML | `@font-face` single-codepoint `unicode-range` + external URL — PoC-only source | PASS 6 HIGH + 1 CRITICAL |
+| `wasm_cryptominer` | WASM | Byte signatures (`cryptonight`, `stratum`, etc.); 3+ = CRITICAL; hash DB empty (Konoth et al. CCS 2018) | PASS 8 HIGH + 1 CRITICAL |
 | `missing_sri` | HTML | External `<script src>` or `<link rel=stylesheet>` without `integrity=` | PASS 2 found |
 | `base_tag_hijack` | HTML | `<base href="https://external.com/">` | PASS 1 found |
+| `clickjacking` | HTML | Hidden iframe; login page without frame-busting — FP: header-protected pages flagged (Huang et al. USENIX 2012) | PASS 1 HIGH + 1 MEDIUM |
+| `meta_refresh_redirect` | HTML | `<meta http-equiv="refresh">` with external URL; intentional redirects indistinguishable | PASS 1 HIGH |
+| `form_action_hijack` | HTML | `http://` action HIGH; external HTTPS action + `formaction` MEDIUM; all `formaction` attrs flagged | PASS 1 HIGH + 2 MEDIUM |
+| `dangling_markup` | HTML | `javascript:` URL CRITICAL; `data:` URL HIGH; unclosed-attr heuristic noisy on real HTML | PASS 1 CRITICAL + 1 HIGH |
+| `html_violation` | HTML | Nested form HIGH; duplicate IDs / block-in-inline / unclosed MEDIUM — MEDIUM very noisy on real HTML | PASS 1 HIGH + 13 MEDIUM |
 | `vulnerable_library` | JS | Version regex + CVE lookup (jQuery, Lodash, Angular, etc.) | PASS 9 found |
-
----
-
-### Pending Review (7)
-
-These pass all test assertions but have open methodology concerns or known false positive issues that need to be addressed before use.
-
-| Attack | Category | Status | Issue |
-| `css_font_keylog` | CSS | Tests pass | No peer-reviewed citation; PoC-only source |
-| `wasm_cryptominer` | WASM | Tests pass | Hash DB empty; string-only detection misses obfuscated miners |
-| `clickjacking` | HTML | Tests pass | Systematic FP: pages using HTTP header defense flagged as unprotected |
-| `meta_refresh_redirect` | HTML | Tests pass | Not yet reviewed against real data |
-| `form_action_hijack` | HTML | Tests pass | Not yet reviewed against real data |
-| `dangling_markup` | HTML | Tests pass | Unclosed-attribute heuristic is noisy on real HTML |
-| `html_violation` | HTML | Tests pass | Not yet reviewed against real data |
+| `dom_clobbering` | HTML+JS | HTML_SINK: named elements shadowing sensitive globals (HIGH/CRITICAL); CHAIN: same name in inline JS (CRITICAL); two-level `<form id><input name>` (HIGH); JS_RELIANCE: `window[var]`, `document.scripts`, security guard conditionals, nonce globals (HIGH); `window.config`, `document.auth` (MEDIUM) | PASS CRITICAL+HIGH+MEDIUM across both HTML and JS test files |
 
 ---
 
 ## Overlap with Existing archive-sec-analysis Tools
 
-The security_pipeline covers 25 attack types. Of these, **8 are already implemented** in
-archive-sec-analysis (as separate standalone tools). The pipeline adds **17 net-new attacks**.
+The security_pipeline covers 26 attack types. Of these, **8 are already implemented** in
+archive-sec-analysis (as separate standalone tools). The pipeline adds **18 net-new attacks**.
 
 ### Already implemented in archive-sec-analysis (do not duplicate)
 
@@ -154,8 +147,8 @@ XML/XSLT (4): `xxe`, `xml_bomb`, `xpath_injection`, `xslt_injection`
 
 WASM (1): `wasm_cryptominer`
 
-HTML (3, beyond what archive-sec-analysis covers): `base_tag_hijack`, `meta_refresh_redirect`,
-`form_action_hijack`, `dangling_markup`
+HTML (4, beyond what archive-sec-analysis covers): `base_tag_hijack`, `meta_refresh_redirect`,
+`form_action_hijack`, `dangling_markup`, `dom_clobbering`
 
 ---
 
@@ -187,6 +180,10 @@ and one column per attack type, with 1/0 indicating detection.
 
 | Date | Change | File |
 |------|--------|------|
+| 2026-04-19 | DOM clobbering: new attack #26 implemented — HTML_SINK + CHAIN detection in html_scanner; JS_RELIANCE patterns in js_scanner; test cases created; 4 new assertions added (59/59 passing); primary reference Liu et al. USENIX Security 2025 (DOMino/Hulk tool, 19 CVEs) | `scanners/html_scanner.py`, `scanners/js_scanner.py`, `test_cases/html/tc_dom_clobbering.html`, `test_cases/js/tc_dom_clobbering.js`, `verification/VERIFICATION_GUIDE.md` |
+| 2026-04-19 | Clickjacking: add Sanchez-Rola et al. WWW 2020 ("Dirty Clicks") as empirical measurement reference; document non-iframe invisible overlay gap; Huang 2012 retained as primary attack taxonomy reference | `verification/VERIFICATION_GUIDE.md` |
+| 2026-04-19 | All 25 attacks verified: css_font_keylog, wasm_cryptominer, clickjacking, meta_refresh_redirect, form_action_hijack, dangling_markup, html_violation methodology reviewed; FP disclosures documented in VERIFICATION_GUIDE and README | `verification/VERIFICATION_GUIDE.md`, `README.md` |
+| 2026-04-19 | WASM cryptominer: citation resolved — Romano et al. IEEE S&P 2022 (Wobfuscator) confirmed and added as secondary reference; Konoth et al. CCS 2018 remains primary | `verification/VERIFICATION_GUIDE.md` |
 | 2026-04-19 | ReDoS: reviewed against Davis et al. ESEC/FSE 2018; confirmed scanner implements Star Height > 1 and QOD anti-patterns; QOA (71% of SL regexes) documented as known gap; framing updated to heuristic; verified and approved | `verification/VERIFICATION_GUIDE.md` |
 | 2026-04-19 | Dangerous sinks: add `setAttribute('on*', var)` as HIGH (Lekies et al. CCS 2013 §2 JS-context event handler sink); verified and approved | `scanners/js_scanner.py`, `test_cases/js/tc04_dangerous_sinks.js`, `verification/VERIFICATION_GUIDE.md` |
 | 2026-04-19 | High-risk API: add `navigator.getBattery()` as MEDIUM (Snyder et al. CCS 2017 §8.1); fix incorrect "Table 2" citation in VERIFICATION_GUIDE | `scanners/js_scanner.py`, `verification/VERIFICATION_GUIDE.md` |

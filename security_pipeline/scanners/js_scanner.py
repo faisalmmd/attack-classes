@@ -1,7 +1,8 @@
 """
 JavaScript Security Scanner
 Tests: prototype pollution, open redirect, high-risk APIs, dangerous sinks,
-       JSONP callback, ReDoS, service worker, cryptominer, postMessage
+       JSONP callback, ReDoS, service worker, cryptominer, postMessage,
+       DOM clobbering (JS_RELIANCE patterns)
 """
 
 import re
@@ -45,6 +46,7 @@ class JavaScriptScanner:
         findings.extend(self._test_service_worker(file_path, lines))
         findings.extend(self._test_cryptominer(file_path, lines, content))
         findings.extend(self._test_postmessage(file_path, lines, content))
+        findings.extend(self._test_dom_clobbering(file_path, lines))
 
         return findings
 
@@ -502,5 +504,146 @@ class JavaScriptScanner:
                     "postmessage_audit", "MEDIUM", fp, i, line.strip()[:200],
                     "postMessage sent with wildcard targetOrigin '*' — any page can receive it"
                 ))
+
+        return findings
+
+    # ------------------------------------------------------------------ #
+    # TEST 10: DOM Clobbering (JS_RELIANCE patterns)
+    # Sources:
+    #   Liu et al., "The DOMino Effect: Detecting and Exploiting DOM Clobbering
+    #   Gadgets via Concolic Execution with Symbolic DOM,"
+    #   USENIX Security 2025. (Hulk tool; 497 exploitable gadgets on Tranco
+    #   Top 5,000; 19 CVEs; zero-days in Google API client, Webpack, Canvas LMS)
+    #
+    #   Lekies, Jonker & Johns, "DOM Clobbering Strikes Back,"
+    #   USENIX Security 2021.
+    #
+    #   Khodayari & Pellegrino, "It's (DOM) Clobbering Time: Attack Techniques,
+    #   Prevalence, and Defenses," IEEE S&P 2023.
+    # ------------------------------------------------------------------ #
+
+    def _test_dom_clobbering(self, fp: str, lines: list) -> List[Finding]:
+        """
+        Detect JS patterns susceptible to DOM clobbering (JS_RELIANCE signals).
+        Named HTML elements (form, input, img, a, object, embed, iframe) with
+        security-sensitive name/id attributes can shadow window.X or document.X
+        properties, supplying DOM nodes where application code expects security
+        state variables.
+
+        Pattern coverage:
+          HIGH   - window[variable] dynamic access; document.scripts/forms/etc
+                   collection shadowing (Liu et al. 2025 motivating example);
+                   security global in conditional; CSP nonce via global
+          MEDIUM - window.config/settings/app direct property access;
+                   document.X named property access for security names
+          LOW    - bare security variable in conditional without visible decl
+        """
+        findings = []
+        seen = set()
+
+        def add(severity, ln, line_text, desc, pat_id):
+            key = (pat_id, ln)
+            if key not in seen:
+                seen.add(key)
+                findings.append(Finding(
+                    "dom_clobbering", severity, fp,
+                    ln, line_text.strip()[:200], desc
+                ))
+
+        for i, line in enumerate(lines, 1):
+
+            # ── HIGH: dynamic window[variable] access ───────────────────
+            if re.search(r'\bwindow\s*\[\s*\w+\s*\]', line):
+                add("HIGH", i, line,
+                    "Dynamic window[variable] access — if the variable name is "
+                    "predictable, a named HTML element can supply an unexpected DOM "
+                    "node where a JS value is expected "
+                    "(Liu et al. USENIX Security 2025, Lekies et al. USENIX Security 2021)",
+                    "window_bracket")
+
+            # ── HIGH: document collection properties that can be shadowed ──
+            # Liu et al. 2025 §2.1: document.scripts clobbered by
+            # <iframe name="scripts"> — motivating example leading to XSS
+            doc_col = re.search(
+                r'\bdocument\s*\.\s*(scripts|forms|images|links|anchors)\b', line
+            )
+            if doc_col:
+                prop = doc_col.group(1)
+                add("HIGH", i, line,
+                    f"document.{prop} access — can be shadowed by "
+                    f"<iframe name=\"{prop}\"> injected by an attacker, replacing the "
+                    f"real collection with an attacker-controlled DOM node "
+                    f"(Liu et al. USENIX Security 2025 §2.1 motivating example)",
+                    f"doc_col_{prop}")
+
+            # ── HIGH: security-relevant global in conditional ────────────
+            sec_check = re.search(
+                r'\bif\s*\(\s*(?:typeof\s+)?(?:window\s*\.\s*)?'
+                r'(isAdmin|isLoggedIn|isAuthenticated|admin|role|permissions|auth|token|csrf|nonce)\s*'
+                r'[)=!&|]',
+                line
+            )
+            if sec_check:
+                name = sec_check.group(1)
+                add("HIGH", i, line,
+                    f"Security guard on `{name}` — DOM elements are truthy; if an "
+                    f"attacker injects <form name=\"{name}\">, this check always passes "
+                    f"regardless of actual application authorization state "
+                    f"(Khodayari & Pellegrino IEEE S&P 2023)",
+                    f"sec_guard_{name}")
+
+            # ── HIGH: CSP nonce read from global ────────────────────────
+            if re.search(
+                r'\b(?:window|document)\s*\.\s*(?:cspNonce|__nonce__|nonce)\b', line
+            ):
+                add("HIGH", i, line,
+                    "CSP nonce read from global variable — DOM clobbering can forge "
+                    "the nonce value used by dynamically-loaded scripts, bypassing "
+                    "CSP even when the header is correctly configured "
+                    "(Khodayari & Pellegrino IEEE S&P 2023 §4)",
+                    "nonce_global")
+
+            # ── MEDIUM: window.config/settings/app direct access ────────
+            win_config = re.search(
+                r'\bwindow\s*\.\s*(config|settings|options|globals|env|state|app|data|userData)\b',
+                line
+            )
+            if win_config:
+                prop = win_config.group(1)
+                add("MEDIUM", i, line,
+                    f"window.{prop} access — a <form name=\"{prop}\"> element makes "
+                    f"this an HTMLFormElement; property lookups like "
+                    f"window.{prop}.csrfToken silently return undefined "
+                    f"(Lekies et al. USENIX Security 2021)",
+                    f"win_config_{prop}")
+
+            # ── MEDIUM: document.X named property for security names ─────
+            doc_named = re.search(
+                r'\bdocument\s*\.\s*(config|settings|data|auth|user|options|params|state|app|nonce)\b',
+                line
+            )
+            if doc_named:
+                prop = doc_named.group(1)
+                add("MEDIUM", i, line,
+                    f"document.{prop} named property access — named form elements and "
+                    f"anchors are directly accessible as document.elementName; "
+                    f"attacker-injected HTML can replace this with a DOM node "
+                    f"(Lekies et al. USENIX Security 2021)",
+                    f"doc_named_{prop}")
+
+            # ── LOW: bare security variable in conditional ───────────────
+            bare_sec = re.search(
+                r'(?<![.\w\'"])(isAdmin|isLoggedIn|isAuthenticated|userRole|csrfToken)\s*'
+                r'(?:[=!]=|&&|\|\||\?)',
+                line
+            )
+            if bare_sec:
+                name = bare_sec.group(1)
+                add("LOW", i, line,
+                    f"Bare `{name}` in conditional without visible declaration — "
+                    f"if undefined at runtime and a matching named element exists, "
+                    f"the browser may supply a DOM element (truthy) instead of false "
+                    f"(Lekies et al. USENIX Security 2021)",
+                    f"bare_sec_{name}")
 
         return findings

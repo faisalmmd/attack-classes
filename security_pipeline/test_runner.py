@@ -205,6 +205,22 @@ expect("test_cases/js/tc_retire_lodash.js", "vulnerable_library", "HIGH", 3,
 expect("test_cases/js/tc_retire_clean.js", "vulnerable_library", "CRITICAL", 0,
        "TC-RET-03: Clean JS should have ZERO vulnerable library findings")
 
+# --- JS: DOM Clobbering (JS_RELIANCE) ---
+expect("test_cases/js/tc_dom_clobbering.js", "dom_clobbering", "HIGH", 3,
+       "TC-DC-J-01..03,06: Should find 3+ HIGH JS_RELIANCE patterns "
+       "(window[var], document.scripts, security guard, nonce global)")
+expect("test_cases/js/tc_dom_clobbering.js", "dom_clobbering", "MEDIUM", 2,
+       "TC-DC-J-04..05: Should find 2+ MEDIUM patterns "
+       "(window.config, document.auth named access)")
+
+# --- HTML: DOM Clobbering (HTML_SINK + CHAIN) ---
+expect("test_cases/html/tc_dom_clobbering.html", "dom_clobbering", "CRITICAL", 2,
+       "TC-DC-H-01,06: Should find CRITICAL findings "
+       "(<iframe name=scripts> + CHAIN from inline JS accessing clobbered name)")
+expect("test_cases/html/tc_dom_clobbering.html", "dom_clobbering", "HIGH", 3,
+       "TC-DC-H-02..05: Should find 3+ HIGH findings "
+       "(<form name=config>, <input name=auth>, <a name=location>, two-level form)")
+
 
 # ====================================================================== #
 # WASM TEST BINARY GENERATOR

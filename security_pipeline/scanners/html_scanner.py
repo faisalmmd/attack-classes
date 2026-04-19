@@ -245,6 +245,7 @@ class HTMLScanner:
         findings.extend(self._test_meta_refresh(file_path, lines))
         findings.extend(self._test_form_action(file_path, lines, content))
         findings.extend(self._test_dangling_markup(file_path, lines, content))
+        findings.extend(self._test_dom_clobbering(file_path, lines, content))
 
         # Extract and scan inline <script> blocks
         findings.extend(self._scan_inline_scripts(file_path, content))
@@ -649,6 +650,7 @@ class HTMLScanner:
             raw_findings.extend(js_scanner._test_service_worker(fp, script_lines))
             raw_findings.extend(js_scanner._test_cryptominer(fp, script_lines, script_code))
             raw_findings.extend(js_scanner._test_postmessage(fp, script_lines, script_code))
+            raw_findings.extend(js_scanner._test_dom_clobbering(fp, script_lines))
 
             # Adjust line numbers and annotate
             for f in raw_findings:
@@ -704,6 +706,156 @@ class HTMLScanner:
                     line_content=f.line_content,
                     description=f"[INLINE STYLE line {block_start_line}] {f.description}",
                 ))
+
+        return findings
+
+    # ------------------------------------------------------------------ #
+    # TEST: DOM Clobbering (HTML_SINK + CHAIN)
+    # Sources:
+    #   Liu et al., "The DOMino Effect: Detecting and Exploiting DOM Clobbering
+    #   Gadgets via Concolic Execution with Symbolic DOM,"
+    #   USENIX Security 2025. (497 exploitable gadgets on Tranco Top 5,000;
+    #   19 CVEs; zero-days in Google API client, Webpack, Canvas LMS)
+    #
+    #   Lekies, Jonker & Johns, "DOM Clobbering Strikes Back,"
+    #   USENIX Security 2021.
+    #
+    #   Khodayari & Pellegrino, "It's (DOM) Clobbering Time: Attack Techniques,
+    #   Prevalence, and Defenses," IEEE S&P 2023.
+    # ------------------------------------------------------------------ #
+
+    # Sensitive global names whose clobbering has security impact.
+    # Browser-defined globals, document collection properties (Liu et al. 2025),
+    # and common security-sensitive application globals.
+    _DC_SENSITIVE = {
+        'name', 'status', 'location', 'origin', 'parent', 'top',
+        'self', 'frames', 'opener',
+        # Document collection properties (Liu et al. 2025 §2.1)
+        'scripts', 'forms', 'images', 'links', 'anchors',
+        # Security-sensitive application globals
+        'config', 'settings', 'options', 'params', 'userData',
+        'auth', 'token', 'csrfToken', 'csrf', 'nonce', 'session',
+        'isAdmin', 'admin', 'role', 'permissions', 'security', 'policy',
+        'app', 'state', 'env', 'debug', 'trusted', 'safe',
+        'isLoggedIn', 'isAuthenticated', 'userRole', 'initialized', 'enabled',
+    }
+
+    def _test_dom_clobbering(self, fp: str, lines: list, content: str) -> List[Finding]:
+        """
+        Detect DOM clobbering opportunities in HTML:
+
+        HTML_SINK — Named/ID'd elements whose attribute value matches a
+          security-sensitive global. These shadow window.X or document.X,
+          supplying DOM nodes where application JS expects a security value.
+          Elements: form, input, img, a, object, embed, iframe (Lekies et al.
+          2021 Table 1 namespace promotion rules).
+
+        CHAIN — HTML_SINK element name also appears in inline JS accessing that
+          same global in the same document. Highest-confidence signal; no
+          injection required — the collision already exists in the page.
+
+        Two-level — <form id="x"><input name="y"> pattern enabling property
+          forgery as x.y in JS, beyond simple window.X shadowing
+          (Lekies et al. 2021 §3).
+        """
+        findings = []
+        seen = set()
+        sensitive = self._DC_SENSITIVE
+
+        def add(severity, ln, line_text, desc, pat_id):
+            key = (pat_id, ln)
+            if key not in seen:
+                seen.add(key)
+                findings.append(Finding(
+                    "dom_clobbering", severity, fp,
+                    ln, line_text.strip()[:200], desc
+                ))
+
+        # Build alternation for name regex
+        _names_alt = '|'.join(
+            re.escape(n) for n in sorted(sensitive, key=len, reverse=True)
+        )
+
+        # ── HTML_SINK: clobberable elements with sensitive name/id ──────
+        elem_pat = re.compile(
+            r'<(form|input|img|a|object|embed|iframe)\b[^>]*?'
+            r'(?:name|id)\s*=\s*["\'](' + _names_alt + r')["\']',
+            re.IGNORECASE
+        )
+
+        clobbered_names = set()
+        for m in elem_pat.finditer(content):
+            tag = m.group(1).lower()
+            name = m.group(2)
+            ln = content[:m.start()].count('\n') + 1
+            clobbered_names.add(name)
+            line_text = lines[ln - 1] if ln <= len(lines) else m.group()
+
+            # <iframe name="scripts"> is Liu et al. 2025 motivating exploit path
+            if tag == 'iframe' and name in ('scripts', 'forms', 'links', 'images', 'anchors'):
+                severity = "CRITICAL"
+                desc = (
+                    f'<iframe name="{name}"> shadows document.{name} — attacker can '
+                    f'replace the real script/element collection with an injected DOM '
+                    f'node, enabling XSS via library gadget chains '
+                    f'(Liu et al. USENIX Security 2025 §2.1 motivating example)'
+                )
+            else:
+                severity = "HIGH"
+                desc = (
+                    f'<{tag} name/id="{name}"> shadows window.{name} or '
+                    f'document.{name} — JS code reading this global receives a DOM '
+                    f'element instead of the expected security-sensitive value '
+                    f'(Lekies et al. USENIX Security 2021, Khodayari & Pellegrino '
+                    f'IEEE S&P 2023)'
+                )
+
+            add(severity, ln, line_text, desc, f"html_sink_{tag}_{name}")
+
+        # ── CHAIN: HTML_SINK name also accessed in inline script ────────
+        if clobbered_names:
+            _chain_alt = '|'.join(
+                re.escape(n) for n in sorted(clobbered_names, key=len, reverse=True)
+            )
+            js_access_re = re.compile(
+                r'\b(?:window\s*\.\s*|document\s*\.\s*)?(' + _chain_alt + r')\b'
+            )
+            script_block_re = re.compile(
+                r'<script\b[^>]*>(.*?)</script>', re.IGNORECASE | re.DOTALL
+            )
+            chain_reported = set()
+            for block in script_block_re.finditer(content):
+                script_text = block.group(1)
+                for jm in js_access_re.finditer(script_text):
+                    accessed = jm.group(1)
+                    if accessed in clobbered_names and accessed not in chain_reported:
+                        chain_reported.add(accessed)
+                        ln = content[:block.start()].count('\n') + 1
+                        add("CRITICAL", ln,
+                            f'CHAIN: <*name/id="{accessed}"> + JS access of {accessed}',
+                            f'DOM clobbering chain: named element "{accessed}" already '
+                            f'exists in this HTML page and the same name is accessed as '
+                            f'a global in inline JS — no injection required, collision '
+                            f'already present (Liu et al. USENIX Security 2025)',
+                            f"chain_{accessed}")
+
+        # ── Two-level: <form id="x"><input name="y"> ────────────────────
+        two_level_re = re.compile(
+            r'<form\b[^>]*id\s*=\s*["\'](\w+)["\'][^>]*>.*?'
+            r'<input\b[^>]*name\s*=\s*["\'](\w+)["\']',
+            re.IGNORECASE | re.DOTALL
+        )
+        for m in two_level_re.finditer(content):
+            form_id = m.group(1)
+            input_name = m.group(2)
+            ln = content[:m.start()].count('\n') + 1
+            line_text = lines[ln - 1] if ln <= len(lines) else m.group()[:200]
+            add("HIGH", ln, line_text,
+                f'Two-level DOM clobbering: <form id="{form_id}"><input name="{input_name}"> '
+                f'— allows property forgery as {form_id}.{input_name} in JS, enabling '
+                f'precise clobbering of nested object properties '
+                f'(Lekies et al. USENIX Security 2021 §3)',
+                f"two_level_{form_id}_{input_name}")
 
         return findings
 
